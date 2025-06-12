@@ -20,13 +20,13 @@ function App() {
   const pages: Record<number, JSX.Element> = {
     0: (
       <div>
+        <h1>AP World Study Website</h1>
+        <p>Click to Begin</p>
         <div>
-          <button onClick={() => handlePageChange()}>
+          <button className='image-button' onClick={() => handlePageChange()}>
             <img src={worldIcon} className="logo"/>
           </button>
         </div>
-        <h1>AP World Study Website</h1>
-        <p>Explanation for Beginners</p>
       </div>
     ),
     1: (
