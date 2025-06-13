@@ -9,11 +9,49 @@ A website intended for use by students currently taking AP World History. It aim
 - For each country, a separate section which explains its history categorized in several ways, generally combinations of time, theme, and relevance to the AP test
 **Example: China 1200-1450**
 - No Time Format:
-| Environment | Government | Society | Culture | Technology | Economy |
-|---|---|---|---|---|---|
-| Champa rice enabled rapid population growth. From Vietnam. | Civil service exam created a (sort-of) meritocracy | Confucianism dictates strict hierarchical relationships, favoring elders and males. Footbinding purposefully disables women to make them dependent on males | Importance of makers like farmers, then craftsmen, then merchants | Proto-Industrial, huge amount of steel created using advanced techniques | Exported highly valuable goods such as porcelain and silk. Most-wanted products in many places |
-|  | Under threat from the Jin Empire to the North, this pressure led their economy toward ruin as they were forced to spend on military | Civil service exam technically allowed social mobility, although wealth provided an advantage | Paper led to higher literacy and the success of the civil service exam | Gunpowder weaponry, catalyst for changes in other parts of the world | Somewhat open to trade, generally less interested in other nation's goods because theirs were higher quality |
-|  |  |  | Confucianism the main ideology, Buddhism and Daoism smaller sects that are received  poorly by the Confucian Bureaucracy | Woodblock printing (based on Korean moveable type) alongside paper increased literacy | Flying money, beginning of transition away from barter economy |
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg"><thead>
+  <tr>
+    <th class="tg-0pky">Environment</th>
+    <th class="tg-0pky">Government</th>
+    <th class="tg-0pky">Society</th>
+    <th class="tg-0pky">Culture</th>
+    <th class="tg-0pky">Technology</th>
+    <th class="tg-0pky">Economy</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky">Champa rice enabled rapid population growth. From Vietnam.</td>
+    <td class="tg-0pky">Civil service exam created a (sort-of) meritocracy</td>
+    <td class="tg-0pky">Confucianism dictates strict hierarchical relationships, favoring elders and males. Footbinding purposefully disables women to make them dependent on males</td>
+    <td class="tg-0pky">Importance of makers like farmers, then craftsmen, then merchants</td>
+    <td class="tg-0pky">Proto-Industrial, huge amount of steel created using advanced techniques</td>
+    <td class="tg-0pky">Exported highly valuable goods such as porcelain and silk. Most-wanted products in many places</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky">Under threat from the Jin Empire to the North, this pressure led their economy toward ruin as they were forced to spend on military</td>
+    <td class="tg-0pky">Civil service exam technically allowed social mobility, although wealth provided an advantage</td>
+    <td class="tg-0pky">Paper led to higher literacy and the success of the civil service exam</td>
+    <td class="tg-0pky">Gunpowder weaponry, catalyst for changes in other parts of the world</td>
+    <td class="tg-0pky">Somewhat open to trade, generally less interested in other nation's goods because theirs were higher quality</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky">Confucianism the main ideology, Buddhism and Daoism smaller sects that are received <br>poorly by the Confucian Bureaucracy</td>
+    <td class="tg-0pky">Woodblock printing (based on Korean moveable type) alongside paper increased literacy</td>
+    <td class="tg-0pky">Flying money, beginning of transition away from barter economy</td>
+  </tr>
+</tbody></table>
 - Timeline (No Themes) Format:
   - Paper before this time period
   - 960: Begins, civil service exam grows in size continuously
