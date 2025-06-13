@@ -8,15 +8,14 @@ A website intended for use by students currently taking AP World History. It aim
 ### Per-Country Info
 - For each country, a separate section which explains its history categorized in several ways, generally combinations of time, theme, and relevance to the AP test
 **Example: China 1200-1450**
-- No Time Format:
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
-</style>
+- Timeline (No Themes) Format (relevance determined by opacity):
+  - Paper before this time period
+  - 960: Begins, civil service exam grows in size continuously
+  - Early Song: Flying money used
+  - 11th century: Steel production begins, Champa rice introduced from Vietnam, moveable type from Korea
+  - <span style="opacity: 0.6;">1127: Lost territory to the Jin; Southern Song period</span>
+  - 1100s-1200s: Gunpowder weaponry starts to take hold
+- No Time Format (relevance shown vertically, top elements most important to know):
 <table class="tg"><thead>
   <tr>
     <th class="tg-0pky">Environment</th>
@@ -52,10 +51,3 @@ A website intended for use by students currently taking AP World History. It aim
     <td class="tg-0pky">Flying money, beginning of transition away from barter economy</td>
   </tr>
 </tbody></table>
-- Timeline (No Themes) Format:
-  - Paper before this time period
-  - 960: Begins, civil service exam grows in size continuously
-  - Early Song: Flying money used
-  - 11th century: Steel production begins, Champa rice introduced from Vietnam, moveable type from Korea
-  - <span style="opacity: 0.6;">1127: Lost territory to the Jin; Southern Song period</span>
-  - 1100s-1200s: Gunpowder weaponry starts to take hold
