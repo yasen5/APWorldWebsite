@@ -8,12 +8,12 @@ A website intended for use by students currently taking AP World History. It aim
 ### Per-Country Info
 - For each country, a separate section which explains its history categorized in several ways, generally combinations of time, theme, and relevance to the AP test
 **Example: China 1200-1450**
-- Timeline (No Themes) Format (relevance determined by opacity):
+- Timeline (No Themes) Format (relevance determined by opacity, here shown by the smaller line size of the less important information because github doesn't allow specific colors):
   - Paper before this time period
   - 960: Begins, civil service exam grows in size continuously
   - Early Song: Flying money used
   - 11th century: Steel production begins, Champa rice introduced from Vietnam, moveable type from Korea
-  - <span style="color: rgba(164, 164, 164, 0.5);">1127: Lost territory to the Jin; Southern Song period</span>
+  - <small>1127: Lost territory to the Jin; Southern Song period</small>
   - 1100s-1200s: Gunpowder weaponry starts to take hold
 - No Time Format (relevance shown vertically, top elements most important to know):
 <table class="tg"><thead>
