@@ -3,33 +3,40 @@ import worldIcon from './assets/world.svg'
 import './App.css'
 
 function App() {
-
-  const [currentPage, setCurrentPage] = useState<number>(0)
-  const [transitioning, setTransitioning] = useState<boolean>(false)
-
-  const handlePageChange = () => {
-    setTransitioning(true)
-
-    // Wait for exit animation to complete, then switch content
-    setTimeout(() => {
-      setCurrentPage(currentPage + 1)
-      setTransitioning(false)
-    }, 2000) // Match this to your CSS transition duration
+  // State machine for keeping track of the current page
+  const enum Page {
+    START_SCREEN, EXPLANATION
   }
 
-  const pages: Record<number, JSX.Element> = {
-    0: (
-      <div>
+  const [currentPage, setCurrentPage] = useState<Page>(Page.START_SCREEN)
+  const [nextPage, setNextPage] = useState<Page>(Page.EXPLANATION)
+  const [transitioning, setTransitioning] = useState<boolean>(false)
+
+  // Begin animation with setTransitioning, officially switch to the next page after delay
+  const handlePageChange = (nextPage : Page) => {
+    setTransitioning(true)
+    setNextPage(nextPage);
+
+    setTimeout(() => {
+      setCurrentPage(nextPage)
+      setTransitioning(false)
+    }, 2000)
+  }
+
+  // List of page layouts linked to enum values for better readability
+  const pages: Record<Page, JSX.Element> = {
+    [Page.START_SCREEN]: (
+      <div> 
         <h1>AP World Study Website</h1>
         <p>Click to Begin</p>
         <div>
-          <button className='image-button' onClick={() => handlePageChange()}>
+          <button className='image-button' onClick={() => handlePageChange(Page.EXPLANATION)}>
             <img src={worldIcon} className="logo"/>
           </button>
         </div>
       </div>
     ),
-    1: (
+    [Page.EXPLANATION]: (
       <div>
         <h1>Second Page</h1>
         <p>Explanation TODO</p>
@@ -39,11 +46,13 @@ function App() {
 
   return (
     <div className='slide-container'>
+      {/* Display the current page, add slide-out animation if transitioning */}
       <div className={transitioning ? 'slide-out' : '' }>
         {pages[currentPage]}
       </div>
+      {/* If transitioning, display the next page sliding in */}
       {transitioning && (<div className={transitioning ? 'slide-in' : ''}>
-        {transitioning && pages[currentPage + 1]}
+        {transitioning && pages[nextPage]}
       </div>)}
     </div>
   )

@@ -1,48 +1,64 @@
 #root {
   max-width: 1280px;
-  margin: 0 auto;
-  padding: 0/*2rem*/;
+  margin: 0 auto; /* Gives things the proper left/right margins */
   text-align: center;
 }
 
 .logo {
   height: 6em;
-  padding: 1.5em;
+  width: 6em;
+  padding: 1.5em; /* Creates space for the glowy shadow */
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
 @keyframes slideOutAccel {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(100vw); animation-timing-function: cubic-bezier(0.4, 0, 1, 1); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(100vw);
+    animation-timing-function: cubic-bezier(0.4, 0, 1, 1);
+  }
 }
 
 @keyframes slideInAccel {
-  0% { transform: translateX(-100vw); }
-  100% { transform: translateX(0); animation-timing-function: cubic-bezier(0.4, 0, 1, 1); }
+  0% {
+    transform: translateX(-100vw);
+  }
+
+  100% {
+    transform: translateX(0);
+    animation-timing-function: cubic-bezier(0.4, 0, 1, 1);
+  }
 }
 
 .slide-container {
   position: relative;
-  height: 100svh;
-  width: 100vw;
+  width: 100vw; /* Makes the text go across the whole page by default */
+  /* These two lines center the contents in the middle of the page */
   left: 50%;
   transform: translateX(-50%);
 }
 
+/* A slide-container will sometimes contain 2 pages which must be displayed at the same height. It is thus necessary take them out of the 
+document flow using `position: absolute` to ensure that one is not displayed under the other. */
 .slide-container>div {
-  display: flex;
   position: absolute;
-  top: 0;
-  left: 0;
+  /* Due to absolute positioning, it is necessary to reaffirm that the page takes up the whole space in order for it to properly center */
   width: 100%;
   height: 100%;
+  /* These lines center the content within the flex box (which was just defined as the whole page in the two lines above) */
+  display: flex;
   align-items: center;
   justify-content: center;
 }
