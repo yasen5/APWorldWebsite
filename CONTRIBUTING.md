@@ -1,4 +1,8 @@
-# Contributing Guidelines
+# Contributing Guidelines (Non-Coding)
+
+TODO add instructions for how to insert simple info
+
+# Contributing Guidelines (Coding)
 
 To contribute to this codebase, please follow the rules below:
 
@@ -17,10 +21,12 @@ To contribute to this codebase, please follow the rules below:
 
 - **Keep branch base up to date**
   - When writing to a branch for an extended period of time, rebase often to prevent merge conflicts
-  - This can be accomplished using ```bash
+  - This can be accomplished using 
+  ```bash
   git pull origin <branch-name> --rebase
   ```
-  - Once you resolve any conflicts, use ```bash
+  - Once you resolve any conflicts, use 
+  ```bash
   git rebase --continue
   ```
 
@@ -32,13 +38,12 @@ Use the following format when naming your branches:
 **Example:**
 
 ```bash
-git checkout -b bob/123-fix-drivetrain-code
+git checkout -b bob/123-add-sliding-animation
 ```
 
 This naming convention helps:
 
 - Keep branches easy to search and understand.
-- Identify who is responsible for each change.
 - Avoid naming collisions when multiple contributors are working on similar tasks.
 
 ## Commits
@@ -59,7 +64,7 @@ This naming convention helps:
 
 ```bash
 git add .
-git commit -m "Fix Drivetrain Code"
+git commit -m "Fix Sliding Animation"
 ```
 
 ## Pull Requests
@@ -68,20 +73,18 @@ git commit -m "Fix Drivetrain Code"
 - PR title format: `Type: short description` (e.g., `Feature: add login endpoint`).
 - PR description must explain:
   - What the change is
-  - Why it's needed
   - How it was implemented
 - Link any related issues, this means **include associated Issue ID** with every PR.
   - This ensures that each change is linked to an issue, providing context for the change and ensuring thorough documentation of the change history in the Issue tracker.
 
 ## Merging
 
-- Do not merge your own PR without review.
+- For larger changes, do not merge your own PR without review.
 - Resolve all merge conflicts before merging.
-- Prefer "Squash and merge" to keep a clean history.
 
 ## Automated Testing
 
-- The goal is to soon be able to add automated deployment of the website to test that no PRs break existing code
+- The goal is to soon be able to add automated deployment of the website to test that no PRs break existing code.
 
 ## General
 
