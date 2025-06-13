@@ -13,7 +13,7 @@ A website intended for use by students currently taking AP World History. It aim
   - 960: Begins, civil service exam grows in size continuously
   - Early Song: Flying money used
   - 11th century: Steel production begins, Champa rice introduced from Vietnam, moveable type from Korea
-  - <span style="opacity: 0.6;">1127: Lost territory to the Jin; Southern Song period</span>
+  - <span style="color: #666666;">1127: Lost territory to the Jin; Southern Song period</span>
   - 1100s-1200s: Gunpowder weaponry starts to take hold
 - No Time Format (relevance shown vertically, top elements most important to know):
 <table class="tg"><thead>
