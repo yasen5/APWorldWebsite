@@ -28,7 +28,7 @@ A website intended for use by students currently taking AP World History. It aim
 <tbody>
   <tr>
     <td class="tg-0pky">Champa rice enabled rapid population growth. From Vietnam.</td>
-    <td class="tg-0pky">Civil service exam created a (sort-of) meritocracy</td>
+    <td class="tg-0pky">Civil service exam created an effective bureaucracy to carry out the emperor's will</td>
     <td class="tg-0pky">Confucianism dictates strict hierarchical relationships, favoring elders and males. Footbinding purposefully disables women to make them dependent on males</td>
     <td class="tg-0pky">Importance of makers like farmers, then craftsmen, then merchants</td>
     <td class="tg-0pky">Proto-Industrial, huge amount of steel created using advanced techniques</td>
@@ -37,7 +37,7 @@ A website intended for use by students currently taking AP World History. It aim
   <tr>
     <td class="tg-0pky"></td>
     <td class="tg-0pky">Under threat from the Jin Empire to the North, this pressure led their economy toward ruin as they were forced to spend on military</td>
-    <td class="tg-0pky">Civil service exam technically allowed social mobility, although wealth provided an advantage</td>
+    <td class="tg-0pky">The scholar gentry were the highest class below aristocrats, and it was a sought-after position</td>
     <td class="tg-0pky">Paper led to higher literacy and the success of the civil service exam</td>
     <td class="tg-0pky">Gunpowder weaponry, catalyst for changes in other parts of the world</td>
     <td class="tg-0pky">Somewhat open to trade, generally less interested in other nation's goods because theirs were higher quality</td>
@@ -45,7 +45,7 @@ A website intended for use by students currently taking AP World History. It aim
   <tr>
     <td class="tg-0pky"></td>
     <td class="tg-0pky"></td>
-    <td class="tg-0pky"></td>
+    <td class="tg-0pky">Civil service exam technically allowed social mobility, although wealth provided an advantage</td>
     <td class="tg-0pky">Confucianism the main ideology, Buddhism and Daoism smaller sects that are received <br>poorly by the Confucian Bureaucracy</td>
     <td class="tg-0pky">Woodblock printing (based on Korean moveable type) alongside paper increased literacy</td>
     <td class="tg-0pky">Flying money, beginning of transition away from barter economy</td>
