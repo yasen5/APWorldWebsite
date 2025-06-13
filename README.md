@@ -7,7 +7,7 @@ A website intended for use by students currently taking AP World History. It aim
 - An interactive map which displays important events across the entire world during a certain time period. Zooming in should have a similar effect to google maps, where the level of detail of the information increases. A slider will control the time period.
 ### Per-Country Info
 - For each country, a separate section which explains its history categorized in several ways, generally combinations of time, theme, and relevance to the AP test
-**Example: China 1200-1450**
+**Example: Song Dynasty 1200-1450**
 - Timeline (No Themes) Format (relevance determined by opacity, here shown by the smaller line size of the less important information because github doesn't allow specific colors):
   - Paper before this time period
   - 960: Begins, civil service exam grows in size continuously
