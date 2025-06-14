@@ -14,83 +14,101 @@ import SouthAsia from './assets/south-asia.png'
 import MiddleEast from './assets/middle-east.webp'
 import './App.css'
 
-function App() {
-  // State machine for keeping track of the current page
-  const enum Page {
-    START_SCREEN, EXPLANATION, GEOGRAPHIC_SELECTION
-  }
+// State machine for keeping track of the current page
+const enum Page {
+  START_SCREEN, EXPLANATION, GEOGRAPHIC_SELECTION
+}
 
-  const enum SelectionStep {
-    REGION, COUNTRY, TIME
-  }
+const enum SelectionStep {
+  REGION, COUNTRY, TIME
+}
 
-  type GeographicButton = Readonly<{
-    name: string,
-    image: string
-  }>;
+type GeographicButton = Readonly<{
+  name: string,
+  image: string
+}>;
 
-  const [currentPage, setCurrentPage] = useState<Page>(Page.START_SCREEN)
-  const [nextPage, setNextPage] = useState<Page>(Page.EXPLANATION)
-  const [transitioning, setTransitioning] = useState<boolean>(false)
-  const [selectionStep, setSelectionStep] = useState<SelectionStep>(SelectionStep.REGION)
-  const [selectedRegion, setSelectedRegion] = useState<string | null>(null)
-  const regionButtons: GeographicButton[] = [
-    { name: "East Asia", image: EastAsia },
-    { name: "Southeast Asia", image: SoutheastAsia },
-    { name: "South Asia", image: SouthAsia },
-    { name: "Middle East", image: MiddleEast }
+const regionButtons: GeographicButton[] = [
+  { name: "East Asia", image: EastAsia },
+  { name: "Southeast Asia", image: SoutheastAsia },
+  { name: "South Asia", image: SouthAsia },
+  { name: "Middle East", image: MiddleEast }
+]
+const countryButtons: Record<string, GeographicButton[]> = {
+  "East Asia": [
+    { name: "China", image: ChinaMap },
+    { name: "Korea", image: KoreaMap },
+    { name: "Japan", image: JapanMap }
+  ],
+  "Southeast Asia": [
+    { name: "Vietnam", image: VietnamMap },
+    { name: "Cambodia", image: CambodiaMap },
+    { name: "Indonesia", image: IndonesiaMap }
+  ],
+  "South Asia": [
+    { name: "India", image: IndiaMap },
+    { name: "Sri Lanka", image: SriLankaMap },
   ]
-  const countryButtons: Record<string, GeographicButton[]> = {
-    "East Asia": [
-      { name: "China", image: ChinaMap },
-      { name: "Korea", image: KoreaMap },
-      { name: "Japan", image: JapanMap }
-    ],
-    "Southeast Asia": [
-      { name: "Vietnam", image: VietnamMap },
-      { name: "Cambodia", image: CambodiaMap },
-      { name: "Indonesia", image: IndonesiaMap }
-    ],
-    "South Asia": [
-      { name: "India", image: IndiaMap },
-      { name: "Sri Lanka", image: SriLankaMap },
-    ]
-  }
+}
 
+interface PageTransitionProps {
+  children: React.ReactNode
+  isTransitioning: boolean
+  nextPageContent?: React.ReactNode
+}
 
-  // Begin animation with setTransitioning, officially switch to the next page after delay
-  const handlePageChange = (nextPage: Page) => {
-    setTransitioning(true)
-    setNextPage(nextPage);
+const PageTransition = ({ children, isTransitioning, nextPageContent }: PageTransitionProps) => {
+  return (
+    <div className='slide-container'>
+      <div className={isTransitioning ? 'slide-out' : ''}>
+        {children}
+      </div>
+      {isTransitioning && nextPageContent && (
+        <div className='slide-in'>
+          {nextPageContent}
+        </div>
+      )}
+    </div>
+  )
+}
 
-    setTimeout(() => {
-      setCurrentPage(nextPage)
-      setTransitioning(false)
-    }, 2000)
-  }
+interface StartScreenProps {
+  goToPage: (page: Page) => void
+}
 
-  // List of page layouts linked to enum values for better readability
-  const pages: Record<Page, JSX.Element> = {
-    [Page.START_SCREEN]: (
-      <div>
+const StartScreen = ({goToPage}: StartScreenProps) => {
+  return (
+    <div> 
         <h1>AP World Study Website</h1>
         <p>Click to Begin</p>
         <div>
-          <button className='image-button' onClick={() => handlePageChange(Page.GEOGRAPHIC_SELECTION)}>
-            <img src={worldIcon} className="logo" />
+          <button className='image-button' onClick={() => goToPage(Page.GEOGRAPHIC_SELECTION)}>
+            <img src={worldIcon} className="logo"/>
           </button>
         </div>
-        <button onClick={() => handlePageChange(Page.EXPLANATION)}>Explanation</button>
+        <button onClick={() => goToPage(Page.EXPLANATION)}>Explanation</button>
       </div>
-    ),
-    [Page.EXPLANATION]: (
-      <div>
-        <h1>Second Page</h1>
-        <p>Explanation TODO</p>
-      </div>
-    ),
-    [Page.GEOGRAPHIC_SELECTION]: (
-      <div className='geographic-button-grid'>
+  )
+}
+
+const ExplanationPage = () => {
+  return (
+    <div>
+      <h1>Second Page</h1>
+      <p>Explanation TODO</p>
+    </div>
+  )
+}
+
+interface GeographicSelectionScreenProps {
+  selectionStep: SelectionStep
+  setSelectionStep: (step: SelectionStep) => void
+  selectedRegion: string | null
+  setSelectedRegion: (region: string | null) => void
+}
+
+const GeographicSelectionPage = ({selectionStep, setSelectionStep, selectedRegion, setSelectedRegion}: GeographicSelectionScreenProps) => {
+  return (<div className='geographic-button-grid'>
         {selectionStep === SelectionStep.REGION && regionButtons.map((region, index) => (
           <button
             key={index}
@@ -115,21 +133,60 @@ function App() {
             <span>{country.name}</span>
           </button>
         ))}
-      </div>
-    )
+      </div>)
+}
+
+function App() {
+  // State machine for keeping track of the current page
+
+  const [currentPage, setCurrentPage] = useState<Page>(Page.START_SCREEN)
+  const [nextPage, setNextPage] = useState<Page>(Page.EXPLANATION)
+  const [transitioning, setTransitioning] = useState<boolean>(false)
+  const [selectionStep, setSelectionStep] = useState<SelectionStep>(SelectionStep.REGION)
+  const [selectedRegion, setSelectedRegion] = useState<string | null>(null)
+
+  // Begin animation with setTransitioning, officially switch to the next page after delay
+  const handlePageChange = (nextPage: Page) => {
+    setTransitioning(true)
+    setNextPage(nextPage);
+
+    setTimeout(() => {
+      setCurrentPage(nextPage)
+      setTransitioning(false)
+    }, 2000)
+  }
+
+  const renderPage = (page: Page) => {
+    switch (page) {
+      case Page.START_SCREEN:
+        return (
+          <StartScreen
+            goToPage={handlePageChange}
+          />
+        )
+      case Page.EXPLANATION:
+        return <ExplanationPage />
+      case Page.GEOGRAPHIC_SELECTION:
+        return (
+          <GeographicSelectionPage
+            selectionStep={selectionStep}
+            setSelectionStep={setSelectionStep}
+            selectedRegion={selectedRegion}
+            setSelectedRegion={setSelectedRegion}
+          />
+        )
+      default:
+        return null
+    }
   }
 
   return (
-    <div className='slide-container'>
-      {/* Display the current page, add slide-out animation if transitioning */}
-      <div className={transitioning ? 'slide-out' : ''}>
-        {pages[currentPage]}
-      </div>
-      {/* If transitioning, display the next page sliding in */}
-      {transitioning && (<div className={transitioning ? 'slide-in' : ''}>
-        {transitioning && pages[nextPage]}
-      </div>)}
-    </div>
+    <PageTransition
+      isTransitioning={transitioning}
+      nextPageContent={renderPage(nextPage)}
+    >
+      {renderPage(currentPage)}
+    </PageTransition>
   )
 }
 
