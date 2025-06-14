@@ -1,4 +1,5 @@
 import { useState, type JSX } from 'react'
+import { useRef } from 'react'
 import worldIcon from './assets/world.svg'
 import './App.css'
 
@@ -7,21 +8,54 @@ const enum Page {
   START_SCREEN, EXPLANATION
 }
 
-interface PageTransitionProps {
-  children: React.ReactNode
-  isTransitioning: boolean
-  nextPageContent?: React.ReactNode
-}
+const PageTransition = () => {
+  const [currentPage, setCurrentPage] = useState<Page>(Page.START_SCREEN)
+  const [nextPage, setNextPage] = useState<Page>(Page.EXPLANATION)
+  const [transitioning, setTransitioning] = useState<boolean>(false)
+  const timeoutRef = useRef<number | null>(null)
 
-const PageTransition = ({ children, isTransitioning, nextPageContent }: PageTransitionProps) => {
+  // Begin animation with setTransitioning, officially switch to the next page after delay
+  const handlePageChange = (nextPage : Page) => {
+    if (transitioning) return; // Prevent overlapping transitions
+
+    setTransitioning(true)
+    setNextPage(nextPage)
+
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current) // Clear any existing timeout
+    }
+
+    timeoutRef.current = setTimeout(() => {
+      setCurrentPage(nextPage)
+      setTransitioning(false)
+      timeoutRef.current = null // Reset the timeout reference
+    }, 2000)
+  }
+
+  const renderPage = (page: Page) => {
+    switch (page) {
+      case Page.START_SCREEN:
+        return (
+          <StartScreen
+            goToPage={handlePageChange}
+          />
+        )
+      case Page.EXPLANATION:
+        return <ExplanationPage />
+      default:
+        console.log("Invalid page location");
+        return <div>Error: Invalid page location</div>
+    }
+  }
+
   return (
     <div className='slide-container'>
-      <div className={isTransitioning ? 'slide-out' : ''}>
-        {children}
+      <div className={transitioning ? 'slide-out' : ''}>
+        {renderPage(currentPage)}
       </div>
-      {isTransitioning && nextPageContent && (
+      {transitioning && (
         <div className='slide-in'>
-          {nextPageContent}
+          {renderPage(nextPage)}
         </div>
       )}
     </div>
@@ -56,43 +90,8 @@ const ExplanationPage = () => {
 }
 
 function App() {
-  const [currentPage, setCurrentPage] = useState<Page>(Page.START_SCREEN)
-  const [nextPage, setNextPage] = useState<Page>(Page.EXPLANATION)
-  const [transitioning, setTransitioning] = useState<boolean>(false)
-
-  // Begin animation with setTransitioning, officially switch to the next page after delay
-  const handlePageChange = (nextPage : Page) => {
-    setTransitioning(true)
-    setNextPage(nextPage);
-
-    setTimeout(() => {
-      setCurrentPage(nextPage)
-      setTransitioning(false)
-    }, 2000)
-  }
-
-  const renderPage = (page: Page) => {
-    switch (page) {
-      case Page.START_SCREEN:
-        return (
-          <StartScreen
-            goToPage={handlePageChange}
-          />
-        )
-      case Page.EXPLANATION:
-        return <ExplanationPage />
-      default:
-        return null
-    }
-  }
-
   return (
-    <PageTransition
-      isTransitioning={transitioning}
-      nextPageContent={renderPage(nextPage)}
-    >
-      {renderPage(currentPage)}
-    </PageTransition>
+    <PageTransition/>
   )
 }
 
