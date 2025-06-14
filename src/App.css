@@ -77,7 +77,6 @@ document flow using `position: absolute` to ensure that one is not displayed und
   display: flex; /* Activate flexbox */
   flex-direction: row; /* Align items in a row */
   justify-content: space-between; /* Optional: Adjust spacing between buttons */
-  align-items: center; /* Optional: Align items vertically */
   align-items: center; /* Centers items vertically within their grid cells */
   width: 100%; /* Ensures the grid spans the full width of its container */
   max-width: 100%; /* Optional: Limits the grid's maximum width */

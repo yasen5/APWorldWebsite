@@ -121,16 +121,20 @@ const GeographicSelectionPage = ({selectionStep, setSelectionStep, selectedRegio
             <span>{region.name}</span>
           </button>
         ))}
-        {selectionStep === SelectionStep.COUNTRY && countryButtons[selectedRegion!].map((country, index) => (
-          <button
-            key={index}
-            className="image-button"
-          /*TODO add onClick functionality*/
-          >
-            <img src={country.image} alt={`${country.name} map`} />
-            <span>{country.name}</span>
-          </button>
-        ))}
+        {selectionStep === SelectionStep.COUNTRY && selectedRegion && countryButtons[selectedRegion] ? (
+          countryButtons[selectedRegion].map((country, index) => (
+            <button
+              key={index}
+              className="image-button"
+            /*TODO add onClick functionality*/
+            >
+              <img src={country.image} alt={`${country.name} map`} />
+              <span>{country.name}</span>
+            </button>
+          ))
+        ) : (
+          <></> // Render an empty fragment or fallback UI
+        )}
       </div>)
 }
 
