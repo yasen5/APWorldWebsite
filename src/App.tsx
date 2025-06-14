@@ -33,7 +33,7 @@ const regionButtons: GeographicButton[] = [
   { name: "Southeast Asia", image: SoutheastAsia },
   { name: "South Asia", image: SouthAsia },
   { name: "Middle East", image: MiddleEast }
-]
+];
 const countryButtons: Record<string, GeographicButton[]> = {
   "East Asia": [
     { name: "China", image: ChinaMap },
@@ -49,7 +49,7 @@ const countryButtons: Record<string, GeographicButton[]> = {
     { name: "India", image: IndiaMap },
     { name: "Sri Lanka", image: SriLankaMap },
   ]
-}
+};
 
 interface PageTransitionProps {
   children: React.ReactNode
@@ -69,8 +69,8 @@ const PageTransition = ({ children, isTransitioning, nextPageContent }: PageTran
         </div>
       )}
     </div>
-  )
-}
+  );
+};
 
 interface StartScreenProps {
   goToPage: (page: Page) => void
@@ -86,8 +86,8 @@ const StartScreen = ({goToPage}: StartScreenProps) => {
         </button>
         <button onClick={() => goToPage(Page.EXPLANATION)}>Explanation</button>
     </div>
-  )
-}
+  );
+};
 
 const ExplanationPage = () => {
   return (
@@ -95,8 +95,8 @@ const ExplanationPage = () => {
       <h1>Second Page</h1>
       <p>Explanation TODO</p>
     </div>
-  )
-}
+  );
+};
 
 interface GeographicSelectionScreenProps {
   selectionStep: SelectionStep
@@ -133,29 +133,27 @@ const GeographicSelectionPage = ({selectionStep, setSelectionStep, selectedRegio
             </button>
           ))
         ) : (
-          <></> // Render an empty fragment or fallback UI
+          <></> // Render an empty fragment in the case that we don't have countries for the selected region
         )}
-      </div>)
-}
+      </div>);
+};
 
 function App() {
-  // State machine for keeping track of the current page
-
-  const [currentPage, setCurrentPage] = useState<Page>(Page.START_SCREEN)
-  const [nextPage, setNextPage] = useState<Page>(Page.EXPLANATION)
-  const [transitioning, setTransitioning] = useState<boolean>(false)
-  const [selectionStep, setSelectionStep] = useState<SelectionStep>(SelectionStep.REGION)
-  const [selectedRegion, setSelectedRegion] = useState<string | null>(null)
+  const [currentPage, setCurrentPage] = useState<Page>(Page.START_SCREEN);
+  const [nextPage, setNextPage] = useState<Page>(Page.EXPLANATION);
+  const [transitioning, setTransitioning] = useState<boolean>(false);
+  const [selectionStep, setSelectionStep] = useState<SelectionStep>(SelectionStep.REGION);
+  const [selectedRegion, setSelectedRegion] = useState<string | null>(null);
 
   // Begin animation with setTransitioning, officially switch to the next page after delay
   const handlePageChange = (nextPage: Page) => {
-    setTransitioning(true)
+    setTransitioning(true);
     setNextPage(nextPage);
 
     setTimeout(() => {
       setCurrentPage(nextPage)
       setTransitioning(false)
-    }, 2000)
+    }, 2000);
   }
 
   const renderPage = (page: Page) => {
@@ -165,9 +163,9 @@ function App() {
           <StartScreen
             goToPage={handlePageChange}
           />
-        )
+        );
       case Page.EXPLANATION:
-        return <ExplanationPage />
+        return <ExplanationPage />;
       case Page.GEOGRAPHIC_SELECTION:
         return (
           <GeographicSelectionPage
@@ -176,9 +174,9 @@ function App() {
             selectedRegion={selectedRegion}
             setSelectedRegion={setSelectedRegion}
           />
-        )
+        );
       default:
-        return null
+        return null;
     }
   }
 
@@ -189,7 +187,7 @@ function App() {
     >
       {renderPage(currentPage)}
     </PageTransition>
-  )
+  );
 }
 
 export default App
