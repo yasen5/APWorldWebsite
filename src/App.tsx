@@ -1,4 +1,5 @@
 import { useState, type JSX } from 'react'
+import { useRef } from 'react'
 import worldIcon from './assets/world.svg'
 import './App.css'
 
@@ -11,7 +12,7 @@ const PageTransition = () => {
   const [currentPage, setCurrentPage] = useState<Page>(Page.START_SCREEN)
   const [nextPage, setNextPage] = useState<Page>(Page.EXPLANATION)
   const [transitioning, setTransitioning] = useState<boolean>(false)
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null)
+  const timeoutRef = useRef<number | null>(null)
 
   // Begin animation with setTransitioning, officially switch to the next page after delay
   const handlePageChange = (nextPage : Page) => {
