@@ -11,15 +11,23 @@ const PageTransition = () => {
   const [currentPage, setCurrentPage] = useState<Page>(Page.START_SCREEN)
   const [nextPage, setNextPage] = useState<Page>(Page.EXPLANATION)
   const [transitioning, setTransitioning] = useState<boolean>(false)
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null)
 
   // Begin animation with setTransitioning, officially switch to the next page after delay
   const handlePageChange = (nextPage : Page) => {
-    setTransitioning(true)
-    setNextPage(nextPage);
+    if (transitioning) return; // Prevent overlapping transitions
 
-    setTimeout(() => {
+    setTransitioning(true)
+    setNextPage(nextPage)
+
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current) // Clear any existing timeout
+    }
+
+    timeoutRef.current = setTimeout(() => {
       setCurrentPage(nextPage)
       setTransitioning(false)
+      timeoutRef.current = null // Reset the timeout reference
     }, 2000)
   }
 
