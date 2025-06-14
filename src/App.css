@@ -89,9 +89,6 @@ document flow using `position: absolute` to ensure that one is not displayed und
   border-radius: 8px; /* Rounds the corners of the button */
   /* background-color: #1a1a1a; */
   color: white; /* Sets text color to white */
-  flex-direction: row;
-  align-items: center;
-  justify-content: center; /* Centers content vertically */
 }
 
 .image-button {
