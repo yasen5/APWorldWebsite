@@ -81,13 +81,11 @@ const StartScreen = ({goToPage}: StartScreenProps) => {
     <div> 
         <h1>AP World Study Website</h1>
         <p>Click to Begin</p>
-        <div>
-          <button className='image-button' onClick={() => goToPage(Page.GEOGRAPHIC_SELECTION)}>
-            <img src={worldIcon} className="logo"/>
-          </button>
-        </div>
+        <button className='image-button' onClick={() => goToPage(Page.GEOGRAPHIC_SELECTION)}>
+          <img src={worldIcon} className="logo"/>
+        </button>
         <button onClick={() => goToPage(Page.EXPLANATION)}>Explanation</button>
-      </div>
+    </div>
   )
 }
 
