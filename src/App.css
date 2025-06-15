@@ -93,7 +93,6 @@ document flow using `position: absolute` to ensure that one is not displayed und
 
 .image-button {
   display: inline-block; /* Ensure buttons behave as inline elements */
-  width: 100%; /* Ensures buttons take up the full width of their grid cell */
   text-align: center; /* Centers text inside the button */
 }
 
