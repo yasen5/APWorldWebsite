@@ -74,7 +74,7 @@ const PageTransition = () => {
       setCurrentPage(nextPage)
       setTransitioning(false)
       timeoutRef.current = null // Reset the timeout reference
-    }, 2000)
+    }, 1000)
   }
 
   const renderPage = (page: Page) => {
