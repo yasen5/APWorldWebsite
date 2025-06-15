@@ -33,7 +33,7 @@ const regionButtons: GeographicButton[] = [
   { name: "Southeast Asia", image: SoutheastAsia },
   { name: "South Asia", image: SouthAsia },
   { name: "Middle East", image: MiddleEast }
-]
+];
 const countryButtons: Record<string, GeographicButton[]> = {
   "East Asia": [
     { name: "China", image: ChinaMap },
@@ -49,31 +49,31 @@ const countryButtons: Record<string, GeographicButton[]> = {
     { name: "India", image: IndiaMap },
     { name: "Sri Lanka", image: SriLankaMap },
   ]
-}
+};
 
 const PageTransition = () => {
-  const [currentPage, setCurrentPage] = useState<Page>(Page.START_SCREEN)
-  const [nextPage, setNextPage] = useState<Page>(Page.EXPLANATION)
-  const [transitioning, setTransitioning] = useState<boolean>(false)
-  const timeoutRef = useRef<number | null>(null)
+  const [currentPage, setCurrentPage] = useState<Page>(Page.START_SCREEN);
+  const [nextPage, setNextPage] = useState<Page>(Page.EXPLANATION);
+  const [transitioning, setTransitioning] = useState<boolean>(false);
+  const timeoutRef = useRef<number | null>(null);
 
   // Begin animation with setTransitioning, officially switch to the next page after delay
   const handlePageChange = (nextPage : Page) => {
     if (transitioning) return; // Prevent overlapping transitions
 
-    setTransitioning(true)
-    setNextPage(nextPage)
+    setTransitioning(true);
+    setNextPage(nextPage);
 
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current) // Clear any existing timeout
     }
 
     timeoutRef.current = setTimeout(() => {
-      setCurrentPage(nextPage)
-      setTransitioning(false)
-      timeoutRef.current = null // Reset the timeout reference
-    }, 1000)
-  }
+      setCurrentPage(nextPage);
+      setTransitioning(false);
+      timeoutRef.current = null; // Reset the timeout reference
+    }, 1000);
+  };
 
   const renderPage = (page: Page) => {
     switch (page) {
@@ -82,18 +82,18 @@ const PageTransition = () => {
           <StartScreen
             goToPage={handlePageChange}
           />
-        )
+        );
       case Page.EXPLANATION:
-        return <ExplanationPage />
+        return <ExplanationPage />;
       case Page.GEOGRAPHIC_SELECTION:
         return (
           <GeographicSelectionPage />
-        )
+        );
       default:
         console.log("Invalid page location");
-        return <div>Error: Invalid page location</div>
+        return <div>Error: Invalid page location</div>;
     }
-  }
+  };
 
   return (
     <div className='slide-container'>
@@ -106,8 +106,8 @@ const PageTransition = () => {
         </div>
       )}
     </div>
-  )
-}
+  );
+};
 
 interface StartScreenProps {
   goToPage: (page: Page) => void
@@ -123,8 +123,8 @@ const StartScreen = ({goToPage}: StartScreenProps) => {
         </button>
         <button onClick={() => goToPage(Page.EXPLANATION)}>Explanation</button>
     </div>
-  )
-}
+  );
+};
 
 const ExplanationPage = () => {
   return (
@@ -132,8 +132,8 @@ const ExplanationPage = () => {
       <h1>Second Page</h1>
       <p>Explanation TODO</p>
     </div>
-  )
-}
+  );
+};
 
 interface GeographicSelectionContextProps {
   selectionStep: SelectionStep;
@@ -197,17 +197,17 @@ const GeographicSelectionPage = () => {
             </button>
           ))
         ) : (
-          <div className="fallback-message">Please select a region to view countries.</div> // Render a meaningful fallback UI
+          <div className="fallback-message">Please select a region to view countries.</div>
         )}
-      </div>)
-}
+      </div>);
+};
 
 function App() {
   return (
     <GeographicSelectionProvider>
       <PageTransition/>
     </GeographicSelectionProvider>
-  )
+  );
 }
 
 export default App
