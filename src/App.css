@@ -64,11 +64,45 @@ document flow using `position: absolute` to ensure that one is not displayed und
 }
 
 .slide-out {
-  animation: slideOutAccel 2s forwards;
+  animation: slideOutAccel 1s forwards;
   z-index: 1;
 }
 
 .slide-in {
-  animation: slideInAccel 2s forwards;
+  animation: slideInAccel 1s forwards;
   z-index: 2;
+}
+
+.geographic-button-grid {
+  display: flex; /* Activate flexbox */
+  flex-direction: row; /* Align items in a row */
+  justify-content: space-between; /* Optional: Adjust spacing between buttons */
+  align-items: center; /* Centers items vertically within their grid cells */
+  width: 100%; /* Ensures the grid spans the full width of its container */
+  max-width: 100%; /* Optional: Limits the grid's maximum width */
+  margin: 0 auto; /* Centers the grid within its parent container */
+}
+
+.geographic-button-grid .image-button {
+  width: 100%; /* Ensures buttons take up the full width of their grid cell */
+  padding: 1rem; /* Adds padding inside the button */
+  border-radius: 8px; /* Rounds the corners of the button */
+  /* background-color: #1a1a1a; */
+  color: white; /* Sets text color to white */
+}
+
+.image-button {
+  display: inline-block; /* Ensure buttons behave as inline elements */
+  text-align: center; /* Centers text inside the button */
+}
+
+.image-button img {
+  max-width: 100%; /* Limits the image's maximum width */
+  max-height: 100%; /* Limits the image's maximum height */
+  object-fit: contain; /* Keeps the image's aspect ratio */
+}
+
+.image-button span {
+  margin-top: 0.5rem; /* Adds spacing between the image and the text */
+  font-size: 1rem; /* Adjusts the font size */
 }
