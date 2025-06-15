@@ -1,4 +1,6 @@
 import { useState, type JSX } from 'react'
+import { useRef } from 'react'
+import React, { createContext, useContext } from 'react';
 import worldIcon from './assets/world.svg'
 import ChinaMap from './assets/china.png'
 import KoreaMap from './assets/korea.png'
@@ -51,21 +53,58 @@ const countryButtons: Record<string, GeographicButton[]> = {
   ]
 }
 
-interface PageTransitionProps {
-  children: React.ReactNode
-  isTransitioning: boolean
-  nextPageContent?: React.ReactNode
-}
+const PageTransition = () => {
+  const [currentPage, setCurrentPage] = useState<Page>(Page.START_SCREEN)
+  const [nextPage, setNextPage] = useState<Page>(Page.EXPLANATION)
+  const [transitioning, setTransitioning] = useState<boolean>(false)
+  const timeoutRef = useRef<number | null>(null)
 
-const PageTransition = ({ children, isTransitioning, nextPageContent }: PageTransitionProps) => {
+  // Begin animation with setTransitioning, officially switch to the next page after delay
+  const handlePageChange = (nextPage : Page) => {
+    if (transitioning) return; // Prevent overlapping transitions
+
+    setTransitioning(true)
+    setNextPage(nextPage)
+
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current) // Clear any existing timeout
+    }
+
+    timeoutRef.current = setTimeout(() => {
+      setCurrentPage(nextPage)
+      setTransitioning(false)
+      timeoutRef.current = null // Reset the timeout reference
+    }, 2000)
+  }
+
+  const renderPage = (page: Page) => {
+    switch (page) {
+      case Page.START_SCREEN:
+        return (
+          <StartScreen
+            goToPage={handlePageChange}
+          />
+        )
+      case Page.EXPLANATION:
+        return <ExplanationPage />
+      case Page.GEOGRAPHIC_SELECTION:
+        return (
+          <GeographicSelectionPage />
+        )
+      default:
+        console.log("Invalid page location");
+        return <div>Error: Invalid page location</div>
+    }
+  }
+
   return (
     <div className='slide-container'>
-      <div className={isTransitioning ? 'slide-out' : ''}>
-        {children}
+      <div className={transitioning ? 'slide-out' : ''}>
+        {renderPage(currentPage)}
       </div>
-      {isTransitioning && nextPageContent && (
+      {transitioning && (
         <div className='slide-in'>
-          {nextPageContent}
+          {renderPage(nextPage)}
         </div>
       )}
     </div>
@@ -98,14 +137,41 @@ const ExplanationPage = () => {
   )
 }
 
-interface GeographicSelectionScreenProps {
-  selectionStep: SelectionStep
-  setSelectionStep: (step: SelectionStep) => void
-  selectedRegion: string | null
-  setSelectedRegion: (region: string | null) => void
+interface GeographicSelectionContextProps {
+  selectionStep: SelectionStep;
+  setSelectionStep: React.Dispatch<React.SetStateAction<SelectionStep>>;
+  selectedRegion: string | null;
+  setSelectedRegion: React.Dispatch<React.SetStateAction<string | null>>;
 }
 
-const GeographicSelectionPage = ({selectionStep, setSelectionStep, selectedRegion, setSelectedRegion}: GeographicSelectionScreenProps) => {
+const GeographicSelectionContext = createContext<GeographicSelectionContextProps | undefined>(undefined);
+
+export const useGeographicSelection = () => {
+  const context: GeographicSelectionContextProps | undefined = useContext(GeographicSelectionContext);
+  if (!context) {
+    throw new Error('useGeographicSelection must be used within a GeographicSelectionProvider');
+  }
+  return context;
+};
+
+interface GeographicSelectionProviderProps {
+  children: React.ReactNode;
+}
+
+export const GeographicSelectionProvider: React.FC<GeographicSelectionProviderProps> = ({ children }) => {
+  const [selectionStep, setSelectionStep] = useState<SelectionStep>(SelectionStep.REGION);
+  const [selectedRegion, setSelectedRegion] = useState<string | null>(null);
+
+  return (
+    <GeographicSelectionContext.Provider value={{ selectionStep, setSelectionStep, selectedRegion, setSelectedRegion }}>
+      {children}
+    </GeographicSelectionContext.Provider>
+  );
+};
+
+const GeographicSelectionPage = () => {
+  const { selectionStep, setSelectionStep, selectedRegion, setSelectedRegion } = useGeographicSelection();
+
   return (<div className='geographic-button-grid'>
         {selectionStep === SelectionStep.REGION && regionButtons.map((region, index) => (
           <button
@@ -139,56 +205,10 @@ const GeographicSelectionPage = ({selectionStep, setSelectionStep, selectedRegio
 }
 
 function App() {
-  // State machine for keeping track of the current page
-
-  const [currentPage, setCurrentPage] = useState<Page>(Page.START_SCREEN)
-  const [nextPage, setNextPage] = useState<Page>(Page.EXPLANATION)
-  const [transitioning, setTransitioning] = useState<boolean>(false)
-  const [selectionStep, setSelectionStep] = useState<SelectionStep>(SelectionStep.REGION)
-  const [selectedRegion, setSelectedRegion] = useState<string | null>(null)
-
-  // Begin animation with setTransitioning, officially switch to the next page after delay
-  const handlePageChange = (nextPage: Page) => {
-    setTransitioning(true)
-    setNextPage(nextPage);
-
-    setTimeout(() => {
-      setCurrentPage(nextPage)
-      setTransitioning(false)
-    }, 2000)
-  }
-
-  const renderPage = (page: Page) => {
-    switch (page) {
-      case Page.START_SCREEN:
-        return (
-          <StartScreen
-            goToPage={handlePageChange}
-          />
-        )
-      case Page.EXPLANATION:
-        return <ExplanationPage />
-      case Page.GEOGRAPHIC_SELECTION:
-        return (
-          <GeographicSelectionPage
-            selectionStep={selectionStep}
-            setSelectionStep={setSelectionStep}
-            selectedRegion={selectedRegion}
-            setSelectedRegion={setSelectedRegion}
-          />
-        )
-      default:
-        return null
-    }
-  }
-
   return (
-    <PageTransition
-      isTransitioning={transitioning}
-      nextPageContent={renderPage(nextPage)}
-    >
-      {renderPage(currentPage)}
-    </PageTransition>
+    <GeographicSelectionProvider>
+      <PageTransition/>
+    </GeographicSelectionProvider>
   )
 }
 
