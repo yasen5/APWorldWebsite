@@ -1,6 +1,4 @@
-import { useState, type JSX } from 'react'
-import { useRef } from 'react'
-import React, { createContext, useContext } from 'react';
+import { useState, useRef, createContext, useContext, type JSX } from 'react';
 import worldIcon from './assets/world.svg'
 import ChinaMap from './assets/china.png'
 import KoreaMap from './assets/korea.png'
@@ -173,9 +171,9 @@ const GeographicSelectionPage = () => {
   const { selectionStep, setSelectionStep, selectedRegion, setSelectedRegion } = useGeographicSelection();
 
   return (<div className='geographic-button-grid'>
-        {selectionStep === SelectionStep.REGION && regionButtons.map((region, index) => (
+        {selectionStep === SelectionStep.REGION && regionButtons.map((region) => (
           <button
-            key={index}
+            key={region.name}
             className="image-button"
             onClick={() => {
                 setSelectedRegion(region.name);
@@ -199,7 +197,7 @@ const GeographicSelectionPage = () => {
             </button>
           ))
         ) : (
-          <></> // Render an empty fragment or fallback UI
+          <div className="fallback-message">Please select a region to view countries.</div> // Render a meaningful fallback UI
         )}
       </div>)
 }
