@@ -144,6 +144,5 @@ document flow using `position: absolute` to ensure that one is not displayed und
 
 .slider-label {
   position: absolute;
-  font-size: em;
   transform: translateX(-50%)
 }

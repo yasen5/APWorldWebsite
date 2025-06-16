@@ -78,7 +78,7 @@ const TimeSlider = () => {
     const clickPercentage: number = (click.clientX - boundingBox.left) / boundingBox.width * 100;
 
     for (let i = timePeriods.length - 2; i >= 0; i--) {
-      if (clickPercentage >= sliderPercentage(timePeriods[i])) {
+      if (clickPercentage >= sliderPercentages[i].percentage) {
         setSelectedRange([timePeriods[i], timePeriods[i + 1]]);
         break;
       }
@@ -88,15 +88,12 @@ const TimeSlider = () => {
   return (
     <div className='slider-container'>
       <h1>Select a time period</h1>
-      
-      {/* Slider Container */}
       <div className='slider-wrapper'>
         <div 
           ref={sliderRef} 
           className={'slider-track'}
           onClick={handleClick}
         >
-          {/* Slider Track */}
           <div 
             className='active-range'
             style={{ 
@@ -105,7 +102,6 @@ const TimeSlider = () => {
             }} 
           />
           <div>
-            {/* Slider lables */}
             {sliderPercentages.map((percentage) => (
               <p key={percentage.timePeriod} className='slider-label' style={{ left: `${percentage.percentage}%` }}>
                 {percentage.timePeriod}
