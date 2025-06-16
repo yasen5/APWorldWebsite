@@ -1,4 +1,4 @@
-import { useState, useRef, createContext, useContext, type JSX } from 'react';
+import { useState, useRef, createContext, useContext, useMemo } from 'react';
 import worldIcon from './assets/world.svg'
 import ChinaMap from './assets/china.png'
 import KoreaMap from './assets/korea.png'
@@ -50,6 +50,96 @@ const countryButtons: Record<string, GeographicButton[]> = {
     { name: "Sri Lanka", image: SriLankaMap },
   ]
 };
+
+const timePeriods: number[] = [
+  1200, 1450, 1750, 1900, 2025
+];
+
+const sliderPercentage = (timePeriod: number) => {
+  return (timePeriod - timePeriods[0]) / (timePeriods[timePeriods.length - 1] - timePeriods[0]) * 100;
+}
+
+interface TimeSliderProps {
+  selectedRange: [number, number];
+  setSelectedRange: React.Dispatch<React.SetStateAction<[number, number]>>;
+}
+
+const TimeSliderContext = createContext<TimeSliderProps | undefined>(undefined);
+
+export const useTimeSliderContext = () => {
+  const context: TimeSliderProps | undefined = useContext(TimeSliderContext);
+  if (!context) {
+    throw new Error('useTimeSliderContext must be used within a TimeSliderProvider');
+  }
+  return context;
+};
+
+interface TimeSliderProviderProps {
+  children: React.ReactNode;
+}
+
+export const TimeSliderProvider: React.FC<TimeSliderProviderProps> = ({ children }) => {
+  const [selectedRange, setSelectedRange] = useState<[number, number]>([1200, 1450]);
+
+  return (
+    <TimeSliderContext.Provider value={{ selectedRange, setSelectedRange }}>
+      {children}
+    </TimeSliderContext.Provider>
+  );
+};
+
+const TimeSlider = () => {
+  const { selectedRange, setSelectedRange } = useTimeSliderContext();
+  const sliderRef = useRef<HTMLDivElement>(null);
+
+  const sliderPercentages = useMemo(() => {
+    return timePeriods.map((timePeriod) => ({
+      timePeriod,
+      percentage: sliderPercentage(timePeriod),
+    }));
+  }, [timePeriods]);  
+
+  const handleClick = (click: React.MouseEvent<HTMLDivElement>) => {
+    if (!sliderRef.current) return;
+
+    const boundingBox: DOMRect = sliderRef.current.getBoundingClientRect();
+    const clickPercentage: number = (click.clientX - boundingBox.left) / boundingBox.width * 100;
+
+    for (let i = timePeriods.length - 2; i >= 0; i--) {
+      if (clickPercentage >= sliderPercentages[i].percentage) {
+        setSelectedRange([timePeriods[i], timePeriods[i + 1]]);
+        break;
+      }
+    }
+  };
+
+  return (
+    <div className='slider-container'>
+      <h1>Select a time period</h1>
+      <div className='slider-wrapper'>
+        <div 
+          ref={sliderRef} 
+          className={'slider-track'}
+          onClick={handleClick}
+        >
+          <div 
+            className='active-range'
+            style={{ 
+              left: `${sliderPercentage(selectedRange[0])}%`, 
+              width: `${ ((sliderPercentage(selectedRange[1]) - sliderPercentage(selectedRange[0])))}%` 
+            }} 
+          />
+          <div>
+            {sliderPercentages.map((percentage) => (
+              <p key={percentage.timePeriod} className='slider-label' style={{ left: `${percentage.percentage}%` }}>
+                {percentage.timePeriod}
+              </p>))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 const PageTransition = () => {
   const [currentPage, setCurrentPage] = useState<Page>(Page.START_SCREEN);
@@ -204,9 +294,12 @@ const GeographicSelectionPage = () => {
 
 function App() {
   return (
-    <GeographicSelectionProvider>
-      <PageTransition/>
-    </GeographicSelectionProvider>
+    <TimeSliderProvider>
+      <GeographicSelectionProvider>
+        <TimeSlider/>
+        <PageTransition/>
+      </GeographicSelectionProvider>
+    </TimeSliderProvider>
   );
 }
 
