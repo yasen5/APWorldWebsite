@@ -106,3 +106,44 @@ document flow using `position: absolute` to ensure that one is not displayed und
   margin-top: 0.5rem; /* Adds spacing between the image and the text */
   font-size: 1rem; /* Adjusts the font size */
 }
+
+/* Main container styles - centers content and provides padding */
+.slider-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 2rem;
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Slider wrapper - provides spacing below the slider */
+.slider-wrapper {
+  margin-bottom: 2rem;
+}
+
+/* Main slider track - creates the base horizontal bar that users interact with */
+.slider-track {
+  position: relative;
+  height: 0.5rem;
+  background-color: #d1d5db; /* gray-300 */
+  border-radius: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Active range highlight - shows the selected range between handles with blue color */
+.active-range {
+  position: absolute;
+  height: 0.5rem;
+  background-color: #3b82f6; /* blue-500 */
+  border-radius: 0.5rem;
+}
+
+.slider-label {
+  position: absolute;
+  font-size: em;
+  transform: translateX(-50%)
+}
