@@ -49,7 +49,7 @@ const countryButtons: Record<string, GeographicButton[]> = {
     { name: "India", image: IndiaMap },
     { name: "Sri Lanka", image: SriLankaMap },
   ]
-};
+};;
 
 const timePeriods: number[] = [
   1200, 1450, 1750, 1900, 2025
