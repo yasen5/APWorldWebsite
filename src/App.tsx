@@ -60,8 +60,37 @@ const sliderPercentage = (timePeriod: number) => {
   return output;
 }
 
-const TimeSlider = () => {
+interface TimeSliderProps {
+  selectedRange: [number, number];
+  setSelectedRange: React.Dispatch<React.SetStateAction<[number, number]>>;
+}
+
+const TimeSliderContext = createContext<TimeSliderProps | undefined>(undefined);
+
+export const useTimeSliderContext = () => {
+  const context: TimeSliderProps | undefined = useContext(TimeSliderContext);
+  if (!context) {
+    throw new Error('useTimeSliderContext must be used within a TimeSliderProvider');
+  }
+  return context;
+};
+
+interface TimeSliderProviderProps {
+  children: React.ReactNode;
+}
+
+export const TimeSliderProvider: React.FC<TimeSliderProviderProps> = ({ children }) => {
   const [selectedRange, setSelectedRange] = useState<[number, number]>([1200, 1450]);
+
+  return (
+    <TimeSliderContext.Provider value={{ selectedRange, setSelectedRange }}>
+      {children}
+    </TimeSliderContext.Provider>
+  );
+};
+
+const TimeSlider = () => {
+  const { selectedRange, setSelectedRange } = useTimeSliderContext();
   const sliderRef = useRef<HTMLDivElement>(null);
 
   const sliderPercentages = useMemo(() => {
@@ -266,10 +295,12 @@ const GeographicSelectionPage = () => {
 
 function App() {
   return (
-    <GeographicSelectionProvider>
-      <TimeSlider/>
-      <PageTransition/>
-    </GeographicSelectionProvider>
+    <TimeSliderProvider>
+      <GeographicSelectionProvider>
+        <TimeSlider/>
+        <PageTransition/>
+      </GeographicSelectionProvider>
+    </TimeSliderProvider>
   );
 }
 
