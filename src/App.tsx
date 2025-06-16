@@ -56,8 +56,7 @@ const timePeriods: number[] = [
 ];
 
 const sliderPercentage = (timePeriod: number) => {
-  const output: number = (timePeriod - timePeriods[0]) / (timePeriods[timePeriods.length - 1] - timePeriods[0]) * 100;
-  return output;
+  return (timePeriod - timePeriods[0]) / (timePeriods[timePeriods.length - 1] - timePeriods[0]) * 100;
 }
 
 interface TimeSliderProps {
