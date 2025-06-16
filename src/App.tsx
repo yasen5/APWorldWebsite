@@ -67,12 +67,12 @@ const TimeSlider = () => {
   const sliderPercentages = useMemo(() => {
     return timePeriods.map((timePeriod) => ({
       timePeriod,
-      percentage: (timePeriod - timePeriods[0]) / (timePeriods[timePeriods.length - 1] - timePeriods[0]) * 100,
+      percentage: sliderPercentage(timePeriod),
     }));
   }, [timePeriods]);  
 
   const handleClick = (click: React.MouseEvent<HTMLDivElement>) => {
-    if (!sliderRef.current) return 0;
+    if (!sliderRef.current) return;
 
     const boundingBox: DOMRect = sliderRef.current.getBoundingClientRect();
     const clickPercentage: number = (click.clientX - boundingBox.left) / boundingBox.width * 100;
