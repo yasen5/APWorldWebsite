@@ -13,9 +13,8 @@ import SoutheastAsia from './assets/southeast-asia.webp'
 import SouthAsia from './assets/south-asia.png'
 import MiddleEast from './assets/middle-east.webp'
 import './App.css'
-
-// State machine for keeping track of the current page
-const enum Page {
+import Navbar from './Navbar.tsx';
+export enum AppPage {
   START_SCREEN, EXPLANATION, GEOGRAPHIC_SELECTION
 }
 
@@ -141,57 +140,37 @@ const TimeSlider = () => {
   );
 }
 
-const PageTransition = () => {
-  const [currentPage, setCurrentPage] = useState<Page>(Page.START_SCREEN);
-  const [nextPage, setNextPage] = useState<Page>(Page.EXPLANATION);
-  const [transitioning, setTransitioning] = useState<boolean>(false);
-  const timeoutRef = useRef<number | null>(null);
-
-  // Begin animation with setTransitioning, officially switch to the next page after delay
-  const handlePageChange = (nextPage : Page) => {
-    if (transitioning) return; // Prevent overlapping transitions
-
-    setTransitioning(true);
-    setNextPage(nextPage);
-
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current) // Clear any existing timeout
-    }
-
-    timeoutRef.current = setTimeout(() => {
-      setCurrentPage(nextPage);
-      setTransitioning(false);
-      timeoutRef.current = null; // Reset the timeout reference
-    }, 1000);
-  };
-
-  const renderPage = (page: Page) => {
+const PageTransition = ({
+  currentPage,
+  nextPage,
+  transitioning,
+  goToPage
+}: {
+  currentPage: AppPage;
+  nextPage: AppPage;
+  transitioning: boolean;
+  goToPage: (page: AppPage) => void;
+}) => {
+  const renderPage = (page: AppPage) => {
     switch (page) {
-      case Page.START_SCREEN:
-        return (
-          <StartScreen
-            goToPage={handlePageChange}
-          />
-        );
-      case Page.EXPLANATION:
+      case AppPage.START_SCREEN:
+        return <StartScreen goToPage={goToPage} />;
+      case AppPage.EXPLANATION:
         return <ExplanationPage />;
-      case Page.GEOGRAPHIC_SELECTION:
-        return (
-          <GeographicSelectionPage />
-        );
+      case AppPage.GEOGRAPHIC_SELECTION:
+        return <GeographicSelectionPage />;
       default:
-        console.log("Invalid page location");
-        return <div>Error: Invalid page location</div>;
+        return <div>Error: Invalid page</div>;
     }
   };
 
   return (
-    <div className='slide-container'>
+    <div className="slide-container">
       <div className={transitioning ? 'slide-out' : ''}>
         {renderPage(currentPage)}
       </div>
       {transitioning && (
-        <div className='slide-in'>
+        <div className="slide-in">
           {renderPage(nextPage)}
         </div>
       )}
@@ -200,7 +179,7 @@ const PageTransition = () => {
 };
 
 interface StartScreenProps {
-  goToPage: (page: Page) => void
+  goToPage: (page: AppPage) => void
 }
 
 const StartScreen = ({goToPage}: StartScreenProps) => {
@@ -208,10 +187,10 @@ const StartScreen = ({goToPage}: StartScreenProps) => {
     <div> 
         <h1>AP World Study Website</h1>
         <p>Click to Begin</p>
-        <button className='image-button' onClick={() => goToPage(Page.GEOGRAPHIC_SELECTION)}>
+        <button className='image-button' onClick={() => goToPage(AppPage.GEOGRAPHIC_SELECTION)}>
           <img src={worldIcon} className="logo"/>
         </button>
-        <button onClick={() => goToPage(Page.EXPLANATION)}>Explanation</button>
+        <button onClick={() => goToPage(AppPage.EXPLANATION)}>Explanation</button>
     </div>
   );
 };
@@ -293,11 +272,35 @@ const GeographicSelectionPage = () => {
 };
 
 function App() {
+  const [currentPage, setCurrentPage] = useState<AppPage>(AppPage.START_SCREEN);
+  const [nextPage, setNextPage] = useState<AppPage>(AppPage.EXPLANATION);
+  const [transitioning, setTransitioning] = useState<boolean>(false);
+  const timeoutRef = useRef<number | null>(null);
+
+  const goToPage = (page: AppPage) => {
+    if (transitioning) return;
+    setTransitioning(true);
+    setNextPage(page);
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    timeoutRef.current = setTimeout(() => {
+      setCurrentPage(page);
+      setTransitioning(false);
+    }, 1000);
+  };
+
   return (
     <TimeSliderProvider>
       <GeographicSelectionProvider>
-        <TimeSlider/>
-        <PageTransition/>
+        <div>
+          <Navbar goToPage={goToPage} />
+          <TimeSlider />
+          <PageTransition
+            currentPage={currentPage}
+            nextPage={nextPage}
+            transitioning={transitioning}
+            goToPage={goToPage}
+          />
+        </div>
       </GeographicSelectionProvider>
     </TimeSliderProvider>
   );
