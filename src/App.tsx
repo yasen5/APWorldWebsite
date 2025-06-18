@@ -205,7 +205,7 @@ interface StartScreenProps {
 
 const StartScreen = ({goToPage}: StartScreenProps) => {
   return (
-    <div> 
+    <div className='centered-container'> 
         <h1>AP World Study Website</h1>
         <p>Click to Begin</p>
         <button className='image-button' onClick={() => goToPage(Page.GEOGRAPHIC_SELECTION)}>

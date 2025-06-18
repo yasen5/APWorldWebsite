@@ -1,6 +1,6 @@
 #root {
   max-width: 1280px;
-  margin: 0 auto; /* Gives things the proper left/right margins */
+  margin: 0; /* Gives things the proper left/right margins */
   text-align: center;
 }
 
@@ -48,6 +48,7 @@
   /* These two lines center the contents in the middle of the page */
   left: 50%;
   transform: translateX(-50%);
+  min-height: 400px;
 }
 
 /* A slide-container will sometimes contain 2 pages which must be displayed at the same height. It is thus necessary take them out of the 
@@ -91,11 +92,6 @@ document flow using `position: absolute` to ensure that one is not displayed und
   color: white; /* Sets text color to white */
 }
 
-.image-button {
-  display: inline-block; /* Ensure buttons behave as inline elements */
-  text-align: center; /* Centers text inside the button */
-}
-
 .image-button img {
   max-width: 100%; /* Limits the image's maximum width */
   max-height: 100%; /* Limits the image's maximum height */
@@ -108,15 +104,13 @@ document flow using `position: absolute` to ensure that one is not displayed und
 }
 
 /* Main container styles - centers content and provides padding */
-.slider-container {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+.slider-container > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1000;
   padding: 2rem;
-  max-width: 42rem;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
 }
 
 /* Slider wrapper - provides spacing below the slider */
@@ -132,6 +126,7 @@ document flow using `position: absolute` to ensure that one is not displayed und
   border-radius: 0.5rem;
   cursor: pointer;
   user-select: none;
+  width: 100%
 }
 
 /* Active range highlight - shows the selected range between handles with blue color */
@@ -145,4 +140,13 @@ document flow using `position: absolute` to ensure that one is not displayed und
 .slider-label {
   position: absolute;
   transform: translateX(-50%)
+}
+
+.centered-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 100%;
+  box-sizing: border-box;
+  padding: 1rem;
 }
