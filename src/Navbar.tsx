@@ -1,13 +1,9 @@
-import React from 'react';
-import { AppPage } from './App';
+import { AppPage, usePageTransitionContext } from './App';
 import { useGeographicSelection } from './App';
 
-interface NavbarProps {
-  goToPage: (page: AppPage) => void;
-}
-
-const Navbar : React.FC<NavbarProps> = ({ goToPage }: NavbarProps) => {
+const Navbar = () => {
   const { setSelectionStep, setSelectedRegion } = useGeographicSelection();
+  const { goToPage } = usePageTransitionContext();
 
   const handleGeographicClick = () => {
     setSelectionStep(0); // REGION
