@@ -152,6 +152,7 @@ document flow using `position: absolute` to ensure that one is not displayed und
   top: 0;
   left: 0; /* makes it stay at the side*/
   width: 100%; /*makes it not stop after the last link */
+  z-index: 1000; /* makes sure it is on top of everything else */
   background-color: #194f24;
   display: flex;
   gap: 1.5rem;
