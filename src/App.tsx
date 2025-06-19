@@ -18,6 +18,12 @@ export enum AppPage {
   START_SCREEN, EXPLANATION, GEOGRAPHIC_SELECTION
 }
 
+export const AppPageLabels: Record<AppPage, string> = {
+  [AppPage.START_SCREEN]: "Home",
+  [AppPage.EXPLANATION]: "Explanation",
+  [AppPage.GEOGRAPHIC_SELECTION]: "Geographic Selection"
+};
+
 const enum SelectionStep {
   REGION, COUNTRY, TIME
 }

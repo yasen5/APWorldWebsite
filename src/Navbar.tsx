@@ -1,4 +1,4 @@
-import { AppPage, usePageTransitionContext } from './App';
+import { AppPage, AppPageLabels, usePageTransitionContext } from './App';
 import { useGeographicSelection } from './App';
 
 const Navbar = () => {
@@ -11,12 +11,29 @@ const Navbar = () => {
     goToPage(AppPage.GEOGRAPHIC_SELECTION);
   };
 
+  const pageRequiresCustomHandler = new Set<AppPage>([
+    AppPage.GEOGRAPHIC_SELECTION,
+  ]);
+
   return (
     <nav>
         <div className="navbar">
-            <a href="#" onClick={() => goToPage(AppPage.START_SCREEN)}>Home</a>
-            <a href="#" onClick={() => goToPage(AppPage.EXPLANATION)}>Explanation</a>
-            <a href="#" onClick={handleGeographicClick}>Geographic Selection</a>
+            {Object.entries(AppPageLabels).map(([key, label]) => {
+                const page = Number(key) as AppPage;
+                return (
+                    <a
+                        key={label}
+                        href="#"
+                        onClick={() => {
+                            if (page === AppPage.GEOGRAPHIC_SELECTION) {
+                                handleGeographicClick();
+                            } else {
+                                goToPage(page);
+                            }
+                        }}
+                    > {label} </a>
+                );
+            })}
         </div>
     </nav>
   );
