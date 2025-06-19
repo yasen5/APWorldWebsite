@@ -53,7 +53,7 @@
 /* A slide-container will sometimes contain 2 pages which must be displayed at the same height. It is thus necessary take them out of the 
 document flow using `position: absolute` to ensure that one is not displayed under the other. */
 .slide-container>div {
-  /* position: absolute; */
+  position: absolute;
   /* Due to absolute positioning, it is necessary to reaffirm that the page takes up the whole space in order for it to properly center */
   width: 100%;
   height: 100%;
