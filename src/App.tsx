@@ -1,8 +1,8 @@
-import { useState, useRef, createContext, useContext, useMemo } from 'react';
+import { useState, useRef, createContext, useContext, useMemo} from 'react';
 import worldIcon from './assets/world.svg'
 import JapanMap from './assets/japan.png'
 import GoryeoDynasty from './assets/goryeo-dynasty.svg'
-import AbbasidCaliphate from './assets/abbasid-caliphate.png'
+import AbbasidCaliphate from './assets/abbasid-caliphate.svg?react';
 import MajapahitEmpire from './assets/majapahit-empire.png'
 import OttomanEmpire from './assets/ottoman-empire.webp'
 import TranDynasty from './assets/tran-dynasty.png'
@@ -39,7 +39,7 @@ type GeographicButton = Readonly<{
 interface Nation {
   region: "East Asia" | "Southeast Asia" | "South Asia" | "Middle East";
   name: string;
-  image: string;
+  image: React.ComponentType<React.SVGProps<SVGSVGElement>>;
   start: number;
   end: number;
 }
@@ -52,17 +52,17 @@ const regionButtons: GeographicButton[] = [
 ];
 
 const nations: Nation[] = [
-  { region: "East Asia", name: "Song Dynasty", image: SongDynasty, start: 960, end: 1279 },
-  { region: "East Asia", name: "Yuan Dynasty", image: YuanDynasty, start: 1271, end: 1368 },
-  { region: "East Asia", name: "Ming Dynasty", image: MingDynasty, start: 1368, end: 1644 },
-  { region: "East Asia", name: "Goryeo Dynasty (Korea, 918-1392)", image: GoryeoDynasty, start: 918, end: 1392 },
-  { region: "Southeast Asia", name: "Trần Dynasty (Vietnam, 1225-1400)", image: TranDynasty, start: 1225, end: 1400 },
-  { region: "Southeast Asia", name: "Majapahit Empire (Indonesia, 1293-1527)", image: MajapahitEmpire, start: 1293, end: 1527 },
-  { region: "South Asia", name: "Delhi Sultanate (India, 1206-1526)", image: IndiaMap, start: 1206, end: 1526 },
-  { region: "South Asia", name: "Sri Lanka (Sri Lanka, 543BC-1815CE)", image: SriLankaMap, start: -543, end: 1815 },
+  // { region: "East Asia", name: "Song Dynasty", image: SongDynasty, start: 960, end: 1279 },
+  // { region: "East Asia", name: "Yuan Dynasty", image: YuanDynasty, start: 1271, end: 1368 },
+  // { region: "East Asia", name: "Ming Dynasty", image: MingDynasty, start: 1368, end: 1644 },
+  // { region: "East Asia", name: "Goryeo Dynasty (Korea, 918-1392)", image: GoryeoDynasty, start: 918, end: 1392 },
+  // { region: "Southeast Asia", name: "Trần Dynasty (Vietnam, 1225-1400)", image: TranDynasty, start: 1225, end: 1400 },
+  // { region: "Southeast Asia", name: "Majapahit Empire (Indonesia, 1293-1527)", image: MajapahitEmpire, start: 1293, end: 1527 },
+  // { region: "South Asia", name: "Delhi Sultanate (India, 1206-1526)", image: IndiaMap, start: 1206, end: 1526 },
+  // { region: "South Asia", name: "Sri Lanka (Sri Lanka, 543BC-1815CE)", image: SriLankaMap, start: -543, end: 1815 },
   { region: "Middle East", name: "Abbasid Caliphate (750-1258)", image: AbbasidCaliphate, start: 750, end: 1258 },
-  { region: "Middle East", name: "Ottoman Empire (Discount Caliphate)", image: OttomanEmpire, start: 1299, end: 1922 },
-  { region: "East Asia", name: "Kamakura & Muromachi Shogunates (Japan)", image: JapanMap, start:1192, end: 1573 }
+  // { region: "Middle East", name: "Ottoman Empire (Discount Caliphate)", image: OttomanEmpire, start: 1299, end: 1922 },
+  // { region: "East Asia", name: "Kamakura & Muromachi Shogunates (Japan)", image: JapanMap, start:1192, end: 1573 }
 ];
 
 const timePeriods: number[] = [
@@ -240,7 +240,7 @@ interface StartScreenProps {
 
 const StartScreen = ({goToPage}: StartScreenProps) => {
   return (
-    <div> 
+    <div className='centered-container'> 
         <h1>AP World Study Website</h1>
         <p>Click to Begin</p>
         <button className='image-button' onClick={() => goToPage(AppPage.GEOGRAPHIC_SELECTION)}>
@@ -319,7 +319,8 @@ const GeographicSelectionPage = () => {
     [nations, timePeriods]
   );
 
-  return (<div className='geographic-button-grid'>
+  return (
+    <div className='geographic-button-grid'>
         {selectionStep === SelectionStep.REGION && regionButtons.map((region) => (
           <button
             key={region.name}
@@ -336,14 +337,14 @@ const GeographicSelectionPage = () => {
         ))}
         {selectionStep === SelectionStep.COUNTRY && selectedRegion && nationsByTime[selectedRange[0]][selectedRegion] ? (
           nationsByTime[selectedRange[0]][selectedRegion].map((country, index) => (
-            <button
-              key={index}
-              className="image-button"
-            /*TODO add onClick functionality*/
-            >
-              <img src={country.image} alt={`${country.name} map`} />
+            <div key={index} className="svg-container">
+              <country.image 
+                className='country-svg'
+                onClick={() => {console.log("SOMETHING HAPPENED")}} 
+                style={{ cursor: 'pointer' }}
+              />
               <span>{country.name}</span>
-            </button>
+            </div>
           ))
         ) : (
           <div className="fallback-message">Please select a region to view countries.</div>
@@ -352,20 +353,13 @@ const GeographicSelectionPage = () => {
 };
 
 function App() {
-  const [currentPage, setCurrentPage] = useState<AppPage>(AppPage.START_SCREEN);
-  const [nextPage, setNextPage] = useState<AppPage>(AppPage.EXPLANATION);
-  const [transitioning, setTransitioning] = useState<boolean>(false);
-  const timeoutRef = useRef<number | null>(null);
-
   return (
     <TimeSliderProvider>
       <GeographicSelectionProvider>
         <PageTransitionProvider>
-          <div>
-            <Navbar/>
-            <TimeSlider />
-            <PageTransition />
-          </div>
+          <Navbar/>
+          <TimeSlider />
+          <PageTransition />
         </PageTransitionProvider>
       </GeographicSelectionProvider>
     </TimeSliderProvider>
