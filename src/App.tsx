@@ -1,4 +1,4 @@
-import { useState, useRef, createContext, useContext, useMemo} from 'react';
+import { useState, useRef, createContext, useContext, useMemo } from 'react';
 import worldIcon from './assets/world.svg'
 import JapanMap from './assets/japan.png'
 import GoryeoDynasty from './assets/goryeo-dynasty.svg'
@@ -111,7 +111,7 @@ const TimeSlider = () => {
       timePeriod,
       percentage: sliderPercentage(timePeriod),
     }));
-  }, [timePeriods]);  
+  }, [timePeriods]);
 
   const handleClick = (click: React.MouseEvent<HTMLDivElement>) => {
     if (!sliderRef.current) return;
@@ -131,17 +131,17 @@ const TimeSlider = () => {
     <div className='slider-container'>
       <h1>Select a time period</h1>
       <div className='slider-wrapper'>
-        <div 
-          ref={sliderRef} 
+        <div
+          ref={sliderRef}
           className={'slider-track'}
           onClick={handleClick}
         >
-          <div 
+          <div
             className='active-range'
-            style={{ 
-              left: `${sliderPercentage(selectedRange[0])}%`, 
-              width: `${ ((sliderPercentage(selectedRange[1]) - sliderPercentage(selectedRange[0])))}%` 
-            }} 
+            style={{
+              left: `${sliderPercentage(selectedRange[0])}%`,
+              width: `${((sliderPercentage(selectedRange[1]) - sliderPercentage(selectedRange[0])))}%`
+            }}
           />
           <div>
             {sliderPercentages.map((percentage) => (
@@ -195,17 +195,17 @@ export const PageTransitionProvider: React.FC<PageTransitionProviderProps> = ({ 
       setTransitioning(false);
     }, 1000);
   };
-  
+
 
   return (
-    <PageTransitionContext.Provider value={{ currentPage, setCurrentPage, nextPage, setNextPage, transitioning, setTransitioning, goToPage}}>
+    <PageTransitionContext.Provider value={{ currentPage, setCurrentPage, nextPage, setNextPage, transitioning, setTransitioning, goToPage }}>
       {children}
     </PageTransitionContext.Provider>
   );
 };
 
 const PageTransition = () => {
-  const {transitioning, currentPage, nextPage, goToPage } = usePageTransitionContext();
+  const { transitioning, currentPage, nextPage, goToPage } = usePageTransitionContext();
 
   const renderPage = (page: AppPage) => {
     switch (page) {
@@ -238,15 +238,15 @@ interface StartScreenProps {
   goToPage: (page: AppPage) => void
 }
 
-const StartScreen = ({goToPage}: StartScreenProps) => {
+const StartScreen = ({ goToPage }: StartScreenProps) => {
   return (
-    <div className='centered-container'> 
-        <h1>AP World Study Website</h1>
-        <p>Click to Begin</p>
-        <button className='image-button' onClick={() => goToPage(AppPage.GEOGRAPHIC_SELECTION)}>
-          <img src={worldIcon} className="logo"/>
-        </button>
-        <button onClick={() => goToPage(AppPage.EXPLANATION)}>Explanation</button>
+    <div>
+      <h1>AP World Study Website</h1>
+      <p>Click to Begin</p>
+      <button className='image-button' onClick={() => goToPage(AppPage.GEOGRAPHIC_SELECTION)}>
+        <img src={worldIcon} className="logo" />
+      </button>
+      <button onClick={() => goToPage(AppPage.EXPLANATION)}>Explanation</button>
     </div>
   );
 };
@@ -294,17 +294,18 @@ export const GeographicSelectionProvider: React.FC<GeographicSelectionProviderPr
 
 const GeographicSelectionPage = () => {
   const { selectionStep, setSelectionStep, selectedRegion, setSelectedRegion } = useGeographicSelection();
-  const { selectedRange} = useTimeSliderContext();
+  const { selectedRange } = useTimeSliderContext();
 
   const nationsByTime: Record<number, Record<string, Nation[]>> = useMemo(
     () => {
       const nationsByTimeRecord: Record<number, Record<string, Nation[]>> = {};
       timePeriods.forEach((timePeriod, timeIndex) => {
         const nationsInPeriod: Record<string, Nation[]> = {};
-        nations.forEach((nation, index) => {
-          if (index !== timePeriods.length - 1 &&
-            ((nation.start <= timePeriod && nation.end >= timePeriod) ||
-            (nation.start >= timePeriod && nation.start <= timePeriods[timeIndex + 1]))
+        if (timeIndex === timePeriods.length - 1) return nationsInPeriod; // Skip the last time period as it has no end
+        nations.forEach((nation) => {
+          if (
+            (nation.start <= timePeriod && nation.end >= timePeriod) ||
+            (nation.start >= timePeriod && nation.start <= timePeriods[timeIndex + 1])
           ) {
             if (!nationsInPeriod[nation.region]) {
               nationsInPeriod[nation.region] = [];
@@ -321,35 +322,36 @@ const GeographicSelectionPage = () => {
 
   return (
     <div className='geographic-button-grid'>
-        {selectionStep === SelectionStep.REGION && regionButtons.map((region) => (
-          <button
-            key={region.name}
-            className="image-button"
-            onClick={() => {
-                setSelectedRegion(region.name);
-                setSelectionStep(SelectionStep.COUNTRY);
-              }
-            }
-          >
-            <img src={region.image} alt={`${region.name} map`} />
-            <span>{region.name}</span>
-          </button>
-        ))}
-        {selectionStep === SelectionStep.COUNTRY && selectedRegion && nationsByTime[selectedRange[0]][selectedRegion] ? (
-          nationsByTime[selectedRange[0]][selectedRegion].map((country, index) => (
-            <div key={index} className="svg-container">
-              <country.image 
-                className='country-svg'
-                onClick={() => {console.log("SOMETHING HAPPENED")}} 
-                style={{ cursor: 'pointer' }}
-              />
-              <span>{country.name}</span>
-            </div>
-          ))
-        ) : (
-          <div className="fallback-message">Please select a region to view countries.</div>
-        )}
-      </div>);
+      {selectionStep === SelectionStep.REGION && regionButtons.map((region) => (
+        <button
+          key={region.name}
+          className="image-button"
+          onClick={() => {
+            setSelectedRegion(region.name);
+            setSelectionStep(SelectionStep.COUNTRY);
+          }
+          }
+        >
+          <img src={region.image} alt={`${region.name} map`} />
+          <span>{region.name}</span>
+        </button>
+      ))}
+      {selectionStep === SelectionStep.COUNTRY && selectedRegion && nationsByTime[selectedRange[0]][selectedRegion] ? (
+        nationsByTime[selectedRange[0]][selectedRegion].map((country, index) => (
+          <div key={index} className="svg-container">
+            <country.image
+              className='country-svg'
+              /* TODO add onClick handler to handle country selection */
+              onClick={() => { console.log("SOMETHING HAPPENED") }}
+              style={{ cursor: 'pointer' }}
+            />
+            <span>{country.name}</span>
+          </div>
+        ))
+      ) : (
+        <div className="fallback-message">Please select a region to view countries.</div>
+      )}
+    </div>);
 };
 
 function App() {
@@ -357,7 +359,7 @@ function App() {
     <TimeSliderProvider>
       <GeographicSelectionProvider>
         <PageTransitionProvider>
-          <Navbar/>
+          <Navbar />
           <TimeSlider />
           <PageTransition />
         </PageTransitionProvider>
