@@ -13,7 +13,7 @@
 }
 
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 0.5em #646cffaa);
 }
 
 .logo.react:hover {
@@ -110,7 +110,7 @@ document flow using `position: absolute` to ensure that one is not displayed und
 /* Main container styles - centers content and provides padding */
 .slider-container {
   position: absolute;
-  top: 0;
+  top: 1rem;
   left: 50%;
   transform: translateX(-50%);
   padding: 2rem;
@@ -145,4 +145,27 @@ document flow using `position: absolute` to ensure that one is not displayed und
 .slider-label {
   position: absolute;
   transform: translateX(-50%)
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0; /* makes it stay at the side*/
+  width: 100%; /*makes it not stop after the last link */
+  z-index: 1000; /* makes sure it is on top of everything else */
+  background-color: #194f24;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.navbar a{
+  min-width: 100px; /* necessary */
+  color: white;
+  padding: 0.5rem 1rem;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
 }
