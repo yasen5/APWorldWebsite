@@ -1,17 +1,20 @@
 import { useState, useRef, createContext, useContext, useMemo } from 'react';
 import worldIcon from './assets/world.svg'
-import ChinaMap from './assets/china.png'
-import KoreaMap from './assets/korea.png'
 import JapanMap from './assets/japan.png'
-import VietnamMap from './assets/vietnam.webp'
-import CambodiaMap from './assets/cambodia.png'
-import IndonesiaMap from './assets/indonesia.png'
+import GoryeoDynasty from './assets/goryeo-dynasty.svg'
+import AbbasidCaliphate from './assets/abbasid-caliphate.svg?react';
+import MajapahitEmpire from './assets/majapahit-empire.png'
+import OttomanEmpire from './assets/ottoman-empire.webp'
+import TranDynasty from './assets/tran-dynasty.png'
 import IndiaMap from './assets/india.png'
 import SriLankaMap from './assets/sri-lanka.png'
 import EastAsia from './assets/east-asia.png'
 import SoutheastAsia from './assets/southeast-asia.webp'
 import SouthAsia from './assets/south-asia.png'
 import MiddleEast from './assets/middle-east.webp'
+import SongDynasty from './assets/song-dynasty.svg'
+import YuanDynasty from './assets/yuan-dynasty.jpg'
+import MingDynasty from './assets/ming-dynasty.png'
 import './App.css'
 import Navbar from './Navbar.tsx';
 export enum AppPage {
@@ -33,28 +36,34 @@ type GeographicButton = Readonly<{
   image: string
 }>;
 
+interface Nation {
+  region: "East Asia" | "Southeast Asia" | "South Asia" | "Middle East";
+  name: string;
+  image: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  start: number;
+  end: number;
+}
+
 const regionButtons: GeographicButton[] = [
   { name: "East Asia", image: EastAsia },
   { name: "Southeast Asia", image: SoutheastAsia },
   { name: "South Asia", image: SouthAsia },
   { name: "Middle East", image: MiddleEast }
 ];
-const countryButtons: Record<string, GeographicButton[]> = {
-  "East Asia": [
-    { name: "China", image: ChinaMap },
-    { name: "Korea", image: KoreaMap },
-    { name: "Japan", image: JapanMap }
-  ],
-  "Southeast Asia": [
-    { name: "Vietnam", image: VietnamMap },
-    { name: "Cambodia", image: CambodiaMap },
-    { name: "Indonesia", image: IndonesiaMap }
-  ],
-  "South Asia": [
-    { name: "India", image: IndiaMap },
-    { name: "Sri Lanka", image: SriLankaMap },
-  ]
-};
+
+const nations: Nation[] = [
+  // { region: "East Asia", name: "Song Dynasty", image: SongDynasty, start: 960, end: 1279 },
+  // { region: "East Asia", name: "Yuan Dynasty", image: YuanDynasty, start: 1271, end: 1368 },
+  // { region: "East Asia", name: "Ming Dynasty", image: MingDynasty, start: 1368, end: 1644 },
+  // { region: "East Asia", name: "Goryeo Dynasty (Korea, 918-1392)", image: GoryeoDynasty, start: 918, end: 1392 },
+  // { region: "Southeast Asia", name: "Trần Dynasty (Vietnam, 1225-1400)", image: TranDynasty, start: 1225, end: 1400 },
+  // { region: "Southeast Asia", name: "Majapahit Empire (Indonesia, 1293-1527)", image: MajapahitEmpire, start: 1293, end: 1527 },
+  // { region: "South Asia", name: "Delhi Sultanate (India, 1206-1526)", image: IndiaMap, start: 1206, end: 1526 },
+  // { region: "South Asia", name: "Sri Lanka (Sri Lanka, 543BC-1815CE)", image: SriLankaMap, start: -543, end: 1815 },
+  { region: "Middle East", name: "Abbasid Caliphate (750-1258)", image: AbbasidCaliphate, start: 750, end: 1258 },
+  // { region: "Middle East", name: "Ottoman Empire (Discount Caliphate)", image: OttomanEmpire, start: 1299, end: 1922 },
+  // { region: "East Asia", name: "Kamakura & Muromachi Shogunates (Japan)", image: JapanMap, start:1192, end: 1573 }
+];
 
 const timePeriods: number[] = [
   1200, 1450, 1750, 1900, 2025
@@ -102,7 +111,7 @@ const TimeSlider = () => {
       timePeriod,
       percentage: sliderPercentage(timePeriod),
     }));
-  }, [timePeriods]);  
+  }, [timePeriods]);
 
   const handleClick = (click: React.MouseEvent<HTMLDivElement>) => {
     if (!sliderRef.current) return;
@@ -122,17 +131,17 @@ const TimeSlider = () => {
     <div className='slider-container'>
       <h1>Select a time period</h1>
       <div className='slider-wrapper'>
-        <div 
-          ref={sliderRef} 
+        <div
+          ref={sliderRef}
           className={'slider-track'}
           onClick={handleClick}
         >
-          <div 
+          <div
             className='active-range'
-            style={{ 
-              left: `${sliderPercentage(selectedRange[0])}%`, 
-              width: `${ ((sliderPercentage(selectedRange[1]) - sliderPercentage(selectedRange[0])))}%` 
-            }} 
+            style={{
+              left: `${sliderPercentage(selectedRange[0])}%`,
+              width: `${((sliderPercentage(selectedRange[1]) - sliderPercentage(selectedRange[0])))}%`
+            }}
           />
           <div>
             {sliderPercentages.map((percentage) => (
@@ -186,17 +195,17 @@ export const PageTransitionProvider: React.FC<PageTransitionProviderProps> = ({ 
       setTransitioning(false);
     }, 1000);
   };
-  
+
 
   return (
-    <PageTransitionContext.Provider value={{ currentPage, setCurrentPage, nextPage, setNextPage, transitioning, setTransitioning, goToPage}}>
+    <PageTransitionContext.Provider value={{ currentPage, setCurrentPage, nextPage, setNextPage, transitioning, setTransitioning, goToPage }}>
       {children}
     </PageTransitionContext.Provider>
   );
 };
 
 const PageTransition = () => {
-  const {transitioning, currentPage, nextPage, goToPage } = usePageTransitionContext();
+  const { transitioning, currentPage, nextPage, goToPage } = usePageTransitionContext();
 
   const renderPage = (page: AppPage) => {
     switch (page) {
@@ -229,15 +238,15 @@ interface StartScreenProps {
   goToPage: (page: AppPage) => void
 }
 
-const StartScreen = ({goToPage}: StartScreenProps) => {
+const StartScreen = ({ goToPage }: StartScreenProps) => {
   return (
-    <div> 
-        <h1>AP World Study Website</h1>
-        <p>Click to Begin</p>
-        <button className='image-button' onClick={() => goToPage(AppPage.GEOGRAPHIC_SELECTION)}>
-          <img src={worldIcon} className="logo"/>
-        </button>
-        <button onClick={() => goToPage(AppPage.EXPLANATION)}>Explanation</button>
+    <div>
+      <h1>AP World Study Website</h1>
+      <p>Click to Begin</p>
+      <button className='image-button' onClick={() => goToPage(AppPage.GEOGRAPHIC_SELECTION)}>
+        <img src={worldIcon} className="logo" />
+      </button>
+      <button onClick={() => goToPage(AppPage.EXPLANATION)}>Explanation</button>
     </div>
   );
 };
@@ -285,54 +294,74 @@ export const GeographicSelectionProvider: React.FC<GeographicSelectionProviderPr
 
 const GeographicSelectionPage = () => {
   const { selectionStep, setSelectionStep, selectedRegion, setSelectedRegion } = useGeographicSelection();
+  const { selectedRange } = useTimeSliderContext();
 
-  return (<div className='geographic-button-grid'>
-        {selectionStep === SelectionStep.REGION && regionButtons.map((region) => (
-          <button
-            key={region.name}
-            className="image-button"
-            onClick={() => {
-                setSelectedRegion(region.name);
-                setSelectionStep(SelectionStep.COUNTRY);
-              }
+  const nationsByTime: Record<number, Record<string, Nation[]>> = useMemo(
+    () => {
+      const nationsByTimeRecord: Record<number, Record<string, Nation[]>> = {};
+      timePeriods.forEach((timePeriod, timeIndex) => {
+        const nationsInPeriod: Record<string, Nation[]> = {};
+        if (timeIndex === timePeriods.length - 1) return nationsInPeriod; // Skip the last time period as it has no end
+        nations.forEach((nation) => {
+          if (
+            (nation.start <= timePeriod && nation.end >= timePeriod) ||
+            (nation.start >= timePeriod && nation.start <= timePeriods[timeIndex + 1])
+          ) {
+            if (!nationsInPeriod[nation.region]) {
+              nationsInPeriod[nation.region] = [];
             }
-          >
-            <img src={region.image} alt={`${region.name} map`} />
-            <span>{region.name}</span>
-          </button>
-        ))}
-        {selectionStep === SelectionStep.COUNTRY && selectedRegion && countryButtons[selectedRegion] ? (
-          countryButtons[selectedRegion].map((country, index) => (
-            <button
-              key={index}
-              className="image-button"
-            /*TODO add onClick functionality*/
-            >
-              <img src={country.image} alt={`${country.name} map`} />
-              <span>{country.name}</span>
-            </button>
-          ))
-        ) : (
-          <div className="fallback-message">Please select a region to view countries.</div>
-        )}
-      </div>);
+            nationsInPeriod[nation.region].push(nation);
+          }
+        });
+        nationsByTimeRecord[timePeriod] = nationsInPeriod;
+      });
+      return nationsByTimeRecord;
+    },
+    [nations, timePeriods]
+  );
+
+  return (
+    <div className='geographic-button-grid'>
+      {selectionStep === SelectionStep.REGION && regionButtons.map((region) => (
+        <button
+          key={region.name}
+          className="image-button"
+          onClick={() => {
+            setSelectedRegion(region.name);
+            setSelectionStep(SelectionStep.COUNTRY);
+          }
+          }
+        >
+          <img src={region.image} alt={`${region.name} map`} />
+          <span>{region.name}</span>
+        </button>
+      ))}
+      {selectionStep === SelectionStep.COUNTRY && selectedRegion && nationsByTime[selectedRange[0]][selectedRegion] ? (
+        nationsByTime[selectedRange[0]][selectedRegion].map((country, index) => (
+          <div key={index} className="svg-container">
+            <country.image
+              className='country-svg'
+              /* TODO add onClick handler to handle country selection */
+              onClick={() => { console.log("SOMETHING HAPPENED") }}
+              style={{ cursor: 'pointer' }}
+            />
+            <span>{country.name}</span>
+          </div>
+        ))
+      ) : (
+        <div className="fallback-message">Please select a region to view countries.</div>
+      )}
+    </div>);
 };
 
 function App() {
-  const [currentPage, setCurrentPage] = useState<AppPage>(AppPage.START_SCREEN);
-  const [nextPage, setNextPage] = useState<AppPage>(AppPage.EXPLANATION);
-  const [transitioning, setTransitioning] = useState<boolean>(false);
-  const timeoutRef = useRef<number | null>(null);
-
   return (
     <TimeSliderProvider>
       <GeographicSelectionProvider>
         <PageTransitionProvider>
-          <div>
-            <Navbar/>
-            <TimeSlider />
-            <PageTransition />
-          </div>
+          <Navbar />
+          <TimeSlider />
+          <PageTransition />
         </PageTransitionProvider>
       </GeographicSelectionProvider>
     </TimeSliderProvider>

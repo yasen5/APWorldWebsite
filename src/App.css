@@ -1,7 +1,10 @@
 #root {
   max-width: 1280px;
-  margin: 0 auto; /* Gives things the proper left/right margins */
+  margin: 0 auto;
   text-align: center;
+  height: 100vh; /* Fill the full viewport */
+  display: flex;
+  flex-direction: column;
 }
 
 .logo {
@@ -44,23 +47,23 @@
 
 .slide-container {
   position: relative;
-  width: 100vw; /* Makes the text go across the whole page by default */
-  /* These two lines center the contents in the middle of the page */
+  width: 100vw;
   left: 50%;
   transform: translateX(-50%);
+  flex: 1; /* Take up all remaining space */
+  min-height: 0; /* Allow flexbox to shrink if needed */
 }
 
 /* A slide-container will sometimes contain 2 pages which must be displayed at the same height. It is thus necessary take them out of the 
 document flow using `position: absolute` to ensure that one is not displayed under the other. */
-.slide-container>div {
+.slide-container > div {
   position: absolute;
-  /* Due to absolute positioning, it is necessary to reaffirm that the page takes up the whole space in order for it to properly center */
   width: 100%;
-  height: 100%;
-  /* These lines center the content within the flex box (which was just defined as the whole page in the two lines above) */
+  height: 100%; /* Use full height of flex container */
   display: flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
 }
 
 .slide-out {
@@ -74,25 +77,31 @@ document flow using `position: absolute` to ensure that one is not displayed und
 }
 
 .geographic-button-grid {
-  display: flex; /* Activate flexbox */
-  flex-direction: row; /* Align items in a row */
-  justify-content: space-between; /* Optional: Adjust spacing between buttons */
-  align-items: center; /* Centers items vertically within their grid cells */
-  width: 100%; /* Ensures the grid spans the full width of its container */
-  max-width: 100%; /* Optional: Limits the grid's maximum width */
-  margin: 0 auto; /* Centers the grid within its parent container */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  gap: 1rem;
+  height: 100%; /* Add this - inherit height from parent */
+  box-sizing: border-box; /* Add this for proper sizing */
 }
 
-.geographic-button-grid .image-button {
-  width: 100%; /* Ensures buttons take up the full width of their grid cell */
-  padding: 1rem; /* Adds padding inside the button */
-  border-radius: 8px; /* Rounds the corners of the button */
-  /* background-color: #1a1a1a; */
-  color: white; /* Sets text color to white */
+.geographic-button-grid .svg-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex: 1;
+  height: 100%; /* Ensure it doesn't exceed parent height */
+  box-sizing: border-box;
 }
 
 .image-button {
-  display: inline-block; /* Ensure buttons behave as inline elements */
+  display: flex; /* Make buttons flex containers */
+  flex-direction: column; /* Stack image and text vertically */
+  align-items: center; /* Center content horizontally */
   text-align: center; /* Centers text inside the button */
 }
 
@@ -109,19 +118,11 @@ document flow using `position: absolute` to ensure that one is not displayed und
 
 /* Main container styles - centers content and provides padding */
 .slider-container {
-  position: absolute;
-  top: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
   padding: 2rem;
   max-width: 42rem;
   margin-left: auto;
   margin-right: auto;
-}
-
-/* Slider wrapper - provides spacing below the slider */
-.slider-wrapper {
-  margin-bottom: 2rem;
+  flex-shrink: 0;
 }
 
 /* Main slider track - creates the base horizontal bar that users interact with */
@@ -168,4 +169,19 @@ document flow using `position: absolute` to ensure that one is not displayed und
 
 .navbar a:hover {
   text-decoration: underline;
+}
+
+.country-svg {
+  pointer-events: none;
+  display: block;
+  max-width: 100%;
+  height: calc(100% - 3rem); /* Increase space for text and padding */
+  width: auto;
+  object-fit: contain;
+  box-sizing: border-box;
+}
+
+.country-svg path {
+  pointer-events: auto;
+  cursor: pointer;
 }
