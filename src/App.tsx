@@ -335,7 +335,7 @@ const GeographicSelectionPage = () => {
         </button>
       ))}
       {selectionStep === SelectionStep.COUNTRY && selectedRegion && (
-        nationsByTime[selectedRange[0]][selectedRegion].map((country) => (
+        (nationsByTime[selectedRange[0]]?.[selectedRegion] || []).map((country) => (
           <div key={country.name}>
             <country.image
               className='country-svg'
