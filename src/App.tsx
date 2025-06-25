@@ -128,16 +128,15 @@ const TimeSlider = () => {
   };
 
   return (
-    <div className='slider-container'>
+    <div className='p-12'>
       <h1>Select a time period</h1>
-      <div className='slider-wrapper'>
         <div
           ref={sliderRef}
-          className={'slider-track'}
+          className={'relative h-2 bg-gray-300 rounded-lg cursor-pointer'}
           onClick={handleClick}
         >
           <div
-            className='active-range'
+            className='absolute h-2 bg-blue-500 rounded-lg'
             style={{
               left: `${sliderPercentage(selectedRange[0])}%`,
               width: `${((sliderPercentage(selectedRange[1]) - sliderPercentage(selectedRange[0])))}%`
@@ -145,11 +144,10 @@ const TimeSlider = () => {
           />
           <div>
             {sliderPercentages.map((percentage) => (
-              <p key={percentage.timePeriod} className='slider-label' style={{ left: `${percentage.percentage}%` }}>
+              <p key={percentage.timePeriod} className='absolute -translate-x-1/2 pt-2' style={{ left: `${percentage.percentage}%` }}>
                 {percentage.timePeriod}
               </p>))}
           </div>
-        </div>
       </div>
     </div>
   );
@@ -221,7 +219,7 @@ const PageTransition = () => {
   };
 
   return (
-    <div className="slide-container">
+    <div className="slide-container relative w-full h-full">
       <div className={transitioning ? 'slide-out' : ''}>
         {renderPage(currentPage)}
       </div>
@@ -240,11 +238,11 @@ interface StartScreenProps {
 
 const StartScreen = ({ goToPage }: StartScreenProps) => {
   return (
-    <div>
+    <div className='flex flex-col items-center'>
       <h1>AP World Study Website</h1>
       <p>Click to Begin</p>
       <button className='image-button' onClick={() => goToPage(AppPage.GEOGRAPHIC_SELECTION)}>
-        <img src={worldIcon} className="logo" />
+        <img src={worldIcon} className="p-1.5 h-24 w-24 drop-shadow-sm animate-pulse" />
       </button>
       <button onClick={() => goToPage(AppPage.EXPLANATION)}>Explanation</button>
     </div>
@@ -336,9 +334,9 @@ const GeographicSelectionPage = () => {
           <span>{region.name}</span>
         </button>
       ))}
-      {selectionStep === SelectionStep.COUNTRY && selectedRegion && nationsByTime[selectedRange[0]][selectedRegion] ? (
-        nationsByTime[selectedRange[0]][selectedRegion].map((country, index) => (
-          <div key={index} className="svg-container">
+      {selectionStep === SelectionStep.COUNTRY && selectedRegion && (
+        (nationsByTime[selectedRange[0]]?.[selectedRegion] || []).map((country) => (
+          <div key={country.name}>
             <country.image
               className='country-svg'
               /* TODO add onClick handler to handle country selection */
@@ -348,8 +346,6 @@ const GeographicSelectionPage = () => {
             <span>{country.name}</span>
           </div>
         ))
-      ) : (
-        <div className="fallback-message">Please select a region to view countries.</div>
       )}
     </div>);
 };
