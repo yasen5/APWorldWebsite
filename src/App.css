@@ -1,8 +1,10 @@
+@import "tailwindcss";
+
 #root {
-  max-width: 1280px;
   margin: 0 auto;
   text-align: center;
   height: 100vh; /* Fill the full viewport */
+  width: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -17,10 +19,6 @@
 
 .logo:hover {
   filter: drop-shadow(0 0 0.5em #646cffaa);
-}
-
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
 @keyframes slideOutAccel {
@@ -45,25 +43,10 @@
   }
 }
 
-.slide-container {
-  position: relative;
-  width: 100vw;
-  left: 50%;
-  transform: translateX(-50%);
-  flex: 1; /* Take up all remaining space */
-  min-height: 0; /* Allow flexbox to shrink if needed */
-}
-
 /* A slide-container will sometimes contain 2 pages which must be displayed at the same height. It is thus necessary take them out of the 
 document flow using `position: absolute` to ensure that one is not displayed under the other. */
 .slide-container > div {
-  position: absolute;
-  width: 100%;
-  height: 100%; /* Use full height of flex container */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
+  @apply absolute w-full h-full flex items-center justify-center;
 }
 
 .slide-out {
@@ -79,106 +62,16 @@ document flow using `position: absolute` to ensure that one is not displayed und
 .geographic-button-grid {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  width: 100%;
-  max-width: 100%;
   gap: 1rem;
-  height: 100%; /* Add this - inherit height from parent */
-  box-sizing: border-box; /* Add this for proper sizing */
-}
-
-.geographic-button-grid .svg-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  flex: 1;
-  height: 100%; /* Ensure it doesn't exceed parent height */
-  box-sizing: border-box;
-}
-
-.image-button {
-  display: flex; /* Make buttons flex containers */
-  flex-direction: column; /* Stack image and text vertically */
-  align-items: center; /* Center content horizontally */
-  text-align: center; /* Centers text inside the button */
-}
-
-.image-button img {
-  max-width: 100%; /* Limits the image's maximum width */
-  max-height: 100%; /* Limits the image's maximum height */
-  object-fit: contain; /* Keeps the image's aspect ratio */
-}
-
-.image-button span {
-  margin-top: 0.5rem; /* Adds spacing between the image and the text */
-  font-size: 1rem; /* Adjusts the font size */
 }
 
 /* Main container styles - centers content and provides padding */
 .slider-container {
   padding: 2rem;
-  max-width: 42rem;
-  margin-left: auto;
-  margin-right: auto;
-  flex-shrink: 0;
-}
-
-/* Main slider track - creates the base horizontal bar that users interact with */
-.slider-track {
-  position: relative;
-  height: 0.5rem;
-  background-color: #d1d5db; /* gray-300 */
-  border-radius: 0.5rem;
-  cursor: pointer;
-  user-select: none;
-}
-
-/* Active range highlight - shows the selected range between handles with blue color */
-.active-range {
-  position: absolute;
-  height: 0.5rem;
-  background-color: #3b82f6; /* blue-500 */
-  border-radius: 0.5rem;
-}
-
-.slider-label {
-  position: absolute;
-  transform: translateX(-50%)
-}
-
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0; /* makes it stay at the side*/
-  width: 100%; /*makes it not stop after the last link */
-  z-index: 1000; /* makes sure it is on top of everything else */
-  background-color: #194f24;
-  display: flex;
-  gap: 1.5rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.navbar a{
-  min-width: 100px; /* necessary */
-  color: white;
-  padding: 0.5rem 1rem;
-}
-
-.navbar a:hover {
-  text-decoration: underline;
 }
 
 .country-svg {
   pointer-events: none;
-  display: block;
-  max-width: 100%;
-  height: calc(100% - 3rem); /* Increase space for text and padding */
-  width: auto;
-  object-fit: contain;
-  box-sizing: border-box;
 }
 
 .country-svg path {
