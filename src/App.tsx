@@ -291,6 +291,43 @@ export const GeographicSelectionProvider: React.FC<GeographicSelectionProviderPr
   );
 };
 
+const Dropdown: React.FC<{ title: string; children: React.ReactNode }> = ({title, children}) => {
+    const [isOpen, setIsOpen] = useState(false);
+    return (
+      <div className="border border-gray-300 rounded mb-2">
+        <button className="w-full flex justify-between items-center p-2 bg-gray-100"
+          onClick={() => setIsOpen(!isOpen)}>
+            <span className="font-medium">{title}</span>
+            <span>{isOpen? "▲" : "▼"} </span>
+          </button>
+          {isOpen && (
+            <div className="p-2 bg-white text-sm">
+              {children}
+            </div>
+          )}
+      </div>
+    );
+  };
+
+  const CountryPopup: React.FC<{ country : Nation, onClose: () => void }> = ({ country, onClose}) => {
+    return (
+      <div className="fixed inset-0 flex items-center justify-center z-50" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div className="relative max-w-lg w-full max-h-[60vh] overflow-y-auto bg-[#f8f8f8] border-2 border-[#999] rounded-md shadow-lg p-6 text-left">
+          <button className="[all:unset] cursor-pointer absolute top-2 right-2" onClick={onClose} aria-label="Close">x</button>
+          <h2 className="font-bold" id="modal-title">{country.name}</h2>
+          <p>Hexagon goes here</p>
+          {countryNotes[country.name] &&
+            Object.entries(countryNotes[country.name]).map(([sectionTitle, content]) => (
+              <Dropdown key={sectionTitle} title={sectionTitle}>
+                <p>{content}</p>
+              </Dropdown>
+            ))
+          }
+        </div>
+      </div>
+    );
+  };
+
 const GeographicSelectionPage = () => {
   const { selectionStep, setSelectionStep, selectedRegion, setSelectedRegion } = useGeographicSelection();
   const { selectedRange } = useTimeSliderContext();
@@ -319,43 +356,6 @@ const GeographicSelectionPage = () => {
     },
     [nations, timePeriods]
   );
-
-  const Dropdown: React.FC<{ title: string; children: React.ReactNode }> = ({title, children}) => {
-    const [isOpen, setIsOpen] = useState(false);
-    return (
-      <div className="border border-gray-300 rounded mb-2">
-        <button className="w-full flex justify-between items-center p-2 bg-gray-100"
-          onClick={() => setIsOpen(!isOpen)}>
-            <span className="font-medium">{title}</span>
-            <span>{isOpen? "▲" : "▼"} </span>
-          </button>
-          {isOpen && (
-            <div className="p-2 bg-white text-sm">
-              {children}
-            </div>
-          )}
-      </div>
-    );
-  };
-
-  const CountryPopup: React.FC<{ country : Nation, onClose: () => void }> = ({ country, onClose}) => {
-    return (
-      <div className="fixed inset-0 flex items-center flex-center justify-center z-50">
-        <div className="relative max-w-lg w-full max-h-[60vh] overflow-y-auto bg-[#f0f0f0] border-2 border-[#999] rounded-md shadow-lg p-6 text-left">
-          <button className="[all:unset] cursor-pointer absolute top-2 right-2" onClick={onClose}>x</button>
-          <h2>{country.name}</h2>
-          <p>Hexagon goes here</p>
-          {countryNotes[country.name] &&
-            Object.entries(countryNotes[country.name]).map(([sectionTitle, content]) => (
-              <Dropdown key={sectionTitle} title={sectionTitle}>
-                <p>{content}</p>
-              </Dropdown>
-            ))
-          }
-        </div>
-      </div>
-    );
-  };
 
   return (
     <>
