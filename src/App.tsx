@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, createContext, useContext, useMemo } from 'react';
+import { useState, useRef, createContext, useContext, useMemo } from 'react';
 import worldIcon from './assets/world.svg'
 import './App.css'
 import Navbar from './Navbar.tsx';
