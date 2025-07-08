@@ -238,8 +238,8 @@ const ExplanationPage = () => {
 const Dropdown: React.FC<{ title: string; children: React.ReactNode }> = ({title, children}) => {
     const [isOpen, setIsOpen] = useState(false);
     return (
-      <div className="border border-gray-300 rounded mb-2">
-        <button className="w-full flex justify-between items-center p-2 bg-gray-100"
+      <div className="transition-[fill] duration-200 ease-in-out border border-gray-300 rounded mb-2">
+        <button className="hover:fill-[#c4c4c4] w-full flex justify-between items-center p-2 bg-gray-100"
           onClick={() => setIsOpen(!isOpen)}>
             <span className="font-medium">{title}</span>
             <span>{isOpen? "▲" : "▼"} </span>
@@ -281,8 +281,8 @@ const GeographicSelectionPage = () => {
   };
 
   const handleCountryClick = (event: React.MouseEvent<SVGSVGElement>) => {
-    const target = event.target as SVGElement;
-    const countryName = target.getAttribute('data-country');
+    console.log("Country clicked:", event.currentTarget.getAttribute('data-country'));
+    const countryName = event.currentTarget.getAttribute('data-country');
     if (!countryName) return;
 
     if (nations.includes(countryName)) {
@@ -301,10 +301,11 @@ const GeographicSelectionPage = () => {
 
   return (
     <>
-    <div className="w-full flex justify-center max-w-[800px]">
+    <div className="svg-container w-full flex justify-center max-w-[800px]">
       <MapComponent
-        className="svg-container"
+        className="country-svg"
         onClick={handleCountryClick}
+        style={{ cursor: 'pointer' }}
       />
     </div>
     {selectedCountry && (
