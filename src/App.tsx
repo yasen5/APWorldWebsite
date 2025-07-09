@@ -1,23 +1,10 @@
 import { useState, useRef, createContext, useContext, useMemo } from 'react';
 import worldIcon from './assets/world.svg'
-import JapanMap from './assets/japan.png'
-import GoryeoDynasty from './assets/goryeo-dynasty.svg'
-import AbbasidCaliphate from './assets/abbasid-caliphate.svg?react';
-import MajapahitEmpire from './assets/majapahit-empire.png'
-import OttomanEmpire from './assets/ottoman-empire.webp'
-import TranDynasty from './assets/tran-dynasty.png'
-import IndiaMap from './assets/india.png'
-import SriLankaMap from './assets/sri-lanka.png'
-import EastAsia from './assets/east-asia.png'
-import SoutheastAsia from './assets/southeast-asia.webp'
-import SouthAsia from './assets/south-asia.png'
-import MiddleEast from './assets/middle-east.webp'
-import SongDynasty from './assets/song-dynasty.svg'
-import YuanDynasty from './assets/yuan-dynasty.jpg'
-import MingDynasty from './assets/ming-dynasty.png'
 import './App.css'
 import Navbar from './Navbar.tsx';
 import { countryNotes} from './notes'
+import World1200 from './assets/World-1200.svg?react';
+
 export enum AppPage {
   START_SCREEN, EXPLANATION, GEOGRAPHIC_SELECTION
 }
@@ -28,43 +15,7 @@ export const AppPageLabels: Record<AppPage, string> = {
   [AppPage.GEOGRAPHIC_SELECTION]: "Geographic Selection"
 };
 
-const enum SelectionStep {
-  REGION, COUNTRY, TIME
-}
-
-type GeographicButton = Readonly<{
-  name: string,
-  image: string
-}>;
-
-interface Nation {
-  region: "East Asia" | "Southeast Asia" | "South Asia" | "Middle East";
-  name: string;
-  image: React.ComponentType<React.SVGProps<SVGSVGElement>>;
-  start: number;
-  end: number;
-}
-
-const regionButtons: GeographicButton[] = [
-  { name: "East Asia", image: EastAsia },
-  { name: "Southeast Asia", image: SoutheastAsia },
-  { name: "South Asia", image: SouthAsia },
-  { name: "Middle East", image: MiddleEast }
-];
-
-const nations: Nation[] = [
-  // { region: "East Asia", name: "Song Dynasty", image: SongDynasty, start: 960, end: 1279 },
-  // { region: "East Asia", name: "Yuan Dynasty", image: YuanDynasty, start: 1271, end: 1368 },
-  // { region: "East Asia", name: "Ming Dynasty", image: MingDynasty, start: 1368, end: 1644 },
-  // { region: "East Asia", name: "Goryeo Dynasty (Korea, 918-1392)", image: GoryeoDynasty, start: 918, end: 1392 },
-  // { region: "Southeast Asia", name: "Trần Dynasty (Vietnam, 1225-1400)", image: TranDynasty, start: 1225, end: 1400 },
-  // { region: "Southeast Asia", name: "Majapahit Empire (Indonesia, 1293-1527)", image: MajapahitEmpire, start: 1293, end: 1527 },
-  // { region: "South Asia", name: "Delhi Sultanate (India, 1206-1526)", image: IndiaMap, start: 1206, end: 1526 },
-  // { region: "South Asia", name: "Sri Lanka (Sri Lanka, 543BC-1815CE)", image: SriLankaMap, start: -543, end: 1815 },
-  { region: "Middle East", name: "Abbasid Caliphate (750-1258)", image: AbbasidCaliphate, start: 750, end: 1258 },
-  // { region: "Middle East", name: "Ottoman Empire (Discount Caliphate)", image: OttomanEmpire, start: 1299, end: 1922 },
-  // { region: "East Asia", name: "Kamakura & Muromachi Shogunates (Japan)", image: JapanMap, start:1192, end: 1573 }
-];
+const nations = Object.keys(countryNotes);
 
 const timePeriods: number[] = [
   1200, 1450, 1750, 1900, 2025
@@ -259,38 +210,6 @@ const ExplanationPage = () => {
   );
 };
 
-interface GeographicSelectionContextProps {
-  selectionStep: SelectionStep;
-  setSelectionStep: React.Dispatch<React.SetStateAction<SelectionStep>>;
-  selectedRegion: string | null;
-  setSelectedRegion: React.Dispatch<React.SetStateAction<string | null>>;
-}
-
-const GeographicSelectionContext = createContext<GeographicSelectionContextProps | undefined>(undefined);
-
-export const useGeographicSelection = () => {
-  const context: GeographicSelectionContextProps | undefined = useContext(GeographicSelectionContext);
-  if (!context) {
-    throw new Error('useGeographicSelection must be used within a GeographicSelectionProvider');
-  }
-  return context;
-};
-
-interface GeographicSelectionProviderProps {
-  children: React.ReactNode;
-}
-
-export const GeographicSelectionProvider: React.FC<GeographicSelectionProviderProps> = ({ children }) => {
-  const [selectionStep, setSelectionStep] = useState<SelectionStep>(SelectionStep.REGION);
-  const [selectedRegion, setSelectedRegion] = useState<string | null>(null);
-
-  return (
-    <GeographicSelectionContext.Provider value={{ selectionStep, setSelectionStep, selectedRegion, setSelectedRegion }}>
-      {children}
-    </GeographicSelectionContext.Provider>
-  );
-};
-
 const Dropdown: React.FC<{ title: string; children: React.ReactNode }> = ({title, children}) => {
     const [isOpen, setIsOpen] = useState(false);
     return (
@@ -309,15 +228,15 @@ const Dropdown: React.FC<{ title: string; children: React.ReactNode }> = ({title
     );
   };
 
-  const CountryPopup: React.FC<{ country : Nation, onClose: () => void }> = ({ country, onClose}) => {
+  const CountryPopup: React.FC<{ country : string, onClose: () => void }> = ({ country, onClose}) => {
     return (
       <div className="fixed inset-0 flex items-center justify-center z-50" role="dialog" aria-modal="true" aria-labelledby="modal-title">
         <div className="relative max-w-lg w-full max-h-[60vh] overflow-y-auto bg-[#f8f8f8] border-2 border-[#999] rounded-md shadow-lg p-6 text-left">
           <button className="[all:unset] cursor-pointer absolute top-2 right-2" onClick={onClose} aria-label="Close">x</button>
-          <h2 className="font-bold" id="modal-title">{country.name}</h2>
+          <h2 className="font-bold" id="modal-title">{country}</h2>
           <p>Hexagon goes here</p>
-          {countryNotes[country.name] &&
-            Object.entries(countryNotes[country.name]).map(([sectionTitle, content]) => (
+          {countryNotes[country] &&
+            Object.entries(countryNotes[country]).map(([sectionTitle, content]) => (
               <Dropdown key={sectionTitle} title={sectionTitle}>
                 <p>{content}</p>
               </Dropdown>
@@ -329,65 +248,75 @@ const Dropdown: React.FC<{ title: string; children: React.ReactNode }> = ({title
   };
 
 const GeographicSelectionPage = () => {
-  const { selectionStep, setSelectionStep, selectedRegion, setSelectedRegion } = useGeographicSelection();
   const { selectedRange } = useTimeSliderContext();
-  const [selectedCountry, setSelectedCountry] = useState<Nation | null>(null);
+  const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
 
-  const nationsByTime: Record<number, Record<string, Nation[]>> = useMemo(
-    () => {
-      const nationsByTimeRecord: Record<number, Record<string, Nation[]>> = {};
-      timePeriods.forEach((timePeriod, timeIndex) => {
-        const nationsInPeriod: Record<string, Nation[]> = {};
-        if (timeIndex === timePeriods.length - 1) return nationsInPeriod; // Skip the last time period as it has no end
-        nations.forEach((nation) => {
-          if (
-            (nation.start <= timePeriod && nation.end >= timePeriod) ||
-            (nation.start >= timePeriod && nation.start <= timePeriods[timeIndex + 1])
-          ) {
-            if (!nationsInPeriod[nation.region]) {
-              nationsInPeriod[nation.region] = [];
-            }
-            nationsInPeriod[nation.region].push(nation);
-          }
-        });
-        nationsByTimeRecord[timePeriod] = nationsInPeriod;
-      });
-      return nationsByTimeRecord;
-    },
-    [nations, timePeriods]
-  );
+  // Generate random colors for each nation when component first loads
+  const countryColors = useMemo(() => {
+    const colors = [
+      '#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEAA7',
+      '#DDA0DD', '#98D8C8', '#F7DC6F', '#BB8FCE', '#85C1E9',
+      '#F8C471', '#82E0AA', '#F1948A', '#85929E', '#D7BDE2'
+    ];
+    
+    const colorMap: Record<string, string> = {};
+    nations.forEach((nation, index) => {
+      colorMap[nation] = colors[index % colors.length];
+    });
+    
+    return colorMap;
+  }, []);
+
+  // Create styles object for SVG paths
+  const countryStyles = useMemo(() => {
+    const styles: Record<string, React.CSSProperties> = {};
+    nations.forEach(nation => {
+      styles[`[data-country="${nation}"]`] = {
+        fill: countryColors[nation],
+        cursor: 'pointer'
+      };
+    });
+    return styles;
+  }, [countryColors]);
+
+  const mapByTime: Record<number, React.ComponentType<React.SVGProps<SVGSVGElement>>> = {
+    1200: World1200
+  };
+
+  const handleCountryClick = (event: React.MouseEvent<SVGSVGElement>) => {
+    const target = event.target as SVGElement;
+    const countryName = target.getAttribute('data-country');
+    if (!countryName) return;
+
+    if (nations.includes(countryName)) {
+      setSelectedCountry(countryName);
+    } else {
+      alert(`No notes available for: ${countryName}`);
+    }
+  };
+
+  const currentTimePeriod = selectedRange[0];
+  const MapComponent = mapByTime[currentTimePeriod];
+
+  if (!MapComponent) {
+    return <div>Map not available for this time period</div>;
+  }
 
   return (
     <>
-    <div className='geographic-button-grid'>
-      {selectionStep === SelectionStep.REGION && regionButtons.map((region) => (
-        <button
-          key={region.name}
-          className="image-button"
-          onClick={() => {
-            setSelectedRegion(region.name);
-            setSelectionStep(SelectionStep.COUNTRY);
-          }
-          }
-        >
-          <img src={region.image} alt={`${region.name} map`} />
-          <span>{region.name}</span>
-        </button>
-      ))}
-      {selectionStep === SelectionStep.COUNTRY && selectedRegion && (
-        (nationsByTime[selectedRange[0]]?.[selectedRegion] || []).map((country) => (
-          <div key={country.name}>
-            <country.image
-              className='country-svg'
-              onClick={() => { setSelectedCountry(country); }}
-              style={{ cursor: 'pointer' }}
-            />
-            <span>{country.name}</span>
-          </div>
-        ))
-      )}
+    <style>
+      {Object.entries(countryStyles).map(([selector, style]) => 
+        `${selector} { ${Object.entries(style).map(([prop, value]) => 
+          `${prop.replace(/([A-Z])/g, '-$1').toLowerCase()}: ${value};`
+        ).join(' ')} }`
+      ).join('\n')}
+    </style>
+    <div className="w-full flex justify-center max-w-[800px]">
+      <MapComponent
+        className="svg-container"
+        onClick={handleCountryClick}
+      />
     </div>
-    
     {selectedCountry && (
       <CountryPopup
         country={selectedCountry}
@@ -401,13 +330,11 @@ const GeographicSelectionPage = () => {
 function App() {
   return (
     <TimeSliderProvider>
-      <GeographicSelectionProvider>
-        <PageTransitionProvider>
-          <Navbar />
-          <TimeSlider />
-          <PageTransition />
-        </PageTransitionProvider>
-      </GeographicSelectionProvider>
+      <PageTransitionProvider>
+        <Navbar />
+        <TimeSlider />
+        <PageTransition />
+      </PageTransitionProvider>
     </TimeSliderProvider>
   );
 }
