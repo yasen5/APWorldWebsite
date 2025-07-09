@@ -15,32 +15,7 @@ export const AppPageLabels: Record<AppPage, string> = {
   [AppPage.GEOGRAPHIC_SELECTION]: "Geographic Selection"
 };
 
-const nations = [
-  //must be exactly the data-country of the path
-  //also idk if there's a better way to do this and also a bunch of these aren't super important
-  "Rajput Kingdoms",
-  "Delhi Sultanate",
-  "Chola Dynasty",
-  "Khmer Empire",
-  "Srivijaya Empire",
-  "Song Dynasty",
-  "Great Zimbabwe",
-  "Swahili Coast",
-  "Fatimid Caliphate",
-  "Ghana Empire",
-  "Mali Empire",
-  "Venice",
-  "Byzantine Empire",
-  "Sweden",
-  "Denmark",
-  "Holy Roman Empire",
-  "Castilla",
-  "Navarre",
-  "Portugal",
-  "France",
-  "Aragon",
-  "Mayan city states"
-];
+const nations = Object.keys(countryNotes);
 
 const timePeriods: number[] = [
   1200, 1450, 1750, 1900, 2025
