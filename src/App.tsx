@@ -247,7 +247,7 @@ const CountryPopup: React.FC<{ country : string, onClose: () => void }> = ({ cou
     const top = vv.offsetTop + (vv.height - height / zoom) / 2;
     const left = vv.offsetLeft + (vv.width - width / zoom) / 2;
 
-    console.log("Zoom:", zoom, "Dimensions:", { top, left, width, height });
+    // Removed debug statement to avoid excessive logging in production.
 
     setDimensions({ top, left, width, height });
   };
