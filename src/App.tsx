@@ -230,7 +230,7 @@ const Dropdown: React.FC<{ title: string; children: React.ReactNode }> = ({title
 
 const CountryPopup: React.FC<{ country : string, onClose: () => void }> = ({ country, onClose}) => {
   const popupRef = useRef<HTMLDivElement>(null);
-  const [dimensions, setDimensions] = useState({ top: 0, left: 0, width: 0, height: 0 });
+  const [position, setPosition] = useState({ top: 0, left: 0});
   const [zoomLevel, setZoomLevel] = useState(1);
 
   const updatePopup = () => {
@@ -249,7 +249,7 @@ const CountryPopup: React.FC<{ country : string, onClose: () => void }> = ({ cou
 
     // Removed debug statement to avoid excessive logging in production.
 
-    setDimensions({ top, left, width, height });
+    setPosition({ top, left});
   };
 
   useEffect(() => {
@@ -269,8 +269,8 @@ const CountryPopup: React.FC<{ country : string, onClose: () => void }> = ({ cou
     <div 
       className="fixed z-50" role="dialog" aria-modal="true" aria-labelledby="modal-title"
       style={{
-        top: `${dimensions.top}px`,
-        left: `${dimensions.left}px`,
+        top: `${position.top}px`,
+        left: `${position.left}px`,
       }}
     >
       <div 
