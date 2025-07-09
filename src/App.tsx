@@ -1,4 +1,4 @@
-import { useState, useRef, createContext, useContext, useMemo } from 'react';
+import { useState, useRef, createContext, useContext, useMemo, useEffect } from 'react';
 import worldIcon from './assets/world.svg'
 import './App.css'
 import Navbar from './Navbar.tsx';
@@ -211,41 +211,90 @@ const ExplanationPage = () => {
 };
 
 const Dropdown: React.FC<{ title: string; children: React.ReactNode }> = ({title, children}) => {
-    const [isOpen, setIsOpen] = useState(false);
-    return (
-      <div className="border border-gray-300 rounded mb-2">
-        <button className="w-full flex justify-between items-center p-2 bg-gray-100"
-          onClick={() => setIsOpen(!isOpen)}>
-            <span className="font-medium">{title}</span>
-            <span>{isOpen? "▲" : "▼"} </span>
-          </button>
-          {isOpen && (
-            <div className="p-2 bg-white text-sm">
-              {children}
-            </div>
-          )}
-      </div>
-    );
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <div className="border border-gray-300 rounded mb-2">
+      <button className="w-full flex justify-between items-center p-2 bg-gray-100"
+        onClick={() => setIsOpen(!isOpen)}>
+          <span className="font-medium">{title}</span>
+          <span>{isOpen? "▲" : "▼"} </span>
+        </button>
+        {isOpen && (
+          <div className="p-2 bg-white text-sm">
+            {children}
+          </div>
+        )}
+    </div>
+  );
+};
+
+const CountryPopup: React.FC<{ country : string, onClose: () => void }> = ({ country, onClose}) => {
+  const popupRef = useRef<HTMLDivElement>(null);
+  const [position, setPosition] = useState({ top: 0, left: 0});
+  const [zoomLevel, setZoomLevel] = useState(1);
+
+  const updatePopup = () => {
+    const vv = window.visualViewport;
+    const popup = popupRef.current;
+    if (!vv || !popup) return;
+
+    const zoom = vv.scale;
+    setZoomLevel(zoom);
+
+    const width = window.innerWidth * 0.5;
+    const height = window.innerHeight * 0.5;
+
+    const top = vv.offsetTop + (vv.height - height / zoom) / 2;
+    const left = vv.offsetLeft + (vv.width - width / zoom) / 2;
+
+    // Removed debug statement to avoid excessive logging in production.
+
+    setPosition({ top, left});
   };
 
-  const CountryPopup: React.FC<{ country : string, onClose: () => void }> = ({ country, onClose}) => {
-    return (
-      <div className="fixed inset-0 flex items-center justify-center z-50" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-        <div className="relative max-w-lg w-full max-h-[60vh] overflow-y-auto bg-[#f8f8f8] border-2 border-[#999] rounded-md shadow-lg p-6 text-left">
-          <button className="[all:unset] cursor-pointer absolute top-2 right-2" onClick={onClose} aria-label="Close">x</button>
-          <h2 className="font-bold" id="modal-title">{country}</h2>
-          <p>Hexagon goes here</p>
-          {countryNotes[country] &&
-            Object.entries(countryNotes[country]).map(([sectionTitle, content]) => (
-              <Dropdown key={sectionTitle} title={sectionTitle}>
-                <p>{content}</p>
-              </Dropdown>
-            ))
-          }
-        </div>
+  useEffect(() => {
+    updatePopup();
+
+    const vv = window.visualViewport;
+    vv?.addEventListener("resize", updatePopup);
+    vv?.addEventListener("scroll", updatePopup);
+
+    return () => {
+      vv?.removeEventListener("resize", updatePopup);
+      vv?.removeEventListener("scroll", updatePopup);
+    };
+  }, []);
+
+  return (
+    <div 
+      className="fixed z-50" role="dialog" aria-modal="true" aria-labelledby="modal-title"
+      style={{
+        top: `${position.top}px`,
+        left: `${position.left}px`,
+      }}
+    >
+      <div 
+        ref={popupRef}
+        className="w-[50vw] h-[50vh] relative overflow-y-scroll bg-[#f8f8f8] border-2 border-[#999] rounded-md shadow-lg p-6 text-left"
+        style={{
+          transform: `scale(${1 / zoomLevel})`,
+          transformOrigin: 'top left'
+        }}
+      >
+        <button className="[all:unset] cursor-pointer absolute top-2 right-2" onClick={onClose} aria-label="Close">x</button>
+        <h2 className="font-bold" id="modal-title">{country}</h2>
+        <p>Hexagon goes here</p>
+        {countryNotes[country] &&
+          Object.entries(countryNotes[country]).map(([sectionTitle, content]) => (
+            <Dropdown key={sectionTitle} title={sectionTitle}>
+              <p>{content}</p>
+            </Dropdown>
+          ))
+        }
       </div>
-    );
-  };
+    </div>
+  );
+};
 
 const GeographicSelectionPage = () => {
   const { selectedRange } = useTimeSliderContext();
