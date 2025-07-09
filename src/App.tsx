@@ -17,6 +17,7 @@ import YuanDynasty from './assets/yuan-dynasty.jpg'
 import MingDynasty from './assets/ming-dynasty.png'
 import './App.css'
 import Navbar from './Navbar.tsx';
+import { countryNotes} from './notes'
 export enum AppPage {
   START_SCREEN, EXPLANATION, GEOGRAPHIC_SELECTION
 }
@@ -290,9 +291,47 @@ export const GeographicSelectionProvider: React.FC<GeographicSelectionProviderPr
   );
 };
 
+const Dropdown: React.FC<{ title: string; children: React.ReactNode }> = ({title, children}) => {
+    const [isOpen, setIsOpen] = useState(false);
+    return (
+      <div className="border border-gray-300 rounded mb-2">
+        <button className="w-full flex justify-between items-center p-2 bg-gray-100"
+          onClick={() => setIsOpen(!isOpen)}>
+            <span className="font-medium">{title}</span>
+            <span>{isOpen? "▲" : "▼"} </span>
+          </button>
+          {isOpen && (
+            <div className="p-2 bg-white text-sm">
+              {children}
+            </div>
+          )}
+      </div>
+    );
+  };
+
+  const CountryPopup: React.FC<{ country : Nation, onClose: () => void }> = ({ country, onClose}) => {
+    return (
+      <div className="fixed inset-0 flex items-center justify-center z-50" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div className="relative max-w-lg w-full max-h-[60vh] overflow-y-auto bg-[#f8f8f8] border-2 border-[#999] rounded-md shadow-lg p-6 text-left">
+          <button className="[all:unset] cursor-pointer absolute top-2 right-2" onClick={onClose} aria-label="Close">x</button>
+          <h2 className="font-bold" id="modal-title">{country.name}</h2>
+          <p>Hexagon goes here</p>
+          {countryNotes[country.name] &&
+            Object.entries(countryNotes[country.name]).map(([sectionTitle, content]) => (
+              <Dropdown key={sectionTitle} title={sectionTitle}>
+                <p>{content}</p>
+              </Dropdown>
+            ))
+          }
+        </div>
+      </div>
+    );
+  };
+
 const GeographicSelectionPage = () => {
   const { selectionStep, setSelectionStep, selectedRegion, setSelectedRegion } = useGeographicSelection();
   const { selectedRange } = useTimeSliderContext();
+  const [selectedCountry, setSelectedCountry] = useState<Nation | null>(null);
 
   const nationsByTime: Record<number, Record<string, Nation[]>> = useMemo(
     () => {
@@ -319,6 +358,7 @@ const GeographicSelectionPage = () => {
   );
 
   return (
+    <>
     <div className='geographic-button-grid'>
       {selectionStep === SelectionStep.REGION && regionButtons.map((region) => (
         <button
@@ -339,15 +379,23 @@ const GeographicSelectionPage = () => {
           <div key={country.name}>
             <country.image
               className='country-svg'
-              /* TODO add onClick handler to handle country selection */
-              onClick={() => { console.log("SOMETHING HAPPENED") }}
+              onClick={() => { setSelectedCountry(country); }}
               style={{ cursor: 'pointer' }}
             />
             <span>{country.name}</span>
           </div>
         ))
       )}
-    </div>);
+    </div>
+    
+    {selectedCountry && (
+      <CountryPopup
+        country={selectedCountry}
+        onClose={() => setSelectedCountry(null)}
+      />
+    )}
+  </>
+    );
 };
 
 function App() {
