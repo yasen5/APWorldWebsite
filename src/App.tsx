@@ -360,11 +360,13 @@ const GeographicSelectionPage = () => {
         ).join(' ')} }`
       ).join('\n')}
     </style>
-    <div className="w-full flex justify-center max-w-[800px]">
-      <MapComponent
-        className="svg-container"
-        onClick={handleCountryClick}
-      />
+    <div className="w-full flex justify-center">
+      <div className="w-full max-w-[1200px] aspect-[3068/1594]">
+        <MapComponent
+          className="svg-container w-full h-full"
+          onClick={handleCountryClick}
+        />
+      </div>
     </div>
     {selectedCountry && (
       <CountryPopup
