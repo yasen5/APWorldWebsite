@@ -276,6 +276,34 @@ const GeographicSelectionPage = () => {
   const { selectedRange } = useTimeSliderContext();
   const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
 
+  // Generate random colors for each nation when component first loads
+  const countryColors = useMemo(() => {
+    const colors = [
+      '#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEAA7',
+      '#DDA0DD', '#98D8C8', '#F7DC6F', '#BB8FCE', '#85C1E9',
+      '#F8C471', '#82E0AA', '#F1948A', '#85929E', '#D7BDE2'
+    ];
+    
+    const colorMap: Record<string, string> = {};
+    nations.forEach((nation, index) => {
+      colorMap[nation] = colors[index % colors.length];
+    });
+    
+    return colorMap;
+  }, []);
+
+  // Create styles object for SVG paths
+  const countryStyles = useMemo(() => {
+    const styles: Record<string, React.CSSProperties> = {};
+    nations.forEach(nation => {
+      styles[`[data-country="${nation}"]`] = {
+        fill: countryColors[nation],
+        cursor: 'pointer'
+      };
+    });
+    return styles;
+  }, [countryColors]);
+
   const mapByTime: Record<number, React.ComponentType<React.SVGProps<SVGSVGElement>>> = {
     1200: World1200
   };
@@ -301,6 +329,13 @@ const GeographicSelectionPage = () => {
 
   return (
     <>
+    <style>
+      {Object.entries(countryStyles).map(([selector, style]) => 
+        `${selector} { ${Object.entries(style).map(([prop, value]) => 
+          `${prop.replace(/([A-Z])/g, '-$1').toLowerCase()}: ${value};`
+        ).join(' ')} }`
+      ).join('\n')}
+    </style>
     <div className="w-full flex justify-center max-w-[800px]">
       <MapComponent
         className="svg-container"
