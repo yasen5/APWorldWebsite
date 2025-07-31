@@ -3,6 +3,8 @@ import worldIcon from './assets/world.svg'
 import './App.css'
 import Navbar from './Navbar.tsx';
 import { GeographicSelectionPage } from './geographic-selection.tsx';
+import { NoteNodes } from './note-nodes.tsx';
+import { NoteHexagon } from './note-hexagon.tsx';
 
 export enum AppPage {
   START_SCREEN, EXPLANATION, GEOGRAPHIC_SELECTION
@@ -127,7 +129,7 @@ interface PageTransitionProviderProps {
 }
 
 export const PageTransitionProvider: React.FC<PageTransitionProviderProps> = ({ children }) => {
-  const [currentPage, setCurrentPage] = useState<AppPage>(AppPage.START_SCREEN);
+  const [currentPage, setCurrentPage] = useState<AppPage>(AppPage.EXPLANATION);
   const [nextPage, setNextPage] = useState<AppPage>(AppPage.EXPLANATION);
   const [transitioning, setTransitioning] = useState<boolean>(false);
   const timeoutRef = useRef<number | null>(null);
@@ -201,8 +203,7 @@ const StartScreen = ({ goToPage }: StartScreenProps) => {
 const ExplanationPage = () => {
   return (
     <div>
-      <h1>Second Page</h1>
-      <p>Explanation TODO</p>
+      <NoteNodes bboxSideLength={500}/>
     </div>
   );
 };
