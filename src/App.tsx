@@ -4,6 +4,8 @@ import './App.css'
 import Navbar from './Navbar.tsx';
 import { countryNotes} from './notes'
 import World1200 from './assets/World-1200.svg?react';
+import { NoteNodes } from './note-nodes.tsx';
+import { NoteHexagon } from './note-hexagon.tsx';
 
 export enum AppPage {
   START_SCREEN, EXPLANATION, GEOGRAPHIC_SELECTION
@@ -130,7 +132,7 @@ interface PageTransitionProviderProps {
 }
 
 export const PageTransitionProvider: React.FC<PageTransitionProviderProps> = ({ children }) => {
-  const [currentPage, setCurrentPage] = useState<AppPage>(AppPage.START_SCREEN);
+  const [currentPage, setCurrentPage] = useState<AppPage>(AppPage.EXPLANATION);
   const [nextPage, setNextPage] = useState<AppPage>(AppPage.EXPLANATION);
   const [transitioning, setTransitioning] = useState<boolean>(false);
   const timeoutRef = useRef<number | null>(null);
@@ -204,8 +206,7 @@ const StartScreen = ({ goToPage }: StartScreenProps) => {
 const ExplanationPage = () => {
   return (
     <div>
-      <h1>Second Page</h1>
-      <p>Explanation TODO</p>
+      <NoteNodes bboxSideLength={500}/>
     </div>
   );
 };
@@ -232,6 +233,7 @@ const CountryPopup: React.FC<{ country : string, onClose: () => void }> = ({ cou
   const popupRef = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState({ top: 0, left: 0});
   const [zoomLevel, setZoomLevel] = useState(1);
+  const [bboxSideLength, setBboxSideLength] = useState(0);
 
   const updatePopup = () => {
     const vv = window.visualViewport;
@@ -250,6 +252,8 @@ const CountryPopup: React.FC<{ country : string, onClose: () => void }> = ({ cou
     // Removed debug statement to avoid excessive logging in production.
 
     setPosition({ top, left});
+
+    setBboxSideLength(Math.min(popup.offsetWidth, popup.offsetHeight) * 1.7);
   };
 
   useEffect(() => {
@@ -283,7 +287,7 @@ const CountryPopup: React.FC<{ country : string, onClose: () => void }> = ({ cou
       >
         <button className="[all:unset] cursor-pointer absolute top-2 right-2" onClick={onClose} aria-label="Close">x</button>
         <h2 className="font-bold" id="modal-title">{country}</h2>
-        <p>Hexagon goes here</p>
+        {bboxSideLength > 0 && <NoteHexagon bboxSideLength={bboxSideLength} />}
         {countryNotes[country] &&
           Object.entries(countryNotes[country]).map(([sectionTitle, content]) => (
             <Dropdown key={sectionTitle} title={sectionTitle}>
