@@ -79,6 +79,12 @@ document flow using `position: absolute` to ensure that one is not displayed und
   cursor: pointer;
 }
 
+.svg-container {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
 .svg-container [data-country] {
   transition: fill 0.2s ease;
   cursor: pointer;
