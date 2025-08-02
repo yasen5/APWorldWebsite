@@ -3,7 +3,7 @@ import type { Vertex } from "./Vertex";
 
 let coolingRate = 0.05;
 let temperature = 4.0;
-let cRepulse = 80;
+let cRepulse = 360;
 let cSpring = 1;
 let idealDistance = 20;
 

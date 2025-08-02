@@ -65,7 +65,7 @@ export const NoteNodes: React.FC<{ bboxSideLength: number }> = ({ bboxSideLength
             totalNodes.forEach((pt) => {
                 pt.setDisplacement(new Vector2d())
                 totalNodes.forEach((other) => {
-                    if (pt !== other) {
+                    if (pt !== other && !edges.some(edge => (edge.start === pt && edge.end === other) || (edge.start === other && edge.end === pt))) {
                         pt.displacement.add(getRepulsiveForce(pt, other));
                     }
                 })
