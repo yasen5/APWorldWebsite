@@ -68,6 +68,10 @@ export class Vector2d {
     public static subtract(v1: Vector2d, v2: Vector2d): Vector2d {
         return new Vector2d([v1.x - v2.x, v1.y - v2.y]);
     }
+
+    public getScaled(scalar: number): Vector2d {
+        return new Vector2d([this.x * scalar, this.y * scalar]);
+    }
 }
 
 export const getDistance = (p1: Vector2d, p2: Vector2d): number => {
