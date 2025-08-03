@@ -5,7 +5,7 @@ import Navbar from './Navbar.tsx';
 import { countryNotes} from './notes'
 import World1200 from './assets/World-1200.svg?react';
 import { NoteNodes } from './note-nodes.tsx';
-import { NoteHexagon } from './note-hexagon.tsx';
+import { D3ForceGraph } from './d3-test.tsx';
 
 export enum AppPage {
   START_SCREEN, EXPLANATION, GEOGRAPHIC_SELECTION
@@ -287,14 +287,14 @@ const CountryPopup: React.FC<{ country : string, onClose: () => void }> = ({ cou
       >
         <button className="[all:unset] cursor-pointer absolute top-2 right-2" onClick={onClose} aria-label="Close">x</button>
         <h2 className="font-bold" id="modal-title">{country}</h2>
-        {bboxSideLength > 0 && <NoteHexagon bboxSideLength={bboxSideLength} />}
+        {/* {bboxSideLength > 0 && <NoteHexagon bboxSideLength={bboxSideLength} />}
         {countryNotes[country] &&
           Object.entries(countryNotes[country]).map(([sectionTitle, content]) => (
             <Dropdown key={sectionTitle} title={sectionTitle}>
               <p>{content}</p>
             </Dropdown>
           ))
-        }
+        } */}
       </div>
     </div>
   );
@@ -382,13 +382,7 @@ const GeographicSelectionPage = () => {
 
 function App() {
   return (
-    <TimeSliderProvider>
-      <PageTransitionProvider>
-        <Navbar />
-        <TimeSlider />
-        <PageTransition />
-      </PageTransitionProvider>
-    </TimeSliderProvider>
+    <D3ForceGraph />
   );
 }
 

@@ -112,7 +112,6 @@ export const NoteNodes: React.FC<{ bboxSideLength: number }> = ({ bboxSideLength
 
     return (
         <svg width={bboxSideLength} height={bboxSideLength} viewBox={`0 0 ${bboxSideLength} ${bboxSideLength}`}>
-            {/* Hexagon vertices */}
             {topicNodes.map((vertex, i) => (
                 <circle key={i} cx={vertex.pos.x + margin} cy={vertex.pos.y + margin} r={vertexRadius} fill={colors[i]} />
             ))}
