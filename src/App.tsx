@@ -4,7 +4,7 @@ import './App.css'
 import Navbar from './Navbar.tsx';
 import { GeographicSelectionPage } from './geographic-selection.tsx';
 import { NoteNodes } from './note-nodes.tsx';
-import { NoteHexagon } from './note-hexagon.tsx';
+import { D3ForceGraph } from './d3-test.tsx';
 
 export enum AppPage {
   START_SCREEN, EXPLANATION, GEOGRAPHIC_SELECTION
