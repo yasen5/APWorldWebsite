@@ -1,11 +1,23 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useTimeSliderContext } from "./App";
-import { countryNotes} from './notes'
+import { countryNotes, generalNotes} from './notes'
 import World1200 from './assets/World-1200.svg?react';
+
+// Cross-country ideas configuration
+const crossCountryIdeas: Record<string, { applicableCountries: string[], notes: string }> = {
+  "Trade Routes": { applicableCountries: ["France", "England", "Venice", "Byzantium", "Egypt"], notes: "Wow some cool text"},
+  "Crusading States": { applicableCountries: ["France", "England", "Jerusalem", "Byzantium"], notes: "Wow some cool text"},
+  "Islamic Expansion": { applicableCountries: ["Spain", "Egypt", "Jerusalem", "Byzantium"], notes: "Wow some cool text"},
+  "Mongol Influence": { applicableCountries: ["Russia", "Persia", "Song Dynasty", "Byzantium"], notes: "Wow some cool text"},
+  "Maritime Powers": { applicableCountries: ["Venice", "Genoa", "England", "Norway"], notes: "Wow some cool text"},
+  "Scholastic Centers": { applicableCountries: ["France", "England", "Spain", "Italy"], notes: "Wow some cool text"}
+};
 
 export const GeographicSelectionPage = () => {
     const { selectedRange } = useTimeSliderContext();
     const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
+    const [isIdeasBarOpen, setIsIdeasBarOpen] = useState(false);
+    const [hoveredIdea, setHoveredIdea] = useState<string | null>(null);
 
     const nations = Object.keys(countryNotes);
 
@@ -29,13 +41,18 @@ export const GeographicSelectionPage = () => {
     const countryStyles = useMemo(() => {
     const styles: Record<string, React.CSSProperties> = {};
     nations.forEach(nation => {
+        const isHighlighted = hoveredIdea && crossCountryIdeas[hoveredIdea]?.applicableCountries.includes(nation);
         styles[`[data-country="${nation}"]`] = {
         fill: countryColors[nation],
-        cursor: 'pointer'
+        cursor: 'pointer',
+        opacity: isHighlighted ? 1 : (hoveredIdea ? 0.3 : 1),
+        stroke: isHighlighted ? '#333' : 'none',
+        strokeWidth: isHighlighted ? '2px' : '0',
+        transition: 'opacity 0.2s ease, stroke 0.2s ease'
         };
     });
     return styles;
-    }, [countryColors]);
+    }, [countryColors, hoveredIdea]);
 
     const mapByTime: Record<number, React.ComponentType<React.SVGProps<SVGSVGElement>>> = {
     1200: World1200
@@ -61,31 +78,67 @@ export const GeographicSelectionPage = () => {
     }
 
     return (
-    <>
-    <style>
-        {Object.entries(countryStyles).map(([selector, style]) => 
-        `${selector} { ${Object.entries(style).map(([prop, value]) => 
-            `${prop.replace(/([A-Z])/g, '-$1').toLowerCase()}: ${value};`
-        ).join(' ')} }`
-        ).join('\n')}
-    </style>
-    <div className="w-full flex justify-center max-w-[800px]">
-        <MapComponent
-        className="svg-container"
-        onClick={handleCountryClick}
-        />
+    <div className="flex flex-col items-center justify-start w-full h-[700px]">
+        <style>
+            {Object.entries(countryStyles).map(([selector, style]) => 
+            `${selector} { ${Object.entries(style).map(([prop, value]) => 
+                `${prop.replace(/([A-Z])/g, '-$1').toLowerCase()}: ${value};`
+            ).join(' ')} }`
+            ).join('\n')}
+        </style>
+        
+        {/* Ideas Bar */}
+        <div className="w-full mb-4 max-w-[1200px]">
+            {/* Toggle Bar */}
+            <div 
+            className="w-full h-8 bg-gradient-to-r from-blue-500 to-purple-600 cursor-pointer flex items-center justify-center text-white font-medium shadow-md hover:shadow-lg transition-shadow"
+            onClick={() => setIsIdeasBarOpen(!isIdeasBarOpen)}
+            >
+            <span className="mr-2">Cross-Country Ideas</span>
+            <span className="text-lg">{isIdeasBarOpen ? "▲" : "▼"}</span>
+            </div>
+            
+            {/* Collapsible Content */}
+            <div 
+            className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                isIdeasBarOpen ? 'max-h-20 opacity-100' : 'max-h-0 opacity-0'
+            }`}
+            >
+            <div className="bg-white border-2 border-gray-200 rounded-b-lg p-3 shadow-inner">
+                <div className="flex flex-wrap gap-2 justify-center">
+                {Object.keys(crossCountryIdeas).map(idea => (
+                    <button
+                    key={idea}
+                    onClick={() => setSelectedCountry(idea)}
+                    className="px-4 py-2 bg-gradient-to-r from-indigo-500 to-blue-600 text-white rounded-full text-sm font-medium hover:from-indigo-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg"
+                    onMouseEnter={() => { setHoveredIdea(idea);  }}
+                    onMouseLeave={() => setHoveredIdea(null)}
+                    >
+                    {idea}
+                    </button>
+                ))}
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div className="w-full h-full flex justify-center max-w-[1600px]">
+            <MapComponent
+            className="svg-container w-full h-full"
+            onClick={handleCountryClick}
+            />
+        </div>
+        {selectedCountry && (
+            <Popup
+            noteKey={selectedCountry}
+            onClose={() => setSelectedCountry(null)}
+            />
+        )}
     </div>
-    {selectedCountry && (
-        <CountryPopup
-        country={selectedCountry}
-        onClose={() => setSelectedCountry(null)}
-        />
-    )}
-    </>
     );
 };
 
-const CountryPopup: React.FC<{ country : string, onClose: () => void }> = ({ country, onClose}) => {
+const Popup: React.FC<{ noteKey : string, onClose: () => void }> = ({ noteKey, onClose}) => {
     const popupRef = useRef<HTMLDivElement>(null);
     const [position, setPosition] = useState({ top: 0, left: 0});
     const [zoomLevel, setZoomLevel] = useState(1);
@@ -104,8 +157,6 @@ const CountryPopup: React.FC<{ country : string, onClose: () => void }> = ({ cou
     const top = vv.offsetTop + (vv.height - height / zoom) / 2;
     const left = vv.offsetLeft + (vv.width - width / zoom) / 2;
 
-    // Removed debug statement to avoid excessive logging in production.
-
     setPosition({ top, left});
     };
 
@@ -121,6 +172,8 @@ const CountryPopup: React.FC<{ country : string, onClose: () => void }> = ({ cou
         vv?.removeEventListener("scroll", updatePopup);
     };
     }, []);
+
+    const matches = countryNotes[noteKey] || generalNotes[noteKey] || null;
 
     return (
     <div 
@@ -139,10 +192,10 @@ const CountryPopup: React.FC<{ country : string, onClose: () => void }> = ({ cou
         }}
         >
         <button className="[all:unset] cursor-pointer absolute top-2 right-2" onClick={onClose} aria-label="Close">x</button>
-        <h2 className="font-bold" id="modal-title">{country}</h2>
+        <h2 className="font-bold" id="modal-title">{noteKey}</h2>
         <p>Hexagon goes here</p>
-        {countryNotes[country] &&
-            Object.entries(countryNotes[country]).map(([sectionTitle, content]) => (
+        {matches &&
+            Object.entries(matches).map(([sectionTitle, content]) => (
             <Dropdown key={sectionTitle} title={sectionTitle}>
                 <p>{content}</p>
             </Dropdown>

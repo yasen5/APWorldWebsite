@@ -4,6 +4,17 @@ export interface CountryNotes {
     };
 }
 
+export const generalNotes: CountryNotes = {
+      "Trade Routes": {
+            "Environment": "yay environment notes",
+            "Culture": "yay culture notes",
+            "Governance": "yay governance notes",
+            "Economy": "yay economy notes",
+            "Social": "yay social notes",
+            "Technology": "yay technology notes"
+      }
+}
+
 export const countryNotes: CountryNotes = {
       "Song Dynasty": {
             "Environment": "yay environment notes",
