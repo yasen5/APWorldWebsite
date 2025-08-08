@@ -45,7 +45,22 @@
 
 /* A slide-container will sometimes contain 2 pages which must be displayed at the same height. It is thus necessary take them out of the 
 document flow using `position: absolute` to ensure that one is not displayed under the other. */
-.slide-container > div {
+.slide-container {
+  position: relative;
+  flex: 1; /* fills remaining vertical space */
+  min-height: 0;
+  display: flex;
+  align-items: center; /* vertical center in the leftover space */
+  justify-content: center; /* horizontal center */
+  overflow-y: auto;
+}
+
+.slide-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.slide-wrapper > div {
   @apply absolute w-full h-full flex items-center justify-center;
 }
 

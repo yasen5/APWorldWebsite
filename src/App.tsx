@@ -168,15 +168,17 @@ const PageTransition = () => {
   };
 
   return (
-    <div className="slide-container relative w-full h-full">
-      <div className={transitioning ? 'slide-out' : ''}>
-        {renderPage(currentPage)}
-      </div>
-      {transitioning && (
-        <div className="slide-in">
-          {renderPage(nextPage)}
+    <div className="slide-container">
+      <div className="slide-wrapper">
+        <div className={transitioning ? 'slide-out' : ''}>
+          {renderPage(currentPage)}
         </div>
-      )}
+        {transitioning && (
+          <div className="slide-in">
+            {renderPage(nextPage)}
+          </div>
+        )}
+      </div>
     </div>
   );
 };
@@ -211,9 +213,11 @@ function App() {
   return (
     <TimeSliderProvider>
       <PageTransitionProvider>
-        <Navbar />
-        <TimeSlider />
-        <PageTransition />
+        <div className="flex flex-col min-h-screen">
+          <Navbar />
+          <TimeSlider />
+          <PageTransition />
+        </div>
       </PageTransitionProvider>
     </TimeSliderProvider>
   );
