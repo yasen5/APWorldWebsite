@@ -77,7 +77,7 @@ const TimeSlider = () => {
   };
 
   return (
-    <div className='pt-12'>
+    <div className='pt-12 pb-6'>
       <h1>Select a time period</h1>
         <div
           ref={sliderRef}
@@ -169,16 +169,14 @@ const PageTransition = () => {
 
   return (
     <div className="slide-container">
-      <div className="slide-wrapper">
-        <div className={transitioning ? 'slide-out' : ''}>
-          {renderPage(currentPage)}
-        </div>
-        {transitioning && (
-          <div className="slide-in">
-            {renderPage(nextPage)}
-          </div>
-        )}
+      <div className={transitioning ? 'slide slide-out' : 'slide'}>
+        {renderPage(currentPage)}
       </div>
+      {transitioning && (
+        <div className="slide slide-in">
+          {renderPage(nextPage)}
+        </div>
+      )}
     </div>
   );
 };
