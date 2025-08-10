@@ -180,11 +180,11 @@ export const D3ForceGraph = () => {
 
     const nodeSelection = resetSim(nodes);
 
-    const simulation = d3.forceSimulation(nodes)
+    const simulation = d3.forceSimulation<Node>(nodes)
       .force("center", d3.forceCenter(width / 2, height / 2))
       .force("collide", d3.forceCollide<Node>().radius(d => d.radius + 1))
-      .force("x", d3.forceX(width / 2).strength(d => 0.05 + d.importance * 0.2))
-      .force("y", d3.forceY(height / 2).strength(d => 0.05 + d.importance * 0.2))
+      .force("x", d3.forceX<Node>(width / 2).strength(d => 0.05 + d.importance * 0.2))
+      .force("y", d3.forceY<Node>(height / 2).strength(d => 0.05 + d.importance * 0.2))
       .alphaDecay(0.02)
       .on("tick", () => {
         nodeSelection.attr("transform", d => `translate(${d.x!},${d.y!})`);
