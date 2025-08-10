@@ -5,7 +5,7 @@ const Navbar = () => {
 
   return (
     <nav>
-        <div className="fixed left-0 w-full z-[1000] bg-green-800 flex justify-center gap-6 flex-wrap">
+        <div className="fixed left-0 w-full bg-green-800 flex justify-center gap-6 flex-wrap">
             {Object.entries(AppPageLabels).map(([key, label]) => {
                 const page = Number(key) as AppPage;
                 return (
