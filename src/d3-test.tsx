@@ -96,45 +96,44 @@ export const D3ForceGraph = () => {
       .style("width", "auto")
       .style("white-space", "pre-line");
     
-      const wrapText = (textSelection: d3.Selection<SVGTextElement, Node, any, any>) => {
-        textSelection.each(function(d) {
-          const text = d3.select(this);
-          const words = d.noteId.split(/\s+/).reverse();
-          const maxWidth = d.radius * 1.8; // inside circle
-          let line: string[] = [];
-          let lineNumber = 0;
-          const lineHeight = 1.1; // ems
-          const y = 0;
-          let tspan = text.text(null)
-            .append("tspan")
-            .attr("x", 0)
-            .attr("y", y)
-            .attr("dy", "0em");
-      
-          let word;
-          while ((word = words.pop())) {
-            line.push(word);
+    const wrapText = (textSelection: d3.Selection<SVGTextElement, Node, any, any>) => {
+      textSelection.each(function(d) {
+        const text = d3.select(this);
+        const words = d.noteId.split(/\s+/).reverse();
+        const maxWidth = d.radius * 1.8; // inside circle
+        let line: string[] = [];
+        let lineNumber = 0;
+        const lineHeight = 1.1; // ems
+        const y = 0;
+        let tspan = text.text(null)
+          .append("tspan")
+          .attr("x", 0)
+          .attr("y", y)
+          .attr("dy", "0em");
+    
+        let word;
+        while ((word = words.pop())) {
+          line.push(word);
+          tspan.text(line.join(" "));
+          if (tspan.node()!.getComputedTextLength() > maxWidth) {
+            line.pop();
             tspan.text(line.join(" "));
-            if (tspan.node()!.getComputedTextLength() > maxWidth) {
-              line.pop();
-              tspan.text(line.join(" "));
-              line = [word];
-              tspan = text.append("tspan")
-                .attr("x", 0)
-                .attr("y", y)
-                .attr("dy", ++lineNumber * lineHeight + "em")
-                .text(word);
-            }
+            line = [word];
+            tspan = text.append("tspan")
+              .attr("x", 0)
+              .attr("y", y)
+              .attr("dy", ++lineNumber * lineHeight + "em")
+              .text(word);
           }
-      
-          // Center vertically
-          const totalHeight = (lineNumber + 1) * lineHeight;
-          text.selectAll("tspan")
-            .attr("dy", function(_, i) {
-              return (i - lineNumber / 2) * lineHeight + "em";
-            });
-        });
-      }
+        }
+    
+        // Center vertically
+        text.selectAll("tspan")
+          .attr("dy", function(_, i) {
+            return (i - lineNumber / 2) * lineHeight + "em";
+          });
+      });
+    }
 
     const resetSim = (nodesToEnter: Node[]) => {
       const nodeSelection = svg.selectAll("g.node")
@@ -145,7 +144,7 @@ export const D3ForceGraph = () => {
         .attr("data-note-id", d => d.noteId)
         .attr("transform", d => `translate(${d.x},${d.y})`);
 
-      const circleSelection = nodeSelection.append("circle")
+      nodeSelection.append("circle")
         .attr("r", d => d.radius)
         .attr("fill", d => categoryFillColors[d.category])
         .attr("stroke", "black")
