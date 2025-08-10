@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useTimeSliderContext } from "./App";
-import { countryNotes, generalNotes} from './notes'
+import { countryNotes, generalNotes } from './notes'
 import World1200 from './assets/World-1200.svg?react';
 import { createPortal } from "react-dom";
 
@@ -112,7 +112,7 @@ export const GeographicSelectionPage = () => {
                     key={idea}
                     onClick={() => setSelectedCountry(idea)}
                     className="px-4 py-2 bg-gradient-to-r from-indigo-500 to-blue-600 text-white rounded-full text-sm font-medium hover:from-indigo-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg"
-                    onMouseEnter={() => { setHoveredIdea(idea);  }}
+                    onMouseEnter={() => setHoveredIdea(idea)}
                     onMouseLeave={() => setHoveredIdea(null)}
                     >
                     {idea}
@@ -139,7 +139,7 @@ export const GeographicSelectionPage = () => {
     );
 };
 
-const Popup: React.FC<{ noteKey : string, onClose: () => void }> = ({ noteKey, onClose}) => {
+const Popup: React.FC<{ noteKey: string, onClose: () => void }> = ({ noteKey, onClose }) => {
     const popupRef = useRef<HTMLDivElement>(null);
     const [position, setPosition] = useState({ top: 0, left: 0});
     const [zoomLevel, setZoomLevel] = useState(1);
@@ -214,7 +214,7 @@ const Dropdown: React.FC<{ title: string; children: React.ReactNode }> = ({title
         <button className="w-full flex justify-between items-center p-2 bg-gray-100"
         onClick={() => setIsOpen(!isOpen)}>
             <span className="font-medium">{title}</span>
-            <span>{isOpen? "▲" : "▼"} </span>
+            <span>{isOpen ? "▲" : "▼"} </span>
         </button>
         {isOpen && (
             <div className="p-2 bg-white text-sm">
