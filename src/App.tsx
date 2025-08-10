@@ -77,7 +77,7 @@ const TimeSlider = () => {
   };
 
   return (
-    <div className='pt-12 pb-6'>
+    <div className='pt-12 pb-6 px-6'>
       <h1>Select a time period</h1>
         <div
           ref={sliderRef}
