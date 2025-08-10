@@ -56,7 +56,7 @@ export const NoteNodes: React.FC<{ bboxSideLength: number }> = ({ bboxSideLength
         return { centralNode, topicNodes, noteNodes, edges, totalNodes };
     }, [marginedBboxSideLength]);
 
-    const intervalIdRef = useRef<number>(null);
+    const intervalIdRef = useRef<number | null>(null);
 
     useEffect(() => {
         let tickCount = 0;
@@ -91,7 +91,9 @@ export const NoteNodes: React.FC<{ bboxSideLength: number }> = ({ bboxSideLength
     
             if (simDone) {
                 console.log("Sim done")
-                clearInterval(intervalIdRef!.current!);
+                if (intervalIdRef.current) {
+                    clearInterval(intervalIdRef.current);
+                }
             }
     
             totalNodes.forEach((node) => { 
@@ -108,7 +110,7 @@ export const NoteNodes: React.FC<{ bboxSideLength: number }> = ({ bboxSideLength
                 clearInterval(intervalIdRef.current);
             }
         };
-    }, []);
+    }, [totalNodes, edges, centralNode]);
 
     return (
         <svg width={bboxSideLength} height={bboxSideLength} viewBox={`0 0 ${bboxSideLength} ${bboxSideLength}`}>
