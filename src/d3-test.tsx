@@ -3,7 +3,8 @@ import { useEffect, useRef } from "react";
 
 interface Node {
   id: string;
-  notes: string;
+  noteId: string;
+  category: number;
   radius: number;
   importance: number;
   x: number;
@@ -11,6 +12,15 @@ interface Node {
   vx?: number;
   vy?: number;
 }
+
+const sixRainbowColors = [
+  "#ff0000", // Red
+  "#ff7f00", // Orange
+  "#ffff00", // Yellow
+  "#00ff00", // Green
+  "#0000ff", // Blue
+  "#4b0082" // Indigo
+]
 
 export const D3ForceGraph = () => {
   const svgRef = useRef<SVGSVGElement>(null);
@@ -22,13 +32,15 @@ export const D3ForceGraph = () => {
     const getNodeSeed = () => {
       return d3.range(10).map((i) => {
         const importance = Math.pow(1.1, 10 - i);
+        const category = Math.floor(Math.random() * 6);
         return {
           id: `node-${i}`,
-          notes: "This is a very cool note node with some important information.\nHere is another line\nAnd another",
+          noteId: `Note number ${i} with category ${category}`,
+          category: category,
           importance: importance,
           radius: 6 + importance * 20,
-          x: width / 2 + Math.sign(Math.random() - 0.5) * 1000 / importance,
-          y: height / 2 + Math.sign(Math.random() - 0.5) * 1000 / importance
+          x: width / 2 + Math.sign(Math.random() - 0.5) * 2000 / importance,
+          y: height / 2 + Math.sign(Math.random() - 0.5) * 2000 / importance
         }
       });
     }
@@ -62,8 +74,9 @@ export const D3ForceGraph = () => {
       .enter()
       .append("circle")
       .attr("r", d => d.radius)
-      .attr("fill", d => d3.interpolateRainbow(d.importance / 2))
+      .attr("fill", d => sixRainbowColors[d.category])
       .attr("stroke", "black")
+      .attr("data-note-id", d => d.noteId)
       .attr("cx", d => d.x)
       .attr("cy", d => d.y)
       // Add hover functionality for displaying notes
@@ -71,7 +84,7 @@ export const D3ForceGraph = () => {
         tooltip.transition()
           .duration(200)
           .style("opacity", 0.9);
-        tooltip.html(`${d.notes}`)
+        tooltip.html(`${d.noteId}`)
           .style("left", (event.pageX + 10) + "px")
           .style("top", (event.pageY - 28) + "px");
       })
@@ -123,15 +136,16 @@ export const D3ForceGraph = () => {
             .enter()
             .append("circle")
             .attr("r", d => d.radius)
-            .attr("fill", d => d3.interpolateRainbow(d.importance / 2))
+            .attr("fill", d => sixRainbowColors[d.category])
             .attr("stroke", "black")
+            .attr("data-note-id", d => d.noteId) // added
             .attr("cx", d => d.x)
             .attr("cy", d => d.y)
             .on("mouseover", (event, d) => {
               tooltip.transition()
                 .duration(200)
                 .style("opacity", 0.9);
-              tooltip.html(`${d.notes}`)
+              tooltip.html(`${d.noteId}`)
                 .style("left", (event.pageX + 10) + "px")
                 .style("top", (event.pageY - 28) + "px");
             })
