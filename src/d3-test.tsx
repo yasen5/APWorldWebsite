@@ -80,6 +80,7 @@ export const D3ForceGraph = () => {
 
     svg.selectAll("*").remove();
 
+    d3.select('#force-graph-tooltip').remove();
     const tooltip = d3.select("body")
       .append("div")
       .attr("class", "tooltip")
@@ -227,6 +228,7 @@ export const D3ForceGraph = () => {
 
     return () => {
       simulation.stop();
+      tooltip.remove();
     };
   }, []);
 
