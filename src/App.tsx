@@ -3,15 +3,18 @@ import worldIcon from './assets/world.svg'
 import './App.css'
 import Navbar from './Navbar.tsx';
 import { GeographicSelectionPage } from './geographic-selection.tsx';
+import { NoteNodes } from './note-nodes.tsx';
+import { D3ForceGraph } from './d3-test.tsx';
 
 export enum AppPage {
-  START_SCREEN, EXPLANATION, GEOGRAPHIC_SELECTION
+  START_SCREEN, EXPLANATION, GEOGRAPHIC_SELECTION, SVG_GENERATOR
 }
 
 export const AppPageLabels: Record<AppPage, string> = {
   [AppPage.START_SCREEN]: "Home",
   [AppPage.EXPLANATION]: "Explanation",
-  [AppPage.GEOGRAPHIC_SELECTION]: "Geographic Selection"
+  [AppPage.GEOGRAPHIC_SELECTION]: "Geographic Selection",
+  [AppPage.SVG_GENERATOR]: "SVG Generator"
 };
 
 const timePeriods: number[] = [
@@ -162,6 +165,8 @@ const PageTransition = () => {
         return <ExplanationPage />;
       case AppPage.GEOGRAPHIC_SELECTION:
         return <GeographicSelectionPage />;
+      case AppPage.SVG_GENERATOR:
+        return <D3ForceGraph />;
       default:
         return <div>Error: Invalid page</div>;
     }
@@ -194,6 +199,7 @@ const StartScreen = ({ goToPage }: StartScreenProps) => {
         <img src={worldIcon} className="p-1.5 h-24 w-24 drop-shadow-sm animate-pulse" />
       </button>
       <button onClick={() => goToPage(AppPage.EXPLANATION)}>Explanation</button>
+      <button onClick={() => goToPage(AppPage.SVG_GENERATOR)}>SVG Generator</button>
     </div>
   );
 };
