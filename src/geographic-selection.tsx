@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useTimeSliderContext } from "./App";
-import { countryNotes, generalNotes } from './notes'
+import { countryNotes, generalNotes, noteSVGs } from './notes'
 import World1200 from './assets/World-1200.svg?react';
 import { createPortal } from "react-dom";
 
@@ -174,6 +174,7 @@ const Popup: React.FC<{ noteKey: string, onClose: () => void }> = ({ noteKey, on
     }, []);
 
     const matches = countryNotes[noteKey] || generalNotes[noteKey] || null;
+    const SvgNotes = noteSVGs[noteKey] || null;
 
     return createPortal(
     <div 
@@ -193,7 +194,7 @@ const Popup: React.FC<{ noteKey: string, onClose: () => void }> = ({ noteKey, on
         >
             <button className="[all:unset] cursor-pointer absolute top-2 right-2" onClick={onClose} aria-label="Close">x</button>
             <h2 className="font-bold" id="modal-title">{noteKey}</h2>
-            <p>Hexagon goes here</p>
+            <SvgNotes/>
             {matches &&
                 Object.entries(matches).map(([sectionTitle, content]) => (
                 <Dropdown key={sectionTitle} title={sectionTitle}>
