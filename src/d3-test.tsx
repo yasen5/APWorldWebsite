@@ -16,12 +16,12 @@ interface Node {
 }
 
 const categoryFillColors: Record<category, string> = {
-  'Government': "#ff0000", // Red
-  'Society': "#ff7f00", // Orange
-  'Culture': "#ffff00", // Yellow
-  'Environment': "#00ff00", // Green
-  'Economy': "#0000ff", // Blue
-  'Technology': "#4b0082" // Indigo
+  'Government': "#c97f47", // Red
+  'Society': "#ba9961", // Orange
+  'Culture': "#c4c37c", // Yellow
+  'Environment': "#45b061", // Green
+  'Economy': "#32a4c9", // Blue
+  'Technology': "#c75fbd" // Indigo
 }
 
 const categoryTextColors: Record<category, string> = {
@@ -43,10 +43,10 @@ interface ActualNote {
 const actualNotes: ActualNote[] = [
   { noteId: "Zamindars & Mansabdars", category: 'Government', importance: 3 },
   { noteId: "Taj Mahal", category: 'Culture', importance: 2 },
-  { noteId: "Akbar", category: 'Government', importance: 1.5 },
-  { noteId: "Sikhism", category: 'Culture', importance: 1 },
+  { noteId: "Akbar", category: 'Society', importance: 1.5 },
+  { noteId: "Sikhism", category: 'Environment', importance: 1 },
   { noteId: "Cotton", category: 'Economy', importance: 0.8 },
-  { noteId: "Aurangzeb", category: 'Government', importance: 0.5 }
+  { noteId: "Aurangzeb", category: 'Technology', importance: 0.5 }
 ]
 
 export const D3ForceGraph = () => {
@@ -62,7 +62,7 @@ export const D3ForceGraph = () => {
         const category = actualNotes[i].category;// Math.floor(Math.random() * 6);
         return {
           id: `node-${i}`,
-          noteId: `Note number ${i} with category ${category}`,
+          noteId: actualNotes[i].noteId,
           category: category,
           importance: importance,
           radius: 6 + importance * 60,
@@ -171,7 +171,7 @@ export const D3ForceGraph = () => {
         .style("font-family", "sans-serif")
         .style("pointer-events", "none")
         .style("fill", d => categoryTextColors[d.category])
-        .style("font-size", d => d.radius * 0.2 + "px")
+        .style("font-size", d => d.radius * 0.3 + "px")
 
       wrapText(textSelection);
 
