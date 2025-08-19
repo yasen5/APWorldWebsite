@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useTimeSliderContext } from "./App";
-import { countryNotes, generalNotes, noteSVGs } from './notes'
+import { blobNotes, countryNotes, generalNotes, noteSVGs } from './notes'
 import World1200 from './assets/World-1200.svg?react';
 import { createPortal } from "react-dom";
 
@@ -60,15 +60,15 @@ export const GeographicSelectionPage = () => {
     };
 
     const handleCountryClick = (event: React.MouseEvent<SVGSVGElement>) => {
-    const target = event.target as SVGElement;
-    const countryName = target.getAttribute('data-country');
-    if (!countryName) return;
+        const target = event.target as SVGElement;
+        const countryName = target.getAttribute('data-country');
+        if (!countryName) return;
 
-    if (nations.includes(countryName)) {
-        setSelectedCountry(countryName);
-    } else {
-        alert(`No notes available for: ${countryName}`);
-    }
+        if (nations.includes(countryName)) {
+            setSelectedCountry(countryName);
+        } else {
+            alert(`No notes available for: ${countryName}`);
+        }
     };
 
     const currentTimePeriod = selectedRange[0];
@@ -141,6 +141,7 @@ export const GeographicSelectionPage = () => {
 
 const Popup: React.FC<{ noteKey: string, onClose: () => void }> = ({ noteKey, onClose }) => {
     const popupRef = useRef<HTMLDivElement>(null);
+    const [selectedBlob, setSelectedBlob] = useState<string | null>(null);
     const [position, setPosition] = useState({ top: 0, left: 0});
     const [zoomLevel, setZoomLevel] = useState(1);
 
@@ -158,6 +159,19 @@ const Popup: React.FC<{ noteKey: string, onClose: () => void }> = ({ noteKey, on
         const left = vv.offsetLeft + vv.width * (1 - viewportPercentage) / 2;
 
         setPosition({ top, left });
+    };
+
+    const handleBlobClick = (event: React.MouseEvent<SVGSVGElement>) => {
+        const el = event.target as Element;
+        const nodeEl = el.closest('[data-note-id]');
+        const noteId = nodeEl?.getAttribute('data-note-id');
+        if (!noteId) return;
+    
+        if (noteId in blobNotes) {
+            setSelectedBlob(noteId);
+        } else {
+            alert(`No notes available for blob: ${noteId}`);
+        }
     };
 
     useEffect(() => {
@@ -194,7 +208,9 @@ const Popup: React.FC<{ noteKey: string, onClose: () => void }> = ({ noteKey, on
         >
             <button className="[all:unset] cursor-pointer absolute top-2 right-2" onClick={onClose} aria-label="Close">x</button>
             <h2 className="font-bold" id="modal-title">{noteKey}</h2>
-            <SvgNotes/>
+            {SvgNotes && (
+                <SvgNotes onClick={handleBlobClick}/>
+            )}
             {matches &&
                 Object.entries(matches).map(([sectionTitle, content]) => (
                 <Dropdown key={sectionTitle} title={sectionTitle}>
@@ -203,6 +219,12 @@ const Popup: React.FC<{ noteKey: string, onClose: () => void }> = ({ noteKey, on
                 ))
             }
         </div>
+        {selectedBlob && (
+            <Popup
+            noteKey={selectedBlob}
+            onClose={() => setSelectedBlob(null)}
+            />
+        )}
     </div>,
     document.body
     );
