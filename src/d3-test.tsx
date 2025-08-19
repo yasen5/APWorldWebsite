@@ -181,6 +181,7 @@ export const D3ForceGraph = () => {
     const nodeSelection = resetSim(nodes);
 
     const simulation = d3.forceSimulation<Node>(nodes)
+      .alphaMin(0.003)
       .force("center", d3.forceCenter(width / 2, height / 2))
       .force("collide", d3.forceCollide<Node>().radius(d => d.radius + 1))
       .force("x", d3.forceX<Node>(width / 2).strength(d => 0.05 + d.importance * 0.2))
