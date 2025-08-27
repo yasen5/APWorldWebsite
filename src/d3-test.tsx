@@ -16,12 +16,12 @@ interface Node {
 }
 
 const categoryFillColors: Record<category, string> = {
-  'Government': "#ff0000", // Red
-  'Society': "#ff7f00", // Orange
-  'Culture': "#ffff00", // Yellow
-  'Environment': "#00ff00", // Green
-  'Economy': "#0000ff", // Blue
-  'Technology': "#4b0082" // Indigo
+  'Government': "#c97f47", // Brown/Tan
+  'Society': "#ba9961", // Muted Brown/Beige
+  'Culture': "#c4c37c", // Yellow
+  'Environment': "#45b061", // Green
+  'Economy': "#32a4c9", // Blue
+  'Technology': "#c75fbd" // Pink/Magenta
 }
 
 const categoryTextColors: Record<category, string> = {
@@ -51,23 +51,30 @@ const actualNotes: ActualNote[] = [
 
 export const D3ForceGraph = () => {
   const svgRef = useRef<SVGSVGElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const width = window.innerWidth;
-    const height = window.innerHeight;
+    if (!svgRef.current || !containerRef.current) return;
+
+    // Get container dimensions instead of window dimensions
+    const containerRect = containerRef.current.getBoundingClientRect();
+    const width = containerRect.width;
+    const height = containerRect.height;
 
     const getNodeSeed = () => {
       return d3.range(6).map((i) => {
-        const importance = actualNotes[i].importance;// Math.pow(1.1, 10 - i);
-        const category = actualNotes[i].category;// Math.floor(Math.random() * 6);
+        const importance = actualNotes[i].importance;
+        const category = actualNotes[i].category;
+        // Scale radius based on container size
+        const baseRadius = Math.min(width, height) * 0.02; // 2% of the smaller dimension
         return {
           id: `node-${i}`,
-          noteId: `Note number ${i} with category ${category}`,
+          noteId: actualNotes[i].noteId, // Use actual note ID
           category: category,
           importance: importance,
-          radius: 6 + importance * 60,
-          x: width / 2 + Math.sign(Math.random() - 0.5) * 4000 / importance,
-          y: height / 2 + Math.sign(Math.random() - 0.5) * 4000 / importance
+          radius: baseRadius + importance * (Math.min(width, height) * 0.08), // Scale with container
+          x: (width / 2 + Math.sign(Math.random() - 0.5) * Math.min(width, height) / importance),
+          y: (height / 2 + Math.sign(Math.random() - 0.5) * Math.min(width, height) / importance)
         }
       });
     }
@@ -76,14 +83,35 @@ export const D3ForceGraph = () => {
 
     const svg = d3.select(svgRef.current)
       .attr("width", width)
-      .attr("height", height);
+      .attr("height", height)
+      .style("cursor", "pointer")
+      .on("click", () => {
+        if (window.confirm("Download this force graph as SVG?")) {
+          // Export the svg
+          const svgData = new XMLSerializer().serializeToString(svgRef.current!);
+          const svgBlob = new Blob([svgData], { type: "image/svg+xml;charset=utf-8" });
+          const svgUrl = URL.createObjectURL(svgBlob);
+          
+          // Create download link and trigger download
+          const downloadLink = document.createElement("a");
+          downloadLink.href = svgUrl;
+          downloadLink.download = `force-graph-${Date.now()}.svg`;
+          document.body.appendChild(downloadLink);
+          downloadLink.click();
+          document.body.removeChild(downloadLink);
+          
+          // Clean up the URL object
+          URL.revokeObjectURL(svgUrl);
+        }
+      });
 
     svg.selectAll("*").remove();
 
-    d3.select('#force-graph-tooltip').remove();
+    // Remove any existing tooltips
+    d3.selectAll('.force-graph-tooltip').remove();
     const tooltip = d3.select("body")
       .append("div")
-      .attr("class", "tooltip")
+      .attr("class", "force-graph-tooltip")
       .style("position", "absolute")
       .style("background-color", "black")
       .style("border", "1px solid #ddd")
@@ -93,9 +121,10 @@ export const D3ForceGraph = () => {
       .style("opacity", 0)
       .style("transition", "opacity 0.3s")
       .style("color", "white")
-      .style("max-width", "none")
+      .style("max-width", "200px")
       .style("width", "auto")
-      .style("white-space", "pre-line");
+      .style("white-space", "pre-line")
+      .style("z-index", "1000");
     
     const wrapText = (textSelection: d3.Selection<SVGTextElement, Node, any, any>) => {
       textSelection.each(function(d) {
@@ -171,7 +200,7 @@ export const D3ForceGraph = () => {
         .style("font-family", "sans-serif")
         .style("pointer-events", "none")
         .style("fill", d => categoryTextColors[d.category])
-        .style("font-size", d => d.radius * 0.2 + "px")
+        .style("font-size", d => Math.max(8, d.radius * 0.2) + "px") // Minimum font size
 
       wrapText(textSelection);
 
@@ -190,38 +219,7 @@ export const D3ForceGraph = () => {
         nodeSelection.attr("transform", d => `translate(${d.x!},${d.y!})`);
       })
       .on("end", () => {
-        if (window.confirm("Is this layout suitable?")) {
-          // Export the svg
-          const svgData = new XMLSerializer().serializeToString(svgRef.current!);
-          const svgBlob = new Blob([svgData], { type: "image/svg+xml;charset=utf-8" });
-          const svgUrl = URL.createObjectURL(svgBlob);
-          
-          // Create download link and trigger download
-          const downloadLink = document.createElement("a");
-          downloadLink.href = svgUrl;
-          downloadLink.download = "force-graph.svg";
-          document.body.appendChild(downloadLink);
-          downloadLink.click();
-          document.body.removeChild(downloadLink);
-          
-          // Clean up the URL object
-          URL.revokeObjectURL(svgUrl);
-        }
-        else {
-          const newNodes = getNodeSeed();
-
-          svg.selectAll("g.node").remove();
-
-          simulation.nodes(newNodes);
-
-          const newNodeSelection = resetSim(newNodes);
-
-          simulation.on("tick", () => {
-            newNodeSelection.attr("transform", d => `translate(${d.x!},${d.y!})`);
-          });
-
-          simulation.alpha(1).restart();
-        }
+        // Commented out the original export/restart logic
       });
 
     simulation.tick(10);
@@ -232,5 +230,9 @@ export const D3ForceGraph = () => {
     };
   }, []);
 
-  return <svg ref={svgRef} />;
+  return (
+    <div ref={containerRef} style={{ width: '100%', height: '100%' }}>
+      <svg ref={svgRef} style={{ width: '100%', height: '100%' }} />
+    </div>
+  );
 };

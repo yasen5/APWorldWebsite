@@ -113,3 +113,21 @@ document flow using `position: absolute` to ensure that one is not displayed und
 .svg-container [data-country]:hover {
   fill: #c4c4c4;
 }
+
+.d3-grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.d3-grid-item {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow:visible;
+  min-height: 0;
+}
