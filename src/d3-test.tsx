@@ -43,10 +43,10 @@ interface ActualNote {
 const actualNotes: ActualNote[] = [
   { noteId: "Zamindars & Mansabdars", category: 'Government', importance: 3 },
   { noteId: "Taj Mahal", category: 'Culture', importance: 2 },
-  { noteId: "Akbar", category: 'Government', importance: 1.5 },
-  { noteId: "Sikhism", category: 'Culture', importance: 1 },
+  { noteId: "Akbar", category: 'Society', importance: 1.5 },
+  { noteId: "Sikhism", category: 'Environment', importance: 1 },
   { noteId: "Cotton", category: 'Economy', importance: 0.8 },
-  { noteId: "Aurangzeb", category: 'Government', importance: 0.5 }
+  { noteId: "Aurangzeb", category: 'Technology', importance: 0.5 }
 ]
 
 export const D3ForceGraph = () => {
@@ -210,6 +210,7 @@ export const D3ForceGraph = () => {
     const nodeSelection = resetSim(nodes);
 
     const simulation = d3.forceSimulation<Node>(nodes)
+      .alphaMin(0.003)
       .force("center", d3.forceCenter(width / 2, height / 2))
       .force("collide", d3.forceCollide<Node>().radius(d => d.radius + 1))
       .force("x", d3.forceX<Node>(width / 2).strength(d => 0.05 + d.importance * 0.2))

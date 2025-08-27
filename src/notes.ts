@@ -4,6 +4,15 @@ export interface CountryNotes {
     };
 }
 
+export const noteSVGs: Record<string, React.ComponentType<React.SVGProps<SVGSVGElement>>> = {
+      /* Put the country name EXACTLY as it appears in the country svgs, then the note svg that was generated for it */
+}
+
+/* Note id/summary, then actual notes */
+export const blobNotes: Record<string, string> = {
+      "Note number 0 with category Government": "Literally nothing lol"
+}
+
 export const generalNotes: CountryNotes = {
       "Trade Routes": {
             "Environment": "yay environment notes",
