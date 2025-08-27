@@ -223,7 +223,15 @@ const Popup: React.FC<{ noteKey: string, onClose: () => void }> = ({ noteKey, on
             {matches &&
                 Object.entries(matches).map(([sectionTitle, content]) => (
                 <Dropdown key={sectionTitle} title={sectionTitle}>
-                    <p>{content}</p>
+                    {Array.isArray(content) ?(
+                        <ul className="list-disc pl-4">
+                            {content.map((point, i) => (
+                                <li key={i}>{point}</li>
+                            ))}
+                        </ul>
+                    ):(
+                        <p>{content}</p>
+                    )}
                 </Dropdown>
                 ))
             }
