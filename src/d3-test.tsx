@@ -219,7 +219,6 @@ export const D3ForceGraph = () => {
         nodeSelection.attr("transform", d => `translate(${d.x!},${d.y!})`);
       })
       .on("end", () => {
-        // Commented out the original export/restart logic
       });
 
     simulation.tick(10);

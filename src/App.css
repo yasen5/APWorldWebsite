@@ -128,6 +128,6 @@ document flow using `position: absolute` to ensure that one is not displayed und
 .d3-grid-item {
   border: 1px solid #ccc;
   border-radius: 8px;
-  overflow:visible;
+  overflow: visible;
   min-height: 0;
 }
