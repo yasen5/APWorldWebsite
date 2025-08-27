@@ -16,12 +16,12 @@ interface Node {
 }
 
 const categoryFillColors: Record<category, string> = {
-  'Government': "#c97f47", // Red
-  'Society': "#ba9961", // Orange
+  'Government': "#c97f47", // Brown/Tan
+  'Society': "#ba9961", // Muted Brown/Beige
   'Culture': "#c4c37c", // Yellow
   'Environment': "#45b061", // Green
   'Economy': "#32a4c9", // Blue
-  'Technology': "#c75fbd" // Indigo
+  'Technology': "#c75fbd" // Pink/Magenta
 }
 
 const categoryTextColors: Record<category, string> = {
