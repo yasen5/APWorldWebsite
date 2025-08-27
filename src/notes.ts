@@ -1,5 +1,3 @@
-import SongDynastyBlob from "./assets/song-dynasty-blob2.svg?react"
-
 export interface CountryNotes {
     [country: string]: {
         [section: string]: string;
@@ -8,7 +6,6 @@ export interface CountryNotes {
 
 export const noteSVGs: Record<string, React.ComponentType<React.SVGProps<SVGSVGElement>>> = {
       /* Put the country name EXACTLY as it appears in the country svgs, then the note svg that was generated for it */
-      "Song Dynasty": SongDynastyBlob,
 }
 
 /* Note id/summary, then actual notes */

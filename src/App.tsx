@@ -166,7 +166,15 @@ const PageTransition = () => {
       case AppPage.GEOGRAPHIC_SELECTION:
         return <GeographicSelectionPage />;
       case AppPage.SVG_GENERATOR:
-        return <D3ForceGraph />;
+        return (
+          <div className="d3-grid-container">
+            {Array.from({ length: 9 }, (_, index) => (
+              <div key={index} className="d3-grid-item">
+                <D3ForceGraph />
+              </div>
+            ))}
+          </div>
+        );
       default:
         return <div>Error: Invalid page</div>;
     }
