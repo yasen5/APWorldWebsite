@@ -13,7 +13,14 @@ export const blobNotes: Record<string, string> = {
       "Note number 0 with category Government": "Literally nothing lol"
 }
 
-export const generalNotes: CountryNotes = {
+export interface GeneralNotes {
+      [country: string]: {
+            [section: string]: string[];
+            applicableCountries: string[];
+      };
+}
+
+export const generalNotes: GeneralNotes = {
       "Crusades": {
             "Environment": [""],
             "Culture": [""],
@@ -24,7 +31,8 @@ export const generalNotes: CountryNotes = {
             "Economy": [""],
             "Social": ["Younger sons of nobles often went to fight in the crusades due to primogeniture (only the oldest son would inherit anything"],
             "Technology": ["Increased contact and trade with the Middle East, spreading ideas and technology from the East to Europe, including paper, sugar, and gunpowder" // maybe culture or economic?
-            ]
+            ],
+            applicableCountries: []
       },
       "Black Death": {
             "Environment": ["Spread from China over the Silk Roads",
@@ -34,7 +42,8 @@ export const generalNotes: CountryNotes = {
             "Governance": [""],
             "Economy": [""],
             "Social": ["Because there was a high demand for labor but so many people had died, serfs were able to gain more power, triggering the end of feudalism in Western Europe"],
-            "Technology": [""]
+            "Technology": [""],
+            applicableCountries: []
       },
       "Renaissance": {
             "Environment": [""],
@@ -44,7 +53,8 @@ export const generalNotes: CountryNotes = {
             "Governance": [""],
             "Economy": [""],
             "Social": [""],
-            "Technology": ["The Gutenberg printing press, invented in 1439, led to an increase in literacy"]
+            "Technology": ["The Gutenberg printing press, invented in 1439, led to an increase in literacy"],
+            applicableCountries: []
       },
       "Trans-Saharan Trade": {
             "Environment": ["Used camels for transportation",
@@ -56,7 +66,8 @@ export const generalNotes: CountryNotes = {
                   "Facilitated trade of horses, books, salt, gold, ivory, cloth, and slaves"
             ],
             "Social": ["yay social notes"],
-            "Technology": ["With the new Somali saddle, camels could carry up to 600lbs"]
+            "Technology": ["With the new Somali saddle, camels could carry up to 600lbs"],
+            applicableCountries: []
       },
       "Silk Road Trade": {
             "Environment": ["Used camels for transportation",
@@ -71,7 +82,8 @@ export const generalNotes: CountryNotes = {
                   "Cities were established along the Silk Roads, especially near water sources as most of the routes didn't have much water, as centers of trade. Examples include Kashgar, Samarkand, and Chang'an"
             ],
             "Social" :[],
-            "Technology":["Facilitated the spread of maritime technology, including lateen sails (triangular to allow wind to be caught from all directions), the stern rudder (allowed for better steering and maneuverability), the astrolabe, dhow ships, and the compass"]
+            "Technology":["Facilitated the spread of maritime technology, including lateen sails (triangular to allow wind to be caught from all directions), the stern rudder (allowed for better steering and maneuverability), the astrolabe, dhow ships, and the compass"],
+            applicableCountries: []
       },
       "Indian Ocean Trade": {
             "Environment": ["Sailors utilized monsoon winds to expedite their voyages. Monsoon winds could be predicted based on season (from the Northeast in winter, from the Southwest in spring and summer) "],
@@ -85,7 +97,8 @@ export const generalNotes: CountryNotes = {
                   "Trade cities were established, including Calicut, Malacca, and Kilwa"
             ],
             "Social": [],
-            "Technology": ["The essential maritime techology for the Indian Ocean trade included the magnetic compass, astrolabe, lateen sail, dhow ship, and stern rudder"]
+            "Technology": ["The essential maritime techology for the Indian Ocean trade included the magnetic compass, astrolabe, lateen sail, dhow ship, and stern rudder"],
+            applicableCountries: []
       },
       "Calvinism": {
             "Environment": [],
@@ -97,7 +110,8 @@ export const generalNotes: CountryNotes = {
             "Governance": [],
             "Economy": [],
             "Social": ["People who were predestined to go to heaven were called the Elect"],
-            "Technology": []
+            "Technology": [],
+            applicableCountries: []
       },
       "Columbian Exchange":{
             "Environment": ["Diseases like smallpox, measles, and tuberculosis were spread to the New World. This led to the native population declining by about 80%, known as the Great Dying",
@@ -109,7 +123,8 @@ export const generalNotes: CountryNotes = {
             "Governance": [],
             "Economy": [],
             "Social": [],
-            "Technology": []
+            "Technology": [],
+            applicableCountries: []
       },
       "Triangular Trade and Trans-Atlantic Slave Trade": {
             "Environment": [],
@@ -125,8 +140,8 @@ export const generalNotes: CountryNotes = {
             "Uncategorized": ["Most slaves were sent to Portuguese colonies",
                   "In some Spanish, Portuguese, and French colonies, owners and slaves could go to court to argue for the freedom of a slave",
                   "Colonies needed slaves because there weren't enough Native Americans, as they had been decimated by disease and were able to escape and hide from the Europeans. Africans had already been exposed to European diseases, and they were easy to find if they escaped",
-            ]
-
+            ],
+            applicableCountries: []
       },
       "Enlightenment": {
             "Environment": [],
@@ -151,7 +166,8 @@ export const generalNotes: CountryNotes = {
                   "Voltaire believed in constitutional monarchies, religious freedom, and freedom of speech",
                   "Jean-Jacques Rousseau developed the idea of the social contract after Locke and the new idea of the general will of the population, where decisions would be made based on the will of the majority. This was the start of democracy, and a big threat to monarchs",
                   "Baron Montesquieu believed supported monarchies, but not absolute monarchies. He wanted to check the monarch's power, so he developed the idea of separating the executive, legislative, and judicial powers, as well as the idea of checks and balances. His ideas influenced the American and French constitutions"
-            ]
+            ],
+            applicableCountries: []
       },
       "Second Industrial Revolution":{
             "Environment": ["The rapid rise in urbanization led to overcrowding and poor sanitation",
@@ -172,7 +188,8 @@ export const generalNotes: CountryNotes = {
                   "Railways and steamships improved transportation, linking industrial centers and ports. Urbanization accelerated as new industrial cities rapidly grew"],
             "Uncategorized": ["Countries that had money, natural resources, and water transportation (eg. US, Germany, France, Russia, and Japan) began to industrialize after Britain",
                   "Consumerism began to emerge in the middle class",
-                  "Before the industrial revolution, families worked together at home on their farms, but after the industrial revolution, the whole family was separated to work in factories",]
+                  "Before the industrial revolution, families worked together at home on their farms, but after the industrial revolution, the whole family was separated to work in factories",],
+            applicableCountries: []
       },
       "Communism": {
             "Environment": [],
@@ -183,7 +200,8 @@ export const generalNotes: CountryNotes = {
             "Technology": [],
             "Uncategorized": [ "Developed by Karl Marx (1818-1883), who wanted to replace capitalism with socialism",
                   "In 1848 Karl Marx and Freidrich Engels wrote the Commmunist Manifesto, detailing how capitalism produced a lot of money but left many in poverty. They predicted that the middle class would be eliminated so everyone would fall into one of two classes: the bourgeoisie (rich people who owned the means of production) and the proletariat (the working class), and that the proletariat would eventually overthrow the bourgeoisie to form communism"
-            ]
+            ],
+            applicableCountries: []
       },
       "Imperialism": {
             "Environment": [],
@@ -194,7 +212,8 @@ export const generalNotes: CountryNotes = {
             "Technology": [],
             "Uncategorized": ["They justified imperialism using ideas like White Man's Burden (it's white people's responsibility to civilize other people) and Social Darwinism (the idea that white people were superior to other races)", // social? culture?
                   "Having colonies was a way to prove how powerful a nation was", // gov or social maybe idk  
-            ]
+            ],
+            applicableCountries: []
       },
       "Berlin Conference 1885": {
             "Environment": [],
@@ -206,6 +225,7 @@ export const generalNotes: CountryNotes = {
             "Economy": ["It allowed free movement of goods on major rivers"],
             "Social": [],
             "Technology": [],
+            applicableCountries: []
       },
       "Great Depression 1929-1939": {
             "Environment": [],
@@ -214,7 +234,8 @@ export const generalNotes: CountryNotes = {
             "Economy": ["Disrupted global economies",
                   "Germany was especially affected because ___"
             ],
-            "Technology": []
+            "Technology": [],
+            applicableCountries: []
       }
 }
 

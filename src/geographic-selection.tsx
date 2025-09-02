@@ -4,16 +4,6 @@ import { blobNotes, countryNotes, generalNotes, noteSVGs } from './notes'
 import World1200 from './assets/World-1200.svg?react';
 import { createPortal } from "react-dom";
 
-// Cross-country ideas configuration
-const crossCountryIdeas: Record<string, { applicableCountries: string[], notes: string }> = {
-  "Trade Routes": { applicableCountries: ["France", "England", "Venice", "Byzantium", "Egypt"], notes: "Wow some cool text"},
-  "Crusading States": { applicableCountries: ["France", "England", "Jerusalem", "Byzantium"], notes: "Wow some cool text"},
-  "Islamic Expansion": { applicableCountries: ["Spain", "Egypt", "Jerusalem", "Byzantium"], notes: "Wow some cool text"},
-  "Mongol Influence": { applicableCountries: ["Russia", "Persia", "Song Dynasty", "Byzantium"], notes: "Wow some cool text"},
-  "Maritime Powers": { applicableCountries: ["Venice", "Genoa", "England", "Norway"], notes: "Wow some cool text"},
-  "Scholastic Centers": { applicableCountries: ["France", "England", "Spain", "Italy"], notes: "Wow some cool text"}
-};
-
 export const GeographicSelectionPage = () => {
     const { selectedTime } = useTimeSliderContext();
     const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
@@ -42,7 +32,7 @@ export const GeographicSelectionPage = () => {
     const countryStyles = useMemo(() => {
     const styles: Record<string, React.CSSProperties> = {};
     nations.forEach(nation => {
-        const isHighlighted = hoveredIdea && crossCountryIdeas[hoveredIdea]?.applicableCountries.includes(nation);
+        const isHighlighted = hoveredIdea && generalNotes[hoveredIdea]?.applicableCountries.includes(nation);
         styles[`[data-country="${nation}"]`] = {
         fill: countryColors[nation],
         cursor: 'pointer',
@@ -116,7 +106,7 @@ export const GeographicSelectionPage = () => {
             >
             <div className="bg-white border-2 border-gray-200 rounded-b-lg p-3 shadow-inner">
                 <div className="flex flex-wrap gap-2 justify-center">
-                {Object.keys(crossCountryIdeas).map(idea => (
+                {Object.keys(generalNotes).map(idea => (
                     <button
                     key={idea}
                     onClick={() => setSelectedCountry(idea)}
@@ -221,7 +211,7 @@ const Popup: React.FC<{ noteKey: string, onClose: () => void }> = ({ noteKey, on
                 <SvgNotes onClick={handleBlobClick}/>
             )}
             {matches &&
-                Object.entries(matches).map(([sectionTitle, content]) => (
+                Object.entries(matches).map(([sectionTitle, content]) => sectionTitle !== "applicableCountries" && (
                 <Dropdown key={sectionTitle} title={sectionTitle}>
                     {Array.isArray(content) ?(
                         <ul className="list-disc pl-4">
