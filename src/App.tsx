@@ -61,12 +61,22 @@ const TimeSlider = () => {
         className="h-2 bg-gray-300 rounded-full"
         thumbClassName="w-4 h-4 bg-blue-500 rounded-full cursor-pointer"
         trackClassName="bg-blue-500"
+        markClassName="slider-mark"
         value={selectedTime}
         onChange={(val) => setSelectedTime(val)}
         min={timePeriods[0]}
         max={timePeriods[timePeriods.length - 1]}
         marks={timePeriods}
         step={undefined}
+        renderMark={(props) => {
+          const { key, ...rest } = props; // Destructure key from props
+          const markValue = key; // Use the key as the mark value
+          return (
+            <div key={key} {...rest} className="slider-mark-label">
+              {markValue}
+            </div>
+          );
+        }}
       />
       <p className="text-center mt-2">Time: {selectedTime}</p>
     </div>
