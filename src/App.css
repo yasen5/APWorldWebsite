@@ -131,3 +131,13 @@ document flow using `position: absolute` to ensure that one is not displayed und
   overflow: visible;
   min-height: 0;
 }
+
+.slider-mark-label {
+  position: absolute;
+  top: 10px; /* Adjust to position the label below the slider */
+  font-size: 0.75rem; /* Adjust font size */
+  color: #ffffff; /* White text */
+  text-align: center;
+  transform: translateX(-50%); /* Center the label horizontally */
+  white-space: nowrap; /* Prevent text wrapping */
+}

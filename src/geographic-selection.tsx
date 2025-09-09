@@ -15,7 +15,7 @@ const crossCountryIdeas: Record<string, { applicableCountries: string[], notes: 
 };
 
 export const GeographicSelectionPage = () => {
-    const { selectedRange } = useTimeSliderContext();
+    const { selectedTime } = useTimeSliderContext();
     const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
     const [isIdeasBarOpen, setIsIdeasBarOpen] = useState(false);
     const [hoveredIdea, setHoveredIdea] = useState<string | null>(null);
@@ -55,9 +55,19 @@ export const GeographicSelectionPage = () => {
     return styles;
     }, [countryColors, hoveredIdea]);
 
-    const mapByTime: Record<number, React.ComponentType<React.SVGProps<SVGSVGElement>>> = {
-    1200: World1200
+    const timeMaps: Record<number, React.ComponentType<React.SVGProps<SVGSVGElement>>> = {
+        1200: World1200
     };
+
+    const timePeriods: number[] = [1200, 1450, 1750, 1900, 2025];
+
+    const getMapByTime = (): React.ComponentType<React.SVGProps<SVGSVGElement>> | undefined => {
+        for (let i = 0; i < timePeriods.length; i++) {
+            if (timePeriods[i] >= selectedTime) {
+                return i === 0 ? timeMaps[timePeriods[i]] : timeMaps[timePeriods[i-1]];
+            }
+        }
+    }
 
     const handleCountryClick = (event: React.MouseEvent<SVGSVGElement>) => {
         const target = event.target as SVGElement;
@@ -71,8 +81,7 @@ export const GeographicSelectionPage = () => {
         }
     };
 
-    const currentTimePeriod = selectedRange[0];
-    const MapComponent = mapByTime[currentTimePeriod];
+    const MapComponent = getMapByTime();
 
     if (!MapComponent) {
     return <div>Map not available for this time period</div>;
