@@ -57,14 +57,14 @@ export const GeographicSelectionPage = () => {
 
     const timeMaps: Record<number, React.ComponentType<React.SVGProps<SVGSVGElement>>> = {
         1200: World1200
-    }
+    };
 
-    const timePeriods: number[] = [1200, 1450, 1750, 1900, 2025]
+    const timePeriods: number[] = [1200, 1450, 1750, 1900, 2025];
 
     const getMapByTime = (): React.ComponentType<React.SVGProps<SVGSVGElement>> | undefined => {
         for (let i = 0; i < timePeriods.length; i++) {
             if (timePeriods[i] >= selectedTime) {
-                return i == 0 ? timeMaps[timePeriods[i]] : timeMaps[timePeriods[i-1]];
+                return i === 0 ? timeMaps[timePeriods[i]] : timeMaps[timePeriods[i-1]];
             }
         }
     }
