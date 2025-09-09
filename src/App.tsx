@@ -4,6 +4,7 @@ import './App.css'
 import Navbar from './Navbar.tsx';
 import { GeographicSelectionPage } from './geographic-selection.tsx';
 import { NoteNodes } from './note-nodes.tsx';
+import ReactSlider from 'react-slider'
 import { D3ForceGraph } from './d3-test.tsx';
 
 export enum AppPage {
@@ -21,13 +22,9 @@ const timePeriods: number[] = [
   1200, 1450, 1750, 1900, 2025
 ];
 
-const sliderPercentage = (timePeriod: number) => {
-  return (timePeriod - timePeriods[0]) / (timePeriods[timePeriods.length - 1] - timePeriods[0]) * 100;
-}
-
 interface TimeSliderProps {
-  selectedRange: [number, number];
-  setSelectedRange: React.Dispatch<React.SetStateAction<[number, number]>>;
+  selectedTime: number;
+  setSelectedTime: React.Dispatch<React.SetStateAction<number>>;
 }
 
 const TimeSliderContext = createContext<TimeSliderProps | undefined>(undefined);
@@ -45,65 +42,36 @@ interface TimeSliderProviderProps {
 }
 
 export const TimeSliderProvider: React.FC<TimeSliderProviderProps> = ({ children }) => {
-  const [selectedRange, setSelectedRange] = useState<[number, number]>([1200, 1450]);
+  const [selectedTime, setSelectedTime] = useState<number>(1200);
 
   return (
-    <TimeSliderContext.Provider value={{ selectedRange, setSelectedRange }}>
+    <TimeSliderContext.Provider value={{ selectedTime, setSelectedTime }}>
       {children}
     </TimeSliderContext.Provider>
   );
 };
 
+
 const TimeSlider = () => {
-  const { selectedRange, setSelectedRange } = useTimeSliderContext();
-  const sliderRef = useRef<HTMLDivElement>(null);
-
-  const sliderPercentages = useMemo(() => {
-    return timePeriods.map((timePeriod) => ({
-      timePeriod,
-      percentage: sliderPercentage(timePeriod),
-    }));
-  }, [timePeriods]);
-
-  const handleClick = (click: React.MouseEvent<HTMLDivElement>) => {
-    if (!sliderRef.current) return;
-
-    const boundingBox: DOMRect = sliderRef.current.getBoundingClientRect();
-    const clickPercentage: number = (click.clientX - boundingBox.left) / boundingBox.width * 100;
-
-    for (let i = timePeriods.length - 2; i >= 0; i--) {
-      if (clickPercentage >= sliderPercentages[i].percentage) {
-        setSelectedRange([timePeriods[i], timePeriods[i + 1]]);
-        break;
-      }
-    }
-  };
+  const { selectedTime, setSelectedTime } = useTimeSliderContext();
 
   return (
-    <div className='pt-12 pb-6 px-6'>
-      <h1>Select a time period</h1>
-        <div
-          ref={sliderRef}
-          className={'relative h-2 bg-gray-300 rounded-lg cursor-pointer'}
-          onClick={handleClick}
-        >
-          <div
-            className='absolute h-2 bg-blue-500 rounded-lg'
-            style={{
-              left: `${sliderPercentage(selectedRange[0])}%`,
-              width: `${((sliderPercentage(selectedRange[1]) - sliderPercentage(selectedRange[0])))}%`
-            }}
-          />
-          <div>
-            {sliderPercentages.map((percentage) => (
-              <p key={percentage.timePeriod} className='absolute -translate-x-1/2 pt-2' style={{ left: `${percentage.percentage}%` }}>
-                {percentage.timePeriod}
-              </p>))}
-          </div>
-      </div>
+    <div className="pt-21 px-4 w-full mx-auto">
+      <ReactSlider
+        className="h-2 bg-gray-300 rounded-full"
+        thumbClassName="w-4 h-4 bg-blue-500 rounded-full cursor-pointer"
+        trackClassName="bg-blue-500"
+        value={selectedTime}
+        onChange={(val) => setSelectedTime(val)}
+        min={timePeriods[0]}
+        max={timePeriods[timePeriods.length - 1]}
+        marks={timePeriods}
+        step={undefined}
+      />
+      <p className="text-center mt-2">Time: {selectedTime}</p>
     </div>
   );
-}
+};
 
 interface PageTransitionProps {
   currentPage: AppPage;

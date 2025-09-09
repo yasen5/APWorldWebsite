@@ -15,7 +15,7 @@ const crossCountryIdeas: Record<string, { applicableCountries: string[], notes: 
 };
 
 export const GeographicSelectionPage = () => {
-    const { selectedRange } = useTimeSliderContext();
+    const { selectedTime } = useTimeSliderContext();
     const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
     const [isIdeasBarOpen, setIsIdeasBarOpen] = useState(false);
     const [hoveredIdea, setHoveredIdea] = useState<string | null>(null);
@@ -71,7 +71,7 @@ export const GeographicSelectionPage = () => {
         }
     };
 
-    const currentTimePeriod = selectedRange[0];
+    const currentTimePeriod = selectedTime;
     const MapComponent = mapByTime[currentTimePeriod];
 
     if (!MapComponent) {
