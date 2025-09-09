@@ -32,7 +32,7 @@ export const generalNotes: GeneralNotes = {
             "Social": ["Younger sons of nobles often went to fight in the crusades due to primogeniture (only the oldest son would inherit anything"],
             "Technology": ["Increased contact and trade with the Middle East, spreading ideas and technology from the East to Europe, including paper, sugar, and gunpowder" // maybe culture or economic?
             ],
-            applicableCountries: []
+            applicableCountries: ["France 1200-1450", "England 1200-1450", "Holy Roman Empire 1200-1806"]
       },
       "Black Death": {
             "Environment": ["Spread from China over the Silk Roads",
@@ -43,7 +43,7 @@ export const generalNotes: GeneralNotes = {
             "Economy": [""],
             "Social": ["Because there was a high demand for labor but so many people had died, serfs were able to gain more power, triggering the end of feudalism in Western Europe"],
             "Technology": [""],
-            applicableCountries: []
+            applicableCountries: ["France 1200-1450", "England 1200-1450", "Holy Roman Empire 1200-1806"]
       },
       "Renaissance": {
             "Environment": [""],
@@ -54,7 +54,7 @@ export const generalNotes: GeneralNotes = {
             "Economy": [""],
             "Social": [""],
             "Technology": ["The Gutenberg printing press, invented in 1439, led to an increase in literacy"],
-            applicableCountries: []
+            applicableCountries: ["France 1200-1450", "England 1200-1450", "Holy Roman Empire 1200-1806"]
       },
       "Trans-Saharan Trade": {
             "Environment": ["Used camels for transportation",
@@ -67,7 +67,7 @@ export const generalNotes: GeneralNotes = {
             ],
             "Social": ["yay social notes"],
             "Technology": ["With the new Somali saddle, camels could carry up to 600lbs"],
-            applicableCountries: []
+            applicableCountries: ["Mali Empire, Hausa States"]
       },
       "Silk Road Trade": {
             "Environment": ["Used camels for transportation",
@@ -83,7 +83,7 @@ export const generalNotes: GeneralNotes = {
             ],
             "Social" :[],
             "Technology":["Facilitated the spread of maritime technology, including lateen sails (triangular to allow wind to be caught from all directions), the stern rudder (allowed for better steering and maneuverability), the astrolabe, dhow ships, and the compass"],
-            applicableCountries: []
+            applicableCountries: ["Song Dynasty", "Abbasid Caliphate"]
       },
       "Indian Ocean Trade": {
             "Environment": ["Sailors utilized monsoon winds to expedite their voyages. Monsoon winds could be predicted based on season (from the Northeast in winter, from the Southwest in spring and summer) "],
@@ -98,7 +98,7 @@ export const generalNotes: GeneralNotes = {
             ],
             "Social": [],
             "Technology": ["The essential maritime techology for the Indian Ocean trade included the magnetic compass, astrolabe, lateen sail, dhow ship, and stern rudder"],
-            applicableCountries: []
+            applicableCountries: ["Srivijaya Empire, Majapahit Empire, Song Dynasty, Swahili Coast"]
       },
       "Calvinism": {
             "Environment": [],
@@ -111,7 +111,7 @@ export const generalNotes: GeneralNotes = {
             "Economy": [],
             "Social": ["People who were predestined to go to heaven were called the Elect"],
             "Technology": [],
-            applicableCountries: []
+            applicableCountries: ["France 1200-1450"]
       },
       "Columbian Exchange":{
             "Environment": ["Diseases like smallpox, measles, and tuberculosis were spread to the New World. This led to the native population declining by about 80%, known as the Great Dying",
@@ -124,7 +124,7 @@ export const generalNotes: GeneralNotes = {
             "Economy": [],
             "Social": [],
             "Technology": [],
-            applicableCountries: []
+            applicableCountries: ["Aztecs",]
       },
       "Triangular Trade and Trans-Atlantic Slave Trade": {
             "Environment": [],
@@ -141,7 +141,18 @@ export const generalNotes: GeneralNotes = {
                   "In some Spanish, Portuguese, and French colonies, owners and slaves could go to court to argue for the freedom of a slave",
                   "Colonies needed slaves because there weren't enough Native Americans, as they had been decimated by disease and were able to escape and hide from the Europeans. Africans had already been exposed to European diseases, and they were easy to find if they escaped",
             ],
-            applicableCountries: []
+            applicableCountries: ["Hausa States",]
+      },
+      "Thirty Years War 1618-1648": {
+            "Environment": [""],
+            "Culture": [""],
+            "Governance": ["A war between Catholics and Protestants. It originally started in the Holy Roman Empire, and then it spread",
+                  "It resulted in the Peace of Westphalia, where each area of the Holy Roman Empire could choose Roman Catholicism, Lutheranism, or Calvinism"
+            ],
+            "Economy": [""],
+            "Social": [""],
+            "Technology": [""],
+            applicableCountries: ["England 1450-1700", "France 1450-1700", "Holy Roman Empire 1450-1700", "Spain 1492-1750", "Netherlands 1450-1750"]
       },
       "Enlightenment": {
             "Environment": [],
@@ -236,7 +247,7 @@ export const generalNotes: GeneralNotes = {
             ],
             "Technology": [],
             applicableCountries: []
-      }
+      },
 }
 
 export const countryNotes: CountryNotes = {
@@ -297,7 +308,7 @@ export const countryNotes: CountryNotes = {
             "Social": [],
             "Technology": []
       },
-      "Japan through the Tokugawa Shogunate": {
+      "Japan 1200-1853": {
             "Environment": ["The strong monsoon winds allowed Japan to resist Mongol invasions"],
             "Culture": ["Buddhist and Confucian ideals were mixed with traditional Shinto beliefs",
                   "Christianity became very popular as European missionaries converted Japanese, mostly peasants",
@@ -520,7 +531,7 @@ export const countryNotes: CountryNotes = {
             "Social": ["Priests had very high status, and were consulted for war and other things"],
             "Technology": ["Developed quipu, a method of recording numbers using knotted string"]
       },
-      "Mali": {
+      "Mali Empire": {
             "Environment": [""],
             "Culture": ["Muslim"],
             "Governance": ["1230-1670",
@@ -586,22 +597,167 @@ export const countryNotes: CountryNotes = {
       },
       "France 1200-1450": {
             "Environment": [""],
-            "Culture": ["Began to have a national identity during the Hundred Years' War",
+            "Culture": ["Began to have a national identity during the Hundred Years War",
             ],
             "Governance": ["Utilized the Estates General system in the government, which represents the social hierarchy of France as estates. The first estate is the clergy (the church), the second is nobility, and the third is all the peasants and merchants (98% of the population but only 1/3 of the estates general)",
-                  "Fought in the Hundred Years' War against the English, because the English wanted French territory. This led to a national identity replacing regional ones"
+                  "Fought in the Hundred Years War against the English, because the English wanted French territory. This led to a national identity replacing regional ones"
             ],
-            "Economy": [""],
-            "Social": ["Women didn't have a lot of power. They could only become wealthy if they inherited money when widowed. They were, however, able to escape the patriarchy by joinng a monastery or convent"],
+            "Economy": ["Shift away from self-sufficiency and manorialism around 1100"],
+            "Social": ["Women didn't have a lot of power. They could only become wealthy if they inherited money when widowed. They were, however, able to escape the patriarchy by joinng a monastery or convent",
+                  "The middle class/bourgeoisie (merchants, artisans, shopkeepers, etc.) emerges and grew"
+            ],
             "Technology": [""]
       },
       "England 1200-1450": {
             "Environment": [""],
             "Culture": [""],
-            "Governance": ["Fought in the Hundred Years' War against the French, because the English wanted French territory. This led to a national identity replacing regional ones"],
+            "Governance": ["Fought in the Hundred Years War against the French, because the English wanted French territory. This led to a national identity replacing regional ones",
+                  "Nobles forced the king to sign the Magna Carta in 1215, which limited the king's power and increased nobles' power",
+                  "Parliament formed in 1265, which increased nobles' rights"
+            ],
+            "Economy": [""],
+            "Social": ["Women didn't have a lot of power. They could only become wealthy if they inherited money when widowed. They were, however, able to escape the patriarchy by joinng a monastery or convent"],
+            "Technology": [""]
+      },
+      "France 1450-1700": {
+            "Environment": [""],
+            "Culture": [""],
+            "Governance": ["The kings used Divine Right, meaning that they were chosen by God, to legitimize their rule and give them political and religious authority and become absolute monarchs",
+                  "Louis XIV (ruled 1643 to 1715) was the strongest absolute monarch at the time. In the Versailles architecture, he often portrayed himself and his family as gods. He centralized the government, and limited nobles' power by keeping them close and distracting them at Versailles",
+                  "The Indendents system was where royal officials would carry out laws in provinces",
+                  "Continued to have the Estates General system, although it wasn't used",
+                  "Controlled Pondicherry (Southeast India) until they were driven out by the British",
+                  "Fought in the Seven Years War (1574-1763) against the British. The French lost and were driven out of India and North America"
+            ],
+            "Economy": ["Shifted to mercantilism, where they maximized their exports and minimized their imports in order to amass as much gold and silver as possible"],
+            "Social": [""],
+            "Technology": [""],
+            "Uncategorized": ["Began exploring in order to find the Northwest Passage to the Indian Ocean",
+                  "Jacques Cartier founded Canada in 1535",
+                  "Found many resources (like fur) in the Americas and decided they didn't need to find a new way to go to Asia",
+                  "Quebec was founded in 1608, bringing traders and priests from France. Their main job was to get furs from the Native Americans and to convert them to Catholicism. They maintained good relationships with the Natives in order to foster fur trade"
+            ]
+      },
+      "Portugal 1450-1750": {
+            "Environment": [""],
+            "Culture": [""],
+            "Governance": ["Had naval supremacy in the 1400s",
+                  "Lost power in the Indian Ocean when the English pushed them out of South Asia and the Dutch took over Malacca and Java in 1620",
+                  "In 1492 Spain and Portugal made the Treaty of Tordesillas, reserving territory west of the Line of Demarcation for Spain, and the east for Portugal",
+                  "Portugal wanted control of Ndongo (now Angola) for slave exports in the late 16th and early 17th century. The Queen of Ndongo, Ana Nzinga, was driven out of Ndongo but she took control of Matamba, allied with the Dutch, and made a new treaty"
+            ],
+            "Economy": ["Shifted to mercantilism, where they maximized their exports and minimized their imports in order to amass as much gold and silver as possible",
+                  "Established a trading-post empire, based on small outposts instead of large territories, with forts from the Persian Gulf to India and Malacca",
+                  "Monopolized spice trade",
+                  "Started trading with Japan in the early 16th century but were driven out when Japan became isolationist"
+            ],
+            "Social": [""],
+            "Technology": ["Developed the carrack, a ship good for trading, used in the 14th to 17th centuries, and the caravel, a ship good for speed, long voyages, and shallow water, used from the 15th to 17th centuries"],
+            "Uncategorized": ["Prince Henry the Navigator (1394-1460) searched for a new route to the Indian Ocean around Africa",
+                  "Bartholomew Diaz sailed around the Cape of Good Hope (the Southern tip of Africa) in 1488",
+                  "Vasco Da Gama sailed around the Cape of Good Hope in 1498 and established ports in India. Initially the Indian kingdoms didn't want to trade with him, but then he came back with weapons and forced them to trade in 1509",
+                  "First came to China in 1514 with traders and missionaries",
+                  "The Portuguese used military control to force trade in the Indian Ocean instead of forming ethnic and religious ties", // gov or econ?
+            ]
+      },
+      "Holy Roman Empire 1200-1806": {
+            "Environment": [""],
+            "Culture": ["Lutheranism was started by Martin Luther in 1516 when he wrote the 95 Theses about his grievances with the church (including indulgences, where people could pay for salvation, simony, where people could pay for church offices, and the fact that the Bible was only available in Latin so the church kept control over its interpretations). Lutheranism spread quickly, especially to political leaders and launched social revolutions and the Protestant Reformation",
+                  "Different areas were Catholic, Lutheran, or Calvinist"
+            ],
+            "Governance": ["Lost power during the Thirty Years War (1619-1648)",
+                  "Fell when Napoleon invaded in 1806",
+                  "States within the Holy Roman Empire, such as Prussia and Austria, began to have more autonomy and develop their own military"
+            ],
             "Economy": [""],
             "Social": [""],
             "Technology": [""]
+      },
+      "England 1450-1750": {
+            "Environment": [""],
+            "Culture": ["Henry VIII initially supported the Pope against protestants, until he wanted a divorce andd the Pope wouldn't allow it. He then started Anglicanism, which was still essentially the same as Catholicism"],
+            "Governance": [" In 1689, the English Bill of Rights checked monarch power, increased individual liberties (right to be tried before conviction, give parliament a say in taxation and military)",
+                  "Had naval supremacy in the 1700s",
+                  "Parliament preferred a moderately protestant monarch, so they kept replacing the monarchs",
+                  "The 1663 Gloucester County Rebellion in Virginia was the first recorded slave revolt, although they never got a chance to revolt as a servant betrayed their plans",
+                  "Metacom's War (1675-1678) was the Natives' last effort to drive out the British",
+                  "1676 Bacon's Rebellion in Virginia. Freed indentured servants were angry about the lack of land available to them so they rebelled and burned Jamestown to the ground",
+                  "The Maroon Wars (1728-1740, 1795-1796) in Jamaica were fought by Maroons, communities of escaped slaves, who wanted independence from Britain. It was led by Queen Nanny. The maroons were allowed to form their own independent state in exchange for returning any new escaped slaves",
+                  "The Stono Rebellion (1789) in South Carolina was the largest slave uprising at the time, with about 100 slaves participating. About 30 died during the uprising, and about 30 escaped then died. After, laws were created banning slaves from reading, earning money, growing their own food, and assembling in groups to ensure that they would not have the means for another rebellion",
+                  "Fought the Seven Years War (1754-1763) against the French. The British won and pushed the French out of India and Canada"
+
+            ],
+            "Economy": ["Shifted to mercantilism, where they maximized their exports and minimized their imports in order to amass as much gold and silver as possible",
+                  "The British East India Company (EOC) was founded in 1600 and traded with the Mughal Empire in the 17th century. They expanded to trade with other local rulers through treaties"
+            ],
+            "Social": [""],
+            "Technology": [""],
+            "Uncategorized": ["Began exploring to the West in order to find a new trade route to the Indian Ocean",
+                  "John Cabot claimed the territory from Newfoundland to Chesapeake Bay for England in 1497",
+                  "Jamestown, the first successful colony, was established in 1607",
+                  "The Agricultural Revolution happened in the early 1700s"
+            ]
+      },
+      "Spain 1492-1750": {
+            "Environment": [""],
+            "Culture": ["Catholic"],
+            "Governance": ["Created when King Ferdinand and Queen Isabella married in 1492, uniting their kingdoms to form Spain",
+                  "Had naval supremacy in the 1500s",
+                  "In 1492 Spain and Portugal made the Treaty of Tordesillas, reserving territory west of the Line of Demarcation for Spain, and the east for Portugal",
+                  "In the Pueblo Revolt (1680), the Pueblo and Apache indigenous groups fought the Spanish to regain their land and religion, since the Spanish had forced them to convert to Catholicism. They killed 400 Spanish, and drove the others out, successfully regaining their land until the Spanish retook it in 1692"
+            ],
+            "Economy": ["Shift to mercantilism, where they maximized exports and minimized imports in order to amass as much gold and silver as possible",
+                  "The Spanish grew very wealthy from silver from the New world, since there was high demand for silver, as it could be used as coins that were less valuable than gold but could still be verified unlike copper. About half of the silver was exported to Spain, and about half they traded over the Pacific to China",
+                  "After silver inflation, silver mining became less profitable",
+                  "Spent a lot of money on religious wars"
+            ],
+            "Social": ["Kicked Muslims out of Spain in 1492"],
+            "Technology": ["Developed galleoons - armed ships used for carrying silver from the Americas to East Asia"],
+            "Uncategorized": ["Began exploring in the 1490s to find new trade routes to the Indian Ocean",
+                  "In 1492, Queen Isabella and King Ferdinand sponsored Christopher Columbus's voyages, leadign him to find the Americas",
+                  "Ferdinand Magellan's fleet was the first to circumnavigate the world in 1522",
+                  
+            ]
+      },
+      "Spanish New World Territory": {
+            "Environment": [""],
+            "Culture": [""],
+            "Governance": ["Simón Bolívar was one of the leaders of the South American revolutions. He came from a wealthy family, and wanted independence for political and economic reasons, not for social reasons. He allied with Jose de San Martin, who was from Argentina. He had promised slaves freedom, so Bolívar went along with it",
+                  "By 1825, all the Spanish South American colonies had achieved independence",
+                  "The new government abolished slavery but was still very conservative. Creoles formed the upper class, and only educated people could vote, so most indigenous people and women were excluded"
+            ],
+            "Economy": ["Exported silver, sugar, and tobacco to Spain",
+                  "One of the biggest silver mines was in Potosí"
+            ],
+            "Social": ["Had the Castas system, a hierarchy based on one's race. Peninsulares were Spanish people born on the Iberian peninsula, who were more likely to stay loyal to the monarchy. Creoles were Spanish people born in the Americas. Mulattoes (now offensive term) were people of Spanish and African descent, Mestizos were of Spanish and Native American descent, and Zambos were of African and indigenous descent. The only way to move to a different level was through intermarriage"],
+            "Technology": [""],
+            "Uncategorized": ["Used coerced labor (called Encomienda), especially for work in the fields (called Hacienda). They converted the Incan mit'a system into coerced labor, where villages would have to give up a certain amount of men in exchange for some money",
+                  "Wanted independence because they disliked mercantilism (they could only buy or sell goods to/from Spain), and lower classes wanted more power"
+            ]
+      },
+      "Netherlands 1450-1800": {
+            "Environment": [""],
+            "Culture": ["Calvinist"],
+            "Governance": ["Had naval supremacy in the 1600s"],
+            "Economy": ["The Dutch East India Company (VOC) was founded in 1602",
+                  "The Dutch bought furs from trappers in the North, and crops (especially Tobacco) fromthe South and would exchange that in the Netherlands",
+                  "In 1799, the VOC was declared bankrupt. It was dissolved, and its power and possessions were taken by the state"
+            ],
+            "Social": [""],
+            "Technology": ["Developed the fluyt, a ship good for trade, used in the 16th nad 17th centuries"],
+            "Uncategorized": ["Began exploring in order to find the Northwest Passage to the Indian Ocean",
+                  "Henry Hudson claimed the Hudson River Valley and Manhattan for the Netherlands, founding New Amsterdam in 1609"
+            ]
+      },
+      "Mongol Empire": {
+            "Environment": [""],
+            "Culture": ["Generally very religiously tolerant, and many religions were practiced. All Mongols had some elements of animism."],
+            "Governance": [""],
+            "Economy": [""],
+            "Social": [""],
+            "Technology": [""],
+            "Uncategorized": ["Initially nomadic tribes who were eventually united by Genghis Khan",
+            ]
       },
       "Template": {
             "Environment": [""],
