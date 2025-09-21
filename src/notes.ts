@@ -29,14 +29,14 @@ export const generalNotes: GeneralNotes = {
             "Social": ["Younger sons of nobles often went to fight in the crusades due to primogeniture (only the oldest son would inherit anything"],
             "Technology": ["Increased contact and trade with the Middle East, spreading ideas and technology from the East to Europe, including paper, sugar, and gunpowder" // maybe culture or economic?
             ],
-            applicableCountries: ["France 1200-1450", "England 1200-1450", "Holy Roman Empire 1200-1806"]
+            applicableCountries: ["France 1200-1450", "England 1200-1450", "Holy Roman Empire"]
       },
       "Black Death": {
             "Environment": ["Spread from China over the Silk Roads",
                   "Killed about 1/3 of Europe's population"
             ],
             "Social": ["Because there was a high demand for labor but so many people had died, serfs were able to gain more power, triggering the end of feudalism in Western Europe"],
-            applicableCountries: ["France 1200-1450", "England 1200-1450", "Holy Roman Empire 1200-1806"]
+            applicableCountries: ["France 1200-1450", "England 1200-1450", "Holy Roman Empire"]
       },
       "Renaissance": {
             "Environment": [""],
@@ -47,7 +47,7 @@ export const generalNotes: GeneralNotes = {
             "Economy": [""],
             "Social": [""],
             "Technology": ["The Gutenberg printing press, invented in 1439, led to an increase in literacy"],
-            applicableCountries: ["France 1200-1450", "England 1200-1450", "Holy Roman Empire 1200-1806"]
+            applicableCountries: ["France 1200-1450", "England 1200-1450", "Holy Roman Empire"]
       },
       "Trans-Saharan Trade": {
             "Environment": ["Used camels for transportation",
@@ -138,7 +138,7 @@ export const generalNotes: GeneralNotes = {
             "Governance": ["A war between Catholics and Protestants. It originally started in the Holy Roman Empire, and then it spread",
                   "It resulted in the Peace of Westphalia, where each area of the Holy Roman Empire could choose Roman Catholicism, Lutheranism, or Calvinism"
             ],
-            applicableCountries: ["England 1450-1700", "France 1450-1700", "Holy Roman Empire 1450-1700", "Spain 1492-1750", "Netherlands 1450-1750"]
+            applicableCountries: ["England 1450-1700", "France 1450-1700", "Holy Roman Empire", "Spain 1492-1750", "Netherlands 1450-1750"]
       },
       "Enlightenment": {
             "Culture":["A rejection of tradition, challenging monarchs and church leaders",
@@ -603,7 +603,7 @@ export const countryNotes: CountryNotes = {
                   "The Portuguese used military control to force trade in the Indian Ocean instead of forming ethnic and religious ties", // gov or econ?
             ]
       },
-      "Holy Roman Empire 1200-1806": {
+      "Holy Roman Empire": {
             "Environment": [""],
             "Culture": ["Lutheranism was started by Martin Luther in 1516 when he wrote the 95 Theses about his grievances with the church (including indulgences, where people could pay for salvation, simony, where people could pay for church offices, and the fact that the Bible was only available in Latin so the church kept control over its interpretations). Lutheranism spread quickly, especially to political leaders and launched social revolutions and the Protestant Reformation",
                   "Different areas were Catholic, Lutheran, or Calvinist"
@@ -661,7 +661,7 @@ export const countryNotes: CountryNotes = {
                   
             ]
       },
-      "Spanish New World Territory": {
+      "Spanish Territory": {
             "Environment": ["Had sugar plantations and mined silver"],
             "Culture": ["Had syncretic religions"],
             "Governance": ["Simón Bolívar was one of the leaders of the South American revolutions. He came from a wealthy family, and wanted independence for political and economic reasons, not for social reasons. He allied with Jose de San Martin, who was from Argentina. He had promised slaves freedom, so Bolívar went along with it",
@@ -864,7 +864,7 @@ export const countryNotes: CountryNotes = {
             "Social": [""],
             "Technology": [""]
       },
-      "Russia 1380-1917": {
+      "Russia 1300-1917": {
             "Environment": [""],
             "Culture": ["Eastern Orthodox, but Muslim in steppes",
                   "Religously tolerant until the end when they wanted to promote a uniform Russian identity"
@@ -1011,7 +1011,7 @@ export const countryNotes: CountryNotes = {
             "Technology": [""],
             "Uncategorized": ["Lola Rodríguez de Tío was a female poet in a time when women didn't have much education who held meetings for thinkers and fostered revolutionary ideas against Spain."]
       },
-      "Mexico 1885-?": {
+      "Mexico": {
             "Environment": [""],
             "Culture": [""],
             "Governance": ["Became a republic in 1821 with Iturbide, a creole general, as king, although he was eventually kicked out of Mexico and killed",
