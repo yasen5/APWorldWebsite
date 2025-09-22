@@ -30,19 +30,19 @@ export const GeographicSelectionPage = () => {
 
     // Create styles object for SVG paths
     const countryStyles = useMemo(() => {
-    const styles: Record<string, React.CSSProperties> = {};
-    nations.forEach(nation => {
-        const isHighlighted = hoveredIdea && generalNotes[hoveredIdea]?.applicableCountries.includes(nation);
-        styles[`[data-country="${nation}"]`] = {
-        fill: countryColors[nation],
-        cursor: 'pointer',
-        opacity: isHighlighted ? 1 : (hoveredIdea ? 0.3 : 1),
-        stroke: isHighlighted ? '#333' : 'none',
-        strokeWidth: isHighlighted ? '2px' : '0',
-        transition: 'opacity 0.2s ease, stroke 0.2s ease'
-        };
-    });
-    return styles;
+        const styles: Record<string, React.CSSProperties> = {};
+        nations.forEach(nation => {
+            const isHighlighted = hoveredIdea && generalNotes[hoveredIdea]?.applicableCountries.includes(nation);
+            styles[`[data-country="${nation}"]`] = {
+            fill: countryColors[nation],
+            cursor: 'pointer',
+            opacity: isHighlighted ? 1 : (hoveredIdea ? 0.3 : 1),
+            stroke: isHighlighted ? '#333' : 'none',
+            strokeWidth: isHighlighted ? '2px' : '0',
+            transition: 'opacity 0.2s ease, stroke 0.2s ease'
+            };
+        });
+        return styles;
     }, [countryColors, hoveredIdea]);
 
     const timeMaps: Record<number, React.ComponentType<React.SVGProps<SVGSVGElement>>> = {
@@ -214,7 +214,7 @@ const Popup: React.FC<{ noteKey: string, onClose: () => void }> = ({ noteKey, on
                 Object.entries(matches).map(([sectionTitle, content]) => sectionTitle !== "applicableCountries" && (
                 <Dropdown key={sectionTitle} title={sectionTitle}>
                     {Array.isArray(content) ?(
-                        <ul className="list-disc pl-4">
+                        <ul className="list-disc pl-4 text-black">
                             {content.map((point, i) => (
                                 <li key={i}>{point}</li>
                             ))}

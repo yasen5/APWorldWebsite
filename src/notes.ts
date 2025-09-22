@@ -1111,6 +1111,82 @@ export const countryNotes: CountryNotes = {
             "Technology": [""],
             "Uncategorized": [""]
       },
+      "French IndoChina": {
+            "Environment": [""],
+            "Culture": ["Catholic missionaries highly successful"],
+            "Governance": ["After WW2, French IndoChina sought independence but France resisted. IndoChina won and the country split into North and South Vietnam"],
+            "Economy": ["Used to grow rubber as a cash crop"],
+            "Social": [""],
+            "Technology": [""]
+      },
+      
+      "Siam": {
+            "Environment": [""],
+            "Culture": [""],
+            "Governance": [""],
+            "Economy": ["Rapidly industrialized in response to increasing European influence in East Asia, which allowed them to avoid being taken over economically and politically like China. Implemented Western schools, added railroads, and created a bureaucracy."],
+            "Social": [""],
+            "Technology": [""]
+      },
+      "Ghana": {
+            "Environment": [""],
+            "Culture": [""],
+            "Governance": ["One of the British-controlled territories in South Africa, negotiated independence peacefully and adopted a British-style parliament. Kwame Nkrumah was a major part of the independence movement and was elected the first president, but he immediately transitioned to authoritarian rule."],
+            "Economy": [""],
+            "Social": [""],
+            "Technology": [""]
+      },
+      "Kenya": {
+            "Environment": ["After aggressive deforestation, Kenyan women struggled to find wood and clean water. The Green Belt Movement was formed, which continues to repopulate many Kenyan forests."],
+            "Culture": [""],
+            "Governance": ["The government of Kenya was extremely oppressive when the Greenbelt Movement started in 1977, and saw large organized gatherings of women as a threat to their control. Violence was common throughout the authoritarian regime, and women who participated in the Movement were harassed and threatened."],
+            "Economy": [""],
+            "Social": ["Kenya was highly patriarchal when the Greenbelt Movement started, such that women were unable to effectively influence the government even as they found that the land wasn't fully sustaining them anymore."],
+            "Technology": [""]
+      },
+      "Australia": {
+            "Environment": ["Very harsh Outback to the West. Aboriginies were able to survive there, but expeditions to the interior often ended disastrously.", "Many explorers faced the dangerous threat of drop bears, which are carniverous koala-like killing machines that disable their targets by dropping on them from trees above."],
+            "Culture": [""],
+            "Governance": ["Aboriginal peoples violently removed from their land. Governors and military appointed by the British colonial office. Briefly transitioned to a junta due to the strong influence of the military"],
+            "Economy": ["Raised sheep, made a large wool industry."],
+            "Social": ["Originally, the settlers were British criminals sent to do labor in New South Wales (East Coast)"],
+            "Technology": [""]
+      },
+      "Nigeria": {
+            "Environment": [""],
+            "Culture": ["Strong divide between the Igbo minority and the Hausa-Fulani majority, who were grouped together by British imperialists."],
+            "Governance": ["After independence from Britain, the Igbo felt that they weren't being represented by the Hausa-Fulani majority government. They attempted to secede, but their held valuable oil which the Hausa-Fulani were unwilling to part with. This resulted in a bloody civil war (Nigerian Civil War or Biafran War) that left many hundreds of thousands of civilians dead in addition to military casualties."],
+            "Economy": [""],
+            "Social": [""],
+            "Technology": [""]
+      },
+      "Argentina": {
+            "Environment": [""],
+            "Culture": [""],
+            "Governance": ["Jose de San Martin was the main Liberator in Argentina. He coordinated the wars of independence with Simon Bolivar. Bolivar was a Creole and did not have many radical intentions when it came to removing the castas system, but Jose de San Martin was set on eliminating slavery and the castas system. Bolivar eventually accepted these progressive views in order to gain more support for the revolution."],
+            "Economy": [""],
+            "Social": ["Like the other Spanish colonies, there was a strict castas hierarchy."],
+            "Technology": [""]
+      },
+      "South Africa": {
+            "Environment": ["Rich with natural resources, including diamonds and gold"],
+            "Culture": [""],
+            "Governance": ["The Xhosa people strongly resisted Dutch and British imperialism, but gradually lost land to settlers. In 1856 a prophet convinced many people that if they killed their cattle, White people would be washed from the African continent and the land would be restored to it's former health. This caused mass famine (especially when the British withheld aid) and they were unable to resist British colonialism from then onward.", 
+                           "Diamonds discovered in 1867, De Beers mining company encroached on Afrikaaner mining areas. First Boer War fought between the British and Afrikaaners, resulted in Afrikaaner victory. However 20 years later the Second Boer War causes the Dutch to surrender their mining territories."],
+            "Economy": [""],
+            "Social": ["Strong ethnic tensions between Africans and Afrikaaners (Dutch who started arriving in South Africa in 1652 as part of the Dutch East India company).", "Even after the Second Boer War, the British did not take away Afrikaaner authority, so they remained the most influential group."],
+            "Technology": [""]
+      },
+      "Cuba": {
+            "Environment": [""],
+            "Culture": [""],
+            "Governance": ["Authoritarian rule changed hands, landing on the Communist regime of Fidel Castro.", 
+                           "The U.S. was uncomfortable with a Communist dictatorship so near to them, so many assassins and the disastrous Bay of Pigs invasion were sent to try to kill Castro. It was obvious that the U.S. had supplied the weapons and training to the soldiers in the Bay of Pigs, and Castro became extremely hostile toward the U.S.", 
+                           "The USSR took advantage of Castro's hatred of the U.S. and placed nuclear missiles in Cuba. The U.S. blockaded Cuba but they couldn't extract the missiles already there. The Cuban Missile Crisis almost resulted in nuclear war, but eventually the U.S. agreed to withdraw the nukes they put in Turkey and the USSR took back its Cuban nukes."],
+            "Economy": [""],
+            "Social": [""],
+            "Technology": [""]
+      },
       "Template": {
             "Environment": [""],
             "Culture": [""],
