@@ -1,4 +1,4 @@
-import { useState, useRef, createContext, useContext, useMemo } from 'react';
+import { useState, useRef, createContext, useContext, useEffect } from 'react';
 import worldIcon from './assets/world.svg'
 import './App.css'
 import Navbar from './Navbar.tsx';
@@ -56,7 +56,7 @@ const TimeSlider = () => {
   const { selectedTime, setSelectedTime } = useTimeSliderContext();
 
   return (
-    <div className="pt-21 px-4 w-full mx-auto">
+    <div className="pt-5 px-4 w-full mx-auto">
       <ReactSlider
         className="h-2 bg-gray-300 rounded-full"
         thumbClassName="w-4 h-4 bg-blue-500 rounded-full cursor-pointer"
@@ -132,6 +132,16 @@ export const PageTransitionProvider: React.FC<PageTransitionProviderProps> = ({ 
   );
 };
 
+const HeaderComponents = () => {
+  const { nextPage } = usePageTransitionContext();
+  return (
+    <div id="header" className="fixed top-0 left-0 w-full z-50">
+      <Navbar />
+      {(nextPage == AppPage.GEOGRAPHIC_SELECTION) && <TimeSlider />}
+    </div>
+  );
+};
+
 const PageTransition = () => {
   const { transitioning, currentPage, nextPage, goToPage } = usePageTransitionContext();
 
@@ -200,12 +210,32 @@ const ExplanationPage = () => {
 };
 
 function App() {
+  const [headerHeight, setHeaderHeight] = useState(0);
+
+  useEffect(() => {
+    const headerEl = document.getElementById("header");
+    if (!headerEl) return;
+
+    const updateHeight = () => setHeaderHeight(headerEl.offsetHeight);
+    updateHeight();
+
+    // Observe size changes (e.g. on window resize or dynamic content)
+    const resizeObserver = new ResizeObserver(updateHeight);
+    resizeObserver.observe(headerEl);
+
+    return () => resizeObserver.disconnect();
+  }, []);
+
   return (
     <TimeSliderProvider>
       <PageTransitionProvider>
-        <div className="flex flex-col min-h-screen">
-          <Navbar />
-          <TimeSlider />
+        <HeaderComponents />
+        <div
+          className='slider-container-wrapper overflow-hidden'
+          style={{
+            marginTop: headerHeight,
+            height: `calc(100vh - ${headerHeight}px)`
+          }}>
           <PageTransition />
         </div>
       </PageTransitionProvider>
