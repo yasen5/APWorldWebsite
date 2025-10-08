@@ -111,7 +111,7 @@ export const GeographicSelectionPage = () => {
                         <button
                         key={idea}
                         onClick={() => setSelectedCountry(idea)}
-                        className="px-4 pt-0 bg-gradient-to-r from-indigo-500 to-blue-600 text-white rounded-full text-sm font-medium hover:from-indigo-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg"
+                        className="px-4 py-2 bg-gradient-to-r from-indigo-500 to-blue-600 text-white rounded-full text-sm font-medium hover:from-indigo-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg"
                         onMouseEnter={() => setHoveredIdea(idea)}
                         onMouseLeave={() => setHoveredIdea(null)}
                         >
