@@ -123,12 +123,19 @@ export const GeographicSelectionPage = () => {
                 </div>
             </div>
 
-            <div className="w-full h-full flex justify-center max-w-[1600px]">
-                <MapComponent
-                className="svg-container w-full h-full"
-                onClick={handleCountryClick}
-                />
-            </div>
+            {/* SVG viewport container */}
+           <div className="relative w-full h-full flex justify-center pt-2">
+               <div className="overflow-auto w-full h-full max-w-[100vw] scrollbar-visible">
+                   <div className="min-w-[1600px] min-h-[900px] flex justify-center items-center">
+                   <MapComponent
+                       className="svg-fixed-size"
+                       width={1600}
+                       height={900}
+                       onClick={handleCountryClick}
+                   />
+                   </div>
+               </div>
+           </div>
             {selectedCountry && (
                 <Popup
                 noteKey={selectedCountry}
