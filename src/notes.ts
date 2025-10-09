@@ -838,7 +838,7 @@ export const countryNotes: CountryNotes = {
                   "In 1780, Túpac Amaru II, the chief of Peru, descended from the last Inca Ruler (Túpac Amaru), killed a colonial administrator for his cruel treatment of the people. He started a revolt against inequality and the perversion of the mit'a system (not necessarily aiming for independence) in Southern Peru, Bolivia, and Argentina. He was captured in 1781, and was forced to watch his family be executed before being executed himself"
             ],
             "Puerto Rico": ["Lola Rodríguez de Tío was a female poet in a time when women didn't have much education who held meetings for thinkers and fostered revolutionary ideas against Spain.",
-                  "In 1868 there was a big revolution but it was supporessed by the Spanish",
+                  "In 1868 there was a big revolution but it was suppressed by the Spanish",
                   "Puerto Rico was ceded to the US after the Spanish-American War in 1899"
             ],
       },
@@ -1606,7 +1606,7 @@ export const countryNotes: CountryNotes = {
             ],
             "13 Colonies": ["Jamestown, the first successful colony was founded in 1607",
                   "The South had good soil and climate for growing crops.",
-                  "The North had less fertile soil and a colder climate, so they didd more fishing and logging, and eventually became an industrial powerhouse.",
+                  "The North had less fertile soil and a colder climate, so they did more fishing and logging, and eventually became an industrial powerhouse.",
                   "The South attracted people, especially young men, who wanted to become rich from growing cash crops (mainly tobacco, indigo, and cotton), and had fewer religiously-focused people. The farming focus led to plantation power structures and harsher treatment and attitude towards slaves",
                   "The North attracted more religiously-focused people, especially Puritans.",
                   "Indentured servants rebelled in Bacon's Rebellion in 1676. This led to the decline of indentured servitude and the shift to race-based slavery.",
@@ -1625,8 +1625,8 @@ export const countryNotes: CountryNotes = {
                   "The De Beers Mining Company was a trans-national company founded by Cecil Rhodes. It was based in Britain and extracted diamonds from Cape Colony. At one point, De Beers Mining company produced 90% of the world's diamonds",
                   "Used slavery and coerced labor",
             ],
-            "Australia": ["Very harsh Outback to the West. Aboriginies were able to survive there, but expeditions to the interior often ended disastrously.", 
-                  "Many explorers faced the dangerous threat of drop bears, which are carniverous koala-like killing machines that disable their targets by dropping on them from trees above.",
+            "Australia": ["Very harsh Outback to the West. Aborigines were able to survive there, but expeditions to the interior often ended disastrously.", 
+                  "Many explorers faced the dangerous threat of drop bears, which are carnivorous koala-like killing machines that disable their targets by dropping on them from trees above.",
                   "Aboriginal peoples violently removed from their land. Governors and military appointed by the British colonial office. Briefly transitioned to a junta due to the strong influence of the military",
                   "Raised sheep, made a large wool industry.",
                   "Many people, especially the Chinese, immigrated to Australia for during the Gold Rush",
