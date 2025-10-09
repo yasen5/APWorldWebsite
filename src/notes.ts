@@ -814,7 +814,7 @@ export const countryNotes: CountryNotes = {
                   
             ]
       },
-      "Spanish New World Territory": {
+      "Spanish Territory": {
             "Environment": ["Grew sugar, cocoa, tobacco",
                   "Mined silver",
                   "Collected guano, bat/seabird excrement used as fertilizer"
@@ -836,7 +836,11 @@ export const countryNotes: CountryNotes = {
             ],
             "Viceroyalty of Peru": ["Established in 1533 after Francisco Pizarro conquered the Inca Empire",
                   "In 1780, Túpac Amaru II, the chief of Peru, descended from the last Inca Ruler (Túpac Amaru), killed a colonial administrator for his cruel treatment of the people. He started a revolt against inequality and the perversion of the mit'a system (not necessarily aiming for independence) in Southern Peru, Bolivia, and Argentina. He was captured in 1781, and was forced to watch his family be executed before being executed himself"
-            ]
+            ],
+            "Puerto Rico": ["Lola Rodríguez de Tío was a female poet in a time when women didn't have much education who held meetings for thinkers and fostered revolutionary ideas against Spain.",
+                  "In 1868 there was a big revolution but it was suppressed by the Spanish",
+                  "Puerto Rico was ceded to the US after the Spanish-American War in 1899"
+            ],
       },
       "Netherlands 1450-1800": {
             "Environment": [""],
@@ -1076,20 +1080,6 @@ export const countryNotes: CountryNotes = {
                   "Opium Wars" // need more detail
             ]
       },
-      "13 Colonies": {
-            "Environment": ["The South had good soil and climate for growing crops.",
-                  "The North had less fertile soil and a colder climate, so they didd more fishing and logging, and eventually became an industrial powerhouse."
-            ],
-            "Governance": ["Indentured servants rebelled in Bacon's Rebellion in 1676. This led to the decline of indentured servitude and the shift to race-based slavery.",
-                  "Wanted independence from Britain because of Enlightenment ideas, like free market ideas as opposed to mercantilism. They were already for the most part politically independent, as they were geographically very far from Britain."
-            ],
-            "Economy": ["After the Seven Years War, Britain was in a lot of debt so they tried to tax the colonies more, but the colonies didn't like that, leading to the American Revolution"],
-            "Social": ["The South attracted people, especially young men, who wanted to become rich from growing cash crops (mainly tobacco, indigo, and cotton), and had fewer religiously-focused people. The farming focus led to plantation power structures and harsher treatment and attitude towards slaves",
-                  "The North attracted more religiously-focused people, especially Puritans."
-            ],
-            "Technology": [""],
-            "Uncategorized": ["Jamestown, the first successful colony was founded in 1607"]
-      },
       "United States 1750-1920": {
             "Environment": [""],
             "Culture": [""],
@@ -1164,17 +1154,6 @@ export const countryNotes: CountryNotes = {
             "Social": ["Slavery persisted until 1888"],
             "Technology": [""],
             "Uncategorized": ["The 20th century saw industrialization, urbanization, and periods of authoritarian rule. Brazil participated in World War II on the Allied side, sending troops to fight in Italy. Later decades brought both economic growth and political crises"]
-      },
-      "Puerto Rico": {
-            "Environment": [""],
-            "Culture": [""],
-            "Governance": ["In 1868 there was a big revolution but it was supporessed by the Spanish",
-                  "Puerto Rico was ceded to the US after the Spanish-American War in 1899"
-            ],
-            "Economy": [""],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": ["Lola Rodríguez de Tío was a female poet in a time when women didn't have much education who held meetings for thinkers and fostered revolutionary ideas against Spain."]
       },
       "Mexico 1885-?": {
             "Environment": [""],
@@ -1268,24 +1247,6 @@ export const countryNotes: CountryNotes = {
             "Technology": [""],
             "Uncategorized": [""]
       },
-      "British Raj": {
-            "Environment": ["Grew cash crops for the British, leading to monocultures, or a lack of agricultural diversity, which left India vulnerable to natural disasters",
-                  "Famines occurred partly due to export-oriented agriculture and inadequate relief."
-            ],
-            "Culture": [""],
-            "Governance": ["1858-1947",
-                  "The British officially took control of India after the Sepoy Rebellion in 1858, forming the British Raj and ending the rule of the British East India Company",
-                  "Indian soldiers fought for Britain in both World Wars.",
-                  "Nationalist movements led by figures like Mohandas Gandhi used nonviolent resistance to demand independence, achieved in 1947 with the partition into India and Pakistan"
-            ],
-            "Economy": ["Industrialized slowly, as the British didn't want to encourage Indian industrialization other than what would help them.",
-                  "Many artisans were pushed out of business by the cheap British textiles",
-                  "Many Indians left as indentured servants, often on 5-year contracts and were sent to other British colonies, like the Caribbean, South Africa, or East Africa, for labor"
-            ],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": [""]
-      },
       "Japan 1853-present": {
             "Environment": [""],
             "Culture": ["Began adopting Western culture, including clothing, hairstyles, garden parties, and dances"],
@@ -1307,15 +1268,6 @@ export const countryNotes: CountryNotes = {
                   "In 1907, the US agreed to not restrict Japanese immigration in exchange for the Japanese stopping emigration to the US. This was called the Gentlemen's Agreement. It was endded in 1924 by the Immigration Act"
             ]
       },
-      "French IndoChina": {
-            "Environment": [""],
-            "Culture": ["Catholic missionaries highly successful"],
-            "Governance": ["After WW2, French IndoChina sought independence but France resisted. IndoChina won and the country split into North and South Vietnam"],
-            "Economy": ["Used to grow rubber as a cash crop"],
-            "Social": [""],
-            "Technology": [""]
-      },
-      
       "Siam": {
             "Environment": [""],
             "Culture": [""],
@@ -1327,7 +1279,7 @@ export const countryNotes: CountryNotes = {
       "Ghana": {
             "Environment": [""],
             "Culture": [""],
-            "Governance": ["One of the British-controlled territories in South Africa, negotiated independence peacefully and adopted a British-style parliament.",
+            "Governance": ["One of the British-controlled territories in Africa, negotiated independence peacefully and adopted a British-style parliament.",
                   "Negotiated independence with Britain in 1957",
                   "Kwame Nkrumah was a major part of the independence movement and was elected the first president, but he immediately transitioned to authoritarian rule."],
             "Economy": [""],
@@ -1342,16 +1294,6 @@ export const countryNotes: CountryNotes = {
             "Social": ["Kenya was highly patriarchal when the Greenbelt Movement started, such that women were unable to effectively influence the government even as they found that the land wasn't fully sustaining them anymore."],
             "Technology": [""]
       },
-      "Australia": {
-            "Environment": ["Very harsh Outback to the West. Aboriginies were able to survive there, but expeditions to the interior often ended disastrously.", "Many explorers faced the dangerous threat of drop bears, which are carniverous koala-like killing machines that disable their targets by dropping on them from trees above."],
-            "Culture": [""],
-            "Governance": ["Aboriginal peoples violently removed from their land. Governors and military appointed by the British colonial office. Briefly transitioned to a junta due to the strong influence of the military"],
-            "Economy": ["Raised sheep, made a large wool industry.",
-                  "Many people, especially the Chinese, immigrated to Australia for during the Gold Rush"
-            ],
-            "Social": ["Originally, the settlers were British criminals sent to do labor in New South Wales (East Coast)"],
-            "Technology": [""]
-      },
       "Nigeria": {
             "Environment": [""],
             "Culture": ["Strong divide between the Igbo minority and the Hausa-Fulani majority, who were grouped together by British imperialists."],
@@ -1362,9 +1304,12 @@ export const countryNotes: CountryNotes = {
       },
       "Argentina": {
             "Environment": [""],
-            "Culture": [""],
+            "Culture": ["Culture influenced by Italian immigrants"],
             "Governance": ["Jose de San Martin was the main Liberator in Argentina. He coordinated the wars of independence with Simon Bolivar. Bolivar was a Creole and did not have many radical intentions when it came to removing the castas system, but Jose de San Martin was set on eliminating slavery and the castas system. Bolivar eventually accepted these progressive views in order to gain more support for the revolution."],
-            "Economy": [""],
+            "Economy": ["Britain invested in Argentina's infrastructure, farming, and commodities. They ended up investing more in Argentina than they did in India, which was their own colony",
+                  "Attracted a lot of immigrants through being pro-immigration and offering better wages than were available in most other countries",
+                  "Export beef"
+            ],
             "Social": ["Like the other Spanish colonies, there was a strict castas hierarchy."],
             "Technology": [""]
       },
@@ -1611,21 +1556,6 @@ export const countryNotes: CountryNotes = {
             "Uncategorized": ["Ibn Battuta, from Morocco, traveled through the Muslim world in the early 14th century and wrote his book \"A Gift to Those Who Contemplate the Wonders of Cities and the Marvels of Traveling\"",
             ]
       },
-      "Malaya": {
-            "Environment": ["Grew rubber, coffee, and tea as cash crops",
-                  "Grew Opium for the British" // check?
-            ],
-            "Culture": [""],
-            "Governance": ["British colony",
-                  "Controlled by the Japanese during World War 2"
-            ],
-            "Economy": ["Exported rubber, tea, and tin"],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": ["They needed cheap labor, so they imported Indian workers through the Kangani system. In this system, workers could come and work together in kinship/family groups",
-                  "Workers from China also came as farmhands, gardeners, and domestic servants."
-            ]
-      },
       "Portuguese Territory": {
             "Environment": [""],
             "Culture": ["Spread Catholicism through missionaries"],
@@ -1639,8 +1569,8 @@ export const countryNotes: CountryNotes = {
             "Uncategorized": [""]
       },
       "British Territory": {
-            "Environment": ["Produced cotton (13 colonies), palm oil (Africa), sugar (Caribbean), tea, rum, indigo, rubber, and opium",
-                  "Led to mass deforestation, soil exhaustion from monoculture",
+            "Environment": ["Produced cotton (13 colonies), palm oil (Africa), sugar (Caribbean), gold and diamonds (South Africa), tea, rum, indigo, rubber, and opium",
+                  "Led to mass deforestation, soil exhaustion from monocultures",
                   "Major famines occured as farmers were forced to grow cash crops instead of subsistence farming"
             ],
             "Culture": [""],
@@ -1658,11 +1588,73 @@ export const countryNotes: CountryNotes = {
                   "Contract laborers were used by the British. This recruited people, often Chinese or Indian, to work. They weren't considered property but they were still exploited and paid through subsistence wage. This system stopped in 1855."
             ],
             "Technology": [""],
-            "Uncategorized": ["Some colonies were penal colonies, where they sent convicts from Britain and forced them to work for settlers or for the government. Convicts could earn freedom after a certain amount of years of work, but they often stayed in the colony. This practice stopped in 1850"]
+            "Uncategorized": ["Some colonies were penal colonies, where they sent convicts from Britain and forced them to work for settlers or for the government. Convicts could earn freedom after a certain amount of years of work, but they often stayed in the colony. This practice stopped in 1850"],
+            "British Raj": ["British colony from 1858-1947",
+                  "The British officially took control of India after the Sepoy Rebellion in 1858, forming the British Raj and ending the rule of the British East India Company",
+                  "Indian soldiers fought for Britain in both World Wars.",
+                  "Nationalist movements led by figures like Mohandas Gandhi used nonviolent resistance to demand independence, achieved in 1947 with the partition into India and Pakistan",
+                  "Industrialized slowly, as the British didn't want to encourage Indian industrialization other than what would help them.",
+                  "Many artisans were pushed out of business by the cheap British textiles",
+                  "Many Indians left as indentured servants, often on 5-year contracts and were sent to other British colonies, like the Caribbean, South Africa, or East Africa, for labor"
+            ],
+            "Malaya": ["Grew rubber, coffee, and tea as cash crops, as well as opium",
+                  "Exported rubber, tea, and tin",
+                  "Controlled by the Japanese during World War 2",
+                  "They needed cheap labor, so they imported Indian workers through the Kangani system. In this system, workers could come and work together in kinship/family groups",
+                  "Workers from China also came as farmhands, gardeners, and domestic servants.",
+                  "Gained independence in 1957 and got renamed to Malaysia"
+            ],
+            "13 Colonies": ["Jamestown, the first successful colony was founded in 1607",
+                  "The South had good soil and climate for growing crops.",
+                  "The North had less fertile soil and a colder climate, so they did more fishing and logging, and eventually became an industrial powerhouse.",
+                  "The South attracted people, especially young men, who wanted to become rich from growing cash crops (mainly tobacco, indigo, and cotton), and had fewer religiously-focused people. The farming focus led to plantation power structures and harsher treatment and attitude towards slaves",
+                  "The North attracted more religiously-focused people, especially Puritans.",
+                  "Indentured servants rebelled in Bacon's Rebellion in 1676. This led to the decline of indentured servitude and the shift to race-based slavery.",
+                  "Wanted independence from Britain because of Enlightenment ideas, like free market ideas as opposed to mercantilism. They were already for the most part politically independent, as they were geographically very far from Britain.",
+                  "After the Seven Years War, Britain was in a lot of debt so they tried to tax the colonies more, but the colonies didn't like that, leading to the American Revolution",
+            ],
+            "Cape Colony": [
+                  "The Xhosa Cattle Killing Movement (1856-1857) was an example of indigenous resistance to colonial power. A disease spread through the Xhosa cattle. A teenage girl named Nongqawuse prophesied that if the Xhosa killed their cattle and destroyed their crops, spirits would drive the British away and give the Xhosa new cattle and crops. This, however, led to a famine and 40,000 starved. Additionally, the British officials kept relief agencies away to weaken the Xhosa as a way to force them to assimilate with and work for the British.",
+                  "Britain took Cape Colony during the Napoleonic Wars in 1803",
+                  "The Dutch briefly retook the colony from 1803-1806",
+                  "The British retook the colony in 1806",
+                  "Diamonds were discovered in 1867", // env?
+                  "The British defeated the Zulus in the Anglo-Zulu War in the 1870s, giving South Africa more territory",
+                  "The Boer Wars (1880-1881 and 1899-1902) were between the British and the Afrikaners who were unhappy about British control. The wars were mostly over land and resources like gold mines. The Boers (Afrikaners) technicaly won the first war, but the British won the second one. The British placed the Boers in concentration camps during the second Boer War, which were segregated",
+                  "The Boer Wars led to the formation of the Union of South Africa. In South Africa, British and Boers would be able to share power while Black South Africans had very limited rights.",
+                  "The De Beers Mining Company was a trans-national company founded by Cecil Rhodes. It was based in Britain and extracted diamonds from Cape Colony. At one point, De Beers Mining company produced 90% of the world's diamonds",
+                  "Used slavery and coerced labor",
+            ],
+            "Australia": ["Very harsh Outback to the West. Aborigines were able to survive there, but expeditions to the interior often ended disastrously.", 
+                  "Many explorers faced the dangerous threat of drop bears, which are carnivorous koala-like killing machines that disable their targets by dropping on them from trees above.",
+                  "Aboriginal peoples violently removed from their land. Governors and military appointed by the British colonial office. Briefly transitioned to a junta due to the strong influence of the military",
+                  "Raised sheep, made a large wool industry.",
+                  "Many people, especially the Chinese, immigrated to Australia for during the Gold Rush",
+                  "Originally, Australia was a penal colony, where the settlers were British criminals sent to do labor in New South Wales (East Coast)"
+            ],
+            "New Zealand": ["Colonized by Britain in 1840",
+                  "The Treaty of Waitangi established New Zealand as a colony and gave the native Maori property rights, although they were largely ignored by British settlers",
+                  "The Maori Wars ended in 1846 with British victory",
+                  "During the 1850s, the British settlers wanted to buy Maori land, but the Mauri refused to sell until the government put pressure on them",
+                  "In 1861, the government sent troops to pressure the Maori to give up their property, leading to more fighting until 1872",
+                  "Raised sheep, made a large wool industry.",
+                  "Received immigrants from China and Italy",
+                  "During World War I and World War II, troops from Australia and New Zealand formed the ANZAC",
+                  "Gained independence in 1947"
+            ],
+            "Canada": ["Had access to fur and beaver pelts",
+                  "Québec was very Catholic due to French influence",
+                  "The French were driven out of Canada and the rest of the US after the 7 Years War in 1763 and was transferred to the British",
+                  "Invaded unsuccessfully by the US during the War of 1812",
+                  "Received a lot of Irish immigrants",
+                  "Was one of the original members of NATO in 1949",
+                  "The North American Free Trade Agreement (NAFTA) encouraged the US and Canada to build factories in Mexico to produce tariff-free goods",
+                  "Quebecois felt more aligned with France than England. In the Quiet Revolution in the 1960s, a more liberal provincial government took over and expande the provicial government power, leading to the rise of Québec nationalism and demand for independence. In 1995, the Québecois tried to become independent again but failed"
+            ],
+            "Sierra Leone": ["Became a British colony for freed slaves. The British would stop slave ships and take the slaves to Sierra Leone where they would be freed."]
       },
       "French Territory": {
-            "Environment": ["Produced sugar, coffee, indigo, cotton, in the Caribbean, palm oil in West Africa, and rice, rubber, and opium in French Indochina",
-                "Quebec engaged in fur trade"  
+            "Environment": ["Produced sugar, coffee, indigo, cotton, in the Caribbean, palm oil in West Africa, and rice, rubber, and opium in French Indochina"
             ],
             "Culture": ["Spread Catholicism"],
             "Governance": ["Mix of settler colonies and colonies only for resource extraction",
@@ -1678,7 +1670,18 @@ export const countryNotes: CountryNotes = {
                   "Relied on native alliances for fur trade so kept better relations with them"
             ],
             "Technology": [""],
-            "Uncategorized": []
+            "Uncategorized": [],
+            "French Indochina": ["Composed of modern-day Cambodia, Laos, and Vietnam",
+                  "Spread Catholicism",
+                  "Grew rubber as a cash crop",
+                  "After WW2, French IndoChina sought independence"
+
+            ],
+            "Quebec": ["Claimed by Jacques Cartier in 1535",
+                  "Colony expanded by Samuel de Champlain in 1609-1616",
+                  "Engaged in fur trade",
+                  "Facilitated the spread of Catholicism",
+                  "The French were driven out of Canada and the rest of the US after the 7 Years War in 1763 and was transferred to the British",]
       },
       "Dutch Territory": {
             "Environment": ["Produced tea, rubber, and sugar as cash crops",
@@ -1695,7 +1698,8 @@ export const countryNotes: CountryNotes = {
             "Technology": [""],
             "Uncategorized": ["Chinese laborers were imported to the Dutch East Indies",
                   "The culture system was a form of coerced labor, where people had to set aside 1/5 of their land to grow cash crops as a tax. If they couldn't pay for any reason, their land was taken or they were taken as corvée laborers and were forced to do unpaid work as taxation."
-            ]
+            ],
+            "Cape Colony": ["Established by the Dutch East India Company (VOC) in 1652"]
       },
       "Spain 1750-Present": {
             "Environment": [""],
@@ -1721,67 +1725,6 @@ export const countryNotes: CountryNotes = {
             "Social": ["Slavery was very prevalent, especially in Brazil",
                   "Slavery was abolished in 1869"
             ],
-            "Technology": [""],
-            "Uncategorized": [""]
-      },
-      "Cape Colony": {
-            "Environment": ["Had a lot of gold and diamond mines"],
-            "Culture": ["The Xhosa Cattle Killing Movement (1856-1857) was an example of indigenous resistance to colonial power. A disease spread through the Xhosa cattle. A teenage girl named Nongqawuse prophesied that if the Xhosa killed their cattle and destroyed their crops, spirits would drive the British away and give the Xhosa new cattle and crops. This, however, led to a famine and 40,000 starved. Additionally, the British officials kept relief agencies away to weaken the Xhosa as a way to force them to assimilate with and work for the British."],
-            "Governance": ["Established by the Dutch East India Company (VOC) in 1652",
-                  "Britain took Cape Colony during the Napoleonic Wars in 1803",
-                  "The Dutch briefly retook the colony from 1803-1806",
-                  "The British retook the colony in 1806",
-                  "The British defeated the Zulus in the Anglo-Zulu War in the 1870s, giving South Africa more territory",
-                  "The Boer Wars (1880-1881 and 1899-1902) were between the British and the Afrikaners who were unhappy about British control. The wars were mostly over land and resources like gold mines. The Boers (Afrikaners) technicaly won the first war, but the British won the second one. The British placed the Boers in concentration camps during the second Boer War, which were segregated",
-                  "The Boer Wars led to the formation of the Union of South Africa. In South Africa, British and Boers would be able to share power while Black South Africans had very limited rights.",
-            ],
-            "Economy": ["Diamonds were discovered in 1867", // env?
-                  "The De Beers Mining Company was a trans-national company founded by Cecil Rhodes. It was based in Britain and extracted diamonds from Cape Colony. At one point, De Beers Mining company produced 90% of the world's diamonds"
-            ],
-            "Social": ["Dutch settlers were called Afrikaners",
-                  "Used slavery and coerced labor",
-                  "The British abolished slavery in 1834"
-            ],
-            "Technology": [""],
-            "Uncategorized": [""]
-      },
-      "New Zealand": {
-            "Environment": ["Sheeeep :)"],
-            "Culture": [""],
-            "Governance": ["Colonized by Britain in 1840",
-                  "The Treaty of Waitangi established New Zealand as a colony and gave the native Maori property rights, although they were largely ignored by British settlers",
-                  "The Maori Wars ended in 1846 with British victory",
-                  "During the 1850s, the British settlers wanted to buy Maori land, but the Mauri refused to sell until the government put pressure on them",
-                  "In 1861, the government sent troops to pressure the Maori to give up their property, leading to more fighting until 1872",
-                  "During World War I and World War II, troops from Australia and New Zealand formed the ANZAC",
-                  "Joined SEATO (Southeast Asia Treaty Organization) along with Australia, France, Great Britain, Pakistan, Thailand, the US, and the Philippines, to stop the spread of communism in 1954"
-            ],
-            "Economy": [""],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": ["Had a lot of immigrants from China and Italy"]
-      },
-      "Canada": {
-            "Environment": ["Had access to fur and beaver pelts"],
-            "Culture": ["Facilitated the spread of Catholicism"],
-            "Governance": ["Claimed by Jacques Cartier in 1535",
-                  "Colony expanded by Samuel de Champlain in 1609-1616",
-                  "The French were driven out of Canada and the rest of the US after the 7 Years War in 1763 and was transferred to the British",
-                  "Invaded unsuccessfully by the US during the War of 1812",
-                  "Was one of the original members of NATO in 1949",
-                  "Quebecois felt more aligned with France than England. In the Quiet Revolution in the 1960s, a more liberal provincial government took over and expande the provicial government power, leading to the rise of Québec nationalism and demand for independence. In 1995, the Québecois tried to become independent again but failed"
-            ],
-            "Economy": [""],
-            "Social": ["The North American Free Trade Agreement (NAFTA) encouraged the US and Canada to build factories in Mexico to produce tariff-free goods"],
-            "Technology": [""],
-            "Uncategorized": ["Received a lot of Irish immigrants"]
-      },
-      "Sierra Leone": {
-            "Environment": [""],
-            "Culture": [""],
-            "Governance": ["Became a British colony for freed slaves. The British would stop slave ships and take the slaves to Sierra Leone where they would be freed."],
-            "Economy": [""],
-            "Social": [""],
             "Technology": [""],
             "Uncategorized": [""]
       },
@@ -1857,22 +1800,6 @@ export const countryNotes: CountryNotes = {
                   "The British took over in 1903"
             ],
             "Economy": ["Engaged in slave trade, which suffered as Britain would stop slave ships and take the slaves to be freed in Sierra Leone"],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": [""]
-      },
-      "Belgian Congo": {
-            "Environment": [""],
-            "Culture": [""],
-            "Governance": ["King Leopold II (r. 1865-1909) conquered the Congo Basin and owned it personally, meaning he kept all the profit",
-                  "The Berlin Conference allowed King Leopold to keep the Congo for himself during the Scramble for Africa",
-                  "In 1905 the Human Rights Commission recognized the human rights violations and transfered the Congo from Leopold to the Belgian government in 1908.",
-                  "Under the Belgian government, there was still a lot of exploitation and coerced labor. They also continued to give King Leopold some of the profits." // not sure of theme
-            ],
-            "Economy": ["Produced rubber, copper",
-                  "Leopold hired mercenary companies to produce rubber using any means, leading to slavery and extremely bad conditions (burn villages, kill families for not meeting quotas). 7-10 million people were killed or starved because of this exploitation.",
-                  "When the trans-national company Unilever was accused of using slavery in British Nigeria to harvest cocoa and palm oil, they moved to extract those resources from the Congo where slavery and exploitation were more accepted",
-            ],
             "Social": [""],
             "Technology": [""],
             "Uncategorized": [""]
@@ -2029,7 +1956,15 @@ export const countryNotes: CountryNotes = {
             "Economy": [""],
             "Social": ["In Rwanda, Belgium favored the Tutsis over the Hutus, reinforcing ethnic divisions that would eventually lead to the Rwandan Genocide"],
             "Technology": [""],
-            "Uncategorized": [""]
+            "Uncategorized": [""],
+            "Belgian Congo": ["King Leopold II (r. 1865-1909) conquered the Congo Basin and owned it personally, meaning he kept all the profit",
+                  "The Berlin Conference allowed King Leopold to keep the Congo for himself during the Scramble for Africa",
+                  "Leopold hired mercenary companies to produce rubber using any means, leading to slavery and extremely bad conditions (burn villages, kill families for not meeting quotas). 7-10 million people were killed or starved because of this exploitation.",
+                  "Produced rubber, copper",
+                  "In 1905 the Human Rights Commission recognized the human rights violations and transfered the Congo from Leopold to the Belgian government in 1908.",
+                  "Under the Belgian government, there was still a lot of exploitation and coerced labor. They also continued to give King Leopold some of the profits.", // not sure of theme,
+                  "When the trans-national company Unilever was accused of using slavery in British Nigeria to harvest cocoa and palm oil, they moved to extract those resources from the Congo where slavery and exploitation were more accepted",
+            ]  
       },
       "Manchuria": {
             "Environment": [""],
