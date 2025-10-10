@@ -60,6 +60,7 @@ document flow using `position: absolute` to ensure that one is not displayed und
   transition: transform 600ms cubic-bezier(.22,.9,.37,1), opacity 600ms ease;
   will-change: transform, opacity;
   height: 100%;
+  overflow-y: auto;
 }
 
 .slide-out {
