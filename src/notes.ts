@@ -39,13 +39,9 @@ export const generalNotes: GeneralNotes = {
             applicableCountries: ["France 1200-1450", "England 1200-1450", "Holy Roman Empire 1200-1806"]
       },
       "Renaissance": {
-            "Environment": [""],
             "Culture": ["Caused by increased contact with the East in the 1300s",
                   "Revived interest in classical Greek and Roman arts"
             ],
-            "Governance": [""],
-            "Economy": [""],
-            "Social": [""],
             "Technology": ["The Gutenberg printing press, invented in 1439, led to an increase in literacy"],
             applicableCountries: ["France 1200-1450", "England 1200-1450", "Holy Roman Empire 1200-1806"]
       },
@@ -54,11 +50,9 @@ export const generalNotes: GeneralNotes = {
                   "North of the Sahara was able to grow a lot, while South of the Sahara was better for pastoralists"
             ],
             "Culture": ["Lead to the spread of Islam"],
-            "Governance": ["yay governance notes"],
             "Economy": ["Used mainly coins and cowrie shells as a currency",
                   "Facilitated trade of horses, books, salt, gold, ivory, cloth, and slaves"
             ],
-            "Social": ["yay social notes"],
             "Technology": ["With the new Somali saddle, camels could carry up to 600lbs"],
             applicableCountries: ["Mali Empire, Hausa States"]
       },
@@ -68,13 +62,11 @@ export const generalNotes: GeneralNotes = {
             "Culture": ["Facilitated the exchange of cultures between merchants",
                   "Was a safe place for some persecuted religions, including Nestorian Christianity"
             ],
-            "Governance": [],
             "Economy": ["The Chinese used flying money instead of coins, which later influenced European banking systems",
                   "Facilitated the trade of silk, tea, spices, dyes, porcelain, rice, paper, gunpowder, horses, saddles, fruit, domesticated animals, honey, and textiles",
                   "Established caravanserai, spaced about 100 miles apart along the road, where camels could rest and be exchanged",
                   "Cities were established along the Silk Roads, especially near water sources as most of the routes didn't have much water, as centers of trade. Examples include Kashgar, Samarkand, and Chang'an"
             ],
-            "Social" :[],
             "Technology":["Facilitated the spread of maritime technology, including lateen sails (triangular to allow wind to be caught from all directions), the stern rudder (allowed for better steering and maneuverability), the astrolabe, dhow ships, and the compass"],
             applicableCountries: ["Song Dynasty", "Abbasid Caliphate"]
       },
@@ -89,21 +81,16 @@ export const generalNotes: GeneralNotes = {
                   "There were three circuits of trade: the Arabian Sea, the Bay of Bengal, and the South China Sea. Traders generally stayed within their circuit",
                   "Trade cities were established, including Calicut, Malacca, and Kilwa"
             ],
-            "Social": [],
             "Technology": ["The essential maritime techology for the Indian Ocean trade included the magnetic compass, astrolabe, lateen sail, dhow ship, and stern rudder"],
             applicableCountries: ["Srivijaya Empire, Majapahit Empire, Song Dynasty, Swahili Coast"]
       },
       "Calvinism": {
-            "Environment": [],
             "Culture": ["Founded by John Calvin in 1530",
                   "Believed in predestination, where God had already predetermined who was going to heaven and who was not",
                   "Beleived being predestined to go to heaven was shown through hard work and wealth",
                   "They led a very strict lifestyle in order to prove to others that they had been selected to go to heaven"
             ],
-            "Governance": [],
-            "Economy": [],
             "Social": ["People who were predestined to go to heaven were called the Elect"],
-            "Technology": [],
             applicableCountries: ["France 1200-1450"]
       },
       "Columbian Exchange":{
@@ -112,28 +99,22 @@ export const generalNotes: GeneralNotes = {
                   "Crops like wheat, okra, rice, and sugarcane were brought to the New World",
                   "Crops like potatoes, maize, tomatoes, beans, peppers, cacao, yams, and tobacco were brought to the Old World. This led to better nutrition and population growth"
             ],
-            "Culture": [],
-            "Governance": [],
-            "Economy": [],
-            "Social": [],
-            "Technology": [],
-            applicableCountries: ["Aztecs",]
+            applicableCountries: ["Aztecs", "Spain 1492-1750"]
       },
       "Triangular Trade and Trans-Atlantic Slave Trade": {
             "Governance": ["African kingdoms that participated in slave trade, like the Asante and Oyo, became very powerful"],
-            "Economy": ["Europeans sold manufactured goods and firearms to Africa in exchange for slaves. African kingdoms used the firearms to get more slaves to sell to the Europeans",
+            "Economy": ["Colonies needed slaves because there weren't enough Native Americans, as they had been decimated by disease and were able to escape and hide from the Europeans. Africans had already been exposed to European diseases, and they were easy to find if they escaped",
+                  "Europeans sold manufactured goods and firearms to Africa in exchange for slaves. African kingdoms used the firearms to get more slaves to sell to the Europeans",
                   "African kingdoms often exploited each other for slaves to trade. For example, the Oyo conquered Dahomey but gave them independence in exchange for an annual tribute of slaves. Angolan leaders took in refugees from other kingdoms, kept the women and children, but sold the men into slavery",
                   "The slaves were sent to the Americas (Trans-Atlantic Slave Trade) to work on plantations (mainly sugar or tobacco) or in mines",
+                  "Most slaves were sent to Portuguese colonies",
                   "Raw materials produced in the Americas were sent to Europe to be made into manufactured goods",
                   "Chattel slavery was a common practice, where slaves were treated as property and could be bought and sold. This was passed down through generations"
             ],
-            "Social": ["Most slaves taken from Africa were men, leaving a gender imbalance in Africa. This led to more polygyny, but also to women taking on more traditionally masculine roles in society",],
-            "Technology": [],
-            "Uncategorized": ["Most slaves were sent to Portuguese colonies",
+            "Social": ["Most slaves taken from Africa were men, leaving a gender imbalance in Africa. This led to more polygyny, but also to women taking on more traditionally masculine roles in society",
                   "In some Spanish, Portuguese, and French colonies, owners and slaves could go to court to argue for the freedom of a slave",
-                  "Colonies needed slaves because there weren't enough Native Americans, as they had been decimated by disease and were able to escape and hide from the Europeans. Africans had already been exposed to European diseases, and they were easy to find if they escaped",
             ],
-            applicableCountries: ["Hausa States",]
+            applicableCountries: ["Hausa States", "Spanish Territory", "Portuguese Territory", "French Territory", "British Territory", "Asante Kingdom"]
       },
       "Thirty Years War 1618-1648": {
             "Governance": ["A war between Catholics and Protestants. It originally started in the Holy Roman Empire, and then it spread",
@@ -141,29 +122,26 @@ export const generalNotes: GeneralNotes = {
             ],
             applicableCountries: ["England 1450-1700", "France 1450-1700", "Holy Roman Empire 1450-1700", "Spain 1492-1750", "Netherlands 1450-1750"]
       },
-      "Enlightenment": {
-            "Culture":["A rejection of tradition, challenging monarchs and church leaders",
-                  "People began to want more independence and constitutional representation",
-                  "Led to the rise of nationalism",
-                  "Deism, the belief that God set natural laws in motion but does not interfere after, became prevalent among Enlightenment thinkers",
-                  "Atheism, the rejection of religious beliefs, became more common"
-            ],
-            "Governance": ["Led to the rise of revolutions, including the American Revolution, the French Revolution, and the Haitian Revolution"],
-            "Economy": ["Socialism, the idea where the public owns the means of production, was developed",
-                  "Adam Smith developed the idea of laissez-faire economics, where the government would not interfere with economic deciisions. This was the foundation for capitalism and the free market. He believed that capitalism would protect against poverty better than mercantilism had"
-            ],
-            "Social": ["Led to the end of serfdom and slavery, and the rise of suffrage movements",
-            ],
-            "Uncategorized": ["Late 1600s through the 1700s",
+      "Enlightenment (1600s-1700s)": {
+            "Important ideas": ["Socialism, the idea where the public owns the means of production, was developed",
+                  "Adam Smith developed the idea of laissez-faire economics, where the government would not interfere with economic deciisions. This was the foundation for capitalism and the free market. He believed that capitalism would protect against poverty better than mercantilism had",
                   "Liberalism valued natural rights, a constitutional government, laissez-faire economics, and reductions to the money spent on the army and church. It was supported mainly by professionals and academics, as well as by the British Parliament",
                   "Conservatism, generally supported by the ruling class, valued traditions and religion over new idealogical theories",
                   "Thomas Hobbes believed that humans were naturally bad, and that they had to give up their rights to the government in exchange for order",
                   "John Locke, known as the Father of Liberalism, thought that people have natural rights (rights for all humans that couldn't be infringed upon by the government) to life, liberty, and the pursuit of property. He also believed that there was a social contract, where the government was obligated to protect its people's natural rights, and it was the responsibility of the people to revolt against the government if it was unjust. He developed the idea of tabula rasa, where people were born as a blank slate and are shaped by their environment and education, as opposed to the traditional belief that better ancestry would lead to more intelligence. This idea essentially went against the idea of absolute monarchy",
                   "Voltaire believed in constitutional monarchies, religious freedom, and freedom of speech",
                   "Jean-Jacques Rousseau developed the idea of the social contract after Locke and the new idea of the general will of the population, where decisions would be made based on the will of the majority. This was the start of democracy, and a big threat to monarchs",
-                  "Baron Montesquieu believed supported monarchies, but not absolute monarchies. He wanted to check the monarch's power, so he developed the idea of separating the executive, legislative, and judicial powers, as well as the idea of checks and balances. His ideas influenced the American and French constitutions"
+                  "Baron Montesquieu believed supported monarchies, but not absolute monarchies. He wanted to check the monarch's power, so he developed the idea of separating the executive, legislative, and judicial powers, as well as the idea of checks and balances. His ideas influenced the American and French constitutions",
+                  "Deism, the belief that God set natural laws in motion but does not interfere after, became prevalent among Enlightenment thinkers",
+                  "Atheism, the rejection of religious beliefs, became more common"
             ],
-            applicableCountries: []
+            "Consequences":["A rejection of tradition, challenging monarchs and church leaders",
+                  "People began to want more independence and constitutional representation",
+                  "Led to the rise of nationalism",
+                  "Led to the rise of revolutions, including the American Revolution, the French Revolution, and the Haitian Revolution",
+                  "Led to the end of serfdom and slavery, and the rise of suffrage movements",
+            ],
+            applicableCountries: ["England 1750-Present", "France 1750-1920", "Spanish Territory"]
       },
       "Second Industrial Revolution":{
             "Environment": ["The rapid rise in urbanization led to overcrowding and poor sanitation",
@@ -172,7 +150,9 @@ export const generalNotes: GeneralNotes = {
             "Economy": ["Europe, the US, and Japan did most of the manufacturing",],
             "Social": ["Being a housewife became a symbol of status in the middle class, as it meant that the husband made enough money to support the entire family",
                   "Social classes began to change; the working class was made up of replaceable low-skilled people who worked in factories or coal mines; the middle class were higher-skilled, educated factory overseers, managers, doctors, or lawyers; the higher class was made up of rich factory or office managers",
-                  "Social reforms began to be implemented as the working conditions (long hours, overworked, dangerous work) were awful, and for very little pay. Labor unions formed, and laws were put in place to limit thnigs like child labor"
+                  "Social reforms began to be implemented as the working conditions (long hours, overworked, dangerous work) were awful, and for very little pay. Labor unions formed, and laws were put in place to limit thnigs like child labor",
+                  "Consumerism began to emerge in the middle class",
+
             ],
             "Technology": ["The telegraph was invented in the mid-1800s",
                   "Electricity was developed, leading to public power stations, electric streetcars, and street lights in the late 1800s",
@@ -181,27 +161,24 @@ export const generalNotes: GeneralNotes = {
                   "Cars were introduced in the early 1900s",
                   "Railways and steamships improved transportation, linking industrial centers and ports. Urbanization accelerated as new industrial cities rapidly grew"],
             "Uncategorized": ["Countries that had money, natural resources, and water transportation (eg. US, Germany, France, Russia, and Japan) began to industrialize after Britain",
-                  "Consumerism began to emerge in the middle class",
                   "Before the industrial revolution, families worked together at home on their farms, but after the industrial revolution, the whole family was separated to work in factories",],
-            applicableCountries: []
+            applicableCountries: ["United States 1776-1920", "Germany 1850-1920", "France 1750-1920", "Japan 1853-Present"]
       },
       "Communism": {
-            "Governance": [],
-            "Economy": [],
             "Social": ["Split into classes of proletariat and bourgeoisie"],
             "Uncategorized": [ "Developed by Karl Marx (1818-1883), who wanted to replace capitalism with socialism",
                   "In 1848 Karl Marx and Freidrich Engels wrote the Commmunist Manifesto, detailing how capitalism produced a lot of money but left many in poverty. They predicted that the middle class would be eliminated so everyone would fall into one of two classes: the bourgeoisie (rich people who owned the means of production) and the proletariat (the working class), and that the proletariat would eventually overthrow the bourgeoisie to form communism"
             ],
-            applicableCountries: []
+            applicableCountries: ["China", "USSR", "Vietnam", "Venezuela", "Ethiopia", "Iran"]
       },
       "Imperialism": {
             "Culture": ["Colonizers would force their culture, language, and religions on the people in their colonies"],
             "Governance": ["The British, French, and Dutch charter companies made treaties with rulers in India, East Africa, and the East Indies to set up ports and forts, which they used for spice trade and to form armies used to conquer the territory and make colonies"],
             "Economy": ["Countries wanted access to more raw materials (especially palm oil, gold, ivory, and diamonds from Africa) as well as new markets, so they made colonies"],
-            "Uncategorized": ["They justified imperialism using ideas like White Man's Burden (it's white people's responsibility to civilize other people) and Social Darwinism (the idea that white people were superior to other races)", // social? culture?
-                  "Having colonies was a way to prove how powerful a nation was", // gov or social maybe idk  
+            "Social": ["They justified imperialism using ideas like White Man's Burden (it's white people's responsibility to civilize other people) and Social Darwinism (the idea that white people were superior to other races)", // social? culture?
+                  "Having colonies was a way to prove how powerful a nation was", // maybe gov
             ],
-            applicableCountries: []
+            applicableCountries: ["England 1750-Present", "France 1750-1920", "France 1920-Present", "Germany 1850-1920", "Spain 1492-1750", "Spain 1750-Present", "The Netherlands", "Japan 1853-Present"]
       },
       "Berlin Conference 1885": {
             "Governance": ["As imperialism was rising, Europeans fought each other for control in Africa. Otto von Bismarck wanted to keep the peace between the European nations, so he organized the Berlin Conference from 1884-1885",
@@ -209,14 +186,13 @@ export const generalNotes: GeneralNotes = {
                   "Africans had no say in the division, so the borders of the colonies often dividded up tribes into different colonies or grouped rival colonies in the same colony"
             ],
             "Economy": ["It allowed free movement of goods on major rivers"],
-            applicableCountries: []
+            applicableCountries: ["England 1750-Present", "Belgium", "Germany 1850-1920", "France 1750-1920", "Spain 1750-Present", "Italy", "Portugal 1750-Present"]
       },
       "Great Depression 1929-1939": {
             "Economy": ["Disrupted global economies",
                   "Germany was especially affected because they had inflation due to printing money to"
             ],
-            "Technology": [],
-            applicableCountries: []
+            applicableCountries: ["United States 1920-Present", "Germany 1920-1945", "France 1920-Present",]
       },
       "World War I (1914-1918": {
             "Causes": ["Tensions were rising as Germany and Britain were becoming more powerful, Austria-Hungary and Russia both wanted control of the Balkans, and Kaiser Wilhelm II kicked out Otto von Bismarck who was trying to keep the peace",
@@ -272,7 +248,7 @@ export const generalNotes: GeneralNotes = {
                   "Used blitzkrieg (lightning war) tactics, where planes would bomb first, then they would send tanks in, then the infantry, which was very effective",
                   "Aircraft carriers were the most vital tech development on the Pacific front.",
                   "In addition to fighting the other countries, Nazis forcefully revomed Slavs, gypsies, political opponents, gay people, people with disabilities, and Jews, and forced them to work in labor camps. They sent those who couldn't work to death camps where they would be likked",
-                  "Japan invaded China in 1937. This was the start of World War II on the Asian front",
+                  "Japan invaded China in 1937. This was the start of World War II on the Asian front. During the Rape of Nanking, the Japanese killed 100,000 Chinese soldiers and civilians",
                   "In 1939, Hitler offered Stalin control of eastern Poland and the Baltic if he didn't interfere with Germany's invasion of Poland in the German-Soviet Non-Agression Pact",
                   "The Nazis invaded Poland in 1939 and took over in 4 weeks using tanks and the air force",
                   "The Nazis slowly took over Austria. In 1938 Hitler threatened the Austrian chancellor into giving the Austrian Nazis more power, then he used them occupy Austria",
@@ -304,7 +280,7 @@ export const generalNotes: GeneralNotes = {
             applicableCountries: ["Germany 1920-1945", "Italy", "Japan 1853-Present", "Hungary", "Bulgaria", "Croatia", "England 1750-Present", "United States 1920-Present", "China", "France 1920-Present", "USSR", "Canada", "Australia", "New Zealand", "South Africa", "Poland"]
       },
       "Cold War": {
-            "Uncategorized": ["The US sent troops to try to stop the Bolsheviks during the Russian Civil War, leading to tensions between the US and the new government",
+            "General notes": ["The US sent troops to try to stop the Bolsheviks during the Russian Civil War, leading to tensions between the US and the new government",
                   "Both countries wanted to show that their economic system (capitalism vs communism) was superior",
                   "The US had a policy of containment, meaning stopping the spread of communism",
                   "NATO (North Atlantic Treaty Organization) was created in 1949 to coordinate defenses in case of a Soviet attack. Its original members were Belgium, Canada, Denmark, France, Great Britain, Iceland, Italy, Luxembourg, the Netherlands, Norway, Portugal, and the US",
@@ -410,9 +386,7 @@ export const countryNotes: CountryNotes = {
             "Culture": ["Confucianism and Buddhism spread from China",
                   "Had previously been ruled by the Tang Dynasty from 100bc to 938ce, so Vietnam experienced lots of sinification"
             ],
-            "Governance": [],
-            "Economy": [],
-            "Uncategorized": ["Tribute to China in the form of champa rice"]
+            "Economy": ["Tribute to China in the form of champa rice"]
       },
       "Goryeo Dynasty": {
             "Culture": ["Confucianism and Mahayana Buddhism spread from China",
@@ -431,23 +405,23 @@ export const countryNotes: CountryNotes = {
                   "The Mongols tried to conquer Japan but failed because of the strong winds",
                   "First contact with the Europeans was in the 16th century",
                   "Daimyo (Oda Nobunaga, Toyotomi Hideyoshi, and Tokugawa Ieyasu) unified and centralized Japan, leading to the Tokugawa Shogunate, also known as the Edo Period, from 1603-1868. Even though it was centralized, the Daimyo still had a lot of power.",
-                  "The Tokugawa Shoguns required daimyo to make frequent visits to the capital to ensure loyalty, and they often made daimyo's families live in Edo"
+                  "The Tokugawa Shoguns required daimyo to make frequent visits to the capital to ensure loyalty, and they often made daimyo's families live in Edo",
+                  "The 47 Ronin Incident (1701-1703) displays the conflict between state (law) and traditional (samurai) values. A senior minister provoked a young daimyo into drawing his sword in the shogun's court, which was not allowed, so the daimyo had to commit suicide. His samurai then became ronin (masterless samurai who had to avenge their master) and killed the senior master, then confessed to what they did in court. The shogun had to decide how to handle it (if he condemned them, he would be condemning samurai values, but if he condoned it, there would be chaos). He decided to have them commit suicide",
+                  "The government thought that Christianity was a tool for the Europeans to take over Japan, so they banned it in 1614, as well as expelling all Europeans and shifting to isolationism."
+
             ],
             "Economy": ["The government didn't want the economy to be in favor of the merchants due to their confucian beliefs, and they still favored samurai so they didn't want them to be in debt. They paid the samurai in rice since they could control inflation and the worth of rice, but the samurai just exchanged the rice for cash and the merchants became powerful anyway",
                   "Produced steel, pottery, lacquer, and porcelain",
-                  "Traded silver to the Chinese, but avoided silver inflation because they invested in financial security"
+                  "Traded silver to the Chinese, but avoided silver inflation because they invested in financial security",
+                  "Toyota and Mitsubishi were founded",
+                  "Became isolationist in 1614. They only continued to trade with China, and had some limited trade with the Dutch"
             ],
-            "Social": [""],
+            "Social": ["Persecuted Christians"],
             "Technology": ["The Europeans introduced firearms to Japan",
                   "Had good roads and maritime transport, since the Tokugawa Shoguns required daimyo to make frequent visits to the capital"
-            ],
-            "Uncategorized": ["The government thought that Christianity was a tool for the Europeans to take over Japan, so they banned it in 1614, as well as expelling all Europeans and shifting to isolationism. They only continued to trade with China, and had some limited trade with the Dutch", //this one just has a bunch of parts that fall in different themes
-                  "Toyota and Mitsubishi were founded",
-                  "The 47 Ronin Incident (1701-1703) displays the conflict between state (law) and traditional (samurai) values. A senior minister provoked a young daimyo into drawing his sword in the shogun's court, which was not allowed, so the daimyo had to commit suicide. His samurai then became ronin (masterless samurai who had to avenge their master) and killed the senior master, then confessed to what they did in court. The shogun had to decide how to handle it (if he condemned them, he would be condemning samurai values, but if he condoned it, there would be chaos). He decided to have them commit suicide"      
             ]
       },
       "Abbasid Caliphate": {
-            "Environment": [""],
             "Culture": ["The state was neither Sunni nor Shi'a, but the population was majority Sunni",
                   "The House of Wisdom, a government-sponsored library and university, attracted scholars from all over the empire. They conducted research and collected ancient texts (notably Greek texts). Nasir al-Din al-Tusi studied trigonometry and astronomy. Muhammad ibn Musa al-Khwarizmi was one of the most famous mathmaticians, solving linear and quadratic equations. The House of Wisdom eventually declined due to lack of investment from the Seljuk Turks"
             ],
@@ -457,23 +431,16 @@ export const countryNotes: CountryNotes = {
                   "Declined because they began to lose control over their territory, as their territory was too big, and groups like the Seljuk Turks, Fatimids, and Mamluks established their own states in Abbasid territory",
                   "Fell when the Mongols invaded and sacked Delhi in 1258"
             ],
-            "Economy": [""],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": ["Developed the idea of hospitals and quarantine",
+            "Social": ["Literacy increased due to the introduction of paper"],
+            "Technology": ["Developed the idea of hospitals and quarantine",
                   "Got paper from China, which increased literacy"
             ]
       },
       "Mamluk Sultanate": {
-            "Environment": [""],
-            "Culture": [""],
             "Governance": ["1250-1516",
                   "Stopped Mongol expansion",
                   "Conquered by the Ottoman Empire in 1516"
-            ],
-            "Economy": [""],
-            "Social": [""],
-            "Technology": [""]
+            ]
       },
       "Fatimid Caliphate": {
             "Governance": ["909-1171"],
@@ -493,8 +460,7 @@ export const countryNotes: CountryNotes = {
                   "Exported cloth, yarn, silk, indigo, and pepper"
             ],
             "Social": ["Had the jizya tax (a special tax for non-Muslims), which promoted conversion to Islam"// not sure if it's social or smth else
-            ],
-            "Technology": [""]
+            ]
       },
       "Vijayanagara Empire": {
             "Culture": ["Hindu"],
@@ -510,7 +476,7 @@ export const countryNotes: CountryNotes = {
             ],
       },
       "Khmer Empire": {
-            "Environment": [""],
+            "Environment": ["Very watery environment"],
             "Culture": ["Was Hindu, then became Buddhist in the 12th or 13th century. This is reflected in the architecture (eg. Angkor Wat), as they preserved Hindu art alongside new Buddhist art"],
             "Governance": ["802 to 1431",
                   "Conquered by the Sukhothai Empire in 1431"
@@ -529,7 +495,8 @@ export const countryNotes: CountryNotes = {
       },
       "Mississippi Mound Builders": {
             "Environment": ["Had a very large population due to food surpluses",
-                  "Had very fertile floodplains which allowed for good agriculture and food surpluses"
+                  "Had very fertile floodplains which allowed for good agriculture and food surpluses",
+                  "Fell for unknown reasons (possibly weather, crop failure, or European diseases, but it certainly wasn't from war)"
             ],
             "Culture": ["Built large mounds (the largest of which was called Cahokia)"],
             "Governance": ["8th or 9th century to the 16th century",
@@ -541,9 +508,7 @@ export const countryNotes: CountryNotes = {
                   "Had a matrilineal society, meaning the social status was traced thorugh the female side of the family",
                   "Men still held all the power",
                   "Classes: Great Sun, then the upper class (priests, nobles), the lower class (farmers, hunters, merchants, artisans), and then slaves"
-            ],
-            "Technology": [""],
-            "Uncategorized": ["Fell for unknown reasons (possibly weather, crop failure, or European diseases, but it certainly wasn't from war)"]
+            ]
       },
       "Anasazi": {
             "Environment": ["There was a big scarcity of resources since the climate was so dry",
@@ -551,11 +516,6 @@ export const countryNotes: CountryNotes = {
                   "Some tribes built houses into the cliffs",
                   "Other tribes built large houses out of clay"
             ],
-            "Culture": [""],
-            "Governance": [""],
-            "Economy": [""],
-            "Social": [""],
-            "Technology": [""],
             "Uncategorized": ["Also known as the Ancestral Puebloans (their descendants don't like the term Anasazi but that's what the collegeboard uses)",
                   "Refers to a group of tribes in the Four Corners region (where Arizona, Colorado, New Mexico, and Utah meet)"
             ]
@@ -567,13 +527,11 @@ export const countryNotes: CountryNotes = {
                   "Height in 600",
                   "Had a very powerful military",
                   "Fell in 750 for unknown reasons (possibly conflict between elites or improperly managed resources"
-            ],
-            "Economy": [""],
-            "Social": [""],
-            "Technology": [""]
+            ]
       },
       "Mayans": {
-            "Environment": ["Grew corn, beans, and squash, known as the three sisters of agriculture"
+            "Environment": ["Grew corn, beans, and squash, known as the three sisters of agriculture",
+                  "Fell possibly due to drought, deforestation, or an epidemic"
             ],
             "Culture": ["Had a polytheistic religion"],
             "Governance": ["3rd century to 9th century, although some city-states still remained after",
@@ -581,18 +539,16 @@ export const countryNotes: CountryNotes = {
                   "Mayan kings claimed descent from gods",
                   "Fought wars for tributes and human sacrifices, not territory"
             ],
-            "Economy": [""],
-            "Social": ["Women could co-rule or serve as placeholders for men"],
-            "Technology": ["Developed accurate calendars, the number 0, Bas Relief hieroglypics, aqueducts, and made rubber",
-                  "Had no wheels"
+            "Social": ["Women could co-rule or serve as placeholders for men",
+                  "Sacrificed mainly elites"
             ],
-            "Uncategorized": ["Sacrificed mainly elites",
-                  "Fell possibly due to drought, deforestation, or an epidemic",
-                  "Used chinampas (floating gardens that could grow crops year-round), terraced hillsides, irrigation, slash-and-burn agriculture" //environment or tech
+            "Technology": ["Developed accurate calendars, the number 0, Bas Relief hieroglypics, aqueducts, and made rubber",
+                  "Had no wheels",
+                  "Used chinampas (floating gardens that could grow crops year-round), terraced hillsides, irrigation, slash-and-burn agriculture" // or env
             ]
       },
       "Aztecs": {
-            "Environment": [""],
+            "Environment": ["Grew corns, beans, squash, and tomatoes"],
             "Culture": ["Had a polytheistic religion"],
             "Governance": ["1200 to 1521",
                   "Had a theocracy",
@@ -615,7 +571,6 @@ export const countryNotes: CountryNotes = {
                   "Used terraced hillsides for farming",
                   "Grew corn, cotton, potatoes, quinoa, coca, and fruit"
             ],
-            "Culture": [""],
             "Governance": ["11th century to 1572",
                   "The tribes in the Inca area were united in 1438",
                   "Leaders had to conquer territory in order to gain legitimacy",
@@ -624,12 +579,10 @@ export const countryNotes: CountryNotes = {
                   "The Mit'a system was a rotational public service that they utilized instead of a tribute system. Men would hunt, fight, trade, build, etc. while women would weave, farm, and take care of the home",
                   "Fell due to a civil war and the arrival of the Spanish in 1532, but it took until 1572 for their entire territory to be conquered"
             ],
-            "Economy": [""],
             "Social": ["Priests had very high status, and were consulted for war and other things"],
             "Technology": ["Developed quipu, a method of recording numbers using knotted string"]
       },
       "Mali Empire": {
-            "Environment": [""],
             "Culture": ["Muslim"],
             "Governance": ["1230-1670",
                   "Founded by Sundiata"
@@ -638,37 +591,31 @@ export const countryNotes: CountryNotes = {
                   "Controlled all the trade in their territory",
                   "Declined because rulers after Mansa Musa were incompetent, and other empires kept attacking"
             ],
-            "Social": [""],
-            "Technology": [""],
             "Uncategorized": ["Mansa Musa made a pilgrimage to Mecca (1324-1325), bringing slaves and gold to display his wealth. This caused inflation everywhere he went."]
       },
       "Hausa States": {
-            "Environment": [""],
             "Culture": ["Islam was introduced in the 14th century"],
             "Governance": ["7 states with no central authority"],
             "Economy": ["Traded cotton and leather through Trans-Saharan Trade,",
-                  "Engaged in a lot of slave trade"
-            ],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": ["City-states were specialized"]
+                  "Engaged in a lot of slave trade",
+                  "City-states were specialized"
+            ]
       },
       "Zimbabwe Kingdom": {
-            "Environment": [""],
+            "Environment": ["Declined due to overgrazing"],
             "Culture": ["Practiced animism",
                   "Developed Swahili language, mixing Bantu and Arabic"
             ],
             "Governance": ["1220-1450"
             ],
             "Economy": ["They were very wealthy from agriculture and trading gold and ivory. There was a lot of gold being taken from the eat through Zimbabwe to the Indian Ocean, and Zimbabwe took a 50% tax of all goods coming through their territory",
-                  "Cattle were used similarly to a banking system. THe king gave people cattle, and people could loan cattle, etc."
+                  "Cattle were used similarly to a banking system. THe king gave people cattle, and people could loan cattle, etc.",
+                  "Declined because traders began to go around Zimbabwe to get to the Swahili Coast, thus avoiding taxes"
             ],
             "Social": ["Women were responsible for farming"],
             "Technology": ["Made large walls (the largest manmade structures in sub-Saharan Africa pre-colonization) without any kind of mortar/mud/cement. The walls represented status. An example is the Great Encloser in Great Zimbabwe, which housed the Queen."],
-            "Uncategorized": ["Declined due to overgrazing, and because traders began to go around Zimbabwe to get to the Swahili Coast, thus avoiding taxes"]
       },
       "Ethiopia": {
-            "Environment": [""],
             "Culture": ["Christian since the 12th century, but practiced differently from European Christianity",
                   "They were isolated from other Christians as they were surrounded by Muslims",
                   "Made 12 churches entirely sculpted from rock"
@@ -684,20 +631,14 @@ export const countryNotes: CountryNotes = {
                   "Had a lot of revenue from coffee trade",
                   "People wanted land reforms but they couldn't successfully implement them"
             ],
-            "Social": [""],
-            "Technology": [""]
       },
       "Swahili Coast": {
-            "Environment": [""],
             "Culture": ["Had a very culturally diverse community as merchants from all over the Inidan Ocean would settle and start families there"],
             "Governance": ["Eventually, they were conquered by the Portuguese and they declined"],
             "Economy": ["Engaged in a lot of trade over the Indian Ocean"],
-            "Social": [""],
-            "Technology": [""],
             "Uncategorized": ["Many port cities were founded by Arabs"]
       },
       "France 1200-1450": {
-            "Environment": [""],
             "Culture": ["Began to have a national identity during the Hundred Years War",
             ],
             "Governance": ["Utilized the Estates General system in the government, which represents the social hierarchy of France as estates. The first estate is the clergy (the church), the second is nobility, and the third is all the peasants and merchants (98% of the population but only 1/3 of the estates general)",
@@ -706,23 +647,16 @@ export const countryNotes: CountryNotes = {
             "Economy": ["Shift away from self-sufficiency and manorialism around 1100"],
             "Social": ["Women didn't have a lot of power. They could only become wealthy if they inherited money when widowed. They were, however, able to escape the patriarchy by joinng a monastery or convent",
                   "The middle class/bourgeoisie (merchants, artisans, shopkeepers, etc.) emerges and grew"
-            ],
-            "Technology": [""]
+            ]
       },
       "England 1200-1450": {
-            "Environment": [""],
-            "Culture": [""],
             "Governance": ["Fought in the Hundred Years War against the French, because the English wanted French territory. This led to a national identity replacing regional ones",
                   "Nobles forced the king to sign the Magna Carta in 1215, which limited the king's power and increased nobles' power",
                   "Parliament formed in 1265, which increased nobles' rights"
             ],
-            "Economy": [""],
-            "Social": ["Women didn't have a lot of power. They could only become wealthy if they inherited money when widowed. They were, however, able to escape the patriarchy by joinng a monastery or convent"],
-            "Technology": [""]
+            "Social": ["Women didn't have a lot of power. They could only become wealthy if they inherited money when widowed. They were, however, able to escape the patriarchy by joinng a monastery or convent"]
       },
       "France 1450-1700": {
-            "Environment": [""],
-            "Culture": [""],
             "Governance": ["The kings used Divine Right, meaning that they were chosen by God, to legitimize their rule and give them political and religious authority and become absolute monarchs",
                   "Louis XIV (ruled 1643 to 1715) was the strongest absolute monarch at the time. In the Versailles architecture, he often portrayed himself and his family as gods. He centralized the government, and limited nobles' power by keeping them close and distracting them at Versailles",
                   "The Indendents system was where royal officials would carry out laws in provinces",
@@ -731,8 +665,6 @@ export const countryNotes: CountryNotes = {
                   "Fought in the Seven Years War (1574-1763) against the British. The French lost and were driven out of India and North America"
             ],
             "Economy": ["Shifted to mercantilism, where they maximized their exports and minimized their imports in order to amass as much gold and silver as possible"],
-            "Social": [""],
-            "Technology": [""],
             "Uncategorized": ["Began exploring in order to find the Northwest Passage to the Indian Ocean",
                   "Jacques Cartier founded Canada in 1535",
                   "Found many resources (like fur) in the Americas and decided they didn't need to find a new way to go to Asia",
@@ -740,58 +672,47 @@ export const countryNotes: CountryNotes = {
             ]
       },
       "Portugal 1450-1750": {
-            "Environment": [""],
-            "Culture": [""],
             "Governance": ["Had naval supremacy in the 1400s",
                   "Lost power in the Indian Ocean when the English pushed them out of South Asia and the Dutch took over Malacca and Java in 1620",
                   "In 1492 Spain and Portugal made the Treaty of Tordesillas, reserving territory west of the Line of Demarcation for Spain, and the east for Portugal",
-                  "Portugal wanted control of Ndongo (now Angola) for slave exports in the late 16th and early 17th century. The Queen of Ndongo, Ana Nzinga, was driven out of Ndongo but she took control of Matamba, allied with the Dutch, and made a new treaty"
+                  "Portugal wanted control of Ndongo (now Angola) for slave exports in the late 16th and early 17th century. The Queen of Ndongo, Ana Nzinga, was driven out of Ndongo but she took control of Matamba, allied with the Dutch, and made a new treaty",
+                  "The Portuguese used military control to force trade in the Indian Ocean instead of forming ethnic and religious ties", // gov or econ?
             ],
             "Economy": ["Shifted to mercantilism, where they maximized their exports and minimized their imports in order to amass as much gold and silver as possible",
                   "Established a trading-post empire, based on small outposts instead of large territories, with forts from the Persian Gulf to India and Malacca",
                   "Monopolized spice trade",
                   "Started trading with Japan in the early 16th century but were driven out when Japan became isolationist"
             ],
-            "Social": [""],
             "Technology": ["Developed the carrack, a ship good for trading, used in the 14th to 17th centuries, and the caravel, a ship good for speed, long voyages, and shallow water, used from the 15th to 17th centuries"],
             "Uncategorized": ["Prince Henry the Navigator (1394-1460) searched for a new route to the Indian Ocean around Africa",
                   "Bartholomew Diaz sailed around the Cape of Good Hope (the Southern tip of Africa) in 1488",
                   "Vasco Da Gama sailed around the Cape of Good Hope in 1498 and established ports in India. Initially the Indian kingdoms didn't want to trade with him, but then he came back with weapons and forced them to trade in 1509",
                   "First came to China in 1514 with traders and missionaries",
-                  "The Portuguese used military control to force trade in the Indian Ocean instead of forming ethnic and religious ties", // gov or econ?
+                  
             ]
       },
       "Holy Roman Empire 1200-1806": {
-            "Environment": [""],
             "Culture": ["Lutheranism was started by Martin Luther in 1516 when he wrote the 95 Theses about his grievances with the church (including indulgences, where people could pay for salvation, simony, where people could pay for church offices, and the fact that the Bible was only available in Latin so the church kept control over its interpretations). Lutheranism spread quickly, especially to political leaders and launched social revolutions and the Protestant Reformation",
                   "Different areas were Catholic, Lutheran, or Calvinist"
             ],
             "Governance": ["Lost power during the Thirty Years War (1619-1648)",
                   "Fell when Napoleon invaded in 1806",
                   "States within the Holy Roman Empire, such as Prussia and Austria, began to have more autonomy and develop their own military"
-            ],
-            "Economy": [""],
-            "Social": [""],
-            "Technology": [""]
+            ]
       },
       "England 1450-1750": {
-            "Environment": [""],
             "Culture": ["Henry VIII initially supported the Pope against protestants, until he wanted a divorce andd the Pope wouldn't allow it. He then started Anglicanism, which was still essentially the same as Catholicism"],
-            "Governance": [" In 1689, the English Bill of Rights checked monarch power, increased individual liberties (right to be tried before conviction, give parliament a say in taxation and military)",
+            "Governance": ["Jamestown, the first successful colony, was established in 1607",
+                  "In 1689, the English Bill of Rights checked monarch power, increased individual liberties (right to be tried before conviction, give parliament a say in taxation and military)",
                   "Had naval supremacy in the 1700s",
                   "Parliament preferred a moderately protestant monarch, so they kept replacing the monarchs",
                   "Fought the Seven Years War (1754-1763) against the French. The British won and pushed the French out of India and Canada"
-
             ],
             "Economy": ["Shifted to mercantilism, where they maximized their exports and minimized their imports in order to amass as much gold and silver as possible",
                   "The British East India Company (EOC) was founded in 1600 and traded with the Mughal Empire in the 17th century. They expanded to trade with other local rulers through treaties"
             ],
-            "Social": [""],
-            "Technology": [""],
             "Uncategorized": ["Began exploring to the West in order to find a new trade route to the Indian Ocean",
                   "John Cabot claimed the territory from Newfoundland to Chesapeake Bay for England in 1497",
-                  "Jamestown, the first successful colony, was established in 1607",
-                  "The Agricultural Revolution happened in the early 1700s"
             ]
       },
       "Spain 1492-1750": {
@@ -811,7 +732,6 @@ export const countryNotes: CountryNotes = {
             "Uncategorized": ["Began exploring in the 1490s to find new trade routes to the Indian Ocean",
                   "In 1492, Queen Isabella and King Ferdinand sponsored Christopher Columbus's voyages, leadign him to find the Americas",
                   "Ferdinand Magellan's fleet was the first to circumnavigate the world in 1522",
-                  
             ]
       },
       "Spanish Territory": {
@@ -830,10 +750,7 @@ export const countryNotes: CountryNotes = {
                   "Relied on African slavery"
             ],
             "Social": ["Had the Castas system, a hierarchy based on one's race. Peninsulares were Spanish people born on the Iberian peninsula, who were more likely to stay loyal to the monarchy. Creoles were Spanish people born in the Americas. Mulattoes (now offensive term) were people of Spanish and African descent, Mestizos were of Spanish and Native American descent, and Zambos were of African and indigenous descent. The only way to move to a different level was through intermarriage"],
-            "Technology": [""],
-            "Uncategorized": [
-                  "Wanted independence because they disliked mercantilism (they could only buy or sell goods to/from Spain), and lower classes wanted more power"
-            ],
+            "Uncategorized": ["Wanted independence because they disliked mercantilism (they could only buy or sell goods to/from Spain), and lower classes wanted more power"],
             "Viceroyalty of Peru": ["Established in 1533 after Francisco Pizarro conquered the Inca Empire",
                   "In 1780, Túpac Amaru II, the chief of Peru, descended from the last Inca Ruler (Túpac Amaru), killed a colonial administrator for his cruel treatment of the people. He started a revolt against inequality and the perversion of the mit'a system (not necessarily aiming for independence) in Southern Peru, Bolivia, and Argentina. He was captured in 1781, and was forced to watch his family be executed before being executed himself"
             ],
@@ -841,9 +758,20 @@ export const countryNotes: CountryNotes = {
                   "In 1868 there was a big revolution but it was supporessed by the Spanish",
                   "Puerto Rico was ceded to the US after the Spanish-American War in 1899"
             ],
+            "Philippines": ["Was a Spanish colony since 1571",
+                  "Was a stopping point for silver on the way from the Americas to China",
+                  "Education was limited in the Philippines, so wealthy people would go to Europe for education, where they gained access to Enlightenment ideas. When they returned to the Philippines, they began publishing books about these Enlightenment ideas. One of these people, José Rizal, started the Propaganda Movement, which aimed for more autonomy, and was arrested and executed in 1896, sparking a revolutionary movement.",
+                  "At the same time, the Spanish were fighting the Spanish-American War (1898-1899). When the Spanish lost, they had to sell the Philippines, Puerto Rico, and Guam to the US. Then the Philippines fought the Philippine-American War for independence in 1899, but lost.",
+            ]
+      },
+      "Philippines": {
+            "Governance": [
+                  "The Spanish fought the Spanish-American War (1898-1899). When the Spanish lost, they had to sell the Philippines, Puerto Rico, and Guam to the US. Then the Philippines fought the Philippine-American War for independence in 1899, but lost.",
+                  "They finally gained independence in 1946 after World War II",
+                  "Anti-communist"
+            ]
       },
       "Netherlands 1450-1800": {
-            "Environment": [""],
             "Culture": ["Calvinist"],
             "Governance": ["Had naval supremacy in the 1600s"],
             "Economy": ["The Dutch East India Company (VOC) was founded in 1602",
@@ -858,22 +786,23 @@ export const countryNotes: CountryNotes = {
       "Mongol Empire": {
             "Environment": ["Increased trade on the Silk Roads due to Pax Mongolica led to the spread of the Black Death"],
             "Culture": ["Generally very religiously tolerant, and many religions were practiced. All Mongols had some elements of animism."],
-            "Governance": ["They began their conquest in 1609 under Genghis Khan. They started with the Jin Empire then moved west to the Middle East",
+            "Governance": ["Initially nomadic tribes who were eventually united by Genghis Khan",
+                  "Great horsemen",
+                  "They began their conquest in 1609 under Genghis Khan. They started with the Jin Empire then moved west to the Middle East",
                   "Used siege weapons to invade cities",
                   "They led to the decline of knights in Europe", // is this true?
                   "They starved cities and killed their people until the cities surrendered",
                   "Once they had conquered territory, there was a period called Pax Mongolica (Mongolian Peace) in the 13th and 14th centuries, since no one wanted to fight the Mongols",
                   "The Mongol empires were united until 1265, then there was a lot of infighting"
             ],
-            "Economy": ["Pax Mongolica led to increased trade on the Silk Roads"],
-            "Uncategorized": ["Initially nomadic tribes who were eventually united by Genghis Khan",
-                  "Great horsemen",
-                  "Had the yam messenger system, where messengers would take oral messages and ride nonstop, even sleeping on their horses, to deliver the message. An early version existed under Genghis Khan, but it was expanded under Ogedai Khan",
+            "Economy": ["Pax Mongolica led to increased trade on the Silk Roads",
                   "Kept skilled workers alive, which allowed their empire to thrive"
+            ],
+            "Uncategorized": [
+                  "Had the yam messenger system, where messengers would take oral messages and ride nonstop, even sleeping on their horses, to deliver the message. An early version existed under Genghis Khan, but it was expanded under Ogedai Khan",
             ]
       },
       "Golden Horde": {
-            "Environment": [""],
             "Culture": ["Became isolated from Europe, reinforcing the Great Schism divide and leading to a new and unique culture"],
             "Governance": ["1236-1380",
                   "Created when Batu (one of Genghis Khan's grandsons) invaded Russia in 1236",
@@ -886,7 +815,6 @@ export const countryNotes: CountryNotes = {
             "Technology": ["The Mongols brought passports, coal mining, moveable type, high temperature metallurgy, gunpowder, and bronze cannons"]
       },
       "Il-Khanate": {
-            "Environment": [""],
             "Culture": ["Funded work in astronomy", // tech? 
                   "Originally, it was religiously tolerant until Ghazan Khan made Sunni Islam the state religion in 1295, then other religions were persecuted"
             ],
@@ -894,10 +822,10 @@ export const countryNotes: CountryNotes = {
                   "Founded by Helegu (one of Genghis Khan's grandsons)",
                   "Destroyed Baghdad and ended the Abbasid Caliphate in 1258, but were stopped from exanding further by the Mamluks in 1260"
             ],
-            "Economy": ["Ghazan Khan tried to lower the tax but had to raise them again which made the population unhappy"],
+            "Economy": ["Ghazan Khan tried to lower the tax but had to raise them again which made the population unhappy",
+                  "Tax farming was used extensively (a sign that the government didn't have enough money), where the government paid people to collect taxes for them, and the tax farmers could tax more in order to make a profit. It worked well at first, and then failed (people were driven into debt and agriculture declined). Then the government tried to buy land for agriculture but that led to even less tax revenue"
+            ],
             "Social": ["Once Sunni Islam became the state religion in 1295, other religions were persecuted"],
-            "Technology": [""],
-            "Uncategorized": ["Tax farming was used extensively (a sign that the government didn't have enough money), where the government paid people to collect taxes for them, and the tax farmers could tax more in order to make a profit. It worked well at first, and then failed (people were driven into debt and agriculture declined). Then the government tried to buy land for agriculture but that led to even less tax revenue"]
       },
       "Yuan Dynasty": {
             "Environment": ["The population declined by 40% due to the Black Death, Mongols killing everyone, and because the government didn't invest in the infrastructure"],
@@ -905,19 +833,16 @@ export const countryNotes: CountryNotes = {
             "Governance": ["1260-1368",
                   "Founded by Kublai/Kubilai Khan (one of Genghis Khan's grandsons)",
                   "Tried to conquer Japan, Indochina, and Java in 1278 but failed",
-                  "Took the Civil Service Exam away",
-                  "In the 1350s, the White Lotus Society began organizing a rebellion, and in 1368 Zhu Yuanzhang/Hongwu (a Buddhist monk) started the rebellion and founded the Ming Dynasty"
+                  "The government was unpopular with Confucians and the Scholar Gentry since they got rid of the Civil Service Exam, and changed the social hierarchy so merchants were more valuable than farmers (which went against Confucian beliefs)",
+                  "In the 1350s, the White Lotus Society began organizing a rebellion, and in 1368 Zhu Yuanzhang/Hongwu (a Buddhist monk) started the rebellion and founded the Ming Dynasty",
             ],
             "Economy": ["They got wealthy through trade"],
             "Social": ["Women had more rights: they could wear pants, initiate divorces, and remarry",
                   "There was separation between Mongols and ethnically Chinese. Mongolians were given all the positions in the government and were at the top of the hierarchy. Chinese were not allowed to speak Mongolian."
             ],
-            "Technology": ["Fell behind in technology"],
-            "Uncategorized": ["The government was unpopular with Confucians and the Scholar Gentry since they got rid of the Civil Service Exam, and changed the social hierarchy so merchants were more valuable than farmers (which went against Confucian beliefs)"]
-            
+            "Technology": ["Fell behind in technology"],   
       },
       "Ming Dynasty": {
-            "Environment": [""],
             "Culture": ["Shifted back to Confucianism",
                   "They were very anti-Mongol, asserting their Chinese identity"
             ],
@@ -925,17 +850,13 @@ export const countryNotes: CountryNotes = {
                   "Reinstated the Civil Service Exam",
                   "Pushed the Mongols out of China, but were still always ready to defend against the Mongols, institution mandatory military service",
                   "Sent their army to aid against the Japanese invasion of Korea in the 1590s, leading to economic and military weakness",
-                  "There was a lot of internal rebellion starting in the 1630s, and as the Ming Dynasty was still weak, they allied with the Manchus to help them against the rebels, but the Manchus instead took power and started the Qing Dynasty in 1644"
+                  "There was a lot of internal rebellion starting in the 1630s, and as the Ming Dynasty was still weak, they allied with the Manchus to help them against the rebels, but the Manchus instead took power and started the Qing Dynasty in 1644",
+                  "Emperor Yongle (ruled 1403-1424) wanted to control the Indian Ocean through the Zheng He voyages, where Zheng He would bring gifts and receive tribute from cities in the Indian Ocean. Yongle was the only Ming emperor who really supported exploration. Zheng He made 7 voyages all around the Indian Ocean for tribute and to show the Ming Dynasty's strength, until Yongle died. The rest of the Ming Dynasty did not support his voyages"
             ],
             "Economy": ["Really wanted silver as a currency, since they wanted a coin currency, and silver was not as valuable as gold but could still be verified, unlike copper",
                   "Imported a lot of silver from the Americas (supplied by the Spanish), which led to silver inflation",
                   "Traded porcelain and textiles for silver"
             ],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": ["Emperor Yongle (ruled 1403-1424) wanted to control the Indian Ocean through the Zheng He voyages, where Zheng He would bring gifts and receive tribute from cities in the Indian Ocean. Yongle was the only Ming emperor who really supported exploration",
-                  "Zheng He made 7 voyages all around the Indian Ocean for tribute and to show the Ming Dynasty's strength, until Yongle died. The rest of the Ming Dynasty did not support his voyages"
-            ]
       },
       "Jagadai Khanate": {
             "Governance": ["1227-1363",
@@ -944,7 +865,6 @@ export const countryNotes: CountryNotes = {
             ]
       },
       "Ottoman Empire": {
-            "Environment": [""],
             "Culture": ["Sunni Islam",
                   "Fairly religiously tolerant. They had special courts for non-Muslim non-secular law, and provided a safe place for Jewish after they were driven out of the Iberian Peninsula, but they still had the jizya tax for non-Muslims, and Jewish and Christians were not allowed top positions in the government",
                   "Coffee houses, where men could gather and discuss ideas, became very popular",
@@ -969,13 +889,12 @@ export const countryNotes: CountryNotes = {
             "Social": ["They had the jizya tax for non-Muslims, and Jewish and Christians were not allowed top positions in the government",
                   "Janissaries didn't have many rights until 1730. They weren't allowed to get jobs, marry, have kids, or own property",
                   "The higher class (military, government officials) were called the Askeri, while the lower class was called the Reaya"
-            ],
-            "Technology": [""]
+            ]
       },
       "Mughal Empire": {
-            "Environment": [""],
             "Culture": ["The majority of the population was Hindu but the state religion was Sunni Islam",
-                  "Sikhism emerged in 1469. It was influenced by Hinduism and Islam. They were initially tolerated until the reign of Aurangzeb, who had the ninth guru killed"
+                  "Sikhism emerged in 1469. It was influenced by Hinduism and Islam. They were initially tolerated until the reign of Aurangzeb, who had the ninth guru killed",
+                  "Jahan (ruled 1628 to 1658) made the Taj Mahal for his favorite wife after her death. It simultaneously was a way to legitimize him to all the religions in the empire. It appealed to Muslims because of the Quranic verses inscribed, along with the gardens, minarets, and mosque. It appealed to Hindus because the marble represented the caste system",
             ],
             "Governance": ["1526-1857",
                   "Took over the Delhi Sultanate after the Battle of Panipat in 1526, which the Mughals won even though they were outnumbered because they had gunpowder weapons",
@@ -990,14 +909,11 @@ export const countryNotes: CountryNotes = {
             "Social": ["There was religious intolerance except under Akbar",
                   "Casts were still very prevalent"
             ],
-            "Technology": [""],
             "Uncategorized": ["Akbar ruled from 1556 to 1605 at the height of the Mughal Empire. He wanted to unite Hindus and Musliims, so he was very religiously tolerant, exempting Hindus from the jizya tax. He also created a new religion called the Divine Faith (incorporating Islam, Hinduism, Zoroastrianism, Sikhism, and Christianity) but it didn't last. He also established the land grant (mansab) system in the Mughal Empire",
-                  "Jahan (ruled 1628 to 1658) made the Taj Mahal for his favorite wife after her death. It simultaneously was a way to legitimize him to all the religions in the empire. It appealed to Muslims because of the Quranic verses inscribed, along with the gardens, minarets, and mosque. It appealed to Hindus because the marble represented the caste system",
                   "Aurangzeb (ruled 1658-1707) was very religiously intolerant. He had the ninth Sikh guru killed"
             ]
       },
       "Safavid Empire": {
-            "Environment": [""],
             "Culture": ["The state religion was Shi'a Islam, which the government used as a unifying force",
                   "They were surrounded by Sunni Muslims on both sides (the Ottomans and Mughals)",
                   "They believed in the Hidden Imam (the 12th descendent of Ali who would return on a judgment day), and they had a Shah as a placeholder for the Hidden Imam",
@@ -1016,21 +932,16 @@ export const countryNotes: CountryNotes = {
             ],
             "Social": ["They were religiously intolerant",
                   "Women had property rights, but were restricted to certain areas in their houses",
-            ],
-            "Technology": [""]
+            ]
       },
       "Songhai Kingdom": {
-            "Environment": [""],
             "Culture": ["Muslim"],
             "Governance": ["Defeated by the Moroccans in the Battle of Tondibi in 1591. The Moroccans invaded because they wanted the gold in Songhai territory. The Songhai greatly outnumbered the Moroccans and even had cattle to trample them, but they lost because they didn't have firearms. As a result, they had to pay tribute to Morocco with slaves and goods",
                   "Built off the fuondation created by the Ghana and Mali Empires", // econ?
             ],
             "Economy": ["Exported slaves, gold and the kola nut. They faciltated trade of textiles, hardware, and weapons"],
-            "Social": [""],
-            "Technology": [""]
       },
       "Russia 1380-1917": {
-            "Environment": [""],
             "Culture": ["Eastern Orthodox, but Muslim in steppes",
                   "Religously tolerant until the end when they wanted to promote a uniform Russian identity"
             ],
@@ -1041,13 +952,12 @@ export const countryNotes: CountryNotes = {
                   "Peter the Great ruled from 1682 to 1725. He was known as the \"Defender of Orthodoxy\" and was at first in favor with the church until he tried to reform it too much (tried to make it answer to him). He divided Russia into provinces and made provincial officials. He moved the capital from Moscow to St. Petersburg and reintegrated Russia with Western Europe. He was known for copying Western Europe (especially French) things, including technology, tolerance, and trade, but not democracy",
                   "In 1774, a cossack named Yemelyan Pugachev started the Pugachev Rebellion against Catherine the Great. The movement aimed to gain more rights for serfs, but was defeated by the Russian army, and Catherine doubled down on oppressing the peasants"
             ],
-            "Economy": ["Exported furs"],
-            "Social": ["Social hierarchy: Boyars (land-owning nobles), then merchants, then peasants (who were often driven into debt and serfdom",
-                  "Built railroads like the Trans-Siberian Railroad to allow for easier trade and transport between the east and west of Russia"
+            "Economy": ["Exported furs",
+                  "Mainly produced agricultural products like wheat until Communism, when they began producing more coal, iron, and steel"
             ],
-            "Technology": [""],
-            "Uncategorized": ["Serfdom ended in 1861",
-                  "Mainly produced agricultural products like wheat until Communism, when they began producing more coal, iron, and steal"
+            "Social": ["Social hierarchy: Boyars (land-owning nobles), then merchants, then peasants (who were often driven into debt and serfdom",
+                  "Built railroads like the Trans-Siberian Railroad to allow for easier trade and transport between the east and west of Russia",
+                  "Serfdom ended in 1861"
             ]
       },
       "Qing Dynasty": {
@@ -1058,6 +968,7 @@ export const countryNotes: CountryNotes = {
             "Governance": ["1644-1911",
                   "Founded by Manchus who had allied with the Ming Dynasty, then took control",
                   "Expanded to Mongolia, Taiwan, and Tibet",
+                  "The British sent the Macartney Mission in 1792 to show more interest in the Qing Dynasty and to renegotiate the Canton system, but they failed",
                   "The White Lotus Rebellion (1796-1804) weakened the Qing Dynasty",
                   "Declined to to corruption, lack of investment in infrastructure, and too much expansion so they were unable to control their territory (as they expanded, they didn't increase the number of government officials)",
                   "The Taiping Rebellion (1850-1864) was an internal uprising led by Hong Xiuquan. He was angry because he had failed the Civil Service Exam and believed that he was the brother of Jesus. He gathered people to rebel against the Qing Empire, saying that they hadn't solved the opium addiction or famine problems. In the end, they were defeated by the Qing Dynasty with help from the Europeans (who wanted the Qing dynasty weak but not dissolved), but the uprising showcased the government's weakness",
@@ -1066,23 +977,18 @@ export const countryNotes: CountryNotes = {
                   "During the Hundred Days of Reform in 1898, the government tried to eliminate corruption by stopping the Civil Service exam, which had become corrupt, and instituting a constitutional monarchy and parliament. It also established Western industrial, commercial, and medical systems",
                   "In 1898, the emperor's aunt Empress Dowager Cixi took power in a coup d'état. She was very conservative, being afraid of foreign influence, and undid all the work that the Emperor had done during the Hundred Days of Reform, stopping work on railroads and telegraph lines, and reinstating the Civil Service Exams. By the end of her reign, she realized how corrupt the Civil Service Exams were and removed them again",
                   "The Boxer Rebellion in 1900 was a movement against foreign influence. An anti-imperialist group called the Boxers, supported by Empress Cixi, attacked foreigners and Christians, but were eventually defeated",
-                  "The dynasty collapsed in 1911, and was replaced by the Republic of China"
+                  "The dynasty collapsed in 1911, and was replaced by the Republic of China",
             ],
             "Economy": ["Limited foreign trade to one city per foreign place - European trade was limited to Canton. The Dutch (through the VOC) were able to trade more, until they were replaced by the British (through the EIC)",
+                  "Imported a lot of silver which led to silver inflation",
                   "The British wanted tea from China but didn't have anything the Qing Dynasty wanted, so they began importing opioids",
-                  "Imported a lot of silver which led to silver inflation"
+                  "The British importing opium led to the Opium Wars (1839-1842 and 1856-1860). China asked them to stop but they refused, leading to wars. The first war ended in 1842 with the Treaty of Nanking, where Britain forced free trade, got first nation trading status, opened 4 more ports, received control of Hong Kong, and got extraterritorial rights (British merchants don't have to obey Chinese laws). War broke out again in 1856 and ended in 1960 with the Treaty of Tientsin, where the British got more ports, envoys in Beijing, freedom of movement for Christian missionaries, part of the Kowloon Peninsula, and legalized opium"
             ],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": ["The British sent the Macartney Mission in 1792 to show more interest in the Qing Dynasty and to renegotiate the Canton system, but they failed",
-                  "Emperor Kangxi (ruled from 1662 to 1722) expanded to Mongolia, made the 1689 Treaty of Nerchinsk with Russia, improved infrastructure, supported the Jesuits and included them as advisors, and was very popular with the people as he portrayed himself as a Confucian scholar. He commissioned the Nanxuntu, which displayed him visiting Southern cultural and economic centers",
+            "Uncategorized": ["Emperor Kangxi (ruled from 1662 to 1722) expanded to Mongolia, made the 1689 Treaty of Nerchinsk with Russia, improved infrastructure, supported the Jesuits and included them as advisors, and was very popular with the people as he portrayed himself as a Confucian scholar. He commissioned the Nanxuntu, which displayed him visiting Southern cultural and economic centers",
                   "Emperor Qianlong (ruled from 1736 to 1796) portrayed himself as a Universal Ruler, appealing to Buddhists by portraying himself as a bodhisattva, and appealing to Confucians through commissioning Nanxuntu, similar to Kangxi. Under him, the bureaucracy became more corrupt",
-                  "Opium Wars" // need more detail
             ]
       },
       "United States 1750-1920": {
-            "Environment": [""],
-            "Culture": [""],
             "Governance": ["Started fighting for independence in 1775.",
                   "At first they were losing until they gained French support",
                   "They won in 1783 with the Treaty of Paris",
@@ -1093,26 +999,28 @@ export const countryNotes: CountryNotes = {
                   "Sent troops to try to stop the Bolsheviks from taking over during the Russian Civil War"
             ],
             "Economy": ["Began industrializing after the Civil War, and became a leading manufacturer of steel, oil, and automobiles by the early 1900s. Their industrialization was especially successful because they had a lot of human capital as people would immigrate tothe US due to political or economic problems in their home countries"],
-            "Social": [""],
-            "Technology": [""],
             "Uncategorized": ["The expansion of railroads connected markets and facilitated westward expansion, often at the expense of the Indigenous peoples",]
 
       },
        "United States 1920-Present": {
-            "Environment": [""],
-            "Culture": [""],
             "Governance": ["The U.S. entered World War II after the attack on Pearl Harbor in 1941, becoming a global superpower after the war",
-                  "During the Cold War, the US led the Western bloc against the Soviets"
+                  "During the Cold War, the US led the Western bloc against the Soviets",
+                  "One of the permanent members of the UN Security Council",
+                  "Power shifted from Europe to the US in the early 1900s",
+                  "Made the Truman Doctrine in 1947 supporting a policy of containing communism in Turkey, where the USSR wanted military bases to control Dardanelles, and Greece, where communist groups almost took control of the government",
+                  "The USSR and the US had a fairly diplomatic relationship during the last decades of the Cold War, after the Cuban Missile Crisis. This period was known as détente. In 1972, President Nixon even visited the Soviet Union to sign the Strategic Arms Limitation Treaty freezing the number of intercontinental ballistic missiles. The US also began to sell grain to the USSR when they had a shortage due to a drought. The period of détente ended in 1979 when President Carter stopped selling grain.",
+                  "Tensions rose again in the 1980s",
             ],
             "Economy": ["The interwar period saw economic boom in the 1920s, followed by the Great Depresssion beginning in 1929",
-                  "The New Deal programs under Franklin D. Roosevelt expanded the federal government's role in the economy"
+                  "The New Deal programs under Franklin D. Roosevelt expanded the federal government's role in the economy. The policies aimed to bring relief for citizens, recovery to bring the nation out of depression, and reform to prevent economic depressions in the future. The government used deficit spending to deal with economic problems and stimulate economic activity. They also started FDIC, which ensured that the government could pay citizens back if the bank collapsed. The economy was recovering until FDR thought that the government deficit was too big and tried to reverse some of his actions, and the economy got worse again",
+                  "The US made the Marshall Plan in 1947, where they offered $12 million to European countries to modernize, reduce trade barriers, and improve infrastructre, since they thought that there would be more communist revolutions if the economy was unstable"
             ],
-            "Social": [""],
-            "Technology": [""]
+            "Social": ["Demonstrations for women's and African Americans' rights"],
+            "Technology": ["Developed the atomic bomb",
+                  "Landed the first man on the moon in 1969"
+            ]
       },
       "France 1750-1920": {
-            "Environment": [""],
-            "Culture": [""],
             "Governance": ["Louis XVI called the Estates General in 1789 because he wanted to start taxing nobles to get more money, but as the nobles essentially had 2 of the 3 votes, they avoided the tax. The bourgeoisie were angry that they only had one vote so they formed the National Assembly which pushed for a constitutional monarchy",
                   "The commoners stormed the Bastille on July 14, 1789. In October, they stormed Versailles and made the king make the monarchy constitutional (they didn't want to kill him, they only wanted him to make things better)",
                   "Became the First French Republic (constitutional monarchy) in 1792. Monarch power was limited, and the National Assembly had a lot of power. They stopped feudalism and made the Declaration of the Rights of Man and Citizen. The King was unhappy with this new government and tried to veto a lot of things",
@@ -1123,14 +1031,9 @@ export const countryNotes: CountryNotes = {
                   "Fought with th Allies during World War I"
             ],
             "Economy": ["Began industrializing in the 1850s, but it wasn't as successful because the cities had smaller populations, they had no iron or coal deposits, and France had a lot of wars with their neighboring countries"],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": ["Started the French Revolution because all the money and taxes were going to the nobles and higher class, and they had lost a lot of money from wars such as the American Revolution and the Seven Years' War. The estate system was very unfair to the majority of the population who had to pay a 50% tax and were only represented as 1/3 in the government.",
-            ]
+            "Social": ["Started the French Revolution because all the money and taxes were going to the nobles and higher class, and they had lost a lot of money from wars such as the American Revolution and the Seven Years' War. The estate system was very unfair to the majority of the population who had to pay a 50% tax and were only represented as 1/3 in the government."],
       },
       "Saint Domingue/Haiti": {
-            "Environment": [""],
-            "Culture": [""],
             "Governance": ["Had been under French control",
                   "The revolution started in 1792 and continued to gain more people. Toussaint L'Ouverture, who became the leader of the revolution, joined the movement in 1794. They allied with the Spanish and then drove out the Spanish and British",
                   "In 1801, Toussaint L'Ouverture established the Haitian government and constitution, creating equal rights and citizenship, and abolishing slavery and racism. However, he made himself the governor for life and gave himself all the power",
@@ -1138,53 +1041,32 @@ export const countryNotes: CountryNotes = {
                   "Even after the revolution, Haiti was unrecognized by most countries and had to pay France reparations, leading to them being a very poor country",
                   "They were the first and only Black-led nation to get rid of colonial power" //?
             ],
-            "Economy": [""],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": ["Their revolution was inspired by the French Revolution and Enlightenment ideas. All the people wanted more rights (it wasn't about slavery yet)"]
+            "Social": ["Their revolution was inspired by the French Revolution and Enlightenment ideas. All the people wanted more rights (it wasn't about slavery yet)" // maybe gov?
+            ],
       },
       "Brazil": {
-            "Environment": [""],
-            "Culture": [""],
             "Governance": ["In 1807, Napoleon invaded Portugal, so to escape, the Portuguese royal family fled to Brazil. The king wanted to return, but the creoles loved having their own government in the country, so Prince Pedro remained in Brazil while the King went back to Portugal",
                   "Brazil declared independence from Portugal in 1822 under Dom Pedro I. It maintained a monarchy until 1889, when it became a republic.",
-                  "Brazil fought against Paraguay in the Paraguayan/Triple Alliance War from 1864-1870. Brazil's army heavily relied on slaves who fought in exchange for their freedom. This accelerated the abolitionist movement in Brazil, leading to the abolition of slavery in 1888"
+                  "Brazil fought against Paraguay in the Paraguayan/Triple Alliance War from 1864-1870. Brazil's army heavily relied on slaves who fought in exchange for their freedom. This accelerated the abolitionist movement in Brazil, leading to the abolition of slavery in 1888",
+                  "Brazil participated in World War II on the Allied side, sending troops to fight in Italy.",
+                  "Political crises after World War II"
             ],
-            "Economy": ["Brazil's economy relied heavily on coffee exports"],
-            "Social": ["Slavery persisted until 1888"],
-            "Technology": [""],
-            "Uncategorized": ["The 20th century saw industrialization, urbanization, and periods of authoritarian rule. Brazil participated in World War II on the Allied side, sending troops to fight in Italy. Later decades brought both economic growth and political crises"]
+            "Economy": ["Brazil's economy relied heavily on coffee exports",
+                  "Economic growth after World War II"
+            ],
+            "Social": ["Slavery persisted until 1888"]
       },
-      "Mexico 1885-?": {
-            "Environment": [""],
-            "Culture": [""],
-            "Governance": ["Became a republic in 1821 with Iturbide, a creole general, as king, although he was eventually kicked out of Mexico and killed",
+      "Mexico 1885-Present": {
+            "Governance": ["Wanted independence because of enlightenment ideals, and they didn't like mercantilism. Padre Miguel Hidalgo was one of the leaders of the revolution, and he was very liberal. He wanted land redistribution, and the abolition of the castas system and slavery.",
+                  "Became a republic in 1821 with Iturbide, a creole general, as king, although he was eventually kicked out of Mexico and killed",
                   "The Mexican Revolution (1910-1920) overthrew the dictatorship of Porfirio Díaz, leading to land reforms and a new constitution",
-                  "The country experienced one-party rule under the PRI for much of the 20th century, with gradual democratization in the late 1900s."
+                  "The country experienced one-party rule under the PRI for much of the 20th century, with gradual democratization in the late 1900s.",
+                  "The 19th century was marked by political instability, foreign interventions, and territorial loss to the United States."
             ],
             "Economy": ["Mexico nationalized its oil industry in 1938, asserting economic sovereignty"],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": ["Wanted independence because of enlightenment ideals, and they didn't like mercantilism. Padre Miguel Hidalgo was one of the leaders of the revolution, and he was very liberal. He wanted land redistribution, and the abolition of the castas system and slavery.",
-                  "The creoles wanted more rights, so they kept switching sides to suit their wants. At first, they were against the peninsulares because they wanted more power, but then Hidalgo's followers would attack both peninsulares and creoles so the creoles sided with the peninsulares. Then, in 1820, the Spanish government got rid of the castas system. The creoles wanted to still be at the top of the hierarchy so they switched sides against the peninsulares and Spain.",
-                  "The 19th century was marked by political instability, foreign interventions, and territorial loss to the United States."
-            ]
-      },
-      "Philippines": {
-            "Environment": [""],
-            "Culture": [""],
-            "Governance": ["Was a Spanish colony since 1571",
-                  "Education was limited in the Philippines, so wealthy people would go to Europe for education, where they gained access to Enlightenment ideas. When they returned to the Philippines, they began publishing books about these Enlightenment ideas. One of these people, José Rizal, started the Propaganda Movement, which aimed for more autonomy, and was arrested and executed in 1896, sparking a revolutionary movement.",
-                  "At the same time, the Spanish were fighting the Spanish-American War (1898-1899). When the Spanish lost, they had to sell the Philippines, Puerto Rico, and Guam to the US.Then the Philippines fought the Philippine-American War for independence in 1899, but lost.",
-                  "They finally gained independence in 1946 after World War II",
-                  "Anti-communist"
-            ],
-            "Economy": ["Was a stopping point for silver on the way from the Americas to China"],
-            "Social": [""],
-            "Technology": [""],
+            "Social": ["The creoles wanted more rights, so they kept switching sides to suit their wants. At first, they were against the peninsulares because they wanted more power, but then Hidalgo's followers would attack both peninsulares and creoles so the creoles sided with the peninsulares. Then, in 1820, the Spanish government got rid of the castas system. The creoles wanted to still be at the top of the hierarchy so they switched sides against the peninsulares and Spain."],
       },
       "Italy": {
-            "Environment": [""],
             "Culture": ["Catholic"],
             "Governance": ["Count di Cavour, the prime minister of the largest state in Italy (Piedmont-Sardinia) used nationalism to help unite Italy. He went to war against Austria for more territory, simultaneously fostering nationalism as other city-states joined his side.",
                   "Unified in 1861",
@@ -1205,50 +1087,44 @@ export const countryNotes: CountryNotes = {
                   "Had a lot of poverty in the 1800s, leading to a lot of emigration, which was encouraged by the 1853 constitution",
                   "Mussolini used corporatism, where companies that were already successful got additional benefits from the government. Worker rights and labor unions were also severely limited"
             ],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": ["Many immigrated to the US, South America (especially Argentina under work contracts), Australia, and New Zealand"]
+            "Social": ["Many immigrated to the US, South America (especially Argentina under work contracts), Australia, and New Zealand"],
       },
       "Germany 1850-1920": {
-            "Environment": [""],
-            "Culture": [""],
             "Governance": ["Otto von Bismarck led German unification. He supported the king of Prussia, the largest and strongest German state. He was very conservative and wanted to keep monarch power. To unite Germany, he tricked other countries into declaring war on Prussia (eg. Seven Weeks' War in 1866 against Austria), then asked other German states to help Prussia, creating a sense of nationality.",
                   "In 1870, Prussia invaded France in the Franco-Prussian War. Being more industrialized and populated, they captured Napoleon III (different from Bonaparte) and forced the French to surrender. This led to the last Catholic German states joining Prussia, and forming Germany in 1871, with the king of Prussia becoming the king of Germany.",
                   "After unification, Otto von Bismarck wanted to keep the peace (and stop France from retaliating after the Franco-Prussian War), so he allied Germany with Russia and Austria-Hungary. This alliance contributed to the escalation of World War I.",
             ],
             "Economy": ["Was the world leader in steel and coal production"],
-            "Social": [""],
-            "Technology": [""],
       },
       "England 1750-present": {
-            "Environment": [""],
-            "Culture": [""],
             "Governance": ["Britain expanded its empire to secure raw materials and markets, using its naval dominance to control global trade routes."],
             "Economy": ["Got cotton, wool, jute, vegetable oil, rubber, coffee, cocoa, meat, and butter from their colonies",
                   "England was able to industrialize first in the 1760s because it had proximity to waterways, allowing it to import and export goods easily, access to coal and iron, large cities, agricultural productivity due to the agricultural revolution, access to foreign resources through colonies, accumulation of capital, legal protection of private property, and political stability.",
                   "Flooded the markets of its competitors. India had been the main producer of cotton, but Britain wanted people to buy British cotton. They began mass production of cotton cloth using their industrialized factories, and imported their cotton to Indian markets, where people would buy the cheaper British cotton rather than the Indian cotton, while also taxing Indian cloth to discourage British from buying Indian cloth. They did the same process in Egypt.",
             ],
-            "Social": [""],
             "Technology": ["During the industrial revolution, they developed the spinning jenny, which could spin more than one thread at a time, the water frame, which could power a spinning wheel using water. Textile production began to move to factories instead of homes. They also developed the specialization of labor, leading to the assembly line in the early 1900s.", // econ?
                   "Developed the steam engine, the most important invention of the first industrial revolution. It powered factories, so they didn't need to be next to water anymore and could be in more convenient places, as well as steam boats and locomotives, leading to more efficient transportation."
             ],
       },
       "Egypt": {
-            "Environment": [""],
-            "Culture": [""],
             "Governance": ["Controlled by Mamluks until 1516, when it was taken over by the Ottomans. In 1798, Napoleon took control of Egypt for France but withdrew in 1801. The Ottomans wanted Egypt back so they sent a general Muhammad Ali to regain control. Muhammad took power as governor, still technically in the Ottoman Empire but fairly independent.",
                   "Muhammad Ali reformed Egypt and industrialized by taking land from Muslim religious institutions and imposing high cotton taxes that forced peasants to give up their land to the state. The government used this land to grow cotton.",
                   "Muhammad Ali also built a strong European-style military",
                   "England took power in 1882 during the Anglo-Egyptian War",
-                  "Suez Canal" // more detail
+                  "Became nominally independent in 1922, but Britian still controlled the Suez Canal and had treaty rights. In 1936 the Anglo-Egyptian treaty gave more independence, but the British still kept the Suez Canal and some influence in Egypt",
+                  "In 1952, Gamal Abdel Nasser and others overthrew the king in a coup and established the Republic of Egypt",
+                  "Nasser was socialist. Part of his reforms included land reforms, reserving half of the seats in elected bodies for peasants, taxing the wealthy, making a salary cap, raising minimum wage, reducing the work week, and nationalizing industries",
+                  "Nasser tried to nationalize the Suez Canal in 1956, which the British still had control over, leading to the Suez Crisis. France and Britain had Israel invade Egypt, then they occupied the area around the Canal. The US and Soviets supported Egypt in the crisis and threatened economic sanctions and the use of nuclear weapons. The crisis was resolved in the UN, making the canal international with Egyptian sovereignty.",
+                  "Egypt was non-aligned in the Cold War and got support from both the US and the Soviets. Eventually they aligned more with the US"
             ],
-            "Economy": ["Muhammad Ali used protective tariffs, making imports more expensive to encourage his people to buy domestic products instead of foreign things. Britain disliked this, so when Muhammad Ali's sons went to war against the Ottomans in an attempt to take over the Ottoman Empire, Britain supported the Ottoman Empire and defeated Egypt. They forced Egypt to stop their protective tariffs, then flooded the market so Egyptian markets couldn't compete. Egypt started to only export cotton and import British goods."],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": [""]
+            "Economy": ["Muhammad Ali used protective tariffs, making imports more expensive to encourage his people to buy domestic products instead of foreign things. Britain disliked this, so when Muhammad Ali's sons went to war against the Ottomans in an attempt to take over the Ottoman Empire, Britain supported the Ottoman Empire and defeated Egypt. They forced Egypt to stop their protective tariffs, then flooded the market so Egyptian markets couldn't compete. Egypt started to only export cotton and import British goods.",
+                  "Land reforms",
+                  "Socialist (not communist though)"
+            ],
+            "Uncategorized": ["The Suez Canal was funded by the British and was built by Egyptian corvée laborers (they were unpaid and had to work as taxation). It was finished in 1869",
+]
       },
       "Japan 1853-present": {
-            "Environment": [""],
             "Culture": ["Began adopting Western culture, including clothing, hairstyles, garden parties, and dances"],
             "Governance": ["Isolationist until 1853, when American Commodore Matthew Perry demanded that Japan trade with the US, threatening them with warships",
                   "There was a civil war, as some people wanted to fight the West to preserve their culture, and others were scared of a situation like the Opium Wars in China, and they didn't believe they could win against teh west, so they proposed to protect Japan by working with the West. This led to the end of the Tokugawa Shogunate and isolationism",
@@ -1260,50 +1136,32 @@ export const countryNotes: CountryNotes = {
                   "Attacked Pearl Harbor in 1941 during World War II, bringing the US into the war",
             ],
             "Economy": ["The government promoted industrialization through state-sponsored enterprises, which were later sold to private conglomerates (zaibatsu)"],
-            "Social": ["Women were not allowed in war efforts"],
-            "Technology": [""],
-            "Uncategorized": ["Began industrializing and adopting Western technology",
-                  "Many Japanese went to the US to pursue education",
+            "Social": ["Many Japanese went to the US to pursue education",
                   "Many Japanese went to the US, Australia, New Caledonia, or Fiji as contracted laborers. Many were sent to Hawaii on 3-year contracts to produce sugar and pineapple",
-                  "In 1907, the US agreed to not restrict Japanese immigration in exchange for the Japanese stopping emigration to the US. This was called the Gentlemen's Agreement. It was endded in 1924 by the Immigration Act"
-            ]
+                  "In 1907, the US agreed to not restrict Japanese immigration in exchange for the Japanese stopping emigration to the US. This was called the Gentlemen's Agreement. It was endded in 1924 by the Immigration Act",
+                  "Women were not allowed in war efforts",
+            ],
+            "Technology": ["Began adopting Western technology",]
       },
       "Siam": {
-            "Environment": [""],
-            "Culture": [""],
-            "Governance": [""],
             "Economy": ["Rapidly industrialized in response to increasing European influence in East Asia, which allowed them to avoid being taken over economically and politically like China. Implemented Western schools, added railroads, and created a bureaucracy."],
-            "Social": [""],
-            "Technology": [""]
       },
       "Ghana": {
-            "Environment": [""],
-            "Culture": [""],
             "Governance": ["One of the British-controlled territories in Africa, negotiated independence peacefully and adopted a British-style parliament.",
                   "Negotiated independence with Britain in 1957",
                   "Kwame Nkrumah was a major part of the independence movement and was elected the first president, but he immediately transitioned to authoritarian rule."],
-            "Economy": [""],
-            "Social": [""],
-            "Technology": [""]
       },
       "Kenya": {
             "Environment": ["After aggressive deforestation, Kenyan women struggled to find wood and clean water. The Green Belt Movement was formed, which continues to repopulate many Kenyan forests."],
-            "Culture": [""],
             "Governance": ["The government of Kenya was extremely oppressive when the Greenbelt Movement started in 1977, and saw large organized gatherings of women as a threat to their control. Violence was common throughout the authoritarian regime, and women who participated in the Movement were harassed and threatened."],
-            "Economy": [""],
             "Social": ["Kenya was highly patriarchal when the Greenbelt Movement started, such that women were unable to effectively influence the government even as they found that the land wasn't fully sustaining them anymore."],
-            "Technology": [""]
       },
       "Nigeria": {
-            "Environment": [""],
             "Culture": ["Strong divide between the Igbo minority and the Hausa-Fulani majority, who were grouped together by British imperialists."],
             "Governance": ["After independence from Britain, the Igbo felt that they weren't being represented by the Hausa-Fulani majority government. They attempted to secede, but their held valuable oil which the Hausa-Fulani were unwilling to part with. This resulted in a bloody civil war (Nigerian Civil War or Biafran War) that left many hundreds of thousands of civilians dead in addition to military casualties."],
             "Economy": ["Produced oil"],
-            "Social": [""],
-            "Technology": [""]
       },
       "Argentina": {
-            "Environment": [""],
             "Culture": ["Culture influenced by Italian immigrants"],
             "Governance": ["Jose de San Martin was the main Liberator in Argentina. He coordinated the wars of independence with Simon Bolivar. Bolivar was a Creole and did not have many radical intentions when it came to removing the castas system, but Jose de San Martin was set on eliminating slavery and the castas system. Bolivar eventually accepted these progressive views in order to gain more support for the revolution."],
             "Economy": ["Britain invested in Argentina's infrastructure, farming, and commodities. They ended up investing more in Argentina than they did in India, which was their own colony",
@@ -1311,16 +1169,13 @@ export const countryNotes: CountryNotes = {
                   "Export beef"
             ],
             "Social": ["Like the other Spanish colonies, there was a strict castas hierarchy."],
-            "Technology": [""]
       },
       "South Africa": {
             "Environment": ["Rich with natural resources, including diamonds and gold"],
-            "Culture": [""],
             "Governance": ["Preceded by Cape Colony and was formed in 1910", 
                   "Supported the Ovimbundu tribe during the Angolan Civil War",
                   "The Truth and Reconciliation Commission tried to establish more trust between races after the Apartheid. There were 19 public hearings exposing human rights violations. They granted amnesty to members of the apartheid regime if they testified"
             ],
-            "Economy": [""],
             "Social": ["Racial discrimination started with the Afrikaners through the use of coerced labor, and escalated under the British with segregation and forms of coerced labor other than slavery. These practices expanded during industrialization until the apartheid system was instituted in 1948",
                   "In the Apartheid system, the white minority had all the privelages while people of color were severely restricted. For example, they could only live in certain areas, and needed passbooks (identity documents) to be in \"white\" areas, and mixed marriages were forbidden.",
                   "There were many protests against apartheid but they were suppressed",
@@ -1330,45 +1185,28 @@ export const countryNotes: CountryNotes = {
             "Technology": ["Imported many laborers from India"]
       },
       "Cuba": {
-            "Environment": [""],
-            "Culture": [""],
             "Governance": ["Authoritarian rule changed hands, landing on the Communist regime of Fidel Castro.", 
                            "The U.S. was uncomfortable with a Communist dictatorship so near to them, so many assassins and the disastrous Bay of Pigs invasion were sent to try to kill Castro. It was obvious that the U.S. had supplied the weapons and training to the soldiers in the Bay of Pigs, and Castro became extremely hostile toward the U.S.", 
                            "The USSR took advantage of Castro's hatred of the U.S. and placed nuclear missiles in Cuba. The U.S. blockaded Cuba but they couldn't extract the missiles already there.", 
                            "The Cuban Missile Crisis almost resulted in nuclear war, but eventually the U.S. agreed to withdraw the nukes they put in Turkey and the USSR took back its Cuban nukes."],
-            "Economy": [""],
-            "Social": [""],
-            "Technology": [""]
       },
       "Belgium": {
-            "Environment": [""],
-            "Culture": [""],
             "Governance": ["In 1908, the Belgian government took the Congo from King Leopold II as they saw the human rights violations, but still paid him a lot of the profit",
                   "Invaded by Germany in World War I",
                   "Occupied by the Nazis during World War II starting in 1940",
                   "Was one of the first members of NATO (North Atlantic Treaty Organization) in 1949"
             ],
             "Economy": ["King Leopold II conquered the Congo Basin, and personally owned the Belgian Congo as personal property, where he essentially used slavery to harvest rubber"],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": [""]
       },
       "Chile": {
-            "Environment": [""],
-            "Culture": [""],
             "Governance": ["Chile gained independence from Spain in 1818 under Bernardo O'Higgins",
                   "Gained more territory in the War of the Pacific (1879-1883)",
                   "In 1970, Salvador Allende became president, pursuing socialist policies.",
                   "A 1973 coup brought Augusto Pinochet to power, who implemented neoliberal reforms while committing human rights abuses",
                   "Democracy was restored in 1990"
             ],
-            "Economy": [""],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": [""]
       },
       "Venice": {
-            "Environment": [""],
             "Culture": ["During the Renaissance, Venice was a center for art, architecture, and printing. They had a lot of wealth from trading which they used to sponsor artists.",],
             "Governance": ["During the 4th crusade (1202-1204), the Christians paid Venice to take the soldiers to the Middle East, but they didn't pay Venice enough, so the Venetians made the soldiers sack Zara and Constantinople before letting them continue with the crusades",
                   "It had a very strong navy",
@@ -1376,12 +1214,8 @@ export const countryNotes: CountryNotes = {
                   "It declined in the 1500s when the Portuguese found other routes to Asia so Venice didn't have a complete monopoly on the trade going to and from Asia anymore."
             ],
             "Economy": ["Important hub for Mediterranean and long-distance trade"],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": [""]
       },
       "Chola Dynasty": {
-            "Environment": [""],
             "Culture": ["Hindu",
                   "Spread Indian culture ot Southeast Asia"
             ],
@@ -1392,12 +1226,8 @@ export const countryNotes: CountryNotes = {
                   "Declined due to conflicts, too much expansion, and invasions"
             ],
             "Economy": ["Facilitated trade of spices, cotton, and textiles"],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": [""]
       },
       "Byzantine Empire": {
-            "Environment": [""],
             "Culture": ["Eastern Orthodox"],
             "Governance": ["Had a strong centralized bureaucracy",
                   "Was sacked by the crusaders (on order of the Venetians) in 1204",
@@ -1407,12 +1237,9 @@ export const countryNotes: CountryNotes = {
             "Economy": ["Controlled major trade routes from the Mediterranean to the Silk Roads",
                   "Facilitated trade of silk, glass, and luxury goods"
             ],
-            "Social": [""],
-            "Technology": [""],
             "Uncategorized": ["Capital was Constantinople which was strategically placed on key trade routes between Europe and Asia. It became one of the richest cities due to trade"]
       },
       "Ghana Empire": {
-            "Environment": [""],
             "Culture": ["Practiced traditional animism but Islam spread through trade, until most merchants and elites were Muslim in the 11th century"],
             "Governance": ["700s to 1200s",
                   "Peak of influence was in the 700s-1000s",
@@ -1425,38 +1252,24 @@ export const countryNotes: CountryNotes = {
             ],
             "Economy": ["Exported gold and ivory",
                   "Imported salt, copper, cloth, and tools"
-            ],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": [""]
+            ]
       },
       "Srivijaya Empire": {
-            "Environment": [""],
             "Culture": ["Buddhist"],
             "Governance": ["Based in Sumatra",
                   "Had a large, powerful navy",
                   "They were a maritime empire, so they focused on controlling the sea around them rather than the land",
                   "Controlled the Strait of Malacca and profited off of taxing ships going between India and China"
             ],
-            "Economy": [""],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": [""],
-            "yay": [""]
       },
       "Portugal 1200-1450": {
-            "Environment": [""],
             "Culture": ["Catholic"],
             "Governance": ["Engaged in the Reconquista, the Christian campaign to drive Muslims out of the Iberian peninsula. The Muslims were driven out of Portugal by 1249.",
                   "The monarchy began to centralize after the Reconquista"
             ],
             "Economy": ["Was less engaged in trade and focused more on agriculture and fishing"],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": [""]
       },
       "Rajput Kingdoms": {
-            "Environment": [""],
             "Culture": ["Hindi"],
             "Governance": ["Collection of Hindu warriar states",
                   "The clans within the kingdom weren't unified and were often at war with each other so they had no centralized government",
@@ -1465,8 +1278,6 @@ export const countryNotes: CountryNotes = {
             ],
             "Economy": ["Were agriculture-based"],
             "Social": ["Used the caste hierarchy"],
-            "Technology": [""],
-            "Uncategorized": [""]
       },
       "Sukhothai Kingdom": {
             "Environment": ["Rice cultivation supported population growth"],
@@ -1476,20 +1287,13 @@ export const countryNotes: CountryNotes = {
                   "Declined in the 1400s"
             ],
             "Economy": ["Participated in Indian Ocean trade"],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": [""]
       },
      "Korea 1200-1450": {
-            "Environment": [""],
             "Culture": ["Had strong Buddhist and Confucian influences"],
             "Governance": ["Had a centralized monarchy, but aristocrats and military leaders had a lot of power"],
             "Economy": ["Agriculture-based but also engaged in some trade",
                   "Paid tribute to China, especially during the Ming Dynasty"
             ],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": [""]
       },
       "Korea 1450-1750": {
             "Environment": ["Cultivated rice"],
@@ -1500,64 +1304,40 @@ export const countryNotes: CountryNotes = {
                   "Invaded by the Manchus",
                   "Became more isolationist after Japan and the Manchu invaded"
             ],
-            "Economy": [""],
             "Social": ["Social hierarchy: scholars, officials, then peasants, then slaves"],
-            "Technology": [""],
-            "Uncategorized": [""]
       },
       "Korea 1750-1900": {
-            "Environment": [""],
             "Culture": ["European Catholic missionaries converted some people to Christianity, but they were persecuted"],
             "Governance": ["Corruption and peasant revolts weakened the state",
                   "Paid tribute to China",
                   "Remained more isolationist",
                   "Under Japanese influence since the 1890s"
             ],
-            "Economy": [""],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": [""]
       },
       "Korea 1900-1945": {
-            "Environment": [""],
-            "Culture": [""],
             "Governance": ["Began trying to modernize in the early 1900s by reforming school and adopting Western technology",
                   "Ruled by Japan as a colony starting in 1910. They won Korea from China in the Sino-Japanese War.",
                   "The Japanese used forced labor suppressed Korean culture",
                   "The March 1st Movement in 1919 were protests against Japanese control. They were angry about the Korean Emperor mysteriously dying and blamed it on the Japanese. The Japanese killed thousands ands suppressed the movement. This movement showed the rise of nationalims in Korea."
             ],
-            "Economy": [""],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": [""]
       },
       "South Korea": {
-            "Environment": [""],
             "Culture": ["Developed Kpop"],
-            "Governance": [""],
             "Economy": ["Became one of the Asian Tigers, following the Japanese economic model, with Hong Kong, Singapore, and Taiwan. They were able to reduce a lot of poverty in their country",
                   "Allied with the US during the Cold War"
             ],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": [""]
       },
       "Morocco": {
-            "Environment": [""],
             "Culture": ["Muslim",
-                  "All the Muslim nations at the time believed their version of Islam was the best and most pure"
+                  "All the Muslim nations at the time believed their version of Islam was the best and most pure",
+                  "Ibn Battuta, from Morocco, traveled through the Muslim world in the early 14th century and wrote his book \"A Gift to Those Who Contemplate the Wonders of Cities and the Marvels of Traveling\""
             ],
             "Governance": ["Sent their army to take the gold fields in Songhai. Half of the army died while traveling over the desert, and they were vastly outnumbered. However, at the Battle of Tondibi in 1591, they won against the Songhai because they had guns."],
             "Economy": ["Lost money after defeating the Portuguese in 1578",
                   "After the Battle of Tondibi, they extracted a tribute of slaves and goods and were able to tax merchants in Western Sudan for centuries"
             ],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": ["Ibn Battuta, from Morocco, traveled through the Muslim world in the early 14th century and wrote his book \"A Gift to Those Who Contemplate the Wonders of Cities and the Marvels of Traveling\"",
-            ]
       },
       "Portuguese Territory": {
-            "Environment": [""],
             "Culture": ["Spread Catholicism through missionaries"],
             "Governance": ["From 1450-1750, the Portuguese was a trading post empire, not a land-based one",
                   "Their empire declined after 1750",
@@ -1565,15 +1345,12 @@ export const countryNotes: CountryNotes = {
             ],
             "Economy": ["Traded spices, slaves, sugar, and silver"],
             "Social": ["Slaves in some Portuguese territories could be freed through manumission, where the owner would go to court and free their slaves, but they would often pay to be able to do this."],
-            "Technology": [""],
-            "Uncategorized": [""]
       },
       "British Territory": {
             "Environment": ["Produced cotton (13 colonies), palm oil (Africa), sugar (Caribbean), gold and diamonds (South Africa), tea, rum, indigo, rubber, and opium",
                   "Led to mass deforestation, soil exhaustion from monocultures",
                   "Major famines occured as farmers were forced to grow cash crops instead of subsistence farming"
             ],
-            "Culture": [""],
             "Governance": ["The 1663 Gloucester County Rebellion in Virginia was the first recorded slave revolt, although they never got a chance to revolt as a servant betrayed their plans",
                   "Metacom's War (1675-1678) was the Natives' last effort to drive out the British",
                   "1676 Bacon's Rebellion in Virginia. Freed indentured servants were angry about the lack of land available to them so they rebelled and burned Jamestown to the ground",
@@ -1585,10 +1362,9 @@ export const countryNotes: CountryNotes = {
             "Social": ["Used chatttel slavery, especially in the Caribbean and in the South of the 13 colonies",
                   "Slavery was abolished in British colonies in 1912",
                   "Indentured servitude declined in British colonies in the 1700s but only stopped in 1916",
-                  "Contract laborers were used by the British. This recruited people, often Chinese or Indian, to work. They weren't considered property but they were still exploited and paid through subsistence wage. This system stopped in 1855."
+                  "Contract laborers were used by the British. This recruited people, often Chinese or Indian, to work. They weren't considered property but they were still exploited and paid through subsistence wage. This system stopped in 1855.",
+                  "Some colonies were penal colonies, where they sent convicts from Britain and forced them to work for settlers or for the government. Convicts could earn freedom after a certain amount of years of work, but they often stayed in the colony. This practice stopped in 1850" // gov?
             ],
-            "Technology": [""],
-            "Uncategorized": ["Some colonies were penal colonies, where they sent convicts from Britain and forced them to work for settlers or for the government. Convicts could earn freedom after a certain amount of years of work, but they often stayed in the colony. This practice stopped in 1850"],
             "British Raj": ["British colony from 1858-1947",
                   "The British officially took control of India after the Sepoy Rebellion in 1858, forming the British Raj and ending the rule of the British East India Company",
                   "Indian soldiers fought for Britain in both World Wars.",
@@ -1669,8 +1445,6 @@ export const countryNotes: CountryNotes = {
                   "Used indentured servants in Louisiana",
                   "Relied on native alliances for fur trade so kept better relations with them"
             ],
-            "Technology": [""],
-            "Uncategorized": [],
             "French Indochina": ["Composed of modern-day Cambodia, Laos, and Vietnam",
                   "Spread Catholicism",
                   "Grew rubber as a cash crop",
@@ -1681,42 +1455,37 @@ export const countryNotes: CountryNotes = {
                   "Colony expanded by Samuel de Champlain in 1609-1616",
                   "Engaged in fur trade",
                   "Facilitated the spread of Catholicism",
-                  "The French were driven out of Canada and the rest of the US after the 7 Years War in 1763 and was transferred to the British",]
+                  "The French were driven out of Canada and the rest of the US after the 7 Years War in 1763 and was transferred to the British",
+            ],
+            "West Africa": ["From 1915-1916, villages in French West Africa united to drive out the French, but they were defeated",
+                  "In 1917, railroad workers organized a strike",
+                  "In 1946 there was a labor strike"
+            ]
       },
       "Dutch Territory": {
             "Environment": ["Produced tea, rubber, and sugar as cash crops",
                   "Because of the emphasis of cash crops, rice cultivation was limited, which was hard for farmers who needed rice"],
-            "Culture": [""],
             "Governance": ["Started as a trading-post empire",
                   "In the Indian Ocean, they violently suppressed local rulers to gain power"
             ],
             "Economy": ["The Dutch East India Company (VOC) was founded in 1602. It was a joint-stock company, promoting economic risks because of limited liability. This allowed the Dutch Empire to expand in the Indian Ocean and gain a monopoly over spice trade in the 1600s",
                   "Produced rubber and tin as well as cash crops",
-                  "The Dutch East India Company was declared bankrupt and dissolved in 1799,"
-            ],
-            "Social": ["Had slavery on plantations"],
-            "Technology": [""],
-            "Uncategorized": ["Chinese laborers were imported to the Dutch East Indies",
+                  "The Dutch East India Company was declared bankrupt and dissolved in 1799,",
+                  "Chinese laborers were imported to the Dutch East Indies",
                   "The culture system was a form of coerced labor, where people had to set aside 1/5 of their land to grow cash crops as a tax. If they couldn't pay for any reason, their land was taken or they were taken as corvée laborers and were forced to do unpaid work as taxation."
             ],
+            "Social": ["Had slavery on plantations"],
             "Cape Colony": ["Established by the Dutch East India Company (VOC) in 1652"]
       },
       "Spain 1750-Present": {
-            "Environment": [""],
-            "Culture": [""],
             "Governance": ["Many of their colonies in Latin America gained independence in the early 1800s",
                   "Fought the Spanish-American War (1898-1899), and lost. They had to give Cuba and the Philippines to America. This marked the end of Spain as a global empire",
                   "The Civil War in 1936-1939 led to Francisco Franco's dictatorship (1939-1975)",
                   "After Francisco Franco's dictatorship, Spain transitioned to democracy"
             ],
-            "Economy": [""],
             "Social": ["Encomienda died out, replaced with the hacienda system"],
-            "Technology": [""],
-            "Uncategorized": [""]
       },
       "Portugal 1750-Present": {
-            "Environment": [""],
-            "Culture": [""],
             "Governance": ["Invaded by Napoleon in the 1807, causing the monarchy to flee to Brazil until he was defeated",
                   "Brazil gained independence in 1822"],
             "Economy": ["Portugal fostered the Trans-Atlantic Slave trade until the 1800s",
@@ -1725,23 +1494,15 @@ export const countryNotes: CountryNotes = {
             "Social": ["Slavery was very prevalent, especially in Brazil",
                   "Slavery was abolished in 1869"
             ],
-            "Technology": [""],
-            "Uncategorized": [""]
       },
       "Paraguay": {
-            "Environment": [""],
-            "Culture": [""],
             "Governance": ["Had been part of the Viceroyalty of the Río de la Plata with Argentina, Uruguay, and Bolivia",
                   "Gained independence in 1811",
                   "In the 1860s, Paraguay established protective tariffs to aim for economic self-sufficiency, which angered Brazil, Argentina, and Uruguay. This escalated to the Paraguayan War, or the War of the Triple Alliance (1864-1870). Paraguay lost the war, losing a lot of its territory and population."
             ],
             "Economy": ["Economy based on agriculture and cattle"],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": [""]
       },
       "Asante Kingdom": {
-            "Environment": [""],
             "Culture": ["The Golden Stool was sacred to them, as it symbolized national unity and the Asante spirit"],
             "Governance": ["The Asante kingdom emerge in the late 1600s",
                   "After Britain abolished slave trade, they became interested in taking control of the Asante kingdom as a colony",
@@ -1751,93 +1512,54 @@ export const countryNotes: CountryNotes = {
             "Economy": ["Engaged in slave trade with Britain",
                   "Produced gold"
             ],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": [""]
       },
       "Liberia": {
-            "Environment": [""],
-            "Culture": [""],
             "Governance": ["Founded in 1822 by the US as a way to relocate African Americans and freed slaves to Africa",
                   "It wasn't technically a colony but it was under US influence",
                   "Declared independence in 1847, but it ws still very dependent on the US"
             ],
             "Economy": ["Produced rubber"],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": [""]
       },
       "Bolivia": {
-            "Environment": [""],
-            "Culture": [""],
             "Governance": ["Was part of the Viceroyalty of Peru, then the Viceroyalto of Río de la Plata until they declared independence in 1825",
                   "Faced a lot of political instability",
                   "Owned part of the Atacama dessert until the 1879 War of the Pacific where Chile, indirectly backed by Britain, took Bolivia's Atacama desert territory"],
             "Economy": ["Produced tin and silver",
                   "Wanted land reform in the 1900s", // gov? soc?
             ],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": [""]
       },
       "Greece": {
-            "Environment": [""],
-            "Culture": [""],
             "Governance": ["The Enlightenment led to Greek nationalism when they were a part of the Ottoman Empire",
                   "Achieved independence from the Ottoman Empire in 1827 withthe support of the British, French, and Russians",
                   "Fought with the Allies in World War I",
                   "Some Communist groups almost took control of the government, leading to the US issuing the Truman Doctrine in 1947 to limit the spread of communism in Greece and Turkey"
             ],
-            "Economy": [""],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": [""]
       },
       "Sokoto Caliohate": {
-            "Environment": [""],
             "Culture": ["Muslim"],
             "Governance": ["Founded by Usman dan Fodio, in 1804 to purify Islam",
                   "The British took over in 1903"
             ],
             "Economy": ["Engaged in slave trade, which suffered as Britain would stop slave ships and take the slaves to be freed in Sierra Leone"],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": [""]
       },
       "German Territory": {
             "Environment": ["Grew cocoa, cotton, coffee, rubber"],
-            "Culture": [""],
             "Governance": ["Used military to police and suppress resistance",
                   "Germany lost all its colonies after the World War I and the Treaty of Paris"
             ],
             "Economy": ["Used forced labor and exploitation"],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": [""]
       },
       "Armenia": {
-            "Environment": [""],
-            "Culture": [""],
             "Governance": ["In the Ottoman Empire, Sultan Abdulhamid stopped the Tanzimat Reforms in 1876. Additionally, a group called the Young Turks wanted to make the entire Ottoman Empire Muslim. This angered Armenians, who were Christian",
                   "This led to the Armenian Genocide (1894-1896). The Ottoman government claimed that the Armenians were supporting the Russian army (the Ottomans' enemy). They systematically deported, massacred, and starved the Armenians, leading to about 600,000 to 1.5 million deaths. Hitler eventually modeled the Holocaust after the Armenian Genocide"
             ],
-            "Economy": [""],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": [""]
       },
       "Italian Territory": {
-            "Environment": [""],
-            "Culture": [""],
             "Governance": ["Tried to conquer Ethiopia/Abyssinia, but failed for the most part, only occupying it briefly in 1935-1936"],
             "Economy": ["Valued for agriculture and ports",
                   "Forced labor was common especially in Somalia and Libya"],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": [""]
       },
       "Serbia": {
-            "Environment": [""],
             "Culture": ["Eastern Orthodox"],
             "Governance": ["Gained independence from the Ottoman Empire in 1878",
                   "Serbian nationalists wanted to unite South Slavic people, many of whom were controlled by Austria-Hungary",
@@ -1846,14 +1568,9 @@ export const countryNotes: CountryNotes = {
                   "Fought with the Allies during World War I",
                   "In 1992, after Yugoslavia had been broken up, Serbian nationalists wanted to create a homogeneous area and killed 300,000 Bosniak (Muslim) citizens"
             ],
-            "Economy": [""],
             "Social": ["Women were allowed to join the army"],
-            "Technology": [""],
-            "Uncategorized": [""]
       },
       "Romania": {
-            "Environment": [""],
-            "Culture": [""],
             "Governance": ["Gained independence from the Ottoman Empire in 1878",
                   "In World War I, Romania sided with the Allies",
                   "In the period before World War II, Romania began to copy the Nazi's persecution of minorities",
@@ -1867,8 +1584,6 @@ export const countryNotes: CountryNotes = {
                   "Could only trade with the USSR"
             ],
             "Social": ["Women were allowed to join the army"],
-            "Technology": [""],
-            "Uncategorized": [""]
       },
       "China": {
             "Environment": ["The 1958 harvest was really good, but it couldn't all be harvested since there were too few people left in agriculture.",
@@ -1905,12 +1620,9 @@ export const countryNotes: CountryNotes = {
             "Social": ["Footbinding was finally banned under the Chinese Communist Party",
                   "Discriminated against the Uighur ethnic minority"
             ],
-            "Technology": [""],
             "Uncategorized": ["The Chinese Communist Party censored news and eduation limiting freedom of speech and thought"]
       },
       "Bulgaria": {
-            "Environment": [""],
-            "Culture": [""],
             "Governance": ["Fought with the Central Powers during World War I",
                   "In the period before World War II, Bulgaria began to copy the Nazi's persecution of minorities",
                   "Was controlled by the USSR as a satellite country",
@@ -1921,12 +1633,8 @@ export const countryNotes: CountryNotes = {
                   "Could only trade with the USSR"
             ],
             "Social": ["Allowed women to join the army"],
-            "Technology": [""],
-            "Uncategorized": [""]
       },
       "France 1920-Present": {
-            "Environment": [""],
-            "Culture": [""],
             "Governance": ["Represented by Georges Clemenceau at the Paris Peace Conference. He wanted to severely punish Germany because France wanted protection from Germany",
                   "Took a lot of Middle Eastern countries as mandates after World War I",
                   "Invaded by Germany in 1940. Northeast France was occupied while the South became the Vichy regime and collaborated with the Nazis",
@@ -1944,31 +1652,22 @@ export const countryNotes: CountryNotes = {
             ],
             "Economy": ["Had a hard time paying back debts to the US after World War I because Germany was having a hard time paying back its debts to France"],
             "Social": ["Anti-immigrant sentiment after pro-French Algerians immigrated to France and caused housing and employment problems"],
-            "Technology": [""],
-            "Uncategorized": [""]
       },
       "Belgian Territory": {
-            "Environment": [""],
-            "Culture": [""],
             "Governance": ["Belgium gained control of Rwanda and Burundi, which had been German colonies, as League of Nation mandates",
                   "Rwanda and Burundi gained independence in 1962"
             ],
-            "Economy": [""],
+            "Economy": ["Produced rubber, copper",],
             "Social": ["In Rwanda, Belgium favored the Tutsis over the Hutus, reinforcing ethnic divisions that would eventually lead to the Rwandan Genocide"],
-            "Technology": [""],
-            "Uncategorized": [""],
             "Belgian Congo": ["King Leopold II (r. 1865-1909) conquered the Congo Basin and owned it personally, meaning he kept all the profit",
                   "The Berlin Conference allowed King Leopold to keep the Congo for himself during the Scramble for Africa",
                   "Leopold hired mercenary companies to produce rubber using any means, leading to slavery and extremely bad conditions (burn villages, kill families for not meeting quotas). 7-10 million people were killed or starved because of this exploitation.",
-                  "Produced rubber, copper",
                   "In 1905 the Human Rights Commission recognized the human rights violations and transfered the Congo from Leopold to the Belgian government in 1908.",
                   "Under the Belgian government, there was still a lot of exploitation and coerced labor. They also continued to give King Leopold some of the profits.", // not sure of theme,
                   "When the trans-national company Unilever was accused of using slavery in British Nigeria to harvest cocoa and palm oil, they moved to extract those resources from the Congo where slavery and exploitation were more accepted",
             ]  
       },
       "Manchuria": {
-            "Environment": [""],
-            "Culture": [""],
             "Governance": ["The USSR and Japan were fighting for control of the area in the 1800s as the Qing Dynasty weakened",
                   "Japan won the Russo-Japanese War (1904-1905), giving it control of southern Manchuria",
                   "When the Qing Dynasty fell in 1911, Manchuria was ruled semi-independently until Japan assassinated the ruling warlord in 1928",
@@ -1977,13 +1676,8 @@ export const countryNotes: CountryNotes = {
                   "The USSR invaded in 1945 at the end of World War II and drove the Japanese out, giving control back to the Chinese Communists."
             ],
             "Economy": ["Used forced labor for resource extraction"],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": [""]
       },
       "Germany 1920-1945": {
-            "Environment": [""],
-            "Culture": [""],
             "Governance": ["After World War I, the rule of the kaiser was replaced by the Weimar Republic. The Weimar Republic was very unpopular because people saw it as weak, since they had to pay so much money and had no army. This discontent led to the desire for the decisive action that right-wing parties promised",
                   "The Nazis were elected in 1932, with Hitler as chancellor of the government. He outlawed other political parties to protect his rule, and promoted ultranationalism andd scientific racism.",
                   "Hitler wanted to conquer the continent, so in 1935 he created an air force, which was against the Treaty of Versailles but the other countries ignored",
@@ -1998,17 +1692,12 @@ export const countryNotes: CountryNotes = {
                   "Sent Jews to concentration camps and death camps like Auschwitz, Treblinka, and Dachau"
             ],
             "Economy": ["Germany was in a lot of debt due to World War I, so they had to print more money in order to pay the debts, leading to massive inflation",
-                  "Germany was hit really hard by the Depression in the 1930s"
+                  "Germany was hit really hard by the Depression in the 1930s",
+                  "Used forced labor instead of trying to mobilize citizens during WWII, which led to low productivity"
             ],
             "Social": ["The Nazis persecuted minorities (including Slavs, communists, gypsies, gay people, and Jews). Jewish were especially discriminated against because Hitler blamed them for the country's problems. In 1935 he made the Nuremberg Laws restricted Jews from marrying non-Jews, being citizens, and to living in ghettos. In 1938, a Jewish teen was accused of killing a German diplomat, leading to anti-Jewish riots known as Kristallnacht. They killed 90 Jews, destroyed most synagogues and many Jewish shops, and arrested 30,000 Jews"],
-            "Technology": [""],
-            "Uncategorized": ["Used forced labor instead of trying to mobilize citizens, which led to low productivity" // not sure?
-
-            ]
       },
       "USSR": {
-            "Environment": [""],
-            "Culture": [""],
             "Governance": ["The Bolsheviks, led by Vladimir Lenin, led the Russian Civil War (1917-1921) and established a communist government.",
                   "Surrendered to the Germans in 1918",
                   "There was a power struggle after Lenin's death in 1924",
@@ -2039,7 +1728,6 @@ export const countryNotes: CountryNotes = {
                   "Protests forced the government to make concessions",
                   "Leaders who disliked Gorbachev put him under arrest and sent in the military to suppress the protests, but the protestors convinced the military to join them",
                   "The Soviet Union fell in 1991"
-
             ],
             "Economy": ["Private trade was abolished and the government took ownership of factories",
                   "Refused to pay pre-revolution debts",
@@ -2055,8 +1743,6 @@ export const countryNotes: CountryNotes = {
             ],
       },
       "Turkey": {
-            "Environment": [""],
-            "Culture": [""],
             "Governance": ["Preceded by the Ottoman Empire. When it fell after World War I, Turkey among other countries replaced it",
                   "When the Ottoman Empire fell, it ws technically ruled by the Ottoman Empire who was really a British puppet",
                   "The Turkish National Movement, led by Mufasta Kemal or Atatürk, defeated the British in the Turkish War of Independence (1921)",
@@ -2065,15 +1751,9 @@ export const countryNotes: CountryNotes = {
                   "Atatürk secularized the state, established public education and women's suffrage, and abolishedd polygyny",
                   "The USSR wanted to have military bases in Turkey to control Dardanelles, leading to the US's Truman Doctrine supporting containment in Turkey and Greece",
                   "Part of the Central Treaty Organization (CENTO) to stop communism in the Middle East"
-            ],
-            "Economy": [""],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": [""]
+            ]
       },
       "Poland": {
-            "Environment": [""],
-            "Culture": [""],
             "Governance": ["Invaded by the Nazis in 1939 during World War II",
                   "Lost a lot of their population during World War II",
                   "After World War II, the USSR got some of Poland and it became a satellite country",
@@ -2085,13 +1765,9 @@ export const countryNotes: CountryNotes = {
             "Economy": ["Had to make 5 Year Plans influenced by the USSR",
                   "Farms were collectivized",
                   "Could only trade with the USSR"
-            ],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": [""]
+            ]
       },
       "Vietnam": {
-            "Environment": [""],
             "Culture": ["Theravada Buddhism",
                   "Neo-Confucianism"],
             "Governance": ["Controlled by the French as part of Indochina starting in 1885 after the Sino-French War (1883-1885)",
@@ -2114,14 +1790,9 @@ export const countryNotes: CountryNotes = {
             ],
             "Economy": ["Produced rubber",
                   "Had low labor costs so attracted manufacturing"
-            ],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": [""]
+            ]
       },
       "Iran": {
-            "Environment": [""],
-            "Culture": [""],
             "Governance": ["Hosted the Tehran Conference between the Big Three (USSR, US, Britain) in 1943",
                   "Part of the Central Treaty Organization (CENTO) to stop the spread ofcommunism in the Middle East",
                   "Wanted land reform", // econ? soc?
@@ -2130,14 +1801,9 @@ export const countryNotes: CountryNotes = {
                   "In 1953, The US and Britain overthrew Mosaddegh and reinstated Muhammad Reza Pahlavi, but Mosaddegh returned to power a few days later through a military coup",
                   "In the White Revolution (1963-1979, called white because it was bloodless), Iranians pushed for more progressive policies like women's suffrage, social welfare, literacy programs, and land reform. This was opposed by religious conservatives, landowners (who lost land from the land reforms), and peasants who didn't receive land from the land reforms",
                   "In the Iranian Revolution in 1979, the shah was replaced by a new theocracy"
-            ],
-            "Economy": [""],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": [""]
+            ]
       },
       "Pakistan": {
-            "Environment": [""],
             "Culture": ["Muslim"],
             "Governance": ["Created in 1947 as India was being given independence. The leaders of the Muslim League, like Muhammad Ali Jinnah, wanted to ensure that the Muslim minority wouldn't be persecuted by the Hindu state so proposed the Two-State Solution, where areas that were majority Muslim would become a separate country",
                   "At first, Pakistan including both modern Pakistan and Bangladesh",
@@ -2148,26 +1814,16 @@ export const countryNotes: CountryNotes = {
                   "Benazir Bhutto was the first female prime minister in Pakistan in 1988. She tried to improve the economy but failed. She was assassinated in 2007",
                   "Conflict with India and China over control Kashmir. The majority of the population is Muslim but they have a Hindu leader. About 45% was controlled by India, 35% by Pakistan, and 20% by China"
             ],
-            "Economy": [""],
             "Social": ["Women kind of have voting rights but are unable to exercise them",
                   "Outlawed discrimination against untouchables in the caste system in 1953, but it still happened"
-            ],
-            "Technology": [""],
-            "Uncategorized": [""]
+            ]
       },
       "Guatemala": {
-            "Environment": [""],
-            "Culture": [""],
             "Governance": ["Jacobo Arbenz was elected as president in 1951. He started land reforms, taking land from the American United Fruit Company, which made Americans unhappy",
                   "The Americans overthrew Arbenz in 1954 and established a puppet government under Armas"
-            ],
-            "Economy": [""],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": [""]
+            ]
       },
       "Palestine/Israel": {
-            "Environment": [""],
             "Culture": ["Jewish and Muslim"],
             "Governance": ["Palestine became a British mandate after World War I",
                   "In the 1917 Balfour Delcaration, Britain promised to make Palestine a home for Jews to gain support for World War I",
@@ -2180,26 +1836,15 @@ export const countryNotes: CountryNotes = {
                   "In 1973, Egypt and Syria coordinated an attack during Yom Kippur. Israel was defeated and lost some territory",
                   "There was more violence in 2000",
                   "The Camp David Accords were a peace agreement between Israeli prime minister Menachem Begin and Egyptian president Anwar Sadat. Other Arab states rejected this peace treaty"
-            ],
-            "Economy": [""],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": [""]
+            ]
       },
       "Czechoslovakia": {
-            "Environment": [""],
-            "Culture": [""],
             "Governance": ["Controlled by the Nazis during World War II starting in 1939",
                   "One of the members of the Warsaw Pact, the USSR's response to NATO, in 1955",
                   "In 1968, there was a big protest called Prague Spring. Alexander Dubcek increased freedom of speech and press, allowed more travel, and made politics more democratic. They were then attacked by the Warsaw Pact nations, who used the Brezhnev Doctrine (Soviets would intervene if socialist countries were threatened by a member) as an excuse for invading",
-            ],
-            "Economy": [""],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": [""]
+            ]
       },
       "India": {
-            "Environment": [""],
             "Culture": ["Hindu, with a Muslim and Sikh minorty"],
             "Governance": ["Many Indians were conscripted to fight in World War I. Leaders like Gandhi promoted this, as they thought it would gain India more autonomy.",
                   "The Indian National Congress was formed in 1885 and fought for independence. It was majority elite Hindu and only a few Muslims",
@@ -2223,12 +1868,9 @@ export const countryNotes: CountryNotes = {
             "Social": ["Outlawed discrimination against untouchables in the caste system in 1949, but it still happened",
                   "The caste reservation system reserved a certain percentage of government and public sector jobs for lower casts"
             ],
-            "Technology": [""],
             "Uncategorized": ["The highest rate of agricultural growth was under Indira Gandhi"]
       },
       "East Germany": {
-            "Environment": [""],
-            "Culture": [""],
             "Governance": ["Split by the UN after World War II. It was formally called the German Democratic Republic",
                   "Controlled by the Soviets as a satellite state",
                   "Noncommunist groups were outlawed",
@@ -2241,14 +1883,9 @@ export const countryNotes: CountryNotes = {
             "Economy": ["Made 5 Year Plans influenced by the USSR",
                   "Could only trade with the USSR",
                   "Collectivized agriculture and nationalized industry"
-            ],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": [""]
+            ]
       },
       "West Germany": {
-            "Environment": [""],
-            "Culture": [""],
             "Governance": ["Split by the UN after World War II. One part went to France, one to the British, and one to the US. They united their parts in 1949 to form the Federal Republic of Germany, or West Germany",
                   "Had a democratic government",
                   "Joined NATO (North Atlantic Treaty Organization) in 1955",
@@ -2257,12 +1894,8 @@ export const countryNotes: CountryNotes = {
                   "Germany was reunified in 1990",
             ],
             "Economy": ["The economy was rebuilt using help from the US through the Marshall Plan"],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": [""]
       },
       "Nicaragua": {
-            "Environment": [""],
             "Culture": ["Liberation theology"],
             "Governance": ["The Sandanistas, a socialist group, took down the Somoza dictatorship and took over the government in 1979. They emphasized liberation theology, land redistribution, and more educationa and healthcare",
                   "The US supported the Contras who tried to overthrow the Sandinistas in 1981, as the US like that socialists were coming to power",
@@ -2273,14 +1906,9 @@ export const countryNotes: CountryNotes = {
                   "The 1989 Tela Accords demobilized both armies",
                   "The Sandinistas lost power in 1990"
             ],
-            "Economy": ["Land redistribution"],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": [""]
+            "Economy": ["Land redistribution"]
       },
       "Cambodia": {
-            "Environment": [""],
-            "Culture": [""],
             "Governance": ["Part of French Indochina until they declared independence in 1953",
                   "They were non-aligned during the Cold War until the Vietnam War, and then it shifted to a more pro-USSR stance",
                   "The communist Khmer Rouge, led by Pol Pot, overthrew the Cambodian government in 1975",
@@ -2292,13 +1920,9 @@ export const countryNotes: CountryNotes = {
             "Economy": ["Produced rubber",
                   "Communist under the Khmer Rouge and Vietnamese",
                   "Developed a market economy after 1991"
-            ],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": [""]
+            ]
       },
       "Sri Lanka": {
-            "Environment": [""],
             "Culture": ["Buddhist"],
             "Governance": ["Previously called Ceylon",
                   "Gained independence from Britain in 1948",
@@ -2307,26 +1931,17 @@ export const countryNotes: CountryNotes = {
             ],
             "Economy": ["Produced rubber",
                   "Land reforms and restrictions on free enterprise under Sirimavo Bandaranaike"
-            ],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": [""]
+            ]
       },
       "Tanzania": {
-            "Environment": [""],
-            "Culture": [""],
             "Governance": ["Gained independence from Britain in 1961",
                   "The first president was Julius Nyerere. He had socialist ideas like increasing literacy, free education, and collectivized farming. He wanted economic independence",
                   "Had a lot of conflict with Uganda - their dictator Idi Amin kept threatening to attack them"
             ],
             "Economy": ["Had a lot of economic harships despite Nyerere's efforts"],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": [""]
       },
       "Angola": {
             "Environment": ["Grew cocoa"],
-            "Culture": [""],
             "Governance": ["Gained independence from Portugal in 1975",
                   "Rival tribes were put in the same community and they began to fight for control",
                   "The Mbundu tribe controlled the socialist group Popular Movement for the Liberation of Angola (MPLA). They were supported by the USSR and Cuba, who wanted to get back at the US after the Cuban Missile Crisis",
@@ -2337,13 +1952,8 @@ export const countryNotes: CountryNotes = {
             "Economy": ["Produced cocoa",
                   "Socialist"
             ],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": [""]
       },
       "Hungary": {
-            "Environment": [""],
-            "Culture": [""],
             "Governance": ["Controlled by the Soviets as a satellite state",
                   "Noncommunist parties were outlawed",
                   "One of the members of the Warsaw Pact, created in 1955 as a response to the creation of NATO",
@@ -2352,13 +1962,8 @@ export const countryNotes: CountryNotes = {
             "Economy": ["Made 5 Year Plans influenced by the Soviets",
                   "Could only trade with th USSR"
             ],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": [""]
       },
       "Afghanistan": {
-            "Environment": [""],
-            "Culture": [""],
             "Governance": ["Gained independence from the British in 1919",
                   "The communist government was very weak in the 1970s as conservatives and rural leaders disliked it",
                   "In 1979, the Soviets invaded to support the government, but they were unable to conquer the the Mujahideen guerilla troops. The US, under Reagan, sent support to the Mujahideen against the Soviets",
@@ -2368,14 +1973,9 @@ export const countryNotes: CountryNotes = {
                   "The Taliban, a terrorist group, gained power in the 1990s and established the Islamic Emirate of Afghanistan in 1996",
                   "The US invaded after 9/11"
             ],
-            "Economy": [""],
             "Social": ["The Taliban government represses women's rights"],
-            "Technology": [""],
-            "Uncategorized": [""]
       },
       "Algeria": {
-            "Environment": [""],
-            "Culture": [""],
             "Governance": ["Became a French colony in 1870 when the French took it from the Ottomans",
                   "Social, political, and economic crises led to protests, which the government responded to with violence and repressive laws",
                   "Desire for independence grew after World War II",
@@ -2395,91 +1995,61 @@ export const countryNotes: CountryNotes = {
             "Social": ["There was a big French population in Algeria",
                   "Many Algerians immigrated to France"
             ],
-            "Technology": [""],
       },
       "Peru": {
-            "Environment": [""],
             "Culture": ["Food was influenced by Chinese immigrants"],
             "Governance": ["Gained independence from Spain in 1821",
                   "The Spanish were fully kicked out of Peru in 1824",
                   "A militant group called the Shining Path, led by Abimael Guzmán, wanted to replace the government with a communist government, beginning in the 1980s. They used bombings and assassinations to try to get their way. In 2011, one of the Shining Path leaders admitted defeat and began negotiating with the government",
             ],
-            "Economy": ["Export guano, gold, and copper"],
+            "Economy": ["Export guano, gold, and copper",
+                  "Received Chinese contract laborers to work on the Andean railroad, guano mines, or as merchants in the Amazon"
+            ],
             "Social": ["Dominated by wealthy landowners and elites, while indigenous and rural populations had no land or money",
                   "Nationalized industries in the mid-1900s"
-            ],
-            "Technology": [""],
-            "Uncategorized": ["Received Chinese contract laborers to work on the Andean railroad, guano mines, or as merchants in the Amazon"]
+            ]
       },
       "Uganda": {
             "Environment": ["Grew cotton"],
-            "Culture": [""],
             "Governance": ["Idi Amin was a dictator from 1971-1979. His policies made ethnic tensions worse, denied human rights, and were bad for economics. He was responsible for at least 500,000 deaths. Even so, he was very charismatic and served as chairman of the Organization of African Unity and was a member of the UN Commission on Human Rights",
                   "Conflict with Tanzania. Idi Amin kept threatening to invade them"
             ],
             "Economy": ["The economy wasn't doing very well"],
             "Social": ["In 1972, Idi Amin expelled 60,000 Asians"],
-            "Technology": [""],
-            "Uncategorized": [""]
       },
       "Indonesia": {
-            "Environment": [""],
-            "Culture": [""],
             "Governance": ["Anti-communist",
                   "Hosted the Bandung Conference in 1955 focusing on the need to end imperialism, racism, and colonialism",
                   "Sukarno, from Indonesia, was one of the leaders of the Non-Aligned Movement during the Cold War. He wanted to stop economic, intellectual, and physical colonialism and promote peace"
             ],
             "Economy": ["Exported spices"],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": [""]
       },
       "Yugoslavia": {
-            "Environment": [""],
-            "Culture": [""],
             "Governance": ["Created after World War I",
                   "The dictator Marshal Josip Broz Tito tried to suppress the region's desire to separate and have independence",
                   "When the Soviet Union collapsed, Yugoslavia collapsed as Slovenia, Croatia, and Montenegro declared independence"
             ],
-            "Economy": [""],
             "Social": ["Included many different ethnicities and religions. Serbians were Eastern Orthodox, Croats and Slovenes were Catholic, and Bosniaks were Muslim"],
-            "Technology": [""],
-            "Uncategorized": [""]
       },
       "Bosnia": {
-            "Environment": [""],
             "Culture": ["Musim"],
-            "Governance": [""],
-            "Economy": [""],
             "Social": ["Bosniaks were persecuted during the Bosnian Genocide in 1992, when Serbian nationalists killed 300,000 in an attempt of ethnic cleansing. The UN was uneffective in trying to handle the situation"],
-            "Technology": [""],
-            "Uncategorized": [""]
       },
       "Bangladesh": {
-            "Environment": [""],
             "Culture": ["Muslim"],
             "Governance": ["Initially part of Pakistan until 1971"],
             "Economy": ["Became a center of manufacturing",
                   "Working conditions are awful in Bangladesh"
             ],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": [""]
       },
       "Germany 1990-Present": {
-            "Environment": [""],
-            "Culture": [""],
             "Governance": ["Reunified in 1990 after the fall of the Berlin Wall in 1989",
             ],
             "Economy": ["Economic disparities between the East and West",
                   "Became a manufacturing power"
             ],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": [""]
       },
       "Rusia 1991-Present": {
-            "Environment": [""],
             "Culture": ["Revival of the Russian Orthodox Church"],
             "Governance": ["The first leader was Boris Yeltsin",
 
@@ -2487,26 +2057,9 @@ export const countryNotes: CountryNotes = {
             "Economy": ["Economics suffer after the USSR",
                   "Export gas and oil"
             ],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": [""]
-      },
-      "North Korea": {
-            "Environment": [],
-            "Culture": [],
-            "Governance": [""],
-            "Economy": [""],
-            "Social": [""],
-            "Technology": [""],
-            "Uncategorized": [""]
       },
       "Venezuela": {
-            "Environment": [""],
-            "Culture": [""],
-            "Governance": [""],
             "Economy": ["Began redestributing land in 2001. They redistributed 5 million acres of land"],
-            "Social": [""],
-            "Technology": [""],
             "Uncategorized": ["Landowners were really unhappy about the land distribution not just because they were losing land but also because people began to take land that wasn't being redistributed"]
       },
       // "Template": {
