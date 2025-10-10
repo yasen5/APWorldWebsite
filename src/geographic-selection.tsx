@@ -6,9 +6,10 @@ import { createPortal } from "react-dom";
 
 export const GeographicSelectionPage = () => {
     const { selectedTime } = useTimeSliderContext();
+    const [selectedWHAPTime, setSelectedWHAPTime] = useState<[number, number]>([1200, 1450]);
     const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
-    const [isIdeasBarOpen, setIsIdeasBarOpen] = useState(false);
-    const [hoveredIdea, setHoveredIdea] = useState<string | null>(null);
+    const [isConceptsBarOpen, setIsConceptsBarOpen] = useState(false);
+    const [hoveredConcept, setHoveredConcept] = useState<string | null>(null);
 
     const nations = Object.keys(countryNotes);
 
@@ -28,22 +29,39 @@ export const GeographicSelectionPage = () => {
     return colorMap;
     }, []);
 
+    useEffect(() => {
+        setSelectedWHAPTime(() => {
+            if (selectedTime < 1450) {
+                return [1200, 1450];
+            }
+            else if (selectedTime < 1750) {
+                return [1450, 1750];
+            }
+            else if (selectedTime < 1900) {
+                return [1750, 1900];
+            }
+            else {
+                return [1900, 2025];
+            }
+        });
+    }, [selectedTime]);
+
     // Create styles object for SVG paths
     const countryStyles = useMemo(() => {
         const styles: Record<string, React.CSSProperties> = {};
         nations.forEach(nation => {
-            const isHighlighted = hoveredIdea && generalNotes[hoveredIdea]?.applicableCountries.includes(nation);
+            const isHighlighted = hoveredConcept && generalNotes[hoveredConcept]?.applicableCountries.includes(nation);
             styles[`[data-country="${nation}"]`] = {
             fill: countryColors[nation],
             cursor: 'pointer',
-            opacity: isHighlighted ? 1 : (hoveredIdea ? 0.3 : 1),
+            opacity: isHighlighted ? 1 : (hoveredConcept ? 0.3 : 1),
             stroke: isHighlighted ? '#333' : 'none',
             strokeWidth: isHighlighted ? '2px' : '0',
             transition: 'opacity 0.2s ease, stroke 0.2s ease'
             };
         });
         return styles;
-    }, [countryColors, hoveredIdea]);
+    }, [countryColors, hoveredConcept]);
 
     const timeMaps: Record<number, React.ComponentType<React.SVGProps<SVGSVGElement>>> = {
         1200: World1200
@@ -88,38 +106,45 @@ export const GeographicSelectionPage = () => {
                 ).join('\n')}
             </style>
             
-            {/* Ideas Bar */}
+            {/* Concepts Bar */}
             <div className="w-full max-w-[1200px] mx-auto">
                 {/* Toggle Bar */}
                 <div 
                 className="w-full h-8 bg-gradient-to-r from-blue-500 to-purple-600 cursor-pointer flex items-center justify-center text-white font-medium shadow-md hover:shadow-lg transition-shadow"
-                onClick={() => setIsIdeasBarOpen(!isIdeasBarOpen)}
+                onClick={() => setIsConceptsBarOpen(!isConceptsBarOpen)}
                 >
                 <span className="mx-2">Cross-Country Concepts</span>
-                <span className="text-lg">{isIdeasBarOpen ? "▲" : "▼"}</span>
+                <span className="text-lg">{isConceptsBarOpen ? "▲" : "▼"}</span>
                 </div>
                 
                 {/* Collapsible Content */}
                 <div 
                 className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                    isIdeasBarOpen ? 'opacity-100' : 'max-h-0 opacity-0'
+                    isConceptsBarOpen ? 'opacity-100' : 'max-h-0 opacity-0'
                 }`}
                 >
-                <div className="bg-white border-2 border-gray-200 rounded-b-lg px-3 pt-1 shadow-inner">
-                    <div className="flex flex-wrap gap-2 justify-center">
-                    {Object.keys(generalNotes).map(idea => (
-                        <button
-                        key={idea}
-                        onClick={() => setSelectedCountry(idea)}
-                        className="px-4 py-2 bg-gradient-to-r from-indigo-500 to-blue-600 text-white rounded-full text-sm font-medium hover:from-indigo-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg"
-                        onMouseEnter={() => setHoveredIdea(idea)}
-                        onMouseLeave={() => setHoveredIdea(null)}
-                        >
-                        {idea}
-                        </button>
-                    ))}
+                    <div className="bg-white border-2 border-gray-200 rounded-b-lg px-3 pt-1 shadow-inner">
+                        <div className="flex flex-wrap gap-2 justify-center">
+                        {Object.keys(generalNotes).filter((concept) => {
+                            const timePeriod: [number, number] = generalNotes[concept].timePeriod;
+                            return (timePeriod[0] >= selectedWHAPTime[0] && timePeriod[0] <= selectedWHAPTime[1]) || (timePeriod[1] > selectedWHAPTime[0] && timePeriod[1] <= selectedWHAPTime[1])
+                        }).map(concept => {
+                            const notes = generalNotes[concept];
+                            return (
+                                <button
+                                key={concept}
+                                onClick={() => setSelectedCountry(concept)}
+                                className={`px-4 py-2 bg-gradient-to-r from-indigo-500 to-blue-600 text-white rounded-full text-sm font-medium hover:from-indigo-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg
+                                    ${(notes.emphasizedUnit[0] === selectedWHAPTime[0] && notes.emphasizedUnit[1] === selectedWHAPTime[1]) && (notes.timePeriod[0] <= selectedTime && notes.timePeriod[1] >= selectedTime) ? '' : 'opacity-50'}`}
+                                onMouseEnter={() => setHoveredConcept(concept)}
+                                onMouseLeave={() => setHoveredConcept(null)}
+                                >
+                                {concept}
+                                </button>
+                            )
+                        })}
+                        </div>
                     </div>
-                </div>
                 </div>
             </div>
 
