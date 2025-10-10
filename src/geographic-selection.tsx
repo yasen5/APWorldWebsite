@@ -220,17 +220,15 @@ const Popup: React.FC<{ noteKey: string, onClose: () => void }> = ({ noteKey, on
                 <SvgNotes onClick={handleBlobClick}/>
             )}
             {matches &&
-                Object.entries(matches).map(([sectionTitle, content]) => sectionTitle !== "applicableCountries" && (
+                Object.entries(matches).map(([sectionTitle, content]) => sectionTitle !== "applicableCountries" && Array.isArray(content) && content.length > 0 && content[0] !== "" && (
                 <Dropdown key={sectionTitle} title={sectionTitle}>
-                    {Array.isArray(content) ?(
+                    (
                         <ul className="list-disc pl-4 text-black">
                             {content.map((point, i) => (
                                 <li key={i}>{point}</li>
                             ))}
                         </ul>
-                    ):(
-                        <p>{content}</p>
-                    )}
+                    )
                 </Dropdown>
                 ))
             }
