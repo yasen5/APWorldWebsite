@@ -135,7 +135,7 @@ export const GeographicSelectionPage = () => {
                                 key={concept}
                                 onClick={() => setSelectedCountry(concept)}
                                 className={`px-4 py-2 bg-gradient-to-r from-indigo-500 to-blue-600 text-white rounded-full text-sm font-medium hover:from-indigo-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg
-                                    ${(notes.emphasizedUnit[0] == selectedWHAPTime[0] && notes.emphasizedUnit[1] == selectedWHAPTime[1]) && (notes.timePeriod[0] <= selectedTime && notes.timePeriod[1] >= selectedTime) ? '' : 'opacity-50'}`}
+                                    ${(notes.emphasizedUnit[0] === selectedWHAPTime[0] && notes.emphasizedUnit[1] === selectedWHAPTime[1]) && (notes.timePeriod[0] <= selectedTime && notes.timePeriod[1] >= selectedTime) ? '' : 'opacity-50'}`}
                                 onMouseEnter={() => setHoveredConcept(concept)}
                                 onMouseLeave={() => setHoveredConcept(null)}
                                 >

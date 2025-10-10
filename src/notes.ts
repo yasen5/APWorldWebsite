@@ -245,7 +245,7 @@ export const generalNotes: GeneralNotes = {
       },
       "Great Depression 1929-1939": {
             "Economy": ["Disrupted global economies",
-                  "Germany was especially affected because they had inflation due to printing money to"
+                  "Germany was especially affected because they had inflation due to printing money to pay reparations after World War I"
             ],
             "Technology": [],
             applicableCountries: [],
