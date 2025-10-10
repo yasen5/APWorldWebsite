@@ -127,7 +127,7 @@ export const GeographicSelectionPage = () => {
                         <div className="flex flex-wrap gap-2 justify-center">
                         {Object.keys(generalNotes).filter((concept) => {
                             const timePeriod: [number, number] = generalNotes[concept].timePeriod;
-                            return (timePeriod[0] >= selectedWHAPTime[0] && timePeriod[0] <= selectedWHAPTime[1]) || (timePeriod[1] >= selectedWHAPTime[0] && timePeriod[1] <= selectedWHAPTime[1])
+                            return (timePeriod[0] >= selectedWHAPTime[0] && timePeriod[0] <= selectedWHAPTime[1]) || (timePeriod[1] > selectedWHAPTime[0] && timePeriod[1] <= selectedWHAPTime[1])
                         }).map(concept => {
                             const notes = generalNotes[concept];
                             return (
