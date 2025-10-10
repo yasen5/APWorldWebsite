@@ -15,8 +15,10 @@ export const blobNotes: Record<string, string> = {
 
 export interface GeneralNotes {
       [country: string]: {
-            [section: string]: string[];
+            [section: string]: string[] | [number, number];
             applicableCountries: string[];
+            timePeriod: [number, number];
+            emphasizedUnit: [number, number];
       };
 }
 
@@ -29,21 +31,27 @@ export const generalNotes: GeneralNotes = {
             "Social": ["Younger sons of nobles often went to fight in the crusades due to primogeniture (only the oldest son would inherit anything"],
             "Technology": ["Increased contact and trade with the Middle East, spreading ideas and technology from the East to Europe, including paper, sugar, and gunpowder" // maybe culture or economic?
             ],
-            applicableCountries: ["France 1200-1450", "England 1200-1450", "Holy Roman Empire 1200-1806"]
+            applicableCountries: ["France 1200-1450", "England 1200-1450", "Holy Roman Empire 1200-1806"],
+            timePeriod: [1095, 1291],
+            emphasizedUnit: [1200, 1450]
       },
       "Black Death": {
             "Environment": ["Spread from China over the Silk Roads",
                   "Killed about 1/3 of Europe's population"
             ],
             "Social": ["Because there was a high demand for labor but so many people had died, serfs were able to gain more power, triggering the end of feudalism in Western Europe"],
-            applicableCountries: ["France 1200-1450", "England 1200-1450", "Holy Roman Empire 1200-1806"]
+            applicableCountries: ["France 1200-1450", "England 1200-1450", "Holy Roman Empire 1200-1806"],
+            timePeriod: [1344, 1353],
+            emphasizedUnit: [1200, 1450]
       },
       "Renaissance": {
             "Culture": ["Caused by increased contact with the East in the 1300s",
                   "Revived interest in classical Greek and Roman arts"
             ],
             "Technology": ["The Gutenberg printing press, invented in 1439, led to an increase in literacy"],
-            applicableCountries: ["France 1200-1450", "England 1200-1450", "Holy Roman Empire 1200-1806"]
+            applicableCountries: ["France 1200-1450", "England 1200-1450", "Holy Roman Empire 1200-1806"],
+            timePeriod: [1400, 1600],
+            emphasizedUnit: [1200, 1450]
       },
       "Trans-Saharan Trade": {
             "Environment": ["Used camels for transportation",
@@ -54,7 +62,9 @@ export const generalNotes: GeneralNotes = {
                   "Facilitated trade of horses, books, salt, gold, ivory, cloth, and slaves"
             ],
             "Technology": ["With the new Somali saddle, camels could carry up to 600lbs"],
-            applicableCountries: ["Mali Empire, Hausa States"]
+            applicableCountries: ["Mali Empire, Hausa States"],
+            timePeriod: [0, 1450],
+            emphasizedUnit: [1200, 1450]
       },
       "Silk Road Trade": {
             "Environment": ["Used camels for transportation",
@@ -68,7 +78,9 @@ export const generalNotes: GeneralNotes = {
                   "Cities were established along the Silk Roads, especially near water sources as most of the routes didn't have much water, as centers of trade. Examples include Kashgar, Samarkand, and Chang'an"
             ],
             "Technology":["Facilitated the spread of maritime technology, including lateen sails (triangular to allow wind to be caught from all directions), the stern rudder (allowed for better steering and maneuverability), the astrolabe, dhow ships, and the compass"],
-            applicableCountries: ["Song Dynasty", "Abbasid Caliphate"]
+            applicableCountries: ["Song Dynasty", "Abbasid Caliphate"],
+            timePeriod: [0, 1450],
+            emphasizedUnit: [1200, 1450]
       },
       "Indian Ocean Trade": {
             "Environment": ["Sailors utilized monsoon winds to expedite their voyages. Monsoon winds could be predicted based on season (from the Northeast in winter, from the Southwest in spring and summer) "],
@@ -82,7 +94,9 @@ export const generalNotes: GeneralNotes = {
                   "Trade cities were established, including Calicut, Malacca, and Kilwa"
             ],
             "Technology": ["The essential maritime techology for the Indian Ocean trade included the magnetic compass, astrolabe, lateen sail, dhow ship, and stern rudder"],
-            applicableCountries: ["Srivijaya Empire, Majapahit Empire, Song Dynasty, Swahili Coast"]
+            applicableCountries: ["Srivijaya Empire, Majapahit Empire, Song Dynasty, Swahili Coast"],
+            timePeriod: [0, 1850],
+            emphasizedUnit: [1200, 1450]
       },
       "Calvinism": {
             "Culture": ["Founded by John Calvin in 1530",
@@ -91,7 +105,10 @@ export const generalNotes: GeneralNotes = {
                   "They led a very strict lifestyle in order to prove to others that they had been selected to go to heaven"
             ],
             "Social": ["People who were predestined to go to heaven were called the Elect"],
-            applicableCountries: ["France 1200-1450"]
+            "Technology": [],
+            applicableCountries: ["France 1200-1450"],
+            timePeriod: [1536, 1750],
+            emphasizedUnit: [1450, 1750]
       },
       "Columbian Exchange":{
             "Environment": ["Diseases like smallpox, measles, and tuberculosis were spread to the New World. This led to the native population declining by about 80%, known as the Great Dying",
@@ -99,7 +116,9 @@ export const generalNotes: GeneralNotes = {
                   "Crops like wheat, okra, rice, and sugarcane were brought to the New World",
                   "Crops like potatoes, maize, tomatoes, beans, peppers, cacao, yams, and tobacco were brought to the Old World. This led to better nutrition and population growth"
             ],
-            applicableCountries: ["Aztecs", "Spain 1492-1750"]
+            applicableCountries: ["Aztecs", "Spain 1492-1750"],
+            timePeriod: [1492, 1600],
+            emphasizedUnit: [1450, 1750]
       },
       "Triangular Trade and Trans-Atlantic Slave Trade": {
             "Governance": ["African kingdoms that participated in slave trade, like the Asante and Oyo, became very powerful"],
@@ -114,13 +133,17 @@ export const generalNotes: GeneralNotes = {
             "Social": ["Most slaves taken from Africa were men, leaving a gender imbalance in Africa. This led to more polygyny, but also to women taking on more traditionally masculine roles in society",
                   "In some Spanish, Portuguese, and French colonies, owners and slaves could go to court to argue for the freedom of a slave",
             ],
-            applicableCountries: ["Hausa States", "Spanish Territory", "Portuguese Territory", "French Territory", "British Territory", "Asante Kingdom"]
+            applicableCountries: ["Hausa States", "Spanish Territory", "Portuguese Territory", "French Territory", "British Territory", "Asante Kingdom"],
+            timePeriod: [1500, 1850],
+            emphasizedUnit: [1450, 1750]
       },
       "Thirty Years War 1618-1648": {
             "Governance": ["A war between Catholics and Protestants. It originally started in the Holy Roman Empire, and then it spread",
                   "It resulted in the Peace of Westphalia, where each area of the Holy Roman Empire could choose Roman Catholicism, Lutheranism, or Calvinism"
             ],
-            applicableCountries: ["England 1450-1700", "France 1450-1700", "Holy Roman Empire 1450-1700", "Spain 1492-1750", "Netherlands 1450-1750"]
+            applicableCountries: ["England 1450-1700", "France 1450-1700", "Holy Roman Empire 1450-1700", "Spain 1492-1750", "Netherlands 1450-1750"],
+            timePeriod: [1618, 1648],
+            emphasizedUnit: [1450, 1750]
       },
       "Enlightenment (1600s-1700s)": {
             "Important ideas": ["Socialism, the idea where the public owns the means of production, was developed",
@@ -141,7 +164,9 @@ export const generalNotes: GeneralNotes = {
                   "Led to the rise of revolutions, including the American Revolution, the French Revolution, and the Haitian Revolution",
                   "Led to the end of serfdom and slavery, and the rise of suffrage movements",
             ],
-            applicableCountries: ["England 1750-Present", "France 1750-1920", "Spanish Territory"]
+            applicableCountries: ["England 1750-Present", "France 1750-1920", "Spanish Territory"],
+            timePeriod: [1688, 1789],
+            emphasizedUnit: [1450, 1750]
       },
       "Second Industrial Revolution":{
             "Environment": ["The rapid rise in urbanization led to overcrowding and poor sanitation",
@@ -162,23 +187,29 @@ export const generalNotes: GeneralNotes = {
                   "Railways and steamships improved transportation, linking industrial centers and ports. Urbanization accelerated as new industrial cities rapidly grew"],
             "Uncategorized": ["Countries that had money, natural resources, and water transportation (eg. US, Germany, France, Russia, and Japan) began to industrialize after Britain",
                   "Before the industrial revolution, families worked together at home on their farms, but after the industrial revolution, the whole family was separated to work in factories",],
-            applicableCountries: ["United States 1776-1920", "Germany 1850-1920", "France 1750-1920", "Japan 1853-Present"]
+            applicableCountries: ["United States 1776-1920", "Germany 1850-1920", "France 1750-1920", "Japan 1853-Present"],
+            timePeriod: [1870, 1914],
+            emphasizedUnit: [1750, 1900]
       },
       "Communism": {
             "Social": ["Split into classes of proletariat and bourgeoisie"],
             "Uncategorized": [ "Developed by Karl Marx (1818-1883), who wanted to replace capitalism with socialism",
                   "In 1848 Karl Marx and Freidrich Engels wrote the Commmunist Manifesto, detailing how capitalism produced a lot of money but left many in poverty. They predicted that the middle class would be eliminated so everyone would fall into one of two classes: the bourgeoisie (rich people who owned the means of production) and the proletariat (the working class), and that the proletariat would eventually overthrow the bourgeoisie to form communism"
             ],
-            applicableCountries: ["China", "USSR", "Vietnam", "Venezuela", "Ethiopia", "Iran"]
+            applicableCountries: ["China", "USSR", "Vietnam", "Venezuela", "Ethiopia", "Iran"],
+            timePeriod: [1847, 1991],
+            emphasizedUnit: [1900, 2025]
       },
-      "Imperialism": {
+      "European Imperialism": {
             "Culture": ["Colonizers would force their culture, language, and religions on the people in their colonies"],
             "Governance": ["The British, French, and Dutch charter companies made treaties with rulers in India, East Africa, and the East Indies to set up ports and forts, which they used for spice trade and to form armies used to conquer the territory and make colonies"],
             "Economy": ["Countries wanted access to more raw materials (especially palm oil, gold, ivory, and diamonds from Africa) as well as new markets, so they made colonies"],
             "Social": ["They justified imperialism using ideas like White Man's Burden (it's white people's responsibility to civilize other people) and Social Darwinism (the idea that white people were superior to other races)", // social? culture?
                   "Having colonies was a way to prove how powerful a nation was", // maybe gov
             ],
-            applicableCountries: ["England 1750-Present", "France 1750-1920", "France 1920-Present", "Germany 1850-1920", "Spain 1492-1750", "Spain 1750-Present", "The Netherlands", "Japan 1853-Present"]
+            applicableCountries: ["England 1750-Present", "France 1750-1920", "France 1920-Present", "Germany 1850-1920", "Spain 1492-1750", "Spain 1750-Present", "The Netherlands", "Japan 1853-Present"],
+            timePeriod: [1492, 1945],
+            emphasizedUnit: [1900, 2025]
       },
       "Berlin Conference 1885": {
             "Governance": ["As imperialism was rising, Europeans fought each other for control in Africa. Otto von Bismarck wanted to keep the peace between the European nations, so he organized the Berlin Conference from 1884-1885",
@@ -186,13 +217,17 @@ export const generalNotes: GeneralNotes = {
                   "Africans had no say in the division, so the borders of the colonies often dividded up tribes into different colonies or grouped rival colonies in the same colony"
             ],
             "Economy": ["It allowed free movement of goods on major rivers"],
-            applicableCountries: ["England 1750-Present", "Belgium", "Germany 1850-1920", "France 1750-1920", "Spain 1750-Present", "Italy", "Portugal 1750-Present"]
+            applicableCountries: ["England 1750-Present", "Belgium", "Germany 1850-1920", "France 1750-1920", "Spain 1750-Present", "Italy", "Portugal 1750-Present"],
+            timePeriod: [1885, 1886], // Not really, but I'm making this exclusive so the second number has to be higher
+            emphasizedUnit: [1750, 1900]
       },
       "Great Depression 1929-1939": {
             "Economy": ["Disrupted global economies",
-                  "Germany was especially affected because they had inflation due to printing money to"
+                  "Germany was especially affected because they had inflation due to printing money to pay reparations after World War I"
             ],
-            applicableCountries: ["United States 1920-Present", "Germany 1920-1945", "France 1920-Present",]
+            applicableCountries: ["United States 1920-Present", "Germany 1920-1945", "France 1920-Present",],
+            timePeriod: [1929, 1939],
+            emphasizedUnit: [1900, 2025]
       },
       "World War I (1914-1918": {
             "Causes": ["Tensions were rising as Germany and Britain were becoming more powerful, Austria-Hungary and Russia both wanted control of the Balkans, and Kaiser Wilhelm II kicked out Otto von Bismarck who was trying to keep the peace",
@@ -235,7 +270,9 @@ export const generalNotes: GeneralNotes = {
                   "Led to the rise of communism and fascism",
                   "Inpsired colonial revolts"
             ],
-            applicableCountries: ["Serbia", "Ottoman Empire", "Germany 1850-1920", "Russia pre-Soviet", "USSR", "United States 1750-1920", "France 1750-1920", "Italy", "England 1750-present", "British Territory", "Japan 1853-Present", "Belgium", "Australia", "New Zealand", "French Territory", "Bulgaria", "Portugal 1750-Present", "China", "Romania", "Greece"]
+            applicableCountries: ["Serbia", "Ottoman Empire", "Germany 1850-1920", "Russia pre-Soviet", "USSR", "United States 1750-1920", "France 1750-1920", "Italy", "England 1750-present", "British Territory", "Japan 1853-Present", "Belgium", "Australia", "New Zealand", "French Territory", "Bulgaria", "Portugal 1750-Present", "China", "Romania", "Greece"],
+            timePeriod: [1914, 1918],
+            emphasizedUnit: [1900, 2025]
       },
       "World War II (1938-1945)": {
             "Causes": ["There was unrest in Germany, leading to the rise of the Nazi party and Hitler",
@@ -277,7 +314,9 @@ export const generalNotes: GeneralNotes = {
                   "The USSR got control of Poland",
                   "Europe became less influetial, solidifying the shift of power to the US",
             ],
-            applicableCountries: ["Germany 1920-1945", "Italy", "Japan 1853-Present", "Hungary", "Bulgaria", "Croatia", "England 1750-Present", "United States 1920-Present", "China", "France 1920-Present", "USSR", "Canada", "Australia", "New Zealand", "South Africa", "Poland"]
+            applicableCountries: ["Germany 1920-1945", "Italy", "Japan 1853-Present", "Hungary", "Bulgaria", "Croatia", "England 1750-Present", "United States 1920-Present", "China", "France 1920-Present", "USSR", "Canada", "Australia", "New Zealand", "South Africa", "Poland"],
+            timePeriod: [1938, 1945],
+            emphasizedUnit: [1900, 2025]
       },
       "Cold War": {
             "General notes": ["The US sent troops to try to stop the Bolsheviks during the Russian Civil War, leading to tensions between the US and the new government",
@@ -345,6 +384,8 @@ export const generalNotes: GeneralNotes = {
                   "Up to 2 million people died",
                   "The communist regime fell in 1992",],
             applicableCountries: ["United States 1920-Present", "USSR", "Vietnam", "Nicaragua", "North Korea", "South Korea", "Cuba", "Iran", "Venezuela"],
+            timePeriod: [1945, 1991],
+            emphasizedUnit: [1900, 2025]
       }
       
 }
