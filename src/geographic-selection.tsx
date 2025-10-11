@@ -113,8 +113,8 @@ export const GeographicSelectionPage = () => {
                 className="w-full h-8 bg-gradient-to-r from-blue-500 to-purple-600 cursor-pointer flex items-center justify-center text-white font-medium shadow-md hover:shadow-lg transition-shadow"
                 onClick={() => setIsConceptsBarOpen(!isConceptsBarOpen)}
                 >
-                <span className="mx-2">Cross-Country Concepts</span>
-                <span className="text-lg">{isConceptsBarOpen ? "▲" : "▼"}</span>
+                    <span className="mx-2">Cross-Country Concepts</span>
+                    <span className="text-lg">{isConceptsBarOpen ? "▲" : "▼"}</span>
                 </div>
                 
                 {/* Collapsible Content */}
@@ -153,7 +153,7 @@ export const GeographicSelectionPage = () => {
                 <div className="overflow-auto w-full h-full max-w-[100vw] scrollbar-visible">
                     <div className="min-w-[1600px] min-h-[900px] flex justify-center items-center">
                     <MapComponent
-                        className="svg-fixed-size"
+                        className="svg-container"
                         width={1600}
                         height={900}
                         onClick={handleCountryClick}
