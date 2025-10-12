@@ -6,16 +6,18 @@ import { GeographicSelectionPage } from './geographic-selection.tsx';
 import { NoteNodes } from './note-nodes.tsx';
 import ReactSlider from 'react-slider'
 import { D3ForceGraph } from './d3-test.tsx';
+import TimelinePage from './timeline-page';
 
 export enum AppPage {
-  START_SCREEN, EXPLANATION, GEOGRAPHIC_SELECTION, SVG_GENERATOR
+  START_SCREEN, EXPLANATION, GEOGRAPHIC_SELECTION, SVG_GENERATOR, TIMELINE
 }
 
 export const AppPageLabels: Record<AppPage, string> = {
   [AppPage.START_SCREEN]: "Home",
   [AppPage.EXPLANATION]: "Explanation",
   [AppPage.GEOGRAPHIC_SELECTION]: "Geographic Selection",
-  [AppPage.SVG_GENERATOR]: "SVG Generator"
+  [AppPage.SVG_GENERATOR]: "SVG Generator",
+  [AppPage.TIMELINE]: "Timeline"
 };
 
 const timePeriods: number[] = [
@@ -163,6 +165,8 @@ const PageTransition = () => {
             ))}
           </div>
         );
+      case AppPage.TIMELINE:
+        return <TimelinePage />;
       default:
         return <div>Error: Invalid page</div>;
     }
