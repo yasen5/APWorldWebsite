@@ -15,8 +15,7 @@ const Navbar = () => {
               href="#"
               onClick={() => goToPage(page)}
             >
-              {" "}
-              {label}{" "}
+              {label}
             </a>
           );
         })}
