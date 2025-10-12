@@ -1,4 +1,6 @@
-import { AppPage, AppPageLabels, usePageTransitionContext } from "./App";
+import { usePageTransitionContext } from "./PageTransition.tsx";
+import { AppPage, AppPageLabels } from "./AppPageLabels.ts";
+
 
 const Navbar = () => {
   const { goToPage } = usePageTransitionContext();
