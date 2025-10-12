@@ -188,21 +188,23 @@ export const GeographicSelectionPage = () => {
                     />
                     </div>
                 </div>
-                {canScrollRight && (
-                <button
-                    onClick={scrollMapRight}
-                    style={{ background: "none", border: "none"}}
-                    className="
-                    absolute 
-                    right-2 
-                    top-1/2 
-                    -translate-y-1/2 
-                    p-3 
-                    "
-                >
-                    <img src={ArrowsRight} className="h-10 w-10"/>
-                </button>)
-                }
+                {["left", "right"].map((direction) => {
+                    return (direction === "left" && canScrollLeft || direction === "right" && canScrollRight) && (
+                        <button
+                            onClick={() => scrollMap(direction)}
+                            style={{ background: "none", border: "none"}}
+                            className={`
+                            absolute 
+                            ${direction === "left" ? "left-2" : "right-2"}
+                            top-1/2 
+                            -translate-y-1/2 
+                            p-3 
+                            `}
+                        >
+                            <img src={ArrowsRight} className={`h-10 w-10 ${direction === "left" ? "rotate-180" : ""}`}/>
+                        </button>
+                    );
+                })}
             </div>
             {selectedCountry && (
                 <Popup
