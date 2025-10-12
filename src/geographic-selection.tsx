@@ -3,6 +3,7 @@ import { useTimeSliderContext } from "./App";
 import { blobNotes, countryNotes, generalNotes, noteSVGs } from './notes'
 import World1200 from './assets/World-1200.svg?react';
 import { createPortal } from "react-dom";
+import ArrowsRight from './assets/DoubleGreenArrows.png'
 
 export const GeographicSelectionPage = () => {
     const { selectedTime } = useTimeSliderContext();
@@ -10,6 +11,18 @@ export const GeographicSelectionPage = () => {
     const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
     const [isConceptsBarOpen, setIsConceptsBarOpen] = useState(false);
     const [hoveredConcept, setHoveredConcept] = useState<string | null>(null);
+    const mapRef = useRef<HTMLDivElement>(null);
+    const [canScrollRight, setCanScrollRight] = useState<boolean>(false);
+    const [canScrollLeft, setCanScrollLeft] = useState<boolean>(false);
+
+    const scrollMap = (direction: "left" | "right") => {
+        if (mapRef.current) {
+            mapRef.current.scrollBy({
+                left: direction === "right" ? 200 : -200,
+                behavior: "smooth",
+            });
+        }
+    };
 
     const nations = Object.keys(countryNotes);
 
@@ -45,6 +58,21 @@ export const GeographicSelectionPage = () => {
             }
         });
     }, [selectedTime]);
+
+    useEffect(() => {
+        const map = mapRef.current;
+        if (!map) return;
+        
+        const updateScrollState = () => {
+            setCanScrollLeft(map.scrollLeft > 0);
+            setCanScrollRight(map.scrollLeft + map.clientWidth < map.scrollWidth);
+        };
+        
+        map.addEventListener("scroll", updateScrollState);
+        updateScrollState();
+        
+        return () => map.removeEventListener("scroll", updateScrollState);
+    }, []);
 
     // Create styles object for SVG paths
     const countryStyles = useMemo(() => {
@@ -150,7 +178,7 @@ export const GeographicSelectionPage = () => {
 
             {/* SVG viewport container */}
             <div className="relative w-full h-full flex justify-center pt-2">
-                <div className="overflow-auto w-full h-full max-w-[100vw] scrollbar-visible">
+                <div ref={mapRef} className="overflow-auto w-full h-full max-w-[100vw] scrollbar-visible">
                     <div className="min-w-[1600px] min-h-[900px] flex justify-center items-center">
                     <MapComponent
                         className="svg-container"
@@ -160,6 +188,21 @@ export const GeographicSelectionPage = () => {
                     />
                     </div>
                 </div>
+                {canScrollRight && (
+                <button
+                    onClick={scrollMapRight}
+                    style={{ background: "none", border: "none"}}
+                    className="
+                    absolute 
+                    right-2 
+                    top-1/2 
+                    -translate-y-1/2 
+                    p-3 
+                    "
+                >
+                    <img src={ArrowsRight} className="h-10 w-10"/>
+                </button>)
+                }
             </div>
             {selectedCountry && (
                 <Popup
