@@ -1,0 +1,32 @@
+name: Auto Format with Prettier
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }} 
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24.1.0'
+
+      - name: Install dependencies
+        run: npm install prettier
+
+      - name: Format code
+        run: npx prettier --write .
+
+      - name: Create Pull Request with formatted changes (Optional)
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Format code with Prettier"
+          branch: ${{ github.head_ref }}
