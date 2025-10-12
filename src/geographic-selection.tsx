@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { useTimeSliderContext } from "./App";
+import { useTimeSliderContext } from "./TimeSlider";
 import { blobNotes, countryNotes, generalNotes, noteSVGs } from './notes'
 import World1200 from './assets/World-1200.svg?react';
 import { createPortal } from "react-dom";
