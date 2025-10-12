@@ -11,7 +11,7 @@ interface StartScreenProps {
 const StartScreen = ({ goToPage }: StartScreenProps) => {
   return (
     <div className='flex flex-col items-center'>
-      <h1>AP World Study Website asbhaasdfas</h1>
+      <h1>AP World Study Website</h1>
       <p>Click to Begin</p>
       <button className='image-button' onClick={() => goToPage(AppPage.GEOGRAPHIC_SELECTION)}>
         <img src={worldIcon} className="p-1.5 h-24 w-24 drop-shadow-sm animate-pulse" />
