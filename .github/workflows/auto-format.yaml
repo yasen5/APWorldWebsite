@@ -6,7 +6,8 @@ on:
       - main
 
 permissions:
-  contents: write  # ✅ allows pushing commits to PR branches
+  contents: write
+  workflows: write
 
 jobs:
   format:
