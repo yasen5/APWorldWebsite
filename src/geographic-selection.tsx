@@ -427,7 +427,7 @@ const Dropdown: React.FC<{ title: string; children: React.ReactNode }> = ({
   return (
     <div className="border border-gray-300 rounded mb-2">
       <button
-        style={{ backgroundColor: categoryColors[title] }}
+        style={{ backgroundColor: categoryColors[title] || "#f0f0f0" }}
         className="w-full flex justify-between items-center p-2"
         onClick={() => setIsOpen(!isOpen)}
       >
