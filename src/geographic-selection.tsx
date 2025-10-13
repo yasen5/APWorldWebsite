@@ -409,19 +409,21 @@ const Popup: React.FC<{ noteKey: string; onClose: () => void }> = ({
   );
 };
 
+const categoryColors: Record<string, string> = {
+  "Culture": "#FF6B6B",
+  "Governance": "#4ECDC4",
+  "Economy": "#45B7D1",
+  "Social": "#96CEB4",
+  "Environment": "#FFEAA7",
+  "Technology": "#DDA0DD"
+}
+
 const Dropdown: React.FC<{ title: string; children: React.ReactNode }> = ({
   title,
   children,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const categoryColors: Record<string, string> = {
-    "Culture": "#FF6B6B",
-    "Governance": "#4ECDC4",
-    "Economy": "#45B7D1",
-    "Social": "#96CEB4",
-    "Environment": "#FFEAA7",
-    "Technology": "#DDA0DD"
-  }
+  
   return (
     <div className="border border-gray-300 rounded mb-2">
       <button
