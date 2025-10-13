@@ -378,7 +378,7 @@ const Popup: React.FC<{ noteKey: string; onClose: () => void }> = ({
         >
           x
         </button>
-        <h2 className="font-bold" id="modal-title">
+        <h2 className="font-bold text-2xl text-black" id="modal-title">
           {noteKey}
         </h2>
         {SvgNotes && <SvgNotes onClick={handleBlobClick} />}
@@ -414,10 +414,19 @@ const Dropdown: React.FC<{ title: string; children: React.ReactNode }> = ({
   children,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const categoryColors: Record<string, string> = {
+    "Culture": "#FF6B6B",
+    "Governance": "#4ECDC4",
+    "Economy": "#45B7D1",
+    "Social": "#96CEB4",
+    "Environment": "#FFEAA7",
+    "Technology": "#DDA0DD"
+  }
   return (
     <div className="border border-gray-300 rounded mb-2">
       <button
-        className="w-full flex justify-between items-center p-2 bg-gray-100"
+        style={{ backgroundColor: categoryColors[title] }}
+        className="w-full flex justify-between items-center p-2"
         onClick={() => setIsOpen(!isOpen)}
       >
         <span className="font-medium">{title}</span>
