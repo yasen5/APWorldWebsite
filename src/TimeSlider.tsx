@@ -56,9 +56,9 @@ export const TimeSlider = () => {
           const left = ((mark - timePeriods[0]) /
             (timePeriods[timePeriods.length - 1] - timePeriods[0])) * 100;
           return (
-            <div key={mark} className="absolute top-3" style={{ left: `${left}%` }}>
-              <div className="w-[2px] h-3 bg-gray-500 mx-auto"></div>
-              <div className="text-xs text-gray-600 text-center mt-1 -translate-x-1/2">
+            <div key={mark} className="absolute top-3" style={{ left: `${left}%` }} role="presentation">
+              <div className="w-[2px] h-3 bg-gray-500 mx-auto" aria-hidden="true"></div>
+              <div className="text-xs text-gray-600 text-center mt-1 -translate-x-1/2" aria-hidden="true">
                 {mark}
               </div>
             </div>
