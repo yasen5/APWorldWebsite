@@ -237,7 +237,7 @@ export const generalNotes: GeneralNotes = {
       "Spanish Territory",
     ],
     timePeriod: [1688, 1789],
-    emphasizedUnit: [1450, 1750],
+    emphasizedUnit: [1750, 1900],
   },
   "Second Industrial Revolution": {
     Environment: [
@@ -314,7 +314,7 @@ export const generalNotes: GeneralNotes = {
       "Japan 1853-Present",
     ],
     timePeriod: [1492, 1945],
-    emphasizedUnit: [1900, 2025],
+    emphasizedUnit: [1750, 1900],
   },
   "Berlin Conference 1885": {
     Governance: [
