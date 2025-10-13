@@ -1,7 +1,27 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import { blobNotes, countryNotes, generalNotes, noteSVGs } from './notes'
+import World1200 from './assets/World-1200.svg?react';
+import World1280 from './assets/World-1280.svg?react';
+import World1300 from './assets/World-1300.svg?react';
+import World1400 from './assets/World-1400.svg?react';
+import World1500 from './assets/World-1500.svg?react';
+import World1530 from './assets/World-1530.svg?react';
+import World1600 from './assets/World-1600.svg?react';
+import World1650 from './assets/World-1650.svg?react';
+import World1700 from './assets/World-1700.svg?react';
+import World1715 from './assets/World-1715.svg?react';
+import World1785 from './assets/World-1785.svg?react';
+import World1800 from './assets/World-1800.svg?react';
+import World1815 from './assets/World-1815.svg?react';
+import World1880 from './assets/World-1880.svg?react';
+import World1900 from './assets/World-1900.svg?react';
+import World1914 from './assets/World-1914.svg?react';
+import World1930 from './assets/World-1930.svg?react';
+import World1938 from './assets/World-1938.svg?react';
+import World1950 from './assets/World-1950.svg?react';
+import World1960 from './assets/World-1960.svg?react';
+import World1994 from './assets/World-1994.svg?react';
 import { useTimeSliderContext } from "./TimeSlider";
-import { blobNotes, countryNotes, generalNotes, noteSVGs } from "./notes"
-import World1200 from "./assets/World-1200.svg?react";
 import { createPortal } from "react-dom";
 import ArrowsRight from "./assets/DoubleGreenArrows.png";
 
@@ -97,21 +117,38 @@ export const GeographicSelectionPage = () => {
         cursor: "pointer",
         opacity: isHighlighted ? 1 : hoveredConcept ? 0.3 : 1,
         stroke: isHighlighted ? "#333" : "none",
-        strokeWidth: isHighlighted ? "2px" : "0",
+        strokeWidth: isHighlighted ? ".5px" : "0",
         transition: "opacity 0.2s ease, stroke 0.2s ease",
       };
     });
     return styles;
   }, [countryColors, hoveredConcept]);
 
-  const timeMaps: Record<
-    number,
-    React.ComponentType<React.SVGProps<SVGSVGElement>>
-  > = {
-    1200: World1200,
-  };
+    const timeMaps: Record<number, React.ComponentType<React.SVGProps<SVGSVGElement>>> = {
+        1200: World1200,
+        1280: World1280,
+        1300: World1300,
+        1400: World1400,
+        1500: World1500,
+        1530: World1530,
+        1600: World1600,
+        1650: World1650,
+        1700: World1700,
+        1715: World1715,
+        1785: World1785,
+        1800: World1800,
+        1815: World1815,
+        1880: World1880,
+        1900: World1900,
+        1914: World1914,
+        1930: World1930,
+        1938: World1938,
+        1950: World1950,
+        1960: World1960,
+        1994: World1994
+    };
 
-  const timePeriods: number[] = [1200, 1450, 1750, 1900, 2025];
+    const timePeriods: number[] = [1200, 1280, 1300, 1400, 1500, 1530, 1600, 1650, 1700, 1715, 1785, 1800, 1815, 1880, 1900, 1914, 1930, 1938, 1950, 1960, 1994, 2025];
 
   const getMapByTime = ():
     | React.ComponentType<React.SVGProps<SVGSVGElement>>
