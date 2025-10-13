@@ -117,7 +117,7 @@ export const GeographicSelectionPage = () => {
         cursor: "pointer",
         opacity: isHighlighted ? 1 : hoveredConcept ? 0.3 : 1,
         stroke: isHighlighted ? "#333" : "none",
-        strokeWidth: isHighlighted ? "2px" : "0",
+        strokeWidth: isHighlighted ? ".5px" : "0",
         transition: "opacity 0.2s ease, stroke 0.2s ease",
       };
     });
