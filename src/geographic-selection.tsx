@@ -24,6 +24,7 @@ import World1994 from './assets/World-1994.svg?react';
 import { useTimeSliderContext } from "./TimeSlider";
 import { createPortal } from "react-dom";
 import ArrowsRight from "./assets/DoubleGreenArrows.png";
+import * as Slider from "@radix-ui/react-slider";
 
 export const GeographicSelectionPage = () => {
   const { selectedTime } = useTimeSliderContext();
