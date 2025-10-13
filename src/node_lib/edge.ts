@@ -1,4 +1,4 @@
-import { Vertex } from "./Vertex";
+import { Vertex } from "./vertex";
 
 export class Edge {
     public start: Vertex;
