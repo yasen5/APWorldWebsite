@@ -3,6 +3,7 @@ import worldIcon from './assets/world.svg'
 import { GeographicSelectionPage } from './geographic-selection.tsx';
 import { D3ForceGraph } from './d3-test.tsx';
 import { createContext, useContext, useState, useRef } from "react";
+import TimelinePage from "./timeline-page.tsx";
 
 interface StartScreenProps {
   goToPage: (page: AppPage) => void
@@ -119,6 +120,8 @@ export const PageTransition = () => {
             ))}
           </div>
         );
+      case AppPage.TIMELINE:
+        return <TimelinePage />;
       default:
         return <div>Error: Invalid page</div>;
     }
