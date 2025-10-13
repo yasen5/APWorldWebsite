@@ -42,7 +42,6 @@ export const TimeSlider = () => {
         className="relative flex items-center w-full h-5"
         min={timePeriods[0]}
         max={timePeriods[timePeriods.length - 1]}
-        step={undefined} // no intermediate steps—marks only
         value={[selectedTime]}
         onValueChange={(v) => setSelectedTime(v[0])}
       >
