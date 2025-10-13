@@ -1,5 +1,5 @@
 import { getDistance, Vector2d } from "./vector2d";
-import type { Vertex } from "./Vertex";
+import type { Vertex } from "./vertex";
 
 let coolingRate = 0.05;
 let temperature = 4.0;
