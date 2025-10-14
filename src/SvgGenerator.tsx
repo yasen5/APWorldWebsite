@@ -66,13 +66,13 @@ export const D3ForceGraph = () => {
         const importance = actualNotes[i].importance;
         const category = actualNotes[i].category;
         // Scale radius based on container size
-        const baseRadius = Math.min(width, height) * 0.02; // 2% of the smaller dimension
+        const baseRadius = Math.min(width, height) * 0.02;
         return {
           id: `node-${i}`,
-          noteId: actualNotes[i].noteId, // Use actual note ID
+          noteId: actualNotes[i].noteId,
           category: category,
           importance: importance,
-          radius: baseRadius + importance * (Math.min(width, height) * 0.08), // Scale with container
+          radius: baseRadius + importance * (Math.min(width, height) * 0.08),
           x: (width / 2 + Math.sign(Math.random() - 0.5) * Math.min(width, height) / importance),
           y: (height / 2 + Math.sign(Math.random() - 0.5) * Math.min(width, height) / importance)
         }
@@ -130,10 +130,10 @@ export const D3ForceGraph = () => {
       textSelection.each(function(d) {
         const text = d3.select(this);
         const words = d.noteId.split(/\s+/).reverse();
-        const maxWidth = d.radius * 1.8; // inside circle
+        const maxWidth = d.radius * 1.8;
         let line: string[] = [];
         let lineNumber = 0;
-        const lineHeight = 1.1; // ems
+        const lineHeight = 1.1;
         const y = 0;
         let tspan = text.text(null)
           .append("tspan")
@@ -192,7 +192,6 @@ export const D3ForceGraph = () => {
             .style("opacity", 0);
         });
 
-      // This text should wrap
       const textSelection = nodeSelection.append("text")
         .text(d => d.noteId)
         .attr("text-anchor", "middle")
@@ -200,7 +199,7 @@ export const D3ForceGraph = () => {
         .style("font-family", "sans-serif")
         .style("pointer-events", "none")
         .style("fill", d => categoryTextColors[d.category])
-        .style("font-size", d => Math.max(8, d.radius * 0.2) + "px") // Minimum font size
+        .style("font-size", d => Math.max(8, d.radius * 0.2) + "px")
 
       wrapText(textSelection);
 
@@ -218,8 +217,6 @@ export const D3ForceGraph = () => {
       .alphaDecay(0.02)
       .on("tick", () => {
         nodeSelection.attr("transform", d => `translate(${d.x!},${d.y!})`);
-      })
-      .on("end", () => {
       });
 
     simulation.tick(10);
