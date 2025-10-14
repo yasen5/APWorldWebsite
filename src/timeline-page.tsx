@@ -4,12 +4,12 @@ import { countryNotes } from './notes';
 import "./App.css";
 
 type TimelinePanelProps = {
+  hoveredEvent: string | null;
   onHover: (k: string | null) => void;
   onClickEvent: (k: string) => void;
 };
 
-// TimelinePanel (replace your current one)
-const TimelinePanel: React.FC<TimelinePanelProps> = ({ onHover, onClickEvent }) => {
+const TimelinePanel: React.FC<TimelinePanelProps> = ({ hoveredEvent, onHover, onClickEvent }) => {
   const events = Object.keys(timelineNotes) as (keyof typeof timelineNotes)[];
 
   const { minYear, maxYear, range, pxPerYear, trackWidthPx, trackHeightPx, placements, laneHeight, laneGap, baseTop, bottomGap } = useMemo(() => {
@@ -18,7 +18,7 @@ const TimelinePanel: React.FC<TimelinePanelProps> = ({ onHover, onClickEvent }) 
     const maxYear = 2025;
     const range = Math.max(1, maxYear - minYear);
 
-    const pxPerYear = 30; // pixels per year (tweak)
+    const pxPerYear = 30; // pixels per year
     const trackWidthPx = Math.max(800, Math.ceil(range * pxPerYear));
     const MIN_BTN_PX = 40;
 
@@ -33,11 +33,11 @@ const TimelinePanel: React.FC<TimelinePanelProps> = ({ onHover, onClickEvent }) 
       return { ev: String(ev), start, end, leftPx, btnWidth, title };
     });
 
-    // lane layout constants (single source of truth)
+    // lane layout constants
     const laneHeight = 28;
-    const laneGap = 8;
+    const laneGap = 12;
     const baseTop = 12;
-    const bottomGap = 28; // reserve below the lowest lane so it isn't clipped
+    const bottomGap = 30; // reserve below the lowest lane so it isn't clipped
 
     // assign lanes (first-fit)
     const lanesEnd: number[] = [];
@@ -50,8 +50,8 @@ const TimelinePanel: React.FC<TimelinePanelProps> = ({ onHover, onClickEvent }) 
     }> = [];
 
     rawItems.forEach(item => {
-      // find lane that ends before this item's left (with small gap)
-      let laneIndex = lanesEnd.findIndex(endX => item.leftPx > endX + 2);
+      // find lane
+      let laneIndex = lanesEnd.findIndex(endX => item.leftPx > endX + 2); // 2px gap
       if (laneIndex === -1) {
         laneIndex = lanesEnd.length;
         lanesEnd.push(item.leftPx + item.btnWidth);
@@ -104,7 +104,7 @@ const TimelinePanel: React.FC<TimelinePanelProps> = ({ onHover, onClickEvent }) 
             }}
           />
 
-          {/* year tick marks every 50 years */}
+          {/* year tick marks*/}
           {Array.from(
             { length: Math.floor((maxYear - minYear) / 50) + 1 },
             (_, i) => minYear + i * 10
@@ -140,34 +140,54 @@ const TimelinePanel: React.FC<TimelinePanelProps> = ({ onHover, onClickEvent }) 
             );
           })}
 
-          {/* event buttons (use same laneHeight & laneGap as in useMemo) */}
+          {/* event buttons */}
           {placements.map(p => {
-            const topPx = baseTop + p.lane * (laneHeight + laneGap);
-            return (
-              <button
-                key={p.ev}
-                type="button"
-                onMouseEnter={() => onHover(p.ev)}
-                onMouseLeave={() => onHover(null)}
-                onClick={() => onClickEvent(p.ev)}
-                title={p.title || p.ev}
-                className="scroll-item rounded-full text-sm border hover:shadow bg-white"
-                style={{
-                  position: 'absolute',
-                  left: `${p.leftPx}px`,
-                  top: `${topPx}px`,
-                  width: `${p.btnWidth}px`,
-                  padding: '6px 8px',
-                  whiteSpace: 'nowrap',
-                  overflow: 'hidden',
-                  textOverflow: 'ellipsis',
-                  boxSizing: 'border-box'
-                }}
-              >
-                {p.ev}
-              </button>
-            );
-          })}
+  const topPx = baseTop + p.lane * (laneHeight + laneGap);
+  return (
+    <div 
+      key={p.ev} 
+      style={{ position: 'absolute', left: `${p.leftPx}px`, top: `${topPx}px` }}
+    >
+      <button
+        type="button"
+        onMouseEnter={() => onHover(p.ev)}
+        onMouseLeave={() => onHover(null)}
+        onClick={() => onClickEvent(p.ev)}
+        className="scroll-item rounded-full text-sm border hover:shadow bg-white"
+        style={{
+          padding: '6px 12px',
+          whiteSpace: 'nowrap',
+          overflow: 'hidden',
+          textOverflow: 'ellipsis',
+          boxSizing: 'border-box'
+        }}
+      >
+        {p.ev}
+      </button>
+
+      {hoveredEvent === p.ev && (
+        <div
+          style={{
+            position: 'absolute',
+            top: '36px', // move tooltip higher
+            left: '50%',
+            transform: 'translateX(-50%)',
+            padding: '5px 4px', // bigger tooltip
+            fontSize: '0.875rem',
+            boxShadow: '0 4px 12px rgba(0,0,0,0.25)',
+            borderRadius: '6px',
+            backgroundColor: '#fafafaf3',
+            zIndex: 10,
+            whiteSpace: 'nowrap',
+            height: '30px',
+          }}
+        >
+          {p.title || p.ev}
+        </div>
+      )}
+    </div>
+  );
+})}
         </div>
       </div>
     </div>
@@ -192,6 +212,7 @@ const TimelinePage: React.FC = () => {
 
         <div className="scroll-container">
           <TimelinePanel
+            hoveredEvent={hoveredEvent}
             onHover={(k) => setHoveredEvent(k)}
             onClickEvent={(k) => setOpenEvent(k)}
           />
