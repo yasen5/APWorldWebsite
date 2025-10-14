@@ -39,7 +39,7 @@ export const TimeSlider = () => {
     <div className="pt-5 px-4 w-full">
       {/* Slider Root */}
       <Slider.Root
-        className="relative flex"
+        className="relative flex items-center"
         min={timePeriods[0]}
         max={timePeriods[timePeriods.length - 1]}
         value={[selectedTime]}
