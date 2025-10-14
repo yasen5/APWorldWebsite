@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { PageTransition, PageTransitionProvider, usePageTransitionContext } from './PageTransition.tsx';
 import './App.css'
 import Navbar from './Navbar.tsx';

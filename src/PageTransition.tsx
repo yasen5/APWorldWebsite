@@ -3,6 +3,7 @@ import worldIcon from './assets/world.svg'
 import { GeographicSelectionPage } from './geographic-selection.tsx';
 import { D3ForceGraph } from './d3-test.tsx';
 import { createContext, useContext, useState, useRef } from "react";
+import { ExplanationPage } from "./Explanation.tsx";
 import TimelinePage from "./timeline-page.tsx";
 
 interface StartScreenProps {
@@ -19,15 +20,6 @@ const StartScreen = ({ goToPage }: StartScreenProps) => {
       </button>
       <button onClick={() => goToPage(AppPage.EXPLANATION)}>Explanation</button>
       <button onClick={() => goToPage(AppPage.SVG_GENERATOR)}>SVG Generator</button>
-    </div>
-  );
-};
-
-const ExplanationPage = () => {
-  return (
-    <div>
-      <h1>Second Page</h1>
-      <p>Explanation TODO</p>
     </div>
   );
 };

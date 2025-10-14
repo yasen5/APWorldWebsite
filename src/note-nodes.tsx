@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Edge } from "./node_lib/edge";
 import { cool, getAttractiveForce, getRepulsiveForce } from "./node_lib/forces";
-import { getDistance, Vector2d } from "./node_lib/vector2d";
-import { Vertex } from "./node_lib/Vertex";
+import { Vector2d } from "./node_lib/vector2d";
+import { Vertex } from "./node_lib/vertex";
 
 const vertexRadius = 6;
 const baseNotePointRadius = 3;
@@ -38,7 +38,7 @@ export const NoteNodes: React.FC<{ bboxSideLength: number }> = ({
   const marginedBboxSideLength = bboxSideLength - 2 * margin;
   const centerDist = marginedBboxSideLength / 2;
 
-  const [updateCounter, setUpdateCounter] = useState(0);
+  const [, setUpdateCounter] = useState(0);
 
   const { centralNode, topicNodes, noteNodes, edges, totalNodes } =
     useMemo(() => {
