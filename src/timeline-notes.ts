@@ -20,7 +20,7 @@ export const timelineNotes: TimelineNotes = {
         theme: "governance"
     },
     "Mongol conquest" : {
-        timePeriod: [1900, 1990],
+        timePeriod: [1207, 1260],
         emphasizedUnit: [1200, 1450],
         applicableCountries: [""],
         description: [""],
@@ -28,6 +28,22 @@ export const timelineNotes: TimelineNotes = {
         effects: [""],
         theme: "governance"
     },
+    "World War II": {
+        timePeriod: [1938, 1945],
+        emphasizedUnit: [1200, 1450],
+        applicableCountries: [""],
+        description: [""],
+        theme: "governance"
+    },
+    "Hi": {
+        timePeriod: [1204, 1206],
+        emphasizedUnit: [1200, 1450],
+        applicableCountries: [""],
+        description: [""],
+        causes: [""],
+        effects: [""],
+        theme: "governance"
+    }
 }
 // events will go here
 // "Template" : {

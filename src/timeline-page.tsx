@@ -8,136 +8,173 @@ type TimelinePanelProps = {
   onClickEvent: (k: string) => void;
 };
 
+// TimelinePanel (replace your current one)
 const TimelinePanel: React.FC<TimelinePanelProps> = ({ onHover, onClickEvent }) => {
   const events = Object.keys(timelineNotes) as (keyof typeof timelineNotes)[];
 
-  const { minYear, maxYear, positions, trackWidthPx } = useMemo(() => {
+  const { minYear, maxYear, range, pxPerYear, trackWidthPx, trackHeightPx, placements, laneHeight, laneGap, baseTop, bottomGap } = useMemo(() => {
     const years = events.flatMap(e => timelineNotes[e].timePeriod.map(y => Number(y)));
-    const minYear = Math.min(...years);
-    const maxYear = Math.max(...years);
-    const range = maxYear - minYear || 1;
+    const minYear = 1200;
+    const maxYear = 2025;
+    const range = Math.max(1, maxYear - minYear);
 
-    // choose track width proportional to range so it can scroll
-    const pxPerYear = 8; // tweak this to compress/expand timeline
+    const pxPerYear = 30; // pixels per year (tweak)
     const trackWidthPx = Math.max(800, Math.ceil(range * pxPerYear));
+    const MIN_BTN_PX = 40;
 
-    const positions: Record<string, number> = {};
-    events.forEach(ev => {
-      const [sRaw, tRaw] = timelineNotes[ev].timePeriod;
-      const s = Number(sRaw);
-      const t = Number(tRaw);
-      const mid = (s + t) / 2;
-      const pct = ((mid - minYear) / range) * 100;
-      positions[String(ev)] = Math.max(0, Math.min(100, pct));
+    const rawItems = events.map(ev => {
+      const evNote = timelineNotes[ev];
+      const start = Number(evNote.timePeriod[0]);
+      const end = Number(evNote.timePeriod[1]);
+      const leftPx = Math.round((start - minYear) * pxPerYear);
+      const rawWidthPx = Math.round((end - start) * pxPerYear);
+      const btnWidth = Math.max(MIN_BTN_PX, rawWidthPx);
+      const title = Array.isArray(evNote.description) ? evNote.description.join(', ') : (evNote.description ?? '');
+      return { ev: String(ev), start, end, leftPx, btnWidth, title };
     });
 
-    return { minYear, maxYear, positions, trackWidthPx };
+    // lane layout constants (single source of truth)
+    const laneHeight = 28;
+    const laneGap = 8;
+    const baseTop = 12;
+    const bottomGap = 28; // reserve below the lowest lane so it isn't clipped
+
+    // assign lanes (first-fit)
+    const lanesEnd: number[] = [];
+    const placements: Array<{
+      ev: string;
+      leftPx: number;
+      btnWidth: number;
+      lane: number;
+      title: string;
+    }> = [];
+
+    rawItems.forEach(item => {
+      // find lane that ends before this item's left (with small gap)
+      let laneIndex = lanesEnd.findIndex(endX => item.leftPx > endX + 2);
+      if (laneIndex === -1) {
+        laneIndex = lanesEnd.length;
+        lanesEnd.push(item.leftPx + item.btnWidth);
+      } else {
+        lanesEnd[laneIndex] = item.leftPx + item.btnWidth;
+      }
+      placements.push({
+        ev: item.ev,
+        leftPx: item.leftPx,
+        btnWidth: item.btnWidth,
+        lane: laneIndex,
+        title: item.title,
+      });
+    });
+
+    // compute track height from lanes using same laneGap
+    const computedHeight = baseTop + lanesEnd.length * (laneHeight + laneGap) + 16;
+    const trackHeightPx = Math.max(96, computedHeight) + bottomGap;
+
+    return { minYear, maxYear, range, pxPerYear, trackWidthPx, trackHeightPx, placements, laneHeight, laneGap, baseTop, bottomGap };
   }, [events]);
+
+  // axis position below lanes (use same bottomGap)
+  const axisY = Math.max(24, trackHeightPx - bottomGap);
 
   return (
     <div className="my-3">
-      {/* scrollable container */}
-      <div className="scroll-container" style={{ overflowX: 'auto', padding: '8px 0' }}>
-        {/* fixed-height track with explicit wide width */}
+      <div
+        className="scroll-container rounded-2xl shadow-md"
+        style={{ overflowX: 'auto', padding: '8px 0 40px' }} // ensure padding-bottom >= bottomGap
+      >
         <div
-          className="timeline-track"
           style={{
             position: 'relative',
-            height: 96,
-            width: `${(useMemo as any) ? '' : ''}${/* placeholder to keep TS happy */ ''}`, // kept for minimal change, overwritten below
+            height: `${trackHeightPx}px`,
+            width: `${trackWidthPx}px`,
+            minWidth: `${trackWidthPx}px`
           }}
         >
-          {/* real track element with computed width */}
+          {/* axis line */}
           <div
             style={{
-              position: 'relative',
-              height: '100%',
-              width: `${trackWidthPx}px`,
-              minWidth: `${trackWidthPx}px`,
+              position: 'absolute',
+              left: 0,
+              right: 0,
+              top: `${axisY}px`,
+              height: 2,
+              transform: 'translateY(-50%)',
+              backgroundColor: 'rgba(0,0,0,0.08)',
             }}
-          >
-            {/* axis line */}
-            <div
-              style={{
-                position: 'absolute',
-                left: 0,
-                right: 0,
-                top: '50%',
-                height: 2,
-                transform: 'translateY(-50%)',
-                backgroundColor: 'rgba(0,0,0,0.08)',
-              }}
-            />
+          />
 
-            {/* year labels at ends */}
-            <div style={{ position: 'absolute', left: 4, top: '62%', fontSize: 12, color: '#6b7280' }}>
-              {minYear}
-            </div>
-            <div style={{ position: 'absolute', right: 4, top: '62%', fontSize: 12, color: '#6b7280' }}>
-              {maxYear}
-            </div>
+          {/* year tick marks every 50 years */}
+          {Array.from(
+            { length: Math.floor((maxYear - minYear) / 50) + 1 },
+            (_, i) => minYear + i * 10
+          ).map(year => {
+            const leftPxRaw = Number(year) - Number(minYear);
+            const leftPx = Math.min(Math.max(0, Math.round(leftPxRaw * (pxPerYear ?? 1))), trackWidthPx);
+            const labelLeft = Math.min(Math.max(0, leftPx - 16), Math.max(0, trackWidthPx - 32)); // keep label inside track
 
-            {/* event buttons positioned by percent across the wide track */}
-            {events.map(ev => {
-                const evNote = timelineNotes[ev];
-                const [startRaw, endRaw] = evNote.timePeriod;
-                const start = Number(startRaw);
-                const end = Number(endRaw);
-                const leftPct = ((start - minYear) / (maxYear - minYear)) * 100;
-                const widthPct = ((end - start) / (maxYear - minYear)) * 100;
-                const title = Array.isArray(evNote.description) ? evNote.description.join(', ') : (evNote.description ?? '');
+            return (
+              <div key={year}>
+                <div
+                  style={{
+                    position: 'absolute',
+                    left: `${leftPx}px`,
+                    top: `${axisY - 4}px`,
+                    width: '1px',
+                    height: '8px',
+                    backgroundColor: 'rgba(0,0,0,0.2)',
+                  }}
+                />
+                <div
+                  style={{
+                    position: 'absolute',
+                    left: `${labelLeft}px`,
+                    top: `${axisY - 20}px`,
+                    fontSize: '11px',
+                    color: '#6b7280',
+                  }}
+                >
+                  {year}
+                </div>
+              </div>
+            );
+          })}
 
-                let labelTransform = 'translate(-50%, -100%)';
-                if (leftPct < 6) labelTransform = 'translate(0, -100%)'; // in case it will be cut off on the left
-                if (leftPct + widthPct < 6) labelTransform = 'translate(-100%, -100%)';
-                return (
-                    <div
-                    key={String(ev)}
-                    style={{ position: 'absolute', left: `${leftPct}%`, width: `${Math.max(widthPct, 0.5)}%`, top: '25%', height: '50%',
-                    }}
-                    >
-                    {/* Range bar - need to change this bc this is not at all what we want but might be good code to save for what we actually need*/}
-                    <div
-                        style={{
-                        position: 'absolute',
-                        top: '40%',
-                        left: 0,
-                        right: 0,
-                        height: 6,
-                        backgroundColor: 'rgba(59,130,246,0.4)', // blue translucent
-                        borderRadius: 3,
-                        transform: 'translateY(-50%)'
-                        }}
-                    />
-                    {/* Label button */}
-                    <button
-                        type="button"
-                        onMouseEnter={() => onHover(String(ev))}
-                        onMouseLeave={() => onHover(null)}
-                        onClick={() => onClickEvent(String(ev))}
-                        title={title}
-                        className="scroll-item rounded-full text-sm border hover:shadow bg-white"
-                        style={{
-                        position: 'absolute',
-                        left: '${Math.min(Math.max(50, (widthPct === 100 ? 50 : 50)), 50)}%',
-                        transform: labelTransform,
-                        whiteSpace: 'nowrap',
-                        overflow: 'hidden',
-                        textOverflow: 'ellipsis',
-                        padding: '4px 8px',
-                        }}
-                    >
-                        {String(ev)}
-                    </button>
-                    </div>
-                );
-            })}
-          </div>
+          {/* event buttons (use same laneHeight & laneGap as in useMemo) */}
+          {placements.map(p => {
+            const topPx = baseTop + p.lane * (laneHeight + laneGap);
+            return (
+              <button
+                key={p.ev}
+                type="button"
+                onMouseEnter={() => onHover(p.ev)}
+                onMouseLeave={() => onHover(null)}
+                onClick={() => onClickEvent(p.ev)}
+                title={p.title || p.ev}
+                className="scroll-item rounded-full text-sm border hover:shadow bg-white"
+                style={{
+                  position: 'absolute',
+                  left: `${p.leftPx}px`,
+                  top: `${topPx}px`,
+                  width: `${p.btnWidth}px`,
+                  padding: '6px 8px',
+                  whiteSpace: 'nowrap',
+                  overflow: 'hidden',
+                  textOverflow: 'ellipsis',
+                  boxSizing: 'border-box'
+                }}
+              >
+                {p.ev}
+              </button>
+            );
+          })}
         </div>
       </div>
     </div>
   );
 };
+
+
 
 
 const TimelinePage: React.FC = () => {
