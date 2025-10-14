@@ -47,7 +47,7 @@ export const TimeSlider = () => {
       >
         {/* Track and range */}
         <Slider.Track className="bg-gray-300 relative grow rounded-full h-2">
-          <Slider.Range className="bg-blue-500 rounded-full h-full" />
+          <Slider.Range className="bg-blue-500 rounded-full" />
         </Slider.Track>
 
         {/* Marks */}
