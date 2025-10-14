@@ -36,10 +36,10 @@ export const TimeSlider = () => {
   const { selectedTime, setSelectedTime } = useTimeSliderContext();
 
   return (
-    <div className="pt-5 px-4 w-full mx-auto">
+    <div className="pt-5 px-4 w-full">
       {/* Slider Root */}
       <Slider.Root
-        className="relative flex items-center w-full h-5"
+        className="relative flex"
         min={timePeriods[0]}
         max={timePeriods[timePeriods.length - 1]}
         value={[selectedTime]}
@@ -47,7 +47,7 @@ export const TimeSlider = () => {
       >
         {/* Track and range */}
         <Slider.Track className="bg-gray-300 relative grow rounded-full h-2">
-          <Slider.Range className="absolute bg-blue-500 rounded-full h-full" />
+          <Slider.Range className="bg-blue-500 rounded-full h-full" />
         </Slider.Track>
 
         {/* Marks */}
