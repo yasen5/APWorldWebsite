@@ -1,6 +1,6 @@
 import { AppPage } from "./AppPageLabels";
 import worldIcon from './assets/world.svg'
-import { GeographicSelectionPage } from './geographic-selection.tsx';
+import { GeographicSelectionPage } from './GeographicSelection.tsx';
 import { D3ForceGraph } from './SvgGenerator.tsx';
 import { createContext, useContext, useState, useRef } from "react";
 import { ExplanationPage } from "./Explanation.tsx";
