@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { Edge } from "./node_lib/edge";
-import { cool, getAttractiveForce, getRepulsiveForce } from "./node_lib/forces";
-import { Vector2d } from "./node_lib/vector2d";
-import { Vertex } from "./node_lib/vertex";
+import { Edge } from "./edge";
+import { cool, getAttractiveForce, getRepulsiveForce } from "./forces";
+import { Vector2d } from "./vector2d";
+import { Vertex } from "./vertex";
 
 const vertexRadius = 6;
 const baseNotePointRadius = 3;

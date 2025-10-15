@@ -10,7 +10,7 @@ import { TimeSlider, TimeSliderProvider } from "./TimeSlider.tsx"
 const HeaderComponents = () => {
   const { nextPage } = usePageTransitionContext();
   return (
-    <div id="header" className="fixed top-0 left-0 w-full z-50">
+    <div id="header" className="fixed w-full z-50">
       <Navbar />
       {(nextPage == AppPage.GEOGRAPHIC_SELECTION) && <TimeSlider />}
     </div>
