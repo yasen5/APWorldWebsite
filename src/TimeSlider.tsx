@@ -36,10 +36,10 @@ export const TimeSlider = () => {
   const { selectedTime, setSelectedTime } = useTimeSliderContext();
 
   return (
-    <div className="pt-5 px-4 w-full mx-auto">
+    <div className="pt-5 px-4 w-full">
       {/* Slider Root */}
       <Slider.Root
-        className="relative flex items-center w-full h-5"
+        className="relative flex items-center"
         min={timePeriods[0]}
         max={timePeriods[timePeriods.length - 1]}
         value={[selectedTime]}
@@ -47,7 +47,7 @@ export const TimeSlider = () => {
       >
         {/* Track and range */}
         <Slider.Track className="bg-gray-300 relative grow rounded-full h-2">
-          <Slider.Range className="absolute bg-blue-500 rounded-full h-full" />
+          <Slider.Range className="bg-blue-500 rounded-full" />
         </Slider.Track>
 
         {/* Marks */}
@@ -55,9 +55,9 @@ export const TimeSlider = () => {
           const left = ((mark - timePeriods[0]) /
             (timePeriods[timePeriods.length - 1] - timePeriods[0])) * 100;
           return (
-            <div key={mark} className="absolute top-3" style={{ left: `${left}%` }} role="presentation">
-              <div className="w-[2px] h-3 bg-gray-500 mx-auto" aria-hidden="true"></div>
-              <div className="text-xs text-gray-600 text-center mt-1 -translate-x-1/2" aria-hidden="true">
+            <div key={mark} className="absolute -top-1" style={{ left: `${left}%` }} role="presentation">
+              <div className="w-[2px] h-4 bg-gray-600" aria-hidden="true"></div>
+              <div className="text-xs text-gray-200 text-center mt-1 -translate-x-1/2" aria-hidden="true">
                 {mark}
               </div>
             </div>
