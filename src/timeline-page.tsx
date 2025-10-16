@@ -227,7 +227,7 @@ const TimelinePage: React.FC = () => {
               <div className="bg-white p-6 rounded max-w-lg w-full">
                 <div className="flex justify-between items-center mb-2">
                   <h2 className="font-bold text-lg">{openEvent}</h2>
-                  <button type="button" onClick={() => setOpenEvent(null)}>Close</button>
+                  <button type="button" onClick={() => setOpenEvent(null)}>x</button>
                 </div>
 
                 <div className="text-sm text-gray-700 mb-3">
@@ -263,30 +263,50 @@ const TimelinePage: React.FC = () => {
         })()}
 
         {openCountry && (
-          <div className="fixed right-6 bottom-6 z-40 w-96 bg-white border p-4 rounded shadow-lg">
-            <div className="flex justify-between items-center mb-2">
-              <h3 className="font-semibold">{openCountry}</h3>
-              <button type="button" onClick={() => setOpenCountry(null)}>x</button>
-            </div>
+  <div className="fixed inset-0 z-60 flex items-center justify-center pointer-events-none">
+    <div
+      className="w-[80vw] h-[80vh] max-w-[90vw] max-h-[85vh] relative overflow-auto bg-[#f8f8f8] border-2 border-[#999] rounded-md shadow-lg p-6 text-left pointer-events-auto"
+      style={{ transformOrigin: 'top left' }}
+    >
+      <button
+        className="[all:unset] cursor-pointer absolute top-2 right-2"
+        type="button"
+        onClick={() => setOpenCountry(null)}
+        aria-label="Close"
+      >
+        x
+      </button>
 
-            {countryNotes[String(openCountry)] ? (
-              <div className="text-sm space-y-2 max-h-64 overflow-auto">
-                {Object.entries(countryNotes[String(openCountry)]).map(([section, content]) => (
-                  Array.isArray(content) && content.length > 0 ? (
-                    <div key={section}>
-                      <strong>{section}</strong>
-                      <ul className="list-disc pl-5 text-sm">
-                        {content.map((c, i) => <li key={i}>{c}</li>)}
-                      </ul>
-                    </div>
-                  ) : null
-                ))}
-              </div>
-            ) : (
-              <div className="text-sm text-gray-600">No country notes available.</div>
-            )}
-          </div>
-        )}
+      <h2 className="font-bold text-2xl text-black mb-4">{openCountry}</h2>
+
+      {countryNotes[String(openCountry)] ? (
+        <div className="text-black space-y-4">
+          {Object.entries(countryNotes[String(openCountry)]).map(
+            ([sectionTitle, content]) =>
+              sectionTitle !== "applicableCountries" &&
+              Array.isArray(content) &&
+              content.length > 0 &&
+              content[0] !== "" && (
+                <div key={sectionTitle}>
+                  <div className="font-semibold mb-1">{sectionTitle}</div>
+                  <ul className="list-disc pl-4">
+                    {content.map((point, i) => (
+                      <li key={i}>{point}</li>
+                    ))}
+                  </ul>
+                </div>
+              )
+          )}
+        </div>
+      ) : (
+        <div className="text-sm text-gray-600">
+          No country notes available.
+        </div>
+      )}
+    </div>
+  </div>
+)}
+
       </div>
     </div>
   );
