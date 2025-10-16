@@ -155,6 +155,7 @@ const TimelinePanel: React.FC<TimelinePanelProps> = ({ hoveredEvent, onHover, on
         onClick={() => onClickEvent(p.ev)}
         className="scroll-item rounded-full text-sm border hover:shadow bg-white"
         style={{
+          width: `${p.btnWidth}px`,
           padding: '6px 12px',
           whiteSpace: 'nowrap',
           overflow: 'hidden',
