@@ -2,13 +2,65 @@
 
 /* Sets the defaults for text and other miscellaneous things */
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  --font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --line-height: 1.5;
+  --font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* dark defaults */
+  --color-text: rgba(255, 255, 255, 0.87);
+  --color-bg: #242424;
+  --color-surface: #1f1f1f;
+  --accent-hover: #646cff;
+  --button-bg: #1a1a1a;
+  --button-border: transparent;
+  --color-scheme-token: dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root { color-scheme: dark; }
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-text: #213547;
+    --color-bg: #ffffff;
+    --color-surface: #f6f8fa;
+    --accent-hover: #747bff;
+    --button-bg: #f9f9f9;
+    --button-border: transparent;
+    --color-scheme-token: light;
+  }
+  :root { color-scheme: light;}
+}
+
+:root[data-theme="dark"] {
+  --color-text: rgba(255, 255, 255, 0.87);
+  --color-bg: #242424;
+  --color-surface: #1f1f1f;
+  --accent-hover: #646cff;
+  --button-bg: #1a1a1a;
+  --button-border: transparent;
+  --color-scheme-token: dark;
+
+}
+
+:root[data-theme="light"] {
+  --color-text: #213547;
+  --color-bg: #ffffff;
+  --color-surface: #f6f8fa;
+  --accent-hover: #747bff;
+  --button-bg: #f9f9f9;
+  --button-border: transparent;
+  --color-scheme-token: light;
+}
+
+:root {
+  font-family: var(--font-family);
+  line-height: var(--line-height);
+  font-weight: var(--font-weight);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -42,7 +94,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: var(--color-bg);
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -63,16 +115,4 @@ button.image-button {
   border: none;
 }
 
-/* Load light/dark mode preferences */
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
+
