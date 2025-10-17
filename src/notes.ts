@@ -2649,7 +2649,7 @@ export const countryNotes: CountryNotes = {
       "Became a manufacturing power",
     ],
   },
-  "Rusia 1991-Present": {
+  "Russia 1991-Present": {
     Culture: ["Revival of the Russian Orthodox Church"],
     Governance: ["The first leader was Boris Yeltsin"],
     Economy: ["Economics suffer after the USSR", "Export gas and oil"],
