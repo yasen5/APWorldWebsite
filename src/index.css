@@ -36,17 +36,6 @@
   :root { color-scheme: light;}
 }
 
-:root[data-theme="dark"] {
-  --color-text: rgba(255, 255, 255, 0.87);
-  --color-bg: #242424;
-  --color-surface: #1f1f1f;
-  --accent-hover: #646cff;
-  --button-bg: #1a1a1a;
-  --button-border: transparent;
-  --color-scheme-token: dark;
-
-}
-
 :root[data-theme="light"] {
   --color-text: #213547;
   --color-bg: #ffffff;
@@ -94,7 +83,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: var(--color-bg);
+  background-color: var(--button-bg);
   cursor: pointer;
   transition: border-color 0.25s;
 }
