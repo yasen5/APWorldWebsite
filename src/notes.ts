@@ -89,7 +89,7 @@ export const generalNotes: GeneralNotes = {
       "Facilitated trade of horses, books, salt, gold, ivory, cloth, and slaves",
     ],
     Technology: ["With the new Somali saddle, camels could carry up to 600lbs"],
-    applicableCountries: ["Mali Empire, Hausa States"],
+    applicableCountries: ["Mali Empire", "Hausa States"],
     timePeriod: [0, 1450],
     emphasizedUnit: [1200, 1450],
   },
@@ -691,17 +691,15 @@ export const countryNotes: CountryNotes = {
     Governance: ["909-1171"],
   },
   "Delhi Sultanate": {
-    Environment: [
-      "The state was Sunni Muslim, but the majority of the population was Hindu",
-    ],
     Culture: [
       "The Bhakti Movement, a form of Hinduism where moksha could be accomplished through individual devotion to god, promoted conversion to Hinduism",
       "Created Urdu, a mix of Farsi, Arabic, and Turkish",
+      "The state was Sunni Muslim, but the majority of the population was Hindu"
     ],
     Governance: [
       "1206-1526",
       "Never had control over the entirety of India",
-      "Declined as they lost territory",
+      "Declined as they lost territory. Some Muslim nobles separated and founded the Bahmani Kingdom in the 14th century, Hindu brothers founded the Vijayanagara Empire in the 14th century",
       "Timur invaded in 1398, sacked Dehli, and left the sultanate in ruins",
       "Finally fell when they lost the Battle of Panipat to the Mughals in 1526",
     ],
@@ -710,8 +708,11 @@ export const countryNotes: CountryNotes = {
       "Exported cloth, yarn, silk, indigo, and pepper",
     ],
     Social: [
-      "Had the jizya tax (a special tax for non-Muslims), which promoted conversion to Islam", // not sure if it's social or smth else
+      "Had the jizya tax (a special tax for non-Muslims), which promoted conversion to Islam", // gov? econ?
     ],
+    Technology: [
+      "Used irrigation"
+    ]
   },
   "Vijayanagara Empire": {
     Culture: ["Hindu"],
@@ -727,6 +728,7 @@ export const countryNotes: CountryNotes = {
       "Imported cloths",
       "Exported cinammon, pepper, cardamom, elaphants, and gems",
     ],
+    Technology: ["Used irrigation"]
   },
   "Khmer Empire": {
     Environment: ["Very watery environment"],
@@ -804,7 +806,7 @@ export const countryNotes: CountryNotes = {
       "Fought wars for tributes and human sacrifices, not territory",
     ],
     Social: [
-      "Women could co-rule or serve as placeholders for men",
+      "Women could co-rule or serve as placeholders for men and had a higher status than in the Aztec Empire",
       "Sacrificed mainly elites",
     ],
     Technology: [
@@ -857,6 +859,7 @@ export const countryNotes: CountryNotes = {
     ],
     Technology: [
       "Developed quipu, a method of recording numbers using knotted string",
+      "Made the best bridges and roads in the world at the time"
     ],
   },
   "Mali Empire": {
