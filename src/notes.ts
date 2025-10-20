@@ -89,7 +89,9 @@ export const generalNotes: GeneralNotes = {
       "Facilitated trade of horses, books, salt, gold, ivory, cloth, and slaves",
     ],
     Technology: ["With the new Somali saddle, camels could carry up to 600lbs"],
-    applicableCountries: ["Mali Empire", "Hausa States"],
+    applicableCountries: [
+      "Mali Empire", 
+      "Hausa States"],
     timePeriod: [0, 1450],
     emphasizedUnit: [1200, 1450],
   },
@@ -136,7 +138,10 @@ export const generalNotes: GeneralNotes = {
       "The essential maritime techology for the Indian Ocean trade included the magnetic compass, astrolabe, lateen sail, dhow ship, and stern rudder",
     ],
     applicableCountries: [
-      "Srivijaya Empire, Majapahit Empire, Song Dynasty, Swahili Coast",
+      "Srivijaya Empire",
+      "Majapahit Empire",
+      "Song Dynasty",
+      "Swahili Coast",
     ],
     timePeriod: [0, 1850],
     emphasizedUnit: [1200, 1450],
