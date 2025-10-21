@@ -181,112 +181,119 @@ export const GeographicSelectionPage = () => {
   }
 
   return (
-    <div className="flex flex-col items-center w-full h-full">
-      <style>
-        {Object.entries(countryStyles)
-          .map(
-            ([selector, style]) =>
-              `${selector} { ${Object.entries(style)
-                .map(
-                  ([prop, value]) =>
-                    `${prop.replace(/([A-Z])/g, "-$1").toLowerCase()}: ${value};`,
-                )
-                .join(" ")} }`,
-          )
-          .join("\n")}
-      </style>
+    <div className="flex flex-col items-center justify-start w-full h-full">
+      <div className="w-full h-full overflow-y-auto">
+        <style>
+          {Object.entries(countryStyles)
+            .map(
+              ([selector, style]) =>
+                `${selector} { ${Object.entries(style)
+                  .map(
+                    ([prop, value]) =>
+                      `${prop.replace(/([A-Z])/g, "-$1").toLowerCase()}: ${value};`,
+                  )
+                  .join(" ")} }`,
+            )
+            .join("\n")}
+        </style>
 
-      {/* Concepts Bar */}
-      <div className="w-3/4">
-        {/* Toggle Bar */}
-        <div
-          className="h-8 bg-gradient-to-r from-blue-500 to-purple-600 cursor-pointer flex items-center justify-center text-white font-medium shadow-md hover:shadow-lg transition-shadow"
-          onClick={() => setIsConceptsBarOpen(!isConceptsBarOpen)}
-        >
-          <span className="mx-2">Cross-Country Concepts</span>
-          <span className="text-lg">{isConceptsBarOpen ? "▲" : "▼"}</span>
-        </div>
+        {/* Concepts Bar */}
+        <div className="w-full max-w-[1200px] mx-auto">
+          {/* Toggle Bar */}
+          <div
+            className="w-full h-8 bg-gradient-to-r from-blue-500 to-purple-600 cursor-pointer flex items-center justify-center text-white font-medium shadow-md hover:shadow-lg transition-shadow"
+            onClick={() => setIsConceptsBarOpen(!isConceptsBarOpen)}
+          >
+            <span className="mx-2">Cross-Country Concepts</span>
+            <span className="text-lg">{isConceptsBarOpen ? "▲" : "▼"}</span>
+          </div>
 
-        {/* Collapsible Content */}
-        <div
-          className={`overflow-hidden transition-all duration-300 ease-in-out ${
-            isConceptsBarOpen ? "opacity-100" : "max-h-0 opacity-0"
-          }`}
-        >
-          <div className="bg-white border-2 border-gray-200 rounded-b-lg py-1 shadow-inner">
-            <div className="flex flex-wrap gap-2 justify-center">
-              {Object.keys(generalNotes)
-                .filter((concept) => {
-                  const timePeriod: [number, number] =
-                    generalNotes[concept].timePeriod;
-                  return (
-                    (timePeriod[0] >= selectedWHAPTime[0] &&
-                      timePeriod[0] <= selectedWHAPTime[1]) ||
-                    (timePeriod[1] > selectedWHAPTime[0] &&
-                      timePeriod[1] <= selectedWHAPTime[1])
-                  );
-                })
-                .map((concept) => {
-                  const notes = generalNotes[concept];
-                  return (
-                    <button
-                      key={concept}
-                      onClick={() => setSelectedCountry(concept)}
-                      className={`px-4 py-2 bg-gradient-to-r from-indigo-500 to-blue-600 text-white rounded-full text-sm font-medium hover:from-indigo-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg
-                                  ${notes.emphasizedUnit[0] === selectedWHAPTime[0] && notes.emphasizedUnit[1] === selectedWHAPTime[1] && notes.timePeriod[0] <= selectedTime && notes.timePeriod[1] >= selectedTime ? "" : "opacity-50"}`}
-                      onMouseEnter={() => setHoveredConcept(concept)}
-                      onMouseLeave={() => setHoveredConcept(null)}
-                    >
-                      {concept}
-                    </button>
-                  );
-                })}
+          {/* Collapsible Content */}
+          <div
+            className={`overflow-hidden transition-all duration-300 ease-in-out ${
+              isConceptsBarOpen ? "opacity-100" : "max-h-0 opacity-0"
+            }`}
+          >
+            <div className="bg-white border-2 border-gray-200 rounded-b-lg px-3 pt-1 shadow-inner">
+              <div className="flex flex-wrap gap-2 justify-center">
+                {Object.keys(generalNotes)
+                  .filter((concept) => {
+                    const timePeriod: [number, number] =
+                      generalNotes[concept].timePeriod;
+                    return (
+                      (timePeriod[0] >= selectedWHAPTime[0] &&
+                        timePeriod[0] <= selectedWHAPTime[1]) ||
+                      (timePeriod[1] > selectedWHAPTime[0] &&
+                        timePeriod[1] <= selectedWHAPTime[1])
+                    );
+                  })
+                  .map((concept) => {
+                    const notes = generalNotes[concept];
+                    return (
+                      <button
+                        key={concept}
+                        onClick={() => setSelectedCountry(concept)}
+                        className={`px-4 py-2 bg-gradient-to-r from-indigo-500 to-blue-600 text-white rounded-full text-sm font-medium hover:from-indigo-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg
+                                    ${notes.emphasizedUnit[0] === selectedWHAPTime[0] && notes.emphasizedUnit[1] === selectedWHAPTime[1] && notes.timePeriod[0] <= selectedTime && notes.timePeriod[1] >= selectedTime ? "" : "opacity-50"}`}
+                        onMouseEnter={() => setHoveredConcept(concept)}
+                        onMouseLeave={() => setHoveredConcept(null)}
+                      >
+                        {concept}
+                      </button>
+                    );
+                  })}
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* SVG viewport container */}
-      <div className="relative w-full h-full flex pt-2">
-        <div ref={mapRef}>
-          <MapComponent
-            className="svg-container"
-            width={1600}
-            height={900}
-            onClick={handleCountryClick}
-          />
+        {/* SVG viewport container */}
+        <div className="relative w-full h-full flex justify-center pt-2">
+          <div
+            ref={mapRef}
+            className="overflow-auto w-full h-full max-w-[100vw] scrollbar-visible"
+          >
+            <div className="min-w-[1600px] min-h-[900px] flex justify-center items-center">
+              <MapComponent
+                className="svg-container"
+                width={1600}
+                height={900}
+                onClick={handleCountryClick}
+              />
+            </div>
+          </div>
+          {["left", "right"].map((direction) => {
+            return (
+              ((direction === "left" && canScrollLeft) ||
+                (direction === "right" && canScrollRight)) && (
+                <button
+                  onClick={() => scrollMap(direction)}
+                  style={{ background: "none", border: "none" }}
+                  className={`
+                            absolute 
+                            ${direction === "left" ? "left-2" : "right-2"}
+                            top-1/2 
+                            -translate-y-1/2 
+                            p-3 
+                            `}
+                >
+                  <img
+                    src={ArrowsRight}
+                    alt={`Scroll ${direction}`}
+                    className={`h-10 w-10 ${direction === "left" ? "rotate-180" : ""}`}
+                  />
+                </button>
+              )
+            );
+          })}
         </div>
-        {["left", "right"].map((direction) => {
-          return (
-            ((direction === "left" && canScrollLeft) ||
-              (direction === "right" && canScrollRight)) && (
-              <button
-                onClick={() => scrollMap(direction)}
-                style={{ background: "none", border: "none" }}
-                className={`
-                          absolute 
-                          ${direction === "left" ? "left-2" : "right-2"}
-                          top-1/2 
-                          -translate-y-1/2 
-                          p-3 
-                          `}
-              >
-                <img
-                  src={ArrowsRight}
-                  alt={`Scroll ${direction}`}
-                  className={`h-10 w-10 ${direction === "left" ? "rotate-180" : ""}`}
-                />
-              </button>
-            )
-          );
-        })}
+        {selectedCountry && (
+          <Popup
+            noteKey={selectedCountry}
+            onClose={() => setSelectedCountry(null)}
+          />
+        )}
       </div>
-      {selectedCountry && (
-        <Popup
-          noteKey={selectedCountry}
-          onClose={() => setSelectedCountry(null)}
-        />
-      )}
     </div>
   );
 };
@@ -365,9 +372,10 @@ const Popup: React.FC<{ noteKey: string; onClose: () => void }> = ({
         }}
       >
         <button
-          className="[all:unset] cursor-pointer absolute top-2 right-2"
+          className="[all:unset] cursor-pointer absolute top-2 right-2 text-black"
           onClick={onClose}
           aria-label="Close"
+          style={{ backgroundColor: "#f8f8f8", color: "black" }}
         >
           x
         </button>
@@ -381,17 +389,15 @@ const Popup: React.FC<{ noteKey: string; onClose: () => void }> = ({
               sectionTitle !== "applicableCountries" &&
               Array.isArray(content) &&
               content.length > 0 &&
-              content[0] !== "" && (
+              content[0] !== "" && 
                 <Dropdown key={sectionTitle} title={sectionTitle}>
-                  (
                   <ul className="list-disc pl-4 text-black">
-                    {content.map((point, i) => (
+                    {content.map((point, i) => 
                       <li key={i}>{point}</li>
-                    ))}
+                    )}
                   </ul>
-                  )
                 </Dropdown>
-              ),
+              ,
           )}
       </div>
       {selectedBlob && (
@@ -424,8 +430,8 @@ const Dropdown: React.FC<{ title: string; children: React.ReactNode }> = ({
         className="w-full flex justify-between items-center p-2"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span className="font-medium">{title}</span>
-        <span>{isOpen ? "▲" : "▼"} </span>
+        <span className="font-medium text-black">{title}</span>
+        <span style={{ color: "black"}}>{isOpen ? "▲" : "▼"} </span>
       </button>
       {isOpen && <div className="p-2 bg-white text-sm">{children}</div>}
     </div>
