@@ -389,17 +389,15 @@ const Popup: React.FC<{ noteKey: string; onClose: () => void }> = ({
               sectionTitle !== "applicableCountries" &&
               Array.isArray(content) &&
               content.length > 0 &&
-              content[0] !== "" && (
+              content[0] !== "" && 
                 <Dropdown key={sectionTitle} title={sectionTitle}>
-                  (
                   <ul className="list-disc pl-4 text-black">
-                    {content.map((point, i) => (
+                    {content.map((point, i) => 
                       <li key={i}>{point}</li>
-                    ))}
+                    )}
                   </ul>
-                  )
                 </Dropdown>
-              ),
+              ,
           )}
       </div>
       {selectedBlob && (
