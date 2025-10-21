@@ -177,7 +177,7 @@ const TimelinePanel: React.FC<TimelinePanelProps> = ({ hoveredEvent, onHover, on
             fontSize: '0.875rem',
             boxShadow: '0 4px 12px rgba(0,0,0,0.25)',
             borderRadius: '6px',
-            backgroundColor: '#fafafaf3',
+            backgroundColor: 'var(--color-surface)',
             zIndex: 10,
             whiteSpace: 'nowrap',
             height: '30px',
