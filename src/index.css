@@ -36,16 +36,6 @@
   :root { color-scheme: light;}
 }
 
-:root[data-theme="light"] {
-  --color-text: #213547;
-  --color-bg: #ffffff;
-  --color-surface: #f6f8fa;
-  --accent-hover: #747bff;
-  --button-bg: #f9f9f9;
-  --button-border: transparent;
-  --color-scheme-token: light;
-}
-
 :root {
   font-family: var(--font-family);
   line-height: var(--line-height);
