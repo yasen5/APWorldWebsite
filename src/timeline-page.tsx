@@ -12,8 +12,7 @@ type TimelinePanelProps = {
 const TimelinePanel: React.FC<TimelinePanelProps> = ({ hoveredEvent, onHover, onClickEvent }) => {
   const events = Object.keys(timelineNotes) as (keyof typeof timelineNotes)[];
 
-  const { minYear, maxYear, range, pxPerYear, trackWidthPx, trackHeightPx, placements, laneHeight, laneGap, baseTop, bottomGap } = useMemo(() => {
-    const years = events.flatMap(e => timelineNotes[e].timePeriod.map(y => Number(y)));
+  const { minYear, maxYear, pxPerYear, trackWidthPx, trackHeightPx, placements, laneHeight, laneGap, baseTop, bottomGap } = useMemo(() => {
     const minYear = 1200;
     const maxYear = 2025;
     const range = Math.max(1, maxYear - minYear);
