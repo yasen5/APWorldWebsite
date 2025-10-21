@@ -372,9 +372,10 @@ const Popup: React.FC<{ noteKey: string; onClose: () => void }> = ({
         }}
       >
         <button
-          className="[all:unset] cursor-pointer absolute top-2 right-2"
+          className="[all:unset] cursor-pointer absolute top-2 right-2 text-black"
           onClick={onClose}
           aria-label="Close"
+          style={{ backgroundColor: "#f8f8f8", color: "black" }}
         >
           x
         </button>
@@ -388,17 +389,15 @@ const Popup: React.FC<{ noteKey: string; onClose: () => void }> = ({
               sectionTitle !== "applicableCountries" &&
               Array.isArray(content) &&
               content.length > 0 &&
-              content[0] !== "" && (
+              content[0] !== "" && 
                 <Dropdown key={sectionTitle} title={sectionTitle}>
-                  (
                   <ul className="list-disc pl-4 text-black">
-                    {content.map((point, i) => (
+                    {content.map((point, i) => 
                       <li key={i}>{point}</li>
-                    ))}
+                    )}
                   </ul>
-                  )
                 </Dropdown>
-              ),
+              ,
           )}
       </div>
       {selectedBlob && (
@@ -431,8 +430,8 @@ const Dropdown: React.FC<{ title: string; children: React.ReactNode }> = ({
         className="w-full flex justify-between items-center p-2"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span className="font-medium">{title}</span>
-        <span>{isOpen ? "▲" : "▼"} </span>
+        <span className="font-medium text-black">{title}</span>
+        <span style={{ color: "black"}}>{isOpen ? "▲" : "▼"} </span>
       </button>
       {isOpen && <div className="p-2 bg-white text-sm">{children}</div>}
     </div>
