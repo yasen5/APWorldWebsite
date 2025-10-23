@@ -403,9 +403,9 @@ export const generalNotes: GeneralNotes = {
       "Serbia",
       "Ottoman Empire",
       "Germany 1850-1920",
-      "Russia pre-Soviet",
+      "Russia 1380-1917",
       "USSR",
-      "United States 1750-1920",
+      "United States 1776-1920",
       "France 1750-1920",
       "Italy",
       "England 1750-present",
@@ -1274,6 +1274,7 @@ export const countryNotes: CountryNotes = {
     Economy: [
       "Grew and traded a lot of cotton for calico",
       "Britain was unhappy about the success of Indian cotton so they made the Calico Acts in 1700 and 1721 banning calico imports in Britain so they wouldn't compete with Brtish products",
+      "The British East India Company forced India to export raw cotton instead of finished textiles so they wouldn't compete with Britain"
     ],
     Social: [
       "There was religious intolerance except under Akbar",
@@ -1330,7 +1331,11 @@ export const countryNotes: CountryNotes = {
       "Settled by the Amur river in the 1640s to grow grain, but the Ming Dynasty felt threatened, leading to the Treaty of Nerchinsk in 1689, which recognized Russian ownership of the land but forced them not to settle there",
       "Ivan the Terrible ruled from 1533 to 1584. He expanded Russia east and south using the cossacks. There was a lot of tension with the boyars, so he forced them to move to Moscow, where it would be harder to plot against him. He also made the oprichnina, a paramilitary force loyal to him",
       'Peter the Great ruled from 1682 to 1725. He was known as the "Defender of Orthodoxy" and was at first in favor with the church until he tried to reform it too much (tried to make it answer to him). He divided Russia into provinces and made provincial officials. He moved the capital from Moscow to St. Petersburg and reintegrated Russia with Western Europe. He was known for copying Western Europe (especially French) things, including technology, tolerance, and trade, but not democracy',
+      "Catherine the Great (ruled 1762-1792) expanded Russia, taking Polish and Ottoman Territory",
       "In 1774, a cossack named Yemelyan Pugachev started the Pugachev Rebellion against Catherine the Great. The movement aimed to gain more rights for serfs, but was defeated by the Russian army, and Catherine doubled down on oppressing the peasants",
+      "Began exploring Alaska and the North American West Coast in the 1800s",
+      "Alexander I (ruled 1815-1825) expanded Russia to include Finland, Moldova, Georgia, Azerbaijan, and Armenia",
+      "Sold Alaska to the US in 1867"
     ],
     Economy: [
       "Exported furs",
@@ -1345,6 +1350,7 @@ export const countryNotes: CountryNotes = {
   "Qing Dynasty": {
     Environment: [
       "Grew more cash crops like tea, cotton, and silk as well as as New World crops like corn and sweet potatoes",
+      "Had floods and droughts, which harmed the agriculture"
     ],
     Culture: [
       "The majority of the population was Han Chinese but the Manchus wanted to assimilate them. For example, all men were forced to wear the Manchu hairstyle, called the queue, and if they didn't, they were killed",
@@ -1376,19 +1382,38 @@ export const countryNotes: CountryNotes = {
       "Emperor Qianlong (ruled from 1736 to 1796) portrayed himself as a Universal Ruler, appealing to Buddhists by portraying himself as a bodhisattva, and appealing to Confucians through commissioning Nanxuntu, similar to Kangxi. Under him, the bureaucracy became more corrupt",
     ],
   },
-  "United States 1750-1920": {
+  "United States 1776-1920": {
+    Culture: [
+      "In 1889, the Northern Paiute Indians in Nevada started a movement called the Ghost Dance. It was caused by decline of resoures due to deforestation and irrigation, assimilation to white culture. The Native Americans did Ghost Dance Rituals, which were nonviolent, because they believed that the dead would come back to overthrow the whites and restore the land. The movement spread from the Sierra Nevada to the Missouri River and from Northern Texas to Canada. The US army killed 150-200 Natives at the Wounded Knee Massacre in 1890, and the movement died down after that.",
+      "Ethnic enclaves formed as immigrants moved to America"
+    ],
     Governance: [
       "Started fighting for independence in 1775.",
       "At first they were losing until they gained French support",
       "They won in 1783 with the Treaty of Paris",
       "The Articles of Confederation were made in 1781 but they made the central government too weak so they were replaced with the Constitution in 1787. The Constitution established the legislative, executive, and judicial powers. They also made the Great Compromise for big and small states, createing the House of Representatives based on population size, which gave an advantage to bigger states, but balanced it with the Congress which had equal representation for each state, which helped smaller states.",
       "Anti-Federalists wanted more state rights, resulting in the 1793 Bill of Rights", // ?
+      "President Monroe's Secretary of State John Quincy Adams made the Monroe Doctrine in 1823, stating that European nations should not interfere with the Western Hemisphere, and that the US would not interfere with European wars. This allowed the US to be the main power in the Americas and prevented European colonization/regaining of territories",
+      "Bought Alaska from the British in 1867",
       "Fought the Spanish during the Spanish-American War (1898-1899). They won and gained the Philippines, Puerto Rico, and Guam",
+      "In 1904, Roosevelt made the Roosevelt Corollary to the Monroe Doctrine saying that the US could intervene in unstable Latin American countries, allowing them to have economic dominance",
       "During World War I, they were initially neutral but joined the Allies in 1917, tipping the balance towards Allied victory",
       "Sent troops to try to stop the Bolsheviks from taking over during the Russian Civil War",
     ],
     Economy: [
       "Began industrializing after the Civil War, and became a leading manufacturer of steel, oil, and automobiles by the early 1900s. Their industrialization was especially successful because they had a lot of human capital as people would immigrate tothe US due to political or economic problems in their home countries",
+      "The United Fruit Company traded fruits in Central America and the Caribbean. They pressured the governemnts there to give them ideal trading rights. This led to the creation of banana republics, politically unstable Central American countries dependent on exportation to foreign corporations"
+    ],
+    Social: [
+      "Manifest Destiny was the belief that Americans had the right to expand to the Pacific Ocean",
+      "Many people immigrated to America during the gold rush",
+      "In 1879, California made a new constitution that discriminated against Chinese immigrants. The government couldn't hire them, they weren't allowed citizenship, and segregation was put in place",
+      "In 1882, the Chinese Exclusion Act banned Chinese immigration",
+      "In 1907, the US agreed to not restrict Japanese immigration in exchange for the Japanese stopping emigration to the US. This was called the Gentlemen's Agreement. It was endded in 1924 by the Immigration Act",
+
+    ],
+    Technology: [
+      "The Transcontinental Railway was completed in 1869"
     ],
     Uncategorized: [
       "The expansion of railroads connected markets and facilitated westward expansion, often at the expense of the Indigenous peoples",
@@ -1456,14 +1481,19 @@ export const countryNotes: CountryNotes = {
     ],
     Economy: [
       "Brazil's economy relied heavily on coffee exports",
+      "Exported beef",
       "Economic growth after World War II",
     ],
     Social: ["Slavery persisted until 1888"],
   },
-  "Mexico 1885-Present": {
+  "Mexico 1821-Present": {
     Governance: [
       "Wanted independence because of enlightenment ideals, and they didn't like mercantilism. Padre Miguel Hidalgo was one of the leaders of the revolution, and he was very liberal. He wanted land redistribution, and the abolition of the castas system and slavery.",
       "Became a republic in 1821 with Iturbide, a creole general, as king, although he was eventually kicked out of Mexico and killed",
+      "In 1857 the Liberals, led by Benito Juaréz, made a more liberal constitution. The Conservatives really disliked this and started a civil war. Benito Juaréz borrowed heavily from Europe to win the war and keep power",
+      "The French, who wanted Mexico as a colony, used the fact that Juaréz was in debt to them as an excuse to invade Mexico in the French-Mexican War. They were supported by the Mexican Conservatives in overthrowing Juaréz in 1963. The French then replaced him with Austrian Archduke Maximillian as the emperor of Mexico (they wanted to repair relations with Austria",
+      "The Mexicans drove the French out Mexico in 1867 with the help of the Americans, returning power to Juaréz.",
+      "Juaréz went against the term limits in the constitution he wrote",
       "The Mexican Revolution (1910-1920) overthrew the dictatorship of Porfirio Díaz, leading to land reforms and a new constitution",
       "The country experienced one-party rule under the PRI for much of the 20th century, with gradual democratization in the late 1900s.",
       "The 19th century was marked by political instability, foreign interventions, and territorial loss to the United States.",
@@ -1473,6 +1503,7 @@ export const countryNotes: CountryNotes = {
     ],
     Social: [
       "The creoles wanted more rights, so they kept switching sides to suit their wants. At first, they were against the peninsulares because they wanted more power, but then Hidalgo's followers would attack both peninsulares and creoles so the creoles sided with the peninsulares. Then, in 1820, the Spanish government got rid of the castas system. The creoles wanted to still be at the top of the hierarchy so they switched sides against the peninsulares and Spain.",
+      "Mexico welcomed Chinese immigrants after the US made the Chinese Exclusion Act in 1882"
     ],
   },
   Italy: {
@@ -1539,6 +1570,7 @@ export const countryNotes: CountryNotes = {
       "Muhammad Ali used protective tariffs, making imports more expensive to encourage his people to buy domestic products instead of foreign things. Britain disliked this, so when Muhammad Ali's sons went to war against the Ottomans in an attempt to take over the Ottoman Empire, Britain supported the Ottoman Empire and defeated Egypt. They forced Egypt to stop their protective tariffs, then flooded the market so Egyptian markets couldn't compete. Egypt started to only export cotton and import British goods.",
       "Land reforms",
       "Socialist (not communist though)",
+      "Produced cotton"
     ],
     Uncategorized: [
       "The Suez Canal was funded by the British and was built by Egyptian corvée laborers (they were unpaid and had to work as taxation). It was finished in 1869",
@@ -1553,9 +1585,10 @@ export const countryNotes: CountryNotes = {
       "There was a civil war, as some people wanted to fight the West to preserve their culture, and others were scared of a situation like the Opium Wars in China, and they didn't believe they could win against teh west, so they proposed to protect Japan by working with the West. This led to the end of the Tokugawa Shogunate and isolationism",
       "The Meiji Restoration in 1868 saw the overthrow of the shogun and the return of power to the emperor. The Charter Oath was created, abolishing feudalism, instituting a constitutional monarchy, modernizing the military, establishing a new school system, and promoting industrialization",
       "In 1871, the government dissolved the samurai",
+      "Japan wanted colonies because they didn't have a ton of natural resources or land, so they began taking parts of China, Korea, Southeast Asia, and the Pacific Islands. One group (the Colonization Society) wanted to form colonies in Mexico and Latin America.",
       "The Japanese military was really powerful, defeating China in the First Sino-Japanese War (1894-1895) and Russia in the Russo-Japanese War (1904-1905)",
       "In the 1930s, Japan pursued imperial expansion in East Asia, invading Manchuria (1931) and China (1937)",
-      "Foced people that they had conquered into labor, either in military, public works, farms, or as prostitutes for Japanese soldiers",
+      "Forced people that they had conquered into labor, either in military, public works, farms, or as prostitutes for Japanese soldiers",
       "Attacked Pearl Harbor in 1941 during World War II, bringing the US into the war",
     ],
     Economy: [
@@ -1609,7 +1642,7 @@ export const countryNotes: CountryNotes = {
     Economy: [
       "Britain invested in Argentina's infrastructure, farming, and commodities. They ended up investing more in Argentina than they did in India, which was their own colony",
       "Attracted a lot of immigrants through being pro-immigration and offering better wages than were available in most other countries",
-      "Export beef",
+      "Exported beef",
     ],
     Social: [
       "Like the other Spanish colonies, there was a strict castas hierarchy.",
@@ -1659,6 +1692,9 @@ export const countryNotes: CountryNotes = {
       "A 1973 coup brought Augusto Pinochet to power, who implemented neoliberal reforms while committing human rights abuses",
       "Democracy was restored in 1990",
     ],
+    Economy: [
+      "Exported guano (bat/seabird excrement used as fertilizer) and copper"
+    ]
   },
   Venice: {
     Culture: [
@@ -1840,7 +1876,7 @@ export const countryNotes: CountryNotes = {
   },
   "British Territory": {
     Environment: [
-      "Produced cotton (13 colonies), palm oil (Africa), sugar (Caribbean), gold and diamonds (South Africa), tea, rum, indigo, rubber, and opium",
+      "Produced cotton (13 colonies), palm oil (Africa), sugar (Caribbean), gold and diamonds (South Africa), tea, rum, indigo, rubber, and opium (India)",
       "Led to mass deforestation, soil exhaustion from monocultures",
       "Major famines occured as farmers were forced to grow cash crops instead of subsistence farming",
     ],
@@ -1862,14 +1898,20 @@ export const countryNotes: CountryNotes = {
       "Contract laborers were used by the British. This recruited people, often Chinese or Indian, to work. They weren't considered property but they were still exploited and paid through subsistence wage. This system stopped in 1855.",
       "Some colonies were penal colonies, where they sent convicts from Britain and forced them to work for settlers or for the government. Convicts could earn freedom after a certain amount of years of work, but they often stayed in the colony. This practice stopped in 1850", // gov?
     ],
+    Technology: [
+      "Built railroads in colonies, saying it was benefiting the colonies, although it was really only benefiting Britain economically, as it made shipping materials more efficient and it allowed them to expand their colonial markets."
+    ],
     "British Raj": [
       "British colony from 1858-1947",
+      "In 1858, the British made their Indian soldiers, called sepoys, use animal fat to grease rifle cartridges, but this went against Hindu and Muslim beliefs so the sepoys refused to use them. The British imprisoned the sepoys, and then Indians began to rebel. The rebellions were quelled because there was a lack of Indian unity and naitonalism so they were easier to defeat",
       "The British officially took control of India after the Sepoy Rebellion in 1858, forming the British Raj and ending the rule of the British East India Company",
-      "Indian soldiers fought for Britain in both World Wars.",
-      "Nationalist movements led by figures like Mohandas Gandhi used nonviolent resistance to demand independence, achieved in 1947 with the partition into India and Pakistan",
+      "The British forced India to export raw cotton instead of finished textiles so they wouldn't compete with Britain",
       "Industrialized slowly, as the British didn't want to encourage Indian industrialization other than what would help them.",
       "Many artisans were pushed out of business by the cheap British textiles",
       "Many Indians left as indentured servants, often on 5-year contracts and were sent to other British colonies, like the Caribbean, South Africa, or East Africa, for labor",
+      "India suffered from famines due to the forced cash crop monocultures",
+      "Indian soldiers fought for Britain in both World Wars.",
+      "Nationalist movements led by figures like Mohandas Gandhi used nonviolent resistance to demand independence, achieved in 1947 with the partition into India and Pakistan",
     ],
     Malaya: [
       "Grew rubber, coffee, and tea as cash crops, as well as opium",
@@ -1890,10 +1932,10 @@ export const countryNotes: CountryNotes = {
       "After the Seven Years War, Britain was in a lot of debt so they tried to tax the colonies more, but the colonies didn't like that, leading to the American Revolution",
     ],
     "Cape Colony": [
-      "The Xhosa Cattle Killing Movement (1856-1857) was an example of indigenous resistance to colonial power. A disease spread through the Xhosa cattle. A teenage girl named Nongqawuse prophesied that if the Xhosa killed their cattle and destroyed their crops, spirits would drive the British away and give the Xhosa new cattle and crops. This, however, led to a famine and 40,000 starved. Additionally, the British officials kept relief agencies away to weaken the Xhosa as a way to force them to assimilate with and work for the British.",
       "Britain took Cape Colony during the Napoleonic Wars in 1803",
       "The Dutch briefly retook the colony from 1803-1806",
       "The British retook the colony in 1806",
+      "The Xhosa Cattle Killing Movement (1856-1857) was an example of indigenous resistance to colonial power. A disease spread through the Xhosa cattle. A teenage girl named Nongqawuse prophesied that if the Xhosa killed their cattle and destroyed their crops, spirits would drive the British away and give the Xhosa new cattle and crops. This, however, led to a famine and 40,000 starved. Additionally, the British officials kept relief agencies away to weaken the Xhosa as a way to force them to assimilate with and work for the British.",
       "Diamonds were discovered in 1867", // env?
       "The British defeated the Zulus in the Anglo-Zulu War in the 1870s, giving South Africa more territory",
       "The Boer Wars (1880-1881 and 1899-1902) were between the British and the Afrikaners who were unhappy about British control. The wars were mostly over land and resources like gold mines. The Boers (Afrikaners) technicaly won the first war, but the British won the second one. The British placed the Boers in concentration camps during the second Boer War, which were segregated",
@@ -1908,6 +1950,12 @@ export const countryNotes: CountryNotes = {
       "Raised sheep, made a large wool industry.",
       "Many people, especially the Chinese, immigrated to Australia for during the Gold Rush",
       "Originally, Australia was a penal colony, where the settlers were British criminals sent to do labor in New South Wales (East Coast)",
+      "Found copper in 1842 and gold in 1851",
+      "Many immigrants came to Australia for the gold rush",
+      "In 1861, the Victoria province passed the Chinese Immigration Act in 1855, limiting the number of Chinese who could immigrate. The Chinese got around this by landing in South Australia",
+      "There was a lot of anti-Chinese violence in New South Wales, so New South Wales made the Chinese Immigration Regulation and Restriction Act in 1861, restricting the number of Chinese who could enter the colony. It was repealed in 1867.",
+      "In 1901, the six British colonies in Australia united under a single government",
+      "In 1901, the Australian government made the White Australia Policy, limiting non-British immigration"
     ],
     "New Zealand": [
       "Colonized by Britain in 1840",
@@ -1933,6 +1981,10 @@ export const countryNotes: CountryNotes = {
     "Sierra Leone": [
       "Became a British colony for freed slaves. The British would stop slave ships and take the slaves to Sierra Leone where they would be freed.",
     ],
+    "East Africa": [
+      "The British began ruling Sudan with the Egyptians in 1873",
+      "In 1881 Islamic cleric Muhammad Ahmad declared himself the Mahdi who would restore the glory of Islam. He wanted to resist British and Egyptian rule in Sudan and attacked Khartoum, the capital in 1882, and won against the British and Egyptians in 1885, but the movement died down after Ahmed's death that year. The Mahdists were finally defeated in 1898",
+    ]
   },
   "French Territory": {
     Environment: [
@@ -1952,6 +2004,9 @@ export const countryNotes: CountryNotes = {
       "Used indentured servants in Louisiana",
       "Relied on native alliances for fur trade so kept better relations with them",
     ],
+    Technology: [
+      "Built railroads in colonies, saying it was benefiting the colonies, although it was really only benefiting France economically, as it made shipping materials more efficient and it allowed them to expand their colonial markets."
+    ],
     "French Indochina": [
       "Composed of modern-day Cambodia, Laos, and Vietnam",
       "Spread Catholicism",
@@ -1966,9 +2021,11 @@ export const countryNotes: CountryNotes = {
       "The French were driven out of Canada and the rest of the US after the 7 Years War in 1763 and was transferred to the British",
     ],
     "West Africa": [
+      "In 1868, Samory Touré made a new kingdom in Guinea. He didn't want the French to take over in West Africa, so in 1883 he fought the French. The French won and took over but still gave Samory protection. He fought the French again in 1891 and was defeated. He fled and tried to reestablish his kingdom in the Ivory Coast but the French captured and exiled him in 1898",
       "From 1915-1916, villages in French West Africa united to drive out the French, but they were defeated",
       "In 1917, railroad workers organized a strike",
       "In 1946 there was a labor strike",
+      "Exported ivory, palm oil, palm nuts, and peanuts"
     ],
   },
   "Dutch Territory": {
@@ -1988,9 +2045,13 @@ export const countryNotes: CountryNotes = {
       "The culture system was a form of coerced labor, where people had to set aside 1/5 of their land to grow cash crops as a tax. If they couldn't pay for any reason, their land was taken or they were taken as corvée laborers and were forced to do unpaid work as taxation.",
     ],
     Social: ["Had slavery on plantations"],
-    "Cape Colony": [
+      "Cape Colony": [
       "Established by the Dutch East India Company (VOC) in 1652",
     ],
+    Technology: [
+      "Built railroads in colonies, saying it was benefiting the colonies, although it was really only benefiting the Dutch economically, as it made shipping materials more efficient and it allowed them to expand their colonial markets."
+
+    ]
   },
   "Spain 1750-Present": {
     Governance: [
@@ -2601,7 +2662,7 @@ export const countryNotes: CountryNotes = {
       "A militant group called the Shining Path, led by Abimael Guzmán, wanted to replace the government with a communist government, beginning in the 1980s. They used bombings and assassinations to try to get their way. In 2011, one of the Shining Path leaders admitted defeat and began negotiating with the government",
     ],
     Economy: [
-      "Export guano, gold, and copper",
+      "Export guano (bat/seabird excrement used as fertilizer), gold, and copper",
       "Received Chinese contract laborers to work on the Andean railroad, guano mines, or as merchants in the Amazon",
     ],
     Social: [
