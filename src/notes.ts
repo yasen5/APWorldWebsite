@@ -353,7 +353,7 @@ export const generalNotes: GeneralNotes = {
     timePeriod: [1929, 1939],
     emphasizedUnit: [1900, 2025],
   },
-  "World War I (1914-1918": {
+  "World War I (1914-1918)": {
     Causes: [
       "Tensions were rising as Germany and Britain were becoming more powerful, Austria-Hungary and Russia both wanted control of the Balkans, and Kaiser Wilhelm II kicked out Otto von Bismarck who was trying to keep the peace",
       "Militarism - European powers were competing for dominance through being the most militarily prepared. There was an arms race between Germany, Britain, and Russia. Countries also expanded their railroads and made plans for how to mobilize their massive standing armies through them",
@@ -493,11 +493,13 @@ export const generalNotes: GeneralNotes = {
     "General notes": [
       "The US sent troops to try to stop the Bolsheviks during the Russian Civil War, leading to tensions between the US and the new government",
       "Both countries wanted to show that their economic system (capitalism vs communism) was superior",
+      "The Iron Curtain was a term describing an imaginary line between the western countries and the Soviet bloc",
       "The US had a policy of containment, meaning stopping the spread of communism",
       "NATO (North Atlantic Treaty Organization) was created in 1949 to coordinate defenses in case of a Soviet attack. Its original members were Belgium, Canada, Denmark, France, Great Britain, Iceland, Italy, Luxembourg, the Netherlands, Norway, Portugal, and the US",
       "The Warsaw Pact was created in 1955 as a response to NATO, to coordinate defenses in case of a Western attack. Its original members were Albania, Bulgaria, Czechoslovakia, East Germany, Hungary, Poland, Romania, and the Soviet Union",
       "SEATO (Southeast Asia Treaty Organization) was created in 1954 to stop the spread of communism in Southeast Asia. Its members were Australia, France, Great Britain, New Zealand, Pakistan, the Philippines, Thailand, and the US.",
       "CENTO (Central Treaty Organization) was created in 1955 to stop the spread of communism in the Middle East. Its members were Great Britain, Iran, Iraq, Pakistan, Turkey. The US was in the military committee but was not a full member of the organization",
+      "Many countries wanted to remain neutral in the Cold War, as part of the Non-Aligned Movement. The major countries involved included India, Ghana, Egypt, and Indonesia",
       "Many people were against nuclear weapons, leading to anti-nuclear weapon movements globally. In 1955, a third of the Japanese population signed a petition against nuclear weapons because the US had been testing them in the Pacific Ocean. Such movements spread in the 70s and 80s. In 1982, there was a big demonstration in New York against nuclear weapons.",
       "Many countries including China, Iran, Vietnam, Ethiopia, India, Mexico, Bolivia, Venezuela wanted land reforms, leading to the spread of socialism and communism",
       "The USSR and the US had a fairly diplomatic relationship during the last decades of the Cold War, after the Cuban Missile Crisis. This period was known as détente. In 1972, President Nixon even visited the Soviet Union to sign the Strategic Arms Limitation Treaty freezing the number of intercontinental ballistic missiles. The US also began to sell grain to the USSR when they had a shortage due to a drought. The period of détente ended in 1979 when President Carter stopped selling grain.",
@@ -524,7 +526,7 @@ export const generalNotes: GeneralNotes = {
     ],
     "Cuban Missile Crisis": [
       "Authoritarian rule changed hands, landing on the Communist regime of Fidel Castro.",
-      "The U.S. was uncomfortable with a Communist dictatorship so near to them, so many assassins and the disastrous Bay of Pigs invasion were sent to try to kill Castro. It was obvious that the U.S. had supplied the weapons and training to the soldiers in the Bay of Pigs, and Castro became extremely hostile toward the U.S.",
+      "The U.S. was uncomfortable with a Communist dictatorship so near to them, so many assassins and the disastrous Bay of Pigs invasion were sent to try to kill Castro. It was obvious that the U.S. had supplied the weapons and training to the soldiers in the Bay of Pigs, and Castro became extremely hostile toward the U.S. and allied with the Soviets",
       "The USSR took advantage of Castro's hatred of the U.S. and placed nuclear missiles in Cuba. The U.S. blockaded Cuba but they couldn't extract the missiles already there.",
       "The Cuban Missile Crisis almost resulted in nuclear war, but eventually the U.S. agreed to withdraw the nukes they put in Turkey and the USSR took back its Cuban nukes.",
       "The Cuban Missile Crisis led to the creation of the Hot Line, a direct link between the US and Soviet leader's office to prevent nuclear war in 1963",
@@ -1476,8 +1478,9 @@ export const countryNotes: CountryNotes = {
       "In 1807, Napoleon invaded Portugal, so to escape, the Portuguese royal family fled to Brazil. The king wanted to return, but the creoles loved having their own government in the country, so Prince Pedro remained in Brazil while the King went back to Portugal",
       "Brazil declared independence from Portugal in 1822 under Dom Pedro I. It maintained a monarchy until 1889, when it became a republic.",
       "Brazil fought against Paraguay in the Paraguayan/Triple Alliance War from 1864-1870. Brazil's army heavily relied on slaves who fought in exchange for their freedom. This accelerated the abolitionist movement in Brazil, leading to the abolition of slavery in 1888",
+      "In 1930, power transitioned to Getulio Vargas through a bloodless coup. He was very similar to Mussolini and was interested in fascism, but he didn't use violence to get control. He wanted to industrialize, as he saw that other countries were exploiting Latin American countries for their resources. He used his policy of Estado Novo to restrict individual political freedoms, censoring the press, abolishing political parties, imprisoning political opponents, and promoting hypernationalism",
       "Brazil participated in World War II on the Allied side, sending troops to fight in Italy.",
-      "Political crises after World War II",
+      "Moved away from fascism after World War II",
     ],
     Economy: [
       "Brazil's economy relied heavily on coffee exports",
@@ -1494,12 +1497,15 @@ export const countryNotes: CountryNotes = {
       "The French, who wanted Mexico as a colony, used the fact that Juaréz was in debt to them as an excuse to invade Mexico in the French-Mexican War. They were supported by the Mexican Conservatives in overthrowing Juaréz in 1963. The French then replaced him with Austrian Archduke Maximillian as the emperor of Mexico (they wanted to repair relations with Austria",
       "The Mexicans drove the French out Mexico in 1867 with the help of the Americans, returning power to Juaréz.",
       "Juaréz went against the term limits in the constitution he wrote",
-      "The Mexican Revolution (1910-1920) overthrew the dictatorship of Porfirio Díaz, leading to land reforms and a new constitution",
-      "The country experienced one-party rule under the PRI for much of the 20th century, with gradual democratization in the late 1900s.",
-      "The 19th century was marked by political instability, foreign interventions, and territorial loss to the United States.",
+      "Porfirio Díaz ruled as a dictator from 1876-1910. He made a new kind of slavery - debt slavery that could be passed down through families. He wanted to modernize and industrialize, but by giving foreign investors control over Mexico's resources (Americans controlled up to 50% of land). In 1910, he imprisoned his political opponent Francisco Madero, leading to the 1910 Mexican Revolution.",
+      "The Mexican Revolution (1910-1920) overthrew the dictatorship of Porfirio Díaz, leading to land reforms and a new constitution. It was led by Francisco Madero, the political opponent of Díaz, Francisco \"Pancho\" Villa in northern Mexico, and Emiliano Zapata in southern Mexico. They made Díaz step down and go into exile, and Madero was elected president",
+      "There was a lot of political instability and violence (Madero, Villa, and Zapata were all assassinated) until 1930. Leaders didn't follow the constitution, and the military kept trying to establish a military dictatorship",
+      "A new, very liberal, constitution was written in 1917, promoting land redistribution, universal suffrage, one-term presidency, labor unions, public education, and nationalizing the oil industry. However, the government did not follow this constitution",
+      "Lazaro Cardenas began following the constitution in the 1930s",
+      "The country experienced one-party rule under the PRI (Institutional Revolutionary Party) for much of the 20th century, with gradual democratization in the late 1900s. The PRI helped improve the economy from the 1930s to 1970s",
     ],
     Economy: [
-      "Mexico nationalized its oil industry in 1938, asserting economic sovereignty",
+      "Mexico nationalized its oil industry in 1938, giving the state-run company PEMEX control over the industry, asserting economic sovereignty",
     ],
     Social: [
       "The creoles wanted more rights, so they kept switching sides to suit their wants. At first, they were against the peninsulares because they wanted more power, but then Hidalgo's followers would attack both peninsulares and creoles so the creoles sided with the peninsulares. Then, in 1820, the Spanish government got rid of the castas system. The creoles wanted to still be at the top of the hierarchy so they switched sides against the peninsulares and Spain.",
@@ -1543,6 +1549,7 @@ export const countryNotes: CountryNotes = {
   "England 1750-present": {
     Governance: [
       "Britain expanded its empire to secure raw materials and markets, using its naval dominance to control global trade routes.",
+      "The Catholic region of Northern Ireland wanted to join the Republic of Ireland, as they were being discriminated against by the Protestant majority. Some of them formed a terrorist group called the Irish Republican Army (IRA), and set off bombs in England to try to get what they wanted. There was finally a cease-fire in 1994"
     ],
     Economy: [
       "Got cotton, wool, jute, vegetable oil, rubber, coffee, cocoa, meat, and butter from their colonies",
@@ -1563,7 +1570,7 @@ export const countryNotes: CountryNotes = {
       "Became nominally independent in 1922, but Britian still controlled the Suez Canal and had treaty rights. In 1936 the Anglo-Egyptian treaty gave more independence, but the British still kept the Suez Canal and some influence in Egypt",
       "In 1952, Gamal Abdel Nasser and others overthrew the king in a coup and established the Republic of Egypt",
       "Nasser was socialist. Part of his reforms included land reforms, reserving half of the seats in elected bodies for peasants, taxing the wealthy, making a salary cap, raising minimum wage, reducing the work week, and nationalizing industries",
-      "Nasser tried to nationalize the Suez Canal in 1956, which the British still had control over, leading to the Suez Crisis. France and Britain had Israel invade Egypt, then they occupied the area around the Canal. The US and Soviets supported Egypt in the crisis and threatened economic sanctions and the use of nuclear weapons. The crisis was resolved in the UN, making the canal international with Egyptian sovereignty.",
+      "Nasser tried to nationalize the Suez Canal in 1956 to help them pay for the Aswan Dam, which the British still had control over, leading to the Suez Crisis. France and Britain had Israel invade Egypt, then they occupied the area around the Canal. The US and Soviets supported Egypt in the crisis and threatened economic sanctions and the use of nuclear weapons. The crisis was resolved in the UN, making the canal international with Egyptian sovereignty.",
       "Egypt was non-aligned in the Cold War and got support from both the US and the Soviets. Eventually they aligned more with the US",
     ],
     Economy: [
@@ -1588,6 +1595,7 @@ export const countryNotes: CountryNotes = {
       "Japan wanted colonies because they didn't have a ton of natural resources or land, so they began taking parts of China, Korea, Southeast Asia, and the Pacific Islands. One group (the Colonization Society) wanted to form colonies in Mexico and Latin America.",
       "The Japanese military was really powerful, defeating China in the First Sino-Japanese War (1894-1895) and Russia in the Russo-Japanese War (1904-1905)",
       "In the 1930s, Japan pursued imperial expansion in East Asia, invading Manchuria (1931) and China (1937)",
+      "They used propaganda like the idea of the Greater East Asia Co-Prosperity Sphere, promoting Asian unity and independence from Western Imperialism as an excuse to invade Asia",
       "Forced people that they had conquered into labor, either in military, public works, farms, or as prostitutes for Japanese soldiers",
       "Attacked Pearl Harbor in 1941 during World War II, bringing the US into the war",
     ],
@@ -1627,10 +1635,13 @@ export const countryNotes: CountryNotes = {
   },
   Nigeria: {
     Culture: [
+      "Nigeria housed many different ethnic/religious lines, including the Yoruba, Igbo, and Islamic groups",
       "Strong divide between the Igbo minority and the Hausa-Fulani majority, who were grouped together by British imperialists.",
     ],
     Governance: [
-      "After independence from Britain, the Igbo felt that they weren't being represented by the Hausa-Fulani majority government. They attempted to secede, but their held valuable oil which the Hausa-Fulani were unwilling to part with. This resulted in a bloody civil war (Nigerian Civil War or Biafran War) that left many hundreds of thousands of civilians dead in addition to military casualties.",
+      "Used a dual legal system, with some secular laws mixed with some religious shariah laws",
+      "After independence from Britain, the Igbo felt that they weren't being represented by the Hausa-Fulani majority government. They attempted to secede, but their held valuable oil which the Hausa-Fulani were unwilling to part with. This resulted in a bloody civil war (Nigerian Civil War or Biafran War) that left many hundreds of thousands of civilians dead in addition to military casualties. The Western countries supported Nigeria, but many Western individuals felt more of a connection to the Igbos because they were Christian. They were ultimately unsuccessful.",
+      "There were many military coups until the 1999 election"
     ],
     Economy: ["Produced oil"],
   },
@@ -2057,8 +2068,10 @@ export const countryNotes: CountryNotes = {
     Governance: [
       "Many of their colonies in Latin America gained independence in the early 1800s",
       "Fought the Spanish-American War (1898-1899), and lost. They had to give Cuba and the Philippines to America. This marked the end of Spain as a global empire",
-      "The Civil War in 1936-1939 led to Francisco Franco's dictatorship (1939-1975)",
+      "In 1936, the Popular Front (who were liberal) was elected to lead the government. The conservatives and Nationalists (led by Francisco Franco) were against this, leading to the Spanish Civil War (1936-1939). The Nationalists were supported by Hitler, Mussolini, and Porgual, while the Republicans/Loyalists (who supported the Popular Front) had support from the Soviet Union, Britain, France, and the US. The foreign involvement led to a lot more violence than would have otherwise been used. The Nationalists won, leading to Francisco Franco's dictatorship from 1939-1975",
+      "Francisco Franco was very anti-communist, and imprisoned or executed his political opposition and dissenters",
       "After Francisco Franco's dictatorship, Spain transitioned to democracy",
+      "The Basque Homeland and Freedom (ETA) terrorist group wanted independence for the Basque region. They killed Francisco Franco's successor, but in 2011 promised to stop the violence."
     ],
     Social: ["Encomienda died out, replaced with the hacienda system"],
   },
@@ -2358,12 +2371,12 @@ export const countryNotes: CountryNotes = {
       "Refused to pay pre-revolution debts",
       "Industrial and agricultural production decreased during the civil war",
       "In 1921, Lenin tried to pull back from communist policies to fix the economy through the New Economic Plan, where there was limited private trade (farmers could sell products on a small scale), there were some economic liberties but still very strict political control. This lasted until his death in 1924.",
-      "He stopped the New Economic Policies and instituted 5 Year Plans which had quotas to hit in order to industrialize. It prioritized heavy industry and had few consumer goods. It also collectivized farms (having farmers all work in collectives on farms together instead of privately) to make agriculture more efficient. This made farmers mad and they tried to protest",
+      "Stalin stopped the New Economic Policies and instituted 5 Year Plans in 1928 which had quotas to hit in order to industrialize. It prioritized heavy industry and had few consumer goods. It also collectivized farms (having farmers all work in collectives/kolkhoz on farms together instead of privately) to make agriculture more efficient. This made farmers mad and they tried to protest",
       "Made the COMECON (Council for Mutual Economic Assistance) in response to the US's Marshall Plan, where they offered money to Eastern Europe for modernization. It wasn't as effective as the Marshall Plan, however.",
       "The economy suffered because there wasn't much foreign trade during the Cold War",
     ],
     Social: [
-      "Said that the US was descriminating against the poor, POC, and women",
+      "Said that the US was descriminating against the poor, people of color, and women",
     ],
     Technology: [
       "Developed the hydrogen bomb, which was more powerful than the atomic bomb, in 1955",
@@ -2423,6 +2436,8 @@ export const countryNotes: CountryNotes = {
     Economy: [
       "Produced rubber",
       "Had low labor costs so attracted manufacturing",
+      "The communist government redistributed land, sometimes violently",
+      "Vietnam made market-based reforms, which helped them have better relations with America"
     ],
   },
   Iran: {
@@ -2731,6 +2746,9 @@ export const countryNotes: CountryNotes = {
       "Landowners were really unhappy about the land distribution not just because they were losing land but also because people began to take land that wasn't being redistributed",
     ],
   },
+  "Sudan": {
+    Governance: ["In 2003, non-Arabs in Darfur (West Sudan) rebelled against the Arab-controlled government. The government responded by sending a militant group, Janjaweed, who killed over 300,000 non-Arabs and displaced millions"]
+  }
   // "Template": {
   //       "Environment": [""],
   //       "Culture": [""],
