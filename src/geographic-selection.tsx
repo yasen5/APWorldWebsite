@@ -25,6 +25,23 @@ import { useTimeSliderContext } from "./TimeSlider";
 import { createPortal } from "react-dom";
 import ArrowsRight from "./assets/DoubleGreenArrows.png";
 
+function getRandomHexColor(): string {
+  // Pick random values between 128 and 255 for each channel
+  const r = 128 + Math.floor(Math.random() * 128);
+  const g = 128 + Math.floor(Math.random() * 128);
+  const b = 128 + Math.floor(Math.random() * 128);
+
+  const avg = (r + g + b) / 3;
+  if (Math.abs(avg - r) + Math.abs(avg - g) + Math.abs(avg - b) < 50) {
+    return getRandomHexColor();
+  }
+
+  // Convert each to hex and pad to 2 digits
+  const hex = (n: number) => n.toString(16).padStart(2, '0');
+
+  return `#${hex(r)}${hex(g)}${hex(b)}`;
+}
+
 export const GeographicSelectionPage = () => {
   const { selectedTime } = useTimeSliderContext();
   const [selectedWHAPTime, setSelectedWHAPTime] = useState<[number, number]>([
@@ -50,27 +67,9 @@ export const GeographicSelectionPage = () => {
 
   // Generate random colors for each nation when component first loads
   const countryColors = useMemo(() => {
-    const colors = [
-      "#FF6B6B",
-      "#4ECDC4",
-      "#45B7D1",
-      "#96CEB4",
-      "#FFEAA7",
-      "#DDA0DD",
-      "#98D8C8",
-      "#F7DC6F",
-      "#BB8FCE",
-      "#85C1E9",
-      "#F8C471",
-      "#82E0AA",
-      "#F1948A",
-      "#85929E",
-      "#D7BDE2",
-    ];
-
     const colorMap: Record<string, string> = {};
-    nations.forEach((nation, index) => {
-      colorMap[nation] = colors[index % colors.length];
+    nations.forEach((nation) => {
+      colorMap[nation] = getRandomHexColor();
     });
 
     return colorMap;
@@ -372,9 +371,10 @@ const Popup: React.FC<{ noteKey: string; onClose: () => void }> = ({
         }}
       >
         <button
-          className="[all:unset] cursor-pointer absolute top-2 right-2"
+          className="[all:unset] cursor-pointer absolute top-2 right-2 text-black"
           onClick={onClose}
           aria-label="Close"
+          style={{ backgroundColor: "#f8f8f8", color: "black" }}
         >
           x
         </button>
@@ -388,17 +388,15 @@ const Popup: React.FC<{ noteKey: string; onClose: () => void }> = ({
               sectionTitle !== "applicableCountries" &&
               Array.isArray(content) &&
               content.length > 0 &&
-              content[0] !== "" && (
+              content[0] !== "" && 
                 <Dropdown key={sectionTitle} title={sectionTitle}>
-                  (
                   <ul className="list-disc pl-4 text-black">
-                    {content.map((point, i) => (
+                    {content.map((point, i) => 
                       <li key={i}>{point}</li>
-                    ))}
+                    )}
                   </ul>
-                  )
                 </Dropdown>
-              ),
+              ,
           )}
       </div>
       {selectedBlob && (
@@ -431,8 +429,8 @@ const Dropdown: React.FC<{ title: string; children: React.ReactNode }> = ({
         className="w-full flex justify-between items-center p-2"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span className="font-medium">{title}</span>
-        <span>{isOpen ? "▲" : "▼"} </span>
+        <span className="font-medium text-black">{title}</span>
+        <span style={{ color: "black"}}>{isOpen ? "▲" : "▼"} </span>
       </button>
       {isOpen && <div className="p-2 bg-white text-sm">{children}</div>}
     </div>
