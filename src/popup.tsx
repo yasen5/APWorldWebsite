@@ -86,7 +86,7 @@ export const Popup: React.FC<{ noteTitle: string, notes: Record<string, string[]
                   </Dropdown>
                 ,
             )}
-          {links && links.map(([title, onClick]) => <button className="!border-black mx-2" onClick={onClick}>{title}</button>)}
+          {links && links.filter(([title, _]) => title.length != 0).map(([title, onClick]) => <button className="!border-black mx-2" onClick={onClick}>{title}</button>)}
         </div>
       </div>,
       document.body,
