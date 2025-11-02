@@ -203,110 +203,107 @@ const TimelinePage: React.FC = () => {
   const [openCountry, setOpenCountry] = useState<string | null>(null);
 
   return (
-    <div className="timeline-wrapper">
-      <div className="timeline-inner">
-        <div className="self-start mt-56px">
-          <h1 className="text-2xl font-bold mb-2">Timeline</h1>
-          <p className="text-sm text-gray-600 mb-4">Scroll to see events!</p>
-        </div>
+    <div className="w-full py-[16px] box-border flex flex-col justify-center">
+      <div className="mt-56px">
+        <h1 className="text-2xl font-bold mb-2">Timeline</h1>
+        <p className="text-sm text-gray-600 mb-4">Scroll to see events!</p>
+      </div>
 
-        <div className="scroll-container">
-          <TimelinePanel
-            hoveredEvent={hoveredEvent}
-            onHover={(k) => setHoveredEvent(k)}
-            onClickEvent={(k) => setOpenEvent(k)}
-          />
-        </div>
+      <div className="scroll-container">
+        <TimelinePanel
+          hoveredEvent={hoveredEvent}
+          onHover={(k) => setHoveredEvent(k)}
+          onClickEvent={(k) => setOpenEvent(k)}
+        />
+      </div>
 
-        {openEvent && (() => {
-          const evKey = openEvent as keyof typeof timelineNotes;
-          const evNote = timelineNotes[evKey];
-          return (
-            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4">
-              <div className="bg-white p-6 rounded max-w-lg w-full">
-                <div className="flex justify-between items-center mb-2">
-                  <h2 className="font-bold text-lg">{openEvent}</h2>
-                  <button type="button" onClick={() => setOpenEvent(null)}>x</button>
-                </div>
+      {openEvent && (() => {
+        const evKey = openEvent as keyof typeof timelineNotes;
+        const evNote = timelineNotes[evKey];
+        return (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4">
+            <div className="bg-white p-6 rounded max-w-lg w-full">
+              <div className="flex justify-between items-center mb-2">
+                <h2 className="font-bold text-lg">{openEvent}</h2>
+                <button type="button" onClick={() => setOpenEvent(null)}>x</button>
+              </div>
 
-                <div className="text-sm text-gray-700 mb-3">
-                  <div>
-                    <strong>Time:</strong> {evNote.timePeriod[0]} — {evNote.timePeriod[1]}
-                  </div>
-                  {evNote.description && Array.isArray(evNote.description) && evNote.description.length > 0 && (
-                    <div className="mt-1 italic">{evNote.description.join(' ')}</div>
-                  )}
-                  {evNote.description && !Array.isArray(evNote.description) && (
-                    <div className="mt-1 italic">{String(evNote.description)}</div>
-                  )}
-                </div>
-
+              <div className="text-sm text-gray-700 mb-3">
                 <div>
-                  <strong>Applicable countries:</strong>
-                  <div className="mt-1 flex flex-wrap gap-2">
-                    {evNote.applicableCountries.map((c, idx) => (
-                      <button
-                        key={`${String(c)}-${idx}`}
-                        type="button"
-                        onClick={() => setOpenCountry(String(c))}
-                        className="text-sm px-2 py-1 border rounded"
-                      >
-                        {String(c)}
-                      </button>
-                    ))}
-                  </div>
+                  <strong>Time:</strong> {evNote.timePeriod[0]} — {evNote.timePeriod[1]}
+                </div>
+                {evNote.description && Array.isArray(evNote.description) && evNote.description.length > 0 && (
+                  <div className="mt-1 italic">{evNote.description.join(' ')}</div>
+                )}
+                {evNote.description && !Array.isArray(evNote.description) && (
+                  <div className="mt-1 italic">{String(evNote.description)}</div>
+                )}
+              </div>
+
+              <div>
+                <strong>Applicable countries:</strong>
+                <div className="mt-1 flex flex-wrap gap-2">
+                  {evNote.applicableCountries.map((c, idx) => (
+                    <button
+                      key={`${String(c)}-${idx}`}
+                      type="button"
+                      onClick={() => setOpenCountry(String(c))}
+                      className="text-sm px-2 py-1 border rounded"
+                    >
+                      {String(c)}
+                    </button>
+                  ))}
                 </div>
               </div>
             </div>
-          );
-        })()}
+          </div>
+        );
+      })()}
 
-        {openCountry && (
-  <div className="fixed inset-0 z-60 flex items-center justify-center pointer-events-none">
-    <div
-      className="w-[80vw] h-[80vh] max-w-[90vw] max-h-[85vh] relative overflow-auto bg-[#f8f8f8] border-2 border-[#999] rounded-md shadow-lg p-6 text-left pointer-events-auto"
-      style={{ transformOrigin: 'top left' }}
-    >
-      <button
-        className="[all:unset] cursor-pointer absolute top-2 right-2"
-        type="button"
-        onClick={() => setOpenCountry(null)}
-        aria-label="Close"
-      >
-        x
-      </button>
+      {openCountry && (
+        <div className="fixed inset-0 z-60 flex items-center justify-center pointer-events-none">
+          <div
+            className="w-[80vw] h-[80vh] max-w-[90vw] max-h-[85vh] relative overflow-auto bg-[#f8f8f8] border-2 border-[#999] rounded-md shadow-lg p-6 text-left pointer-events-auto"
+            style={{ transformOrigin: 'top left' }}
+          >
+            <button
+              className="[all:unset] cursor-pointer absolute top-2 right-2"
+              type="button"
+              onClick={() => setOpenCountry(null)}
+              aria-label="Close"
+            >
+              x
+            </button>
 
-      <h2 className="font-bold text-2xl text-black mb-4">{openCountry}</h2>
+            <h2 className="font-bold text-2xl text-black mb-4">{openCountry}</h2>
 
-      {countryNotes[String(openCountry)] ? (
-        <div className="text-black space-y-4">
-          {Object.entries(countryNotes[String(openCountry)]).map(
-            ([sectionTitle, content]) =>
-              sectionTitle !== "applicableCountries" &&
-              Array.isArray(content) &&
-              content.length > 0 &&
-              content[0] !== "" && (
-                <div key={sectionTitle}>
-                  <div className="font-semibold mb-1">{sectionTitle}</div>
-                  <ul className="list-disc pl-4">
-                    {content.map((point, i) => (
-                      <li key={i}>{point}</li>
-                    ))}
-                  </ul>
-                </div>
-              )
-          )}
-        </div>
-      ) : (
-        <div className="text-sm text-gray-600">
-          No country notes available.
+            {countryNotes[String(openCountry)] ? (
+              <div className="text-black space-y-4">
+                {Object.entries(countryNotes[String(openCountry)]).map(
+                  ([sectionTitle, content]) =>
+                    sectionTitle !== "applicableCountries" &&
+                    Array.isArray(content) &&
+                    content.length > 0 &&
+                    content[0] !== "" && (
+                      <div key={sectionTitle}>
+                        <div className="font-semibold mb-1">{sectionTitle}</div>
+                        <ul className="list-disc pl-4">
+                          {content.map((point, i) => (
+                            <li key={i}>{point}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )
+                )}
+              </div>
+            ) : (
+              <div className="text-sm text-gray-600">
+                No country notes available.
+              </div>
+            )}
+          </div>
         </div>
       )}
-    </div>
-  </div>
-)}
-
-      </div>
     </div>
   );
 };
