@@ -197,10 +197,10 @@ export const GeographicSelectionPage = () => {
         </style>
 
         {/* Concepts Bar */}
-        <div className="w-full max-w-[1200px] mx-auto">
+        <div className="w-3/4 mx-auto">
           {/* Toggle Bar */}
           <div
-            className="w-full h-8 bg-gradient-to-r from-blue-500 to-purple-600 cursor-pointer flex items-center justify-center text-white font-medium shadow-md hover:shadow-lg transition-shadow"
+            className="h-8 bg-gradient-to-r from-blue-500 to-purple-600 cursor-pointer flex items-center justify-center text-white font-medium shadow-md hover:shadow-lg transition-shadow"
             onClick={() => setIsConceptsBarOpen(!isConceptsBarOpen)}
           >
             <span className="mx-2">Cross-Country Concepts</span>
@@ -213,7 +213,7 @@ export const GeographicSelectionPage = () => {
               isConceptsBarOpen ? "opacity-100" : "max-h-0 opacity-0"
             }`}
           >
-            <div className="bg-white border-2 border-gray-200 rounded-b-lg px-3 pt-1 shadow-inner">
+            <div className="bg-white border-2 border-gray-200 rounded-b-lg py-1 shadow-inner">
               <div className="flex flex-wrap gap-2 justify-center">
                 {Object.keys(generalNotes)
                   .filter((concept) => {
@@ -247,10 +247,10 @@ export const GeographicSelectionPage = () => {
         </div>
 
         {/* SVG viewport container */}
-        <div className="relative w-full h-full flex justify-center pt-2">
+        <div className="relative w-full h-full flex pt-2">
           <div
             ref={mapRef}
-            className="overflow-auto w-full h-full max-w-[100vw] scrollbar-visible"
+            className="overflow-auto"
           >
             <div className="min-w-[1600px] min-h-[900px] flex justify-center items-center">
               <MapComponent
