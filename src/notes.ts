@@ -1436,7 +1436,12 @@ export const countryNotes: CountryNotes = {
       "The New Deal programs under Franklin D. Roosevelt expanded the federal government's role in the economy. The policies aimed to bring relief for citizens, recovery to bring the nation out of depression, and reform to prevent economic depressions in the future. The government used deficit spending to deal with economic problems and stimulate economic activity. They also started FDIC, which ensured that the government could pay citizens back if the bank collapsed. The economy was recovering until FDR thought that the government deficit was too big and tried to reverse some of his actions, and the economy got worse again",
       "The US made the Marshall Plan in 1947, where they offered $12 million to European countries to modernize, reduce trade barriers, and improve infrastructre, since they thought that there would be more communist revolutions if the economy was unstable",
     ],
-    Social: ["Demonstrations for women's and African Americans' rights"],
+    Social: [
+      "White women gained the right to vote in 1920",
+      "Demonstrations for women's and African Americans' rights",
+      "The 1964 Civil Rights Act banned discrimination based on race, color, religion, or national origin",
+      "The 1965 Voting Rights Act banned discrimination in voting"
+    ],
     Technology: [
       "Developed the atomic bomb",
       "Landed the first man on the moon in 1969",
@@ -1549,7 +1554,8 @@ export const countryNotes: CountryNotes = {
   "England 1750-present": {
     Governance: [
       "Britain expanded its empire to secure raw materials and markets, using its naval dominance to control global trade routes.",
-      "The Catholic region of Northern Ireland wanted to join the Republic of Ireland, as they were being discriminated against by the Protestant majority. Some of them formed a terrorist group called the Irish Republican Army (IRA), and set off bombs in England to try to get what they wanted. There was finally a cease-fire in 1994"
+      "The Catholic region of Northern Ireland wanted to join the Republic of Ireland, as they were being discriminated against by the Protestant majority. Some of them formed a terrorist group called the Irish Republican Army (IRA), and set off bombs in England to try to get what they wanted. There was finally a cease-fire in 1994",
+      "Left the EU during the 2020 Brexit movement because it felt that the EU restricted its right to govern itself"
     ],
     Economy: [
       "Got cotton, wool, jute, vegetable oil, rubber, coffee, cocoa, meat, and butter from their colonies",
@@ -1601,6 +1607,9 @@ export const countryNotes: CountryNotes = {
     ],
     Economy: [
       "The government promoted industrialization through state-sponsored enterprises, which were later sold to private conglomerates (zaibatsu)",
+      "After World War II, the government had kind of mercantilist policies where they exported more than they imported, setting high tariffs on foreign imports",
+      "Received a lot of investment from other countries, especially the US",
+      "Eventually relaxed trade restrictions, which fostered economic diversification"
     ],
     Social: [
       "Many Japanese went to the US to pursue education",
@@ -1704,7 +1713,8 @@ export const countryNotes: CountryNotes = {
       "Democracy was restored in 1990",
     ],
     Economy: [
-      "Exported guano (bat/seabird excrement used as fertilizer) and copper"
+      "Exported guano (bat/seabird excrement used as fertilizer) and copper",
+      "After the overthrow of Pinochet, the government used economic growth from free trade as well as government programs to help reduce poverty"
     ]
   },
   Venice: {
@@ -1965,8 +1975,10 @@ export const countryNotes: CountryNotes = {
       "Many immigrants came to Australia for the gold rush",
       "In 1861, the Victoria province passed the Chinese Immigration Act in 1855, limiting the number of Chinese who could immigrate. The Chinese got around this by landing in South Australia",
       "There was a lot of anti-Chinese violence in New South Wales, so New South Wales made the Chinese Immigration Regulation and Restriction Act in 1861, restricting the number of Chinese who could enter the colony. It was repealed in 1867.",
+      "White women gained the right to vote in 1894",
       "In 1901, the six British colonies in Australia united under a single government",
-      "In 1901, the Australian government made the White Australia Policy, limiting non-British immigration"
+      "In 1901, the Australian government made the White Australia Policy, limiting non-British immigration",
+      "Aboriginal women got the right to vote in 1962"
     ],
     "New Zealand": [
       "Colonized by Britain in 1840",
@@ -2224,6 +2236,7 @@ export const countryNotes: CountryNotes = {
       'Mao Zedong regained power in 1967 and started the Cultural Revolution to reestablish support for communism and silence its critics. Red Guards sent people, especially intellectuals, government officials, and teachers, who were "not revolutionary enough" were sent to reeducation camps where they had to do physical labor. This turned people against each other as they turned each other in.',
       "Supported the Viet Minh during the First Indochina war",
       "Deng Xiaoping took power in 1981. He made economic reforms promoting economic growth instead of economic equality",
+      "The CCP gives itself all the power, censoring news and education, ensuring a one-party system, controlling all industries, and restricting all non-state organizations like NGOs",
       "In 1989, people began protesting because they wanted more political freedom and freedom of speech. There were sit-ins and hunger strikes in over 400 cities. On June 4, 1989 there was a big protest in Tiananmen Square, Beijing. The government sent troops and tanks to subdue them. It's estimated that a few thousand civilians were killed, but the government hid the severity of the event from its people and the world. The government didn't allow the families of those who died to mourn and imprisoned people who commemorated the event.",
     ],
     Economy: [
