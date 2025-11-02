@@ -2,7 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { timelineNotes } from './timeline-notes';
 import { countryNotes } from './notes';
 import "./App.css";
-import { Popup } from './geographic-selection';
+import { Popup } from './popup';
 
 type TimelinePanelProps = {
   hoveredEvent: string | null;
