@@ -1,13 +1,9 @@
-import { countryNotes } from './notes';
-
 export interface TimelineNotes {
     [event: string] : {
+        [section: string]: string[] | [number, number] | string;
+        applicableCountries: string[];
         timePeriod: [number, number];
-        emphasizedUnit?: [number, number];
-        applicableCountries: (keyof typeof countryNotes)[];
-        description?: string[];
-        causes?: string[];
-        effects?: string[];
+        emphasizedUnit: [number, number];
         theme: string;
     };
 }

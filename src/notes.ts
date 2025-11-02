@@ -11,11 +11,6 @@ export const noteSVGs: Record<
   /* Put the country name EXACTLY as it appears in the country svgs, then the note svg that was generated for it */
 };
 
-/* Note id/summary, then actual notes */
-export const blobNotes: Record<string, string> = {
-  "Note number 0 with category Government": "Literally nothing lol",
-};
-
 export interface GeneralNotes {
   [country: string]: {
     [section: string]: string[] | [number, number];

@@ -299,9 +299,10 @@ export const GeographicSelectionPage = () => {
   );
 };
 
-export const Popup: React.FC<{ noteTitle: string, notes: Record<string, string[]>; onClose: () => void }> = ({
+export const Popup: React.FC<{ noteTitle: string, notes: Record<string, string[] | [number, number] | string>, links?: [string, ()=>void][], onClose: () => void }> = ({
   noteTitle,
   notes,
+  links,
   onClose,
 }) => {
   const popupRef = useRef<HTMLDivElement>(null);
@@ -383,6 +384,7 @@ export const Popup: React.FC<{ noteTitle: string, notes: Record<string, string[]
                 </Dropdown>
               ,
           )}
+        {links && links.map(([title, onClick]) => <button className="!border-black mx-2" onClick={onClick}>{title}</button>)}
       </div>
     </div>,
     document.body,
