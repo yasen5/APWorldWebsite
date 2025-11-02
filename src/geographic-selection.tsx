@@ -288,13 +288,15 @@ export const GeographicSelectionPage = () => {
             );
           })}
         </div>
-        {selectedCountry && (
-          <Popup
+        {selectedCountry && (() => {
+          const { timePeriod, ...notes} = countryNotes[selectedCountry] || generalNotes[selectedCountry];
+          return <Popup
             noteTitle={selectedCountry}
-            notes={countryNotes[selectedCountry] || generalNotes[selectedCountry]}
+            notes={notes}
+            extra={[timePeriod ? ("Time Period: " + timePeriod) : ""]}
             onClose={() => setSelectedCountry(null)}
           />
-        )}
+        })()}
       </div>
     </div>
   );

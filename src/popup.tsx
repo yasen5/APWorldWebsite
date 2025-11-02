@@ -1,10 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 
-export const Popup: React.FC<{ noteTitle: string, notes: Record<string, string[] | [number, number] | string>, links?: [string, ()=>void][], onClose: () => void }> = ({
+export const Popup: React.FC<{ noteTitle: string, notes: Record<string, string[] | [number, number] | string>, links?: [string, ()=>void][], extra?: string[], onClose: () => void }> = ({
     noteTitle,
     notes,
     links,
+    extra,
     onClose,
   }) => {
     const popupRef = useRef<HTMLDivElement>(null);
@@ -70,6 +71,7 @@ export const Popup: React.FC<{ noteTitle: string, notes: Record<string, string[]
           <h2 className="font-bold text-2xl text-black" id="modal-title">
             {noteTitle}
           </h2>
+          {extra && extra.map((text) => <p key={text} className="!text-black">{text}</p>)}
           {notes &&
             Object.entries(notes).map(
               ([sectionTitle, content]) =>
@@ -77,14 +79,13 @@ export const Popup: React.FC<{ noteTitle: string, notes: Record<string, string[]
                 Array.isArray(content) &&
                 content.length > 0 &&
                 content[0] !== "" && 
-                  <Dropdown key={sectionTitle} title={sectionTitle}>
-                    <ul className="list-disc pl-4 text-black">
-                      {content.map((point, i) => 
-                        <li key={i}>{point}</li>
-                      )}
-                    </ul>
-                  </Dropdown>
-                ,
+                <Dropdown key={sectionTitle} title={sectionTitle}>
+                <ul className="list-disc pl-4 text-black">
+                    {content.map((point, i) => 
+                    <li key={i}>{point}</li>
+                    )}
+                </ul>
+                </Dropdown>
             )}
           {links && links.filter(([title, _]) => title.length != 0).map(([title, onClick]) => <button className="!border-black mx-2" onClick={onClick}>{title}</button>)}
         </div>

@@ -219,9 +219,9 @@ const TimelinePage: React.FC = () => {
       </div>
 
       {openEvent && (() => {
-        const { theme, applicableCountries, ...notes } = timelineNotes[openEvent];
+        const { theme, applicableCountries, emphasizedUnit, timePeriod, ...notes } = timelineNotes[openEvent];
         const countryButtons: [string, () => void][] = applicableCountries.map((countryName: string) => [countryName, () => setOpenCountry(countryName)]);
-        return <Popup noteTitle={`${openEvent} (${theme})`} notes={notes} links={countryButtons} onClose={() => setOpenEvent(null)}/>
+        return <Popup noteTitle={`${openEvent} (${theme})`} notes={notes} links={countryButtons} extra={["Time Period: " + timePeriod[0] + " - " + timePeriod[1], "Emphasized Unit: " + emphasizedUnit[0] + " - " + emphasizedUnit[1]]} onClose={() => setOpenEvent(null)}/>
       })()}
 
       {openCountry && <Popup noteTitle={openCountry} notes={countryNotes[openCountry]} onClose={() => setOpenCountry(null)}/>}
