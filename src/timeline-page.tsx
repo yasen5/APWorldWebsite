@@ -141,53 +141,53 @@ const TimelinePanel: React.FC<TimelinePanelProps> = ({ hoveredEvent, onHover, on
 
           {/* event buttons */}
           {placements.map(p => {
-  const topPx = baseTop + p.lane * (laneHeight + laneGap);
-  return (
-    <div 
-      key={p.ev} 
-      style={{ position: 'absolute', left: `${p.leftPx}px`, top: `${topPx}px` }}
-    >
-      <button
-        type="button"
-        onMouseEnter={() => onHover(p.ev)}
-        onMouseLeave={() => onHover(null)}
-        onClick={() => onClickEvent(p.ev)}
-        className="scroll-item rounded-full text-sm border hover:shadow bg-white"
-        style={{
-          width: `${p.btnWidth}px`,
-          padding: '6px 12px',
-          whiteSpace: 'nowrap',
-          overflow: 'hidden',
-          textOverflow: 'ellipsis',
-          boxSizing: 'border-box'
-        }}
-      >
-        {p.ev}
-      </button>
+            const topPx = baseTop + p.lane * (laneHeight + laneGap);
+            return (
+              <div 
+                key={p.ev} 
+                style={{ position: 'absolute', left: `${p.leftPx}px`, top: `${topPx}px` }}
+              >
+                <button
+                  type="button"
+                  onMouseEnter={() => onHover(p.ev)}
+                  onMouseLeave={() => onHover(null)}
+                  onClick={() => onClickEvent(p.ev)}
+                  className="scroll-item rounded-full text-sm border hover:shadow bg-white"
+                  style={{
+                    width: `${p.btnWidth}px`,
+                    padding: '6px 12px',
+                    whiteSpace: 'nowrap',
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis',
+                    boxSizing: 'border-box'
+                  }}
+                >
+                  {p.ev}
+                </button>
 
-      {hoveredEvent === p.ev && (
-        <div
-          style={{
-            position: 'absolute',
-            top: '36px', // move tooltip higher
-            left: '50%',
-            transform: 'translateX(-50%)',
-            padding: '5px 4px', // bigger tooltip
-            fontSize: '0.875rem',
-            boxShadow: '0 4px 12px rgba(0,0,0,0.25)',
-            borderRadius: '6px',
-            backgroundColor: 'var(--color-surface)',
-            zIndex: 10,
-            whiteSpace: 'nowrap',
-            height: '30px',
-          }}
-        >
-          {p.title || p.ev}
-        </div>
-      )}
-    </div>
-  );
-})}
+                {hoveredEvent === p.ev && (
+                  <div
+                    style={{
+                      position: 'absolute',
+                      top: '36px', // move tooltip higher
+                      left: '50%',
+                      transform: 'translateX(-50%)',
+                      padding: '5px 4px', // bigger tooltip
+                      fontSize: '0.875rem',
+                      boxShadow: '0 4px 12px rgba(0,0,0,0.25)',
+                      borderRadius: '6px',
+                      backgroundColor: 'var(--color-surface)',
+                      zIndex: 10,
+                      whiteSpace: 'nowrap',
+                      height: '30px',
+                    }}
+                  >
+                    {p.title || p.ev}
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
