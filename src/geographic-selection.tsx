@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { blobNotes, countryNotes, generalNotes, noteSVGs } from './notes'
+import { countryNotes, generalNotes } from './notes'
 import World1200 from './assets/World-1200.svg?react';
 import World1280 from './assets/World-1280.svg?react';
 import World1300 from './assets/World-1300.svg?react';
@@ -289,7 +289,8 @@ export const GeographicSelectionPage = () => {
         </div>
         {selectedCountry && (
           <Popup
-            noteKey={selectedCountry}
+            noteTitle={selectedCountry}
+            notes={countryNotes[selectedCountry] || generalNotes[selectedCountry]}
             onClose={() => setSelectedCountry(null)}
           />
         )}
@@ -298,12 +299,12 @@ export const GeographicSelectionPage = () => {
   );
 };
 
-const Popup: React.FC<{ noteKey: string; onClose: () => void }> = ({
-  noteKey,
+export const Popup: React.FC<{ noteTitle: string, notes: Record<string, string[]>; onClose: () => void }> = ({
+  noteTitle,
+  notes,
   onClose,
 }) => {
   const popupRef = useRef<HTMLDivElement>(null);
-  const [selectedBlob, setSelectedBlob] = useState<string | null>(null);
   const [position, setPosition] = useState({ top: 0, left: 0 });
   const [zoomLevel, setZoomLevel] = useState(1);
 
@@ -323,19 +324,6 @@ const Popup: React.FC<{ noteKey: string; onClose: () => void }> = ({
     setPosition({ top, left });
   };
 
-  const handleBlobClick = (event: React.MouseEvent<SVGSVGElement>) => {
-    const el = event.target as Element;
-    const nodeEl = el.closest("[data-note-id]");
-    const noteId = nodeEl?.getAttribute("data-note-id");
-    if (!noteId) return;
-
-    if (noteId in blobNotes) {
-      setSelectedBlob(noteId);
-    } else {
-      alert(`No notes available for blob: ${noteId}`);
-    }
-  };
-
   useEffect(() => {
     updatePopup();
 
@@ -348,9 +336,6 @@ const Popup: React.FC<{ noteKey: string; onClose: () => void }> = ({
       vv?.removeEventListener("scroll", updatePopup);
     };
   }, []);
-
-  const matches = countryNotes[noteKey] || generalNotes[noteKey] || null;
-  const SvgNotes = noteSVGs[noteKey] || null;
 
   return createPortal(
     <div
@@ -380,11 +365,10 @@ const Popup: React.FC<{ noteKey: string; onClose: () => void }> = ({
           x
         </button>
         <h2 className="font-bold text-2xl text-black" id="modal-title">
-          {noteKey}
+          {noteTitle}
         </h2>
-        {SvgNotes && <SvgNotes onClick={handleBlobClick} />}
-        {matches &&
-          Object.entries(matches).map(
+        {notes &&
+          Object.entries(notes).map(
             ([sectionTitle, content]) =>
               sectionTitle !== "applicableCountries" &&
               Array.isArray(content) &&
@@ -400,9 +384,6 @@ const Popup: React.FC<{ noteKey: string; onClose: () => void }> = ({
               ,
           )}
       </div>
-      {selectedBlob && (
-        <Popup noteKey={selectedBlob} onClose={() => setSelectedBlob(null)} />
-      )}
     </div>,
     document.body,
   );
