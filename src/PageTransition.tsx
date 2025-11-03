@@ -4,6 +4,7 @@ import { GeographicSelectionPage } from './geographic-selection.tsx';
 import { D3ForceGraph } from './SvgGenerator.tsx';
 import { createContext, useContext, useState, useRef } from "react";
 import { ExplanationPage } from "./Explanation.tsx";
+import { Unit9Page } from "./Unit9Page.tsx";
 
 interface StartScreenProps {
   goToPage: (page: AppPage) => void
@@ -111,6 +112,8 @@ export const PageTransition = () => {
             ))}
           </div>
         );
+      case AppPage.UNIT_9_NOTES:
+        return <Unit9Page />;
       default:
         return <div>Error: Invalid page</div>;
     }
