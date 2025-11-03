@@ -14,18 +14,18 @@ export const Unit9Page = () => {
             <div className="grid grid-cols-2 gap-4 mt-4">
                 {Object.entries(unit9Notes).map(([title, { image, notes }]) => (
                     <div className="grid-notes">
-                        <h2 className="font-bold">{title}</h2>
+                        <h2 className="font-bold !text-black">{title}</h2>
                         {open === title ? (
                             <div>
-                                <button onClick={() => setOpen(null)} className="text-[1px]">Close</button>
-                                <ul className="list-disc list-inside space-y-1">
+                                <button onClick={() => setOpen(null)} className="!text-black !bg-[#f9f9f9]">Close</button>
+                                <ul className="list-disc list-inside space-y-1 !text-black">
                                     {notes.map((note, i) => (
                                         <li key={i}>{note}</li>
                                     ))}
                                 </ul>
                             </div>
                         ): (
-                            <button onClick={() => setOpen(title)}>
+                            <button onClick={() => setOpen(title)} className="!bg-[#f9f9f9]">
                                 <img src = {image} alt = {title} className ="w-full h-40 object-cover rounded-lg" />
                             </button>
                         )}
