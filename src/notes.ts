@@ -198,7 +198,7 @@ export const generalNotes: GeneralNotes = {
     applicableCountries: [
       "England 1450-1700",
       "France 1450-1700",
-      "Holy Roman Empire 1450-1700",
+      "Holy Roman Empire 1200-1806",
       "Spain 1492-1750",
       "Netherlands 1450-1750",
     ],

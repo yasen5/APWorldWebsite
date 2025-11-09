@@ -22,7 +22,6 @@ import World1950 from './assets/World-1950.svg?react';
 import World1960 from './assets/World-1960.svg?react';
 import World1994 from './assets/World-1994.svg?react';
 import { useTimeSliderContext } from "./TimeSlider";
-import { createPortal } from "react-dom";
 import ArrowsRight from "./assets/DoubleGreenArrows.png";
 import { Popup } from "./popup";
 

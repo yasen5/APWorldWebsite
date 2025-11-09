@@ -18,7 +18,7 @@ const TimelinePanel: React.FC<TimelinePanelProps> = ({ hoveredEvent, onHover, on
     const maxYear = 2025;
     const range = Math.max(1, maxYear - minYear);
 
-    const pxPerYear = 30; // pixels per year
+    const pxPerYear = 30;
     const trackWidthPx = Math.max(800, Math.ceil(range * pxPerYear));
     const MIN_BTN_PX = 40;
 
