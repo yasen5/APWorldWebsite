@@ -1,16 +1,27 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useRef, useEffect } from 'react';
 import { timelineNotes } from './timeline-notes';
 import { countryNotes } from './notes';
 import "./App.css";
 import { Popup } from './popup';
 
 type TimelinePanelProps = {
-  hoveredEvent: string | null;
-  onHover: (k: string | null) => void;
   onClickEvent: (k: string) => void;
 };
 
-const TimelinePanel: React.FC<TimelinePanelProps> = ({ hoveredEvent, onHover, onClickEvent }) => {
+interface TimelineButton {
+  ev: string;
+  leftPx: number;
+  btnWidth: number;
+  lane: number;
+}
+
+const TimelinePanel: React.FC<TimelinePanelProps> = ({ onClickEvent }) => {
+  const [tooltipLeft, setTooltipLeft] = useState<number>(0);
+  const [buttonLeft, setButtonLeft] = useState<number>(0);
+  const [buttonWidth, setButtonWidth] = useState<number>(0);
+  const [hoveredEvent, setHoveredEvent] = useState<string | null>(null);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
   const events = Object.keys(timelineNotes) as (keyof typeof timelineNotes)[];
 
   const { minYear, maxYear, pxPerYear, trackWidthPx, trackHeightPx, placements, laneHeight, laneGap, baseTop, bottomGap } = useMemo(() => {
@@ -29,7 +40,7 @@ const TimelinePanel: React.FC<TimelinePanelProps> = ({ hoveredEvent, onHover, on
       const leftPx = Math.round((start - minYear) * pxPerYear);
       const rawWidthPx = Math.round((end - start) * pxPerYear);
       const btnWidth = Math.max(MIN_BTN_PX, rawWidthPx);
-      const title = Array.isArray(evNote.description) ? evNote.description.join(', ') : (evNote.description ?? '');
+      const title = ev
       return { ev: String(ev), start, end, leftPx, btnWidth, title };
     });
 
@@ -41,13 +52,7 @@ const TimelinePanel: React.FC<TimelinePanelProps> = ({ hoveredEvent, onHover, on
 
     // assign lanes (first-fit)
     const lanesEnd: number[] = [];
-    const placements: Array<{
-      ev: string;
-      leftPx: number;
-      btnWidth: number;
-      lane: number;
-      title: string;
-    }> = [];
+    const placements: Array<TimelineButton> = [];
 
     rawItems.forEach(item => {
       // find lane
@@ -63,7 +68,6 @@ const TimelinePanel: React.FC<TimelinePanelProps> = ({ hoveredEvent, onHover, on
         leftPx: item.leftPx,
         btnWidth: item.btnWidth,
         lane: laneIndex,
-        title: item.title,
       });
     });
 
@@ -77,9 +81,39 @@ const TimelinePanel: React.FC<TimelinePanelProps> = ({ hoveredEvent, onHover, on
   // axis position below lanes (use same bottomGap)
   const axisY = Math.max(24, trackHeightPx - bottomGap);
 
+  const updateTooltip = () => {
+    const timelineContainer = scrollContainerRef.current;
+
+    if (!timelineContainer) {
+      return;
+    }
+
+    console.log(timelineContainer.scrollLeft, buttonLeft, timelineContainer.clientWidth, buttonWidth);
+
+    const left = (Math.max(timelineContainer.scrollLeft, buttonLeft) + Math.min(timelineContainer.scrollLeft + timelineContainer.clientWidth, buttonLeft + buttonWidth)) / 2;
+
+    setTooltipLeft(left);
+  };
+
+  useEffect(() => {
+    updateTooltip();
+
+    const container = scrollContainerRef.current;
+    if (container) {
+      container.addEventListener("scroll", updateTooltip);
+    }
+
+    return () => {
+      if (container) {
+        container.removeEventListener("scroll", updateTooltip);
+      }
+    };
+  }, [hoveredEvent, buttonLeft, buttonWidth]);
+
   return (
     <div className="my-3">
       <div
+        ref={scrollContainerRef}
         className="scroll-container rounded-2xl shadow-md"
         style={{ overflowX: 'auto', padding: '8px 0 40px' }} // ensure padding-bottom >= bottomGap
       >
@@ -150,8 +184,12 @@ const TimelinePanel: React.FC<TimelinePanelProps> = ({ hoveredEvent, onHover, on
               >
                 <button
                   type="button"
-                  onMouseEnter={() => onHover(p.ev)}
-                  onMouseLeave={() => onHover(null)}
+                  onMouseEnter={(e) => {
+                    setHoveredEvent(p.ev);
+                    setButtonLeft(e.currentTarget.clientLeft);
+                    setButtonWidth(e.currentTarget.clientWidth)
+                  }}
+                  onMouseLeave={() => setHoveredEvent(null)}
                   onClick={() => onClickEvent(p.ev)}
                   className="scroll-item rounded-full text-sm border hover:shadow bg-white"
                   style={{
@@ -171,7 +209,7 @@ const TimelinePanel: React.FC<TimelinePanelProps> = ({ hoveredEvent, onHover, on
                     style={{
                       position: 'absolute',
                       top: '36px', // move tooltip higher
-                      left: '50%',
+                      left: `${tooltipLeft}px`,
                       transform: 'translateX(-50%)',
                       padding: '5px 4px', // bigger tooltip
                       fontSize: '0.875rem',
@@ -183,7 +221,7 @@ const TimelinePanel: React.FC<TimelinePanelProps> = ({ hoveredEvent, onHover, on
                       height: '30px',
                     }}
                   >
-                    {p.title || p.ev}
+                    {p.ev}
                   </div>
                 )}
               </div>
@@ -199,7 +237,6 @@ const TimelinePanel: React.FC<TimelinePanelProps> = ({ hoveredEvent, onHover, on
 
 
 const TimelinePage: React.FC = () => {
-  const [hoveredEvent, setHoveredEvent] = useState<string | null>(null);
   const [openEvent, setOpenEvent] = useState<string | null>(null);
   const [openCountry, setOpenCountry] = useState<string | null>(null);
 
@@ -212,8 +249,6 @@ const TimelinePage: React.FC = () => {
 
       <div className="scroll-container">
         <TimelinePanel
-          hoveredEvent={hoveredEvent}
-          onHover={(k) => setHoveredEvent(k)}
           onClickEvent={(k) => setOpenEvent(k)}
         />
       </div>
