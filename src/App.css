@@ -99,10 +99,39 @@ document flow using `position: absolute` to ensure that one is not displayed und
   min-height: 0;
 }
 
+.timeline-title {
+  align-self: self-start;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 12px;
+  margin-top: 56px;
+}
+
+.scroll-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  white-space: nowrap;
+  padding: 10px 10px 40px;
+  gap: 10px;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.scroll-item {
+  flex: 0 0 auto;
+  width: auto;
+  height: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 6px 8px;
+}
+
 .grid-notes {
   padding: 2px;
   background-color: #f9f9f9;
   border-radius: 0.25rem;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08);
-  
 }
