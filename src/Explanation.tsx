@@ -40,7 +40,7 @@ export const ExplanationPage = () => {
           </a>
           <p className="mb-1">Longer version:</p>
           <a
-            href="https://docs.google.com/document/d/1FlLUP4s2Bxt7bXvDf4kNHZpg0HFOUcWcdKb9H7HcWTk/edit?tab=t.hu6rpiaws425#heading=h.o1d1i5iz5iv4"
+            href="https://docs.google.com/document/d/11LtTP3I1Y8oZNdzsdLShmElOxhRbD63Rf2te9AO21hY/edit?tab=t.0#heading=h.73f1cojsglb6"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-600 hover:underline break-all"
