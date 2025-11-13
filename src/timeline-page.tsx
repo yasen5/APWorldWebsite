@@ -139,9 +139,9 @@ const TimelinePanel: React.FC<TimelinePanelProps> = ({ onClickEvent }) => {
             }}
           />
 
-          {/* year tick marks*/}
+          {/* year tick marks */}
           {Array.from(
-            { length: Math.floor((maxYear - minYear) / 50) + 1 },
+            { length: Math.floor((maxYear - minYear) / 10) + 1 },
             (_, i) => minYear + i * 10
           ).map(year => {
             const leftPxRaw = Number(year) - Number(minYear);
@@ -243,7 +243,7 @@ const TimelinePage: React.FC = () => {
 
   return (
     <div className="w-full py-[16px] box-border flex flex-col justify-center">
-      <div className="mt-56px">
+      <div className="mt-[56px]">
         <h1 className="text-2xl font-bold mb-2">Timeline (more features coming soon!)</h1>
         <p className="text-sm text-gray-600 mb-4">Scroll to see events!</p>
       </div>
