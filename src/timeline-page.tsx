@@ -88,9 +88,10 @@ const TimelinePanel: React.FC<TimelinePanelProps> = ({ onClickEvent }) => {
       return;
     }
 
-    console.log(timelineContainer.scrollLeft, buttonLeft, timelineContainer.clientWidth, buttonWidth);
+    console.log("Scroll left", timelineContainer.scrollLeft, "Button left:", buttonLeft, "Client width:", timelineContainer.clientWidth, "Button width:", buttonWidth);
+    console.log("Page:", timelineContainer.scrollLeft + timelineContainer.clientWidth, "Button:", buttonLeft + buttonWidth);
 
-    const left = (Math.max(timelineContainer.scrollLeft, buttonLeft) + Math.min(timelineContainer.scrollLeft + timelineContainer.clientWidth, buttonLeft + buttonWidth)) / 2;
+    const left = (Math.max(timelineContainer.scrollLeft, buttonLeft) + Math.min(timelineContainer.scrollLeft + timelineContainer.clientWidth, buttonLeft + buttonWidth)) / 2 - buttonLeft;
 
     setTooltipLeft(left);
   };
@@ -181,14 +182,14 @@ const TimelinePanel: React.FC<TimelinePanelProps> = ({ onClickEvent }) => {
               <div 
                 key={p.ev} 
                 style={{ position: 'absolute', left: `${p.leftPx}px`, top: `${topPx}px` }}
+                onMouseEnter={() => {
+                  setHoveredEvent(p.ev);
+                  setButtonLeft(p.leftPx);
+                  setButtonWidth(p.btnWidth)
+                }}
               >
                 <button
                   type="button"
-                  onMouseEnter={(e) => {
-                    setHoveredEvent(p.ev);
-                    setButtonLeft(e.currentTarget.clientLeft);
-                    setButtonWidth(e.currentTarget.clientWidth)
-                  }}
                   onMouseLeave={() => setHoveredEvent(null)}
                   onClick={() => onClickEvent(p.ev)}
                   className="scroll-item rounded-full text-sm border hover:shadow bg-white"
@@ -211,7 +212,7 @@ const TimelinePanel: React.FC<TimelinePanelProps> = ({ onClickEvent }) => {
                       top: '36px', // move tooltip higher
                       left: `${tooltipLeft}px`,
                       transform: 'translateX(-50%)',
-                      padding: '5px 4px', // bigger tooltip
+                      padding: '5px 4px',
                       fontSize: '0.875rem',
                       boxShadow: '0 4px 12px rgba(0,0,0,0.25)',
                       borderRadius: '6px',
