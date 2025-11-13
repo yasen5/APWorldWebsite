@@ -220,7 +220,7 @@ export const timelineNotes: TimelineNotes = {
         applicableCountries: ["Spain 1492-1750", "Portugal 1450-1750"],
         description: ["Spain and Portugal split the world with the Line of Demarcation. Any new territory discovered west of the line, including most of the Americas and the Philippines, was reserved for Spain, while any territory east of the line, including Africa and the Indian Ocean, was reserved for Portugal."],
         causes: ["Desire for territory in the New World and Indian Ocean for resources and trade"],
-        effects: ["Established the precedent of European powers claiming territory without the inhabitants' imput"],
+        effects: ["Established the precedent of European powers claiming territory without the inhabitants' input"],
         theme: "governance"
     },
     "Vasco Da Gama sails to India" : {
@@ -260,7 +260,7 @@ export const timelineNotes: TimelineNotes = {
         timePeriod: [1517, 1517],
         emphasizedUnit: [1450, 1750],
         applicableCountries: ["Holy Roman Empire 1200-1806"],
-        description: ["Martin Luther wrote the 95 Theses detailing the Church's violations of biblical teachings. His complaints inlcuded indulgences, where people could pay to redeem themselves from sin, and simony, where chuch offices were sold to the younger sons of nobles. These were both practices that were put into place for the Church to gain more money. Additionally, Luther wanted the bible in the vernacular instead of only in Latin so it would be more accessible, and interpretations wouldn't be controlled purely by the church",
+        description: ["Martin Luther wrote the 95 Theses detailing the Church's violations of biblical teachings. His complaints included indulgences, where people could pay to redeem themselves from sin, and simony, where chuch offices were sold to the younger sons of nobles. These were both practices that were put into place for the Church to gain more money. Additionally, Luther wanted the bible in the vernacular instead of only in Latin so it would be more accessible, and interpretations wouldn't be controlled purely by the church",
             "Lutheranism promoted literacy and gave women more religious equality by fostering the idea that women didn't need men as intermediaries",
             "Martin Luther was excommunicated in 1521",
             "Spread quickly because of the use of the printing press",
@@ -273,7 +273,7 @@ export const timelineNotes: TimelineNotes = {
     },
     "Battle of Panipat" : {
         timePeriod: [1526, 1526],
-        emphasizedUnit: [1450, 1450],
+        emphasizedUnit: [1450, 1750],
         applicableCountries: ["Mughal Empire", "Delhi Sultanate"],
         description: ["The Mughal Empire fought the declining Delhi Sultanate. The Mughals were vastly outnumbered, and the Delhi Sultanate had war elephants, but the Mughals won because they had gunpowder weapons"],
         causes: [""],
@@ -315,7 +315,7 @@ export const timelineNotes: TimelineNotes = {
         timePeriod: [1598, 1598],
         emphasizedUnit: [1450, 1750],
         applicableCountries: ["France 1450-1750"],
-        description: ["King Henry IV of France (also known as Henry of Navarre) signed the Edict of Nantes, which gave Huguenots (French Proteestants) more rights and religious tolerance",
+        description: ["King Henry IV of France (also known as Henry of Navarre) signed the Edict of Nantes, which gave Huguenots (French Protestants) more rights and religious tolerance",
             "The Edict was revoked by Louis XIV in 1685"
         ],
         causes: ["Rise of Lutheranism"],
@@ -451,7 +451,7 @@ export const timelineNotes: TimelineNotes = {
     },
     "World War II": {
         timePeriod: [1938, 1945],
-        emphasizedUnit: [1200, 1450],
+        emphasizedUnit: [1900, 2000],
         applicableCountries: [
             "Germany 1920-1945",
             "Italy",
