@@ -40,8 +40,8 @@ const TimelinePanel: React.FC<TimelinePanelProps> = ({ onClickEvent }) => {
       const leftPx = Math.round((start - minYear) * pxPerYear);
       const rawWidthPx = Math.round((end - start) * pxPerYear);
       const btnWidth = Math.max(MIN_BTN_PX, rawWidthPx);
-      const title = ev
-      return { ev: String(ev), start, end, leftPx, btnWidth, title };
+      
+      return { ev: String(ev), start, end, leftPx, btnWidth };
     });
 
     // lane layout constants
@@ -88,8 +88,6 @@ const TimelinePanel: React.FC<TimelinePanelProps> = ({ onClickEvent }) => {
       return;
     }
 
-    console.log("Scroll left", timelineContainer.scrollLeft, "Button left:", buttonLeft, "Client width:", timelineContainer.clientWidth, "Button width:", buttonWidth);
-    console.log("Page:", timelineContainer.scrollLeft + timelineContainer.clientWidth, "Button:", buttonLeft + buttonWidth);
 
     const left = (Math.max(timelineContainer.scrollLeft, buttonLeft) + Math.min(timelineContainer.scrollLeft + timelineContainer.clientWidth, buttonLeft + buttonWidth)) / 2 - buttonLeft;
 
