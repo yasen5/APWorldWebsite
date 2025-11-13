@@ -244,7 +244,7 @@ const TimelinePage: React.FC = () => {
   return (
     <div className="w-full py-[16px] box-border flex flex-col justify-center">
       <div className="mt-56px">
-        <h1 className="text-2xl font-bold mb-2">Timeline</h1>
+        <h1 className="text-2xl font-bold mb-2">Timeline (more features coming soon!)</h1>
         <p className="text-sm text-gray-600 mb-4">Scroll to see events!</p>
       </div>
 
