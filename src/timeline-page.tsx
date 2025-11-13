@@ -107,7 +107,7 @@ const TimelinePanel: React.FC<TimelinePanelProps> = ({ onClickEvent }) => {
         container.removeEventListener("scroll", updateTooltip);
       }
     };
-  }, [hoveredEvent, buttonLeft, buttonWidth]);
+  }, [hoveredEvent, buttonLeft, buttonWidth, updateTooltip]);
 
   return (
     <div className="my-3">
