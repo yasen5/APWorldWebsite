@@ -303,12 +303,18 @@ export const timelineNotes: TimelineNotes = {
         theme: "culture"
     },
     "Battle of Tondibi" : {
-        timePeriod: [1591, 1591],
-        emphasizedUnit: [1450, 1750],
-        applicableCountries: ["Morocco", "Songhai Kingdom"],
-        description: [""],
-        causes: [""],
-        effects: [""],
+       timePeriod: [1591, 1591],
+       emphasizedUnit: [1450, 1750],
+       applicableCountries: ["Morocco", "Songhai Kingdom"],
+       description: ["Morocco sent its army to the Songhai Empire try to take control of its gold fields.",
+           "A lot of the Moroccan army died while crossing the Sahara",
+           "The Songhai greatly outnumbered the Moroccans and had the advantage of war cattle",
+           "However, the Songhai had gunpowder weapons which were much more effective and deadly. The weapons scared the cattle and turned them against the Songhai. This allowed the Moroccans to win",
+           "The Moroccans required the Songhai to pay an annual tribute of slaves and gold"],
+        causes: ["Morocco wanted access to Songhai gold fields"],
+        effects: ["Decline of the Songhai Kingdom",
+            "Strengthening of the Moroccan Empire with the annual tribute of slaves and gold"
+        ],
         theme: "governance"
     },
     "Edict of Nantes" : {
@@ -325,7 +331,7 @@ export const timelineNotes: TimelineNotes = {
     "Enlightenment" : {
         timePeriod: [1688, 1789],
         emphasizedUnit: [1750, 1900],
-        applicableCountries: ["England 1750-1900", "France 1750-1920", "United States 1776-1900", "Spanish Territory", "Brazil", "Philippines", "Saint Domingue/Haiti"],
+        applicableCountries: ["England 1750-1900", "France 1750-1920", "United States 1776-1920", "Spanish Territory", "Brazil", "Philippines", "Saint Domingue/Haiti"],
         description: ["Socialism, the idea where the public owns the means of production, was developed",
             "Adam Smith developed the idea of laissez-faire economics, where the government would not interfere with economic decisions. This was the foundation for capitalism and the free market. He believed that capitalism would protect against poverty better than mercantilism had",
             "Liberalism valued natural rights, a constitutional government, laissez-faire economics, and reductions to the money spent on the army and church. It was supported mainly by professionals and academics, as well as by the British Parliament",
@@ -449,6 +455,528 @@ export const timelineNotes: TimelineNotes = {
         effects: ["French were driven out of India and North America"],
         theme: "governance"
     },
+    "Industrial Revolution" : {
+       timePeriod: [1760, 1840],
+       emphasizedUnit: [1750, 1900],
+       applicableCountries: ["England 1750-Present"],
+       description: ["England began industrializing, focusing on the textile industry. They shifted from the cottage industry, where families bought raw cotton and made cloth at home, to mass producing cloth in factories",
+           "Essential inventions included the spinning jenny, allowing more than one thread to be spun at a time, the power loom, which used steam power to weave fabric more efficiently, and the water frame, allowing water power to power spinning wheels",
+           "Other inventions included the steam engine in 1865, which allowed for steam locomotives, steam boats, and factories farther from water, and the Bessemer Process in 1856, which allowed steel to be produced cheaply"
+       ],
+       causes: ["Proximity to waterways, geographical distribution of coal and iron, urbanization, agricultural productivity, access to foreign resources, accumulation of capital, legal protection of private property, political stability"],
+       effects: ["Urbanization",
+           "Growth of the middle class, formation of the working class",
+           "Pollution, resource depletion",
+           "Reform movements, labor unions",
+           "Consumerism, industrial capitalism"
+       ],
+       theme: "economy"
+   },
+   "American Revolution" : {
+       timePeriod: [1776, 1783],
+       emphasizedUnit: [1750, 1900],
+       applicableCountries: ["United States 1776-1920"],
+       description: ["The "],
+       causes: ["Englightenment ideas like consent of the governed, natural rights, and laissez-faire economics",
+           "Increased taxation after the Seven Years' War"
+       ],
+       effects: ["American independence",
+           "Inspired other revolutions like the French and Haitian revolution",
+           "Did not affect women's, Native Americans', or African Americans' rights"
+       ],
+       theme: "governance"
+   },
+   "French Revolution" : {
+       timePeriod: [1789, 1799],
+       emphasizedUnit: [1750, 1900],
+       applicableCountries: ["France 1750-1920"],
+       description: ["The commoners stormed the Bastille on July 14, 1789. In October, they stormed Versailles and made the king make the monarchy constitutional (they didn't want to kill him, they only wanted him to make things better)",
+           "Became the First French Republic (constitutional monarchy) in 1792. Monarch power was limited, and the National Assembly had a lot of power. They stopped feudalism and made the Declaration of the Rights of Man and Citizen. The King was unhappy with this new government and tried to veto a lot of things",
+           "Eventually, the Jacobins, extreme revolutionaries, were elected. They wanted to end the monarchy, the church's power, and slavery, and killed anyone (including the king and queen) who were “against” the revolution (could have been for any reason) in the 1793 Reign of Terror.",
+           "Ended when Napoleon took over in a coup d'état"
+       ],
+       causes: ["Unfair representation of the majority of the population in the Estates System",
+           "Lost money from wars like the American Revolution and the Seven Years' War"
+       ],
+       effects: ["Inspired the Haitian Revolution"],
+       theme: "governance"
+   },
+   "Haitian Revolution" : {
+       timePeriod: [1791, 1804],
+       emphasizedUnit: [1750, 1900],
+       applicableCountries: ["Saint Domingue/Haiti"],
+       description: ["The revolution started in 1792 and continued to gain more people. Toussaint L'Ouverture, who became the leader of the revolution, joined the movement in 1794. They allied with the Spanish and then drove out the Spanish and British",
+           "In 1801, Toussaint L'Ouverture established the Haitian government and constitution, creating equal rights and citizenship, and abolishing slavery and racism. However, he made himself the governor for life and gave himself all the power",
+           "In 1804, Napoleon reinstated slavery and imprisoned Toussaint L'Ouverture. Haiti fought for independence because they didn't want slavery and gained full independence that year."
+       ],
+       causes: ["French and American revolutions",
+           "Wanted more rights"
+       ],
+       effects: ["Haiti gained independence",
+           "Other countries refused to acknowledge Haiti's independence",
+           "Haiti had to pay large reparations to France, leading them to remain a very poor country"
+       ],
+       theme: "governance"
+   },
+   "Dutch East India Company depowered" : {
+       timePeriod: [1799, 1799],
+       emphasizedUnit: [1750, 1900],
+       applicableCountries: ["Netherlands 1450-1800"],
+       description: ["The Dutch East India Company was corrupt and mismanaged, leading to them becoming bankrupt.",
+           "When the company was declared bankrupt, the government depowered the company and took their possessions, including territories"
+       ],
+       causes: ["The VOC was mismanaged and corrupt, leading to bankruptcy"],
+       effects: ["The Netherlands government took control of the VOC's possessions including the Dutch East Indies"],
+       theme: "economy"
+   },
+   "Britain bans slave trade" : {
+       timePeriod: [1807, 1807],
+       emphasizedUnit: [1750, 1900],
+       applicableCountries: ["England 1750-1900", "British Territory"],
+       description: ["Britain banned slave trade in their territories. They also began to intercept ships carrying slaves and taking them to Sierra Leone, where the slaves would be freed"],
+       causes: [""],
+       effects: ["Decrease slave trade"],
+       theme: "social, economy"
+   },
+   "United States bans slave trade" : {
+       timePeriod: [1808, 1808],
+       emphasizedUnit: [1750, 11900],
+       applicableCountries: ["United States 1776-1920"],
+       description: ["The United States banned international slave trade. However, domestic slave trade and slavery continued until 1865"],
+       causes: [""],
+       effects: ["Decrease slave trade",
+           "Did not stop slavery or domestic slave trade within the United States"
+       ],
+       theme: "social, economy"
+   },
+   "Mexican Revolution" : {
+       timePeriod: [1810, 1821],
+       emphasizedUnit: [1750, 1900],
+       applicableCountries: ["Mexico 1885-Present", "Spain 1750-Present"],
+       description: ["Delcared independence in 1810",
+           "The revolution was led by Padre Miguel Hidalgo, who was very liberal. He was killed very quickly, then Iturbide led the revolution",
+           "The creoles originally sided with the commoners against the peninsulares, but when Hidalgo's followers attacked creoles along with peninsulares, the creoles switched sides to side with the peninsulares",
+           "The creoles switched sides again when the Spanish government stopped supporting the castas system. The creoles wanted to keep the castas system so they could remain at the top of the hierarchy"
+       ],
+       causes: ["Creoles wanted more rights and independence from Napoleon"],
+       effects: ["Mexico gained independence as a republic"],
+       theme: "governance"
+   },
+   "European suppression of democratic reforms" : {
+       timePeriod: [1815, 1848],
+       emphasizedUnit: [1750, 1900],
+       applicableCountries: ["France 1750-1920", "England 1750-Present", "Spain 1750-Present"],
+       description: ["European monarchies suppressed the ideas of democracy in order to retain power and prevent revolutions"],
+       causes: ["Revolutions like the French Revolution that depowered the monarchies"],
+       effects: [""],
+       theme: "governance"
+   },
+   "Brazilian Revolution" : {
+       timePeriod: [1822, 1822],
+       emphasizedUnit: [1750, 1900],
+       applicableCountries: ["Brazil", "Portugal 1750-Present"],
+       description: ["The Portuguese monarchy fled to Brazil when Napoleon was conquering the Iberian Peninsula",
+           "The creoles liked having their own government in Brazil instead of a colonial government, so Prince Pedro stayed behind in Brazil when the rest of the royal family returned to Portugal",
+           "Prince Pedro declared Brazil an independent monarchy and became the king of Brazil in 1822"
+       ],
+       causes: ["Enlightenment ideals",
+           "Napoleon invaded Portugal"
+       ],
+       effects: ["Brazil gained independence",
+           "Continuation of slavery until 1888"
+       ],
+       theme: "governance"
+   },
+   "Monroe Doctrine" : {
+       timePeriod: [1823, 1823],
+       emphasizedUnit: [1750, 1900],
+       applicableCountries: ["United States 1776-1920"],
+       description: ["John Quincy Adams made a statement saying that European nations should not intervene in the Western Hemisphere, and the US would not interefere in European wars.",
+           "European countries were still allowed to keep their colonies but could not retake the colonies that had already gained independence",
+           "Allowed the United States to be the main power in the Americas",
+           "The Roosevelt Corollary was added in 1904, saying that the United States had the duty to intervene if Latin American countries were unstable. This allowed them to dominate economically"
+       ],
+       causes: ["European countries were seeking more territory in the Americas and to retake their old Latin American colonies"],
+       effects: ["Latin American countries could keep their independence",
+           "The United States became the major power in the Western Hemisphere"
+       ],
+       theme: "governance"
+   },
+   "Greek Independence" : {
+       timePeriod: [1827, 1827],
+       emphasizedUnit: [1750, 1900],
+       applicableCountries: ["Greece", "Ottoman Empire"],
+       description: ["The Greek declared independence from the Ottoman Empire with aid from the British, French, and Russians who wanted to weaken the Ottoman Empire"],
+       causes: ["Greek nationalism"],
+       effects: ["Weaken Ottoman Empire",
+           "Other regions of the Ottoman Empire started wanting independence",
+           "The Ottoman Empire made the Tanzimat reforms to suppress regional nationalism and promote Ottoman nationalism"
+       ],
+       theme: "governance"
+   },
+   "British bans slavery" : {
+       timePeriod: [1833, 1833],
+       emphasizedUnit: [1750, 1900],
+       applicableCountries: ["England 1750-Present", "British Territory"],
+       description: ["The British banned slavery, ending it in all of their colonies. However, exploitative measures were still used."],
+       causes: [""],
+       effects: ["Increased efforts to stop slavery in other countries by stopping slave ships and freeing the slaves"],
+       theme: "social, economy"
+   },
+   "Tanzimat Reforms" : {
+       timePeriod: [1839, 1876],
+       emphasizedUnit: [1750, 1900],
+       applicableCountries: ["Ottoman Empire"],
+       description: ["Promoted Ottoman nationalism and unity",
+           "Tried to stop government corruption",
+           "Made schools secular so the government, instead of religious officials, could control it",
+           "Codified Ottoman laws, made penal code, and commercial code, which made foreign trade more attractive",
+           "Had more, but not complete, religious equality",
+           "Stopped by Sultan Abdulhamid in 1876. He was scared that the reforms would lead to rebellion, so stopped the reforms. This, however, made people more mad and led to the Armenian Genocide"
+       ],
+       causes: ["Increased regional nationalism, which could lead to independence"],
+       effects: ["Increased religious tolerance",
+           "Increased Ottoman Nationalism",
+           "Armenian Genocide"
+       ],
+       theme: "governance"
+   },
+   "Opium Wars" : {
+       timePeriod: [1839, 1860],
+       emphasizedUnit: [1750, 1900],
+       applicableCountries: ["Qing Dynasty", "England 1750-Present"],
+       description: ["England wanted more Chinese goods but had nothing the Chinese wanted, so England began importing opium so the population would get addicted and China would need to trade their goods in exchange for more opium",
+           "China asked England to stop selling them opium, but the British refused, so China declared war",
+           "The First Opium War lasted from 1839 until the Treaty of Nanking in 1842. This gave the British an advantage, forcing free trade, giving the British Hong Kong, access to 4 more ports, extraterritorial rights (so British merchants didn't have to obey Chinese laws, allowing them to continue selling opium even though the government banned it), and first nation trading rights status",
+           "In 1856, The Chinese searched a British ship, lowered its flag, and arrested its sailors, starting the Second Opium War",
+           "The Second Opium War lasted from 1856 to 1860, until the Treaty of Tientsin. This gave the British more advantages, like being able to send foreign envoys to Beijing, open more ports, have more freedom of movement for Christian missionaries, gaining part of the Kowloon Peninsula, and legalizing opium"
+       ],
+       causes: ["The British wanted more economic advantages in China"],
+       effects: ["Gave Britain and other Western countries more advantages and spheres of influence"],
+       theme: "economic"
+   },
+   "Treaty of Waitangi" : {
+       timePeriod: [1840, 1840],
+       emphasizedUnit: [1750, 1900],
+       applicableCountries: ["British Territory", "England 1750-Present"],
+       description: ["This treaty established New Zealand as a colony and gave the native Maori property rights, although those were largely ignored by settlers"],
+       causes: ["British imperialism"],
+       effects: ["The Maori Wars were caused because the settlers ignored Maori property rights"],
+       theme: "governance"
+   },
+   "Maori Wars" : {
+       timePeriod: [1845, 1872],
+       emphasizedUnit: [1845, 1851],
+       applicableCountries: ["British Territory", "England 1750-Present"],
+       description: ["The British settlers and Maori fought over territory and property rights",
+           "Ended with British victory in 1846",
+           "In 1850s, the Maori didn't want to sell their property, so the government responded with troops to pressure them to sell. This led to a second series of wars until 1872"
+       ],
+       causes: ["British imperialism"],
+       effects: ["Maori lost most of their land",
+           "Increased settler power"
+       ],
+       theme: "governance"
+   },
+   "Great Famine" : {
+       timePeriod: [1845, 1852],
+       emphasizedUnit: [1750, 1900],
+       applicableCountries: ["Ireland", "United States 1776-1920"],
+       description: ["A blight decimated the potatoes in Ireland, causing massive famines and the deaths of about a million people",
+           "An additional 3 million people migrated to the United States, England, Scotland, Canada, and Australia"
+       ],
+       causes: ["Reliance on potatoes"],
+       effects: ["Emigration from Ireland"],
+       theme: "environment"
+   },
+   "Mexican-American War" : {
+       timePeriod: [1846, 1848],
+       emphasizedUnit: [1, 1],
+       applicableCountries: ["Mexico 1885-Present", "United States 1776-1920"],
+       description: ["The United States provoked war with Mexico in order to gain more territory"],
+       causes: ["The United States wanted Mexican territory in order to expand to the West Coast"],
+       effects: ["Mexico lost 55% of its territory",
+           "The United States gained California, Nevada, Utah, Arizona, New Mexico, and parts of Colorado, Wyoming, Oklahoma, and Kansas, as well as expanded Texan territory"
+       ],
+       theme: "governance"
+   },
+   "Communist Manifesto" : {
+       timePeriod: [1848, 1848],
+       emphasizedUnit: [1, 1],
+       applicableCountries: [""],
+       description: ["Karl Marx and Friedrich Engels wrote a manifesto promoting communism.",
+           "They said that capitalism, while producing a lot of money, did nothing about poverty",
+           "They predicted taht everyone would eventually fall into one of two classes, the Proletariat (the working class), and the Bourgeoisie (the upper class), with the middle class eliminated",
+           "They thought the proletariat would eventually overthrow the bourgeoisie and form communism, where all the people owned the means of production, instead of just the wealthy, and class distinctions would not exist anymore",
+           "They were wrong; the middle class ended up growing instead"
+       ],
+       causes: ["Increasing gap between classes due to the Industrial Revolution"],
+       effects: ["Spread of communism"],
+       theme: "culture"
+   },
+   "Taiping Rebellion" : {
+       timePeriod: [1850, 1864],
+       emphasizedUnit: [1750, 1900],
+       applicableCountries: ["Qing Dynasty"],
+       description: ["Hong Xiuquan was angry because he had failed the Civil Service Exam several times.",
+           "He rallied others and started the Taiping Rebellion, rejecting the Qing Dynasty because they had failed to solve the population's problems, including the opium addictions and famines",
+           "The rebellion ultimately failed, as the Qing Dynasty got support from Europeans, who wanted to ensure that the Qing Dynasty was weak but not overthrown"
+       ],
+       causes: ["Qing government's incompetence in solving issues like famines and opium addictions"],
+       effects: ["Showed the weakness of the government"],
+       theme: "governance"
+   },
+   "Opening of Japan" : {
+       timePeriod: [1853, 1853],
+       emphasizedUnit: [1750, 1900],
+       applicableCountries: ["Japan 1853-Present", "United States 1776-1920"],
+       description: ["President Zachary Taylor sent Commodore Matthew Perry to reopen Japan from its isolationist policies",
+           "Commodore Perry first arrived in 1852 with warships and threatened to burn a village to the ground if they didn't let him land. Instead of landing at Nagasaki, the only port open to foreigners, he landed in Edo, the capital",
+           "Perry told the sick shogun that he had a year to decide whether to negotiate trade with the Americans",
+           "Other countries, hearing about Perry's journey, began to request similar things, so Perry instead returned in 6 months with warships known as the Black Ships",
+           "Japan signed the Treaty of Kanegawa, giving in to all of America's demands"
+       ],
+       causes: ["American economic imperialism, Manifest Destiny"],
+       effects: ["End of Japanese isolationsim, beginning of modernization and industrialization"],
+       theme: "governance"
+   },
+   "Xhosa Cattle Killing Movement" : {
+       timePeriod: [1856, 1857],
+       emphasizedUnit: [1750, 1900],
+       applicableCountries: ["British Territory"],
+       description: ["The Xhosa cattle were sick, and Nongqawuse, a teenage Xhosa, prophesied that if the Xhosa killed their cows and burned their crops, the spirits would restore them and drive the settlers away",
+           "The Xhosa followed her orders, but it only led to a famine in which 40,000 people starved.",
+           "The famine was worsened because the colonial government intentionally kept relief agencies away to weaken the Xhosa population and pressure them to work for the British as a means of getting money and food, and thus assimilating"
+       ],
+       causes: ["Cattle sickness",
+           "Xhosa wanted the British settlers gone"
+       ],
+       effects: ["Weakened the Xhosa and forced them to assimilate"],
+       theme: "culture"
+   },
+   "Sepoy Mutiny" : {
+       timePeriod: [1857, 1857],
+       emphasizedUnit: [1750, 1900],
+       applicableCountries: ["British Territory", "England 1750-1900"],
+       description: ["The British had armed forces in India called Sepoys, most of whom were Hindu or Muslim.",
+           "The British began using pig and cow fat to grease rifle cartridges. This angered the sepoys because they had to bite the cartridges and it would go against their religions",
+           "The British imprisoned the sepoys who refused to use these new cartridges, so the sepoys rebelled",
+           "The sepoys were unable to defeat the British due to a lack of unity due to differing languages, the caste system, and a lack of nationalism. Additionally, the Sikhs sided with the British"
+       ],
+       causes: ["The British forced the sepoys to use animal fat catridges"],
+       effects: ["Start of the British Raj",
+           "Dismantling of the British East India Company, as the British government directly ruled India"
+       ],
+       theme: "governance"
+   },
+   "Self-Strengthening Movement" : {
+       timePeriod: [1861, 1895],
+       emphasizedUnit: [1750, 1900],
+       applicableCountries: ["Qing Dynasty"],
+       description: ["The government strengthened the military, trained artisans, and made a diplomatic corps as part of their effort to modernize",
+           "They only added modern ideas to their traditions instead of fully reforming, so it was not as effective",
+           "Conservatives really disliked the modernization"
+       ],
+       causes: ["Pressure to modernize"],
+       effects: ["Some industrial reform, but showed Qing weakness"],
+       theme: "governance"
+   },
+   "French-Mexican War" : {
+       timePeriod: [1863, 1867],
+       emphasizedUnit: [1750, 1900],
+       applicableCountries: ["Mexico 1885-Present"],
+       description: ["In 1857 the Liberals, led by Benito Juaréz, made a new constitution. The conservatives disliked this and started a civil war. Juaréz borrowed heavily from Europe to win the war",
+           "France had been wanting Mexico as a colony and used its debt as an excuse to invade, as well as the fact that the United States wouldn't intervene because they were engaged in their own civil war",
+           "In 1863, the Mexican conservatives, with the support of Napoleon III, overthrew Juaréz. The French put the Austrian noble Archduke Maximillian as the emperor of Mexico, establishing a puppet government",
+           "In 1867, the Mexicans drove the French out of Mexico with the help of the Americans (who had concluded their civil war), exiled Archduke Maximillian, and put Juaréz back in power",
+           "Juaréz, though, went against his own constitudion and remained president for longer than was specified"
+       ],
+       causes: ["French imperialism",
+           "Civil war in Mexico between liberals and conservatives"
+       ],
+       effects: ["France established a short-lived puppet emperor"],
+       theme: "governance"
+   },
+   "US bans slavery" : {
+       timePeriod: [1865, 1865],
+       emphasizedUnit: [1750, 1900],
+       applicableCountries: ["United States 1776-1920"],
+       description: ["The Emancipation Proclamation in 1863 freed slaves in Confederate territories, but the 13th Amendment freed slaves nationally"],
+       causes: ["Civil War and abolitionist movement"],
+       effects: ["Reconstruction"],
+       theme: "social, economic"
+   },
+   "Seven Weeks' War" : {
+       timePeriod: [1866, 1866],
+       emphasizedUnit: [1750, 1900],
+       applicableCountries: ["Germany 1850-1920"],
+       description: ["Otto von Bismarck tricked Austria into declaring war on Prussia",
+           "He then called on other German states to help Prussia, creating a sense of German nationality that allowed him to unite the states as Germany"
+       ],
+       causes: ["Otto von Bismarck needed to unite German states to make Germany"],
+       effects: ["German Unification"],
+       theme: "governance"
+   },
+   "Meiji Restoration" : {
+       timePeriod: [1868, 1868],
+       emphasizedUnit: [1750, 1900],
+       applicableCountries: ["Japan 1853-Present"],
+       description: ["Power was restored from the shogun to the emperor",
+           "The Charter Oath was created, abolishing feudalism, instituting a constitutional monarchy, modernizing the military, establishing a new school system, and promoting industrialization",
+           "Adopted Western technology like railroads and telegraphs",
+           "Japanese culture was still influenced by western culture and adopted western clothing, hairstyles, and dances",
+           "The government funded industrialization by funding factories that were then sold to zaibatsu, wealthy families controlling companies"
+       ],
+       causes: ["Opening of Japan",
+           "Needed to modernize in order to protect their culture from the West",
+       ],
+       effects: ["Rapid modernization",
+           "Japan became one of the leading industrial powers",
+           "End of the Tokugawa Shogunate",
+           "Public schools increased literacy"
+       ],
+       theme: "governance"
+   },
+   "Second Industrial Revolution" : {
+       timePeriod: [1880, 1890],
+       emphasizedUnit: [1750, 1900],
+       applicableCountries: ["United States 1776-1920", "Germany 1850-1920", "Japan 1853-Present", "France 1750-1920", "Russia 1380-1917"],
+       description: ["Electronics were developed, with the first public power station in 1882, street lights and electric street cars in the 1890s",
+           "The telephone was patented by Alexander Graham Bell in 1876",
+           "The internal combustion engine was invented, which was essential for transportation developments like cars and airplanes",
+           "Commercial oil wells were developed",
+           "Synthetic dyes made textile production cheaper",
+           "Fertilizer increased agricultural productivity",
+           "Dynamite was used in mining and tunneling",
+           "The Bessemer Process allowed steel to be mass produced. It was used in building bridges, machines, buildings, ships, and railroads because it was cheaper and stronger than iron",
+           "Many medecines were developed, increasing lifespans"
+       ],
+       causes: ["Spread of the British Industrial Revolution and their technologies"],
+       effects: ["Urbanization",
+           "Growth of the middle class, formation of the working class",
+           "Pollution, resource depletion",
+           "Reform movements, labor unions",
+           "Consumerism, industrial capitalism",
+           "Shifts center of manufacturing from the Middle East and Asia to Europe"
+       ],
+       theme: "economy"
+   },
+   "First Boer War" : {
+       timePeriod: [1880, 1881],
+       emphasizedUnit: [1750, 1900],
+       applicableCountries: ["British Territory", "Dutch Territory"],
+       description: ["The Boers, Dutch settlers, fought the British over territory.",
+           "Led to compromise"
+       ],
+       causes: ["British and Dutch competition over territory"],
+       effects: ["Second Boer Wars"],
+       theme: "governance"
+   },
+   "Berlin Conference" : {
+       timePeriod: [1884, 1885],
+       emphasizedUnit: [1750, 1900],
+       applicableCountries: ["Germany 1850-1920", "France 1750-1920", "Belgium", "England 1750-Present", "Portugal 1750-Present"],
+       description: ["Otto von Bismarck wanted to ensure peace between European nations so they wouldn't be dragged into war, which could threaten the newly-formed Germany",
+           "European powers met up to divide Africa peacefully between them",
+           "Africans had no say, resulting in colonies that cut across tribal lines, often grouping rival tribes in the same colony and separating tribes between colonies",
+           "Allowed King Leopold II to keep posession of the Congo",
+           "Allowed free movement of goods on major rivers"
+       ],
+       causes: ["European imperialism and rivalries"],
+       effects: ["Scramble for Africa",
+           "Colonial borders cut across tribal lines"
+       ],
+       theme: "governance"
+   },
+   "Brazil bans slavery" : {
+       timePeriod: [1888, 1888],
+       emphasizedUnit: [1750, 1900],
+       applicableCountries: ["Brazil"],
+       description: [""],
+       causes: ["The Brazilian population wanted to keep slavery so it continued for much longer than other countries"],
+       effects: ["The castas system still persisted"],
+       theme: "social, economy"
+   },
+   "Ghost Dance movement" : {
+       timePeriod: [1889, 1890],
+       emphasizedUnit: [1750, 1900],
+       applicableCountries: ["United States 1776-1920"],
+       description: ["The Northern Paiute Indians believed that ghost dance rituals would bring the dead back to overthrow the white settlers and restore the land",
+           "The movement started in Nevada, and spread from the Sierra Nevadas to the Missouri River, Northern Texas to Canada",
+           "The US army ended the movement with the Wounded Knee Massacre in 1890, where they killed 150-200 natives"
+       ],
+       causes: ["White settlers caused deforestation and irrigation, which reduced food sources like pine nuts, mussels, and fish"],
+       effects: ["Last organized movement against white settlers"],
+       theme: "culture"
+   },
+   "Philippine Revolution" : {
+       timePeriod: [1896, 1898],
+       emphasizedUnit: [1750, 1900],
+       applicableCountries: ["Spanish Territory"],
+       description: ["Education was limited in the Philippines, so wealthy people would go to Europe for education, where they gained access to Enlightenment ideas. When they returned to the Philippines, they began publishing books about these Enlightenment ideas.",
+           "One of these people, José Rizal, started the Propaganda Movement, which aimed for more autonomy, and was arrested and executed in 1896, sparking a revolutionary movement.",
+           "At the same time, the Spanish were fighting the Spanish-American War (1898-1899). When the Spanish lost, they had to sell the Philippines, Puerto Rico, and Guam to the US. Then the Philippines fought the Philippine-American War for independence in 1899, but lost."
+       ],
+       causes: ["Enlightenment ideas"],
+       effects: ["The Philippines did not gain independence"],
+       theme: "governance"
+   },
+   "Spanish-American War" : {
+       timePeriod: [1898, 1899],
+       emphasizedUnit: [1750, 1900],
+       applicableCountries: ["Spain 1750-Present", "United States 1776-1920"],
+       description: ["Cuba was fighting for independence from Spain, and the US decided to support them",
+           "The United States won the war, giving Cuba nominal independence and buying the Philippines, Puerto Rico, and Guam from Spain"
+       ],
+       causes: ["The United States wanted to liberate Cuba"],
+       effects: ["Cuba was technically independent but still occupied by the US",
+           "The United States gained the Philippines, Puerto Rico, and Guam"
+       ],
+       theme: "governance"
+   },
+   "Hundred Days of Reform" : {
+       timePeriod: [1899, 1899],
+       emphasizedUnit: [1750, 1900],
+       applicableCountries: ["Qing Dynasty"],
+       description: ["The government tried to eliminate corruption in the government by stopping the Civil Service Exam and instituting a constitutional monarchy and parliament",
+           "Established western industrial, commercial, and medical systems",
+           "Started working on railroads and telegraph lines"
+       ],
+       causes: ["Efforts to modernize, continuation of the Self-Strengthening Movement"],
+       effects: ["Reversed by Empress Dowager Cixi"],
+       theme: "governance"
+   },
+   "Second Boer War" : {
+       timePeriod: [1899, 1902],
+       emphasizedUnit: [1750, 1900],
+       applicableCountries: ["British Territory"],
+       description: ["Fighting restarted after the discovery of diamonds and gold",
+           "The British imprisoned the Boers in segregated concentration camps"
+       ],
+       causes: ["Discovery of diamonds and gold in South Africa"],
+       effects: ["Union of South Africa"],
+       theme: "governance"
+   },
+   "Philippine-American War" : {
+       timePeriod: [1899, 1899],
+       emphasizedUnit: [1750, 1900],
+       applicableCountries: ["Philippines", "United States 1776-1900"],
+       description: ["The Philippines tried to fight for their independence from the US after trying to gain independence from Spain",
+           "Used guerrilla warfare"
+       ],
+       causes: ["The Philippines had been trying to gain independence from the Spanish and then they were sold to the US after the Spanish-American War"],
+       effects: ["The Philippines remained under American control"],
+       theme: "governance"
+   },
+   "Template" : {
+       timePeriod: [1, 1],
+       emphasizedUnit: [1750, 1900],
+       applicableCountries: [""],
+       description: [""],
+       causes: [""],
+       effects: [""],
+       theme: ""
+   },
     "World War II": {
         timePeriod: [1938, 1945],
         emphasizedUnit: [1900, 2000],
