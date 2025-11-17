@@ -968,15 +968,193 @@ export const timelineNotes: TimelineNotes = {
        effects: ["The Philippines remained under American control"],
        theme: "governance"
    },
-   "Template" : {
-       timePeriod: [1, 1],
+   "Boxer Rebellion" : {
+       timePeriod: [1900, 1900],
        emphasizedUnit: [1750, 1900],
-       applicableCountries: [""],
-       description: [""],
-       causes: [""],
-       effects: [""],
-       theme: ""
+       applicableCountries: ["Qing Dynasty"],
+       description: ["A group of anti-imperialists known as the Boxers attacked Christians and foreigners to protest foreign influence",
+        "They were supported by the Empress Cixi",
+        "The government called on the Europeans to help them defeat the Boxers",
+        "Forced Empress Cixi to continue with the reforms"
+       ],
+       causes: ["Resentment about foreign influence",
+        "Economic hardship"
+       ],
+       effects: ["Empress Cixi had to support reforms and remove the Civil Service Exam again"],
+       theme: "governance"
    },
+   "Yaa Asantewaa War" : {
+       timePeriod: [1900, 1900],
+       emphasizedUnit: [1750, 1900],
+       applicableCountries: ["Asante Empire", "British Territory", "England 1750-Present"],
+       description: ["The British tried for a fifth time to take control of the Asante Empire by trying to get access to the Golden Stool",
+        "The Asante queen, Yaa Asantewaa, tried to fight the British and prevent them from getting the Golden Stool",
+        "The British won in in 1900 and exiled Yaa Asantewaa"
+       ],
+       causes: ["British Imperialism"],
+       effects: ["British gained control of Asante and turned it into the Gold Coast colony"],
+       theme: "governance"
+   },
+   "State takover of the Congo" : {
+       timePeriod: [1908, 1908],
+       emphasizedUnit: [1900, 2025],
+       applicableCountries: ["Belgium"],
+       description: ["Once the world knew about the humans rights violations taking plance in the Congo under King Leopold II, they called the Human Rights Commission in 1905",
+        "The state government took control of the Congo from Leopold, but continued to pay him the profits from the colony"
+       ],
+       causes: ["Increased knowledge about the human rights violations being committed in the Congo"],
+       effects: ["The state took control of the Congo",
+        "Conditions did not improve much"
+       ],
+       theme: "governance"
+   },
+   "Second Mexican Revolution" : {
+       timePeriod: [1910, 1910],
+       emphasizedUnit: [1900, 2025],
+       applicableCountries: ["Mexico 1885-Present"],
+       description: ["Porfirio Díaz had been dictator since 1876. In 1910, he imprisoned his political opponent, liberal Francisco Madero",
+        "Madero, along with Francisco \"Pancho\" Villa and Emiliano Zapata led a civil war against Díaz",
+        "Díaz stepped down in 1910 and went into exile",
+        "Madero was elected as president through a free election",
+       ],
+       causes: ["Porfirio Díaz's dictatorship and imprisonment of Francisco Madero"],
+       effects: ["Political instability and violence lingered until 1930",
+        "The government was more liberal and created a new constitution, although it was not followed until the 1930s"
+       ],
+       theme: "governance"
+   },
+   "World War I" : {
+       timePeriod: [1914, 1918],
+       emphasizedUnit: [1900, 2025],
+       applicableCountries: [
+        "Serbia",
+        "Ottoman Empire",
+        "Germany 1850-1920",
+        "Russia 1380-1917",
+        "USSR",
+        "United States 1776-1920",
+        "France 1750-1920",
+        "Italy",
+        "England 1750-present",
+        "British Territory",
+        "Japan 1853-Present",
+        "Belgium",
+        "Australia",
+        "New Zealand",
+        "French Territory",
+        "Bulgaria",
+        "Portugal 1750-Present",
+        "China",
+        "Romania",
+        "Greece"
+        ],
+       description: [
+        "In 1914, Gavrilo Princip, a member of a Serbian nationalist group called the Black Hand, assassinated the Austro-Hungarian Archduke Franz Ferdinand in protest of Austria-Hungary's control over Bosnia-Herzegovina",
+        "In response to the assassination, the Austro-Hungarian government ordered the Serbian government to end the anti-Austrian anger but Serbia refused, leading to Austria-Hungary declaring war and starting World War I",
+        "Once war had been declared, countries began to call on their alliances, dragging a bunch of countries into the war",
+        "Germany made the Schlieffen Plan for a two front war - they would attack France and then Russia, since they figured France could mobilize faster than Russia",
+        "New technology was developed, changing the nature of war. Developed trench warfare, where soldiers were in trenches all the time. Developed artillery shells. Trenches were placed just out of range of the other side's artillery shells, and between the trenches was no man's land. Poison gas was developed, and gas masks to go along with it. Machine guns made it easier to gain territory. Submarines were developed, and airplanes were used at first for reconnaissance but were developed for aerial combat. Tanks were developed by the British and gave them an advantage at the end of the war",
+        "There was a stalemate on the Western front for the whole time. There was a lot of fighting but very little movement.",
+        "On the Eastern Front, Germany was beating Russia since they had better weapons. In 1918, after the Russian Civil War, Russia surrendered to Germany, and Germany was able to redirect its energy to the Western Front",
+        "This was the first total war, where nations put everything into winning the war. All the civilians, including colonies, had to help, whether it was through serving in the military, producing war materials in factories, or rationing food and supplies. Women weren't allowed to fight in most countries but they replaced soldiers' jobs and served as nurses, ambulance drivers, and switchboard operators. Countries used a lot of propaganda to influence their population.",
+        "All the European powers except Germany used their colonies for manpower and supplies. Most colonial soldiers volunteered because they thought the colonial powers would give them more autonomy, but there was some coercion",
+        "The US joined the war in 1918 because the Germans were attacking American civilian ships. The entrance of the US turned the tide of the war as they provided a bunch of supplies that the Germans didn't have",
+        "The Allies won the war on November 11 1918",
+        "The Big Four (Woodrow Wilson from the US, David Lloyd George from Britain, Georges Clemenceau from France, and Vittoria Orlando from Italy met up to make the peace treaty. Woodrow Wilson wanted to not severely punish or reward any countries, but Clemenceau disagreed because he wanted France to have protection from Germany. Wilson wanted to create the League of Nations, where all nations would convene to discuss conflicts and avoid tensions, and to allow conquered people under the Central Powers to have self-determination. The League of Nations was created and countries were given the illusion of self-determination while they were really under British or French control through the League of Nations mandates",
+        "Made the 1919 Treaty of Versailles with Germany. Germany had to take blame for the war, pay reparations, give up their colonies, and restrict their military."
+    ],
+       causes: ["Militarism - European powers were competing for military dominance, so they kept large standing armies, developed military technology, and made extensive plans for mobilization (like the Schlieffen Plan)",
+        "Alliances - European countries had many alliances promising to help each other if attacked. Prominent alliances that got called on during the civil war included the Triple Entente (France, Britain, Russia), and the Triple Alliance (Germany, Austria-Hungary, Italy)",
+        "Imperialism - Europeans had taken all the territory there was and began fighting each other for colonies. Germany began to take colonies, and other countries felt threatened",
+        "Nationalism - European countries wanted to prove that they were the best. Additionally, Serbia wanted self-determination",
+       ],
+       effects: ["The League of Nations was created",
+        "Weakened European powers and facilitated the shift of power to the United States",
+        "The strict demands of the Treaty of Versailles facilitated the rise of authoritarian regimes that led to World War II",
+        "Collapse of the Ottoman Empire",
+        "Led to the rise of fascism and communism"
+       ],
+       theme: "governance"
+   },
+   "Armenian Genocide" : {
+       timePeriod: [1915, 1915],
+       emphasizedUnit: [1900, 2025],
+       applicableCountries: ["Armenia", "Ottoman Empire"],
+       description: ["The Ottoman government claimed that the Armenians were supporting the Russian army (the Ottomans' enemy). They systematically deported, massacred, and starved the Armenians, leading to about 600,000 to 1.5 million deaths"],
+       causes: ["End of the Tanzimat reforms, ending the limited religious freedom for the Christian Armenians"],
+       effects: ["Hitler eventually modeled the Holocaust after the Armenian Genocide"],
+       theme: "social"
+   },
+    "Russian Revolution and Civil War" : {
+        timePeriod: [1917, 1921],
+        emphasizedUnit: [1900, 2025],
+        applicableCountries: ["Soviet Union"],
+        description: ["The Bolsheviks, led by Vladimir Lenin, took control of Russia and established a communist government in 1917",
+            "Surrendered to Germany, ceding land to them",
+            "The Bolsheviks fought for control against other communist groups as well as troops the United States sent to try to quell the communist revolution"
+        ],
+        causes: ["Incompetence of the Russian government to deal with the strain put on the country from taking part in World War I"],
+        effects: ["Establishment of the Soviet Union"],
+        theme: "governance"
+    },
+    "Great Depression" : {
+        timePeriod: [1929, 1945],
+        emphasizedUnit: [1900, 2025],
+        applicableCountries: ["United States 1920-Present", "Germany 1920-1945", "England 1750-Present", "France 1920-Present", "British Territory", "French Territory"],
+        description: ["In the US, everyone tried to sell stocks at the same time, so the value of the stocks plummeted. The stock market crashed in 1929 and started the Great Depression",
+            "Germany was especially affected because they had inflation due to printing money to pay reparations after World War I",
+            "International trade decreased because countries made strict tariffs to protect domestic jobs",
+            "Japan recovered quickly by devaluing their currency, making domestic products cheaper than imports",
+            "The US temporarily recovered by using Keynesian Economics through the New Deal, using government deficit spending to stimilate the economy. However, in 1937 Roosevelt felt that the government deficits were too big so he pulled back on the New Deal and the economy got worse again"
+        ],
+        causes: ["US stock market crashed",
+            "Farms produced so much that the value of their products decreased",
+            "France and Britain were having a hard time paying back loans because Germany was having a hard time paying their debts and the Soviet Union refused to pay pre-revolution debts",
+        ],
+        effects: ["Mass unemployment",
+            "Ended after World War II",
+            "Germans were angry about the Depression. This anger and discontentment in conjunction with the weakness of the Weimar Republic, led to the rise of the Nazis"
+        ],
+        theme: "economy"
+    },
+    "Salt March" : {
+        timePeriod: [1930, 1930],
+        emphasizedUnit: [1900, 2025],
+        applicableCountries: ["British Territory"],
+        description: ["Indians were unhappy about the British salt monopoly",
+            "Mohandas (Mahatma) Gandhi led thousands of Indians to the Indian Ocean to pick up grains of salt in protest of the salt monopoly",
+        ],
+        causes: ["Discontent about the unfair economic policies put in place by the British government"],
+        effects: ["Rise of nonviolent resistance to the British government in India"],
+        theme: "governance"
+    },
+    "Ukraine Famine" : {
+        timePeriod: [1932, 1933],
+        emphasizedUnit: [1900, 2025],
+        applicableCountries: ["USSR"],
+        description: ["Ukraine resisted Stalin's forced collectivisation of farms, hiding and destroying crops that the Soviet government tried to collect",
+            "Stalin stopped distributing food to Ukraine, leading to famine",
+            "Somewhere from 5 to 10 million people died"
+        ],
+        causes: ["Anger about the collectivisation of farms and the 5 year plans"],
+        effects: ["Millions of deaths"],
+        theme: ""
+    },
+    "Spanish Civil War" : {
+        timePeriod: [1936, 1939],
+        emphasizedUnit: [1900, 2025],
+        applicableCountries: ["Spain 1750-Present"],
+        description: ["The Popular Front (liberal) was elected to in 1936, but the military and Catholic church opposed them",
+            "The fascist Nationalists fought against the Republicans/Loyalists (supporters of the Popular Front). The Nationalists were led by Francisco Franco and had support from Hitler, Mussolini and Portuguese Antonio Salazar, while the Republicans had the support of the Soviet Union, Britain, France, and the United States",
+            "Foreign involvement in the war led to more violence, as seen in the German and Italian bombing of Guernica, the first time civilians were targeted by aerial bombing",
+            "The Nationalists won the war in 1939 and established Francisco Franco as dictator in 1975"
+        ],
+        causes: ["Election of the liberal Popular Front",
+            "Discontent of conservatives"
+        ],
+        effects: ["Francisco Franco's dictatorship from 1939 to 1975"],
+        theme: "governance"
+    },
     "World War II": {
         timePeriod: [1938, 1945],
         emphasizedUnit: [1900, 2000],
@@ -1002,6 +1180,15 @@ export const timelineNotes: TimelineNotes = {
         causes: [""],
         effects: [""],
         theme: "governance"
+    },
+    "Template" : {
+        timePeriod: [1, 1],
+        emphasizedUnit: [1900, 2025],
+        applicableCountries: [""],
+        description: [""],
+        causes: [""],
+        effects: [""],
+        theme: ""
     },
 }
 // events will go here
