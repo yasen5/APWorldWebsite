@@ -13,19 +13,27 @@ export const timelineNotes: TimelineNotes = {
         timePeriod: [1202, 1204],
         emphasizedUnit: [1200, 1450],
         applicableCountries: ["England 1200-1450", "France 1200-1450", "Holy Roman Empire 1200-1806"],
-        description: ["The Christians paid Venice to take the soldiers to the Middle East, but they didn't pay Venice enough, so the Venetians made the soldiers sack Zara and Constantinople before letting them continue with the crusades"],
+        description: ["The Christians paid Venice to take the soldiers to the Middle East, but they didn't pay Venice enough, so the Venetians made the soldiers sack Zara and Constantinople before letting them continue the Crusade"],
+        causes: ["European Christians wanted to retake the Holy Land in the Middle East",
+            "Venice wanted more economic and political power"
+        ],
+        effects: ["Weakened the Byzantine Empire"],
         theme: "governance"
     },
     "Mongol conquest" : {
         timePeriod: [1207, 1260],
         emphasizedUnit: [1200, 1450],
         applicableCountries: ["Mongol Empire", "Golden Horde", "Il-Khanate", "Yuan Dynasty"],
-        description: ["The Mongols, led by Genghis Khan began expanding their empire. They started by attacking the Jin Empire, then moved West to the Middle East.",
+        description: ["The Mongols, led by Genghis Khan, began expanding their empire. They started by attacking the Jin Empire, then moved westward to the Middle East.",
             "The Mongols sacked Baghdad in 1258, marking the end of the Abbasid Caliphate.",
-            "The Mamluks defeated the Mongols in 1260, ending the Mongol conquest"
+            "The Mamluks defeated the Mongols in 1260, ending the Mongol advance"
         ],
-        causes: [""],
-        effects: ["End of the Abbasid Caliphate"],
+        causes: ["Genghis Khan's ambition for expansion"],
+        effects: ["End of the Abbasid Caliphate",
+            "Pax Mongolica",
+            "Spread of gunpowder weapons and other technology",
+            "Mass population decrease in conquered regions"
+        ],
         theme: "governance"
     },
     "Magna Carta signed": {
@@ -33,8 +41,8 @@ export const timelineNotes: TimelineNotes = {
         emphasizedUnit: [1200, 1450],
         applicableCountries: ["England 1200-1450"],
         description: ["The English nobles forced King John to sign the Magna Carta, giving nobles the right to a jury trial before prison and ensuring the king had to consult them on scutage (where knights pay money instead of military service as tax)"],
-        causes: ["King John had wanted to charge peasants and cities money, which the nobles did not approve of"],
-        effects: [""],
+        causes: ["King John had attempted to charge peasants and cities extra money, which the nobles did not approve of"],
+        effects: ["Limited the monarch's power and established the idea that the king was subject to the law"],
         theme: "governance"
     },
     "Baghdad sacked" : {
@@ -42,28 +50,32 @@ export const timelineNotes: TimelineNotes = {
         emphasizedUnit: [1200, 1450],
         applicableCountries: ["Abbasid Caliphate", "Mongol Empire"],
         description: ["The Mongols sacked Baghdad, slaughtering the people, killing the last Abbasid Caliph, and destroying the House of Wisdom"],
-        causes: [""],
-        effects: ["End of the Abbasid Caliphate"],
+        causes: ["Mongol expansion into the Middle East"],
+        effects: ["End of the Abbasid Caliphate",
+            "Loss of the House of Wisdom"
+        ],
         theme: "governance"
     },
     "English Parliament formed" : {
         timePeriod: [1265, 1265],
         emphasizedUnit: [1200, 1450],
         applicableCountries: ["England 1200-1450"],
-        description: ["The English nobles forced the King to make the Parliament, giving the nobles more power"],
-        causes: [""],
-        effects: ["Increased nobles' rights"],
+        description: ["The English nobles forced the King to form the Parliament, giving the nobles more power"],
+        causes: ["Nobles wanted a council to limit monarch power"],
+        effects: ["Increased nobles' rights",
+            "Early development of representative government in Europe"
+        ],
         theme: "governance"
     },
     "Marco Polo's Book" : {
         timePeriod: [1295, 1295],
         emphasizedUnit: [1200, 1450],
         applicableCountries: ["Yuan Dynasty"],
-        description: ["Marco Polo's book, the Travels of Marco Polo, was published in 1295, detailing Marco Polo's travels along the Silk Roads to the Yuan Dynasty where he visited Kubilai Khan.",
-            "Marco Polo described the Chinese cities, trade, and culture",
+        description: ["Marco Polo's book, the Travels of Marco Polo, was published in 1295, detailing Marco Polo's travels along the Silk Roads to the Yuan Dynasty where he visited Kublai Khan.",
+            "Marco Polo described the Chinese cities, trade, and culture.",
             "Marco Polo's book helped increase interest in the East"
         ],
-        causes: [""],
+        causes: ["Pax Mongolica enabled long-distance travel"],
         effects: ["Increased European interest in Asia"],
         theme: "culture"
     },
@@ -86,22 +98,23 @@ export const timelineNotes: TimelineNotes = {
             "The Mongols improved roads and protected them from robbers, fostering more trade and travel"
         ],
         causes: ["Mongol conquest"],
-        effects: ["Increased trade"],
-        theme: "governance" // econ?
+        effects: ["Increased trade and spread of ideas, technologies, and diseases like the Black Death"],
+        theme: "governance"
     },
     "Mansa Musa's Pilgrimage" : {
         timePeriod: [1312, 1337],
         emphasizedUnit: [1200, 1450],
         applicableCountries: ["Mali Empire"],
-        description: ["Mansa Musa made an extravagant pilgrimage to Mecca, displaying Mali's wealth through bringing slaves and gold",
-            "Built mosques and madrasas (boys' schools about Islam) along the way",
+        description: ["Mansa Musa made an extravagant pilgrimage to Mecca, displaying Mali's wealth by bringing slaves and gold",
+            "Built mosques and madrasas (boys' schools teaching Islam) along the way",
             "The gold Mansa Musa brought caused inflation and crashed economies"
         ],
-        causes: ["Mansa Musa wanted to display Mali's wealth"],
-        effects: ["Crashed economies",
-            "Brought Mali fame"
+        causes: ["Mansa Musa wanted to display Mali's wealth",
+            "Islamic tradition of pilgrimage to show their faith"
         ],
-        theme: "culture" //?
+        effects: ["Crashed economies",
+            "Brought Mali fame"],
+        theme: "culture"
     },
     "Hundred Years' War" : {
         timePeriod: [1337, 1453],
@@ -113,7 +126,9 @@ export const timelineNotes: TimelineNotes = {
             "Saw increased usage of gunpowder as it spread from the East"
         ],
         causes: ["England wanted French territory"],
-        effects: ["Increased nationalism over regionalism in France and England"],
+        effects: ["Increased nationalism over regionalism in France and England",
+            "Marked the decline of medieval feudal armies and the rise of centralized states"
+        ],
         theme: "governance"
     },
     "Black Death" : {
@@ -121,10 +136,11 @@ export const timelineNotes: TimelineNotes = {
         emphasizedUnit: [1200, 1450],
         applicableCountries: ["England 1200-1450", "France 1200-1450", "Holy Roman Empire 1200-1806", "Venice"],
         description: ["The Black Death spread from China along the Silk Roads to the Middle East and Europe",
-            "Almost 1/3 of the European population died"
+            "Almost 1/3 of the European population died",
+            "Weakened the authority of the Church due to its inability to stop the plague"
         ],
         causes: ["The Silk Roads and Pax Mongolica allowed the plague to spread more easily"],
-        effects: ["Caused the end of feudalism and serfdom. Since there were so few workers after so many deaths, the serfs were able to demand more rights.",
+        effects: ["Caused the end of feudalism and serfdom. Since there were so few workers after so many deaths, the serfs were able to demand more rights, such as increased wages.",
             "Led to urbanization as peasants migrated to cities for work"
         ],
         theme: "environment"
@@ -139,8 +155,12 @@ export const timelineNotes: TimelineNotes = {
             "Universities began to include humanities",
             "Vernacular (local languages) were used more as opposed to Latin, enabling more people to learn to read."
         ],
-        causes: ["Increased contact with the East reexposed the Europeans to older ideas"],
-        effects: ["Increased literacy rates"],
+        causes: ["Increased contact with the East reexposed the Europeans to older ideas",
+            "Wealth of from trade funded art"
+        ],
+        effects: ["Increased literacy rates",
+            "Sparked the Scientific Revolution"
+        ],
         theme: "culture"
     },
     "Zheng He voyages" : {
@@ -153,7 +173,9 @@ export const timelineNotes: TimelineNotes = {
             "Stopped because the voyages were too expensive and the emperors after Yongle did not support them because they believed China was self-sufficient."
         ],
         causes: ["Yongle wanted to show China's power"],
-        effects: ["Exposed China to different religions"],
+        effects: ["Exposed China to different religions",
+            "Temporarily expanded the tribute system"
+        ],
         theme: "governance"
     },
     "Gutenberg Printing Press invented" : {
@@ -161,8 +183,8 @@ export const timelineNotes: TimelineNotes = {
         emphasizedUnit: [1200, 1450],
         applicableCountries: ["Venice", "France 1200-1450", "Holy Roman Empire 1200-1806", "Spain 1492-1750", "England 1200-1450"],
         description: ["Johannes Gutenberg invented the movable type printing press. This allowed books to be printed easier and cheaper, increasing availability and decreasing costs of books, leading to increased literacy rates"],
-        causes: [""],
-        effects: ["Increased literacy rates"],
+        causes: ["Demand for books"],
+        effects: ["Increased literacy"],
         theme: "technology"
     },
     "Sikhism founded" : {
@@ -172,7 +194,7 @@ export const timelineNotes: TimelineNotes = {
         description: ["Sikhism is a monotheistic religion influenced by Hindu and Islam.",
             "Sikhism was initially tolerated until Aurangzeb killed the 9th guru"
         ],
-        causes: [""],
+        causes: ["Religious blending"],
         effects: [""],
         theme: "culture"
     },
@@ -186,31 +208,35 @@ export const timelineNotes: TimelineNotes = {
         causes: ["Desire to find a new route to the Indian Ocean",
             "State sponsorship for explorers"
         ],
-        effects: ["Spur further exploration to the Indian Ocean"],
+        effects: ["Spurred further exploration to the Indian Ocean"],
         theme: "governance"
     },
     "End of the Inquisition" : {
         timePeriod: [1492, 1492],
         emphasizedUnit: [1200, 1450],
         applicableCountries: ["Spain 1492-1750"],
-        description: ["The Spanish Catholics drove out the remaining Muslims and Jews on the Iberian Peninsula. Portugal had already driven them out in 1249"],
-        causes: [""],
-        effects: [""],
+        description: ["The Spanish Catholics drove out the remaining Muslims and Jews on the Iberian Peninsula. Portugal had already driven them out in 1249",
+            "Srengthenedd religious unity under Catholicism"
+        ],
+        causes: ["Desire for centralized religious authority"],
+        effects: ["Muslims and Jews were driven out",
+            "The Ottoman Empire took in Jews who had been expelled from the Iberian Peninsula"
+        ],
         theme: "social"
     },
     "Christopher Columbus lands in America" : {
         timePeriod: [1492, 1492],
         emphasizedUnit: [1450, 1750],
         applicableCountries: ["Spain 1492-1750"],
-        description: ["Christopher Columbus had tried in 1485 and 1488 to get support from the Portuguese monarchs to sail West, but failed. He finally got support from Spanish Queen Isabella and King Ferdinand in 1492",
-            "Used knowledge of winds to help them on their journey",
+        description: ["Christopher Columbus had tried in 1485 and 1488 to get support from the Portuguese monarchs to sail west, but failed. He finally got support from Queen Isabella and King Ferdinand of Spain in 1492",
+            "Used knowledge of Atlantic wind patterns to help him on his journey",
             "Landed on the island of Hispaniola, which was later called Saint Domingue and is now Haiti and the Dominican Republic",
-            "Thought he had landed in the Indian Ocean"
+            "Thought he had landed in the Indies"
         ],
         causes: ["Europe was looking for a different path to the Indian Ocean because Venice and the Ottoman Empire had monopolized trade going to the Indian Ocean"],
         effects: ["Interest in the Americas rose and people began colonizing it",
-            "Columbian Exchange - the exchange of plants, animals, and diseases between the Old and New World. Led to massive population decrease among the Native Americans due to disease and massive population increase in the New World due to new foods",
-            "Started the precedent of exploiting the natives"
+            "Columbian Exchange - the exchange of plants, animals, and diseases between the Old and New World. Led to massive population decline among the Native Americans due to disease and massive population increase in the Eastern Hemisphere due to new foods",
+            "Started the precedent of exploiting the indigenous populations"
         ],
         theme: "Environment, Governance, Economy"
     },
@@ -220,19 +246,19 @@ export const timelineNotes: TimelineNotes = {
         applicableCountries: ["Spain 1492-1750", "Portugal 1450-1750"],
         description: ["Spain and Portugal split the world with the Line of Demarcation. Any new territory discovered west of the line, including most of the Americas and the Philippines, was reserved for Spain, while any territory east of the line, including Africa and the Indian Ocean, was reserved for Portugal."],
         causes: ["Desire for territory in the New World and Indian Ocean for resources and trade"],
-        effects: ["Established the precedent of European powers claiming territory without the inhabitants' input"],
+        effects: ["Established the precedent of European powers claiming territory without the considering the inhabitants' sovereignty"],
         theme: "governance"
     },
     "Vasco Da Gama sails to India" : {
         timePeriod: [1498, 1498],
         emphasizedUnit: [1450, 1750],
         applicableCountries: ["Portugal 1450-1750", "Delhi Sultanate"],
-        description: ["Vasco Da Gama sailed to India and tried to establish trade with the Indians, but they rejected him",
-            "He returned with weapons to force them to trade with him"
+        description: ["Vasco Da Gama sailed to India and tried to establish trade with the Indian merchants, but they rejected him",
+            "He returned with weapons to force trade relations"
         ],
-        causes: [""],
-        effects: ["Established ports for trade in the Indian Ocean",
-            "Began to take control in India"
+        causes: ["Desire to break Venetian-Ottoman monopoly of Indian Ocean trade"],
+        effects: ["Established Portuguese ports for trade in the Indian Ocean",
+            "Began Portuguese control in India"
         ],
         theme: "governance"
     },
@@ -240,9 +266,9 @@ export const timelineNotes: TimelineNotes = {
         timePeriod: [1511, 1511],
         emphasizedUnit: [1450, 1750],
         applicableCountries: ["Portugal 1450-1750", "Majapahit Empire"],
-        description: ["The Portuguese took control of the Malacca, effectively ending the Majapahit Empire"],
-        causes: ["The Portuguese wanted to expand their power and influence in the Indian Ocean to force trade"],
-        effects: [""],
+        description: ["The Portuguese took control of Malacca, effectively ending the Majapahit Empire"],
+        causes: ["The Portuguese wanted to expand their power and influence in the Indian Ocean to control maritime trade routes"],
+        effects: ["Gave Portugal control of one of the most important choke points in Indian Ocean commerce"],
         theme: "governance"
     },
     "Battle of Chaldiran" : {
@@ -250,7 +276,9 @@ export const timelineNotes: TimelineNotes = {
         emphasizedUnit: [1450, 1750],
         applicableCountries: ["Ottoman Empire", "Safavid Empire"],
         description: ["The Ottomans defeated the Safavids, stopping their expansion and establishing the border between the two empires."],
-        causes: [""],
+        causes: ["Religious tension between the Sunni Ottomans and Shi'a Safavids",
+            "Both empires were trying to expand"
+        ],
         effects: ["Established the border between the Ottoman and Safavid Empire",
             "Stopped Safavid expansion"
         ],
@@ -260,15 +288,16 @@ export const timelineNotes: TimelineNotes = {
         timePeriod: [1517, 1517],
         emphasizedUnit: [1450, 1750],
         applicableCountries: ["Holy Roman Empire 1200-1806"],
-        description: ["Martin Luther wrote the 95 Theses detailing the Church's violations of biblical teachings. His complaints included indulgences, where people could pay to redeem themselves from sin, and simony, where chuch offices were sold to the younger sons of nobles. These were both practices that were put into place for the Church to gain more money. Additionally, Luther wanted the bible in the vernacular instead of only in Latin so it would be more accessible, and interpretations wouldn't be controlled purely by the church",
+        description: ["Martin Luther wrote the 95 Theses detailing the Church's violations of biblical teachings. His complaints included indulgences, where people could pay to redeem themselves from sin, and simony, where chuch offices were sold to the younger sons of nobles. These were both practices intended to gain more money for the Church.",
+            "Additionally, Luther wanted the Bible in the vernacular instead of only in Latin so it would be more accessible, and interpretations wouldn't be controlled purely by the church",
             "Lutheranism promoted literacy and gave women more religious equality by fostering the idea that women didn't need men as intermediaries",
             "Martin Luther was excommunicated in 1521",
-            "Spread quickly because of the use of the printing press",
+            "Spread quickly because of the printing press",
             "Luther aimed to convert political leaders by saying that their money was going to frivolous things such as St. Peter's Basilica, and taking advantage of the fact that political leaders didn't like sharing their power with the Pope",
-            "Lutheranism became super popular and launched social revolutions"
+            "Lutheranism became popular and launched social revolutions"
         ],
-        causes: ["The Catholic church was corrupt"],
-        effects: ["Started the Protestant movement"],
+        causes: ["The Catholic Church was corrupt"],
+        effects: ["Started the Protestant Reformation"],
         theme: "culture"
     },
     "Battle of Panipat" : {
@@ -276,7 +305,7 @@ export const timelineNotes: TimelineNotes = {
         emphasizedUnit: [1450, 1750],
         applicableCountries: ["Mughal Empire", "Delhi Sultanate"],
         description: ["The Mughal Empire fought the declining Delhi Sultanate. The Mughals were vastly outnumbered, and the Delhi Sultanate had war elephants, but the Mughals won because they had gunpowder weapons"],
-        causes: [""],
+        causes: ["Babur wanted to expand into North India"],
         effects: ["Fall of the Delhi Sultanate, rise of the Mughal Empire"],
         theme: "governance"
     },
@@ -287,7 +316,7 @@ export const timelineNotes: TimelineNotes = {
         description: ["John Calvin founded Calvinism, and wrote a book on it in 1536",
             "Calvinists believed in predestination, where God had already predetermined who would go to heaven. They thought that being predestined to go to heaven, or being one of the Elect, was shown through hard work and wealth, which led to a very strict lifestyle in order to prove to others that they were part of the Elect"],
         causes: ["Lutheranism opened the doors for the Protestant Reformation"],
-        effects: [""],
+        effects: ["Led to the spread of Protestantism"],
         theme: "culture"
     },
     "Scientific Revolution" : {
@@ -309,7 +338,7 @@ export const timelineNotes: TimelineNotes = {
        description: ["Morocco sent its army to the Songhai Empire try to take control of its gold fields.",
            "A lot of the Moroccan army died while crossing the Sahara",
            "The Songhai greatly outnumbered the Moroccans and had the advantage of war cattle",
-           "However, the Songhai had gunpowder weapons which were much more effective and deadly. The weapons scared the cattle and turned them against the Songhai. This allowed the Moroccans to win",
+           "However, the Moroccans had gunpowder weapons which were much more effective and deadly. The weapons scared the cattle and turned them against the Songhai. This allowed the Moroccans to win",
            "The Moroccans required the Songhai to pay an annual tribute of slaves and gold"],
         causes: ["Morocco wanted access to Songhai gold fields"],
         effects: ["Decline of the Songhai Kingdom",
@@ -322,10 +351,15 @@ export const timelineNotes: TimelineNotes = {
         emphasizedUnit: [1450, 1750],
         applicableCountries: ["France 1450-1750"],
         description: ["King Henry IV of France (also known as Henry of Navarre) signed the Edict of Nantes, which gave Huguenots (French Protestants) more rights and religious tolerance",
+            "This was one of the first major state policies granting limited religious freedom in Europe",
             "The Edict was revoked by Louis XIV in 1685"
         ],
-        causes: ["Rise of Lutheranism"],
-        effects: [""],
+        causes: ["Rise of Lutheranism",
+            "French wars of religion between Catholics nad Huguenots"
+        ],
+        effects: ["Temporary religious stability",
+            "Revocation in 1685 sparked Huguenot migration to Enlgand and the Netherlands"
+        ],
         theme: "governance"
     },
     "Enlightenment" : {
@@ -343,13 +377,16 @@ export const timelineNotes: TimelineNotes = {
             "Baron Montesquieu believed supported monarchies, but not absolute monarchies. He wanted to check the monarch's power, so he developed the idea of separating the executive, legislative, and judicial powers, as well as the idea of checks and balances. His ideas influenced the American and French constitutions",
             "Deism, the belief that God set natural laws in motion but does not interfere after, became prevalent among Enlightenment thinkers",
             "Atheism, the rejection of religious beliefs, became more common"],
-        causes: ["Scientific Revolution"],
+        causes: ["Scientific Revolution",
+            "The expansion of the printing press and rising literacy"
+        ],
         effects: ["Revolutions like the American, French, Haitian, Philippine, and Latin American Revolutions",
-            "Challenged church authority"
+            "Challenged monarchies and church authority",
+            "Inspired constitutions"
         ],
         theme: "culture"
     },
-    "Japan isolationist" : {
+    "Japan becomes isolationist" : {
         timePeriod: [1614, 1853],
         emphasizedUnit: [1750, 1900],
         applicableCountries: ["Japan 1200-1853"],
@@ -359,7 +396,7 @@ export const timelineNotes: TimelineNotes = {
         ],
         causes: ["Europeans arriving in Japan and spreading Christianity"],
         effects: ["Helped Japan retain its culture and internal stability",
-            "Lack of modernization until Japan reopened"
+            "Lack of modernization until Japan reopened. After Japan's reopening, it rapidly industrialized"
         ],
         theme: "governance"
     },
@@ -373,10 +410,14 @@ export const timelineNotes: TimelineNotes = {
             "Netherlands 1450-1750"
         ],
         description: ["A war between Catholics and Protestants. It originally started in the Holy Roman Empire, and then it spread",
-            "It resulted in the Peace of Westphalia, where each area of the Holy Roman Empire could choose Roman Catholicism, Lutheranism, or Calvinism"
+            "It resulted in the Peace of Westphalia, where each area of the Holy Roman Empire could choose Roman Catholicism, Lutheranism, or Calvinism",
+            "Weakened the Holy Roman Empire"
         ],
         causes: ["The Protestant Reformation"],
-        effects: ["The Peace of Westphalia"],
+        effects: ["The Peace of Westphalia",
+            "Strenghtened state sovereignty",
+            "Reduced papal political influence"
+        ],
         theme: "governance"
     },
     "Gloucester County Rebellion" : {
@@ -388,7 +429,7 @@ export const timelineNotes: TimelineNotes = {
             "They were betrayed by a servant and were killed before their plans went through"
         ],
         causes: ["Mistreatment of slaves"],
-        effects: [""],
+        effects: ["Inreased fear among slaveowners and harsher control measures"],
         theme: "governance"
     },
     "Bacon's Rebellion" : {
@@ -402,7 +443,7 @@ export const timelineNotes: TimelineNotes = {
         causes: ["The Virginia colonial government was corrupt",
             "Indentured servants were unhappy because there wasn't enough room for them to get land once they were freed"
         ],
-        effects: ["Decline of indentured servitude"],
+        effects: ["Decline of indentured servitude and shift to racialized chattel slavery"],
         theme: "governance"
     },
     "Pueblo Revolt" : {
@@ -425,9 +466,12 @@ export const timelineNotes: TimelineNotes = {
         applicableCountries: ["England 1450-1750"],
         description: ["This checked the British monarch's power, ending divine right",
             "Increased individual liberties, such as the right to be tried before conviction",
-            "Gave British Parliament a say in taxation and military"
+            "Gave British Parliament a say in taxation and military",
+            "Established a constitutional monarchy"
         ],
-        causes: ["The British monarch having too much power"],
+        causes: ["The British monarch having too much power",
+            "The Glorious Revolution, where Queen Mary and King William of Orange took control of the throne"
+        ],
         effects: ["Limited monarch's power",
             "Increased individuals' and parliament's power"
         ],
@@ -440,7 +484,7 @@ export const timelineNotes: TimelineNotes = {
         description: ["Dutch tulips became extremely popular in the Ottoman Empire. People would spend large amounts of money to buy them",
             "Elites would make tulip gardens and throw extravagant parties to show them off. Tortoises with candles on their backs were sometimes used as a lavish way to light the gardens"
         ],
-        causes: [""],
+        causes: ["Increased cultural exchange with Europe"],
         effects: [""],
         theme: "culture"
     },
@@ -452,7 +496,9 @@ export const timelineNotes: TimelineNotes = {
             "Britain won, driving France out of India and North America"
         ],
         causes: ["Competition over territory in India and North America"],
-        effects: ["French were driven out of India and North America"],
+        effects: ["French were driven out of India and North America",
+            "Srengthened British global power"
+        ],
         theme: "governance"
     },
     "Industrial Revolution" : {
@@ -461,7 +507,7 @@ export const timelineNotes: TimelineNotes = {
        applicableCountries: ["England 1750-Present"],
        description: ["England began industrializing, focusing on the textile industry. They shifted from the cottage industry, where families bought raw cotton and made cloth at home, to mass producing cloth in factories",
            "Essential inventions included the spinning jenny, allowing more than one thread to be spun at a time, the power loom, which used steam power to weave fabric more efficiently, and the water frame, allowing water power to power spinning wheels",
-           "Other inventions included the steam engine in 1865, which allowed for steam locomotives, steam boats, and factories farther from water, and the Bessemer Process in 1856, which allowed steel to be produced cheaply"
+           "Other inventions included the steam engine in 1765, which allowed for steam locomotives, steam boats, and factories farther from water, and the Bessemer Process in 1856, which allowed steel to be produced cheaply"
        ],
        causes: ["Proximity to waterways, geographical distribution of coal and iron, urbanization, agricultural productivity, access to foreign resources, accumulation of capital, legal protection of private property, political stability"],
        effects: ["Urbanization",
@@ -477,7 +523,7 @@ export const timelineNotes: TimelineNotes = {
        emphasizedUnit: [1750, 1900],
        applicableCountries: ["United States 1776-1920"],
        description: ["The "],
-       causes: ["Englightenment ideas like consent of the governed, natural rights, and laissez-faire economics",
+       causes: ["Englightenment ideas like consent of the governed, natural rights, and republicanism",
            "Increased taxation after the Seven Years' War"
        ],
        effects: ["American independence",
@@ -491,26 +537,31 @@ export const timelineNotes: TimelineNotes = {
        emphasizedUnit: [1750, 1900],
        applicableCountries: ["France 1750-1920"],
        description: ["The commoners stormed the Bastille on July 14, 1789. In October, they stormed Versailles and made the king make the monarchy constitutional (they didn't want to kill him, they only wanted him to make things better)",
-           "Became the First French Republic (constitutional monarchy) in 1792. Monarch power was limited, and the National Assembly had a lot of power. They stopped feudalism and made the Declaration of the Rights of Man and Citizen. The King was unhappy with this new government and tried to veto a lot of things",
-           "Eventually, the Jacobins, extreme revolutionaries, were elected. They wanted to end the monarchy, the church's power, and slavery, and killed anyone (including the king and queen) who were “against” the revolution (could have been for any reason) in the 1793 Reign of Terror.",
+           "Became the First French Republic (with a constitutional monarchy) in 1792. Monarch power was limited, and the National Assembly had a lot of power. They stopped feudalism and made the Declaration of the Rights of Man and Citizen. The King was unhappy with this new government and tried to veto a lot of things",
+           "Eventually, the Jacobins, extreme revolutionaries, were elected. They wanted to end the monarchy, the church's power, and slavery, and killed anyone (including the king and queen) who were “against” the revolution (could have been for any reason) in the 1793-1794 Reign of Terror.",
            "Ended when Napoleon took over in a coup d'état"
        ],
        causes: ["Unfair representation of the majority of the population in the Estates System",
-           "Lost money from wars like the American Revolution and the Seven Years' War"
+           "Lost money from wars like the American Revolution and the Seven Years' War",
+           "Food shortages"
        ],
-       effects: ["Inspired the Haitian Revolution"],
+       effects: ["Inspired the Haitian Revolution",
+            "Spread nationalism and revolutionary ideas",
+            "Led othe rise of Napoleon"
+       ],
        theme: "governance"
    },
    "Haitian Revolution" : {
        timePeriod: [1791, 1804],
        emphasizedUnit: [1750, 1900],
        applicableCountries: ["Saint Domingue/Haiti"],
-       description: ["The revolution started in 1792 and continued to gain more people. Toussaint L'Ouverture, who became the leader of the revolution, joined the movement in 1794. They allied with the Spanish and then drove out the Spanish and British",
+       description: ["The revolution started in 1791 and continued to gain more people. Toussaint L'Ouverture, who became the leader of the revolution, joined the movement in 1794. They allied with the Spanish and then drove out the Spanish and British",
            "In 1801, Toussaint L'Ouverture established the Haitian government and constitution, creating equal rights and citizenship, and abolishing slavery and racism. However, he made himself the governor for life and gave himself all the power",
            "In 1804, Napoleon reinstated slavery and imprisoned Toussaint L'Ouverture. Haiti fought for independence because they didn't want slavery and gained full independence that year."
        ],
        causes: ["French and American revolutions",
-           "Wanted more rights"
+           "Desire for more rights",
+           "Plantation system and racial hierarchy"
        ],
        effects: ["Haiti gained independence",
            "Other countries refused to acknowledge Haiti's independence",
@@ -534,17 +585,19 @@ export const timelineNotes: TimelineNotes = {
        emphasizedUnit: [1750, 1900],
        applicableCountries: ["England 1750-1900", "British Territory"],
        description: ["Britain banned slave trade in their territories. They also began to intercept ships carrying slaves and taking them to Sierra Leone, where the slaves would be freed"],
-       causes: [""],
-       effects: ["Decrease slave trade"],
+       causes: ["Abolitionist pressure"],
+       effects: ["Decrease in slave trade",
+            "British naval patrols disrupted Atlantic slave networks"
+       ],
        theme: "social, economy"
    },
    "United States bans slave trade" : {
        timePeriod: [1808, 1808],
-       emphasizedUnit: [1750, 11900],
+       emphasizedUnit: [1750, 1900],
        applicableCountries: ["United States 1776-1920"],
        description: ["The United States banned international slave trade. However, domestic slave trade and slavery continued until 1865"],
-       causes: [""],
-       effects: ["Decrease slave trade",
+       causes: ["Abolitionist pressure"],
+       effects: ["Decrease in slave trade",
            "Did not stop slavery or domestic slave trade within the United States"
        ],
        theme: "social, economy"
@@ -553,22 +606,32 @@ export const timelineNotes: TimelineNotes = {
        timePeriod: [1810, 1821],
        emphasizedUnit: [1750, 1900],
        applicableCountries: ["Mexico 1885-Present", "Spain 1750-Present"],
-       description: ["Delcared independence in 1810",
-           "The revolution was led by Padre Miguel Hidalgo, who was very liberal. He was killed very quickly, then Iturbide led the revolution",
+       description: ["Declared independence in 1810",
+           "The revolution was led by Padre Miguel Hidalgo, who was a very liberal priest. He was killed very quickly, then Agustín de Iturbide led the revolution",
            "The creoles originally sided with the commoners against the peninsulares, but when Hidalgo's followers attacked creoles along with peninsulares, the creoles switched sides to side with the peninsulares",
-           "The creoles switched sides again when the Spanish government stopped supporting the castas system. The creoles wanted to keep the castas system so they could remain at the top of the hierarchy"
+           "The creoles switched sides again when the Spanish government stopped supporting the castas system. The creoles wanted to keep the castas system so they could remain at the top of the hierarchy",
        ],
-       causes: ["Creoles wanted more rights and independence from Napoleon"],
-       effects: ["Mexico gained independence as a republic"],
+       causes: ["Creoles wanted more rights and independence from Napoleon",
+            "Inspiration from Enlightenment ideals and other revolutions"
+       ],
+       effects: ["Mexico gained independence in 1821 as a republic",
+            "Period of political instability followed"
+       ],
        theme: "governance"
    },
    "European suppression of democratic reforms" : {
        timePeriod: [1815, 1848],
        emphasizedUnit: [1750, 1900],
        applicableCountries: ["France 1750-1920", "England 1750-Present", "Spain 1750-Present"],
-       description: ["European monarchies suppressed the ideas of democracy in order to retain power and prevent revolutions"],
-       causes: ["Revolutions like the French Revolution that depowered the monarchies"],
-       effects: [""],
+       description: ["European monarchies suppressed the ideas of democracy in order to retain power and prevent revolutions",
+        "Led by the Congress of Vienna (1815), which aimed to restore monarchies and maintain a conservative balance of power"
+       ],
+       causes: ["Revolutions like the French Revolution that depowered the monarchies",
+        "Fear of democratization and liberalism"
+       ],
+       effects: ["A wave of democracy rose in 1949 due to frustration with conservtive suppression",
+        "Helped maintain monarchies in many European countries"
+       ],
        theme: "governance"
    },
    "Brazilian Revolution" : {
@@ -577,13 +640,15 @@ export const timelineNotes: TimelineNotes = {
        applicableCountries: ["Brazil", "Portugal 1750-Present"],
        description: ["The Portuguese monarchy fled to Brazil when Napoleon was conquering the Iberian Peninsula",
            "The creoles liked having their own government in Brazil instead of a colonial government, so Prince Pedro stayed behind in Brazil when the rest of the royal family returned to Portugal",
-           "Prince Pedro declared Brazil an independent monarchy and became the king of Brazil in 1822"
+           "Prince Pedro declared Brazil an independent monarchy and became the emperor of Brazil in 1822"
        ],
        causes: ["Enlightenment ideals",
-           "Napoleon invaded Portugal"
+           "Napoleon invaded Portugal",
+           "Creole elites wanted autonomy from Portugal without disrupting the social hierarchy"
        ],
        effects: ["Brazil gained independence",
-           "Continuation of slavery until 1888"
+           "Continuation of slavery until 1888",
+           "Maintained political stability by remaning a monarchy instead of a republic"
        ],
        theme: "governance"
    },
@@ -606,11 +671,13 @@ export const timelineNotes: TimelineNotes = {
        timePeriod: [1827, 1827],
        emphasizedUnit: [1750, 1900],
        applicableCountries: ["Greece", "Ottoman Empire"],
-       description: ["The Greek declared independence from the Ottoman Empire with aid from the British, French, and Russians who wanted to weaken the Ottoman Empire"],
-       causes: ["Greek nationalism"],
-       effects: ["Weaken Ottoman Empire",
+       description: ["The Greeks declared independence from the Ottoman Empire with aid from the British, French, and Russians who wanted to weaken the Ottoman Empire"],
+       causes: ["Greek nationalism",
+            "Weakening Ottoman control over the region"
+       ],
+       effects: ["Weakened the Ottoman Empire and marked the beginnning of its ddecline",
            "Other regions of the Ottoman Empire started wanting independence",
-           "The Ottoman Empire made the Tanzimat reforms to suppress regional nationalism and promote Ottoman nationalism"
+           "The Ottoman Empire made the Tanzimat reforms to suppress regional nationalism and promote Ottoman nationalism",
        ],
        theme: "governance"
    },
@@ -619,7 +686,7 @@ export const timelineNotes: TimelineNotes = {
        emphasizedUnit: [1750, 1900],
        applicableCountries: ["England 1750-Present", "British Territory"],
        description: ["The British banned slavery, ending it in all of their colonies. However, exploitative measures were still used."],
-       causes: [""],
+       causes: ["Abolitionist pressure"],
        effects: ["Increased efforts to stop slavery in other countries by stopping slave ships and freeing the slaves"],
        theme: "social, economy"
    },
@@ -632,7 +699,8 @@ export const timelineNotes: TimelineNotes = {
            "Made schools secular so the government, instead of religious officials, could control it",
            "Codified Ottoman laws, made penal code, and commercial code, which made foreign trade more attractive",
            "Had more, but not complete, religious equality",
-           "Stopped by Sultan Abdulhamid in 1876. He was scared that the reforms would lead to rebellion, so stopped the reforms. This, however, made people more mad and led to the Armenian Genocide"
+           "Faced resistance from conservative elites",
+           "Sultan Abdulhamid ended reforms in 1876. He was scared that the reforms would lead to rebellion, so stopped the reforms. This, however, made people more mad and led to the Armenian Genocide"
        ],
        causes: ["Increased regional nationalism, which could lead to independence"],
        effects: ["Increased religious tolerance",
@@ -645,7 +713,7 @@ export const timelineNotes: TimelineNotes = {
        timePeriod: [1839, 1860],
        emphasizedUnit: [1750, 1900],
        applicableCountries: ["Qing Dynasty", "England 1750-Present"],
-       description: ["England wanted more Chinese goods but had nothing the Chinese wanted, so England began importing opium so the population would get addicted and China would need to trade their goods in exchange for more opium",
+       description: ["England wanted more Chinese goods but had nothing the Chinese wanted, so Britain illegally imported opium to force trade dependency",
            "China asked England to stop selling them opium, but the British refused, so China declared war",
            "The First Opium War lasted from 1839 until the Treaty of Nanking in 1842. This gave the British an advantage, forcing free trade, giving the British Hong Kong, access to 4 more ports, extraterritorial rights (so British merchants didn't have to obey Chinese laws, allowing them to continue selling opium even though the government banned it), and first nation trading rights status",
            "In 1856, The Chinese searched a British ship, lowered its flag, and arrested its sailors, starting the Second Opium War",
@@ -672,7 +740,9 @@ export const timelineNotes: TimelineNotes = {
            "Ended with British victory in 1846",
            "In 1850s, the Maori didn't want to sell their property, so the government responded with troops to pressure them to sell. This led to a second series of wars until 1872"
        ],
-       causes: ["British imperialism"],
+       causes: ["British imperialism",
+        "Disregard for Maori land rights"
+       ],
        effects: ["Maori lost most of their land",
            "Increased settler power"
        ],
@@ -694,9 +764,12 @@ export const timelineNotes: TimelineNotes = {
        emphasizedUnit: [1, 1],
        applicableCountries: ["Mexico 1885-Present", "United States 1776-1920"],
        description: ["The United States provoked war with Mexico in order to gain more territory"],
-       causes: ["The United States wanted Mexican territory in order to expand to the West Coast"],
+       causes: ["The United States wanted Mexican territory in order to expand to the West Coast",
+        "Disputes over the border between Texas and Mexico"
+       ],
        effects: ["Mexico lost 55% of its territory",
-           "The United States gained California, Nevada, Utah, Arizona, New Mexico, and parts of Colorado, Wyoming, Oklahoma, and Kansas, as well as expanded Texan territory"
+           "The United States gained California, Nevada, Utah, Arizona, New Mexico, and parts of Colorado, Wyoming, Oklahoma, and Kansas, as well as expanded Texan territory",
+           "Intesified debates over slavery in newly accquired territory"
        ],
        theme: "governance"
    },
@@ -706,12 +779,14 @@ export const timelineNotes: TimelineNotes = {
        applicableCountries: [""],
        description: ["Karl Marx and Friedrich Engels wrote a manifesto promoting communism.",
            "They said that capitalism, while producing a lot of money, did nothing about poverty",
-           "They predicted taht everyone would eventually fall into one of two classes, the Proletariat (the working class), and the Bourgeoisie (the upper class), with the middle class eliminated",
+           "They predicted that everyone would eventually fall into one of two classes, the Proletariat (the working class), and the Bourgeoisie (the upper class), with the middle class eliminated",
            "They thought the proletariat would eventually overthrow the bourgeoisie and form communism, where all the people owned the means of production, instead of just the wealthy, and class distinctions would not exist anymore",
-           "They were wrong; the middle class ended up growing instead"
+           "In reality, the middle class continued to grow, but Marxist ideas inspired later socialist and communist movements worldwide"
        ],
        causes: ["Increasing gap between classes due to the Industrial Revolution"],
-       effects: ["Spread of communism"],
+       effects: ["Spread of communism",
+        "In practice, the middle class continued to grow, but Marxist ideas inspired later socialist and communist movements worldwide"
+       ],
        theme: "culture"
    },
    "Taiping Rebellion" : {
@@ -723,7 +798,9 @@ export const timelineNotes: TimelineNotes = {
            "The rebellion ultimately failed, as the Qing Dynasty got support from Europeans, who wanted to ensure that the Qing Dynasty was weak but not overthrown"
        ],
        causes: ["Qing government's incompetence in solving issues like famines and opium addictions"],
-       effects: ["Showed the weakness of the government"],
+       effects: ["Showed the weakness of the government",
+        "Destabilized Southern China"
+       ],
        theme: "governance"
    },
    "Opening of Japan" : {
@@ -737,7 +814,8 @@ export const timelineNotes: TimelineNotes = {
            "Japan signed the Treaty of Kanegawa, giving in to all of America's demands"
        ],
        causes: ["American economic imperialism, Manifest Destiny"],
-       effects: ["End of Japanese isolationsim, beginning of modernization and industrialization"],
+       effects: ["End of Japanese isolationism", 
+        "beginning of modernization and industrialization"],
        theme: "governance"
    },
    "Xhosa Cattle Killing Movement" : {
@@ -746,7 +824,7 @@ export const timelineNotes: TimelineNotes = {
        applicableCountries: ["British Territory"],
        description: ["The Xhosa cattle were sick, and Nongqawuse, a teenage Xhosa, prophesied that if the Xhosa killed their cows and burned their crops, the spirits would restore them and drive the settlers away",
            "The Xhosa followed her orders, but it only led to a famine in which 40,000 people starved.",
-           "The famine was worsened because the colonial government intentionally kept relief agencies away to weaken the Xhosa population and pressure them to work for the British as a means of getting money and food, and thus assimilating"
+           "The famine was worsened by British colonial policies, which deliberately kept relief agencies away to weaken the Xhosa population and pressure them to work for the British as a means of getting money and food, and thus assimilating"
        ],
        causes: ["Cattle sickness",
            "Xhosa wanted the British settlers gone"
@@ -761,10 +839,10 @@ export const timelineNotes: TimelineNotes = {
        description: ["The British had armed forces in India called Sepoys, most of whom were Hindu or Muslim.",
            "The British began using pig and cow fat to grease rifle cartridges. This angered the sepoys because they had to bite the cartridges and it would go against their religions",
            "The British imprisoned the sepoys who refused to use these new cartridges, so the sepoys rebelled",
-           "The sepoys were unable to defeat the British due to a lack of unity due to differing languages, the caste system, and a lack of nationalism. Additionally, the Sikhs sided with the British"
+           "The rebellion failed due to internal divisions (language, caste, lack of nationalism), and Sikh groups allied with the British"
        ],
        causes: ["The British forced the sepoys to use animal fat catridges"],
-       effects: ["Start of the British Raj",
+       effects: ["Establishment of the British Raj",
            "Dismantling of the British East India Company, as the British government directly ruled India"
        ],
        theme: "governance"
@@ -789,12 +867,14 @@ export const timelineNotes: TimelineNotes = {
            "France had been wanting Mexico as a colony and used its debt as an excuse to invade, as well as the fact that the United States wouldn't intervene because they were engaged in their own civil war",
            "In 1863, the Mexican conservatives, with the support of Napoleon III, overthrew Juaréz. The French put the Austrian noble Archduke Maximillian as the emperor of Mexico, establishing a puppet government",
            "In 1867, the Mexicans drove the French out of Mexico with the help of the Americans (who had concluded their civil war), exiled Archduke Maximillian, and put Juaréz back in power",
-           "Juaréz, though, went against his own constitudion and remained president for longer than was specified"
+           "Juárez extended his presidency beyond constitutional limits"
        ],
        causes: ["French imperialism",
            "Civil war in Mexico between liberals and conservatives"
        ],
-       effects: ["France established a short-lived puppet emperor"],
+       effects: ["France established a short-lived puppet emperor",
+            "Reaffirmed Mexican sovereignty"
+       ],
        theme: "governance"
    },
    "US bans slavery" : {
@@ -803,7 +883,9 @@ export const timelineNotes: TimelineNotes = {
        applicableCountries: ["United States 1776-1920"],
        description: ["The Emancipation Proclamation in 1863 freed slaves in Confederate territories, but the 13th Amendment freed slaves nationally"],
        causes: ["Civil War and abolitionist movement"],
-       effects: ["Reconstruction"],
+       effects: ["Reconstruction",
+            "Legal abolition of slavery nationwide, but social and economic challenges persisted for freedpeople"
+       ],
        theme: "social, economic"
    },
    "Seven Weeks' War" : {
@@ -824,7 +906,7 @@ export const timelineNotes: TimelineNotes = {
        description: ["Power was restored from the shogun to the emperor",
            "The Charter Oath was created, abolishing feudalism, instituting a constitutional monarchy, modernizing the military, establishing a new school system, and promoting industrialization",
            "Adopted Western technology like railroads and telegraphs",
-           "Japanese culture was still influenced by western culture and adopted western clothing, hairstyles, and dances",
+           "Western culture influenced fashion, hairstyles, and social practices",
            "The government funded industrialization by funding factories that were then sold to zaibatsu, wealthy families controlling companies"
        ],
        causes: ["Opening of Japan",
@@ -849,7 +931,7 @@ export const timelineNotes: TimelineNotes = {
            "Fertilizer increased agricultural productivity",
            "Dynamite was used in mining and tunneling",
            "The Bessemer Process allowed steel to be mass produced. It was used in building bridges, machines, buildings, ships, and railroads because it was cheaper and stronger than iron",
-           "Many medecines were developed, increasing lifespans"
+           "Medical advances increased lifespans and public health"
        ],
        causes: ["Spread of the British Industrial Revolution and their technologies"],
        effects: ["Urbanization",
@@ -884,7 +966,8 @@ export const timelineNotes: TimelineNotes = {
        ],
        causes: ["European imperialism and rivalries"],
        effects: ["Scramble for Africa",
-           "Colonial borders cut across tribal lines"
+           "Colonial borders cut across tribal lines",
+           "Set precedent for European domination and exploitation of Africa"
        ],
        theme: "governance"
    },
@@ -894,7 +977,9 @@ export const timelineNotes: TimelineNotes = {
        applicableCountries: ["Brazil"],
        description: [""],
        causes: ["The Brazilian population wanted to keep slavery so it continued for much longer than other countries"],
-       effects: ["The castas system still persisted"],
+       effects: ["The castas system still persisted",
+            "Economic dependency on wage labor and immigrant labor increased"
+       ],
        theme: "social, economy"
    },
    "Ghost Dance movement" : {
@@ -918,7 +1003,9 @@ export const timelineNotes: TimelineNotes = {
            "At the same time, the Spanish were fighting the Spanish-American War (1898-1899). When the Spanish lost, they had to sell the Philippines, Puerto Rico, and Guam to the US. Then the Philippines fought the Philippine-American War for independence in 1899, but lost."
        ],
        causes: ["Enlightenment ideas"],
-       effects: ["The Philippines did not gain independence"],
+       effects: ["The Philippines remained under US control",
+        "Delayed independence and strengthened American imperial influence in the Pacific"
+       ],
        theme: "governance"
    },
    "Spanish-American War" : {
@@ -939,10 +1026,10 @@ export const timelineNotes: TimelineNotes = {
        emphasizedUnit: [1750, 1900],
        applicableCountries: ["Qing Dynasty"],
        description: ["The government tried to eliminate corruption in the government by stopping the Civil Service Exam and instituting a constitutional monarchy and parliament",
-           "Established western industrial, commercial, and medical systems",
-           "Started working on railroads and telegraph lines"
+           "Established Western-style industrial, commercial, and medical systems",
+           "Initiated on railroads and telegraph construction"
        ],
-       causes: ["Efforts to modernize, continuation of the Self-Strengthening Movement"],
+       causes: ["Efforts to modernize; continuation of the Self-Strengthening Movement"],
        effects: ["Reversed by Empress Dowager Cixi"],
        theme: "governance"
    },
@@ -950,11 +1037,11 @@ export const timelineNotes: TimelineNotes = {
        timePeriod: [1899, 1902],
        emphasizedUnit: [1750, 1900],
        applicableCountries: ["British Territory"],
-       description: ["Fighting restarted after the discovery of diamonds and gold",
+       description: ["Conflict restarted after the discovery of diamonds and gold in Boer territory",
            "The British imprisoned the Boers in segregated concentration camps"
        ],
        causes: ["Discovery of diamonds and gold in South Africa"],
-       effects: ["Union of South Africa"],
+       effects: ["Formation of the Union of South Africa"],
        theme: "governance"
    },
    "Philippine-American War" : {
@@ -962,9 +1049,10 @@ export const timelineNotes: TimelineNotes = {
        emphasizedUnit: [1750, 1900],
        applicableCountries: ["Philippines", "United States 1776-1900"],
        description: ["The Philippines tried to fight for their independence from the US after trying to gain independence from Spain",
-           "Used guerrilla warfare"
+           "Filipino forces used guerrilla warfare"
        ],
-       causes: ["The Philippines had been trying to gain independence from the Spanish and then they were sold to the US after the Spanish-American War"],
+       causes: ["Philippine efforts for independence from the Spanish",
+        "Transfer to the US after the Spanish-American War"],
        effects: ["The Philippines remained under American control"],
        theme: "governance"
    },
@@ -974,8 +1062,8 @@ export const timelineNotes: TimelineNotes = {
        applicableCountries: ["Qing Dynasty"],
        description: ["A group of anti-imperialists known as the Boxers attacked Christians and foreigners to protest foreign influence",
         "They were supported by the Empress Cixi",
-        "The government called on the Europeans to help them defeat the Boxers",
-        "Forced Empress Cixi to continue with the reforms"
+        "The government called on the Europeans to help defeat the Boxers",
+        "Forced Empress Cixi to continue reforms"
        ],
        causes: ["Resentment about foreign influence",
         "Economic hardship"
@@ -987,8 +1075,8 @@ export const timelineNotes: TimelineNotes = {
        timePeriod: [1900, 1900],
        emphasizedUnit: [1750, 1900],
        applicableCountries: ["Asante Empire", "British Territory", "England 1750-Present"],
-       description: ["The British tried for a fifth time to take control of the Asante Empire by trying to get access to the Golden Stool",
-        "The Asante queen, Yaa Asantewaa, tried to fight the British and prevent them from getting the Golden Stool",
+       description: ["The British tried for a fifth time to take control of the Asante Empire by demanding the Golden Stool",
+        "The Asante queen, Yaa Asantewaa, led resistance to protect the Golden Stool",
         "The British won in in 1900 and exiled Yaa Asantewaa"
        ],
        causes: ["British Imperialism"],
@@ -1081,8 +1169,12 @@ export const timelineNotes: TimelineNotes = {
        emphasizedUnit: [1900, 2025],
        applicableCountries: ["Armenia", "Ottoman Empire"],
        description: ["The Ottoman government claimed that the Armenians were supporting the Russian army (the Ottomans' enemy). They systematically deported, massacred, and starved the Armenians, leading to about 600,000 to 1.5 million deaths"],
-       causes: ["End of the Tanzimat reforms, ending the limited religious freedom for the Christian Armenians"],
-       effects: ["Hitler eventually modeled the Holocaust after the Armenian Genocide"],
+       causes: ["End of the Tanzimat reforms, ending the limited protections for the Christian Armenians",
+            "Suspicion that the Armenians would support Russia, the Ottoman's enemy"
+       ],
+       effects: ["Hitler eventually modeled the Holocaust after the Armenian Genocide",
+        "Mass displacement of Armenian populations"
+       ],
        theme: "social"
    },
     "Russian Revolution and Civil War" : {
@@ -1090,7 +1182,7 @@ export const timelineNotes: TimelineNotes = {
         emphasizedUnit: [1900, 2025],
         applicableCountries: ["USSR"],
         description: ["The Bolsheviks, led by Vladimir Lenin, took control of Russia and established a communist government in 1917",
-            "Surrendered to Germany, ceding land to them",
+            "Surrendered to Germany, ceding land to them in the Treaty of Brest-Litovsk (1918)",
             "The Bolsheviks fought for control against other communist groups as well as troops the United States sent to try to quell the communist revolution"
         ],
         causes: ["Incompetence of the Russian government to deal with the strain put on the country from taking part in World War I"],
@@ -1102,18 +1194,21 @@ export const timelineNotes: TimelineNotes = {
         emphasizedUnit: [1900, 2025],
         applicableCountries: ["United States 1920-Present", "Germany 1920-1945", "England 1750-Present", "France 1920-Present", "British Territory", "French Territory"],
         description: ["In the US, everyone tried to sell stocks at the same time, so the value of the stocks plummeted. The stock market crashed in 1929 and started the Great Depression",
-            "Germany was especially affected because they had inflation due to printing money to pay reparations after World War I",
+            "Germany was especially affected because hyperinflation occured after printing money to pay reparations after World War I",
             "International trade decreased because countries made strict tariffs to protect domestic jobs",
             "Japan recovered quickly by devaluing their currency, making domestic products cheaper than imports",
-            "The US temporarily recovered by using Keynesian Economics through the New Deal, using government deficit spending to stimilate the economy. However, in 1937 Roosevelt felt that the government deficits were too big so he pulled back on the New Deal and the economy got worse again"
+            "The US temporarily recovered by using Keynesian Economics through the New Deal, using government deficit spending to stimulate the economy. However, in 1937 Roosevelt felt that the government deficits were too big so he pulled back on the New Deal and the economy got worse again"
         ],
         causes: ["US stock market crashed",
             "Farms produced so much that the value of their products decreased",
             "France and Britain were having a hard time paying back loans because Germany was having a hard time paying their debts and the Soviet Union refused to pay pre-revolution debts",
+            "Bank failures and lack of financial regulation",
+            "Global econommic interconnectedness throuhg war debts and reparations"
         ],
         effects: ["Mass unemployment",
             "Ended after World War II",
-            "Germans were angry about the Depression. This anger and discontentment in conjunction with the weakness of the Weimar Republic, led to the rise of the Nazis"
+            "Germans were angry about the Depression. This anger and discontentment in conjunction with the weakness of the Weimar Republic, led to the rise of the Nazis",
+            "Expansion of government welfare programs"
         ],
         theme: "economy"
     },
@@ -1124,7 +1219,9 @@ export const timelineNotes: TimelineNotes = {
         description: ["Indians were unhappy about the British salt monopoly",
             "Mohandas (Mahatma) Gandhi led thousands of Indians to the Indian Ocean to pick up grains of salt in protest of the salt monopoly",
         ],
-        causes: ["Discontent about the unfair economic policies put in place by the British government"],
+        causes: ["Discontent about the unfair economic policies put in place by the British government",
+            "Desire to demonstrate the power of mass civil disobedience"
+        ],
         effects: ["Rise of nonviolent resistance to the British government in India"],
         theme: "governance"
     },
