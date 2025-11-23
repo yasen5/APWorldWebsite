@@ -1088,7 +1088,7 @@ export const timelineNotes: TimelineNotes = {
     "Russian Revolution and Civil War" : {
         timePeriod: [1917, 1921],
         emphasizedUnit: [1900, 2025],
-        applicableCountries: ["Soviet Union"],
+        applicableCountries: ["USSR"],
         description: ["The Bolsheviks, led by Vladimir Lenin, took control of Russia and established a communist government in 1917",
             "Surrendered to Germany, ceding land to them",
             "The Bolsheviks fought for control against other communist groups as well as troops the United States sent to try to quell the communist revolution"
@@ -1181,14 +1181,287 @@ export const timelineNotes: TimelineNotes = {
         effects: [""],
         theme: "governance"
     },
-    "Template" : {
-        timePeriod: [1, 1],
+    "First Indochina War" : {
+        timePeriod: [1945, 1954],
         emphasizedUnit: [1900, 2025],
-        applicableCountries: [""],
-        description: [""],
+        applicableCountries: ["French Territory", "France 1920-Present", "United States 1920-Present"],
+        description: ["Led by Ho Chi Minh",
+            "Declared independence from France (who owned them as a colony) and Japan (who had occupied them during World War II) in 1945",
+            "The US initially supported Vietnam after World War II but switched to support the French in the 1950s",
+            "The Vietnamese won the war with the Battle of Dien Bien Phu in 1954, gaining independence",
+        ],
+        causes: ["Resistance to European imperialism, desire for independence"],
+        effects: ["Vietnam was split into the North, which was communist and led by Ho Chi Minh, and the South, led by noncommunist Ngo Dinh Diem",
+            "Vietnam War"
+        ],
+        theme: "governance"
+    },
+    "Indian and Pakistani independence" : {
+        timePeriod: [1947, 1947],
+        emphasizedUnit: [1900, 2025],
+        applicableCountries: ["India", "Pakistan", "England 1750-Present"],
+        description: ["The Indian National Congress was formed in 1885 by elite Hindus and Muslims trying to achieve independence",
+            "Pushed more for independence aftet World War II",
+            "Muhammad Ali Jinnah proposed the two state solution to ensure that the Muslim minority wouldn't be overwhelmed by the Hindu majority",
+            "Others, like Gandhi and Jawaharlal Nehru wanted to keep India united",
+            "In 1946, the Royal Indian Navy revolted against Britain and showed them that it couldn't effectively rule India",
+            "Negotiated independence in 1947",
+            "Pakistan was created as a Muslim nation and India was created as a Hindu nation. Muslims in India migrated to Pakistan and Hindus in Pakistan moved to India"
+        ],
+        causes: ["Resistance to European imperialism, desire for independence"],
+        effects: ["Migration of 12 million people moving to between countries",
+            "Deaths of a million people traveling between Pakistan and India"],
+        theme: "governance"
+    },
+    "Apartheid" : {
+        timePeriod: [1948, 1954],
+        emphasizedUnit: [1900, 2025],
+        applicableCountries: ["South Africa"],
+        description: ["In the Apartheid system, the white minority had all the privileges while people of color were severely restricted. For example, they could only live in certain areas, and needed passbooks (identity documents) to be in \"white\" areas, and mixed marriages were forbidden",
+            "There were many protests against apartheid but they were suppressed",
+            "In 1964, Nelson Mandela, the leader of the African National Congress, was imprisoned, sparking global anger. Other countries began urging divestment and economic sanctions, and the UN expelled South Africa in 1974.",
+            "In 1989 F. W. de Klerk, the acting president, released Nelson Mandela and started negotiations",
+            "Apartheid laws were repealed in the early 1990s, and Nelson Mandela became president in the first free election in 1994"
+        ],
+        causes: ["Racism"],
+        effects: ["Racial violence",
+            "Effort to reconcile after apartheid was ended"
+        ],
+        theme: "social"
+    },
+    "Takeover of the Chinese Communist Party" : {
+        timePeriod: [1949, 1949],
+        emphasizedUnit: [1900, 2025],
+        applicableCountries: ["China"],
+        description: ["The Chinese Communist Party, controled by Mao, and Chinese Nationalist Party, controled by Sun Yat-sen and then Chiang Kai-shek, were fighting for power but temporarily allied to fight against Japan in World War II (starting in 1937 for them).",
+            "After the war, they resumed fighting for control.",
+            "In 1927, Chiang Kai-shek forced Mao to retreat in what was known as the Long March. They retreated 6000 over a year but eventually reassembled in 1935. This inspired the Chinese people so the Chinese Communist party gained more support"
+        ],
+        causes: ["Fight for control over the Chinese government"],
+        effects: ["Establishment of a Chinese communist government"],
+        theme: "governance"
+    },
+    "Korean War" : {
+        timePeriod: [1950, 1953],
+        emphasizedUnit: [1900, 2025],
+        applicableCountries: ["North Korea", "South Korea", "China", "United States 1920-Present"],
+        description: ["North Korea invaded South Korea in order to unite the two",
+            "The United Nations supported the South to oppose the spread of communism, with most of the support coming from the United States",
+            "The Soviet supported the North by supplying weapons and money, but not troops",
+            "The South and their allies pushed the North Koreans out of South Korea. American General Douglas MacArthur continued to push the North towards the Chinese border",
+            "China feared that their territory would be threatened by the South and UN armies, so they sent soldiers to support the North Koreans",
+            "With the help of the Chinese soldiers, the North pushed the border back to where it had originally been before the war"
+        ],
+        causes: ["Division of Korea",
+            "The North wanted to reunite Korea"
+        ],
+        effects: ["Stalemate"],
+        theme: "governance"
+    },
+    "Egyptian coup" : {
+        timePeriod: [1952, 1952],
+        emphasizedUnit: [1900, 2025],
+        applicableCountries: ["Egypt"],
+        description: ["General Gamal Abdel Nasser and Muhammad Naguib overthrew the Egyptian king and established the Republic of Egypt"],
         causes: [""],
+        effects: ["Naguib, then Nasser's presidency",
+            "Socialist reforms and nationalization of industries"
+        ],
+        theme: "governance"
+    },
+    "Vietnam War" : {
+        timePeriod: [1954, 1975],
+        emphasizedUnit: [1900, 2025],
+        applicableCountries: ["Vietnam", "United States 1920-Present"],
+        description: ["The country was split after indpendence, with the North led by Communist Ho Chi Minh, and the South led by noncommunist Ngo Dinh Diem",
+            "Ngo Dinh Diem was unpopular and corrupt but supported by the US since he was anti-communist until a coup in 1963",
+            "Some Southern Vietnamese supported the North by joining the Viet Cong",
+            "President Johnson sent troups to support South Vietnam in 1964 because they were afraid that if Vietnam turned completely communist, that would trigger the spread of communism in Southeast Asia. By 1967, 365,000 Americans were fighting in Vietnam",
+            "The Tet Offensive in 1968 shook American morale. The Viet Cong attacked the Americans on Tet (Lunar New Year) and won. They wanted to end the war that year because Ho Chi Minh was sick so they became more aggressive",
+            "Ho Chi Minh died in 1969",
+            "The US began pulling out of the war in 1971. By 1973, all their troops were withdrawn",
+            "The US signed the Paris Peace Accords agreeing to withdraw from Vietnam as long as the North didn't attack the South",
+            "1-2 million deaths from the Vietnam War",
+            "In 1975, the North claimed that the South had attacked them and launched the Ho Chi Minh Campaign, conquering South Vietnam and uniting the North and South"
+    ],
+        causes: ["Ho Chi Minh wanted to unify Vietnam",
+            "The United States wanted to prevent the spread of communism. They thought that if Vietnam became communist that all of Southeast Asia would follow"
+        ],
+        effects: ["Unification of Vietnam under a communist government"],
+        theme: "governance"
+    },
+    "Algerian War for Independence" : {
+        timePeriod: [1954, 1962],
+        emphasizedUnit: [1900, 2025],
+        applicableCountries: ["Algeria", "France 1920-Present"],
+        description: ["The National Liberation Front led the war for independence. They had support from Egypt and other Arab countries",
+            "Involved brutal guerrilla war. Mainly Algerians died.",
+            "Some French supported Algerian independence",
+            "In 1958, Charles de Gaulle expanded presidential power to be able to give Algeria independence by bypassing the French National Assembly"
+        ],
+        causes: ["Growing nationalism and desire for independence after World War I",
+            "The French put more restrictive laws in place"
+        ],
+        effects: ["Algerian independence",
+            "Algerian migration to France, and resulting anti-immigrant sentiment",
+            "Algerian political instability"
+        ],
+        theme: "governance"
+    },
+    "Ghana Indpendence" : {
+        timePeriod: [1957, 1957],
+        emphasizedUnit: [1900, 2025],
+        applicableCountries: ["Ghana", "England 1750-Present"],
+        description: ["Britain agreed to negotiate independence for its Gold Coast colony",
+            "Negotiations were led by the UN",
+            "Gold Coast colony gained independence and became Ghana in 1957",
+            "Kwame Nkrumah became the first president, but turned into a dictator until 1966"
+        ],
+        causes: ["Growing nationalism and desire for independence after World War I",],
+        effects: ["Kwame Nkrumah's dictatorship"],
+        theme: "governance"
+    },
+    "Great Leap Forward" : {
+        timePeriod: [1958, 1962],
+        emphasizedUnit: [1900, 2025],
+        applicableCountries: ["China"],
+        description: ["China's leader, Mao Zedong wanted to rapidly industrialize China",
+            "Farms were collectivized into communes so that more people could be dedicated to industrial work. Those who protested were set to reeducation camps or were killed",
+            "Encouraged production of iron, even in homemade furnaces in people's backyards",
+            "The 1958 harvest was really good, but drought and insects harvest the following years' harvests. This, combined with exaggerated figures from communes to the government, led to a famine that killed 20 million",
+            "Even during the famine, Mao emphasized the necessity of exporting grain to show the world that communism was successful"
+        ],
+        causes: ["Mao wanted to turn China into an industrial power"],
+        effects: ["Famine"],
+        theme: "economic"
+    },
+    "Cuban Missile Crisis" : {
+        timePeriod: [1962, 1962],
+        emphasizedUnit: [1900, 2025],
+        applicableCountries: ["Cuba", "United States 1920-Present", "USSR"],
+        description: ["After the Bay of Pigs, Castro allied with the Soviet Union",
+            "In 1962, the Soviets imported nuclear weapons into Cuba. These weapons could target every major American city with the exception of Seattle",
+            "In response, the US blockaded Cuba from receiving more nuclear weapons",
+            "In the end, the USSR agreed to withdraw its weapons as long as the US withdrew its weapons from Turkey and Greece"
+        ],
+        causes: ["Fidel Castro seized power in Cuba and redistributed its resources so Cuba was not under as much American control",
+            "Kennedy backed a CIA coup called the Bay of Pigs that was attempted but failed. This caused Castro to further mistrust the US"
+        ],
+        effects: ["Creation of the hotline",
+            "Nuclear deescalation"
+        ],
+        theme: "governance"
+    },
+    "Biafran Civil War" : {
+        timePeriod: [1967, 1970],
+        emphasizedUnit: [1900, 2025],
+        applicableCountries: ["Nigeria"],
+        description: ["A bloody civil war (Nigerian Civil War or Biafran War) that left many hundreds of thousands of civilians dead in addition to military casualties.",
+            "The secession was ultimately unsuccessful"
+        ],
+        causes: ["The Igbo minority felt that they weren't being represented by the Hausa-Fulani government, so they created their own nation, Biafra, and attempted to secede.",
+            "The Biafra territory held valuable oil resources that the Nigerian government wanted"
+        ],
+        effects: ["Biafran defeat"],
+        theme: "governance"
+    },
+    "Cultural Revolution" : {
+        timePeriod: [1967, 1967],
+        emphasizedUnit: [1900, 2025],
+        applicableCountries: ["China"],
+        description: ["Red Guards sent people, especially intellectuals, government officials, and teachers, who were \"not revolutionary enough\" were sent to reeducation camps where they had to do physical labor. This turned people against each other as they turned each other in."],
+        causes: ["Mao regained power in China and wanted to reestablish support for communism"],
+        effects: ["Mass persecution"],
+        theme: "governance"
+    },
+    "Angolan Civil War" : {
+        timePeriod: [1975, 2002],
+        emphasizedUnit: [1900, 2025],
+        applicableCountries: ["Angola", "USSR", "Cuba", "United States 1920-Present", "South Africa", "China"],
+        description: ["The Popular Movement for the Liberation of Angola (MPLA) represented the Mbundu tribe and had support from the USSR and Cuba",
+            "The National Union for the Total Independence of Angola (UNITA) represented the Ovimbundu tribe and had support from the United States and South Africa",
+            "The National Front for the Liberation of Angola (FNLA) represented the Bankongo tribe and had support from the United States, China, and the Democratic Republic of the Congo",
+            "The three groups fought for control of Angola"
+        ],
+        causes: ["Rival tribes were in the same country and government"],
+        effects: ["Ended in MPLA (representing the Mbundu tribe) victory"],
+        theme: "governance"
+    },
+    "Green Belt Movement created" : {
+        timePeriod: [1977, 1977],
+        emphasizedUnit: [1900, 2025],
+        applicableCountries: ["Kenya"],
+        description: ["Wangari Maathai, a woman from Kenya, saw that women in her community were struggling with the environmental effects of colonization, so she founded the Green Belt Movement",
+            "Focuses on empowering women while helping the environment",
+            "The movement saw a lot of opposition from the government, as they saw the large gatherings of women as a threat to their control",
+        ],
+        causes: ["Environmental damage from colonization, including deforestation"],
+        effects: ["Millions of trees planted",
+            "Empowerment of women"
+        ],
+        theme: "environment, social"
+    },
+    "Soviet-Afghan War" : {
+        timePeriod: [1979, 1989],
+        emphasizedUnit: [1900, 2025],
+        applicableCountries: ["Afghanistan", "USSR", "United States 1920-Present"],
+        description: ["The Soviet Union invaded in 1979 to support the communist government from being taken down",
+            "The United States intervened to support the Mujahideen guerilla troops who were trying to overthrow the communist government",
+            "Gorbachev withdrew from the war from 1985-1989 because it was draining Soviet funds and morale",
+            "The communist regime fell in 1992"
+        ],
+        causes: ["Threat to the communist government and the Soviet's promise to support it"],
+        effects: ["Fall of the communist government in Afghanistan"],
+        theme: "governance"
+    },
+    "Contra War" : {
+        timePeriod: [1981, 1989],
+        emphasizedUnit: [1900, 2025],
+        applicableCountries: ["Nicaragua", "United States 1920-Present", "USSR"],
+        description: ["The Sananistas, a socialist group, took down the Somoza dictatorship and took over the government in 1979. They emphasized liberation theology, land redistribution, and more educational and healthcare",
+            "The US supported the Contras who tried to overthrow the Sandinistas in 1981, as the US like that socialists were coming to power",
+            "In response to the US's actions, The Sandinistas turned to the Soviets for support",
+            "The Contras used guerilla tactics",
+            "The Sandinistas began limited civil rights and conscripting soldiers during the war",
+            "The 1989 Tela Accords demobilized both armies"
+        ],
+        causes: ["Takeover of the Sandanistas"],
         effects: [""],
-        theme: ""
+        theme: "governance"
+    },
+    "Fall of the Berlin Wall" : {
+        timePeriod: [1989, 1989],
+        emphasizedUnit: [1900, 2025],
+        applicableCountries: ["East Germany", "West Germany"],
+        description: ["The Berlin wall had been built by the Soviets in 1961 to prevent the people of East Berlin from moving to West Berlin",
+            "The Berlin Wall finally fell"
+        ],
+        causes: ["Soviet control was weakening"],
+        effects: ["Reunification of Germany in 1990",
+            "End of the Cold War"
+        ],
+        theme: "governance"
+    },
+    "Tiananmen Square Massacre" : {
+        timePeriod: [1989, 1989],
+        emphasizedUnit: [1900, 2025],
+        applicableCountries: ["China"],
+        description: ["On June 4, 1989, theree was. big protest in Tiananmen Square, Beijing. People were demanding to see government officials to demand more political freedom.",
+            "The government sent troops and tanks to subdue the protesters",
+            "It's estimated that a few thousand civilians were killed, but the government covered up the event from the world and its own people."
+        ],
+        causes: ["Deng Xiaoping's economic reforms made people demand for political reforms"],
+        effects: [""],
+        theme: "governance"
+    },
+    "Paris Climate Agreement" : {
+        timePeriod: [2015, 2015],
+        emphasizedUnit: [1900, 2025],
+        applicableCountries: ["United States 1920-Present", "Russia 1991-Present", "France 1920-Present", "England 1750-Present", "Spain 1750-Present", "Portugal 1750-Present", "South Africa"],
+        description: ["197 countries agreed to reduce carbon emissions so that the world does not exceed 1.5 degrees Celcius of warming"],
+        causes: ["Climate change"],
+        effects: ["Supported emission reductions"],
+        theme: "environment"
     },
 }
 // events will go here
