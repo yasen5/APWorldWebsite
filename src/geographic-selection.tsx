@@ -53,8 +53,8 @@ const timeMaps: Record<
 };
 
 const timePeriods: number[] = [
-  1200, 1280, 1300, 1400, 1500, 1530, 1600, 1650, 1700, 1715, 1785, 1800,
-  1815, 1880, 1900, 1914, 1930, 1938, 1950, 1960, 1994, 2025,
+  1200, 1280, 1300, 1400, 1500, 1530, 1600, 1650, 1700, 1715, 1785, 1800, 1815,
+  1880, 1900, 1914, 1930, 1938, 1950, 1960, 1994, 2025,
 ];
 
 const nations = Object.keys(countryNotes);
@@ -323,6 +323,7 @@ const MapHandler: React.FC<{
           ((direction === "left" && canScrollLeft) ||
             (direction === "right" && canScrollRight)) && (
             <button
+              key={direction}
               onClick={() => scrollMap(direction)}
               style={{ background: "none", border: "none" }}
               className={`
