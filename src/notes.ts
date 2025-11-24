@@ -2827,6 +2827,12 @@ export const countryNotes: CountryNotes = {
   },
   "Sudan": {
     Governance: ["In 2003, non-Arabs in Darfur (West Sudan) rebelled against the Arab-controlled government. The government responded by sending a militant group, Janjaweed, who killed over 300,000 non-Arabs and displaced millions"]
+  },
+  "Finland": {
+    Economy: ["Had an agrarian economy, then industrialized after World War II.",
+      "Their main trading partner was the Soviet Union so they suffered when it collapsed",
+      "Entered the global market in the 1990s and saw a lot of economic growth"
+    ]
   }
   // "Template": {
   //       "Environment": [""],
