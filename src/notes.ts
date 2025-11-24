@@ -1653,7 +1653,7 @@ export const countryNotes: CountryNotes = {
     ],
     Technology: ["Began adopting Western technology"],
   },
-  "Japan 1900-present": {
+  "Japan 1900-Present": {
     Culture: [
       "Began adopting Western culture, including clothing, hairstyles, garden parties, and dances",
     ],
