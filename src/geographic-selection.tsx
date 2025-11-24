@@ -50,19 +50,6 @@ export const GeographicSelectionPage = () => {
   const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
   const [isConceptsBarOpen, setIsConceptsBarOpen] = useState(false);
   const [hoveredConcept, setHoveredConcept] = useState<string | null>(null);
-  const mapRef = useRef<HTMLDivElement>(null);
-  const [canScrollRight, setCanScrollRight] = useState<boolean>(false);
-  const [canScrollLeft, setCanScrollLeft] = useState<boolean>(false);
-
-
-  const scrollMap = (direction: "left" | "right") => {
-    if (mapRef.current) {
-      mapRef.current.scrollBy({
-        left: direction === "right" ? 200 : -200,
-        behavior: "smooth",
-      });
-    }
-  };
 
   const nations = Object.keys(countryNotes);
 
@@ -89,21 +76,6 @@ export const GeographicSelectionPage = () => {
       }
     });
   }, [selectedTime]);
-
-  useEffect(() => {
-    const map = mapRef.current;
-    if (!map) return;
-
-    const updateScrollState = () => {
-      setCanScrollLeft(map.scrollLeft > 0);
-      setCanScrollRight(map.scrollLeft + map.clientWidth < map.scrollWidth);
-    };
-
-    map.addEventListener("scroll", updateScrollState);
-    updateScrollState();
-
-    return () => map.removeEventListener("scroll", updateScrollState);
-  }, []);
 
   // Create styles object for SVG paths
   const countryStyles = useMemo(() => {
@@ -264,45 +236,11 @@ export const GeographicSelectionPage = () => {
           </div>
         </div>
 
-        {/* SVG viewport container */}
-        <div className="relative w-full h-full flex pt-2">
-          <div ref={mapRef} className="overflow-auto">
-            <div className="min-w-[1600px] min-h-[900px] flex justify-center items-center">
-              <MapComponent
-                className="svg-container"
-                width={1600}
-                height={900}
-                onClick={handleCountryClick}
-              />
-            </div>
-          </div>
-          {["left", "right"].map((direction) => {
-            return (
-              ((direction === "left" && canScrollLeft) ||
-                (direction === "right" && canScrollRight)) && (
-                <button
-                  onClick={() => scrollMap(direction)}
-                  style={{ background: "none", border: "none" }}
-                  className={`
-                            absolute 
-                            ${direction === "left" ? "left-2" : "right-2"}
-                            top-1/2 
-                            -translate-y-1/2 
-                            p-3 
-                            `}
-                >
-                  <img
-                    src={ArrowsRight}
-                    alt={`Scroll ${direction}`}
-                    className={`h-10 w-10 ${
-                      direction === "left" ? "rotate-180" : ""
-                    }`}
-                  />
-                </button>
-              )
-            );
-          })}
-        </div>
+        <MapHandler
+          handleCountryClick={handleCountryClick}
+          MapComponent={MapComponent}
+        />
+
         {selectedCountry &&
           (() => {
             const { timePeriod, ...notes } =
@@ -318,6 +256,80 @@ export const GeographicSelectionPage = () => {
             );
           })()}
       </div>
+    </div>
+  );
+};
+
+const MapHandler: React.FC<{
+  handleCountryClick: (e: React.MouseEvent<SVGSVGElement>) => void;
+  MapComponent: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+}> = ({ handleCountryClick, MapComponent }) => {
+  const mapRef = useRef<HTMLDivElement>(null);
+  const [canScrollRight, setCanScrollRight] = useState<boolean>(false);
+  const [canScrollLeft, setCanScrollLeft] = useState<boolean>(false);
+
+  const scrollMap = (direction: "left" | "right") => {
+    if (mapRef.current) {
+      mapRef.current.scrollBy({
+        left: direction === "right" ? 200 : -200,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map) return;
+
+    const updateScrollState = () => {
+      setCanScrollLeft(map.scrollLeft > 0);
+      setCanScrollRight(map.scrollLeft + map.clientWidth < map.scrollWidth);
+    };
+
+    map.addEventListener("scroll", updateScrollState);
+    updateScrollState();
+
+    return () => map.removeEventListener("scroll", updateScrollState);
+  }, []);
+
+  return (
+    <div className="relative w-full h-full flex pt-2">
+      <div ref={mapRef} className="overflow-auto">
+        <div className="min-w-[1600px] min-h-[900px] flex justify-center items-center">
+          <MapComponent
+            className="svg-container"
+            width={1600}
+            height={900}
+            onClick={handleCountryClick}
+          />
+        </div>
+      </div>
+      {["left", "right"].map((direction) => {
+        return (
+          ((direction === "left" && canScrollLeft) ||
+            (direction === "right" && canScrollRight)) && (
+            <button
+              onClick={() => scrollMap(direction)}
+              style={{ background: "none", border: "none" }}
+              className={`
+                      absolute 
+                      ${direction === "left" ? "left-2" : "right-2"}
+                      top-1/2 
+                      -translate-y-1/2 
+                      p-3 
+                      `}
+            >
+              <img
+                src={ArrowsRight}
+                alt={`Scroll ${direction}`}
+                className={`h-10 w-10 ${
+                  direction === "left" ? "rotate-180" : ""
+                }`}
+              />
+            </button>
+          )
+        );
+      })}
     </div>
   );
 };
