@@ -1,29 +1,29 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { countryNotes, generalNotes } from './notes'
-import World1200 from './assets/World-1200.svg?react';
-import World1280 from './assets/World-1280.svg?react';
-import World1300 from './assets/World-1300.svg?react';
-import World1400 from './assets/World-1400.svg?react';
-import World1500 from './assets/World-1500.svg?react';
-import World1530 from './assets/World-1530.svg?react';
-import World1600 from './assets/World-1600.svg?react';
-import World1650 from './assets/World-1650.svg?react';
-import World1700 from './assets/World-1700.svg?react';
-import World1715 from './assets/World-1715.svg?react';
-import World1785 from './assets/World-1785.svg?react';
-import World1800 from './assets/World-1800.svg?react';
-import World1815 from './assets/World-1815.svg?react';
-import World1880 from './assets/World-1880.svg?react';
-import World1900 from './assets/World-1900.svg?react';
-import World1914 from './assets/World-1914.svg?react';
-import World1930 from './assets/World-1930.svg?react';
-import World1938 from './assets/World-1938.svg?react';
-import World1950 from './assets/World-1950.svg?react';
-import World1960 from './assets/World-1960.svg?react';
-import World1994 from './assets/World-1994.svg?react';
+import { countryNotes, generalNotes } from "./notes";
+import World1200 from "./assets/World-1200.svg?react";
+import World1280 from "./assets/World-1280.svg?react";
+import World1300 from "./assets/World-1300.svg?react";
+import World1400 from "./assets/World-1400.svg?react";
+import World1500 from "./assets/World-1500.svg?react";
+import World1530 from "./assets/World-1530.svg?react";
+import World1600 from "./assets/World-1600.svg?react";
+import World1650 from "./assets/World-1650.svg?react";
+import World1700 from "./assets/World-1700.svg?react";
+import World1715 from "./assets/World-1715.svg?react";
+import World1785 from "./assets/World-1785.svg?react";
+import World1800 from "./assets/World-1800.svg?react";
+import World1815 from "./assets/World-1815.svg?react";
+import World1880 from "./assets/World-1880.svg?react";
+import World1900 from "./assets/World-1900.svg?react";
+import World1914 from "./assets/World-1914.svg?react";
+import World1930 from "./assets/World-1930.svg?react";
+import World1938 from "./assets/World-1938.svg?react";
+import World1950 from "./assets/World-1950.svg?react";
+import World1960 from "./assets/World-1960.svg?react";
+import World1994 from "./assets/World-1994.svg?react";
 import { useTimeSliderContext } from "./TimeSlider";
 import ArrowsRight from "./assets/DoubleGreenArrows.png";
-import { Popup } from "./popup";
+import { AutoscalingPopup, CountryInfoLayout } from "./popup";
 
 function getRandomHexColor(): string {
   // Pick random values between 128 and 255 for each channel
@@ -37,7 +37,7 @@ function getRandomHexColor(): string {
   }
 
   // Convert each to hex and pad to 2 digits
-  const hex = (n: number) => n.toString(16).padStart(2, '0');
+  const hex = (n: number) => n.toString(16).padStart(2, "0");
 
   return `#${hex(r)}${hex(g)}${hex(b)}`;
 }
@@ -53,6 +53,7 @@ export const GeographicSelectionPage = () => {
   const mapRef = useRef<HTMLDivElement>(null);
   const [canScrollRight, setCanScrollRight] = useState<boolean>(false);
   const [canScrollLeft, setCanScrollLeft] = useState<boolean>(false);
+
 
   const scrollMap = (direction: "left" | "right") => {
     if (mapRef.current) {
@@ -123,31 +124,37 @@ export const GeographicSelectionPage = () => {
     return styles;
   }, [countryColors, hoveredConcept]);
 
-    const timeMaps: Record<number, React.ComponentType<React.SVGProps<SVGSVGElement>>> = {
-        1200: World1200,
-        1280: World1280,
-        1300: World1300,
-        1400: World1400,
-        1500: World1500,
-        1530: World1530,
-        1600: World1600,
-        1650: World1650,
-        1700: World1700,
-        1715: World1715,
-        1785: World1785,
-        1800: World1800,
-        1815: World1815,
-        1880: World1880,
-        1900: World1900,
-        1914: World1914,
-        1930: World1930,
-        1938: World1938,
-        1950: World1950,
-        1960: World1960,
-        1994: World1994
-    };
+  const timeMaps: Record<
+    number,
+    React.ComponentType<React.SVGProps<SVGSVGElement>>
+  > = {
+    1200: World1200,
+    1280: World1280,
+    1300: World1300,
+    1400: World1400,
+    1500: World1500,
+    1530: World1530,
+    1600: World1600,
+    1650: World1650,
+    1700: World1700,
+    1715: World1715,
+    1785: World1785,
+    1800: World1800,
+    1815: World1815,
+    1880: World1880,
+    1900: World1900,
+    1914: World1914,
+    1930: World1930,
+    1938: World1938,
+    1950: World1950,
+    1960: World1960,
+    1994: World1994,
+  };
 
-    const timePeriods: number[] = [1200, 1280, 1300, 1400, 1500, 1530, 1600, 1650, 1700, 1715, 1785, 1800, 1815, 1880, 1900, 1914, 1930, 1938, 1950, 1960, 1994, 2025];
+  const timePeriods: number[] = [
+    1200, 1280, 1300, 1400, 1500, 1530, 1600, 1650, 1700, 1715, 1785, 1800,
+    1815, 1880, 1900, 1914, 1930, 1938, 1950, 1960, 1994, 2025,
+  ];
 
   const getMapByTime = ():
     | React.ComponentType<React.SVGProps<SVGSVGElement>>
@@ -189,9 +196,11 @@ export const GeographicSelectionPage = () => {
                 `${selector} { ${Object.entries(style)
                   .map(
                     ([prop, value]) =>
-                      `${prop.replace(/([A-Z])/g, "-$1").toLowerCase()}: ${value};`,
+                      `${prop
+                        .replace(/([A-Z])/g, "-$1")
+                        .toLowerCase()}: ${value};`
                   )
-                  .join(" ")} }`,
+                  .join(" ")} }`
             )
             .join("\n")}
         </style>
@@ -233,7 +242,16 @@ export const GeographicSelectionPage = () => {
                         key={concept}
                         onClick={() => setSelectedCountry(concept)}
                         className={`px-4 py-2 bg-gradient-to-r from-indigo-500 to-blue-600 text-white rounded-full text-sm font-medium hover:from-indigo-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg
-                                    ${notes.emphasizedUnit[0] === selectedWHAPTime[0] && notes.emphasizedUnit[1] === selectedWHAPTime[1] && notes.timePeriod[0] <= selectedTime && notes.timePeriod[1] >= selectedTime ? "" : "opacity-50"}`}
+                                    ${
+                                      notes.emphasizedUnit[0] ===
+                                        selectedWHAPTime[0] &&
+                                      notes.emphasizedUnit[1] ===
+                                        selectedWHAPTime[1] &&
+                                      notes.timePeriod[0] <= selectedTime &&
+                                      notes.timePeriod[1] >= selectedTime
+                                        ? ""
+                                        : "opacity-50"
+                                    }`}
                         onMouseEnter={() => setHoveredConcept(concept)}
                         onMouseLeave={() => setHoveredConcept(null)}
                       >
@@ -248,10 +266,7 @@ export const GeographicSelectionPage = () => {
 
         {/* SVG viewport container */}
         <div className="relative w-full h-full flex pt-2">
-          <div
-            ref={mapRef}
-            className="overflow-auto"
-          >
+          <div ref={mapRef} className="overflow-auto">
             <div className="min-w-[1600px] min-h-[900px] flex justify-center items-center">
               <MapComponent
                 className="svg-container"
@@ -279,22 +294,29 @@ export const GeographicSelectionPage = () => {
                   <img
                     src={ArrowsRight}
                     alt={`Scroll ${direction}`}
-                    className={`h-10 w-10 ${direction === "left" ? "rotate-180" : ""}`}
+                    className={`h-10 w-10 ${
+                      direction === "left" ? "rotate-180" : ""
+                    }`}
                   />
                 </button>
               )
             );
           })}
         </div>
-        {selectedCountry && (() => {
-          const { timePeriod, ...notes} = countryNotes[selectedCountry] || generalNotes[selectedCountry];
-          return <Popup
-            noteTitle={selectedCountry}
-            notes={notes}
-            extra={[timePeriod ? ("Time Period: " + timePeriod) : ""]}
-            onClose={() => setSelectedCountry(null)}
-          />
-        })()}
+        {selectedCountry &&
+          (() => {
+            const { timePeriod, ...notes } =
+              countryNotes[selectedCountry] || generalNotes[selectedCountry];
+            return (
+              <AutoscalingPopup onClose={() => setSelectedCountry(null)}>
+                <CountryInfoLayout
+                  countryName={selectedCountry}
+                  notes={notes}
+                  extra={[timePeriod ? "Time Period: " + timePeriod : ""]}
+                />
+              </AutoscalingPopup>
+            );
+          })()}
       </div>
     </div>
   );
