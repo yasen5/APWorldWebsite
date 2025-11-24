@@ -53,7 +53,7 @@ export const GeographicSelectionPage = () => {
   const mapRef = useRef<HTMLDivElement>(null);
   const [canScrollRight, setCanScrollRight] = useState<boolean>(false);
   const [canScrollLeft, setCanScrollLeft] = useState<boolean>(false);
-  const [quizActive, setQuizActive] = useState<boolean>(false);
+
 
   const scrollMap = (direction: "left" | "right") => {
     if (mapRef.current) {
@@ -196,7 +196,7 @@ export const GeographicSelectionPage = () => {
           Quiz!
         </button>
 
-        
+
 
         <style>
           {Object.entries(countryStyles)

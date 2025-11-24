@@ -60,10 +60,11 @@ export const AutoscalingPopup: React.FC<{ children: React.ReactNode, opaqueness?
       </button>
       <div
         ref={popupRef}
-        className={`w-[80vw] h-[80vh] relative overflow-y-scroll bg-[#f8f8f8] border-2 border-[#999] rounded-md shadow-lg p-6 text-left opacity-[${opaqueness || 1}]`}
+        className="w-[80vw] h-[80vh] relative overflow-y-scroll bg-[#f8f8f8] border-2 border-[#999] rounded-md shadow-lg p-6 text-left"
         style={{
           transform: `scale(${1 / zoomLevel})`,
           transformOrigin: "top left",
+          opacity: opaqueness || 1,
         }}
       >
         {children}
@@ -106,7 +107,7 @@ export const CountryInfoLayout: React.FC<{
               </Dropdown>
             )
         )}
-        {links &&
+      {links &&
         links
           .filter(([title, _]) => title.length !== 0)
           .map(([title, onClick]) => (
@@ -115,8 +116,8 @@ export const CountryInfoLayout: React.FC<{
             </button>
           ))}
     </div>
-  )
-}
+  );
+};
 
 const categoryColors: Record<string, string> = {
   Culture: "#FF6B6B",
