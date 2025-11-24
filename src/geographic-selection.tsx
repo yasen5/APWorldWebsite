@@ -189,15 +189,6 @@ export const GeographicSelectionPage = () => {
   return (
     <div className="flex flex-col items-center justify-start w-full h-full">
       <div className="w-full h-full overflow-y-auto">
-        <button
-          className="h-8 bg-gradient-to-r from-red-500 to-orange-600 cursor-pointer flex text-white font-medium shadow-md hover:shadow-lg transition-shadow"
-          onClick={() => setQuizActive(true)}
-        >
-          Quiz!
-        </button>
-
-
-
         <style>
           {Object.entries(countryStyles)
             .map(

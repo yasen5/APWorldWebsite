@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 
-export const AutoscalingPopup: React.FC<{ children: React.ReactNode, opaqueness?: number, onClose: () => void; }> = ({
-  children,
-  opaqueness,
-  onClose
-}) => {
+export const AutoscalingPopup: React.FC<{
+  children: React.ReactNode;
+  opaqueness?: number;
+  onClose: () => void;
+}> = ({ children, opaqueness, onClose }) => {
   const popupRef = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState({ top: 0, left: 0 });
   const [zoomLevel, setZoomLevel] = useState(1);
@@ -50,14 +50,6 @@ export const AutoscalingPopup: React.FC<{ children: React.ReactNode, opaqueness?
         left: `${position.left}px`,
       }}
     >
-      <button
-        className="[all:unset] cursor-pointer absolute top-2 right-2 text-black"
-        onClick={onClose}
-        aria-label="Close"
-        style={{ backgroundColor: "#f8f8f8", color: "black" }}
-      >
-        x
-      </button>
       <div
         ref={popupRef}
         className="w-[80vw] h-[80vh] relative overflow-y-scroll bg-[#f8f8f8] border-2 border-[#999] rounded-md shadow-lg p-6 text-left"
@@ -67,6 +59,14 @@ export const AutoscalingPopup: React.FC<{ children: React.ReactNode, opaqueness?
           opacity: opaqueness || 1,
         }}
       >
+        <button
+          className="[all:unset] cursor-pointer absolute top-2 right-2 text-black"
+          onClick={onClose}
+          aria-label="Close"
+          style={{ backgroundColor: "#f8f8f8", color: "black" }}
+        >
+          x
+        </button>
         {children}
       </div>
     </div>,
@@ -74,7 +74,7 @@ export const AutoscalingPopup: React.FC<{ children: React.ReactNode, opaqueness?
   );
 };
 
-export const CountryInfoLayout: React.FC<{ 
+export const CountryInfoLayout: React.FC<{
   countryName: string;
   notes: Record<string, string[] | [number, number] | string>;
   extra?: string[];
