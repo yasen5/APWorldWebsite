@@ -997,12 +997,13 @@ export const countryNotes: CountryNotes = {
       "First came to China in 1514 with traders and missionaries",
     ],
   },
-  "Holy Roman Empire 1200-1806": {
+  "Holy Roman Empire 1450-1806": {
     Culture: [
       "Lutheranism was started by Martin Luther in 1516 when he wrote the 95 Theses about his grievances with the church (including indulgences, where people could pay for salvation, simony, where people could pay for church offices, and the fact that the Bible was only available in Latin so the church kept control over its interpretations). Lutheranism spread quickly, especially to political leaders and launched social revolutions and the Protestant Reformation",
       "Different areas were Catholic, Lutheran, or Calvinist",
     ],
     Governance: [
+      "962-1806",
       "Lost power during the Thirty Years War (1619-1648)",
       "Fell when Napoleon invaded in 1806",
       "States within the Holy Roman Empire, such as Prussia and Austria, began to have more autonomy and develop their own military",
@@ -1317,17 +1318,48 @@ export const countryNotes: CountryNotes = {
       "Exported slaves, gold and the kola nut. They faciltated trade of textiles, hardware, and weapons",
     ],
   },
-  "Russia 1380-1917": {
+  "Russia 1380-1450": {
+    Culture: [
+      "Eastern Orthodox, but Muslim in steppes"
+    ],
+    Governance: [
+      "Drove out the Mongol Golden Horde in 1380"
+    ],
+    Economy: [
+      "Exported furs",
+      "Mainly produced agricultural products like wheat",
+    ],
+    Social: [
+      "Social hierarchy: Boyars (land-owning nobles), then merchants, then peasants (who were often driven into debt and serfdom",
+    ],
+  },
+  "Russia 1450-1750": {
+    Culture: [
+      "Eastern Orthodox, but Muslim in steppes",
+    ],
+    Governance: [
+      "The government hired soldiers called cossacks beginning in 1552. They were very good warriors but sometimes they decided not to follow the state's orders",
+      "Expanded east to Central Asia",
+      "Settled by the Amur river in the 1640s to grow grain, but the Ming Dynasty felt threatened, leading to the Treaty of Nerchinsk in 1689, which recognized Russian ownership of the land but forced them not to settle there",
+      "Ivan the Terrible ruled from 1533 to 1584. He expanded Russia east and south using the cossacks. There was a lot of tension with the boyars, so he forced them to move to Moscow, where it would be harder to plot against him. He also made the oprichnina, a paramilitary force loyal to him",
+      'Peter the Great ruled from 1682 to 1725. He was known as the "Defender of Orthodoxy" and was at first in favor with the church until he tried to reform it too much (tried to make it answer to him). He divided Russia into provinces and made provincial officials. He moved the capital from Moscow to St. Petersburg and reintegrated Russia with Western Europe. He was known for copying Western Europe (especially French) things, including technology, tolerance, and trade, but not democracy',
+    ],
+    Economy: [
+      "Exported furs",
+      "Mainly produced agricultural products like wheat",
+    ],
+    Social: [
+      "Social hierarchy: Boyars (land-owning nobles), then merchants, then peasants (who were often driven into debt and serfdom",
+    ],
+  },
+  "Russia 1750-1917": {
     Culture: [
       "Eastern Orthodox, but Muslim in steppes",
       "Religously tolerant until the end when they wanted to promote a uniform Russian identity",
     ],
     Governance: [
-      "The government hired soldiers called cossacks. They were very good warriors but sometimes they decided not to follow the state's orders",
+      "The government used soldiers called cossacks. They were very good warriors but sometimes they decided not to follow the state's orders",
       "Expanded east to Central Asia, and west to Alaska and California",
-      "Settled by the Amur river in the 1640s to grow grain, but the Ming Dynasty felt threatened, leading to the Treaty of Nerchinsk in 1689, which recognized Russian ownership of the land but forced them not to settle there",
-      "Ivan the Terrible ruled from 1533 to 1584. He expanded Russia east and south using the cossacks. There was a lot of tension with the boyars, so he forced them to move to Moscow, where it would be harder to plot against him. He also made the oprichnina, a paramilitary force loyal to him",
-      'Peter the Great ruled from 1682 to 1725. He was known as the "Defender of Orthodoxy" and was at first in favor with the church until he tried to reform it too much (tried to make it answer to him). He divided Russia into provinces and made provincial officials. He moved the capital from Moscow to St. Petersburg and reintegrated Russia with Western Europe. He was known for copying Western Europe (especially French) things, including technology, tolerance, and trade, but not democracy',
       "Catherine the Great (ruled 1762-1792) expanded Russia, taking Polish and Ottoman Territory",
       "In 1774, a cossack named Yemelyan Pugachev started the Pugachev Rebellion against Catherine the Great. The movement aimed to gain more rights for serfs, but was defeated by the Russian army, and Catherine doubled down on oppressing the peasants",
       "Began exploring Alaska and the North American West Coast in the 1800s",
@@ -1336,13 +1368,15 @@ export const countryNotes: CountryNotes = {
     ],
     Economy: [
       "Exported furs",
-      "Mainly produced agricultural products like wheat until Communism, when they began producing more coal, iron, and steel",
+      "Mainly produced agricultural products like wheat",
     ],
     Social: [
       "Social hierarchy: Boyars (land-owning nobles), then merchants, then peasants (who were often driven into debt and serfdom",
-      "Built railroads like the Trans-Siberian Railroad to allow for easier trade and transport between the east and west of Russia",
       "Serfdom ended in 1861",
     ],
+    Technology: [
+      "Built railroads like the Trans-Siberian Railroad to allow for easier trade and transport between the east and west of Russia",
+    ]
   },
   "Qing Dynasty": {
     Environment: [
@@ -1379,7 +1413,7 @@ export const countryNotes: CountryNotes = {
       "Emperor Qianlong (ruled from 1736 to 1796) portrayed himself as a Universal Ruler, appealing to Buddhists by portraying himself as a bodhisattva, and appealing to Confucians through commissioning Nanxuntu, similar to Kangxi. Under him, the bureaucracy became more corrupt",
     ],
   },
-  "United States 1776-1920": {
+  "United States 1776-1900": {
     Culture: [
       "In 1889, the Northern Paiute Indians in Nevada started a movement called the Ghost Dance. It was caused by decline of resoures due to deforestation and irrigation, assimilation to white culture. The Native Americans did Ghost Dance Rituals, which were nonviolent, because they believed that the dead would come back to overthrow the whites and restore the land. The movement spread from the Sierra Nevada to the Missouri River and from Northern Texas to Canada. The US army killed 150-200 Natives at the Wounded Knee Massacre in 1890, and the movement died down after that.",
       "Ethnic enclaves formed as immigrants moved to America"
@@ -1393,21 +1427,15 @@ export const countryNotes: CountryNotes = {
       "President Monroe's Secretary of State John Quincy Adams made the Monroe Doctrine in 1823, stating that European nations should not interfere with the Western Hemisphere, and that the US would not interfere with European wars. This allowed the US to be the main power in the Americas and prevented European colonization/regaining of territories",
       "Bought Alaska from the British in 1867",
       "Fought the Spanish during the Spanish-American War (1898-1899). They won and gained the Philippines, Puerto Rico, and Guam",
-      "In 1904, Roosevelt made the Roosevelt Corollary to the Monroe Doctrine saying that the US could intervene in unstable Latin American countries, allowing them to have economic dominance",
-      "During World War I, they were initially neutral but joined the Allies in 1917, tipping the balance towards Allied victory",
-      "Sent troops to try to stop the Bolsheviks from taking over during the Russian Civil War",
     ],
     Economy: [
       "Began industrializing after the Civil War, and became a leading manufacturer of steel, oil, and automobiles by the early 1900s. Their industrialization was especially successful because they had a lot of human capital as people would immigrate tothe US due to political or economic problems in their home countries",
-      "The United Fruit Company traded fruits in Central America and the Caribbean. They pressured the governemnts there to give them ideal trading rights. This led to the creation of banana republics, politically unstable Central American countries dependent on exportation to foreign corporations"
     ],
     Social: [
       "Manifest Destiny was the belief that Americans had the right to expand to the Pacific Ocean",
       "Many people immigrated to America during the gold rush",
       "In 1879, California made a new constitution that discriminated against Chinese immigrants. The government couldn't hire them, they weren't allowed citizenship, and segregation was put in place",
       "In 1882, the Chinese Exclusion Act banned Chinese immigration",
-      "In 1907, the US agreed to not restrict Japanese immigration in exchange for the Japanese stopping emigration to the US. This was called the Gentlemen's Agreement. It was endded in 1924 by the Immigration Act",
-
     ],
     Technology: [
       "The Transcontinental Railway was completed in 1869"
@@ -1416,8 +1444,11 @@ export const countryNotes: CountryNotes = {
       "The expansion of railroads connected markets and facilitated westward expansion, often at the expense of the Indigenous peoples",
     ],
   },
-  "United States 1920-Present": {
+  "United States 1900-Present": {
     Governance: [
+      "In 1904, Roosevelt made the Roosevelt Corollary to the Monroe Doctrine saying that the US could intervene in unstable Latin American countries, allowing them to have economic dominance",
+      "During World War I, they were initially neutral but joined the Allies in 1917, tipping the balance towards Allied victory",
+      "Sent troops to try to stop the Bolsheviks from taking over during the Russian Civil War",
       "The U.S. entered World War II after the attack on Pearl Harbor in 1941, becoming a global superpower after the war",
       "During the Cold War, the US led the Western bloc against the Soviets",
       "One of the permanent members of the UN Security Council",
@@ -1427,11 +1458,12 @@ export const countryNotes: CountryNotes = {
       "Tensions rose again in the 1980s",
     ],
     Economy: [
-      "The interwar period saw economic boom in the 1920s, followed by the Great Depresssion beginning in 1929",
+      "The United Fruit Company traded fruits in Central America and the Caribbean. They pressured the governemnts there to give them ideal trading rights. This led to the creation of banana republics, politically unstable Central American countries dependent on exportation to foreign corporations",      "The interwar period saw economic boom in the 1920s, followed by the Great Depresssion beginning in 1929",
       "The New Deal programs under Franklin D. Roosevelt expanded the federal government's role in the economy. The policies aimed to bring relief for citizens, recovery to bring the nation out of depression, and reform to prevent economic depressions in the future. The government used deficit spending to deal with economic problems and stimulate economic activity. They also started FDIC, which ensured that the government could pay citizens back if the bank collapsed. The economy was recovering until FDR thought that the government deficit was too big and tried to reverse some of his actions, and the economy got worse again",
       "The US made the Marshall Plan in 1947, where they offered $12 million to European countries to modernize, reduce trade barriers, and improve infrastructre, since they thought that there would be more communist revolutions if the economy was unstable",
     ],
     Social: [
+      "In 1907, the US agreed to not restrict Japanese immigration in exchange for the Japanese stopping emigration to the US. This was called the Gentlemen's Agreement. It was endded in 1924 by the Immigration Act",
       "White women gained the right to vote in 1920",
       "Demonstrations for women's and African Americans' rights",
       "The 1964 Civil Rights Act banned discrimination based on race, color, religion, or national origin",
@@ -1442,7 +1474,7 @@ export const countryNotes: CountryNotes = {
       "Landed the first man on the moon in 1969",
     ],
   },
-  "France 1750-1920": {
+  "France 1750-1900": {
     Governance: [
       "Louis XVI called the Estates General in 1789 because he wanted to start taxing nobles to get more money, but as the nobles essentially had 2 of the 3 votes, they avoided the tax. The bourgeoisie were angry that they only had one vote so they formed the National Assembly which pushed for a constitutional monarchy",
       "The commoners stormed the Bastille on July 14, 1789. In October, they stormed Versailles and made the king make the monarchy constitutional (they didn't want to kill him, they only wanted him to make things better)",
@@ -1450,8 +1482,6 @@ export const countryNotes: CountryNotes = {
       "Eventually, the Jacobins, extreme revolutionaries, were elected. They wanted to end the monarchy, the church's power, and slavery, and killed anyone (including the king and queen) who were “against” the revolution (could have been for any reason) in the 1793 Reign of Terror.",
       "In 1804, Napoleon Bonaparte took control of France in a coup d'ètat, and became emperor through a vote (the French people wanted stability after the reign of terror). He fixed the economic situation, but got rid of freedom of speech. He invaded Russia in 1812 and lost half a million people.",
       "In 1815, other European countries overthrew Napoleon, exiling him to Île d'Elbe and reestablished the monarchy. They wanted to ensure that the monarchs would stay in control so they promoted conservatism and buried the idea of democracy from 1815 to 1848",
-      "Fought with the Ottoman Empire and Britain against Russia in the Crimean War (1853-1856) and won",
-      "Fought with th Allies during World War I",
     ],
     Economy: [
       "Began industrializing in the 1850s, but it wasn't as successful because the cities had smaller populations, they had no iron or coal deposits, and France had a lot of wars with their neighboring countries",
@@ -1489,7 +1519,7 @@ export const countryNotes: CountryNotes = {
     ],
     Social: ["Slavery persisted until 1888"],
   },
-  "Mexico 1821-Present": {
+  "Mexico 1821-1900": {
     Governance: [
       "Wanted independence because of enlightenment ideals, and they didn't like mercantilism. Padre Miguel Hidalgo was one of the leaders of the revolution, and he was very liberal. He wanted land redistribution, and the abolition of the castas system and slavery.",
       "Became a republic in 1821 with Iturbide, a creole general, as king, although he was eventually kicked out of Mexico and killed",
@@ -1497,6 +1527,14 @@ export const countryNotes: CountryNotes = {
       "The French, who wanted Mexico as a colony, used the fact that Juaréz was in debt to them as an excuse to invade Mexico in the French-Mexican War. They were supported by the Mexican Conservatives in overthrowing Juaréz in 1963. The French then replaced him with Austrian Archduke Maximillian as the emperor of Mexico (they wanted to repair relations with Austria",
       "The Mexicans drove the French out Mexico in 1867 with the help of the Americans, returning power to Juaréz.",
       "Juaréz went against the term limits in the constitution he wrote",
+      "Porfirio Díaz ruled as a dictator from 1876-1910. He made a new kind of slavery - debt slavery that could be passed down through families. He wanted to modernize and industrialize, but by giving foreign investors control over Mexico's resources (Americans controlled up to 50% of land). In 1910, he imprisoned his political opponent Francisco Madero, leading to the 1910 Mexican Revolution.",
+    ],
+    Social: [
+      "The creoles wanted more rights, so they kept switching sides to suit their wants. At first, they were against the peninsulares because they wanted more power, but then Hidalgo's followers would attack both peninsulares and creoles so the creoles sided with the peninsulares. Then, in 1820, the Spanish government got rid of the castas system. The creoles wanted to still be at the top of the hierarchy so they switched sides against the peninsulares and Spain.",
+    ],
+  },
+  "Mexico 1900-Present": {
+    Governance: [
       "Porfirio Díaz ruled as a dictator from 1876-1910. He made a new kind of slavery - debt slavery that could be passed down through families. He wanted to modernize and industrialize, but by giving foreign investors control over Mexico's resources (Americans controlled up to 50% of land). In 1910, he imprisoned his political opponent Francisco Madero, leading to the 1910 Mexican Revolution.",
       "The Mexican Revolution (1910-1920) overthrew the dictatorship of Porfirio Díaz, leading to land reforms and a new constitution. It was led by Francisco Madero, the political opponent of Díaz, Francisco \"Pancho\" Villa in northern Mexico, and Emiliano Zapata in southern Mexico. They made Díaz step down and go into exile, and Madero was elected president",
       "There was a lot of political instability and violence (Madero, Villa, and Zapata were all assassinated) until 1930. Leaders didn't follow the constitution, and the military kept trying to establish a military dictatorship",
@@ -1508,9 +1546,8 @@ export const countryNotes: CountryNotes = {
       "Mexico nationalized its oil industry in 1938, giving the state-run company PEMEX control over the industry, asserting economic sovereignty",
     ],
     Social: [
-      "The creoles wanted more rights, so they kept switching sides to suit their wants. At first, they were against the peninsulares because they wanted more power, but then Hidalgo's followers would attack both peninsulares and creoles so the creoles sided with the peninsulares. Then, in 1820, the Spanish government got rid of the castas system. The creoles wanted to still be at the top of the hierarchy so they switched sides against the peninsulares and Spain.",
       "Mexico welcomed Chinese immigrants after the US made the Chinese Exclusion Act in 1882"
-    ],
+    ]
   },
   Italy: {
     Culture: ["Catholic"],
@@ -1546,11 +1583,9 @@ export const countryNotes: CountryNotes = {
     ],
     Economy: ["Was the world leader in steel and coal production"],
   },
-  "England 1750-present": {
+  "England 1750-1900": {
     Governance: [
       "Britain expanded its empire to secure raw materials and markets, using its naval dominance to control global trade routes.",
-      "The Catholic region of Northern Ireland wanted to join the Republic of Ireland, as they were being discriminated against by the Protestant majority. Some of them formed a terrorist group called the Irish Republican Army (IRA), and set off bombs in England to try to get what they wanted. There was finally a cease-fire in 1994",
-      "Left the EU during the 2020 Brexit movement because it felt that the EU restricted its right to govern itself"
     ],
     Economy: [
       "Got cotton, wool, jute, vegetable oil, rubber, coffee, cocoa, meat, and butter from their colonies",
@@ -1561,6 +1596,16 @@ export const countryNotes: CountryNotes = {
       "During the industrial revolution, they developed the spinning jenny, which could spin more than one thread at a time, the water frame, which could power a spinning wheel using water. Textile production began to move to factories instead of homes. They also developed the specialization of labor, leading to the assembly line in the early 1900s.", // econ?
       "Developed the steam engine, the most important invention of the first industrial revolution. It powered factories, so they didn't need to be next to water anymore and could be in more convenient places, as well as steam boats and locomotives, leading to more efficient transportation.",
     ],
+  },
+  "England 1900-Present": {
+    Governance: [
+      "The Catholic region of Northern Ireland wanted to join the Republic of Ireland, as they were being discriminated against by the Protestant majority. Some of them formed a terrorist group called the Irish Republican Army (IRA), and set off bombs in England to try to get what they wanted. There was finally a cease-fire in 1994",
+      "Left the EU during the 2020 Brexit movement because it felt that the EU restricted its right to govern itself"
+    ],
+    Economy: [
+      "Got cotton, wool, jute, vegetable oil, rubber, coffee, cocoa, meat, and butter from their colonies",
+      "Flooded the markets of its competitors. India had been the main producer of cotton, but Britain wanted people to buy British cotton. They began mass production of cotton cloth using their industrialized factories, and imported their cotton to Indian markets, where people would buy the cheaper British cotton rather than the Indian cotton, while also taxing Indian cloth to discourage British from buying Indian cloth. They did the same process in Egypt.",
+    ]
   },
   Egypt: {
     Governance: [
@@ -1584,7 +1629,7 @@ export const countryNotes: CountryNotes = {
       "The Suez Canal was funded by the British and was built by Egyptian corvée laborers (they were unpaid and had to work as taxation). It was finished in 1869",
     ],
   },
-  "Japan 1853-present": {
+  "Japan 1853-1900": {
     Culture: [
       "Began adopting Western culture, including clothing, hairstyles, garden parties, and dances",
     ],
@@ -1593,6 +1638,24 @@ export const countryNotes: CountryNotes = {
       "There was a civil war, as some people wanted to fight the West to preserve their culture, and others were scared of a situation like the Opium Wars in China, and they didn't believe they could win against teh west, so they proposed to protect Japan by working with the West. This led to the end of the Tokugawa Shogunate and isolationism",
       "The Meiji Restoration in 1868 saw the overthrow of the shogun and the return of power to the emperor. The Charter Oath was created, abolishing feudalism, instituting a constitutional monarchy, modernizing the military, establishing a new school system, and promoting industrialization",
       "In 1871, the government dissolved the samurai",
+      "Japan wanted colonies because they didn't have a ton of natural resources or land, so they began taking parts of China, Korea, Southeast Asia, and the Pacific Islands. One group (the Colonization Society) wanted to form colonies in Mexico and Latin America.",
+      "The Japanese military was really powerful, defeating China in the First Sino-Japanese War (1894-1895) and Russia in the Russo-Japanese War (1904-1905)",
+    ],
+    Economy: [
+      "The government promoted industrialization through state-sponsored enterprises, which were later sold to private conglomerates (zaibatsu)",
+      "Received a lot of investment from other countries, especially the US",
+    ],
+    Social: [
+      "Many Japanese went to the US to pursue education",
+      "Many Japanese went to the US, Australia, New Caledonia, or Fiji as contracted laborers. Many were sent to Hawaii on 3-year contracts to produce sugar and pineapple",
+    ],
+    Technology: ["Began adopting Western technology"],
+  },
+  "Japan 1900-present": {
+    Culture: [
+      "Began adopting Western culture, including clothing, hairstyles, garden parties, and dances",
+    ],
+    Governance: [
       "Japan wanted colonies because they didn't have a ton of natural resources or land, so they began taking parts of China, Korea, Southeast Asia, and the Pacific Islands. One group (the Colonization Society) wanted to form colonies in Mexico and Latin America.",
       "The Japanese military was really powerful, defeating China in the First Sino-Japanese War (1894-1895) and Russia in the Russo-Japanese War (1904-1905)",
       "In the 1930s, Japan pursued imperial expansion in East Asia, invading Manchuria (1931) and China (1937)",
@@ -2071,18 +2134,22 @@ export const countryNotes: CountryNotes = {
 
     ]
   },
-  "Spain 1750-Present": {
+  "Spain 1750-1900": {
     Governance: [
       "Many of their colonies in Latin America gained independence in the early 1800s",
       "Fought the Spanish-American War (1898-1899), and lost. They had to give Cuba and the Philippines to America. This marked the end of Spain as a global empire",
+    ],
+    Social: ["Encomienda died out, replaced with the hacienda system"],
+  },
+  "Spain 1900-Present": {
+    Governance: [
       "In 1936, the Popular Front (who were liberal) was elected to lead the government. The conservatives and Nationalists (led by Francisco Franco) were against this, leading to the Spanish Civil War (1936-1939). The Nationalists were supported by Hitler, Mussolini, and Porgual, while the Republicans/Loyalists (who supported the Popular Front) had support from the Soviet Union, Britain, France, and the US. The foreign involvement led to a lot more violence than would have otherwise been used. The Nationalists won, leading to Francisco Franco's dictatorship from 1939-1975",
       "Francisco Franco was very anti-communist, and imprisoned or executed his political opposition and dissenters",
       "After Francisco Franco's dictatorship, Spain transitioned to democracy",
       "The Basque Homeland and Freedom (ETA) terrorist group wanted independence for the Basque region. They killed Francisco Franco's successor, but in 2011 promised to stop the violence."
     ],
-    Social: ["Encomienda died out, replaced with the hacienda system"],
   },
-  "Portugal 1750-Present": {
+  "Portugal 1750-1900": {
     Governance: [
       "Invaded by Napoleon in the 1807, causing the monarchy to flee to Brazil until he was defeated",
       "Brazil gained independence in 1822",
@@ -2264,8 +2331,10 @@ export const countryNotes: CountryNotes = {
     ],
     Social: ["Allowed women to join the army"],
   },
-  "France 1920-Present": {
+  "France 1900-Present": {
     Governance: [
+      "Fought with the Ottoman Empire and Britain against Russia in the Crimean War (1853-1856) and won",
+      "Fought with th Allies during World War I",
       "Represented by Georges Clemenceau at the Paris Peace Conference. He wanted to severely punish Germany because France wanted protection from Germany",
       "Took a lot of Middle Eastern countries as mandates after World War I",
       "Invaded by Germany in 1940. Northeast France was occupied while the South became the Vichy regime and collaborated with the Nazis",
