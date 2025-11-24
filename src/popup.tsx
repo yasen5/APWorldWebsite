@@ -70,39 +70,6 @@ export const Popup: React.FC<{
   extra?: string[];
   onClose: () => void;
 }> = ({ noteTitle, notes, links, extra, onClose }) => {
-  const popupRef = useRef<HTMLDivElement>(null);
-  const [position, setPosition] = useState({ top: 0, left: 0 });
-  const [zoomLevel, setZoomLevel] = useState(1);
-
-  const viewportPercentage = 0.8;
-
-  const updatePopup = () => {
-    const vv = window.visualViewport;
-    const popup = popupRef.current;
-    if (!vv || !popup) return;
-
-    const zoom = vv.scale;
-    setZoomLevel(zoom);
-
-    const top = vv.offsetTop + (vv.height * (1 - viewportPercentage)) / 2;
-    const left = vv.offsetLeft + (vv.width * (1 - viewportPercentage)) / 2;
-
-    setPosition({ top, left });
-  };
-
-  useEffect(() => {
-    updatePopup();
-
-    const vv = window.visualViewport;
-    vv?.addEventListener("resize", updatePopup);
-    vv?.addEventListener("scroll", updatePopup);
-
-    return () => {
-      vv?.removeEventListener("resize", updatePopup);
-      vv?.removeEventListener("scroll", updatePopup);
-    };
-  }, []);
-
   return (
     <AutoscalingPopup>
       <button
