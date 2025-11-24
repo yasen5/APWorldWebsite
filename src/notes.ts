@@ -200,8 +200,8 @@ export const generalNotes: GeneralNotes = {
       "It resulted in the Peace of Westphalia, where each area of the Holy Roman Empire could choose Roman Catholicism, Lutheranism, or Calvinism",
     ],
     applicableCountries: [
-      "England 1450-1700",
-      "France 1450-1700",
+      "England 1450-1750",
+      "France 1450-1750",
       "Holy Roman Empire 1450-1806",
       "Spain 1492-1750",
       "Netherlands 1450-1750",
@@ -953,7 +953,7 @@ export const countryNotes: CountryNotes = {
       "Women didn't have a lot of power. They could only become wealthy if they inherited money when widowed. They were, however, able to escape the patriarchy by joinng a monastery or convent",
     ],
   },
-  "France 1450-1700": {
+  "France 1450-1750": {
     Governance: [
       "The kings used Divine Right, meaning that they were chosen by God, to legitimize their rule and give them political and religious authority and become absolute monarchs",
       "Louis XIV (ruled 1643 to 1715) was the strongest absolute monarch at the time. In the Versailles architecture, he often portrayed himself and his family as gods. He centralized the government, and limited nobles' power by keeping them close and distracting them at Versailles",

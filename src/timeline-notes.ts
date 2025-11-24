@@ -82,7 +82,7 @@ export const timelineNotes: TimelineNotes = {
     "Little Ice Age" : {
         timePeriod: [1300, 1850],
         emphasizedUnit: [1200, 1450],
-        applicableCountries: ["England 1200-1450", "England 1450-1750", "France 1200-1450", "France 1450-1700", "Holy Roman Empire 1200-1450", "Holy Roman Empire 1450-1806", "Ottoman Empire", "Il-Khanate", "Ming Dynasty", "Spain 1492-1750"],
+        applicableCountries: ["England 1200-1450", "England 1450-1750", "France 1200-1450", "France 1450-1750", "Holy Roman Empire 1200-1450", "Holy Roman Empire 1450-1806", "Ottoman Empire", "Il-Khanate", "Ming Dynasty", "Spain 1492-1750"],
         description: ["The world experienced cooling for 5 centuries, which made winters colder and shortened growing seasons, affecting agriculture"],
         causes: [""],
         effects: ["Less agricultural production led to limited urbanization",
@@ -404,7 +404,7 @@ export const timelineNotes: TimelineNotes = {
         timePeriod: [1618, 1648],
         emphasizedUnit: [1450, 1750],
         applicableCountries: ["England 1450-1700",
-            "France 1450-1700",
+            "France 1450-1750",
             "Holy Roman Empire 1450-1806",
             "Spain 1492-1750",
             "Netherlands 1450-1750"
