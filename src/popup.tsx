@@ -1,8 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 
-export const AutoscalingPopup: React.FC<{ children: React.ReactNode }> = ({
+export const AutoscalingPopup: React.FC<{ children: React.ReactNode, opaqueness?: number, onClose: () => void; }> = ({
   children,
+  opaqueness,
+  onClose
 }) => {
   const popupRef = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState({ top: 0, left: 0 });
@@ -48,9 +50,17 @@ export const AutoscalingPopup: React.FC<{ children: React.ReactNode }> = ({
         left: `${position.left}px`,
       }}
     >
+      <button
+        className="[all:unset] cursor-pointer absolute top-2 right-2 text-black"
+        onClick={onClose}
+        aria-label="Close"
+        style={{ backgroundColor: "#f8f8f8", color: "black" }}
+      >
+        x
+      </button>
       <div
         ref={popupRef}
-        className="w-[80vw] h-[80vh] relative overflow-y-scroll bg-[#f8f8f8] border-2 border-[#999] rounded-md shadow-lg p-6 text-left"
+        className={`w-[80vw] h-[80vh] relative overflow-y-scroll bg-[#f8f8f8] border-2 border-[#999] rounded-md shadow-lg p-6 text-left opacity-[${opaqueness || 1}]`}
         style={{
           transform: `scale(${1 / zoomLevel})`,
           transformOrigin: "top left",
@@ -63,25 +73,16 @@ export const AutoscalingPopup: React.FC<{ children: React.ReactNode }> = ({
   );
 };
 
-export const Popup: React.FC<{
-  noteTitle: string;
+export const CountryInfoLayout: React.FC<{ 
+  countryName: string;
   notes: Record<string, string[] | [number, number] | string>;
-  links?: [string, () => void][];
   extra?: string[];
-  onClose: () => void;
-}> = ({ noteTitle, notes, links, extra, onClose }) => {
+  links?: [string, () => void][];
+}> = ({ countryName, notes, extra, links }) => {
   return (
-    <AutoscalingPopup>
-      <button
-        className="[all:unset] cursor-pointer absolute top-2 right-2 text-black"
-        onClick={onClose}
-        aria-label="Close"
-        style={{ backgroundColor: "#f8f8f8", color: "black" }}
-      >
-        x
-      </button>
+    <div>
       <h2 className="font-bold text-2xl text-black" id="modal-title">
-        {noteTitle}
+        {countryName}
       </h2>
       {extra &&
         extra.map((text) => (
@@ -105,7 +106,7 @@ export const Popup: React.FC<{
               </Dropdown>
             )
         )}
-      {links &&
+        {links &&
         links
           .filter(([title, _]) => title.length !== 0)
           .map(([title, onClick]) => (
@@ -113,9 +114,9 @@ export const Popup: React.FC<{
               {title}
             </button>
           ))}
-    </AutoscalingPopup>
-  );
-};
+    </div>
+  )
+}
 
 const categoryColors: Record<string, string> = {
   Culture: "#FF6B6B",
