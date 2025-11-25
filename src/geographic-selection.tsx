@@ -297,7 +297,7 @@ const MapHandler: React.FC<{
       .map((el) => el.getAttribute("data-country"))
       .filter((v): v is string => !!v);
     setPresentNations(found);
-  }, [MapComponent]);
+  }, [MapComponent, setPresentNations]);
 
   const scrollMap = (direction: "left" | "right") => {
     if (mapRef.current) {
