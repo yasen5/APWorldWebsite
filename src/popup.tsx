@@ -91,7 +91,7 @@ export const CountryInfoLayout: React.FC<{
       {extra && (
         <div className="flex justify-between mb-4">
           {extra.map((text) => (
-            <span key={text} className="flex-1 text-center !text-black">
+            <span key={text} className="flex-1 text-black font-semibold">
               {text}
             </span>
           ))}
@@ -113,6 +113,7 @@ export const CountryInfoLayout: React.FC<{
               </Dropdown>
             )
         )}
+      <h3 className="!text-black font-semibold mt-4">Involved Countries:</h3>
       {links &&
         links
           .filter(([title, _]) => title.length !== 0)
