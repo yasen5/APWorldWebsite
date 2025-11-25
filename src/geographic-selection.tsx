@@ -6,7 +6,7 @@ import {
   useRef,
   useState,
 } from "react";
-import { countryNotes, generalNotes, type CountryNotes } from "./notes";
+import { countryNotes, generalNotes } from "./notes";
 import World1200 from "./assets/World-1200.svg?react";
 import World1280 from "./assets/World-1280.svg?react";
 import World1300 from "./assets/World-1300.svg?react";
@@ -286,7 +286,7 @@ const MapHandler: React.FC<{
   const mapRef = useRef<HTMLDivElement>(null);
   const [canScrollRight, setCanScrollRight] = useState<boolean>(false);
   const [canScrollLeft, setCanScrollLeft] = useState<boolean>(false);
-  const { presentNations, setPresentNations } = useMapHandlerContext();
+  const { setPresentNations } = useMapHandlerContext();
 
   useEffect(() => {
     const svgEl = mapRef.current;
