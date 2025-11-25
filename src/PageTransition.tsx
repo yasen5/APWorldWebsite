@@ -6,6 +6,7 @@ import { createContext, useContext, useState, useRef } from "react";
 import { ExplanationPage } from "./Explanation.tsx";
 import TimelinePage from "./timeline-page.tsx";
 import { Unit9Page } from "./Unit9Page.tsx";
+import { pageview } from "./analytics";
 
 interface StartScreenProps {
   goToPage: (page: AppPage) => void
@@ -67,6 +68,8 @@ export const PageTransitionProvider: React.FC<PageTransitionProviderProps> = ({
     if (transitioning) return;
     setTransitioning(true);
     setNextPage(page);
+    // Tracking pageview for google analytics
+    pageview("/" + page.toString());
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
     timeoutRef.current = setTimeout(() => {
       setCurrentPage(page);
