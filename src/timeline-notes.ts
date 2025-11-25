@@ -18,7 +18,7 @@ export const timelineNotes: TimelineNotes = {
             "Venice wanted more economic and political power"
         ],
         effects: ["Weakened the Byzantine Empire"],
-        theme: "governance"
+        theme: "Governance"
     },
     "Mongol conquest" : {
         timePeriod: [1207, 1260],
@@ -34,7 +34,7 @@ export const timelineNotes: TimelineNotes = {
             "Spread of gunpowder weapons and other technology",
             "Mass population decrease in conquered regions"
         ],
-        theme: "governance"
+        theme: "Governance"
     },
     "Magna Carta signed": {
         timePeriod: [1215, 1215],
@@ -43,7 +43,7 @@ export const timelineNotes: TimelineNotes = {
         description: ["The English nobles forced King John to sign the Magna Carta, giving nobles the right to a jury trial before prison and ensuring the king had to consult them on scutage (where knights pay money instead of military service as tax)"],
         causes: ["King John had attempted to charge peasants and cities extra money, which the nobles did not approve of"],
         effects: ["Limited the monarch's power and established the idea that the king was subject to the law"],
-        theme: "governance"
+        theme: "Governance"
     },
     "Baghdad sacked" : {
         timePeriod: [1258, 1258],
@@ -54,7 +54,7 @@ export const timelineNotes: TimelineNotes = {
         effects: ["End of the Abbasid Caliphate",
             "Loss of the House of Wisdom"
         ],
-        theme: "governance"
+        theme: "Governance"
     },
     "English Parliament formed" : {
         timePeriod: [1265, 1265],
@@ -65,7 +65,7 @@ export const timelineNotes: TimelineNotes = {
         effects: ["Increased nobles' rights",
             "Early development of representative government in Europe"
         ],
-        theme: "governance"
+        theme: "Governance"
     },
     "Marco Polo's Book" : {
         timePeriod: [1295, 1295],
@@ -77,7 +77,7 @@ export const timelineNotes: TimelineNotes = {
         ],
         causes: ["Pax Mongolica enabled long-distance travel"],
         effects: ["Increased European interest in Asia"],
-        theme: "culture"
+        theme: "Culture"
     },
     "Little Ice Age" : {
         timePeriod: [1300, 1850],
@@ -88,7 +88,7 @@ export const timelineNotes: TimelineNotes = {
         effects: ["Less agricultural production led to limited urbanization",
             "In the Ming Dynasty, the decreased agricultural production led to famines"
         ],
-        theme: "environment"
+        theme: "Environment"
     },
     "Pax Mongolica" : {
         timePeriod: [1206, 1350],
@@ -99,7 +99,7 @@ export const timelineNotes: TimelineNotes = {
         ],
         causes: ["Mongol conquest"],
         effects: ["Increased trade and spread of ideas, technologies, and diseases like the Black Death"],
-        theme: "governance"
+        theme: "Governance"
     },
     "Mansa Musa's Pilgrimage" : {
         timePeriod: [1312, 1337],
@@ -114,7 +114,7 @@ export const timelineNotes: TimelineNotes = {
         ],
         effects: ["Crashed economies",
             "Brought Mali fame"],
-        theme: "culture"
+        theme: "Culture"
     },
     "Hundred Years' War" : {
         timePeriod: [1337, 1453],
@@ -129,7 +129,7 @@ export const timelineNotes: TimelineNotes = {
         effects: ["Increased nationalism over regionalism in France and England",
             "Marked the decline of medieval feudal armies and the rise of centralized states"
         ],
-        theme: "governance"
+        theme: "Governance"
     },
     "Black Death" : {
         timePeriod: [1347, 1353],
@@ -143,7 +143,7 @@ export const timelineNotes: TimelineNotes = {
         effects: ["Caused the end of feudalism and serfdom. Since there were so few workers after so many deaths, the serfs were able to demand more rights, such as increased wages.",
             "Led to urbanization as peasants migrated to cities for work"
         ],
-        theme: "environment"
+        theme: "Environment"
     },
     "Renaissance" : {
         timePeriod: [1400, 1600],
@@ -161,7 +161,7 @@ export const timelineNotes: TimelineNotes = {
         effects: ["Increased literacy rates",
             "Sparked the Scientific Revolution"
         ],
-        theme: "culture"
+        theme: "Culture"
     },
     "Zheng He voyages" : {
         timePeriod: [1403, 1424],
@@ -176,7 +176,7 @@ export const timelineNotes: TimelineNotes = {
         effects: ["Exposed China to different religions",
             "Temporarily expanded the tribute system"
         ],
-        theme: "governance"
+        theme: "Governance"
     },
     "Gutenberg Printing Press invented" : {
         timePeriod: [1439, 1439],
@@ -185,7 +185,7 @@ export const timelineNotes: TimelineNotes = {
         description: ["Johannes Gutenberg invented the movable type printing press. This allowed books to be printed easier and cheaper, increasing availability and decreasing costs of books, leading to increased literacy rates"],
         causes: ["Demand for books"],
         effects: ["Increased literacy"],
-        theme: "technology"
+        theme: "Technology"
     },
     "Sikhism founded" : {
         timePeriod: [1469, 1469],
@@ -196,7 +196,7 @@ export const timelineNotes: TimelineNotes = {
         ],
         causes: ["Religious blending"],
         effects: [""],
-        theme: "culture"
+        theme: "Culture"
     },
     "Diaz sails around the Cape of Good Hope" : {
         timePeriod: [1488, 1488],
@@ -209,7 +209,7 @@ export const timelineNotes: TimelineNotes = {
             "State sponsorship for explorers"
         ],
         effects: ["Spurred further exploration to the Indian Ocean"],
-        theme: "governance"
+        theme: "Governance"
     },
     "End of the Inquisition" : {
         timePeriod: [1492, 1492],
@@ -222,7 +222,7 @@ export const timelineNotes: TimelineNotes = {
         effects: ["Muslims and Jews were driven out",
             "The Ottoman Empire took in Jews who had been expelled from the Iberian Peninsula"
         ],
-        theme: "social"
+        theme: "Social"
     },
     "Christopher Columbus lands in America" : {
         timePeriod: [1492, 1492],
@@ -247,7 +247,7 @@ export const timelineNotes: TimelineNotes = {
         description: ["Spain and Portugal split the world with the Line of Demarcation. Any new territory discovered west of the line, including most of the Americas and the Philippines, was reserved for Spain, while any territory east of the line, including Africa and the Indian Ocean, was reserved for Portugal."],
         causes: ["Desire for territory in the New World and Indian Ocean for resources and trade"],
         effects: ["Established the precedent of European powers claiming territory without the considering the inhabitants' sovereignty"],
-        theme: "governance"
+        theme: "Governance"
     },
     "Vasco Da Gama sails to India" : {
         timePeriod: [1498, 1498],
@@ -260,7 +260,7 @@ export const timelineNotes: TimelineNotes = {
         effects: ["Established Portuguese ports for trade in the Indian Ocean",
             "Began Portuguese control in India"
         ],
-        theme: "governance"
+        theme: "Governance"
     },
     "Portuguese conquer Malacca" : {
         timePeriod: [1511, 1511],
@@ -269,7 +269,7 @@ export const timelineNotes: TimelineNotes = {
         description: ["The Portuguese took control of Malacca, effectively ending the Majapahit Empire"],
         causes: ["The Portuguese wanted to expand their power and influence in the Indian Ocean to control maritime trade routes"],
         effects: ["Gave Portugal control of one of the most important choke points in Indian Ocean commerce"],
-        theme: "governance"
+        theme: "Governance"
     },
     "Battle of Chaldiran" : {
         timePeriod: [1514, 1514],
@@ -282,7 +282,7 @@ export const timelineNotes: TimelineNotes = {
         effects: ["Established the border between the Ottoman and Safavid Empire",
             "Stopped Safavid expansion"
         ],
-        theme: "governance"
+        theme: "Governance"
     },
     "Lutheranism created" : {
         timePeriod: [1517, 1517],
@@ -298,7 +298,7 @@ export const timelineNotes: TimelineNotes = {
         ],
         causes: ["The Catholic Church was corrupt"],
         effects: ["Started the Protestant Reformation"],
-        theme: "culture"
+        theme: "Culture"
     },
     "Battle of Panipat" : {
         timePeriod: [1526, 1526],
@@ -307,7 +307,7 @@ export const timelineNotes: TimelineNotes = {
         description: ["The Mughal Empire fought the declining Delhi Sultanate. The Mughals were vastly outnumbered, and the Delhi Sultanate had war elephants, but the Mughals won because they had gunpowder weapons"],
         causes: ["Babur wanted to expand into North India"],
         effects: ["Fall of the Delhi Sultanate, rise of the Mughal Empire"],
-        theme: "governance"
+        theme: "Governance"
     },
     "Calvinism founded" : {
         timePeriod: [1530, 1530],
@@ -317,7 +317,7 @@ export const timelineNotes: TimelineNotes = {
             "Calvinists believed in predestination, where God had already predetermined who would go to heaven. They thought that being predestined to go to heaven, or being one of the Elect, was shown through hard work and wealth, which led to a very strict lifestyle in order to prove to others that they were part of the Elect"],
         causes: ["Lutheranism opened the doors for the Protestant Reformation"],
         effects: ["Led to the spread of Protestantism"],
-        theme: "culture"
+        theme: "Culture"
     },
     "Scientific Revolution" : {
         timePeriod: [1540, 1680],
@@ -329,7 +329,7 @@ export const timelineNotes: TimelineNotes = {
         ],
         causes: ["Renaissance"],
         effects: ["Enlightenment"],
-        theme: "culture"
+        theme: "Culture"
     },
     "Battle of Tondibi" : {
        timePeriod: [1591, 1591],
@@ -344,7 +344,7 @@ export const timelineNotes: TimelineNotes = {
         effects: ["Decline of the Songhai Kingdom",
             "Strengthening of the Moroccan Empire with the annual tribute of slaves and gold"
         ],
-        theme: "governance"
+        theme: "Governance"
     },
     "Edict of Nantes" : {
         timePeriod: [1598, 1598],
@@ -360,7 +360,7 @@ export const timelineNotes: TimelineNotes = {
         effects: ["Temporary religious stability",
             "Revocation in 1685 sparked Huguenot migration to Enlgand and the Netherlands"
         ],
-        theme: "governance"
+        theme: "Governance"
     },
     "Enlightenment" : {
         timePeriod: [1688, 1789],
@@ -384,7 +384,7 @@ export const timelineNotes: TimelineNotes = {
             "Challenged monarchies and church authority",
             "Inspired constitutions"
         ],
-        theme: "culture"
+        theme: "Culture"
     },
     "Japan becomes isolationist" : {
         timePeriod: [1614, 1853],
@@ -398,7 +398,7 @@ export const timelineNotes: TimelineNotes = {
         effects: ["Helped Japan retain its culture and internal stability",
             "Lack of modernization until Japan reopened. After Japan's reopening, it rapidly industrialized"
         ],
-        theme: "governance"
+        theme: "Governance"
     },
         "Thirty Years' War" : {
         timePeriod: [1618, 1648],
@@ -418,7 +418,7 @@ export const timelineNotes: TimelineNotes = {
             "Strenghtened state sovereignty",
             "Reduced papal political influence"
         ],
-        theme: "governance"
+        theme: "Governance"
     },
     "Gloucester County Rebellion" : {
         timePeriod: [1663, 1663],
@@ -430,7 +430,7 @@ export const timelineNotes: TimelineNotes = {
         ],
         causes: ["Mistreatment of slaves"],
         effects: ["Inreased fear among slaveowners and harsher control measures"],
-        theme: "governance"
+        theme: "Governance"
     },
     "Bacon's Rebellion" : {
         timePeriod: [1676, 1676],
@@ -444,7 +444,7 @@ export const timelineNotes: TimelineNotes = {
             "Indentured servants were unhappy because there wasn't enough room for them to get land once they were freed"
         ],
         effects: ["Decline of indentured servitude and shift to racialized chattel slavery"],
-        theme: "governance"
+        theme: "Governance"
     },
     "Pueblo Revolt" : {
         timePeriod: [1680, 1680],
@@ -458,7 +458,7 @@ export const timelineNotes: TimelineNotes = {
         effects: ["The Pueblo regained independence for 12 years",
             "Ensured more tolerance once the Spanish reconquered the area"
         ],
-        theme: "governance"
+        theme: "Governance"
     },
     "English Bill of Rights" : {
         timePeriod: [1689, 1689],
@@ -475,7 +475,7 @@ export const timelineNotes: TimelineNotes = {
         effects: ["Limited monarch's power",
             "Increased individuals' and parliament's power"
         ],
-        theme: "governance"
+        theme: "Governance"
     },
     "Tulip Period" : {
         timePeriod: [1718, 1730],
@@ -486,7 +486,7 @@ export const timelineNotes: TimelineNotes = {
         ],
         causes: ["Increased cultural exchange with Europe"],
         effects: [""],
-        theme: "culture"
+        theme: "Culture"
     },
     "Seven Years' War" : {
         timePeriod: [1754, 1763],
@@ -499,7 +499,7 @@ export const timelineNotes: TimelineNotes = {
         effects: ["French were driven out of India and North America",
             "Srengthened British global power"
         ],
-        theme: "governance"
+        theme: "Governance"
     },
     "Industrial Revolution" : {
        timePeriod: [1760, 1840],
@@ -516,7 +516,7 @@ export const timelineNotes: TimelineNotes = {
            "Reform movements, labor unions",
            "Consumerism, industrial capitalism"
        ],
-       theme: "economy"
+       theme: "Economy"
    },
    "American Revolution" : {
        timePeriod: [1776, 1783],
@@ -530,7 +530,7 @@ export const timelineNotes: TimelineNotes = {
            "Inspired other revolutions like the French and Haitian revolution",
            "Did not affect women's, Native Americans', or African Americans' rights"
        ],
-       theme: "governance"
+       theme: "Governance"
    },
    "French Revolution" : {
        timePeriod: [1789, 1799],
@@ -549,7 +549,7 @@ export const timelineNotes: TimelineNotes = {
             "Spread nationalism and revolutionary ideas",
             "Led othe rise of Napoleon"
        ],
-       theme: "governance"
+       theme: "Governance"
    },
    "Haitian Revolution" : {
        timePeriod: [1791, 1804],
@@ -567,7 +567,7 @@ export const timelineNotes: TimelineNotes = {
            "Other countries refused to acknowledge Haiti's independence",
            "Haiti had to pay large reparations to France, leading them to remain a very poor country"
        ],
-       theme: "governance"
+       theme: "Governance"
    },
    "Dutch East India Company depowered" : {
        timePeriod: [1799, 1799],
@@ -578,7 +578,7 @@ export const timelineNotes: TimelineNotes = {
        ],
        causes: ["The VOC was mismanaged and corrupt, leading to bankruptcy"],
        effects: ["The Netherlands government took control of the VOC's possessions including the Dutch East Indies"],
-       theme: "economy"
+       theme: "Economy"
    },
    "Britain bans slave trade" : {
        timePeriod: [1807, 1807],
@@ -589,7 +589,7 @@ export const timelineNotes: TimelineNotes = {
        effects: ["Decrease in slave trade",
             "British naval patrols disrupted Atlantic slave networks"
        ],
-       theme: "social, economy"
+       theme: "Social, Economy"
    },
    "United States bans slave trade" : {
        timePeriod: [1808, 1808],
@@ -600,7 +600,7 @@ export const timelineNotes: TimelineNotes = {
        effects: ["Decrease in slave trade",
            "Did not stop slavery or domestic slave trade within the United States"
        ],
-       theme: "social, economy"
+       theme: "Social, Economy"
    },
    "Mexican Revolution" : {
        timePeriod: [1810, 1821],
@@ -617,7 +617,7 @@ export const timelineNotes: TimelineNotes = {
        effects: ["Mexico gained independence in 1821 as a republic",
             "Period of political instability followed"
        ],
-       theme: "governance"
+       theme: "Governance"
    },
    "European suppression of democratic reforms" : {
        timePeriod: [1815, 1848],
@@ -632,7 +632,7 @@ export const timelineNotes: TimelineNotes = {
        effects: ["A wave of democracy rose in 1949 due to frustration with conservtive suppression",
         "Helped maintain monarchies in many European countries"
        ],
-       theme: "governance"
+       theme: "Governance"
    },
    "Brazilian Revolution" : {
        timePeriod: [1822, 1822],
@@ -650,7 +650,7 @@ export const timelineNotes: TimelineNotes = {
            "Continuation of slavery until 1888",
            "Maintained political stability by remaning a monarchy instead of a republic"
        ],
-       theme: "governance"
+       theme: "Governance"
    },
    "Monroe Doctrine" : {
        timePeriod: [1823, 1823],
@@ -665,7 +665,7 @@ export const timelineNotes: TimelineNotes = {
        effects: ["Latin American countries could keep their independence",
            "The United States became the major power in the Western Hemisphere"
        ],
-       theme: "governance"
+       theme: "Governance"
    },
    "Greek Independence" : {
        timePeriod: [1827, 1827],
@@ -679,7 +679,7 @@ export const timelineNotes: TimelineNotes = {
            "Other regions of the Ottoman Empire started wanting independence",
            "The Ottoman Empire made the Tanzimat reforms to suppress regional nationalism and promote Ottoman nationalism",
        ],
-       theme: "governance"
+       theme: "Governance"
    },
    "British bans slavery" : {
        timePeriod: [1833, 1833],
@@ -688,7 +688,7 @@ export const timelineNotes: TimelineNotes = {
        description: ["The British banned slavery, ending it in all of their colonies. However, exploitative measures were still used."],
        causes: ["Abolitionist pressure"],
        effects: ["Increased efforts to stop slavery in other countries by stopping slave ships and freeing the slaves"],
-       theme: "social, economy"
+       theme: "Social, Economy"
    },
    "Tanzimat Reforms" : {
        timePeriod: [1839, 1876],
@@ -707,7 +707,7 @@ export const timelineNotes: TimelineNotes = {
            "Increased Ottoman Nationalism",
            "Armenian Genocide"
        ],
-       theme: "governance"
+       theme: "Governance"
    },
    "Opium Wars" : {
        timePeriod: [1839, 1860],
@@ -721,7 +721,7 @@ export const timelineNotes: TimelineNotes = {
        ],
        causes: ["The British wanted more economic advantages in China"],
        effects: ["Gave Britain and other Western countries more advantages and spheres of influence"],
-       theme: "economic"
+       theme: "Economy"
    },
    "Treaty of Waitangi" : {
        timePeriod: [1840, 1840],
@@ -730,7 +730,7 @@ export const timelineNotes: TimelineNotes = {
        description: ["This treaty established New Zealand as a colony and gave the native Maori property rights, although those were largely ignored by settlers"],
        causes: ["British imperialism"],
        effects: ["The Maori Wars were caused because the settlers ignored Maori property rights"],
-       theme: "governance"
+       theme: "Governance"
    },
    "Maori Wars" : {
        timePeriod: [1845, 1872],
@@ -746,7 +746,7 @@ export const timelineNotes: TimelineNotes = {
        effects: ["Maori lost most of their land",
            "Increased settler power"
        ],
-       theme: "governance"
+       theme: "Governance"
    },
    "Great Famine" : {
        timePeriod: [1845, 1852],
@@ -757,7 +757,7 @@ export const timelineNotes: TimelineNotes = {
        ],
        causes: ["Reliance on potatoes"],
        effects: ["Emigration from Ireland"],
-       theme: "environment"
+       theme: "Environment"
    },
    "Mexican-American War" : {
        timePeriod: [1846, 1848],
@@ -771,7 +771,7 @@ export const timelineNotes: TimelineNotes = {
            "The United States gained California, Nevada, Utah, Arizona, New Mexico, and parts of Colorado, Wyoming, Oklahoma, and Kansas, as well as expanded Texan territory",
            "Intesified debates over slavery in newly accquired territory"
        ],
-       theme: "governance"
+       theme: "Governance"
    },
    "Communist Manifesto" : {
        timePeriod: [1848, 1848],
@@ -787,7 +787,7 @@ export const timelineNotes: TimelineNotes = {
        effects: ["Spread of communism",
         "In practice, the middle class continued to grow, but Marxist ideas inspired later socialist and communist movements worldwide"
        ],
-       theme: "culture"
+       theme: "Culture"
    },
    "Taiping Rebellion" : {
        timePeriod: [1850, 1864],
@@ -801,7 +801,7 @@ export const timelineNotes: TimelineNotes = {
        effects: ["Showed the weakness of the government",
         "Destabilized Southern China"
        ],
-       theme: "governance"
+       theme: "Governance"
    },
    "Opening of Japan" : {
        timePeriod: [1853, 1853],
@@ -816,7 +816,7 @@ export const timelineNotes: TimelineNotes = {
        causes: ["American economic imperialism, Manifest Destiny"],
        effects: ["End of Japanese isolationism", 
         "beginning of modernization and industrialization"],
-       theme: "governance"
+       theme: "Governance"
    },
    "Xhosa Cattle Killing Movement" : {
        timePeriod: [1856, 1857],
@@ -830,7 +830,7 @@ export const timelineNotes: TimelineNotes = {
            "Xhosa wanted the British settlers gone"
        ],
        effects: ["Weakened the Xhosa and forced them to assimilate"],
-       theme: "culture"
+       theme: "Culture"
    },
    "Sepoy Mutiny" : {
        timePeriod: [1857, 1857],
@@ -845,7 +845,7 @@ export const timelineNotes: TimelineNotes = {
        effects: ["Establishment of the British Raj",
            "Dismantling of the British East India Company, as the British government directly ruled India"
        ],
-       theme: "governance"
+       theme: "Governance"
    },
    "Self-Strengthening Movement" : {
        timePeriod: [1861, 1895],
@@ -857,7 +857,7 @@ export const timelineNotes: TimelineNotes = {
        ],
        causes: ["Pressure to modernize"],
        effects: ["Some industrial reform, but showed Qing weakness"],
-       theme: "governance"
+       theme: "Governance"
    },
    "French-Mexican War" : {
        timePeriod: [1863, 1867],
@@ -875,7 +875,7 @@ export const timelineNotes: TimelineNotes = {
        effects: ["France established a short-lived puppet emperor",
             "Reaffirmed Mexican sovereignty"
        ],
-       theme: "governance"
+       theme: "Governance"
    },
    "US bans slavery" : {
        timePeriod: [1865, 1865],
@@ -886,7 +886,7 @@ export const timelineNotes: TimelineNotes = {
        effects: ["Reconstruction",
             "Legal abolition of slavery nationwide, but social and economic challenges persisted for freedpeople"
        ],
-       theme: "social, economic"
+       theme: "Social, Economic"
    },
    "Seven Weeks' War" : {
        timePeriod: [1866, 1866],
@@ -897,7 +897,7 @@ export const timelineNotes: TimelineNotes = {
        ],
        causes: ["Otto von Bismarck needed to unite German states to make Germany"],
        effects: ["German Unification"],
-       theme: "governance"
+       theme: "Governance"
    },
    "Meiji Restoration" : {
        timePeriod: [1868, 1868],
@@ -917,7 +917,7 @@ export const timelineNotes: TimelineNotes = {
            "End of the Tokugawa Shogunate",
            "Public schools increased literacy"
        ],
-       theme: "governance"
+       theme: "Governance"
    },
    "Second Industrial Revolution" : {
        timePeriod: [1880, 1890],
@@ -941,7 +941,7 @@ export const timelineNotes: TimelineNotes = {
            "Consumerism, industrial capitalism",
            "Shifts center of manufacturing from the Middle East and Asia to Europe"
        ],
-       theme: "economy"
+       theme: "Economy"
    },
    "First Boer War" : {
        timePeriod: [1880, 1881],
@@ -952,7 +952,7 @@ export const timelineNotes: TimelineNotes = {
        ],
        causes: ["British and Dutch competition over territory"],
        effects: ["Second Boer Wars"],
-       theme: "governance"
+       theme: "Governance"
    },
    "Berlin Conference" : {
        timePeriod: [1884, 1885],
@@ -969,7 +969,7 @@ export const timelineNotes: TimelineNotes = {
            "Colonial borders cut across tribal lines",
            "Set precedent for European domination and exploitation of Africa"
        ],
-       theme: "governance"
+       theme: "Governance"
    },
    "Brazil bans slavery" : {
        timePeriod: [1888, 1888],
@@ -980,7 +980,7 @@ export const timelineNotes: TimelineNotes = {
        effects: ["The castas system still persisted",
             "Economic dependency on wage labor and immigrant labor increased"
        ],
-       theme: "social, economy"
+       theme: "Social, Economy"
    },
    "Ghost Dance movement" : {
        timePeriod: [1889, 1890],
@@ -992,7 +992,7 @@ export const timelineNotes: TimelineNotes = {
        ],
        causes: ["White settlers caused deforestation and irrigation, which reduced food sources like pine nuts, mussels, and fish"],
        effects: ["Last organized movement against white settlers"],
-       theme: "culture"
+       theme: "Culture"
    },
    "Philippine Revolution" : {
        timePeriod: [1896, 1898],
@@ -1006,7 +1006,7 @@ export const timelineNotes: TimelineNotes = {
        effects: ["The Philippines remained under US control",
         "Delayed independence and strengthened American imperial influence in the Pacific"
        ],
-       theme: "governance"
+       theme: "Governance"
    },
    "Spanish-American War" : {
        timePeriod: [1898, 1899],
@@ -1019,7 +1019,7 @@ export const timelineNotes: TimelineNotes = {
        effects: ["Cuba was technically independent but still occupied by the US",
            "The United States gained the Philippines, Puerto Rico, and Guam"
        ],
-       theme: "governance"
+       theme: "Governance"
    },
    "Hundred Days of Reform" : {
        timePeriod: [1899, 1899],
@@ -1031,7 +1031,7 @@ export const timelineNotes: TimelineNotes = {
        ],
        causes: ["Efforts to modernize; continuation of the Self-Strengthening Movement"],
        effects: ["Reversed by Empress Dowager Cixi"],
-       theme: "governance"
+       theme: "Governance"
    },
    "Second Boer War" : {
        timePeriod: [1899, 1902],
@@ -1042,7 +1042,7 @@ export const timelineNotes: TimelineNotes = {
        ],
        causes: ["Discovery of diamonds and gold in South Africa"],
        effects: ["Formation of the Union of South Africa"],
-       theme: "governance"
+       theme: "Governance"
    },
    "Philippine-American War" : {
        timePeriod: [1899, 1899],
@@ -1054,7 +1054,7 @@ export const timelineNotes: TimelineNotes = {
        causes: ["Philippine efforts for independence from the Spanish",
         "Transfer to the US after the Spanish-American War"],
        effects: ["The Philippines remained under American control"],
-       theme: "governance"
+       theme: "Governance"
    },
    "Boxer Rebellion" : {
        timePeriod: [1900, 1900],
@@ -1069,7 +1069,7 @@ export const timelineNotes: TimelineNotes = {
         "Economic hardship"
        ],
        effects: ["Empress Cixi had to support reforms and remove the Civil Service Exam again"],
-       theme: "governance"
+       theme: "Governance"
    },
    "Yaa Asantewaa War" : {
        timePeriod: [1900, 1900],
@@ -1081,7 +1081,7 @@ export const timelineNotes: TimelineNotes = {
        ],
        causes: ["British Imperialism"],
        effects: ["British gained control of Asante and turned it into the Gold Coast colony"],
-       theme: "governance"
+       theme: "Governance"
    },
    "State takover of the Congo" : {
        timePeriod: [1908, 1908],
@@ -1094,7 +1094,7 @@ export const timelineNotes: TimelineNotes = {
        effects: ["The state took control of the Congo",
         "Conditions did not improve much"
        ],
-       theme: "governance"
+       theme: "Governance"
    },
    "Second Mexican Revolution" : {
        timePeriod: [1910, 1910],
@@ -1109,7 +1109,7 @@ export const timelineNotes: TimelineNotes = {
        effects: ["Political instability and violence lingered until 1930",
         "The government was more liberal and created a new constitution, although it was not followed until the 1930s"
        ],
-       theme: "governance"
+       theme: "Governance"
    },
    "World War I" : {
        timePeriod: [1914, 1918],
@@ -1162,7 +1162,7 @@ export const timelineNotes: TimelineNotes = {
         "Collapse of the Ottoman Empire",
         "Led to the rise of fascism and communism"
        ],
-       theme: "governance"
+       theme: "Governance"
    },
    "Armenian Genocide" : {
        timePeriod: [1915, 1915],
@@ -1175,7 +1175,7 @@ export const timelineNotes: TimelineNotes = {
        effects: ["Hitler eventually modeled the Holocaust after the Armenian Genocide",
         "Mass displacement of Armenian populations"
        ],
-       theme: "social"
+       theme: "Social"
    },
     "Russian Revolution and Civil War" : {
         timePeriod: [1917, 1921],
@@ -1187,7 +1187,7 @@ export const timelineNotes: TimelineNotes = {
         ],
         causes: ["Incompetence of the Russian government to deal with the strain put on the country from taking part in World War I"],
         effects: ["Establishment of the Soviet Union"],
-        theme: "governance"
+        theme: "Governance"
     },
     "Great Depression" : {
         timePeriod: [1929, 1945],
@@ -1210,7 +1210,7 @@ export const timelineNotes: TimelineNotes = {
             "Germans were angry about the Depression. This anger and discontentment in conjunction with the weakness of the Weimar Republic, led to the rise of the Nazis",
             "Expansion of government welfare programs"
         ],
-        theme: "economy"
+        theme: "Economy"
     },
     "Salt March" : {
         timePeriod: [1930, 1930],
@@ -1223,7 +1223,7 @@ export const timelineNotes: TimelineNotes = {
             "Desire to demonstrate the power of mass civil disobedience"
         ],
         effects: ["Rise of nonviolent resistance to the British government in India"],
-        theme: "governance"
+        theme: "Governance"
     },
     "Ukraine Famine" : {
         timePeriod: [1932, 1933],
@@ -1237,7 +1237,7 @@ export const timelineNotes: TimelineNotes = {
         effects: ["Millions of deaths",
             "Strengthening of Stalin's control over agriculture"
         ],
-        theme: "governance"
+        theme: "Governance"
     },
     "Spanish Civil War" : {
         timePeriod: [1936, 1939],
@@ -1255,7 +1255,7 @@ export const timelineNotes: TimelineNotes = {
         effects: ["Francisco Franco's dictatorship from 1939 to 1975",
             "Allowed Hitler and Mussolini to test weapons and alliances for World War II"
         ],
-        theme: "governance"
+        theme: "Governance"
     },
     "World War II": {
         timePeriod: [1938, 1945],
@@ -1312,7 +1312,7 @@ export const timelineNotes: TimelineNotes = {
             "The USSR got control of Poland",
             "Europe became less influetial, solidifying the shift of power to the US",
         ],
-        theme: "governance"
+        theme: "Governance"
     },
     "First Indochina War" : {
         timePeriod: [1945, 1954],
@@ -1327,7 +1327,7 @@ export const timelineNotes: TimelineNotes = {
         effects: ["Vietnam was split into the North, which was communist and led by Ho Chi Minh, and the South, led by noncommunist Ngo Dinh Diem",
             "Vietnam War"
         ],
-        theme: "governance"
+        theme: "Governance"
     },
     "Indian and Pakistani independence" : {
         timePeriod: [1947, 1947],
@@ -1347,7 +1347,7 @@ export const timelineNotes: TimelineNotes = {
             "Deaths of around a million people traveling between Pakistan and India",
             "Long term conflict over Kashmir"
         ],
-        theme: "governance"
+        theme: "Governance"
     },
     "Apartheid" : {
         timePeriod: [1948, 1994],
@@ -1363,7 +1363,7 @@ export const timelineNotes: TimelineNotes = {
         effects: ["Racial violence",
             "Effort to reconcile after apartheid was ended with the Truth and Reconciliation Commission formed in 1996"
         ],
-        theme: "social"
+        theme: "Social"
     },
     "Takeover of the Chinese Communist Party" : {
         timePeriod: [1949, 1949],
@@ -1378,7 +1378,7 @@ export const timelineNotes: TimelineNotes = {
         effects: ["Establishment of a Chinese communist government",
             "Nationalists retreat to Taiwan"
         ],
-        theme: "governance"
+        theme: "Governance"
     },
     "Korean War" : {
         timePeriod: [1950, 1953],
@@ -1399,7 +1399,7 @@ export const timelineNotes: TimelineNotes = {
         effects: ["Stalemate",
             "Korea remained divided"
         ],
-        theme: "governance"
+        theme: "Governance"
     },
     "Egyptian coup" : {
         timePeriod: [1952, 1952],
@@ -1413,7 +1413,7 @@ export const timelineNotes: TimelineNotes = {
             "Socialist reforms and nationalization of industries and the Suez Canal",
             "Rise of pan-Arab nationalism"
         ],
-        theme: "governance"
+        theme: "Governance"
     },
     "Vietnam War" : {
         timePeriod: [1954, 1975],
@@ -1437,7 +1437,7 @@ export const timelineNotes: TimelineNotes = {
             "Devestation of Vietnam",
             "Mass migration of Vietnamese"
         ],
-        theme: "governance"
+        theme: "Governance"
     },
     "Algerian War for Independence" : {
         timePeriod: [1954, 1962],
@@ -1455,7 +1455,7 @@ export const timelineNotes: TimelineNotes = {
             "Algerian migration to France, and resulting anti-immigrant sentiment",
             "Algerian political instability"
         ],
-        theme: "governance"
+        theme: "Governance"
     },
     "Ghana Independence" : {
         timePeriod: [1957, 1957],
@@ -1471,7 +1471,7 @@ export const timelineNotes: TimelineNotes = {
         effects: ["Kwame Nkrumah's dictatorship",
             "Inspired other African independence movements"
         ],
-        theme: "governance"
+        theme: "Governance"
     },
     "Great Leap Forward" : {
         timePeriod: [1958, 1962],
@@ -1487,7 +1487,7 @@ export const timelineNotes: TimelineNotes = {
         effects: ["Famine",
             "Decline of Mao's prestige and influence until the Cultural Revolution"
         ],
-        theme: "economic"
+        theme: "Economic"
     },
     "Cuban Missile Crisis" : {
         timePeriod: [1962, 1962],
@@ -1505,7 +1505,7 @@ export const timelineNotes: TimelineNotes = {
         effects: ["Creation of the hotline",
             "Nuclear deescalation"
         ],
-        theme: "governance"
+        theme: "Governance"
     },
     "Biafran Civil War" : {
         timePeriod: [1967, 1970],
@@ -1520,7 +1520,7 @@ export const timelineNotes: TimelineNotes = {
         effects: ["Biafran defeat",
             "Continued ethnic tensions in Nigeria"
         ],
-        theme: "governance"
+        theme: "Governance"
     },
     "Cultural Revolution" : {
         timePeriod: [1966, 1967],
@@ -1532,7 +1532,7 @@ export const timelineNotes: TimelineNotes = {
         ],
         causes: ["Mao regained power in China and wanted to reestablish support for communism and purge his political rivals"],
         effects: ["Mass persecution"],
-        theme: "governance"
+        theme: "Governance"
     },
     "Angolan Civil War" : {
         timePeriod: [1975, 2002],
@@ -1549,7 +1549,7 @@ export const timelineNotes: TimelineNotes = {
         effects: ["Ended in MPLA (representing the Mbundu tribe) victory",
             "Long-term political instability"
         ],
-        theme: "governance"
+        theme: "Governance"
     },
     "Green Belt Movement created" : {
         timePeriod: [1977, 1977],
@@ -1563,7 +1563,7 @@ export const timelineNotes: TimelineNotes = {
         effects: ["Millions of trees planted",
             "Empowerment of women"
         ],
-        theme: "environment, social"
+        theme: "Environment, Social"
     },
     "Soviet-Afghan War" : {
         timePeriod: [1979, 1989],
@@ -1579,7 +1579,7 @@ export const timelineNotes: TimelineNotes = {
             "Rise of the Taliban",
             "Regional instability"
         ],
-        theme: "governance"
+        theme: "Governance"
     },
     "Contra War" : {
         timePeriod: [1981, 1989],
@@ -1594,7 +1594,7 @@ export const timelineNotes: TimelineNotes = {
         ],
         causes: ["Takeover of the Sandinistas"],
         effects: ["The Sandinistas fell out of power in 1992"],
-        theme: "governance"
+        theme: "Governance"
     },
     "Fall of the Berlin Wall" : {
         timePeriod: [1989, 1989],
@@ -1607,7 +1607,7 @@ export const timelineNotes: TimelineNotes = {
         effects: ["Reunification of Germany in 1990",
             "End of the Cold War"
         ],
-        theme: "governance"
+        theme: "Governance"
     },
     "Tiananmen Square Massacre" : {
         timePeriod: [1989, 1989],
@@ -1621,7 +1621,7 @@ export const timelineNotes: TimelineNotes = {
         effects: ["Mass arrests and censorship",
             "Increased government control"
         ],
-        theme: "governance"
+        theme: "Governance"
     },
     "Paris Climate Agreement" : {
         timePeriod: [2015, 2015],
@@ -1632,7 +1632,7 @@ export const timelineNotes: TimelineNotes = {
         effects: ["Supported emission reductions",
             "Created a global framework for climate action"
         ],
-        theme: "environment"
+        theme: "Environment"
     },
 }
 // events will go here
