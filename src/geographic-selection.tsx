@@ -24,6 +24,7 @@ import World1994 from "./assets/World-1994.svg?react";
 import { useTimeSliderContext } from "./TimeSlider";
 import ArrowsRight from "./assets/DoubleGreenArrows.png";
 import { AutoscalingPopup, CountryInfoLayout } from "./popup";
+import { trackEvent } from "./analytics";
 
 const timeMaps: Record<
   number,
@@ -100,6 +101,10 @@ export const GeographicSelectionPage = () => {
 
     if (nations.includes(countryName)) {
       setSelectedCountry(countryName);
+      trackEvent("country_popup_opened", {
+        country: countryName,
+        timePeriod: selectedTime
+      });
     } else {
       alert(`No notes available for: ${countryName}`);
     }
@@ -203,7 +208,12 @@ const CrossCountryPopup: React.FC<{
                 return (
                   <button
                     key={concept}
-                    onClick={() => setSelectedCountry(concept)}
+                    onClick={() => {setSelectedCountry(concept);
+                      trackEvent("crosscountry_popup_opened", {
+                        concept,
+                        selectedWHAPTime: selectedWHAPTime.join("-")
+                      });
+                    }}
                     className={`px-4 py-2 bg-gradient-to-r from-indigo-500 to-blue-600 text-white rounded-full text-sm font-medium hover:from-indigo-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg
                                 ${
                                   notes.emphasizedUnit[0] ===
