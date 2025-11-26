@@ -1,4 +1,4 @@
-import { usePageTransitionContext } from "./PageTransition.tsx";
+import { usePageTransitionContext } from "./page-transition-provider.tsx";
 import { AppPage, AppPageLabels } from "./AppPageLabels.ts";
 
 
