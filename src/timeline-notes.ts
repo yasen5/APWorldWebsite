@@ -12,7 +12,7 @@ export const timelineNotes: TimelineNotes = {
     "4th Crusade": {
         timePeriod: [1202, 1204],
         emphasizedUnit: [1200, 1450],
-        applicableCountries: ["England 1200-1450", "France 1200-1450", "Holy Roman Empire 1200-1806"],
+        applicableCountries: ["England 1200-1450", "France 1200-1450", "Holy Roman Empire 1200-1450"],
         description: ["The Christians paid Venice to take the soldiers to the Middle East, but they didn't pay Venice enough, so the Venetians made the soldiers sack Zara and Constantinople before letting them continue the Crusade"],
         causes: ["European Christians wanted to retake the Holy Land in the Middle East",
             "Venice wanted more economic and political power"
@@ -82,7 +82,7 @@ export const timelineNotes: TimelineNotes = {
     "Little Ice Age" : {
         timePeriod: [1300, 1850],
         emphasizedUnit: [1200, 1450],
-        applicableCountries: ["England 1200-1450", "England 1450-1750", "France 1200-1450", "France 1450-1700", "Holy Roman Empire 1200-1806", "Ottoman Empire", "Il-Khanate", "Ming Dynasty", "Spain 1492-1750"],
+        applicableCountries: ["England 1200-1450", "England 1450-1750", "France 1200-1450", "France 1450-1750", "Holy Roman Empire 1200-1450", "Holy Roman Empire 1450-1806", "Ottoman Empire", "Il-Khanate", "Ming Dynasty", "Spain 1492-1750"],
         description: ["The world experienced cooling for 5 centuries, which made winters colder and shortened growing seasons, affecting agriculture"],
         causes: [""],
         effects: ["Less agricultural production led to limited urbanization",
@@ -134,7 +134,7 @@ export const timelineNotes: TimelineNotes = {
     "Black Death" : {
         timePeriod: [1347, 1353],
         emphasizedUnit: [1200, 1450],
-        applicableCountries: ["England 1200-1450", "France 1200-1450", "Holy Roman Empire 1200-1806", "Venice"],
+        applicableCountries: ["England 1200-1450", "France 1200-1450", "Holy Roman Empire 1200-1450", "Venice"],
         description: ["The Black Death spread from China along the Silk Roads to the Middle East and Europe",
             "Almost 1/3 of the European population died",
             "Weakened the authority of the Church due to its inability to stop the plague"
@@ -148,7 +148,7 @@ export const timelineNotes: TimelineNotes = {
     "Renaissance" : {
         timePeriod: [1400, 1600],
         emphasizedUnit: [1200, 1450],
-        applicableCountries: ["Venice", "France 1200-1450", "Holy Roman Empire 1200-1806", "Spain 1492-1750", "England 1200-1450"],
+        applicableCountries: ["Venice", "France 1200-1450", "Holy Roman Empire 1200-1450", "Spain 1492-1750", "England 1200-1450"],
         description: ["A revival of interest in classical Greek and Roman arts. They still depicted Christian art, but began to depict Greek, Roman, and Pagan art as well",
             "The Gutenberg press, invented in 1439, allowed for more literacy",
             "Humanism, focusing on the individual instead of God, was created. This movement included more education and secular books",
@@ -181,7 +181,7 @@ export const timelineNotes: TimelineNotes = {
     "Gutenberg Printing Press invented" : {
         timePeriod: [1439, 1439],
         emphasizedUnit: [1200, 1450],
-        applicableCountries: ["Venice", "France 1200-1450", "Holy Roman Empire 1200-1806", "Spain 1492-1750", "England 1200-1450"],
+        applicableCountries: ["Venice", "France 1200-1450", "Holy Roman Empire 1200-1450", "Spain 1492-1750", "England 1200-1450"],
         description: ["Johannes Gutenberg invented the movable type printing press. This allowed books to be printed easier and cheaper, increasing availability and decreasing costs of books, leading to increased literacy rates"],
         causes: ["Demand for books"],
         effects: ["Increased literacy"],
@@ -287,7 +287,7 @@ export const timelineNotes: TimelineNotes = {
     "Lutheranism created" : {
         timePeriod: [1517, 1517],
         emphasizedUnit: [1450, 1750],
-        applicableCountries: ["Holy Roman Empire 1200-1806"],
+        applicableCountries: ["Holy Roman Empire 1450-1806"],
         description: ["Martin Luther wrote the 95 Theses detailing the Church's violations of biblical teachings. His complaints included indulgences, where people could pay to redeem themselves from sin, and simony, where chuch offices were sold to the younger sons of nobles. These were both practices intended to gain more money for the Church.",
             "Additionally, Luther wanted the Bible in the vernacular instead of only in Latin so it would be more accessible, and interpretations wouldn't be controlled purely by the church",
             "Lutheranism promoted literacy and gave women more religious equality by fostering the idea that women didn't need men as intermediaries",
@@ -322,7 +322,7 @@ export const timelineNotes: TimelineNotes = {
     "Scientific Revolution" : {
         timePeriod: [1540, 1680],
         emphasizedUnit: [1450, 1750],
-        applicableCountries: ["England 1450-1750", "France 1450-1750", "Holy Roman Empire 1200-1806", "Spain 1492-1750", "Portugal 1450-1750"],
+        applicableCountries: ["England 1450-1750", "France 1450-1750", "Holy Roman Empire 1450-1806", "Spain 1492-1750", "Portugal 1450-1750"],
         description: ["Started promoting thought based on reason instead of faith",
             "In 1620, Francis Bacon created the idea of empiricism, where one must collect evidence to back up a hypothesis",
             "Sir Isaac Newton made scientific discoveries based on ideas of the scientific revolution."
@@ -365,7 +365,7 @@ export const timelineNotes: TimelineNotes = {
     "Enlightenment" : {
         timePeriod: [1688, 1789],
         emphasizedUnit: [1750, 1900],
-        applicableCountries: ["England 1750-1900", "France 1750-1920", "United States 1776-1920", "Spanish Territory", "Brazil", "Philippines", "Saint Domingue/Haiti"],
+        applicableCountries: ["England 1750-1900", "France 1750-1900", "United States 1776-1900", "Spanish Territory", "Brazil", "Philippines", "Saint Domingue/Haiti"],
         description: ["Socialism, the idea where the public owns the means of production, was developed",
             "Adam Smith developed the idea of laissez-faire economics, where the government would not interfere with economic decisions. This was the foundation for capitalism and the free market. He believed that capitalism would protect against poverty better than mercantilism had",
             "Liberalism valued natural rights, a constitutional government, laissez-faire economics, and reductions to the money spent on the army and church. It was supported mainly by professionals and academics, as well as by the British Parliament",
@@ -404,8 +404,8 @@ export const timelineNotes: TimelineNotes = {
         timePeriod: [1618, 1648],
         emphasizedUnit: [1450, 1750],
         applicableCountries: ["England 1450-1700",
-            "France 1450-1700",
-            "Holy Roman Empire 1200-1806",
+            "France 1450-1750",
+            "Holy Roman Empire 1450-1806",
             "Spain 1492-1750",
             "Netherlands 1450-1750"
         ],
@@ -504,7 +504,7 @@ export const timelineNotes: TimelineNotes = {
     "Industrial Revolution" : {
        timePeriod: [1760, 1840],
        emphasizedUnit: [1750, 1900],
-       applicableCountries: ["England 1750-Present"],
+       applicableCountries: ["England 1750-1900"],
        description: ["England began industrializing, focusing on the textile industry. They shifted from the cottage industry, where families bought raw cotton and made cloth at home, to mass producing cloth in factories",
            "Essential inventions included the spinning jenny, allowing more than one thread to be spun at a time, the power loom, which used steam power to weave fabric more efficiently, and the water frame, allowing water power to power spinning wheels",
            "Other inventions included the steam engine in 1765, which allowed for steam locomotives, steam boats, and factories farther from water, and the Bessemer Process in 1856, which allowed steel to be produced cheaply"
@@ -521,7 +521,7 @@ export const timelineNotes: TimelineNotes = {
    "American Revolution" : {
        timePeriod: [1776, 1783],
        emphasizedUnit: [1750, 1900],
-       applicableCountries: ["United States 1776-1920"],
+       applicableCountries: ["United States 1776-1900"],
        description: ["The "],
        causes: ["Englightenment ideas like consent of the governed, natural rights, and republicanism",
            "Increased taxation after the Seven Years' War"
@@ -535,7 +535,7 @@ export const timelineNotes: TimelineNotes = {
    "French Revolution" : {
        timePeriod: [1789, 1799],
        emphasizedUnit: [1750, 1900],
-       applicableCountries: ["France 1750-1920"],
+       applicableCountries: ["France 1750-1900"],
        description: ["The commoners stormed the Bastille on July 14, 1789. In October, they stormed Versailles and made the king make the monarchy constitutional (they didn't want to kill him, they only wanted him to make things better)",
            "Became the First French Republic (with a constitutional monarchy) in 1792. Monarch power was limited, and the National Assembly had a lot of power. They stopped feudalism and made the Declaration of the Rights of Man and Citizen. The King was unhappy with this new government and tried to veto a lot of things",
            "Eventually, the Jacobins, extreme revolutionaries, were elected. They wanted to end the monarchy, the church's power, and slavery, and killed anyone (including the king and queen) who were “against” the revolution (could have been for any reason) in the 1793-1794 Reign of Terror.",
@@ -594,7 +594,7 @@ export const timelineNotes: TimelineNotes = {
    "United States bans slave trade" : {
        timePeriod: [1808, 1808],
        emphasizedUnit: [1750, 1900],
-       applicableCountries: ["United States 1776-1920"],
+       applicableCountries: ["United States 1776-1900"],
        description: ["The United States banned international slave trade. However, domestic slave trade and slavery continued until 1865"],
        causes: ["Abolitionist pressure"],
        effects: ["Decrease in slave trade",
@@ -605,7 +605,7 @@ export const timelineNotes: TimelineNotes = {
    "Mexican Revolution" : {
        timePeriod: [1810, 1821],
        emphasizedUnit: [1750, 1900],
-       applicableCountries: ["Mexico 1885-Present", "Spain 1750-Present"],
+       applicableCountries: ["Mexico 1821-1900", "Spain 1750-1900"],
        description: ["Declared independence in 1810",
            "The revolution was led by Padre Miguel Hidalgo, who was a very liberal priest. He was killed very quickly, then Agustín de Iturbide led the revolution",
            "The creoles originally sided with the commoners against the peninsulares, but when Hidalgo's followers attacked creoles along with peninsulares, the creoles switched sides to side with the peninsulares",
@@ -622,7 +622,7 @@ export const timelineNotes: TimelineNotes = {
    "European suppression of democratic reforms" : {
        timePeriod: [1815, 1848],
        emphasizedUnit: [1750, 1900],
-       applicableCountries: ["France 1750-1920", "England 1750-Present", "Spain 1750-Present"],
+       applicableCountries: ["France 1750-1900", "England 1750-1900", "Spain 1750-1900", "Portugal 1750-1900"],
        description: ["European monarchies suppressed the ideas of democracy in order to retain power and prevent revolutions",
         "Led by the Congress of Vienna (1815), which aimed to restore monarchies and maintain a conservative balance of power"
        ],
@@ -637,7 +637,7 @@ export const timelineNotes: TimelineNotes = {
    "Brazilian Revolution" : {
        timePeriod: [1822, 1822],
        emphasizedUnit: [1750, 1900],
-       applicableCountries: ["Brazil", "Portugal 1750-Present"],
+       applicableCountries: ["Brazil", "Portugal 1750-1900"],
        description: ["The Portuguese monarchy fled to Brazil when Napoleon was conquering the Iberian Peninsula",
            "The creoles liked having their own government in Brazil instead of a colonial government, so Prince Pedro stayed behind in Brazil when the rest of the royal family returned to Portugal",
            "Prince Pedro declared Brazil an independent monarchy and became the emperor of Brazil in 1822"
@@ -655,7 +655,7 @@ export const timelineNotes: TimelineNotes = {
    "Monroe Doctrine" : {
        timePeriod: [1823, 1823],
        emphasizedUnit: [1750, 1900],
-       applicableCountries: ["United States 1776-1920"],
+       applicableCountries: ["United States 1776-1900"],
        description: ["John Quincy Adams made a statement saying that European nations should not intervene in the Western Hemisphere, and the US would not interefere in European wars.",
            "European countries were still allowed to keep their colonies but could not retake the colonies that had already gained independence",
            "Allowed the United States to be the main power in the Americas",
@@ -684,7 +684,7 @@ export const timelineNotes: TimelineNotes = {
    "British bans slavery" : {
        timePeriod: [1833, 1833],
        emphasizedUnit: [1750, 1900],
-       applicableCountries: ["England 1750-Present", "British Territory"],
+       applicableCountries: ["England 1750-1900", "British Territory"],
        description: ["The British banned slavery, ending it in all of their colonies. However, exploitative measures were still used."],
        causes: ["Abolitionist pressure"],
        effects: ["Increased efforts to stop slavery in other countries by stopping slave ships and freeing the slaves"],
@@ -712,7 +712,7 @@ export const timelineNotes: TimelineNotes = {
    "Opium Wars" : {
        timePeriod: [1839, 1860],
        emphasizedUnit: [1750, 1900],
-       applicableCountries: ["Qing Dynasty", "England 1750-Present"],
+       applicableCountries: ["Qing Dynasty", "England 1750-1900"],
        description: ["England wanted more Chinese goods but had nothing the Chinese wanted, so Britain illegally imported opium to force trade dependency",
            "China asked England to stop selling them opium, but the British refused, so China declared war",
            "The First Opium War lasted from 1839 until the Treaty of Nanking in 1842. This gave the British an advantage, forcing free trade, giving the British Hong Kong, access to 4 more ports, extraterritorial rights (so British merchants didn't have to obey Chinese laws, allowing them to continue selling opium even though the government banned it), and first nation trading rights status",
@@ -726,7 +726,7 @@ export const timelineNotes: TimelineNotes = {
    "Treaty of Waitangi" : {
        timePeriod: [1840, 1840],
        emphasizedUnit: [1750, 1900],
-       applicableCountries: ["British Territory", "England 1750-Present"],
+       applicableCountries: ["British Territory", "England 1750-1900"],
        description: ["This treaty established New Zealand as a colony and gave the native Maori property rights, although those were largely ignored by settlers"],
        causes: ["British imperialism"],
        effects: ["The Maori Wars were caused because the settlers ignored Maori property rights"],
@@ -735,7 +735,7 @@ export const timelineNotes: TimelineNotes = {
    "Maori Wars" : {
        timePeriod: [1845, 1872],
        emphasizedUnit: [1845, 1851],
-       applicableCountries: ["British Territory", "England 1750-Present"],
+       applicableCountries: ["British Territory", "England 1750-1900"],
        description: ["The British settlers and Maori fought over territory and property rights",
            "Ended with British victory in 1846",
            "In 1850s, the Maori didn't want to sell their property, so the government responded with troops to pressure them to sell. This led to a second series of wars until 1872"
@@ -751,7 +751,7 @@ export const timelineNotes: TimelineNotes = {
    "Great Famine" : {
        timePeriod: [1845, 1852],
        emphasizedUnit: [1750, 1900],
-       applicableCountries: ["Ireland", "United States 1776-1920"],
+       applicableCountries: ["Ireland", "United States 1776-1900"],
        description: ["A blight decimated the potatoes in Ireland, causing massive famines and the deaths of about a million people",
            "An additional 3 million people migrated to the United States, England, Scotland, Canada, and Australia"
        ],
@@ -762,7 +762,7 @@ export const timelineNotes: TimelineNotes = {
    "Mexican-American War" : {
        timePeriod: [1846, 1848],
        emphasizedUnit: [1, 1],
-       applicableCountries: ["Mexico 1885-Present", "United States 1776-1920"],
+       applicableCountries: ["Mexico 1821-1900", "United States 1776-1900"],
        description: ["The United States provoked war with Mexico in order to gain more territory"],
        causes: ["The United States wanted Mexican territory in order to expand to the West Coast",
         "Disputes over the border between Texas and Mexico"
@@ -806,7 +806,7 @@ export const timelineNotes: TimelineNotes = {
    "Opening of Japan" : {
        timePeriod: [1853, 1853],
        emphasizedUnit: [1750, 1900],
-       applicableCountries: ["Japan 1853-Present", "United States 1776-1920"],
+       applicableCountries: ["Japan 1853-1900", "United States 1776-1900"],
        description: ["President Zachary Taylor sent Commodore Matthew Perry to reopen Japan from its isolationist policies",
            "Commodore Perry first arrived in 1852 with warships and threatened to burn a village to the ground if they didn't let him land. Instead of landing at Nagasaki, the only port open to foreigners, he landed in Edo, the capital",
            "Perry told the sick shogun that he had a year to decide whether to negotiate trade with the Americans",
@@ -862,7 +862,7 @@ export const timelineNotes: TimelineNotes = {
    "French-Mexican War" : {
        timePeriod: [1863, 1867],
        emphasizedUnit: [1750, 1900],
-       applicableCountries: ["Mexico 1885-Present"],
+       applicableCountries: ["Mexico 1885-1900"],
        description: ["In 1857 the Liberals, led by Benito Juaréz, made a new constitution. The conservatives disliked this and started a civil war. Juaréz borrowed heavily from Europe to win the war",
            "France had been wanting Mexico as a colony and used its debt as an excuse to invade, as well as the fact that the United States wouldn't intervene because they were engaged in their own civil war",
            "In 1863, the Mexican conservatives, with the support of Napoleon III, overthrew Juaréz. The French put the Austrian noble Archduke Maximillian as the emperor of Mexico, establishing a puppet government",
@@ -880,7 +880,7 @@ export const timelineNotes: TimelineNotes = {
    "US bans slavery" : {
        timePeriod: [1865, 1865],
        emphasizedUnit: [1750, 1900],
-       applicableCountries: ["United States 1776-1920"],
+       applicableCountries: ["United States 1776-1900"],
        description: ["The Emancipation Proclamation in 1863 freed slaves in Confederate territories, but the 13th Amendment freed slaves nationally"],
        causes: ["Civil War and abolitionist movement"],
        effects: ["Reconstruction",
@@ -902,7 +902,7 @@ export const timelineNotes: TimelineNotes = {
    "Meiji Restoration" : {
        timePeriod: [1868, 1868],
        emphasizedUnit: [1750, 1900],
-       applicableCountries: ["Japan 1853-Present"],
+       applicableCountries: ["Japan 1853-1900"],
        description: ["Power was restored from the shogun to the emperor",
            "The Charter Oath was created, abolishing feudalism, instituting a constitutional monarchy, modernizing the military, establishing a new school system, and promoting industrialization",
            "Adopted Western technology like railroads and telegraphs",
@@ -922,7 +922,7 @@ export const timelineNotes: TimelineNotes = {
    "Second Industrial Revolution" : {
        timePeriod: [1880, 1890],
        emphasizedUnit: [1750, 1900],
-       applicableCountries: ["United States 1776-1920", "Germany 1850-1920", "Japan 1853-Present", "France 1750-1920", "Russia 1380-1917"],
+       applicableCountries: ["United States 1776-1900", "Germany 1850-1920", "Japan 1853-1900", "France 1750-1900", "Russia 1750-1917"],
        description: ["Electronics were developed, with the first public power station in 1882, street lights and electric street cars in the 1890s",
            "The telephone was patented by Alexander Graham Bell in 1876",
            "The internal combustion engine was invented, which was essential for transportation developments like cars and airplanes",
@@ -957,7 +957,7 @@ export const timelineNotes: TimelineNotes = {
    "Berlin Conference" : {
        timePeriod: [1884, 1885],
        emphasizedUnit: [1750, 1900],
-       applicableCountries: ["Germany 1850-1920", "France 1750-1920", "Belgium", "England 1750-Present", "Portugal 1750-Present"],
+       applicableCountries: ["Germany 1850-1920", "France 1750-1900", "Belgium", "England 1750-1900", "Portugal 1750-1900"],
        description: ["Otto von Bismarck wanted to ensure peace between European nations so they wouldn't be dragged into war, which could threaten the newly-formed Germany",
            "European powers met up to divide Africa peacefully between them",
            "Africans had no say, resulting in colonies that cut across tribal lines, often grouping rival tribes in the same colony and separating tribes between colonies",
@@ -985,7 +985,7 @@ export const timelineNotes: TimelineNotes = {
    "Ghost Dance movement" : {
        timePeriod: [1889, 1890],
        emphasizedUnit: [1750, 1900],
-       applicableCountries: ["United States 1776-1920"],
+       applicableCountries: ["United States 1776-1900"],
        description: ["The Northern Paiute Indians believed that ghost dance rituals would bring the dead back to overthrow the white settlers and restore the land",
            "The movement started in Nevada, and spread from the Sierra Nevadas to the Missouri River, Northern Texas to Canada",
            "The US army ended the movement with the Wounded Knee Massacre in 1890, where they killed 150-200 natives"
@@ -1011,7 +1011,7 @@ export const timelineNotes: TimelineNotes = {
    "Spanish-American War" : {
        timePeriod: [1898, 1899],
        emphasizedUnit: [1750, 1900],
-       applicableCountries: ["Spain 1750-Present", "United States 1776-1920"],
+       applicableCountries: ["Spain 1750-1900", "United States 1776-1900"],
        description: ["Cuba was fighting for independence from Spain, and the US decided to support them",
            "The United States won the war, giving Cuba nominal independence and buying the Philippines, Puerto Rico, and Guam from Spain"
        ],
@@ -1074,7 +1074,7 @@ export const timelineNotes: TimelineNotes = {
    "Yaa Asantewaa War" : {
        timePeriod: [1900, 1900],
        emphasizedUnit: [1750, 1900],
-       applicableCountries: ["Asante Empire", "British Territory", "England 1750-Present"],
+       applicableCountries: ["Asante Empire", "British Territory", "England 1750-1900"],
        description: ["The British tried for a fifth time to take control of the Asante Empire by demanding the Golden Stool",
         "The Asante queen, Yaa Asantewaa, led resistance to protect the Golden Stool",
         "The British won in in 1900 and exiled Yaa Asantewaa"
@@ -1099,7 +1099,7 @@ export const timelineNotes: TimelineNotes = {
    "Second Mexican Revolution" : {
        timePeriod: [1910, 1910],
        emphasizedUnit: [1900, 2025],
-       applicableCountries: ["Mexico 1885-Present"],
+       applicableCountries: ["Mexico 1900-Present"],
        description: ["Porfirio Díaz had been dictator since 1876. In 1910, he imprisoned his political opponent, liberal Francisco Madero",
         "Madero, along with Francisco \"Pancho\" Villa and Emiliano Zapata led a civil war against Díaz",
         "Díaz stepped down in 1910 and went into exile",
@@ -1118,20 +1118,20 @@ export const timelineNotes: TimelineNotes = {
         "Serbia",
         "Ottoman Empire",
         "Germany 1850-1920",
-        "Russia 1380-1917",
+        "Russia 1750-1917",
         "USSR",
-        "United States 1776-1920",
-        "France 1750-1920",
+        "United States 1900-Present",
+        "France 1900-Present",
         "Italy",
-        "England 1750-present",
+        "England 1900-Present",
         "British Territory",
-        "Japan 1853-Present",
+        "Japan 1900-Present",
         "Belgium",
         "Australia",
         "New Zealand",
         "French Territory",
         "Bulgaria",
-        "Portugal 1750-Present",
+        "Portugal 1900-Present",
         "China",
         "Romania",
         "Greece"
@@ -1192,7 +1192,7 @@ export const timelineNotes: TimelineNotes = {
     "Great Depression" : {
         timePeriod: [1929, 1945],
         emphasizedUnit: [1900, 2025],
-        applicableCountries: ["United States 1920-Present", "Germany 1920-1945", "England 1750-Present", "France 1920-Present", "British Territory", "French Territory"],
+        applicableCountries: ["United States 1900-Present", "Germany 1920-1945", "England 1900-Present", "France 1900-Present", "British Territory", "French Territory"],
         description: ["In the US, everyone tried to sell stocks at the same time, so the value of the stocks plummeted. The stock market crashed in 1929 and started the Great Depression",
             "Germany was especially affected because hyperinflation occured after printing money to pay reparations after World War I",
             "International trade decreased because countries made strict tariffs to protect domestic jobs",
@@ -1242,7 +1242,7 @@ export const timelineNotes: TimelineNotes = {
     "Spanish Civil War" : {
         timePeriod: [1936, 1939],
         emphasizedUnit: [1900, 2025],
-        applicableCountries: ["Spain 1750-Present"],
+        applicableCountries: ["Spain 1900-Present"],
         description: ["The Popular Front (liberal) was elected in 1936, but the military and Catholic church opposed them",
             "The fascist Nationalists fought against the Republicans/Loyalists (supporters of the Popular Front). The Nationalists were led by Francisco Franco and had support from Hitler, Mussolini and Portuguese Antonio Salazar, while the Republicans had the support of the Soviet Union, Britain, France, and the United States",
             "Foreign involvement in the war led to more violence, as seen in the German and Italian bombing of Guernica, the first time civilians were targeted by mass aerial bombing",
@@ -1263,14 +1263,14 @@ export const timelineNotes: TimelineNotes = {
         applicableCountries: [
             "Germany 1920-1945",
             "Italy",
-            "Japan 1853-Present",
+            "Japan 1900-Present",
             "Hungary",
             "Bulgaria",
             "Croatia",
-            "England 1750-Present",
-            "United States 1920-Present",
+            "England 1900-Present",
+            "United States 1900-Present",
             "China",
-            "France 1920-Present",
+            "France 1900-Present",
             "USSR",
             "Canada",
             "Australia",
@@ -1317,7 +1317,7 @@ export const timelineNotes: TimelineNotes = {
     "First Indochina War" : {
         timePeriod: [1945, 1954],
         emphasizedUnit: [1900, 2025],
-        applicableCountries: ["French Territory", "France 1920-Present", "United States 1920-Present"],
+        applicableCountries: ["French Territory", "France 1900-Present", "United States 1900-Present"],
         description: ["Led by Ho Chi Minh",
             "Declared independence from France (who owned them as a colony) and Japan (who had occupied them during World War II) in 1945",
             "The US initially supported Vietnamese independence after World War II but switched to support the French in the 1950s due to fear of communism",
@@ -1332,7 +1332,7 @@ export const timelineNotes: TimelineNotes = {
     "Indian and Pakistani independence" : {
         timePeriod: [1947, 1947],
         emphasizedUnit: [1900, 2025],
-        applicableCountries: ["India", "Pakistan", "England 1750-Present"],
+        applicableCountries: ["India", "Pakistan", "England 1900-Present"],
         description: ["The Indian National Congress was formed in 1885 by elite Hindus and Muslims trying to achieve independence",
             "Pushed more for independence after World War II",
             "Muhammad Ali Jinnah proposed the Two-State Solution to ensure that the Muslim minority wouldn't be overwhelmed by the Hindu majority",
@@ -1383,7 +1383,7 @@ export const timelineNotes: TimelineNotes = {
     "Korean War" : {
         timePeriod: [1950, 1953],
         emphasizedUnit: [1900, 2025],
-        applicableCountries: ["North Korea", "South Korea", "China", "United States 1920-Present"],
+        applicableCountries: ["North Korea", "South Korea", "China", "United States 1900-Present"],
         description: ["North Korea invaded South Korea in order to unite the two",
             "The United Nations supported the South to oppose the spread of communism, with most of the support coming from the United States",
             "The Soviet Union supported the North by supplying weapons and money, but not troops",
@@ -1418,7 +1418,7 @@ export const timelineNotes: TimelineNotes = {
     "Vietnam War" : {
         timePeriod: [1954, 1975],
         emphasizedUnit: [1900, 2025],
-        applicableCountries: ["Vietnam", "United States 1920-Present"],
+        applicableCountries: ["Vietnam", "United States 1900-Present"],
         description: ["The country was split after independence, with the North led by Communist Ho Chi Minh, and the South led by noncommunist Ngo Dinh Diem",
             "Ngo Dinh Diem was unpopular and corrupt but supported by the US since he was anti-communist until a coup in 1963",
             "Some Southern Vietnamese supported the North by joining the Viet Cong",
@@ -1442,7 +1442,7 @@ export const timelineNotes: TimelineNotes = {
     "Algerian War for Independence" : {
         timePeriod: [1954, 1962],
         emphasizedUnit: [1900, 2025],
-        applicableCountries: ["Algeria", "France 1920-Present"],
+        applicableCountries: ["Algeria", "France 1900-Present"],
         description: ["The National Liberation Front led the war for independence. They had support from Egypt and other Arab countries",
             "Involved brutal guerrilla war and urban terrorism. Mainly Algerians died.",
             "Some French supported Algerian independence",
@@ -1460,7 +1460,7 @@ export const timelineNotes: TimelineNotes = {
     "Ghana Independence" : {
         timePeriod: [1957, 1957],
         emphasizedUnit: [1900, 2025],
-        applicableCountries: ["Ghana", "England 1750-Present"],
+        applicableCountries: ["Ghana", "England 1900-Present"],
         description: ["Britain agreed to negotiate independence for its Gold Coast colony",
             "Negotiations were led by the UN",
             "Gold Coast colony gained independence and became Ghana in 1957",
@@ -1492,7 +1492,7 @@ export const timelineNotes: TimelineNotes = {
     "Cuban Missile Crisis" : {
         timePeriod: [1962, 1962],
         emphasizedUnit: [1900, 2025],
-        applicableCountries: ["Cuba", "United States 1920-Present", "USSR"],
+        applicableCountries: ["Cuba", "United States 1900-Present", "USSR"],
         description: ["After the Bay of Pigs, Castro allied with the Soviet Union",
             "In 1962, the Soviets installed nuclear weapons into Cuba. These weapons could target every major American city with the exception of Seattle",
             "In response, the US blockaded Cuba from receiving more nuclear weapons",
@@ -1537,7 +1537,7 @@ export const timelineNotes: TimelineNotes = {
     "Angolan Civil War" : {
         timePeriod: [1975, 2002],
         emphasizedUnit: [1900, 2025],
-        applicableCountries: ["Angola", "USSR", "Cuba", "United States 1920-Present", "South Africa", "China"],
+        applicableCountries: ["Angola", "USSR", "Cuba", "United States 1900-Present", "South Africa", "China"],
         description: ["The Popular Movement for the Liberation of Angola (MPLA) represented the Mbundu tribe and had support from the USSR and Cuba",
             "The National Union for the Total Independence of Angola (UNITA) represented the Ovimbundu tribe and had support from the United States and South Africa",
             "The National Front for the Liberation of Angola (FNLA) represented the Bankongo tribe and had support from the United States, China, and the Democratic Republic of the Congo",
@@ -1568,7 +1568,7 @@ export const timelineNotes: TimelineNotes = {
     "Soviet-Afghan War" : {
         timePeriod: [1979, 1989],
         emphasizedUnit: [1900, 2025],
-        applicableCountries: ["Afghanistan", "USSR", "United States 1920-Present"],
+        applicableCountries: ["Afghanistan", "USSR", "United States 1900-Present"],
         description: ["The Soviet Union invaded in 1979 to support the communist government from collapsing under rebel pressure",
             "The United States intervened to support the Mujahideen guerrilla troops who were trying to overthrow the communist government",
             "Gorbachev withdrew from the war from 1985-1989 because it was draining Soviet funds and morale",
@@ -1584,7 +1584,7 @@ export const timelineNotes: TimelineNotes = {
     "Contra War" : {
         timePeriod: [1981, 1989],
         emphasizedUnit: [1900, 2025],
-        applicableCountries: ["Nicaragua", "United States 1920-Present", "USSR"],
+        applicableCountries: ["Nicaragua", "United States 1900-Present", "USSR"],
         description: ["The Sandinistas, a socialist group, took down the Somoza dictatorship and took over the government in 1979. They emphasized liberation theology, land redistribution, and expanded educational and healthcare",
             "The US supported the Contras who tried to overthrow the Sandinistas in 1981, as the US disliked that socialists were coming to power",
             "In response to the US's actions, The Sandinistas turned to the Soviets for support",
@@ -1626,7 +1626,7 @@ export const timelineNotes: TimelineNotes = {
     "Paris Climate Agreement" : {
         timePeriod: [2015, 2015],
         emphasizedUnit: [1900, 2025],
-        applicableCountries: ["United States 1920-Present", "Russia 1991-Present", "France 1920-Present", "England 1750-Present", "Spain 1750-Present", "Portugal 1750-Present", "South Africa"],
+        applicableCountries: ["United States 1900-Present", "Russia 1991-Present", "France 1900-Present", "England 1900-Present", "Spain 1900-Present", "Portugal 1900-Present", "South Africa"],
         description: ["197 countries agreed to reduce carbon emissions so that the world does not exceed 1.5 degrees Celsius of warming above pre-industrial levels"],
         causes: ["Climate change, rising global temperatures, increased extreme weather events",],
         effects: ["Supported emission reductions",

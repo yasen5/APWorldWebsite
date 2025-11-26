@@ -23,6 +23,7 @@ import World1815 from "./assets/World-1815.svg?react";
 import World1880 from "./assets/World-1880.svg?react";
 import World1900 from "./assets/World-1900.svg?react";
 import World1914 from "./assets/World-1914.svg?react";
+import World1920 from "./assets/World-1920.svg?react";
 import World1930 from "./assets/World-1930.svg?react";
 import World1938 from "./assets/World-1938.svg?react";
 import World1950 from "./assets/World-1950.svg?react";
@@ -52,6 +53,7 @@ const timeMaps: Record<
   1880: World1880,
   1900: World1900,
   1914: World1914,
+  1920: World1920,
   1930: World1930,
   1938: World1938,
   1950: World1950,
@@ -61,7 +63,7 @@ const timeMaps: Record<
 
 const timePeriods: number[] = [
   1200, 1280, 1300, 1400, 1500, 1530, 1600, 1650, 1700, 1715, 1785, 1800, 1815,
-  1880, 1900, 1914, 1930, 1938, 1950, 1960, 1994, 2025,
+  1880, 1900, 1914, 1920, 1930, 1938, 1950, 1960, 1994, 2025,
 ];
 
 const nations = Object.keys(countryNotes);
