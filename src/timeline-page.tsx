@@ -230,7 +230,7 @@ const TimelinePanel: React.FC<TimelinePanelProps> = ({ onClickEvent }) => {
                   type="button"
                   onMouseLeave={() => setHoveredEvent(null)}
                   onClick={() => onClickEvent(p.ev)}
-                  className="scroll-item rounded-full text-sm border hover:shadow bg-white"
+                  className="scroll-item rounded-full text-sm border hover:shadow !bg-yellow-200 dark:!bg-purple-700"
                   style={{
                     width: `${p.btnWidth}px`,
                     padding: "6px 12px",
