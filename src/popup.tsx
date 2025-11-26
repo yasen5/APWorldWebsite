@@ -56,7 +56,8 @@ export const AutoscalingPopup: React.FC<{
         style={{
           transform: `scale(${1 / zoomLevel})`,
           transformOrigin: "top left",
-          opacity: opaqueness || 1,
+          backgroundColor: `rgba(248, 248, 248, ${opaqueness ?? 1})`,
+          borderColor: `rgba(153, 153, 153, ${opaqueness ?? 1})`,
         }}
       >
         <button
