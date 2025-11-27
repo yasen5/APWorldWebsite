@@ -453,8 +453,7 @@ const Quiz: React.FC = () => {
       await new Promise((resolve) => setTimeout(resolve, animWaitTimeMs));
     }
     setQuizSelectedCountries([country1]);
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    await new Promise((resolve) => setTimeout(resolve, animWaitTimeMs));
+    await new Promise((resolve) => setTimeout(resolve, 1000 + animWaitTimeMs));
     for (let i = 0; i < 8; i++) {
       setQuizSelectedCountries([
         country1,

@@ -18,7 +18,7 @@ const GeographicPageContext = createContext<GeographicPageProps | undefined>(
 export const GeographicPageProvider: React.FC<{
   children: React.ReactNode;
 }> = ({ children }) => {
-  console.log("PROVIDER REMOUNTED");
+
   const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
   const [hoveredConcept, setHoveredConcept] = useState<string | null>(null);
   const [presentNations, setPresentNations] = useState<string[]>([]);
