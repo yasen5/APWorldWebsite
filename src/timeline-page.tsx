@@ -3,6 +3,7 @@ import { timelineNotes } from "./timeline-notes";
 import { countryNotes } from "./notes";
 import "./App.css";
 import { AutoscalingPopup, CountryInfoLayout } from "./popup";
+import { trackEvent } from "./analytics";
 
 type TimelinePanelProps = {
   onClickEvent: (k: string) => void;
@@ -229,7 +230,11 @@ const TimelinePanel: React.FC<TimelinePanelProps> = ({ onClickEvent }) => {
                 <button
                   type="button"
                   onMouseLeave={() => setHoveredEvent(null)}
-                  onClick={() => onClickEvent(p.ev)}
+                  onClick={() => {onClickEvent(p.ev)
+                    trackEvent("event_popup_opened", {
+                     eventName: p.ev
+                    });
+                  }}
                   className="scroll-item rounded-full text-sm border hover:shadow !bg-yellow-200 dark:!bg-purple-700"
                   style={{
                     width: `${p.btnWidth}px`,
