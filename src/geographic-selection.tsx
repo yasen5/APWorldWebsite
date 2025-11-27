@@ -1,11 +1,4 @@
-import {
-  createContext,
-  useContext,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-} from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { countryNotes, generalNotes } from "./notes";
 import World1200 from "./assets/World-1200.svg?react";
 import World1280 from "./assets/World-1280.svg?react";
@@ -32,6 +25,10 @@ import World1994 from "./assets/World-1994.svg?react";
 import { useTimeSliderContext } from "./TimeSlider";
 import ArrowsRight from "./assets/DoubleGreenArrows.png";
 import { AutoscalingPopup, CountryInfoLayout } from "./popup";
+import {
+  GeographicPageProvider,
+  useGeographicPageContext,
+} from "./geographic-selection-provider";
 
 const timeMaps: Record<
   number,
@@ -87,8 +84,6 @@ function getRandomHexColor(): string {
 
 export const GeographicSelectionPage = () => {
   const { selectedTime } = useTimeSliderContext();
-  const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
-  const [hoveredConcept, setHoveredConcept] = useState<string | null>(null);
 
   const getMapByTime = ():
     | React.ComponentType<React.SVGProps<SVGSVGElement>>
@@ -102,18 +97,6 @@ export const GeographicSelectionPage = () => {
     }
   };
 
-  const handleCountryClick = (event: React.MouseEvent<SVGSVGElement>) => {
-    const target = event.target as SVGElement;
-    const countryName = target.getAttribute("data-country");
-    if (!countryName) return;
-
-    if (nations.includes(countryName)) {
-      setSelectedCountry(countryName);
-    } else {
-      alert(`No notes available for: ${countryName}`);
-    }
-  };
-
   const MapComponent = getMapByTime();
 
   if (!MapComponent) {
@@ -121,15 +104,22 @@ export const GeographicSelectionPage = () => {
   }
 
   return (
+    <GeographicPageProvider>
+      <InnerGeographicSelection MapComponent={MapComponent} />
+    </GeographicPageProvider>
+  );
+};
+
+export const InnerGeographicSelection: React.FC<{
+  MapComponent: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+}> = ({ MapComponent }) => {
+  const { selectedCountry, setSelectedCountry } = useGeographicPageContext();
+
+  return (
     <div className="flex flex-col items-center justify-start w-full h-full">
       <div className="w-full h-full overflow-y-auto">
-        <div className="relative w-full h-full">
-          <MapHandlerProvider>
-            <MapHandler
-              hoveredConcept={hoveredConcept}
-              handleCountryClick={handleCountryClick}
-              MapComponent={MapComponent}
-            />
+          <div className="relative w-full h-full">
+            <MapHandler MapComponent={MapComponent} />
 
             <div className="absolute top-0 left-0 w-full pointer-events-none z-10">
               <div className="flex items-start p-2">
@@ -137,39 +127,34 @@ export const GeographicSelectionPage = () => {
                   <Quiz />
                 </div>
                 <div className="flex-1 flex justify-center pointer-events-auto">
-                  <CrossCountryPopup
-                    setHoveredConcept={setHoveredConcept}
-                    setSelectedCountry={setSelectedCountry}
-                  />
+                  <CrossCountryPopup />
                 </div>
               </div>
             </div>
-          </MapHandlerProvider>
 
-          {selectedCountry &&
-            (() => {
-              const { timePeriod, ...notes } =
-                countryNotes[selectedCountry] || generalNotes[selectedCountry];
-              return (
-                <AutoscalingPopup onClose={() => setSelectedCountry(null)}>
-                  <CountryInfoLayout
-                    countryName={selectedCountry}
-                    notes={notes}
-                    extra={[timePeriod ? "Time Period: " + timePeriod : ""]}
-                  />
-                </AutoscalingPopup>
-              );
-            })()}
-        </div>
+            {selectedCountry &&
+              (() => {
+                const { timePeriod, ...notes } =
+                  countryNotes[selectedCountry] ||
+                  generalNotes[selectedCountry];
+                return (
+                  <AutoscalingPopup onClose={() => setSelectedCountry(null)}>
+                    <CountryInfoLayout
+                      countryName={selectedCountry}
+                      notes={notes}
+                      extra={[timePeriod ? "Time Period: " + timePeriod : ""]}
+                    />
+                  </AutoscalingPopup>
+                );
+              })()}
+          </div>
       </div>
     </div>
   );
 };
 
-const CrossCountryPopup: React.FC<{
-  setHoveredConcept: (concept: string | null) => void;
-  setSelectedCountry: (country: string | null) => void;
-}> = ({ setHoveredConcept, setSelectedCountry }) => {
+const CrossCountryPopup: React.FC = () => {
+  const { setSelectedCountry, setHoveredConcept } = useGeographicPageContext();
   const { selectedTime } = useTimeSliderContext();
   const [isConceptsBarOpen, setIsConceptsBarOpen] = useState(false);
   const [selectedWHAPTime, setSelectedWHAPTime] = useState<[number, number]>([
@@ -251,44 +236,14 @@ const CrossCountryPopup: React.FC<{
   );
 };
 
-interface MapHandlerProps {
-  presentNations: string[];
-  setPresentNations: React.Dispatch<React.SetStateAction<string[]>>;
-}
-
-const MapHandlerContext = createContext<MapHandlerProps | undefined>(undefined);
-
-export const useMapHandlerContext = () => {
-  const context = useContext(MapHandlerContext);
-  if (!context) {
-    throw new Error(
-      "useMapHandlerContext must be used within a MapHandlerProvider"
-    );
-  }
-  return context;
-};
-
-export const MapHandlerProvider: React.FC<{ children: React.ReactNode }> = ({
-  children,
-}) => {
-  const [presentNations, setPresentNations] = useState<string[]>([]);
-
-  return (
-    <MapHandlerContext.Provider value={{ presentNations, setPresentNations }}>
-      {children}
-    </MapHandlerContext.Provider>
-  );
-};
-
 const MapHandler: React.FC<{
-  hoveredConcept: string | null;
-  handleCountryClick: (e: React.MouseEvent<SVGSVGElement>) => void;
   MapComponent: React.ComponentType<React.SVGProps<SVGSVGElement>>;
-}> = ({ hoveredConcept, handleCountryClick, MapComponent }) => {
+}> = ({ MapComponent }) => {
   const mapRef = useRef<HTMLDivElement>(null);
   const [canScrollRight, setCanScrollRight] = useState<boolean>(false);
   const [canScrollLeft, setCanScrollLeft] = useState<boolean>(false);
-  const { setPresentNations } = useMapHandlerContext();
+  const { hoveredConcept, setPresentNations, setSelectedCountry } =
+    useGeographicPageContext();
 
   useEffect(() => {
     const svgEl = mapRef.current;
@@ -353,6 +308,18 @@ const MapHandler: React.FC<{
     });
     return styles;
   }, [countryColors, hoveredConcept]);
+
+  const handleCountryClick = (event: React.MouseEvent<SVGSVGElement>) => {
+    const target = event.target as SVGElement;
+    const countryName = target.getAttribute("data-country");
+    if (!countryName) return;
+
+    if (nations.includes(countryName)) {
+      setSelectedCountry(countryName);
+    } else {
+      alert(`No notes available for: ${countryName}`);
+    }
+  };
 
   return (
     <div
@@ -430,7 +397,7 @@ const Quiz: React.FC = () => {
     "",
     "",
   ]);
-  const { presentNations } = useMapHandlerContext();
+  const { presentNations } = useGeographicPageContext();
   const maxTries = 20;
 
   const pickCountries = () => {
@@ -487,9 +454,7 @@ const Quiz: React.FC = () => {
       {quizOpen && (
         <AutoscalingPopup onClose={() => setQuizOpen(false)} opaqueness={0.75}>
           <div className="flex flex-row justify-between">
-            <h1 className="text-black">
-              Find similarities & differences
-            </h1>
+            <h1 className="text-black">Find similarities & differences</h1>
             <button onClick={() => pickCountries()}>Go Again</button>
           </div>
           <div className="w-full flex flex-row gap-4">
