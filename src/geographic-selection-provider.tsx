@@ -7,18 +7,24 @@ interface GeographicPageProps {
   setHoveredConcept: React.Dispatch<React.SetStateAction<string | null>>;
   presentNations: string[];
   setPresentNations: React.Dispatch<React.SetStateAction<string[]>>;
+  quizSelectedCountries: string[];
+  setQuizSelectedCountries: React.Dispatch<React.SetStateAction<string[]>>;
 }
 
-const GeographicPageContext = createContext<
-  GeographicPageProps | undefined
->(undefined);
+const GeographicPageContext = createContext<GeographicPageProps | undefined>(
+  undefined
+);
 
 export const GeographicPageProvider: React.FC<{
   children: React.ReactNode;
 }> = ({ children }) => {
+  console.log("PROVIDER REMOUNTED");
   const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
   const [hoveredConcept, setHoveredConcept] = useState<string | null>(null);
   const [presentNations, setPresentNations] = useState<string[]>([]);
+  const [quizSelectedCountries, setQuizSelectedCountries] = useState<string[]>(
+    []
+  );
 
   return (
     <GeographicPageContext.Provider
@@ -29,6 +35,8 @@ export const GeographicPageProvider: React.FC<{
         setHoveredConcept,
         presentNations,
         setPresentNations,
+        quizSelectedCountries,
+        setQuizSelectedCountries,
       }}
     >
       {children}

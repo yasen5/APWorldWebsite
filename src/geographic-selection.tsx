@@ -118,36 +118,35 @@ export const InnerGeographicSelection: React.FC<{
   return (
     <div className="flex flex-col items-center justify-start w-full h-full">
       <div className="w-full h-full overflow-y-auto">
-          <div className="relative w-full h-full">
-            <MapHandler MapComponent={MapComponent} />
+        <div className="relative w-full h-full">
+          <MapHandler MapComponent={MapComponent} />
 
-            <div className="absolute top-0 left-0 w-full pointer-events-none z-10">
-              <div className="flex items-start p-2">
-                <div className="pointer-events-auto">
-                  <Quiz />
-                </div>
-                <div className="flex-1 flex justify-center pointer-events-auto">
-                  <CrossCountryPopup />
-                </div>
+          <div className="absolute top-0 left-0 w-full pointer-events-none z-10">
+            <div className="flex items-start p-2">
+              <div className="pointer-events-auto">
+                <Quiz />
+              </div>
+              <div className="flex-1 flex justify-center pointer-events-auto">
+                <CrossCountryPopup />
               </div>
             </div>
-
-            {selectedCountry &&
-              (() => {
-                const { timePeriod, ...notes } =
-                  countryNotes[selectedCountry] ||
-                  generalNotes[selectedCountry];
-                return (
-                  <AutoscalingPopup onClose={() => setSelectedCountry(null)}>
-                    <CountryInfoLayout
-                      countryName={selectedCountry}
-                      notes={notes}
-                      extra={[timePeriod ? "Time Period: " + timePeriod : ""]}
-                    />
-                  </AutoscalingPopup>
-                );
-              })()}
           </div>
+
+          {selectedCountry &&
+            (() => {
+              const { timePeriod, ...notes } =
+                countryNotes[selectedCountry] || generalNotes[selectedCountry];
+              return (
+                <AutoscalingPopup onClose={() => setSelectedCountry(null)}>
+                  <CountryInfoLayout
+                    countryName={selectedCountry}
+                    notes={notes}
+                    extra={[timePeriod ? "Time Period: " + timePeriod : ""]}
+                  />
+                </AutoscalingPopup>
+              );
+            })()}
+        </div>
       </div>
     </div>
   );
@@ -242,8 +241,12 @@ const MapHandler: React.FC<{
   const mapRef = useRef<HTMLDivElement>(null);
   const [canScrollRight, setCanScrollRight] = useState<boolean>(false);
   const [canScrollLeft, setCanScrollLeft] = useState<boolean>(false);
-  const { hoveredConcept, setPresentNations, setSelectedCountry } =
-    useGeographicPageContext();
+  const {
+    hoveredConcept,
+    setPresentNations,
+    setSelectedCountry,
+    quizSelectedCountries,
+  } = useGeographicPageContext();
 
   useEffect(() => {
     const svgEl = mapRef.current;
@@ -295,19 +298,20 @@ const MapHandler: React.FC<{
     const styles: Record<string, React.CSSProperties> = {};
     nations.forEach((nation) => {
       const isHighlighted =
-        hoveredConcept &&
-        generalNotes[hoveredConcept]?.applicableCountries.includes(nation);
+        quizSelectedCountries.includes(nation) ||
+        (hoveredConcept &&
+          generalNotes[hoveredConcept]?.applicableCountries.includes(nation));
       styles[`[data-country="${nation}"]`] = {
         fill: countryColors[nation],
         cursor: "pointer",
-        opacity: isHighlighted ? 1 : hoveredConcept ? 0.3 : 1,
+        opacity: isHighlighted ? 1 : (hoveredConcept || quizSelectedCountries.length > 0) ? 0.3 : 1,
         stroke: isHighlighted ? "#333" : "none",
         strokeWidth: isHighlighted ? ".5px" : "0",
         transition: "opacity 0.2s ease, stroke 0.2s ease",
       };
     });
     return styles;
-  }, [countryColors, hoveredConcept]);
+  }, [countryColors, hoveredConcept, quizSelectedCountries]);
 
   const handleCountryClick = (event: React.MouseEvent<SVGSVGElement>) => {
     const target = event.target as SVGElement;
@@ -391,17 +395,19 @@ const MapHandler: React.FC<{
   );
 };
 
+const animWaitTimeMs = 100;
+
 const Quiz: React.FC = () => {
   const [quizOpen, setQuizOpen] = useState<boolean>(false);
   const [chosenCountries, setChosenCountries] = useState<[string, string]>([
     "",
     "",
   ]);
-  const { presentNations } = useGeographicPageContext();
+  const { presentNations, setQuizSelectedCountries } =
+    useGeographicPageContext();
   const maxTries = 20;
 
-  const pickCountries = () => {
-    if (!quizOpen) return;
+  const pickCountries = async () => {
     let numTries = 0;
     let country1: string;
     let notes1: { [section: string]: string[] };
@@ -435,24 +441,44 @@ const Quiz: React.FC = () => {
       })
     );
     setChosenCountries([country1, country2]);
+    for (let i = 0; i < 15; i++) {
+      setQuizSelectedCountries([
+        presentNations[Math.floor(Math.random() * presentNations.length)],
+      ]);
+      await new Promise((resolve) => setTimeout(resolve, animWaitTimeMs));
+    }
+    setQuizSelectedCountries([country1]);
+    await new Promise((resolve) => setTimeout(resolve, animWaitTimeMs));
+    for (let i = 0; i < 15; i++) {
+      setQuizSelectedCountries([
+        country1,
+        presentNations[Math.floor(Math.random() * presentNations.length)],
+      ]);
+      await new Promise((resolve) => setTimeout(resolve, animWaitTimeMs));
+    }
+    setQuizSelectedCountries([country1, country2]);
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    setQuizOpen(true);
   };
-
-  useEffect(() => {
-    pickCountries();
-  }, [quizOpen]);
 
   return (
     <>
       {!quizOpen && (
         <button
           className="h-8 bg-gradient-to-r from-yellow-500 to-red-600 cursor-pointer text-white font-medium shadow-md hover:shadow-lg transition-shadow"
-          onClick={() => setQuizOpen(true)}
+          onClick={() => pickCountries()}
         >
           Quiz!
         </button>
       )}
       {quizOpen && (
-        <AutoscalingPopup onClose={() => setQuizOpen(false)} opaqueness={0.75}>
+        <AutoscalingPopup
+          onClose={() => {
+            setQuizOpen(false);
+            setQuizSelectedCountries([]);
+          }}
+          opaqueness={0.75}
+        >
           <div className="flex flex-row justify-between">
             <h1 className="text-black">Find similarities & differences</h1>
             <button onClick={() => pickCountries()}>Go Again</button>
