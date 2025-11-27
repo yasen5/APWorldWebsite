@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
+import { trackEvent } from "./analytics";
 
 export const AutoscalingPopup: React.FC<{
   children: React.ReactNode;
@@ -140,7 +141,13 @@ const Dropdown: React.FC<{ title: string; children: React.ReactNode }> = ({
       <button
         style={{ backgroundColor: categoryColors[title] || "#f0f0f0" }}
         className="w-full flex justify-between items-center p-2"
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={() => {setIsOpen(!isOpen)
+          if(!isOpen) {
+            trackEvent("dropdown_opened", {
+            dropdown: title
+          });
+          }
+        }}
       >
         <span className="font-medium text-black">{title}</span>
         <span style={{ color: "black" }}>{isOpen ? "▲" : "▼"} </span>

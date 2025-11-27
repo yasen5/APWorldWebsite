@@ -1,5 +1,6 @@
 import { createContext, useContext, useEffect, useRef, useState } from "react";
 import { AppPage } from "./AppPageLabels";
+import { pageview } from "./analytics";
 
 interface PageTransitionProps {
   currentPage: AppPage;
@@ -39,6 +40,8 @@ export const PageTransitionProvider: React.FC<{
     if (transitioning) return;
     setTransitioning(true);
     setNextPage(page);
+    // Tracking pageview for google analytics
+    pageview("/" + page.toString());
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
     timeoutRef.current = setTimeout(() => {
       setCurrentPage(page);
