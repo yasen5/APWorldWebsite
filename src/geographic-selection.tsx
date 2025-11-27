@@ -297,14 +297,19 @@ const MapHandler: React.FC<{
   const countryStyles = useMemo(() => {
     const styles: Record<string, React.CSSProperties> = {};
     nations.forEach((nation) => {
+      const quizSelected = quizSelectedCountries.includes(nation);
       const isHighlighted =
-        quizSelectedCountries.includes(nation) ||
+       quizSelected ||
         (hoveredConcept &&
           generalNotes[hoveredConcept]?.applicableCountries.includes(nation));
       styles[`[data-country="${nation}"]`] = {
-        fill: countryColors[nation],
+        fill: (!quizSelected) ? countryColors[nation] : (quizSelectedCountries[0] === nation) ? "blue" : "red",
         cursor: "pointer",
-        opacity: isHighlighted ? 1 : (hoveredConcept || quizSelectedCountries.length > 0) ? 0.3 : 1,
+        opacity: isHighlighted
+          ? 1
+          : hoveredConcept || quizSelectedCountries.length > 0
+          ? 0.3
+          : 1,
         stroke: isHighlighted ? "#333" : "none",
         strokeWidth: isHighlighted ? ".5px" : "0",
         transition: "opacity 0.2s ease, stroke 0.2s ease",
@@ -395,7 +400,7 @@ const MapHandler: React.FC<{
   );
 };
 
-const animWaitTimeMs = 100;
+const animWaitTimeMs = 200;
 
 const Quiz: React.FC = () => {
   const [quizOpen, setQuizOpen] = useState<boolean>(false);
@@ -441,15 +446,16 @@ const Quiz: React.FC = () => {
       })
     );
     setChosenCountries([country1, country2]);
-    for (let i = 0; i < 15; i++) {
+    for (let i = 0; i < 8; i++) {
       setQuizSelectedCountries([
         presentNations[Math.floor(Math.random() * presentNations.length)],
       ]);
       await new Promise((resolve) => setTimeout(resolve, animWaitTimeMs));
     }
     setQuizSelectedCountries([country1]);
+    await new Promise((resolve) => setTimeout(resolve, 1000));
     await new Promise((resolve) => setTimeout(resolve, animWaitTimeMs));
-    for (let i = 0; i < 15; i++) {
+    for (let i = 0; i < 8; i++) {
       setQuizSelectedCountries([
         country1,
         presentNations[Math.floor(Math.random() * presentNations.length)],
@@ -481,7 +487,14 @@ const Quiz: React.FC = () => {
         >
           <div className="flex flex-row justify-between">
             <h1 className="text-black">Find similarities & differences</h1>
-            <button onClick={() => pickCountries()}>Go Again</button>
+            <button
+              onClick={() => {
+                setQuizOpen(false);
+                pickCountries();
+              }}
+            >
+              Go Again
+            </button>
           </div>
           <div className="w-full flex flex-row gap-4">
             <div className="w-1/2">
