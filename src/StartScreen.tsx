@@ -41,23 +41,45 @@ const StartScreen = ({ goToPage}: StartScreenProps) => {
             <section className="my-40 mx-15 text-left">
                 <h2 className="text-4xl font-semibold mb-10">Interactive Map</h2>
                 <div className="flex">
-                    <img src={mapExample} className="w-100 mr-10"/>
+                    <img src={mapExample} className="max-w-[400px] !h-auto mr-10"/>
                     <p>Explore world history with our interactive map, organized by the 6 Collegeboard themes. You can see what was happening across regions at the same time, making connections and trends clearer. This feature helps you recognize broader global patterns and understand how different societies developed in relation to one another.</p>
                 </div>
             </section>
             <section className="my-40 mx-15 text-left">
                 <h2 className="text-4xl font-semibold mb-10">Timeline</h2>
                 <div className="flex">
-                    <img src={timelineExample} className="w-100 mr-10"/>
+                    <img src={timelineExample} className="max-w-[400px] h-auto mr-10"/>
                     <p>Track historical events in chronological order with our interactive timeline. Read about the Collegeboard theme, causes, and effects to gain a richer understanding of each event. By following the sequence of developments, you can see how one moment leads to the next and strengthen your sense of historical cause and effect.</p>
                 </div>
             </section>
             <section className="my-40 mx-15 text-left">
                 <h2 className="text-4xl font-semibold mb-10">Quiz</h2>
                 <div className="flex">
-                    <img src={quizExample} className="w-100 mr-10"/>
+                    <img src={quizExample} className="max-w-[400px] h-auto mr-10"/>
                     <p>Test your historical thinking skills with our quiz feature, which gives you two randomly selected countries from a time period and challenges you to compare them. After you come up with similarities and differences, check your answer with each country's notes. It’s a simple way to practice comparison and reinforce thematic understanding.</p>
                 </div>
+            </section>
+            <section className="mt-40 text-left">
+                <div className="my-1 py-5 px-15 bg-green-800">
+                    <h2 className="text-2xl font-semibold mb-10 mt-5">Have suggestions?</h2>
+                    <form className="flex flex-col gap-4"
+                        action="https://formspree.io/f/mdkrdgbg"
+                        method="POST"
+                    >
+                        <label>
+                            Your email:{" "}
+                            <input className="my-2 border p-3 rounded w-full bg-white" type="email" name="email"></input>
+                        </label>
+                        <label>
+                            Your message:{" "}
+                            <textarea className="my-2 border p-3 rounded w-full bg-white" name="message"></textarea>
+                        </label>
+                        <button className="mb-5" type="submit">Send</button>
+                    </form>
+                </div>
+            </section>
+            <section className="my-1">
+                <p className="text-xs">Notes were taken from The Earth and Its Peoples - AP Edition - 4th ED, World History: Modern (1200-Present) AP ED, and class materials. Images were sourced from Unsplash and Pixabay</p>
             </section>
         </div>
         
