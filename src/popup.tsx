@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
+import { trackEvent } from "./analytics";
 
 export const AutoscalingPopup: React.FC<{
   children: React.ReactNode;
@@ -52,11 +53,12 @@ export const AutoscalingPopup: React.FC<{
     >
       <div
         ref={popupRef}
-        className="w-[80vw] h-[80vh] relative overflow-y-scroll bg-[#f8f8f8] border-2 border-[#999] rounded-md shadow-lg p-6 text-left"
+        className="w-[80vw] h-[80vh] relative overflow-y-scroll bg-[#f8f8f8] border-2 border-[#999] rounded-md shadow-lg p-10 text-left"
         style={{
           transform: `scale(${1 / zoomLevel})`,
           transformOrigin: "top left",
-          opacity: opaqueness || 1,
+          backgroundColor: `rgba(248, 248, 248, ${opaqueness ?? 1})`,
+          borderColor: `rgba(153, 153, 153, ${opaqueness ?? 1})`,
         }}
       >
         <button
@@ -74,6 +76,9 @@ export const AutoscalingPopup: React.FC<{
   );
 };
 
+const capitalize = (str: string) =>
+  str.charAt(0).toUpperCase() + str.slice(1);
+
 export const CountryInfoLayout: React.FC<{
   countryName: string;
   notes: Record<string, string[] | [number, number] | string>;
@@ -82,15 +87,18 @@ export const CountryInfoLayout: React.FC<{
 }> = ({ countryName, notes, extra, links }) => {
   return (
     <div>
-      <h2 className="font-bold text-2xl text-black" id="modal-title">
+      <h2 className="font-bold text-2xl text-black mb-4" id="modal-title">
         {countryName}
       </h2>
-      {extra &&
-        extra.map((text) => (
-          <p key={text} className="!text-black">
-            {text}
-          </p>
-        ))}
+      {extra && (
+        <div className="flex justify-between mb-4">
+          {extra.map((text) => (
+            <span key={text} className="flex-1 text-black font-semibold">
+              {text}
+            </span>
+          ))}
+        </div>
+      )}
       {notes &&
         Object.entries(notes).map(
           ([sectionTitle, content]) =>
@@ -98,7 +106,7 @@ export const CountryInfoLayout: React.FC<{
             Array.isArray(content) &&
             content.length > 0 &&
             content[0] !== "" && (
-              <Dropdown key={sectionTitle} title={sectionTitle}>
+              <Dropdown key={sectionTitle} title={capitalize(sectionTitle)}>
                 <ul className="list-disc pl-4 text-black">
                   {content.map((point, i) => (
                     <li key={i}>{point}</li>
@@ -107,11 +115,12 @@ export const CountryInfoLayout: React.FC<{
               </Dropdown>
             )
         )}
+      <h3 className="!text-black font-semibold mt-4">Involved Countries:</h3>
       {links &&
         links
           .filter(([title, _]) => title.length !== 0)
           .map(([title, onClick]) => (
-            <button className="!border-black mx-2" onClick={onClick}>
+            <button className="border !border-gray-300 mx-2 my-1" onClick={onClick} style={{backgroundColor: "#f0f0f0", color: "black"}}>
               {title}
             </button>
           ))}
@@ -139,12 +148,18 @@ const Dropdown: React.FC<{ title: string; children: React.ReactNode }> = ({
       <button
         style={{ backgroundColor: categoryColors[title] || "#f0f0f0" }}
         className="w-full flex justify-between items-center p-2"
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={() => {setIsOpen(!isOpen)
+          if(!isOpen) {
+            trackEvent("dropdown_opened", {
+            dropdown: title
+          });
+          }
+        }}
       >
         <span className="font-medium text-black">{title}</span>
         <span style={{ color: "black" }}>{isOpen ? "▲" : "▼"} </span>
       </button>
-      {isOpen && <div className="p-2 bg-white text-sm">{children}</div>}
+      {isOpen && <div className="p-4 bg-white text-sm">{children}</div>}
     </div>
   );
 };

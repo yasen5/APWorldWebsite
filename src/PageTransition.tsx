@@ -1,77 +1,11 @@
 import { AppPage } from "./AppPageLabels";
 import { GeographicSelectionPage } from './geographic-selection.tsx';
 import { D3ForceGraph } from './SvgGenerator.tsx';
-import { createContext, useContext, useState, useRef } from "react";
 import { ExplanationPage } from "./Explanation.tsx";
 import TimelinePage from "./timeline-page.tsx";
 import { Unit9Page } from "./Unit9Page.tsx";
 import StartScreen from "./StartScreen.tsx";
-
-interface PageTransitionProps {
-  currentPage: AppPage;
-  setCurrentPage: React.Dispatch<React.SetStateAction<AppPage>>;
-  nextPage: AppPage;
-  setNextPage: React.Dispatch<React.SetStateAction<AppPage>>;
-  transitioning: boolean;
-  setTransitioning: React.Dispatch<React.SetStateAction<boolean>>;
-  goToPage: (page: AppPage) => void;
-}
-
-const PageTransitionContext = createContext<PageTransitionProps | undefined>(
-  undefined
-);
-
-export const usePageTransitionContext = () => {
-  const context: PageTransitionProps | undefined = useContext(
-    PageTransitionContext
-  );
-  if (!context) {
-    throw new Error(
-      "usePageTransitionContext must be used within a PageTransitionProvider"
-    );
-  }
-  return context;
-};
-
-interface PageTransitionProviderProps {
-  children: React.ReactNode;
-}
-
-export const PageTransitionProvider: React.FC<PageTransitionProviderProps> = ({
-  children,
-}) => {
-  const [currentPage, setCurrentPage] = useState<AppPage>(AppPage.START_SCREEN);
-  const [nextPage, setNextPage] = useState<AppPage>(AppPage.EXPLANATION);
-  const [transitioning, setTransitioning] = useState<boolean>(false);
-  const timeoutRef = useRef<number | null>(null);
-
-  const goToPage = (page: AppPage) => {
-    if (transitioning) return;
-    setTransitioning(true);
-    setNextPage(page);
-    if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    timeoutRef.current = setTimeout(() => {
-      setCurrentPage(page);
-      setTransitioning(false);
-    }, 1000);
-  };
-
-  return (
-    <PageTransitionContext.Provider
-      value={{
-        currentPage,
-        setCurrentPage,
-        nextPage,
-        setNextPage,
-        transitioning,
-        setTransitioning,
-        goToPage,
-      }}
-    >
-      {children}
-    </PageTransitionContext.Provider>
-  );
-};
+import { usePageTransitionContext } from "./page-transition-provider.tsx";
 
 export const PageTransition = () => {
   const { transitioning, currentPage, nextPage, goToPage } =

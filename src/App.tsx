@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { PageTransition, PageTransitionProvider, usePageTransitionContext } from './PageTransition.tsx';
+import { PageTransitionProvider, usePageTransitionContext } from './page-transition-provider.tsx';
+import { PageTransition } from './PageTransition.tsx';
 import './App.css'
 import Navbar from './Navbar.tsx';
 import { AppPage } from './AppPageLabels.ts';

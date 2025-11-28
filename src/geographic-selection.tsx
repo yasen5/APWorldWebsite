@@ -16,6 +16,7 @@ import World1815 from "./assets/World-1815.svg?react";
 import World1880 from "./assets/World-1880.svg?react";
 import World1900 from "./assets/World-1900.svg?react";
 import World1914 from "./assets/World-1914.svg?react";
+import World1920 from "./assets/World-1920.svg?react";
 import World1930 from "./assets/World-1930.svg?react";
 import World1938 from "./assets/World-1938.svg?react";
 import World1950 from "./assets/World-1950.svg?react";
@@ -24,6 +25,11 @@ import World1994 from "./assets/World-1994.svg?react";
 import { useTimeSliderContext } from "./TimeSlider";
 import ArrowsRight from "./assets/DoubleGreenArrows.png";
 import { AutoscalingPopup, CountryInfoLayout } from "./popup";
+import {
+  GeographicPageProvider,
+  useGeographicPageContext,
+} from "./geographic-selection-provider";
+import { trackEvent } from "./analytics"
 
 const timeMaps: Record<
   number,
@@ -45,6 +51,7 @@ const timeMaps: Record<
   1880: World1880,
   1900: World1900,
   1914: World1914,
+  1920: World1920,
   1930: World1930,
   1938: World1938,
   1950: World1950,
@@ -54,7 +61,7 @@ const timeMaps: Record<
 
 const timePeriods: number[] = [
   1200, 1280, 1300, 1400, 1500, 1530, 1600, 1650, 1700, 1715, 1785, 1800, 1815,
-  1880, 1900, 1914, 1930, 1938, 1950, 1960, 1994, 2025,
+  1880, 1900, 1914, 1920, 1930, 1938, 1950, 1960, 1994, 2025,
 ];
 
 const nations = Object.keys(countryNotes);
@@ -78,8 +85,6 @@ function getRandomHexColor(): string {
 
 export const GeographicSelectionPage = () => {
   const { selectedTime } = useTimeSliderContext();
-  const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
-  const [hoveredConcept, setHoveredConcept] = useState<string | null>(null);
 
   const getMapByTime = ():
     | React.ComponentType<React.SVGProps<SVGSVGElement>>
@@ -93,18 +98,6 @@ export const GeographicSelectionPage = () => {
     }
   };
 
-  const handleCountryClick = (event: React.MouseEvent<SVGSVGElement>) => {
-    const target = event.target as SVGElement;
-    const countryName = target.getAttribute("data-country");
-    if (!countryName) return;
-
-    if (nations.includes(countryName)) {
-      setSelectedCountry(countryName);
-    } else {
-      alert(`No notes available for: ${countryName}`);
-    }
-  };
-
   const MapComponent = getMapByTime();
 
   if (!MapComponent) {
@@ -112,42 +105,57 @@ export const GeographicSelectionPage = () => {
   }
 
   return (
+    <GeographicPageProvider>
+      <InnerGeographicSelection MapComponent={MapComponent} />
+    </GeographicPageProvider>
+  );
+};
+
+export const InnerGeographicSelection: React.FC<{
+  MapComponent: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+}> = ({ MapComponent }) => {
+  const { selectedCountry, setSelectedCountry } = useGeographicPageContext();
+
+  return (
     <div className="flex flex-col items-center justify-start w-full h-full">
       <div className="w-full h-full overflow-y-auto">
-        <CrossCountryPopup
-          setHoveredConcept={setHoveredConcept}
-          setSelectedCountry={setSelectedCountry}
-        />
+          <div className="relative w-full h-full">
+            <MapHandler MapComponent={MapComponent} />
 
-        <MapHandler
-          hoveredConcept={hoveredConcept}
-          handleCountryClick={handleCountryClick}
-          MapComponent={MapComponent}
-        />
+            <div className="absolute top-0 left-0 w-full pointer-events-none z-10">
+              <div className="flex items-start p-2">
+                <div className="pointer-events-auto">
+                  <Quiz />
+                </div>
+                <div className="flex-1 flex justify-center pointer-events-auto">
+                  <CrossCountryPopup />
+                </div>
+              </div>
+            </div>
 
-        {selectedCountry &&
-          (() => {
-            const { timePeriod, ...notes } =
-              countryNotes[selectedCountry] || generalNotes[selectedCountry];
-            return (
-              <AutoscalingPopup onClose={() => setSelectedCountry(null)}>
-                <CountryInfoLayout
-                  countryName={selectedCountry}
-                  notes={notes}
-                  extra={[timePeriod ? "Time Period: " + timePeriod : ""]}
-                />
-              </AutoscalingPopup>
-            );
-          })()}
+            {selectedCountry &&
+              (() => {
+                const { timePeriod, ...notes } =
+                  countryNotes[selectedCountry] ||
+                  generalNotes[selectedCountry];
+                return (
+                  <AutoscalingPopup onClose={() => setSelectedCountry(null)}>
+                    <CountryInfoLayout
+                      countryName={selectedCountry}
+                      notes={notes}
+                      extra={[timePeriod ? "Time Period: " + timePeriod : ""]}
+                    />
+                  </AutoscalingPopup>
+                );
+              })()}
+          </div>
       </div>
     </div>
   );
 };
 
-const CrossCountryPopup: React.FC<{
-  setHoveredConcept: (concept: string | null) => void;
-  setSelectedCountry: (country: string | null) => void;
-}> = ({ setHoveredConcept, setSelectedCountry }) => {
+const CrossCountryPopup: React.FC = () => {
+  const { setSelectedCountry, setHoveredConcept } = useGeographicPageContext();
   const { selectedTime } = useTimeSliderContext();
   const [isConceptsBarOpen, setIsConceptsBarOpen] = useState(false);
   const [selectedWHAPTime, setSelectedWHAPTime] = useState<[number, number]>([
@@ -169,7 +177,7 @@ const CrossCountryPopup: React.FC<{
   }, [selectedTime]);
 
   return (
-    <div className="w-3/4 mx-auto">
+    <div className="w-11/12 mx-auto">
       {/* Toggle Bar */}
       <div
         className="h-8 bg-gradient-to-r from-blue-500 to-purple-600 cursor-pointer flex items-center justify-center text-white font-medium shadow-md hover:shadow-lg transition-shadow"
@@ -203,7 +211,12 @@ const CrossCountryPopup: React.FC<{
                 return (
                   <button
                     key={concept}
-                    onClick={() => setSelectedCountry(concept)}
+                    onClick={() => {setSelectedCountry(concept);
+                      trackEvent("crosscountry_popup_opened", {
+                        concept,
+                        selectedWHAPTime: selectedWHAPTime.join("-")
+                      });
+                    }}
                     className={`px-4 py-2 bg-gradient-to-r from-indigo-500 to-blue-600 text-white rounded-full text-sm font-medium hover:from-indigo-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg
                                 ${
                                   notes.emphasizedUnit[0] ===
@@ -230,13 +243,26 @@ const CrossCountryPopup: React.FC<{
 };
 
 const MapHandler: React.FC<{
-  hoveredConcept: string | null;
-  handleCountryClick: (e: React.MouseEvent<SVGSVGElement>) => void;
   MapComponent: React.ComponentType<React.SVGProps<SVGSVGElement>>;
-}> = ({ hoveredConcept, handleCountryClick, MapComponent }) => {
+}> = ({ MapComponent }) => {
   const mapRef = useRef<HTMLDivElement>(null);
   const [canScrollRight, setCanScrollRight] = useState<boolean>(false);
   const [canScrollLeft, setCanScrollLeft] = useState<boolean>(false);
+  const { hoveredConcept, setPresentNations, setSelectedCountry } =
+    useGeographicPageContext();
+  const { selectedTime } = useTimeSliderContext();
+  
+
+  useEffect(() => {
+    const svgEl = mapRef.current;
+    if (!svgEl) return;
+    const found = Array.from(
+      svgEl.querySelectorAll<SVGElement>("[data-country]")
+    )
+      .map((el) => el.getAttribute("data-country"))
+      .filter((v): v is string => !!v);
+    setPresentNations(found);
+  }, [MapComponent, setPresentNations]);
 
   const scrollMap = (direction: "left" | "right") => {
     if (mapRef.current) {
@@ -291,8 +317,30 @@ const MapHandler: React.FC<{
     return styles;
   }, [countryColors, hoveredConcept]);
 
+  const handleCountryClick = (event: React.MouseEvent<SVGSVGElement>) => {
+    const target = event.target as SVGElement;
+    const countryName = target.getAttribute("data-country");
+    if (!countryName) return;
+
+    if (nations.includes(countryName)) {
+      setSelectedCountry(countryName);
+      trackEvent("country_popup_opened", {
+        country: countryName,
+        timePeriod: selectedTime
+      });
+    } else {
+      alert(`No notes available for: ${countryName}`);
+    }
+  };
+
   return (
-    <div className="relative w-full h-full flex pt-2">
+    <div
+      className="relative w-full h-full flex pt-2"
+      style={{
+        transform: hoveredConcept ? "translateY(6.0rem)" : "translateY(0)",
+        transition: "transform 200ms ease",
+      }}
+    >
       <style>
         {Object.entries(countryStyles)
           .map(
@@ -309,7 +357,13 @@ const MapHandler: React.FC<{
           .join("\n")}
       </style>
       <div ref={mapRef} className="overflow-auto">
-        <div className="min-w-[1600px] min-h-[900px] flex justify-center items-center">
+        <div
+          className="min-w-[1600px] min-h-[900px] flex justify-center items-center"
+          style={{
+            minWidth: hoveredConcept ? 0 : 1600,
+            minHeight: hoveredConcept ? 0 : 900,
+          }}
+        >
           <MapComponent
             className="svg-container"
             width={1600}
@@ -346,5 +400,91 @@ const MapHandler: React.FC<{
         );
       })}
     </div>
+  );
+};
+
+const Quiz: React.FC = () => {
+  const [quizOpen, setQuizOpen] = useState<boolean>(false);
+  const [chosenCountries, setChosenCountries] = useState<[string, string]>([
+    "",
+    "",
+  ]);
+  const { presentNations } = useGeographicPageContext();
+  const maxTries = 20;
+
+  const pickCountries = () => {
+    if (!quizOpen) return;
+    let numTries = 0;
+    let country1: string;
+    let notes1: { [section: string]: string[] };
+
+    do {
+      country1 =
+        presentNations[Math.floor(Math.random() * presentNations.length)];
+      notes1 = countryNotes[country1];
+    } while (!notes1);
+
+    const notes1Keys = Object.keys(notes1);
+
+    let country2: string;
+    let notes2: { [section: string]: string[] };
+
+    do {
+      numTries++;
+      if (numTries >= maxTries) {
+        setQuizOpen(false);
+        alert("Could not find any partner for " + country1);
+        return;
+      }
+      country2 =
+        presentNations[Math.floor(Math.random() * presentNations.length)];
+      notes2 = countryNotes[country2];
+    } while (
+      country1 === country2 ||
+      !notes2 ||
+      !Object.keys(notes2).some((category: string) => {
+        return notes1Keys.some((cat: string) => cat === category);
+      })
+    );
+    setChosenCountries([country1, country2]);
+  };
+
+  useEffect(() => {
+    pickCountries();
+  }, [quizOpen]);
+
+  return (
+    <>
+      {!quizOpen && (
+        <button
+          className="h-8 bg-gradient-to-r from-yellow-500 to-red-600 cursor-pointer text-white font-medium shadow-md hover:shadow-lg transition-shadow"
+          onClick={() => setQuizOpen(true)}
+        >
+          Quiz!
+        </button>
+      )}
+      {quizOpen && (
+        <AutoscalingPopup onClose={() => setQuizOpen(false)} opaqueness={0.75}>
+          <div className="flex flex-row justify-between">
+            <h1 className="text-black">Find similarities & differences</h1>
+            <button onClick={() => pickCountries()}>Go Again</button>
+          </div>
+          <div className="w-full flex flex-row gap-4">
+            <div className="w-1/2">
+              <CountryInfoLayout
+                countryName={chosenCountries[0]}
+                notes={countryNotes[chosenCountries[0]]}
+              />
+            </div>
+            <div className="w-1/2">
+              <CountryInfoLayout
+                countryName={chosenCountries[1]}
+                notes={countryNotes[chosenCountries[1]]}
+              />
+            </div>
+          </div>
+        </AutoscalingPopup>
+      )}
+    </>
   );
 };
