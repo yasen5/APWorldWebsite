@@ -24,7 +24,7 @@ const StartScreen = ({ goToPage }: StartScreenProps) => {
 
     function onScroll() {
       const scrollTop = el!.scrollTop;
-      const fadeDistance = window.innerHeight; // px before it fully fades
+      const fadeDistance = window.innerHeight * 3/4; // px before it fully fades
       const newOpacity = Math.max(0, 1 - scrollTop / fadeDistance);
       setBgOpacity(newOpacity);
       setScrollClicked(scrollTop!=0);
