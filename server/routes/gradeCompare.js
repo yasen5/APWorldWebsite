@@ -1,3 +1,4 @@
+import { difference } from "d3";
 import express from "express";
 import OpenAI from "openai";
 
@@ -11,34 +12,44 @@ router.post("/", async (req, res) => {
     try {
         const { countryA, countryB, studentAnswer } = req.body;
         const prompt = `
-            Grade an AP World History compare-and-contrast response:
-            Country A: ${countryA}
-            Country B: ${countryB}
-            Student answer: ${studentAnswer}
-            Rubric:
-            - 1 valid similarity with evidence
-            - 1 valid difference with evidence
-            - Accuracy
-            - Historical Reasoning
-            - Clarity
-            
-            Return strictly JSON:
-            {
-                "score": number,
-                "similarity": string,
-                "difference": string,
-                "strengths": string,
-                "areasToImprove": string
-            }
+    Grade an AP World History compare-and-contrast response out of 5:
+    Country A: ${countryA}
+    Country B: ${countryB}
+    Student answer: ${studentAnswer}
+    Rubric:
+    - 1 valid similarity with evidence
+    - 1 valid difference with evidence
+    - Accuracy
+    - Historical Reasoning
+    - Clarity
+    
+    Return ONLY valid JSON with this exact structure:
+    {
+        "score": number,
+        "similarity": string,
+        "difference": string,
+        "strengths": string,
+        "areasToImprove": string
+    }
         `;
 
         const result = await client.chat.completions.create({
             model: "gpt-4o-mini",
             messages: [{ role: "user", content: prompt }],
-            response_format: { type: "json_object" },
         });
 
-        const json = JSON.parse(result.choices[0].message.content);
+        let json;
+        try {
+            json = JSON.parse(result.choices[0].message.content);
+        } catch {
+            json = {
+                score: -1,
+                similarity: "",
+                difference: "",
+                strengths: "",
+                areasToImprove: result.choices[0].message.content
+            }
+        }
 
         res.json(json);
     } catch (err) {
@@ -46,3 +57,5 @@ router.post("/", async (req, res) => {
         res.status(500).json({ error: "AI grading failed" });
     }
 });
+
+export default router;

@@ -447,6 +447,36 @@ const Quiz: React.FC = () => {
       })
     );
     setChosenCountries([country1, country2]);
+    setFeedback(undefined);
+  };
+
+  const [studentAnswer, setStudentAnswer] = useState("");
+  const [isSumbitting, setIsSubmitting] = useState(false);
+  const [feedback, setFeedback] = useState<{ score?: number; strengths?: String; areasToImprove: string }>();
+
+  const handleSubmit = async () => {
+    if (!studentAnswer) return;
+    console.log("submit");
+    setIsSubmitting(true);
+    try {
+      const res = await fetch("http://localhost:3001/api/grade-compare", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          countryA: chosenCountries[0],
+          countryB: chosenCountries[1],
+          studentAnswer: studentAnswer,
+        }),
+      });
+
+      const graded = await res.json();
+      setFeedback(graded);
+    } catch (err) {
+      console.error(err);
+      alert("Error grading answer");
+    } finally {
+      setIsSubmitting(false);
+    } 
   };
 
   useEffect(() => {
@@ -465,24 +495,42 @@ const Quiz: React.FC = () => {
       )}
       {quizOpen && (
         <AutoscalingPopup onClose={() => setQuizOpen(false)} opaqueness={0.75}>
-          <div className="flex flex-row justify-between">
+          <div className="flex items-center justify-between">
             <h1 className="text-black">Find similarities & differences</h1>
-            <button onClick={() => pickCountries()}>Go Again</button>
+            <button onClick={() => pickCountries()} className="!bg-white !text-black">Go Again</button>
           </div>
-          <div className="w-full flex flex-row gap-4">
-            <div className="w-1/2">
-              <CountryInfoLayout
-                countryName={chosenCountries[0]}
-                notes={countryNotes[chosenCountries[0]]}
-              />
+          <div className="w-full grid grid-cols-2 gap-4 mb-4">
+            <div className="text-center">
+              <h2 className="font-bold text-2xl text-black">{chosenCountries[0]}</h2>
             </div>
-            <div className="w-1/2">
-              <CountryInfoLayout
-                countryName={chosenCountries[1]}
-                notes={countryNotes[chosenCountries[1]]}
-              />
+            <div className="text-center">
+              <h2 className="font-bold text-2xl text-black">{chosenCountries[1]}</h2>
             </div>
           </div>
+          <div className="mb-4">
+              <textarea
+                value={studentAnswer}
+                onChange={(e) => setStudentAnswer(e.target.value)}
+                placeholder="Your answer"
+                className="w-full bg-white rounded p-2 !text-black h-40 resize-none"
+              ></textarea>
+          </div>
+          <button
+            onClick={handleSubmit}
+            className="w-full !bg-white !text-black"
+          >
+            {isSumbitting ? "Grading..." : "Submit for Grading"}
+          </button>
+          {feedback && (
+            <div className="mt-4 p-2 border rounded bg-gray-100 !text-black">
+              <p className="font-semibold">Score:</p>
+              <p>{feedback.score ?? "N/A"}/5</p>
+              <p className="font-semibold">Strengths:</p>
+              <p>{feedback.strengths}</p>
+              <p className="font-semibold" >Areas to improve:</p>
+              <p>{feedback.areasToImprove}</p>
+            </div>
+          )}
         </AutoscalingPopup>
       )}
     </>
