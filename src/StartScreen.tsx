@@ -75,7 +75,7 @@ const StartScreen = ({ goToPage }: StartScreenProps) => {
       <div className="w-full h-full overflow-y-auto" ref={scrollRef}>
         <section
           ref={bgImgRef}
-          className="h-screen w-full flex flex-col justify-center items-center text-center px-6 sticky top-0"
+          className="h-screen w-full flex flex-col justify-center items-center text-center px-6 sticky top-0 pointer-events-none"
           style={{ backgroundImage: `url(${map})`, opacity: bgOpacity }}
         >
           <h1 className="text-5xl md:text-7xl font-bold drop-shadow-xl mb-6">
@@ -85,7 +85,7 @@ const StartScreen = ({ goToPage }: StartScreenProps) => {
             World History at a Glance
           </p>
           <button
-            className="image-button transform hover:scale-110 transition-all"
+            className="image-button transform hover:scale-110 transition-all pointer-events-auto"
             onClick={() => goToPage(AppPage.GEOGRAPHIC_SELECTION)}
           >
             <img
@@ -181,7 +181,7 @@ const StartScreen = ({ goToPage }: StartScreenProps) => {
               <label>
                 Your email:{" "}
                 <input
-                  className="my-2 border p-3 rounded w-full bg-white"
+                  className="my-2 border p-3 rounded w-full bg-white text-black"
                   type="email"
                   name="email"
                 ></input>
@@ -189,7 +189,7 @@ const StartScreen = ({ goToPage }: StartScreenProps) => {
               <label>
                 Your message:{" "}
                 <textarea
-                  className="my-2 border p-3 rounded w-full bg-white"
+                  className="my-2 border p-3 rounded w-full bg-white text-black"
                   name="message"
                 ></textarea>
               </label>
