@@ -459,7 +459,7 @@ const Quiz: React.FC = () => {
     console.log("submit");
     setIsSubmitting(true);
     try {
-      const res = await fetch("http://localhost:3001/api/grade-compare", {
+      const res = await fetch("https://apworldwebsite.onrender.com/api/grade-compare", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
