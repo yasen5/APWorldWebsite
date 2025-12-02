@@ -460,25 +460,31 @@ const Quiz: React.FC = () => {
     setIsSubmitting(true);
     try {
       const start = performance.now();
-      await fetch("https://apworldwebsite.onrender.com/api/health"); 
-      const end = performance.now();
-      alert(`Backend awake in ${Math.round(end - start)}ms`);
-      
-      const res = await fetch("https://apworldwebsite.onrender.com/api/grade-compare", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          countryA: chosenCountries[0],
-          countryB: chosenCountries[1],
-          studentAnswer: studentAnswer,
-        }),
-      });
+      try {
+        const healthRes = await fetch("https://apworldwebsite.onrender.com/api/health");
+        const data = await healthRes.json();
+        const end = performance.now();
+        alert(`Backend awake in ${Math.round(end - start)}ms: ${data.message}`);
+      } catch (err) {
+        console.error("Health check failed:", err);
+        alert("Health check failed");
+      }
 
-      const graded = await res.json();
-      setFeedback(graded);
+      // const res = await fetch("https://apworldwebsite.onrender.com/api/grade-compare", {
+      //   method: "POST",
+      //   headers: { "Content-Type": "application/json" },
+      //   body: JSON.stringify({
+      //     countryA: chosenCountries[0],
+      //     countryB: chosenCountries[1],
+      //     studentAnswer: studentAnswer,
+      //   }),
+      // });
+
+      // const graded = await res.json();
+      // setFeedback(graded);
     } catch (err) {
       console.error(err);
-      alert("Error grading answer");
+      // alert("Error grading answer");
     } finally {
       setIsSubmitting(false);
     } 
