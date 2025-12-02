@@ -459,6 +459,11 @@ const Quiz: React.FC = () => {
     console.log("submit");
     setIsSubmitting(true);
     try {
+      const start = performance.now();
+      await fetch("https://apworldwebsite.onrender.com/api/health"); 
+      const end = performance.now();
+      alert(`Backend awake in ${Math.round(end - start)}ms`);
+      
       const res = await fetch("https://apworldwebsite.onrender.com/api/grade-compare", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
