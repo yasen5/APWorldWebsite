@@ -470,21 +470,21 @@ const Quiz: React.FC = () => {
         alert("Health check failed");
       }
 
-      // const res = await fetch("https://apworldwebsite.onrender.com/api/grade-compare", {
-      //   method: "POST",
-      //   headers: { "Content-Type": "application/json" },
-      //   body: JSON.stringify({
-      //     countryA: chosenCountries[0],
-      //     countryB: chosenCountries[1],
-      //     studentAnswer: studentAnswer,
-      //   }),
-      // });
+      const res = await fetch("https://apworldwebsite.onrender.com/api/grade-compare", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          countryA: chosenCountries[0],
+          countryB: chosenCountries[1],
+          studentAnswer: studentAnswer,
+        }),
+      });
 
-      // const graded = await res.json();
-      // setFeedback(graded);
+      const graded = await res.json();
+      setFeedback(graded);
     } catch (err) {
       console.error(err);
-      // alert("Error grading answer");
+      alert("Error grading answer");
     } finally {
       setIsSubmitting(false);
     } 
