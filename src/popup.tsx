@@ -76,8 +76,7 @@ export const AutoscalingPopup: React.FC<{
   );
 };
 
-const capitalize = (str: string) =>
-  str.charAt(0).toUpperCase() + str.slice(1);
+const capitalize = (str: string) => str.charAt(0).toUpperCase() + str.slice(1);
 
 export const CountryInfoLayout: React.FC<{
   countryName: string;
@@ -115,12 +114,19 @@ export const CountryInfoLayout: React.FC<{
               </Dropdown>
             )
         )}
-      <h3 className="!text-black font-semibold mt-4">Involved Countries:</h3>
-      {links &&
+      {links && (
+          <h3 className="!text-black font-semibold mt-4">
+            Involved Countries:
+          </h3>
+        ) &&
         links
           .filter(([title, _]) => title.length !== 0)
           .map(([title, onClick]) => (
-            <button className="border !border-gray-300 mx-2 my-1" onClick={onClick} style={{backgroundColor: "#f0f0f0", color: "black"}}>
+            <button
+              className="border !border-gray-300 mx-2 my-1"
+              onClick={onClick}
+              style={{ backgroundColor: "#f0f0f0", color: "black" }}
+            >
               {title}
             </button>
           ))}
@@ -148,11 +154,12 @@ const Dropdown: React.FC<{ title: string; children: React.ReactNode }> = ({
       <button
         style={{ backgroundColor: categoryColors[title] || "#f0f0f0" }}
         className="w-full flex justify-between items-center p-2"
-        onClick={() => {setIsOpen(!isOpen)
-          if(!isOpen) {
+        onClick={() => {
+          setIsOpen(!isOpen);
+          if (!isOpen) {
             trackEvent("dropdown_opened", {
-            dropdown: title
-          });
+              dropdown: title,
+            });
           }
         }}
       >
