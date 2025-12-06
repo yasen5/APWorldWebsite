@@ -61,15 +61,20 @@ export const AutoscalingPopup: React.FC<{
           borderColor: `rgba(153, 153, 153, ${opaqueness ?? 1})`,
         }}
       >
-        <button
-          className="[all:unset] cursor-pointer absolute top-2 right-2 text-black"
-          onClick={onClose}
-          aria-label="Close"
-          style={{ backgroundColor: "#f8f8f8", color: "black" }}
-        >
-          x
-        </button>
-        {children}
+        <div className="absolute top-2 left-2 z-10">
+          <button
+            className="[all:unset] cursor-pointer !text-xl !bg-pink-400 !text-black"
+            onClick={onClose}
+            aria-label="Close"
+          >
+            x
+          </button>
+        </div>
+
+        {/* Scrollable content */}
+        <div className="w-full h-full overflow-y-scroll p-10">
+          {children}
+        </div>
       </div>
     </div>,
     document.body
