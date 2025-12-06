@@ -68,8 +68,6 @@ export const AutoscalingPopup: React.FC<{
         >
           x
         </button>
-
-        {/* Scrollable content */}
         <div className="w-full h-full overflow-y-scroll p-10">{children}</div>
       </div>
     </div>,
