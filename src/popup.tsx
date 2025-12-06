@@ -62,14 +62,13 @@ export const AutoscalingPopup: React.FC<{
         }}
       >
         <button
-          className="[all:unset] cursor-pointer absolute top-2 right-2 text-black"
+          className="absolute top-2 left-2 z-10 cursor-pointer !text-xl !bg-pink-400 !text-black"
           onClick={onClose}
           aria-label="Close"
-          style={{ backgroundColor: "#f8f8f8", color: "black" }}
         >
           x
         </button>
-        {children}
+        <div className="w-full h-full overflow-y-scroll p-10">{children}</div>
       </div>
     </div>,
     document.body
