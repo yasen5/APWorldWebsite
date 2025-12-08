@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { usePageTransitionContext } from "./page-transition-provider.tsx";
-import { AppPage, AppPageLabels } from "./AppPageLabels.ts";
+import { usePageTransitionContext } from "../providers/PageTransitionProvider.tsx";
+import { AppPage, AppPageLabels } from "../util/AppPageLabels.ts";
 
 const isDev =
   window.location.hostname === "localhost" ||
@@ -8,7 +8,11 @@ const isDev =
   window.location.hostname.includes("dev") ||
   window.location.hostname.includes("staging");
 
-const availablePages = isDev ? Object.entries(AppPageLabels) : Object.entries(AppPageLabels).filter(([key]) => Number(key) !== AppPage.SVG_GENERATOR);
+const availablePages = isDev
+  ? Object.entries(AppPageLabels)
+  : Object.entries(AppPageLabels).filter(
+      ([key]) => Number(key) !== AppPage.SVG_GENERATOR
+    );
 
 const Navbar = () => {
   const { goToPage } = usePageTransitionContext();

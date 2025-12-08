@@ -1,19 +1,20 @@
-import { useState, useEffect } from 'react';
-import { PageTransitionProvider, usePageTransitionContext } from './page-transition-provider.tsx';
-import { PageTransition } from './PageTransition.tsx';
-import './App.css'
-import Navbar from './Navbar.tsx';
-import { AppPage } from './AppPageLabels.ts';
-import { TimeSlider, TimeSliderProvider } from "./TimeSlider.tsx"
-
-
+import { useState, useEffect } from "react";
+import {
+  PageTransitionProvider,
+  usePageTransitionContext,
+} from "./providers/PageTransitionProvider.tsx";
+import { PageTransition } from "./util/PageTransition.tsx";
+import "./App.css";
+import Navbar from "./components/Navbar.tsx";
+import { AppPage } from "./util/AppPageLabels.ts";
+import { TimeSlider, TimeSliderProvider } from "./components/TimeSlider.tsx";
 
 const HeaderComponents = () => {
   const { nextPage } = usePageTransitionContext();
   return (
     <div id="header" className="fixed w-full z-50">
       <Navbar />
-      {(nextPage == AppPage.GEOGRAPHIC_SELECTION) && <TimeSlider />}
+      {nextPage == AppPage.GEOGRAPHIC_SELECTION && <TimeSlider />}
     </div>
   );
 };
@@ -40,11 +41,12 @@ function App() {
       <PageTransitionProvider>
         <HeaderComponents />
         <div
-          className='slider-container-wrapper overflow-hidden'
+          className="slider-container-wrapper overflow-hidden"
           style={{
             marginTop: headerHeight,
-            height: `calc(100vh - ${headerHeight}px)`
-          }}>
+            height: `calc(100vh - ${headerHeight}px)`,
+          }}
+        >
           <PageTransition />
         </div>
       </PageTransitionProvider>
@@ -52,4 +54,4 @@ function App() {
   );
 }
 
-export default App
+export default App;

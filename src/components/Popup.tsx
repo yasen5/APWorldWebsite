@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
-import { trackEvent } from "./analytics";
+import { trackEvent } from "../util/analytics";
 
 export const AutoscalingPopup: React.FC<{
   children: React.ReactNode;

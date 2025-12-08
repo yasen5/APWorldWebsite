@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useRef, useState } from "react";
-import { AppPage } from "./AppPageLabels";
-import { pageview } from "./analytics";
+import { AppPage } from "../util/AppPageLabels";
+import { pageview } from "../util/analytics";
 
 interface PageTransitionProps {
   currentPage: AppPage;
