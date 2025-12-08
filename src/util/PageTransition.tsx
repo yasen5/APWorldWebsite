@@ -1,11 +1,11 @@
-import { AppPage } from "./AppPageLabels";
-import { GeographicSelectionPage } from './geographic-selection.tsx';
-import { D3ForceGraph } from './SvgGenerator.tsx';
-import { ExplanationPage } from "./Explanation.tsx";
-import TimelinePage from "./timeline-page.tsx";
-import { Unit9Page } from "./Unit9Page.tsx";
-import StartScreen from "./StartScreen.tsx";
-import { usePageTransitionContext } from "./page-transition-provider.tsx";
+import { AppPage } from "./AppPageLabels.ts";
+import { GeographicSelectionPage } from "../pages/GeographicSelection.tsx";
+import { D3ForceGraph } from "../pages/SvgGenerator.tsx";
+import { ExplanationPage } from "../pages/Explanation.tsx";
+import TimelinePage from "../pages/timeline-page.tsx";
+import { Unit9Page } from "../pages/Unit9Page.tsx";
+import StartScreen from "../pages/StartScreen.tsx";
+import { usePageTransitionContext } from "../providers/PageTransitionProvider.tsx";
 
 export const PageTransition = () => {
   const { transitioning, currentPage, nextPage, goToPage } =

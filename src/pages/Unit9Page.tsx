@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import "./App.css";
-import { unit9Notes } from "./Unit9Notes";
+import "../App.css";
+import { unit9Notes } from "../notes/Unit9Notes";
 
 export const Unit9Page = () => {
     const [open, setOpen] = useState<string | null>(null);
