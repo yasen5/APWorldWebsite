@@ -62,22 +62,20 @@ export const AutoscalingPopup: React.FC<{
         }}
       >
         <button
-          className="[all:unset] cursor-pointer absolute top-2 right-2 text-black"
+          className="absolute top-2 left-2 z-10 cursor-pointer !text-xl !bg-pink-400 !text-black"
           onClick={onClose}
           aria-label="Close"
-          style={{ backgroundColor: "#f8f8f8", color: "black" }}
         >
           x
         </button>
-        {children}
+        <div className="w-full h-full overflow-y-scroll p-10">{children}</div>
       </div>
     </div>,
     document.body
   );
 };
 
-const capitalize = (str: string) =>
-  str.charAt(0).toUpperCase() + str.slice(1);
+const capitalize = (str: string) => str.charAt(0).toUpperCase() + str.slice(1);
 
 export const CountryInfoLayout: React.FC<{
   countryName: string;
@@ -115,12 +113,19 @@ export const CountryInfoLayout: React.FC<{
               </Dropdown>
             )
         )}
-      <h3 className="!text-black font-semibold mt-4">Involved Countries:</h3>
-      {links &&
+      {links && (
+          <h3 className="!text-black font-semibold mt-4">
+            Involved Countries:
+          </h3>
+        ) &&
         links
           .filter(([title, _]) => title.length !== 0)
           .map(([title, onClick]) => (
-            <button className="border !border-gray-300 mx-2 my-1" onClick={onClick} style={{backgroundColor: "#f0f0f0", color: "black"}}>
+            <button
+              className="border !border-gray-300 mx-2 my-1"
+              onClick={onClick}
+              style={{ backgroundColor: "#f0f0f0", color: "black" }}
+            >
               {title}
             </button>
           ))}
@@ -148,11 +153,12 @@ const Dropdown: React.FC<{ title: string; children: React.ReactNode }> = ({
       <button
         style={{ backgroundColor: categoryColors[title] || "#f0f0f0" }}
         className="w-full flex justify-between items-center p-2"
-        onClick={() => {setIsOpen(!isOpen)
-          if(!isOpen) {
+        onClick={() => {
+          setIsOpen(!isOpen);
+          if (!isOpen) {
             trackEvent("dropdown_opened", {
-            dropdown: title
-          });
+              dropdown: title,
+            });
           }
         }}
       >

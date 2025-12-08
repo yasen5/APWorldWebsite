@@ -1,29 +1,11 @@
 import { AppPage } from "./AppPageLabels";
-import worldIcon from './assets/world.svg'
 import { GeographicSelectionPage } from './geographic-selection.tsx';
 import { D3ForceGraph } from './SvgGenerator.tsx';
 import { ExplanationPage } from "./Explanation.tsx";
 import TimelinePage from "./timeline-page.tsx";
 import { Unit9Page } from "./Unit9Page.tsx";
+import StartScreen from "./StartScreen.tsx";
 import { usePageTransitionContext } from "./page-transition-provider.tsx";
-
-interface StartScreenProps {
-  goToPage: (page: AppPage) => void
-}
-
-const StartScreen = ({ goToPage }: StartScreenProps) => {
-  return (
-    <div className='flex flex-col items-center'>
-      <h1>AP World Study Website</h1>
-      <p>Click to Begin</p>
-      <button className='image-button' onClick={() => goToPage(AppPage.GEOGRAPHIC_SELECTION)}>
-        <img src={worldIcon} className="p-1.5 h-24 w-24 drop-shadow-sm animate-pulse" />
-      </button>
-      <button onClick={() => goToPage(AppPage.EXPLANATION)}>Explanation</button>
-      <button onClick={() => goToPage(AppPage.SVG_GENERATOR)}>SVG Generator</button>
-    </div>
-  );
-};
 
 export const PageTransition = () => {
   const { transitioning, currentPage, nextPage, goToPage } =
