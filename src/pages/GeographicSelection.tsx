@@ -490,6 +490,8 @@ const Quiz: React.FC = () => {
     } 
   };
 
+  const [notesOpen, setNotesOpen] = useState<boolean>(false);
+
   useEffect(() => {
     pickCountries();
   }, [quizOpen]);
@@ -532,6 +534,12 @@ const Quiz: React.FC = () => {
           >
             {isSumbitting ? "Grading..." : "Submit for Grading"}
           </button>
+          <button
+            onClick={() => setNotesOpen(true)}
+            className="mt-4 w-full !text-xs !bg-white !text-black"
+          >
+            Need Help?
+          </button>
           {feedback && (
             <div className="mt-4 p-2 border rounded bg-gray-100 !text-black">
               <p className="font-semibold">Score:</p>
@@ -542,6 +550,30 @@ const Quiz: React.FC = () => {
               <p>{feedback.areasToImprove}</p>
             </div>
           )}
+        </AutoscalingPopup>
+      )}
+      {notesOpen && (
+        <AutoscalingPopup onClose={() => setNotesOpen(false)}>
+          <div className="w-full flex flex-row gap-4">
+            <div className="w-1/2">
+              <CountryInfoLayout
+                countryName={chosenCountries[0]}
+                notes={countryNotes[chosenCountries[0]]}
+              />
+            </div>
+            <div className="w-1/2">
+              <CountryInfoLayout
+                countryName={chosenCountries[1]}
+                notes={countryNotes[chosenCountries[1]]}
+              />
+            </div>
+          </div>
+          <button
+            onClick={() => setNotesOpen(false)}
+            className="mt-4 w-full !bg-white !text-black"
+          >
+            Return to Quiz
+          </button>
         </AutoscalingPopup>
       )}
     </>
