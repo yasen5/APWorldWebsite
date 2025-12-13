@@ -1,12 +1,12 @@
-import Globalization from './assets/globalization.png';
-import Tech from './assets/tech.jpg';
-import GreenRevolution from './assets/green-revolution.jpg';
-import KnowledgeEconomy from './assets/knowledge-economy.jpg';
-import GlobalWarming from './assets/global-warming.jpg';
-import Health from './assets/health.jpg';
-import TradeOrganizations from './assets/trade-organizations.jpg';
-import MultinationalCorporations from './assets/multinational-corporations.jpg';
-import UnitedNations from './assets/united-nations.jpg';
+import Globalization from "../assets/globalization.png";
+import Tech from "../assets/tech.jpg";
+import GreenRevolution from "../assets/green-revolution.jpg";
+import KnowledgeEconomy from "../assets/knowledge-economy.jpg";
+import GlobalWarming from "../assets/global-warming.jpg";
+import Health from "../assets/health.jpg";
+import TradeOrganizations from "../assets/trade-organizations.jpg";
+import MultinationalCorporations from "../assets/multinational-corporations.jpg";
+import UnitedNations from "../assets/united-nations.jpg";
 
 
 

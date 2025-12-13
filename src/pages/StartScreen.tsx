@@ -1,10 +1,10 @@
-import { AppPage } from "./AppPageLabels";
-import worldIcon from "./assets/world.svg";
-import map from "./assets/map.png";
-import mapExample from "./assets/map_example.png";
-import timelineExample from "./assets/timeline.png";
-import quizExample from "./assets/QuizExample.png";
-import ArrowsRight from "./assets/DoubleGreenArrows.png";
+import { AppPage } from "../util/AppPageLabels";
+import worldIcon from "../assets/world.svg";
+import map from "../assets/map.png";
+import mapExample from "../assets/map_example.png";
+import timelineExample from "../assets/timeline.png";
+import quizExample from "../assets/QuizExample.png";
+import ArrowsRight from "../assets/DoubleGreenArrows.png";
 import { useEffect, useRef, useState } from "react";
 
 interface StartScreenProps {
@@ -24,10 +24,10 @@ const StartScreen = ({ goToPage }: StartScreenProps) => {
 
     function onScroll() {
       const scrollTop = el!.scrollTop;
-      const fadeDistance = window.innerHeight * 3/4; // px before it fully fades
+      const fadeDistance = (window.innerHeight * 3) / 4; // px before it fully fades
       const newOpacity = Math.max(0, 1 - scrollTop / fadeDistance);
       setBgOpacity(newOpacity);
-      setScrollClicked(scrollTop!=0);
+      setScrollClicked(scrollTop != 0);
     }
 
     el.addEventListener("scroll", onScroll);
@@ -36,15 +36,15 @@ const StartScreen = ({ goToPage }: StartScreenProps) => {
 
   async function scroll(y: number, time: number) {
     if (!scrollRef) return;
-    const start = performance.now()
+    const start = performance.now();
     const startY = scrollRef.current!.scrollTop;
-    const endY = startY + y
+    const endY = startY + y;
     while (performance.now() < start + time) {
-      const progress = (performance.now() - start) / time
-      scrollRef.current!.scrollTo(0, startY + y * progress)
+      const progress = (performance.now() - start) / time;
+      scrollRef.current!.scrollTo(0, startY + y * progress);
       await new Promise((resolve) => requestAnimationFrame(resolve));
     }
-    scrollRef.current!.scrollTo(0, endY)
+    scrollRef.current!.scrollTo(0, endY);
   }
 
   return (

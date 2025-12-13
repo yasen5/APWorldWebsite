@@ -1,35 +1,35 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { countryNotes, generalNotes } from "./notes";
-import World1200 from "./assets/World-1200.svg?react";
-import World1280 from "./assets/World-1280.svg?react";
-import World1300 from "./assets/World-1300.svg?react";
-import World1400 from "./assets/World-1400.svg?react";
-import World1500 from "./assets/World-1500.svg?react";
-import World1530 from "./assets/World-1530.svg?react";
-import World1600 from "./assets/World-1600.svg?react";
-import World1650 from "./assets/World-1650.svg?react";
-import World1700 from "./assets/World-1700.svg?react";
-import World1715 from "./assets/World-1715.svg?react";
-import World1785 from "./assets/World-1785.svg?react";
-import World1800 from "./assets/World-1800.svg?react";
-import World1815 from "./assets/World-1815.svg?react";
-import World1880 from "./assets/World-1880.svg?react";
-import World1900 from "./assets/World-1900.svg?react";
-import World1914 from "./assets/World-1914.svg?react";
-import World1920 from "./assets/World-1920.svg?react";
-import World1930 from "./assets/World-1930.svg?react";
-import World1938 from "./assets/World-1938.svg?react";
-import World1950 from "./assets/World-1950.svg?react";
-import World1960 from "./assets/World-1960.svg?react";
-import World1994 from "./assets/World-1994.svg?react";
-import { useTimeSliderContext } from "./TimeSlider";
-import ArrowsRight from "./assets/DoubleGreenArrows.png";
-import { AutoscalingPopup, CountryInfoLayout } from "./popup";
+import { countryNotes, generalNotes } from "../notes/notes";
+import World1200 from "../assets/World-1200.svg?react";
+import World1280 from "../assets/World-1280.svg?react";
+import World1300 from "../assets/World-1300.svg?react";
+import World1400 from "../assets/World-1400.svg?react";
+import World1500 from "../assets/World-1500.svg?react";
+import World1530 from "../assets/World-1530.svg?react";
+import World1600 from "../assets/World-1600.svg?react";
+import World1650 from "../assets/World-1650.svg?react";
+import World1700 from "../assets/World-1700.svg?react";
+import World1715 from "../assets/World-1715.svg?react";
+import World1785 from "../assets/World-1785.svg?react";
+import World1800 from "../assets/World-1800.svg?react";
+import World1815 from "../assets/World-1815.svg?react";
+import World1880 from "../assets/World-1880.svg?react";
+import World1900 from "../assets/World-1900.svg?react";
+import World1914 from "../assets/World-1914.svg?react";
+import World1920 from "../assets/World-1920.svg?react";
+import World1930 from "../assets/World-1930.svg?react";
+import World1938 from "../assets/World-1938.svg?react";
+import World1950 from "../assets/World-1950.svg?react";
+import World1960 from "../assets/World-1960.svg?react";
+import World1994 from "../assets/World-1994.svg?react";
+import { useTimeSliderContext } from "../components/TimeSlider";
+import ArrowsRight from "../assets/DoubleGreenArrows.png";
+import { AutoscalingPopup, CountryInfoLayout } from "../components/Popup";
 import {
   GeographicPageProvider,
   useGeographicPageContext,
-} from "./geographic-selection-provider";
-import { trackEvent } from "./analytics"
+} from "../providers/GeographicSelectionProvider";
+import { trackEvent } from "../util/analytics"
 
 const timeMaps: Record<
   number,

@@ -1,9 +1,9 @@
 import React, { useState, useMemo, useRef, useEffect } from "react";
-import { timelineNotes } from "./timeline-notes";
-import { countryNotes } from "./notes";
-import "./App.css";
-import { AutoscalingPopup, CountryInfoLayout } from "./popup";
-import { trackEvent } from "./analytics";
+import { timelineNotes } from "../notes/timeline-notes";
+import { countryNotes } from "../notes/notes";
+import "../App.css";
+import { AutoscalingPopup, CountryInfoLayout } from "../components/Popup";
+import { trackEvent } from "../util/analytics";
 
 type TimelinePanelProps = {
   onClickEvent: (k: string) => void;
@@ -230,9 +230,10 @@ const TimelinePanel: React.FC<TimelinePanelProps> = ({ onClickEvent }) => {
                 <button
                   type="button"
                   onMouseLeave={() => setHoveredEvent(null)}
-                  onClick={() => {onClickEvent(p.ev)
+                  onClick={() => {
+                    onClickEvent(p.ev);
                     trackEvent("event_popup_opened", {
-                     eventName: p.ev
+                      eventName: p.ev,
                     });
                   }}
                   className="scroll-item rounded-full text-sm border hover:shadow !bg-yellow-200 dark:!bg-purple-700"
@@ -284,9 +285,7 @@ const TimelinePage: React.FC = () => {
   return (
     <div className="w-full py-[16px] box-border flex flex-col justify-center">
       <div className="mt-[56px]">
-        <h1 className="text-2xl font-bold mb-2">
-          Timeline
-        </h1>
+        <h1 className="text-2xl font-bold mb-2">Timeline</h1>
         <p className="text-sm text-gray-600 mb-4">Scroll to see events!</p>
       </div>
 
@@ -313,13 +312,13 @@ const TimelinePage: React.FC = () => {
               <CountryInfoLayout
                 countryName={openEvent}
                 notes={notes}
-                links={countryButtons} 
+                links={countryButtons}
                 extra={[
                   theme,
                   "•",
                   `${timePeriod[0]}-${timePeriod[1]}`,
                   "•",
-                  `Unit: ${emphasizedUnit[0]}-${emphasizedUnit[1]}`
+                  `Unit: ${emphasizedUnit[0]}-${emphasizedUnit[1]}`,
                 ]}
               />
             </AutoscalingPopup>
