@@ -412,6 +412,22 @@ const Quiz: React.FC = () => {
   const { presentNations } = useGeographicPageContext();
   const maxTries = 20;
 
+  useEffect(() => {
+    if (quizOpen) {
+      (async () => {
+        try {
+          const start = performance.now();
+          const healthRes = await fetch("http://localhost:3001/api/health");
+          const data = await healthRes.json();
+          const end = performance.now();
+          console.log(`Backend wakeup (~health) in ${Math.round(end - start)}ms: ${data.message}`);
+        } catch (err) {
+          console.error("Backend wakeup/health failed", err);
+        }
+      })();
+    }
+  }, [quizOpen]);
+
   const pickCountries = () => {
     if (!quizOpen) return;
     let numTries = 0;
@@ -459,18 +475,8 @@ const Quiz: React.FC = () => {
     console.log("submit");
     setIsSubmitting(true);
     try {
-      const start = performance.now();
-      try {
-        const healthRes = await fetch("https://apworldwebsite.onrender.com/api/health");
-        const data = await healthRes.json();
-        const end = performance.now();
-        alert(`Backend awake in ${Math.round(end - start)}ms: ${data.message}`);
-      } catch (err) {
-        console.error("Health check failed:", err);
-        alert("Health check failed");
-      }
-
-      const res = await fetch("https://apworldwebsite.onrender.com/api/grade-compare", {
+      // https://apworldwebsite.onrender.com/api/grade-compare
+      const res = await fetch("http://localhost:3001/api/grade-compare", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
