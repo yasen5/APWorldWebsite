@@ -1,11 +1,14 @@
-import { useState, createContext, useContext } from "react";
+import { useState, createContext, useContext, useEffect } from "react";
 import * as Slider from "@radix-ui/react-slider";
+import { comparisons, type ValidComparison } from "../notes/quiz-notes";
 
 const timePeriods: number[] = [1200, 1450, 1750, 1900, 2025];
 
 interface TimeSliderProps {
   selectedTime: number;
   setSelectedTime: React.Dispatch<React.SetStateAction<number>>;
+  validComparisons: ValidComparison[] | undefined;
+  setValidComparisons: React.Dispatch<React.SetStateAction<ValidComparison[] | undefined>>;
 }
 
 const TimeSliderContext = createContext<TimeSliderProps | undefined>(undefined);
@@ -24,16 +27,24 @@ interface TimeSliderProviderProps {
 
 export const TimeSliderProvider: React.FC<TimeSliderProviderProps> = ({ children }) => {
   const [selectedTime, setSelectedTime] = useState<number>(1200);
+  const [validComparisons, setValidComparisons] = useState<ValidComparison[]>();
 
   return (
-    <TimeSliderContext.Provider value={{ selectedTime, setSelectedTime }}>
+    <TimeSliderContext.Provider value={{ selectedTime, setSelectedTime, validComparisons, setValidComparisons }}>
       {children}
     </TimeSliderContext.Provider>
   );
 };
 
 export const TimeSlider = () => {
-  const { selectedTime, setSelectedTime } = useTimeSliderContext();
+  const { selectedTime, setSelectedTime, setValidComparisons } = useTimeSliderContext();
+
+  useEffect(() => {
+    const validComparisons: ValidComparison[] =  comparisons.filter((comparison: ValidComparison) => {
+      return comparison.timePeriod[0] <= selectedTime && comparison.timePeriod[1] > selectedTime;
+    });
+    setValidComparisons(validComparisons.length === 0 ? undefined : validComparisons);
+  }, [selectedTime, setValidComparisons])
 
   return (
     <div className="pt-5 px-4 w-full">

@@ -5,8 +5,6 @@ interface GeographicPageProps {
   setSelectedCountry: React.Dispatch<React.SetStateAction<string | null>>;
   hoveredConcept: string | null;
   setHoveredConcept: React.Dispatch<React.SetStateAction<string | null>>;
-  presentNations: string[];
-  setPresentNations: React.Dispatch<React.SetStateAction<string[]>>;
 }
 
 const GeographicPageContext = createContext<
@@ -18,7 +16,6 @@ export const GeographicPageProvider: React.FC<{
 }> = ({ children }) => {
   const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
   const [hoveredConcept, setHoveredConcept] = useState<string | null>(null);
-  const [presentNations, setPresentNations] = useState<string[]>([]);
 
   return (
     <GeographicPageContext.Provider
@@ -27,8 +24,6 @@ export const GeographicPageProvider: React.FC<{
         setSelectedCountry,
         hoveredConcept,
         setHoveredConcept,
-        presentNations,
-        setPresentNations,
       }}
     >
       {children}
