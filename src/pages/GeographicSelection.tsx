@@ -28,9 +28,10 @@ import { AutoscalingPopup, CountryInfoLayout } from "../components/Popup";
 import {
   GeographicPageProvider,
   useGeographicPageContext,
+  type TrackedComparison,
 } from "../providers/GeographicSelectionProvider";
 import { trackEvent } from "../util/analytics";
-import { comparisons, type ValidComparison } from "../notes/quiz-notes";
+import type { ValidComparison } from "../notes/quiz-notes";
 
 const timeMaps: Record<
   number,
@@ -115,8 +116,8 @@ export const GeographicSelectionPage = () => {
 export const InnerGeographicSelection: React.FC<{
   MapComponent: React.ComponentType<React.SVGProps<SVGSVGElement>>;
 }> = ({ MapComponent }) => {
-  const { selectedCountry, setSelectedCountry } = useGeographicPageContext();
-  const { validComparisons } = useTimeSliderContext();
+  const { selectedCountry, setSelectedCountry, validComparisons } =
+    useGeographicPageContext();
 
   return (
     <div className="flex flex-col items-center justify-start w-full h-full">
@@ -126,11 +127,9 @@ export const InnerGeographicSelection: React.FC<{
 
           <div className="absolute top-0 left-0 w-full pointer-events-none z-10">
             <div className="flex items-start p-2">
-              {validComparisons && (
-                <div className="pointer-events-auto">
-                  <Quiz />
-                </div>
-              )}
+              <div className="pointer-events-auto">
+                <Quiz />
+              </div>
               <div className="flex-1 flex justify-center pointer-events-auto">
                 <CrossCountryPopup />
               </div>
@@ -397,7 +396,28 @@ const MapHandler: React.FC<{
 const Quiz: React.FC = () => {
   const [quizOpen, setQuizOpen] = useState<boolean>(false);
   const [comparison, setComparison] = useState<ValidComparison>();
-  const { validComparisons } = useTimeSliderContext();
+  const {
+    validComparisons,
+    setValidComparisons,
+    trackedComparisons,
+    setTrackedComparisons,
+  } = useGeographicPageContext();
+  const { selectedTime } = useTimeSliderContext();
+
+  useEffect(() => {
+    const validComparisons: TrackedComparison[] = trackedComparisons.filter(
+      (comparison: TrackedComparison) => {
+        return (
+          !comparison.used &&
+          comparison.comparison.timePeriod[0] <= selectedTime &&
+          comparison.comparison.timePeriod[1] > selectedTime
+        );
+      }
+    );
+    setValidComparisons(
+      validComparisons.length === 0 ? undefined : validComparisons
+    );
+  }, [selectedTime, trackedComparisons, setValidComparisons, trackedComparisons]);
 
   useEffect(() => {
     if (quizOpen) {
@@ -425,8 +445,10 @@ const Quiz: React.FC = () => {
     if (!quizOpen || !validComparisons) return;
     setComparison(
       validComparisons[Math.floor(Math.random() * validComparisons.length)]
+        .comparison
     );
     setFeedback(undefined);
+    setStudentAnswer("");
   };
 
   const [studentAnswer, setStudentAnswer] = useState("");
@@ -457,6 +479,17 @@ const Quiz: React.FC = () => {
 
       const graded = await res.json();
       setFeedback(graded);
+
+      if (graded.score && graded.score > 3) {
+        setTrackedComparisons((prev) =>
+          prev.map((tc) =>
+            tc.comparison.country1 === comparison.country1 &&
+            tc.comparison.country2 === comparison.country2
+              ? { ...tc, used: true }
+              : tc
+          )
+        );
+      }
     } catch (err) {
       console.error(err);
       alert("Error grading answer");
@@ -473,7 +506,7 @@ const Quiz: React.FC = () => {
 
   return (
     <>
-      {!quizOpen && (
+      {!quizOpen && validComparisons && (
         <button
           className="h-8 bg-gradient-to-r from-yellow-500 to-red-600 cursor-pointer text-white font-medium shadow-md hover:shadow-lg transition-shadow"
           onClick={() => setQuizOpen(true)}
