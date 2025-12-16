@@ -1,6 +1,5 @@
-import { useState, createContext, useContext, useEffect } from "react";
+import { useState, createContext, useContext } from "react";
 import * as Slider from "@radix-ui/react-slider";
-import { comparisons, type ValidComparison } from "../notes/quiz-notes";
 
 const timePeriods: number[] = [1200, 1450, 1750, 1900, 2025];
 
@@ -29,7 +28,6 @@ export const TimeSliderProvider: React.FC<TimeSliderProviderProps> = ({
   children,
 }) => {
   const [selectedTime, setSelectedTime] = useState<number>(1200);
-  const [validComparisons, setValidComparisons] = useState<ValidComparison[]>();
 
   return (
     <TimeSliderContext.Provider value={{ selectedTime, setSelectedTime }}>

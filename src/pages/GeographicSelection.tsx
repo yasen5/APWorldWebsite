@@ -116,8 +116,7 @@ export const GeographicSelectionPage = () => {
 export const InnerGeographicSelection: React.FC<{
   MapComponent: React.ComponentType<React.SVGProps<SVGSVGElement>>;
 }> = ({ MapComponent }) => {
-  const { selectedCountry, setSelectedCountry, validComparisons } =
-    useGeographicPageContext();
+  const { selectedCountry, setSelectedCountry } = useGeographicPageContext();
 
   return (
     <div className="flex flex-col items-center justify-start w-full h-full">
@@ -417,7 +416,12 @@ const Quiz: React.FC = () => {
     setValidComparisons(
       validComparisons.length === 0 ? undefined : validComparisons
     );
-  }, [selectedTime, trackedComparisons, setValidComparisons, trackedComparisons]);
+  }, [
+    selectedTime,
+    trackedComparisons,
+    setValidComparisons,
+    trackedComparisons,
+  ]);
 
   useEffect(() => {
     if (quizOpen) {
