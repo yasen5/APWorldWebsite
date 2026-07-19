@@ -4,7 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "generate:notes": "node scripts/generateNotesJson.js",
+    "predev": "npm run generate:notes",
     "dev": "vite",
+    "prebuild": "npm run generate:notes",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "test:server": "node --test server/**/*.test.js",
