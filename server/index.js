@@ -1,6 +1,7 @@
 import express from "express";
 import "dotenv/config";
 import gradeCompareRouter from "./routes/gradeCompare.js";
+import comparisonsRouter from "./routes/comparisons.js";
 import cors from "cors";
 
 const app = express();
@@ -8,6 +9,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use("/api/grade-compare", gradeCompareRouter);
+app.use("/api/comparisons", comparisonsRouter);
 
 const PORT = process.env.PORT || 3001;
 

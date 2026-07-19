@@ -1,5 +1,13 @@
-import { createContext, useContext, useState } from "react";
-import { comparisons, type ValidComparison } from "../notes/quiz-notes";
+import { createContext, useContext, useEffect, useState } from "react";
+import { API_BASE_URL } from "../config/api";
+import quizComparisons from "../generated/quizComparisons.json";
+
+export interface ValidComparison {
+  id: string;
+  timePeriod: [number, number];
+  country1: string;
+  country2: string;
+}
 
 export interface TrackedComparison {
   comparison: ValidComparison;
@@ -33,11 +41,44 @@ export const GeographicPageProvider: React.FC<{
   const [validComparisons, setValidComparisons] = useState<TrackedComparison[] | undefined>();
   const [trackedComparisons, setTrackedComparisons] = useState<
     TrackedComparison[]
-  >(
-    comparisons.map((comparison: ValidComparison) => {
-      return { comparison: comparison, used: false };
-    })
+  >(() =>
+    quizComparisons.map((comparison) => ({
+      comparison: comparison as ValidComparison,
+      used: false,
+    }))
   );
+
+  useEffect(() => {
+    const controller = new AbortController();
+
+    async function loadComparisons() {
+      try {
+        const response = await fetch(`${API_BASE_URL}/api/comparisons`, {
+          signal: controller.signal,
+        });
+        const data = await response.json();
+        if (!response.ok || !Array.isArray(data.comparisons)) {
+          throw new Error(data.error ?? "Unable to load comparison quizzes");
+        }
+        setTrackedComparisons(
+          data.comparisons.map((comparison: ValidComparison) => ({
+            comparison,
+            used: false,
+          }))
+        );
+      } catch (error) {
+        if (!(error instanceof DOMException && error.name === "AbortError")) {
+          console.warn(
+            "Using the bundled comparison catalog because the API catalog was unavailable",
+            error
+          );
+        }
+      }
+    }
+
+    loadComparisons();
+    return () => controller.abort();
+  }, []);
 
   return (
     <GeographicPageContext.Provider

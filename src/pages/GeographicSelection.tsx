@@ -29,9 +29,10 @@ import {
   GeographicPageProvider,
   useGeographicPageContext,
   type TrackedComparison,
+  type ValidComparison,
 } from "../providers/GeographicSelectionProvider";
 import { trackEvent } from "../util/analytics";
-import type { ValidComparison } from "../notes/quiz-notes";
+import { API_BASE_URL } from "../config/api";
 
 const timeMaps: Record<
   number,
@@ -423,28 +424,6 @@ const Quiz: React.FC = () => {
     trackedComparisons,
   ]);
 
-  useEffect(() => {
-    if (quizOpen) {
-      (async () => {
-        try {
-          const start = performance.now();
-          const healthRes = await fetch(
-            "https://apworldwebsite.onrender.com/api/health"
-          );
-          const data = await healthRes.json();
-          const end = performance.now();
-          console.log(
-            `Backend wakeup (~health) in ${Math.round(end - start)}ms: ${
-              data.message
-            }`
-          );
-        } catch (err) {
-          console.error("Backend wakeup/health failed", err);
-        }
-      })();
-    }
-  }, [quizOpen]);
-
   const pickCountries = () => {
     if (!quizOpen || !validComparisons) return;
     setComparison(
@@ -459,7 +438,7 @@ const Quiz: React.FC = () => {
   const [isSumbitting, setIsSubmitting] = useState(false);
   const [feedback, setFeedback] = useState<{
     score?: number;
-    strengths?: String;
+    strengths?: string;
     areasToImprove: string;
   }>();
 
@@ -469,26 +448,29 @@ const Quiz: React.FC = () => {
     setIsSubmitting(true);
     try {
       const res = await fetch(
-        "https://apworldwebsite.onrender.com/api/grade-compare",
+        `${API_BASE_URL}/api/grade-compare`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             countryA: comparison.country1,
             countryB: comparison.country2,
+            timePeriod: comparison.timePeriod,
             studentAnswer: studentAnswer,
           }),
         }
       );
 
       const graded = await res.json();
+      if (!res.ok) {
+        throw new Error(graded.error ?? "Unable to grade answer");
+      }
       setFeedback(graded);
 
       if (graded.score && graded.score > 3) {
         setTrackedComparisons((prev) =>
           prev.map((tc) =>
-            tc.comparison.country1 === comparison.country1 &&
-            tc.comparison.country2 === comparison.country2
+            tc.comparison.id === comparison.id
               ? { ...tc, used: true }
               : tc
           )
