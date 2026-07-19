@@ -1,0 +1,3170 @@
+{
+  "abbasid-caliphate|song-dynasty|1200-1450": {
+    "entities": [
+      "Abbasid Caliphate",
+      "Song Dynasty"
+    ],
+    "period": "1200-1450",
+    "similarities": [
+      {
+        "claim": "Technologically advanced",
+        "importance": "medium"
+      },
+      {
+        "claim": "Increased literacy due to paper",
+        "importance": "medium"
+      },
+      {
+        "claim": "Conquered by Mongols",
+        "importance": "high"
+      },
+      {
+        "claim": "Participated in Indian Ocean trade",
+        "importance": "high"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "a hereditary caliphate supported by appointed administrators in the Abbasid Caliphate.",
+        "entityB": "Confucian examination bureaucracy in the Song Dynasty",
+        "importance": "high"
+      },
+      {
+        "entityA": "Abbasids developed medicinal innovations, Chinese received things like inoculation later from Europeans during the Ming Dynasty",
+        "entityB": "Song Dynasty did not share this distinguishing feature to the same extent.",
+        "importance": "medium"
+      }
+    ]
+  },
+  "abbasid-caliphate|delhi-sultanate|1200-1450": {
+    "entities": [
+      "Abbasid Caliphate",
+      "Delhi Sultanate"
+    ],
+    "period": "1200-1450",
+    "similarities": [
+      {
+        "claim": "Muslim rulership",
+        "importance": "high"
+      },
+      {
+        "claim": "Jizya tax",
+        "importance": "high"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "The Abbasid Caliphate was Muslim-ruled but religiously diverse",
+        "entityB": "Christians and Jews generally practiced their religions under protected but unequal status and participated in scholarship. The Delhi Sultanate governed a predominantly Hindu population, and relations between Muslim rulers and Hindu subjects ranged from cooperation to taxation, temple destruction, and violent conflict.",
+        "importance": "high"
+      }
+    ]
+  },
+  "england-britain|france|1200-1450": {
+    "entities": [
+      "England 1200-1450",
+      "France 1200-1450"
+    ],
+    "period": "1200-1450",
+    "similarities": [
+      {
+        "claim": "Feudal, beholden to the Pope",
+        "importance": "high"
+      },
+      {
+        "claim": "At the arrival of guns, knight armies were replaced by peasant fodder, so monarchs became more powerful because they didn't have to rely on their lords anymore to maintain a standing army.",
+        "importance": "high"
+      },
+      {
+        "claim": "Primogeniture lead to participation in the Crusades",
+        "importance": "medium"
+      },
+      {
+        "claim": "Crusades revitalize Greek and Roman classics in the Renaissance when invaders are exposed to Abbasid knowledge",
+        "importance": "medium"
+      },
+      {
+        "claim": "Bureaucracy created in place of the lords",
+        "importance": "high"
+      },
+      {
+        "claim": "Serfs gained rights as a result of the labor scarcity following the Black Death",
+        "importance": "medium"
+      },
+      {
+        "claim": "Guilds",
+        "importance": "medium"
+      },
+      {
+        "claim": "Three-field system",
+        "importance": "medium"
+      },
+      {
+        "claim": "Printing press -> literacy",
+        "importance": "medium"
+      },
+      {
+        "claim": "Books written in vernacular (rather than Latin)",
+        "importance": "low"
+      },
+      {
+        "claim": "Growing middle class",
+        "importance": "medium"
+      },
+      {
+        "claim": "Little Ice Age hurt agricultural productivity",
+        "importance": "medium"
+      },
+      {
+        "claim": "Limited rights for women, except for wealthy widows",
+        "importance": "medium"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "England limited the power of its King with the Magna Carta",
+        "entityB": "France's monarchs generally got more powerful",
+        "importance": "high"
+      }
+    ]
+  },
+  "england-britain|france|1450-1750": {
+    "entities": [
+      "England 1450-1750",
+      "France 1450-1750"
+    ],
+    "period": "1450-1750",
+    "similarities": [
+      {
+        "claim": "Late to the party when it came to exploration, went for North America",
+        "importance": "medium"
+      },
+      {
+        "claim": "Highly mercantilist",
+        "importance": "high"
+      },
+      {
+        "claim": "Tried to convert some natives to Christianity. French with aggressive boarding schools and Métis fur traders (bilingual children of natives and French), English with conversion villages",
+        "importance": "high"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "Henry VIII led England away from the Catholic Church",
+        "entityB": "France stayed strongly Catholic",
+        "importance": "high"
+      },
+      {
+        "entityA": "Power shifted toward the English Parliament after the Glorious Revolution and English Bill of Rights,",
+        "entityB": "the French kings like Louis XVI became so powerful that the nobles were effectively quelled",
+        "importance": "high"
+      },
+      {
+        "entityA": "English kings were usually kept in check by Parliament and weren't allowed to express these strongly religious views",
+        "entityB": "French kings used the Divine Right to claim power,",
+        "importance": "high"
+      },
+      {
+        "entityA": "English colonies mostly focused on farming, thus having bad relations with natives due to rapid expansion,",
+        "entityB": "French were into fur trading and needed greater cooperation with natives",
+        "importance": "high"
+      },
+      {
+        "entityA": "England/Britain did not share this distinguishing feature to the same extent.",
+        "entityB": "Both English and French colonies used European indentured labor before and alongside African slavery, although plantation economies increasingly became dependent on enslaved African labor.",
+        "importance": "high"
+      },
+      {
+        "entityA": "English colonies used indentured servants extensively in the Chesapeake,",
+        "entityB": "French Caribbean colonies became especially dependent on enslaved labor for sugar production.",
+        "importance": "high"
+      }
+    ]
+  },
+  "england-britain|france|1750-1900": {
+    "entities": [
+      "England 1750-1900",
+      "France 1750-1900"
+    ],
+    "period": "1750-1900",
+    "similarities": [
+      {
+        "claim": "Colonial empires, participating the race for Africa",
+        "importance": "high"
+      },
+      {
+        "claim": "Forced colonies to produce cash crops",
+        "importance": "high"
+      },
+      {
+        "claim": "Both faced major colonial resistance: Britain faced the Indian Rebellion of 1857 and resistance in Africa, while France faced the Haitian Revolution and resistance in Algeria led by Abd al-Qadir",
+        "importance": "high"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "England industrialized first",
+        "entityB": "France did not share this distinguishing feature to the same extent.",
+        "importance": "medium"
+      },
+      {
+        "entityA": "England already got its revolution out of the way in the Glorious Revolution",
+        "entityB": "France delt with its unrest in the French Revolution in 1789",
+        "importance": "medium"
+      }
+    ]
+  },
+  "england-britain|france|1900-present": {
+    "entities": [
+      "England 1900-Present",
+      "France 1900-Present"
+    ],
+    "period": "1900-present",
+    "similarities": [
+      {
+        "claim": "Losing power over colonies: France lost Algeria, French Indochina, and West Africa | Britain lost India, Malaysia, South Africa, Ghana, New Zealand, Australia, Canada, East Africa",
+        "importance": "high"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "Britain avoided occupation but suffered bombing, casualties, heavy debt, and economic decline.",
+        "entityB": "France was invaded and occupied during World War II,",
+        "importance": "high"
+      },
+      {
+        "entityA": "England/Britain did not share this distinguishing feature to the same extent.",
+        "entityB": "Both lost global influence after the world wars, but France experienced more direct destruction on its own territory.",
+        "importance": "high"
+      }
+    ]
+  },
+  "maya-civilization|mississippian-cultures|1200-1450": {
+    "entities": [
+      "Mayans",
+      "Mississippi Mound Builders"
+    ],
+    "period": "1200-1450",
+    "similarities": [
+      {
+        "claim": "Women had more of a role in society",
+        "importance": "medium"
+      },
+      {
+        "claim": "Declined because of factors other than war",
+        "importance": "high"
+      },
+      {
+        "claim": "Engaged in foreign trade",
+        "importance": "high"
+      },
+      {
+        "claim": "Relied on maize",
+        "importance": "medium"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "The Mayans were patrilineal",
+        "entityB": "the Mississippi Mound Builders were matrilineal",
+        "importance": "low"
+      }
+    ]
+  },
+  "maya-civilization|aztec-empire|1200-1450": {
+    "entities": [
+      "Mayans",
+      "Aztecs"
+    ],
+    "period": "1200-1450",
+    "similarities": [
+      {
+        "claim": "Utilized the three sisters (squash, beans, maize) for agriculture",
+        "importance": "medium"
+      },
+      {
+        "claim": "Used aqueducts",
+        "importance": "medium"
+      },
+      {
+        "claim": "Required taxes in the form of crops, troops, and labor",
+        "importance": "high"
+      },
+      {
+        "claim": "Both lived in Mesoamerica and adapted agriculture to varied environments using irrigation, terraces, and other intensive farming methods.",
+        "importance": "medium"
+      },
+      {
+        "claim": "Had polytheistic religions with very similar deities",
+        "importance": "high"
+      },
+      {
+        "claim": "Used war prisoners as human sacrifices",
+        "importance": "high"
+      },
+      {
+        "claim": "Had a theocratic monarchies, where the Aztec emperor and Mayan city state kings justified their decisions using religion",
+        "importance": "high"
+      },
+      {
+        "claim": "Had the same social structure with elites at the top and commoners at the bottom",
+        "importance": "medium"
+      },
+      {
+        "claim": "Used calendars",
+        "importance": "medium"
+      },
+      {
+        "claim": "Both organized warfare as an important part of political and religious life.",
+        "importance": "high"
+      },
+      {
+        "claim": "Engaged in regional and long-distance trade.",
+        "importance": "high"
+      },
+      {
+        "claim": "Relied on maize",
+        "importance": "medium"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "Mayans used the slash-and-burn agricultural technique",
+        "entityB": "Aztec Empire did not share this distinguishing feature to the same extent.",
+        "importance": "low"
+      },
+      {
+        "entityA": "Maya sacrifices often emphasized captured elites and rulers,",
+        "entityB": "Aztec sacrifice was generally larger in scale and included captives from a broader range of backgrounds.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Mayan city states were independent from each other",
+        "entityB": "Aztec city states were united under an emperor",
+        "importance": "high"
+      },
+      {
+        "entityA": "Mayans fought wars in order to gain more prisoners",
+        "entityB": "Aztecs fought wars in order to gain more territory and legitimacy.",
+        "importance": "high"
+      },
+      {
+        "entityA": "The Mayan monarchy was passed down through primogeniture",
+        "entityB": "Aztec monarchs were chosen by a council of aristocrats",
+        "importance": "high"
+      },
+      {
+        "entityA": "Women had more power in Mayan society and could be rulers, shamans, or healers",
+        "entityB": "Aztec Empire did not share this distinguishing feature to the same extent.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Mayans developed new technology",
+        "entityB": "the Aztecs adopted Mayan technology",
+        "importance": "medium"
+      },
+      {
+        "entityA": "Maya warfare was organized by individual city-states.",
+        "entityB": "The Aztecs had a highly organized warrior class and permanent military institutions,",
+        "importance": "high"
+      }
+    ]
+  },
+  "maya-civilization|inca-empire|1200-1450": {
+    "entities": [
+      "Mayans",
+      "Incas"
+    ],
+    "period": "1200-1450",
+    "similarities": [
+      {
+        "claim": "Utilized terraced hillsides for agricultures",
+        "importance": "medium"
+      },
+      {
+        "claim": "Ruled by a monarch who justified their rule by claiming to represent the gods",
+        "importance": "high"
+      },
+      {
+        "claim": "Utilized human sacrifices on a smaller scale than the Aztecs",
+        "importance": "high"
+      },
+      {
+        "claim": "Developed precise calendars",
+        "importance": "medium"
+      },
+      {
+        "claim": "Used aqueducts",
+        "importance": "medium"
+      },
+      {
+        "claim": "Engaged in foreign trade",
+        "importance": "high"
+      },
+      {
+        "claim": "Relied on maize",
+        "importance": "medium"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "Maya Civilization did not share this distinguishing feature to the same extent.",
+        "entityB": "Incas had llamas as a beast of burden",
+        "importance": "low"
+      },
+      {
+        "entityA": "Mayans fought wars to gain more prisoners of war",
+        "entityB": "Incan emperors fought wars to gain more territory and legitimacy",
+        "importance": "high"
+      },
+      {
+        "entityA": "The Mayans were made up of city states that were united religiously but never politically,",
+        "entityB": "Incan regions had to swear loyalty to the central emperor",
+        "importance": "high"
+      }
+    ]
+  },
+  "aztec-empire|mississippian-cultures|1200-1450": {
+    "entities": [
+      "Aztecs",
+      "Mississippi Mound Builders"
+    ],
+    "period": "1200-1450",
+    "similarities": [
+      {
+        "claim": "Had rigid social classes",
+        "importance": "medium"
+      },
+      {
+        "claim": "Engaged in foreign trade",
+        "importance": "high"
+      },
+      {
+        "claim": "Relied on maize to sustain their large populations",
+        "importance": "medium"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "The Aztecs were patrilineal",
+        "entityB": "the Mississippi Mound Builders were matrilineal",
+        "importance": "low"
+      },
+      {
+        "entityA": "Aztec Empire did not share this distinguishing feature to the same extent.",
+        "entityB": "Mississippi Mound Builders built mounds that represented the social classes, with the ruler at the top",
+        "importance": "high"
+      },
+      {
+        "entityA": "The Aztecs were expansionist",
+        "entityB": "the Mississippi Mound Builders were not",
+        "importance": "low"
+      },
+      {
+        "entityA": "Aztec Empire did not share this distinguishing feature to the same extent.",
+        "entityB": "Women had a larger role in Mississippian society than in Aztec society",
+        "importance": "medium"
+      }
+    ]
+  },
+  "aztec-empire|inca-empire|1200-1450": {
+    "entities": [
+      "Aztecs",
+      "Incas"
+    ],
+    "period": "1200-1450",
+    "similarities": [
+      {
+        "claim": "The emperor had to conquer more territory in order to gain legitimacy",
+        "importance": "high"
+      },
+      {
+        "claim": "Had provinces that swore loyalty to the emperor",
+        "importance": "high"
+      },
+      {
+        "claim": "Fell to Spanish control",
+        "importance": "medium"
+      },
+      {
+        "claim": "Relied heavily on their tribute systems, the Aztecs for food, and the Incas for infrastructure",
+        "importance": "high"
+      },
+      {
+        "claim": "Used aqueducts",
+        "importance": "medium"
+      },
+      {
+        "claim": "Engaged in foreign trade",
+        "importance": "high"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "The Aztecs grew corn, beans, and squash",
+        "entityB": "the Incas grew corn, cotton, and potatoes",
+        "importance": "low"
+      },
+      {
+        "entityA": "Aztec Empire did not share this distinguishing feature to the same extent.",
+        "entityB": "The Incas had llamas as a beast of burden",
+        "importance": "low"
+      },
+      {
+        "entityA": "Aztecs used Mayan hieroglyphics",
+        "entityB": "Incas developed the khipu system for records and communication",
+        "importance": "low"
+      },
+      {
+        "entityA": "the Aztecs formed their military for conquests upon demand",
+        "entityB": "The Incas had a large, organized standing army",
+        "importance": "high"
+      }
+    ]
+  },
+  "mississippian-cultures|inca-empire|1200-1450": {
+    "entities": [
+      "Mississippi Mound Builders",
+      "Incas"
+    ],
+    "period": "1200-1450",
+    "similarities": [
+      {
+        "claim": "Engaged in foreign trade",
+        "importance": "high"
+      },
+      {
+        "claim": "Relied on maize to sustain their large populations",
+        "importance": "medium"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "the Mississippi Mound Builders were not",
+        "entityB": "The Incas were expansionist",
+        "importance": "low"
+      },
+      {
+        "entityA": "Women had a larger role in Mississippian society than in Incan society",
+        "entityB": "Inca Empire did not share this distinguishing feature to the same extent.",
+        "importance": "medium"
+      }
+    ]
+  },
+  "mali-empire|ethiopian-empire|1200-1450": {
+    "entities": [
+      "Mali Empire",
+      "Ethiopia"
+    ],
+    "period": "1200-1450",
+    "similarities": [
+      {
+        "claim": "Rulers used religion to legitimize themselves (Menelik in Ethiopia claiming descent from Soloman and the Queen of Sheba, Sundiata taking power using a magic arrow)",
+        "importance": "high"
+      },
+      {
+        "claim": "Engaged in foreign trade",
+        "importance": "high"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "Mali was Muslim",
+        "entityB": "Ethiopia was Christian",
+        "importance": "high"
+      },
+      {
+        "entityA": "Mali showed their religious devotion through acts like Mansa Musa’s pilgrimage and the founding of schools,",
+        "entityB": "Ethiopia showed their religious devotion by building the 12 churches",
+        "importance": "high"
+      }
+    ]
+  },
+  "mali-empire|great-zimbabwe|1200-1450": {
+    "entities": [
+      "Mali Empire",
+      "Zimbabwe Kingdom"
+    ],
+    "period": "1200-1450",
+    "similarities": [
+      {
+        "claim": "Both had access to gold",
+        "importance": "medium"
+      },
+      {
+        "claim": "Both engaged in foreign trade",
+        "importance": "high"
+      },
+      {
+        "claim": "Had control over trade routes and used that to tax trade",
+        "importance": "high"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "Mali Empire did not share this distinguishing feature to the same extent.",
+        "entityB": "Zimbabwe used cows as a banking system",
+        "importance": "high"
+      },
+      {
+        "entityA": "Mali engaged in Trans-Saharan trade",
+        "entityB": "Zimbabwe engaged in Indian Ocean trade",
+        "importance": "high"
+      },
+      {
+        "entityA": "Mali was Muslim",
+        "entityB": "Zimbabwe practiced Animism",
+        "importance": "high"
+      }
+    ]
+  },
+  "golden-horde|ilkhanate|1200-1450": {
+    "entities": [
+      "Golden Horde",
+      "Il-Khanate"
+    ],
+    "period": "1200-1450",
+    "similarities": [
+      {
+        "claim": "Both were fragments of the Mongol Empire after Genghis Khan died",
+        "importance": "high"
+      },
+      {
+        "claim": "Both governed conquered peoples largely through existing local elites rather than replacing them entirely.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both collected tribute/taxes from conquered populations.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both eventually converted to Islam and interacted heavily with the Muslim world.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both weakened because of internal conflict and declining central authority.",
+        "importance": "high"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "The Golden Horde conquered Russia and Eastern Europe,",
+        "entityB": "the Il-Khanate ruled Persia and Southwest Asia.",
+        "importance": "high"
+      },
+      {
+        "entityA": "The Golden Horde ruled Russian princes through tribute and generally avoided settling in Russian forests,",
+        "entityB": "the Il-Khanate governed through Persian administrators.",
+        "importance": "high"
+      },
+      {
+        "entityA": "The Golden Horde isolated Russia from Western Europe, reinforcing the Great Schism",
+        "entityB": "the Il-Khanate instead promoted scholarship and scientific advances like astronomy.",
+        "importance": "medium"
+      },
+      {
+        "entityA": "The Golden Horde helped Moscow rise to prominence,",
+        "entityB": "the Il-Khanate suffered from tax farming that caused economic decline.",
+        "importance": "high"
+      },
+      {
+        "entityA": "the Golden Horde never conquered Baghdad.",
+        "entityB": "The Il-Khanate destroyed Baghdad and ended the Abbasid Caliphate",
+        "importance": "high"
+      },
+      {
+        "entityA": "the Golden Horde generally aligned more closely with Muslim states.",
+        "entityB": "The Il-Khanate often cooperated diplomatically with Christian Europe against Muslim rivals,",
+        "importance": "high"
+      }
+    ]
+  },
+  "golden-horde|yuan-dynasty|1200-1450": {
+    "entities": [
+      "Golden Horde",
+      "Yuan Dynasty"
+    ],
+    "period": "1200-1450",
+    "similarities": [
+      {
+        "claim": "Both were Mongol successor states ruled by Genghis Khan's descendants.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both maintained Mongol political control over large conquered populations.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both relied heavily on taxation and tribute.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both declined because of internal Mongol conflicts and weakening central authority.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both encouraged trade across Eurasia during the Pax Mongolica.",
+        "importance": "high"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "The Golden Horde ruled Russia and the western steppe",
+        "entityB": "the Yuan ruled China.",
+        "importance": "high"
+      },
+      {
+        "entityA": "the Golden Horde left Russian princes largely in charge.",
+        "entityB": "The Yuan adopted many Chinese governing practices, including Confucian advisors,",
+        "importance": "high"
+      },
+      {
+        "entityA": "the Golden Horde became primarily Muslim while ruling Orthodox Christians.",
+        "entityB": "The Yuan promoted religious tolerance toward Buddhists and Daoists",
+        "importance": "high"
+      },
+      {
+        "entityA": "the Golden Horde focused more on tribute collection.",
+        "entityB": "The Yuan focused on rebuilding trade and governing cities",
+        "importance": "high"
+      },
+      {
+        "entityA": "the Golden Horde expanded mainly over land.",
+        "entityB": "The Yuan failed in overseas invasions (Japan, Java, Burma),",
+        "importance": "high"
+      },
+      {
+        "entityA": "the Golden Horde gradually lost power as Russian states united against it.",
+        "entityB": "The Yuan collapsed because of excessive taxation, infrastructure neglect, the Black Death, and the White Lotus Rebellion",
+        "importance": "high"
+      }
+    ]
+  },
+  "yuan-dynasty|ilkhanate|1200-1450": {
+    "entities": [
+      "Yuan Dynasty",
+      "Il-Khanate"
+    ],
+    "period": "1200-1450",
+    "similarities": [
+      {
+        "claim": "Both were Mongol states ruled by grandsons of Genghis Khan.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both governed large sedentary populations using existing bureaucracies.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both encouraged trade and cultural exchange across Eurasia.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both supported scholarship and preserved historical records.",
+        "importance": "medium"
+      },
+      {
+        "claim": "Both declined from internal Mongol rivalries, economic problems, and weakening governments.",
+        "importance": "high"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "The Yuan ruled China,",
+        "entityB": "the Il-Khanate ruled Persia and Southwest Asia.",
+        "importance": "high"
+      },
+      {
+        "entityA": "The Yuan incorporated Confucian advisors into government",
+        "entityB": "the Il-Khanate relied heavily on Persian officials.",
+        "importance": "high"
+      },
+      {
+        "entityA": "The Yuan emphasized religious tolerance",
+        "entityB": "the Il-Khanate eventually became predominantly Muslim.",
+        "importance": "high"
+      },
+      {
+        "entityA": "the Yuan mainly expanded and improved existing Chinese technologies.",
+        "entityB": "The Il-Khanate invested heavily in astronomy and historical writing (Nasir al-Din Tusi, Rashid al-Din),",
+        "importance": "medium"
+      },
+      {
+        "entityA": "The Yuan suffered from failing infrastructure and peasant rebellions",
+        "entityB": "the Il-Khanate suffered from destructive tax farming and economic depression.",
+        "importance": "high"
+      },
+      {
+        "entityA": "the Yuan completed the conquest of Song China.",
+        "entityB": "The Il-Khanate conquered Baghdad and ended the Abbasid Caliphate,",
+        "importance": "high"
+      }
+    ]
+  },
+  "ottoman-empire|safavid-empire|1450-1750": {
+    "entities": [
+      "Ottoman Empire",
+      "Safavid Empire"
+    ],
+    "period": "1450-1750",
+    "similarities": [
+      {
+        "claim": "Both relied on elite military groups that received political influence and economic privileges.",
+        "importance": "high"
+      },
+      {
+        "claim": "The Ottomans used Janissaries, many of whom were recruited through the devshirme system from Christian communities, while the Safavids relied heavily on the Shi’a Qizilbash tribal warriors.",
+        "importance": "high"
+      },
+      {
+        "claim": "Granted land to the elite military",
+        "importance": "high"
+      },
+      {
+        "claim": "Experienced silver inflation",
+        "importance": "medium"
+      },
+      {
+        "claim": "Women had inheritance rights",
+        "importance": "medium"
+      },
+      {
+        "claim": "Used Jizya tax",
+        "importance": "high"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "The Ottoman Empire was Sunni",
+        "entityB": "the Safavid Empire was Shi’a",
+        "importance": "high"
+      },
+      {
+        "entityA": "Ottomans used widespread tax farming",
+        "entityB": "Safavid Empire did not share this distinguishing feature to the same extent.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Ottomans had conflict with Europe",
+        "entityB": "Safavid Empire did not share this distinguishing feature to the same extent.",
+        "importance": "medium"
+      },
+      {
+        "entityA": "Ottomans had a powerful navy",
+        "entityB": "Safavid Empire did not share this distinguishing feature to the same extent.",
+        "importance": "high"
+      }
+    ]
+  },
+  "safavid-empire|mughal-empire|1450-1750": {
+    "entities": [
+      "Safavid Empire",
+      "Mughal Empire"
+    ],
+    "period": "1450-1750",
+    "similarities": [
+      {
+        "claim": "Religiously intolerant (although the Mughals had limited religious tolerance under Akbar)",
+        "importance": "high"
+      },
+      {
+        "claim": "A lot of trade",
+        "importance": "high"
+      },
+      {
+        "claim": "No navy",
+        "importance": "high"
+      },
+      {
+        "claim": "Granted land to the elite military",
+        "importance": "high"
+      },
+      {
+        "claim": "Experienced silver inflation",
+        "importance": "medium"
+      },
+      {
+        "claim": "Women had inheritance rights",
+        "importance": "medium"
+      },
+      {
+        "claim": "Used Jizya tax",
+        "importance": "high"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "The Safavid Empire promoted Shi’a Islam",
+        "entityB": "the Mughal Empire rulers promoted Sunni Islam and the Mughal population included Hindu, Sikhs, and practitioners of the Divine Faith",
+        "importance": "high"
+      },
+      {
+        "entityA": "The Safavids depended heavily on Qizilbash tribal warriors,",
+        "entityB": "the Mughals organized military and administrative service through the mansabdar system.",
+        "importance": "high"
+      }
+    ]
+  },
+  "ottoman-empire|mughal-empire|1450-1750": {
+    "entities": [
+      "Ottoman Empire",
+      "Mughal Empire"
+    ],
+    "period": "1450-1750",
+    "similarities": [
+      {
+        "claim": "Sunni Muslim",
+        "importance": "high"
+      },
+      {
+        "claim": "Both had limited religious tolerance, although tolerance in the Mughal Empire lasted only under Akbar",
+        "importance": "high"
+      },
+      {
+        "claim": "Experienced silver inflation",
+        "importance": "medium"
+      },
+      {
+        "claim": "Used the Jizya tax",
+        "importance": "high"
+      },
+      {
+        "claim": "Granted land to the elite military",
+        "importance": "high"
+      },
+      {
+        "claim": "Women had inheritance rights",
+        "importance": "medium"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "The Ottoman Empire was religiously tolerant until the late 1800s,",
+        "entityB": "the Mughal Empire was only religiously tolerant under Akbar",
+        "importance": "high"
+      }
+    ]
+  },
+  "spain|portugal|1450-1750": {
+    "entities": [
+      "Spain 1492-1750",
+      "Portugal 1450-1750"
+    ],
+    "period": "1450-1750",
+    "similarities": [
+      {
+        "claim": "Colonial empires",
+        "importance": "high"
+      },
+      {
+        "claim": "Used coerced labor (slavery, hacienda/encomienda) to extract resources from their colonies",
+        "importance": "high"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "Spain worked to colonize the Western hemisphere (the Americas and the Philippines), west of the Line of Demarcation,",
+        "entityB": "Portugal colonized the Eastern hemisphere (Africa and Asia)",
+        "importance": "high"
+      },
+      {
+        "entityA": "Spain spent massive amounts of money on religious wars",
+        "entityB": "Portugal did not share this distinguishing feature to the same extent.",
+        "importance": "high"
+      }
+    ]
+  },
+  "england-britain|japan|1750-1900": {
+    "entities": [
+      "England 1750-1900",
+      "Japan 1853-1900"
+    ],
+    "period": "1750-1900",
+    "similarities": [
+      {
+        "claim": "Both countries underwent industrialization and became global industrial powers",
+        "importance": "medium"
+      },
+      {
+        "claim": "Both built modern navies and used industrialization to support imperial expansion.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both developed textile, shipbuilding, transportation, and heavy industries.",
+        "importance": "medium"
+      },
+      {
+        "claim": "Both sought overseas resources and markets.",
+        "importance": "high"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "Britain industrialized gradually and first",
+        "entityB": "Japan industrialized rapidly through the Meiji government after 1868.",
+        "importance": "high"
+      },
+      {
+        "entityA": "British industrialization was driven largely by private entrepreneurs",
+        "entityB": "Japan initially created government-financed industries before selling them to zaibatsu.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Britain obtained resources through a vast colonial empire",
+        "entityB": "Japan initially relied more on imports before acquiring colonies such as Taiwan.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Britain had abundant coal and iron",
+        "entityB": "Japan had fewer domestic natural resources.",
+        "importance": "medium"
+      },
+      {
+        "entityA": "Britain was a parliamentary constitutional monarchy",
+        "entityB": "Japan retained greater authority for the emperor and oligarchic Meiji leaders.",
+        "importance": "high"
+      }
+    ]
+  },
+  "ming-dynasty|japan|1450-1750": {
+    "entities": [
+      "Ming Dynasty",
+      "Japan 1200-1853"
+    ],
+    "period": "1450-1750",
+    "similarities": [
+      {
+        "claim": "Both were influenced by Confucianism and Buddhism.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both restricted European contact and attempted to control foreign trade.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both maintained hierarchical, patriarchal social systems.",
+        "importance": "medium"
+      },
+      {
+        "claim": "Both experienced major participation in the global silver economy.",
+        "importance": "medium"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "Ming China had a centralized emperor and civil-service bureaucracy",
+        "entityB": "Tokugawa Japan was governed through a shogun and regional daimyo.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Ming trade restrictions changed over time",
+        "entityB": "Tokugawa Japan imposed a more systematic isolation policy under sakoku.",
+        "importance": "high"
+      },
+      {
+        "entityA": "China depended heavily on imported silver and experienced serious inflation",
+        "entityB": "Japan regulated silver production and exports more successfully.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Christian missionaries gained some converts in both, but Tokugawa authorities eventually outlawed Christianity and persecuted converts.",
+        "entityB": "Japan did not share this distinguishing feature to the same extent.",
+        "importance": "high"
+      }
+    ]
+  },
+  "dutch-republic-netherlands|portugal|1450-1750": {
+    "entities": [
+      "Netherlands 1450-1800",
+      "Portugal 1450-1750"
+    ],
+    "period": "1450-1750",
+    "similarities": [
+      {
+        "claim": "Both created maritime trading empires.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both relied on naval power to dominate overseas commerce.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both established trading posts rather than conquering huge inland territories in Asia.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both profited heavily from Indian Ocean trade.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both followed mercantilist economic policies.",
+        "importance": "high"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "Portugal pioneered European exploration around Africa",
+        "entityB": "the Dutch entered later and displaced the Portuguese from many Asian trading centers.",
+        "importance": "medium"
+      },
+      {
+        "entityA": "the Dutch later became the dominant spice traders.",
+        "entityB": "Portugal monopolized the spice trade first,",
+        "importance": "high"
+      },
+      {
+        "entityA": "the Dutch relied more heavily on the privately financed Dutch East India Company.",
+        "entityB": "Portugal built a state-controlled trading-post empire,",
+        "importance": "high"
+      },
+      {
+        "entityA": "Both used naval warfare and coercion to enforce trade monopolies, but the Dutch combined military force with a powerful joint-stock company.",
+        "entityB": "Portugal did not share this distinguishing feature to the same extent.",
+        "importance": "high"
+      },
+      {
+        "entityA": "the Dutch focused more on Indonesia, Java, and Malacca.",
+        "entityB": "Portugal held Angola and Brazil as major colonies",
+        "importance": "high"
+      },
+      {
+        "entityA": "Dutch Republic/Netherlands did not share this distinguishing feature to the same extent.",
+        "entityB": "Portuguese influence declined during the 1600s as Dutch naval power expanded.",
+        "importance": "medium"
+      }
+    ]
+  },
+  "england-britain|spain|1450-1750": {
+    "entities": [
+      "England 1450-1750",
+      "Spain 1492-1750"
+    ],
+    "period": "1450-1750",
+    "similarities": [
+      {
+        "claim": "Both established overseas empires.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both adopted mercantilism.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both built powerful navies.",
+        "importance": "medium"
+      },
+      {
+        "claim": "Both spread Christianity through colonization.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both competed globally for colonies and trade.",
+        "importance": "high"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "England primarily established settler colonies.",
+        "entityB": "Spain conquered large land empires in the Americas (Aztec and Inca)",
+        "importance": "high"
+      },
+      {
+        "entityA": "England emphasized tobacco, fur, and later plantation agriculture.",
+        "entityB": "Spain relied heavily on silver mining and encomienda labor",
+        "importance": "medium"
+      },
+      {
+        "entityA": "England gradually limited royal power through Parliament and the English Bill of Rights",
+        "entityB": "Spain remained a more centralized absolute monarchy.",
+        "importance": "high"
+      },
+      {
+        "entityA": "England became the dominant naval power after the 1600s",
+        "entityB": "Spain's naval dominance declined.",
+        "importance": "medium"
+      },
+      {
+        "entityA": "England pushed France out of India and Canada during the Seven Years' War,",
+        "entityB": "Spain focused mainly on its American empire.",
+        "importance": "high"
+      },
+      {
+        "entityA": "England became Protestant (Anglican)",
+        "entityB": "Spain remained strongly Catholic.",
+        "importance": "high"
+      }
+    ]
+  },
+  "england-britain|united-states|1750-1900": {
+    "entities": [
+      "England 1750-1900",
+      "United States 1776-1900"
+    ],
+    "period": "1750-1900",
+    "similarities": [
+      {
+        "claim": "Shared English language, legal traditions, and representative government.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both became major industrial and economic powers.",
+        "importance": "medium"
+      },
+      {
+        "claim": "Both developed powerful navies.",
+        "importance": "medium"
+      },
+      {
+        "claim": "Both promoted global trade and capitalism.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both became influential world powers.",
+        "importance": "medium"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "England remained a constitutional monarchy",
+        "entityB": "the United States became a constitutional republic after the American Revolution.",
+        "importance": "high"
+      },
+      {
+        "entityA": "England industrialized first",
+        "entityB": "the United States industrialized rapidly during the late 1800s.",
+        "importance": "medium"
+      },
+      {
+        "entityA": "Britain maintained a vast overseas empire",
+        "entityB": "the United States expanded mainly across North America before acquiring overseas territories later.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Britain abolished slavery before the U.S., where slavery remained until the Civil War.",
+        "entityB": "United States did not share this distinguishing feature to the same extent.",
+        "importance": "high"
+      }
+    ]
+  },
+  "england-britain|united-states|1900-present": {
+    "entities": [
+      "England 1900-Present",
+      "United States 1900-Present"
+    ],
+    "period": "1900-present",
+    "similarities": [
+      {
+        "claim": "Both were capitalist democracies and major Allied powers in both world wars.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both became founding members of NATO and permanent members of the UN Security Council.",
+        "importance": "medium"
+      },
+      {
+        "claim": "Both maintained powerful militaries, global trade networks, and a close diplomatic “special relationship.”",
+        "importance": "high"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "Britain declined in relative power and decolonized.",
+        "entityB": "The United States emerged from World War II as a superpower,",
+        "importance": "high"
+      },
+      {
+        "entityA": "Britain is a parliamentary constitutional monarchy",
+        "entityB": "the United States is a presidential federal republic.",
+        "importance": "high"
+      },
+      {
+        "entityA": "England/Britain did not share this distinguishing feature to the same extent.",
+        "entityB": "The United States maintained a much larger global military and economic presence.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Britain lost most of its formal empire,",
+        "entityB": "the United States generally exercised influence through alliances, military bases, aid, and international institutions.",
+        "importance": "high"
+      }
+    ]
+  },
+  "qing-dynasty|japan|1750-1900": {
+    "entities": [
+      "Qing Dynasty",
+      "Japan 1853-1900"
+    ],
+    "period": "1750-1900",
+    "similarities": [
+      {
+        "claim": "Both initially restricted foreign contact and attempted to preserve their traditions from Western influence.",
+        "importance": "medium"
+      },
+      {
+        "claim": "Both were forced to open their economies by Western military pressure.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both adopted some Western military, industrial, educational, and political ideas.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both maintained an emperor while attempting to strengthen the central government.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both experienced growing nationalism in response to Western imperialism.",
+        "importance": "high"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "China was forced open through the Opium Wars,",
+        "entityB": "Japan was forced open by Commodore Matthew Perry and the Treaty of Kanagawa.",
+        "importance": "medium"
+      },
+      {
+        "entityA": "The Qing pursued limited modernization through the Self-Strengthening Movement,",
+        "entityB": "Japan implemented broader reforms through the Meiji Restoration.",
+        "importance": "medium"
+      },
+      {
+        "entityA": "the Qing preserved much of its traditional bureaucracy and social structure.",
+        "entityB": "Japan abolished feudalism and the samurai class",
+        "importance": "high"
+      },
+      {
+        "entityA": "Qing reforms were repeatedly limited or reversed by conservative officials.",
+        "entityB": "Japan established a constitutional monarchy, national school system, modern military, railroads, and industrial factories",
+        "importance": "high"
+      },
+      {
+        "entityA": "China was divided into European spheres of influence.",
+        "entityB": "Japan successfully industrialized and became an imperial power,",
+        "importance": "high"
+      },
+      {
+        "entityA": "Qing Dynasty did not share this distinguishing feature to the same extent.",
+        "entityB": "Japan defeated China in the First Sino-Japanese War, demonstrating Japan’s greater military modernization.",
+        "importance": "high"
+      },
+      {
+        "entityA": "The Qing faced major internal rebellions, including the White Lotus and Taiping rebellions",
+        "entityB": "Japan’s new centralized government was comparatively more stable.",
+        "importance": "high"
+      }
+    ]
+  },
+  "british-empire|french-empire|1450-1750": {
+    "entities": [
+      "British Territory",
+      "French Territory"
+    ],
+    "period": "1450-1750",
+    "similarities": [
+      {
+        "claim": "Both created global colonial empires in the Americas, Africa, Asia, and the Pacific.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both used colonies to extract raw materials and produce cash crops for European markets.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both used chattel slavery, indentured labor, or other forms of coerced labor.",
+        "importance": "medium"
+      },
+      {
+        "claim": "Both spread Christianity through missionaries.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both established settler colonies as well as colonies focused primarily on resource extraction.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both faced resistance and eventually lost colonies through independence movements.",
+        "importance": "high"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "Britain generally spread Protestant or Anglican Christianity,",
+        "entityB": "France spread Catholicism.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Britain created more large settler colonies, including Canada and Australia",
+        "entityB": "France had fewer major settler colonies and also established penal colonies.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Britain gained control of India through the British East India Company and later direct imperial rule",
+        "entityB": "France’s most important Asian territory was French Indochina.",
+        "importance": "high"
+      },
+      {
+        "entityA": "France relied heavily on alliances with Indigenous peoples in the North American fur trade and generally maintained better relations with them.",
+        "entityB": "French Empire did not share this distinguishing feature to the same extent.",
+        "importance": "high"
+      },
+      {
+        "entityA": "British territories commonly produced cotton, tea, rubber, and opium",
+        "entityB": "French territories produced sugar, coffee, indigo, palm oil, rice, rubber, and opium.",
+        "importance": "high"
+      },
+      {
+        "entityA": "British Empire did not share this distinguishing feature to the same extent.",
+        "entityB": "Britain defeated France in the Seven Years’ War and took French territory in Canada and India.",
+        "importance": "high"
+      },
+      {
+        "entityA": "several British colonies, such as Ghana, negotiated independence more peacefully.",
+        "entityB": "French colonies such as Haiti, Algeria, and Vietnam gained independence through major wars or revolutions",
+        "importance": "high"
+      },
+      {
+        "entityA": "Britain often governed through indirect rule and existing local elites,",
+        "entityB": "France more often promoted centralized direct rule and cultural assimilation, although both empires used a mixture of methods.",
+        "importance": "high"
+      }
+    ]
+  },
+  "british-empire|french-empire|1750-1900": {
+    "entities": [
+      "British Territory",
+      "French Territory"
+    ],
+    "period": "1750-1900",
+    "similarities": [
+      {
+        "claim": "Both created global colonial empires in the Americas, Africa, Asia, and the Pacific.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both used colonies to extract raw materials and produce cash crops for European markets.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both used chattel slavery, indentured labor, or other forms of coerced labor.",
+        "importance": "medium"
+      },
+      {
+        "claim": "Both spread Christianity through missionaries.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both established settler colonies as well as colonies focused primarily on resource extraction.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both faced resistance and eventually lost colonies through independence movements.",
+        "importance": "high"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "Britain generally spread Protestant or Anglican Christianity,",
+        "entityB": "France spread Catholicism.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Britain created more large settler colonies, including Canada and Australia",
+        "entityB": "France had fewer major settler colonies and also established penal colonies.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Britain gained control of India through the British East India Company and later direct imperial rule",
+        "entityB": "France’s most important Asian territory was French Indochina.",
+        "importance": "high"
+      },
+      {
+        "entityA": "France relied heavily on alliances with Indigenous peoples in the North American fur trade and generally maintained better relations with them.",
+        "entityB": "French Empire did not share this distinguishing feature to the same extent.",
+        "importance": "high"
+      },
+      {
+        "entityA": "British territories commonly produced cotton, tea, rubber, and opium",
+        "entityB": "French territories produced sugar, coffee, indigo, palm oil, rice, rubber, and opium.",
+        "importance": "high"
+      },
+      {
+        "entityA": "British Empire did not share this distinguishing feature to the same extent.",
+        "entityB": "Britain defeated France in the Seven Years’ War and took French territory in Canada and India.",
+        "importance": "high"
+      },
+      {
+        "entityA": "several British colonies, such as Ghana, negotiated independence more peacefully.",
+        "entityB": "French colonies such as Haiti, Algeria, and Vietnam gained independence through major wars or revolutions",
+        "importance": "high"
+      },
+      {
+        "entityA": "Britain often governed through indirect rule and existing local elites,",
+        "entityB": "France more often promoted centralized direct rule and cultural assimilation, although both empires used a mixture of methods.",
+        "importance": "high"
+      }
+    ]
+  },
+  "british-empire|french-empire|1900-present": {
+    "entities": [
+      "British Territory",
+      "French Territory"
+    ],
+    "period": "1900-present",
+    "similarities": [
+      {
+        "claim": "Both created global colonial empires in the Americas, Africa, Asia, and the Pacific.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both used colonies to extract raw materials and produce cash crops for European markets.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both used chattel slavery, indentured labor, or other forms of coerced labor.",
+        "importance": "medium"
+      },
+      {
+        "claim": "Both spread Christianity through missionaries.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both established settler colonies as well as colonies focused primarily on resource extraction.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both faced resistance and eventually lost colonies through independence movements.",
+        "importance": "high"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "Britain generally spread Protestant or Anglican Christianity,",
+        "entityB": "France spread Catholicism.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Britain created more large settler colonies, including Canada and Australia",
+        "entityB": "France had fewer major settler colonies and also established penal colonies.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Britain gained control of India through the British East India Company and later direct imperial rule",
+        "entityB": "France’s most important Asian territory was French Indochina.",
+        "importance": "high"
+      },
+      {
+        "entityA": "France relied heavily on alliances with Indigenous peoples in the North American fur trade and generally maintained better relations with them.",
+        "entityB": "French Empire did not share this distinguishing feature to the same extent.",
+        "importance": "high"
+      },
+      {
+        "entityA": "British territories commonly produced cotton, tea, rubber, and opium",
+        "entityB": "French territories produced sugar, coffee, indigo, palm oil, rice, rubber, and opium.",
+        "importance": "high"
+      },
+      {
+        "entityA": "British Empire did not share this distinguishing feature to the same extent.",
+        "entityB": "Britain defeated France in the Seven Years’ War and took French territory in Canada and India.",
+        "importance": "high"
+      },
+      {
+        "entityA": "several British colonies, such as Ghana, negotiated independence more peacefully.",
+        "entityB": "French colonies such as Haiti, Algeria, and Vietnam gained independence through major wars or revolutions",
+        "importance": "high"
+      },
+      {
+        "entityA": "Britain often governed through indirect rule and existing local elites,",
+        "entityB": "France more often promoted centralized direct rule and cultural assimilation, although both empires used a mixture of methods.",
+        "importance": "high"
+      }
+    ]
+  },
+  "british-empire|spanish-empire|1450-1750": {
+    "entities": [
+      "British Territory",
+      "Spanish Territory"
+    ],
+    "period": "1450-1750",
+    "similarities": [
+      {
+        "claim": "Both established large overseas empires based on mercantilism.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both produced cash crops and raw materials for export to Europe.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both relied on African chattel slavery and other coerced labor systems.",
+        "importance": "medium"
+      },
+      {
+        "claim": "Both spread Christianity and attempted to alter Indigenous cultures.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both developed racial and social hierarchies that favored Europeans and their descendants.",
+        "importance": "medium"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "Britain established many settler colonies,",
+        "entityB": "Spain conquered large existing Indigenous empires and ruled their populations.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Britain generally spread Protestantism",
+        "entityB": "Spain spread Catholicism.",
+        "importance": "high"
+      },
+      {
+        "entityA": "British colonies emphasized tobacco, cotton, fur, tea, and other commercial goods",
+        "entityB": "Spanish colonies relied heavily on silver, sugar, tobacco, guano, and minerals.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Spain used the encomienda, hacienda, and modified Incan mit’a systems",
+        "entityB": "Britain relied more heavily on chattel slavery, indentured servitude, and wage or contract labor.",
+        "importance": "medium"
+      },
+      {
+        "entityA": "British colonies generally enforced racial divisions without the same detailed castas categories.",
+        "entityB": "Spanish colonies developed a formal castas system based on ancestry",
+        "importance": "high"
+      },
+      {
+        "entityA": "British colonies were more likely to displace Indigenous communities and maintain social separation.",
+        "entityB": "Spanish colonizers intermarried more frequently with Indigenous and African populations",
+        "importance": "high"
+      },
+      {
+        "entityA": "Britain retained a large colonial empire into the twentieth century",
+        "entityB": "Most Spanish American colonies gained independence by 1825",
+        "importance": "high"
+      }
+    ]
+  },
+  "british-empire|spanish-empire|1750-1900": {
+    "entities": [
+      "British Territory",
+      "Spanish Territory"
+    ],
+    "period": "1750-1900",
+    "similarities": [
+      {
+        "claim": "Both established large overseas empires based on mercantilism.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both produced cash crops and raw materials for export to Europe.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both relied on African chattel slavery and other coerced labor systems.",
+        "importance": "medium"
+      },
+      {
+        "claim": "Both spread Christianity and attempted to alter Indigenous cultures.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both developed racial and social hierarchies that favored Europeans and their descendants.",
+        "importance": "medium"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "Britain established many settler colonies,",
+        "entityB": "Spain conquered large existing Indigenous empires and ruled their populations.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Britain generally spread Protestantism",
+        "entityB": "Spain spread Catholicism.",
+        "importance": "high"
+      },
+      {
+        "entityA": "British colonies emphasized tobacco, cotton, fur, tea, and other commercial goods",
+        "entityB": "Spanish colonies relied heavily on silver, sugar, tobacco, guano, and minerals.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Spain used the encomienda, hacienda, and modified Incan mit’a systems",
+        "entityB": "Britain relied more heavily on chattel slavery, indentured servitude, and wage or contract labor.",
+        "importance": "medium"
+      },
+      {
+        "entityA": "British colonies generally enforced racial divisions without the same detailed castas categories.",
+        "entityB": "Spanish colonies developed a formal castas system based on ancestry",
+        "importance": "high"
+      },
+      {
+        "entityA": "British colonies were more likely to displace Indigenous communities and maintain social separation.",
+        "entityB": "Spanish colonizers intermarried more frequently with Indigenous and African populations",
+        "importance": "high"
+      },
+      {
+        "entityA": "Britain retained a large colonial empire into the twentieth century",
+        "entityB": "Most Spanish American colonies gained independence by 1825",
+        "importance": "high"
+      }
+    ]
+  },
+  "british-empire|dutch-empire|1450-1750": {
+    "entities": [
+      "British Territory",
+      "Dutch Territory"
+    ],
+    "period": "1450-1750",
+    "similarities": [
+      {
+        "claim": "Both developed maritime, trade-based empires.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both used chartered joint-stock companies to establish colonial control.",
+        "importance": "high"
+      },
+      {
+        "claim": "The British East India Company and Dutch East India Company could trade, govern territory, and maintain armed forces.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both produced cash crops and raw materials for European markets.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both used military power and coerced labor to control colonial populations.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both were Protestant imperial powers.",
+        "importance": "high"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "Britain eventually controlled a much larger territorial empire,",
+        "entityB": "Dutch power was concentrated mainly in Indonesia and nearby trading posts.",
+        "importance": "high"
+      },
+      {
+        "entityA": "British colonial expansion centered heavily on India",
+        "entityB": "Dutch colonial expansion centered on the Dutch East Indies.",
+        "importance": "high"
+      },
+      {
+        "entityA": "The British East India Company initially expanded through treaties with local rulers",
+        "entityB": "the Dutch frequently used violent suppression to remove local rulers and monopolize trade.",
+        "importance": "high"
+      },
+      {
+        "entityA": "The Dutch Culture System required farmers to devote approximately one-fifth of their land to export crops or provide corvée labor.",
+        "entityB": "Dutch Empire did not share this distinguishing feature to the same extent.",
+        "importance": "high"
+      },
+      {
+        "entityA": "British territories produced a wider range of goods, including cotton, tea, opium, and rubber.",
+        "entityB": "Dutch territories concentrated on tea, rubber, sugar, and spices, sometimes reducing land available for rice",
+        "importance": "high"
+      },
+      {
+        "entityA": "Britain established numerous settler colonies",
+        "entityB": "the Dutch Empire remained more focused on trade and resource extraction.",
+        "importance": "high"
+      },
+      {
+        "entityA": "The Dutch East India Company eventually went bankrupt, after which the Dutch government assumed direct control of its territory",
+        "entityB": "Dutch Empire did not share this distinguishing feature to the same extent.",
+        "importance": "high"
+      }
+    ]
+  },
+  "british-empire|dutch-empire|1750-1900": {
+    "entities": [
+      "British Territory",
+      "Dutch Territory"
+    ],
+    "period": "1750-1900",
+    "similarities": [
+      {
+        "claim": "Both developed maritime, trade-based empires.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both used chartered joint-stock companies to establish colonial control.",
+        "importance": "high"
+      },
+      {
+        "claim": "The British East India Company and Dutch East India Company could trade, govern territory, and maintain armed forces.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both produced cash crops and raw materials for European markets.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both used military power and coerced labor to control colonial populations.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both were Protestant imperial powers.",
+        "importance": "high"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "Britain eventually controlled a much larger territorial empire,",
+        "entityB": "Dutch power was concentrated mainly in Indonesia and nearby trading posts.",
+        "importance": "high"
+      },
+      {
+        "entityA": "British colonial expansion centered heavily on India",
+        "entityB": "Dutch colonial expansion centered on the Dutch East Indies.",
+        "importance": "high"
+      },
+      {
+        "entityA": "The British East India Company initially expanded through treaties with local rulers",
+        "entityB": "the Dutch frequently used violent suppression to remove local rulers and monopolize trade.",
+        "importance": "high"
+      },
+      {
+        "entityA": "The Dutch Culture System required farmers to devote approximately one-fifth of their land to export crops or provide corvée labor.",
+        "entityB": "Dutch Empire did not share this distinguishing feature to the same extent.",
+        "importance": "high"
+      },
+      {
+        "entityA": "British territories produced a wider range of goods, including cotton, tea, opium, and rubber.",
+        "entityB": "Dutch territories concentrated on tea, rubber, sugar, and spices, sometimes reducing land available for rice",
+        "importance": "high"
+      },
+      {
+        "entityA": "Britain established numerous settler colonies",
+        "entityB": "the Dutch Empire remained more focused on trade and resource extraction.",
+        "importance": "high"
+      },
+      {
+        "entityA": "The Dutch East India Company eventually went bankrupt, after which the Dutch government assumed direct control of its territory",
+        "entityB": "Dutch Empire did not share this distinguishing feature to the same extent.",
+        "importance": "high"
+      }
+    ]
+  },
+  "french-empire|spanish-empire|1450-1750": {
+    "entities": [
+      "French Territory",
+      "Spanish Territory"
+    ],
+    "period": "1450-1750",
+    "similarities": [
+      {
+        "claim": "Both were Catholic colonial empires and spread Catholicism through missionaries.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both controlled colonies in the Americas and Caribbean.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both relied on plantation cash crops and African chattel slavery.",
+        "importance": "medium"
+      },
+      {
+        "claim": "Both developed syncretic cultures and religions through interactions among Europeans, Africans, and Indigenous peoples.",
+        "importance": "high"
+      },
+      {
+        "claim": "In both empires, enslaved people could sometimes obtain freedom through manumission.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both faced major colonial independence movements.",
+        "importance": "high"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "Spain conquered large territorial empires with dense Indigenous populations",
+        "entityB": "France controlled a mixture of smaller settlements, trading territories, plantation colonies, and resource-extraction colonies.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Spain relied heavily on silver mining, especially at Potosí",
+        "entityB": "France relied more on sugar, coffee, fur, palm oil, rubber, rice, and opium.",
+        "importance": "medium"
+      },
+      {
+        "entityA": "Spain used encomienda, hacienda, and modified mit’a labor",
+        "entityB": "France relied more on chattel slavery, indentured servants, and later colonial cash-crop labor.",
+        "importance": "high"
+      },
+      {
+        "entityA": "French territories did not use the same detailed system throughout their empire.",
+        "entityB": "Spanish territories developed the formal castas hierarchy",
+        "importance": "high"
+      },
+      {
+        "entityA": "France depended on alliances with Indigenous peoples for the North American fur trade",
+        "entityB": "Spanish officials more often directly conquered, taxed, and forcibly converted Indigenous communities.",
+        "importance": "high"
+      },
+      {
+        "entityA": "major French colonies such as Algeria and Vietnam remained under French control until the twentieth century.",
+        "entityB": "Most Spanish American colonies gained independence during the early nineteenth century",
+        "importance": "high"
+      },
+      {
+        "entityA": "The Haitian Revolution abolished French rule and slavery in Saint-Domingue",
+        "entityB": "Spanish American revolutions were generally led by wealthy creoles and produced more socially conservative governments.",
+        "importance": "high"
+      }
+    ]
+  },
+  "french-empire|spanish-empire|1750-1900": {
+    "entities": [
+      "French Territory",
+      "Spanish Territory"
+    ],
+    "period": "1750-1900",
+    "similarities": [
+      {
+        "claim": "Both were Catholic colonial empires and spread Catholicism through missionaries.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both controlled colonies in the Americas and Caribbean.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both relied on plantation cash crops and African chattel slavery.",
+        "importance": "medium"
+      },
+      {
+        "claim": "Both developed syncretic cultures and religions through interactions among Europeans, Africans, and Indigenous peoples.",
+        "importance": "high"
+      },
+      {
+        "claim": "In both empires, enslaved people could sometimes obtain freedom through manumission.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both faced major colonial independence movements.",
+        "importance": "high"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "Spain conquered large territorial empires with dense Indigenous populations",
+        "entityB": "France controlled a mixture of smaller settlements, trading territories, plantation colonies, and resource-extraction colonies.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Spain relied heavily on silver mining, especially at Potosí",
+        "entityB": "France relied more on sugar, coffee, fur, palm oil, rubber, rice, and opium.",
+        "importance": "medium"
+      },
+      {
+        "entityA": "Spain used encomienda, hacienda, and modified mit’a labor",
+        "entityB": "France relied more on chattel slavery, indentured servants, and later colonial cash-crop labor.",
+        "importance": "high"
+      },
+      {
+        "entityA": "French territories did not use the same detailed system throughout their empire.",
+        "entityB": "Spanish territories developed the formal castas hierarchy",
+        "importance": "high"
+      },
+      {
+        "entityA": "France depended on alliances with Indigenous peoples for the North American fur trade",
+        "entityB": "Spanish officials more often directly conquered, taxed, and forcibly converted Indigenous communities.",
+        "importance": "high"
+      },
+      {
+        "entityA": "major French colonies such as Algeria and Vietnam remained under French control until the twentieth century.",
+        "entityB": "Most Spanish American colonies gained independence during the early nineteenth century",
+        "importance": "high"
+      },
+      {
+        "entityA": "The Haitian Revolution abolished French rule and slavery in Saint-Domingue",
+        "entityB": "Spanish American revolutions were generally led by wealthy creoles and produced more socially conservative governments.",
+        "importance": "high"
+      }
+    ]
+  },
+  "spanish-empire|portuguese-empire|1450-1750": {
+    "entities": [
+      "Spanish Territory",
+      "Portuguese Territory"
+    ],
+    "period": "1450-1750",
+    "similarities": [
+      {
+        "claim": "Both were Catholic Iberian empires that spread Christianity through missionaries.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both followed mercantilist policies.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both claimed overseas territory under the Treaty of Tordesillas.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both relied on African chattel slavery and plantation agriculture.",
+        "importance": "medium"
+      },
+      {
+        "claim": "Both traded sugar, silver, enslaved people, and other colonial goods.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both developed racially mixed colonial societies in which manumission was sometimes possible.",
+        "importance": "high"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "Spain controlled most of the Americas west of the Treaty of Tordesillas line",
+        "entityB": "Portugal controlled Brazil and territories to the east in Africa and Asia.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Spain built a largely land-based empire by conquering the Aztec and Inca civilizations",
+        "entityB": "Portugal initially created a trading-post empire along African and Asian coasts.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Spain’s colonial economy depended heavily on silver mining",
+        "entityB": "Portugal depended more heavily on the spice trade, slave trade, and Brazilian sugar.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Spain used encomienda, hacienda, and modified mit’a labor",
+        "entityB": "Portugal relied especially heavily on enslaved plantation labor in Brazil.",
+        "importance": "medium"
+      },
+      {
+        "entityA": "Spanish society developed the formal castas system",
+        "entityB": "Portuguese colonies generally had more flexible racial categories and greater use of manumission.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Spain governed extensive American territories through centralized colonial administrations",
+        "entityB": "Portugal’s early empire consisted mainly of forts and coastal trading posts.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Portuguese Asian power declined as the Dutch and British captured important trading centers,",
+        "entityB": "Brazil remained Portugal’s most important colony",
+        "importance": "high"
+      }
+    ]
+  },
+  "united-states|france|1750-1900": {
+    "entities": [
+      "United States 1776-1900",
+      "France 1750-1900"
+    ],
+    "period": "1750-1900",
+    "similarities": [
+      {
+        "claim": "Both were influenced by Enlightenment ideas such as natural rights, popular sovereignty, and representative government.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both experienced revolutions that challenged monarchy and inherited privilege.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both created written declarations of rights and constitutional governments.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both industrialized and became major military and economic powers.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both acquired territories outside their original borders and participated in imperialism.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both fought with the Allies during World Wars I and II.",
+        "importance": "medium"
+      },
+      {
+        "claim": "Both became permanent members of the United Nations Security Council and founding members of NATO.",
+        "importance": "medium"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "The American Revolution was a colonial independence movement against Britain,",
+        "entityB": "the French Revolution was an internal social and political revolution against France’s monarchy and estate system.",
+        "importance": "high"
+      },
+      {
+        "entityA": "The United States established a relatively stable federal republic",
+        "entityB": "France repeatedly shifted between republics, constitutional monarchies, empires, and restored monarchies.",
+        "importance": "high"
+      },
+      {
+        "entityA": "United States did not share this distinguishing feature to the same extent.",
+        "entityB": "France provided crucial military assistance to the American Revolution, but the cost worsened France’s debt and helped cause the French Revolution.",
+        "importance": "high"
+      },
+      {
+        "entityA": "the American Revolution preserved many existing inequalities, including slavery.",
+        "entityB": "The French Revolution abolished feudal privileges and attempted broader social restructuring",
+        "importance": "medium"
+      },
+      {
+        "entityA": "slavery continued in the United States until the Civil War.",
+        "entityB": "France abolished slavery during its revolution, although Napoleon later restored it in French colonies",
+        "importance": "high"
+      },
+      {
+        "entityA": "The United States industrialized rapidly after the Civil War and became a leading producer of steel, oil, and automobiles",
+        "entityB": "France industrialized more slowly.",
+        "importance": "high"
+      },
+      {
+        "entityA": "The United States emerged from World War II as a global superpower,",
+        "entityB": "France’s global influence declined as colonies such as Vietnam and Algeria gained independence.",
+        "importance": "high"
+      }
+    ]
+  },
+  "united-states|haiti|1750-1900": {
+    "entities": [
+      "United States 1776-1900",
+      "Saint Domingue/Haiti"
+    ],
+    "period": "1750-1900",
+    "similarities": [
+      {
+        "claim": "Both gained independence through revolutions against European colonial powers.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both revolutions were influenced by Enlightenment principles and ideas about natural rights.",
+        "importance": "medium"
+      },
+      {
+        "claim": "Both created constitutions and independent governments after their revolutions.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both revolutions inspired later independence movements.",
+        "importance": "medium"
+      },
+      {
+        "claim": "Both received or sought foreign alliances during their struggles.",
+        "importance": "medium"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "The United States revolted against Britain,",
+        "entityB": "Haiti revolted against French colonial rule.",
+        "importance": "high"
+      },
+      {
+        "entityA": "The American Revolution was led mainly by property-owning colonists",
+        "entityB": "the Haitian Revolution was led largely by enslaved and formerly enslaved people.",
+        "importance": "high"
+      },
+      {
+        "entityA": "The United States preserved slavery after independence",
+        "entityB": "Haiti permanently abolished slavery and established equal citizenship in its constitution.",
+        "importance": "high"
+      },
+      {
+        "entityA": "The United States gained French assistance,",
+        "entityB": "Haitian revolutionaries had to defeat forces sent by France.",
+        "importance": "medium"
+      },
+      {
+        "entityA": "The United States was recognized through the Treaty of Paris and eventually became economically powerful",
+        "entityB": "Haiti faced diplomatic isolation and was forced to pay reparations to France.",
+        "importance": "medium"
+      },
+      {
+        "entityA": "The American Revolution primarily changed political control",
+        "entityB": "the Haitian Revolution also transformed the racial and social hierarchy.",
+        "importance": "high"
+      },
+      {
+        "entityA": "United States did not share this distinguishing feature to the same extent.",
+        "entityB": "Haiti became the first independent Black-led republic and the only state created through a successful large-scale slave revolt.",
+        "importance": "high"
+      }
+    ]
+  },
+  "germany|italy|1750-1900": {
+    "entities": [
+      "Germany 1850-1920",
+      "Italy"
+    ],
+    "period": "1750-1900",
+    "similarities": [
+      {
+        "claim": "Both began the period divided into multiple states rather than unified countries.",
+        "importance": "medium"
+      },
+      {
+        "claim": "Both unified through nationalism, diplomacy, warfare, and Realpolitik.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both were unified under the leadership of a particularly powerful state: Prussia in Germany and Piedmont-Sardinia in Italy.",
+        "importance": "medium"
+      },
+      {
+        "claim": "Both fought against Austrian influence during the unification process.",
+        "importance": "medium"
+      },
+      {
+        "claim": "Both became constitutional monarchies after unification.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both participated in World War I.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both experienced political dissatisfaction after World War I.",
+        "importance": "high"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "German unification was led primarily by Otto von Bismarck and Prussia,",
+        "entityB": "Italian unification involved several leaders, including Cavour’s diplomacy, Garibaldi’s military campaigns, and Mazzini’s nationalist ideas.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Bismarck wanted to preserve the authority of the Prussian monarchy",
+        "entityB": "Cavour supported a constitutional monarchy and liberal economic development.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Germany unified primarily through Prussian military victories over Denmark, Austria, and France",
+        "entityB": "Italy used a combination of diplomacy, plebiscites, nationalist uprisings, and warfare.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Germany became highly industrialized and a world leader in coal and steel",
+        "entityB": "Italy remained poorer and less industrialized.",
+        "importance": "medium"
+      },
+      {
+        "entityA": "Poverty caused many Italians to immigrate to the United States and Argentina",
+        "entityB": "Germany’s expanding industrial economy attracted workers into growing cities.",
+        "importance": "medium"
+      },
+      {
+        "entityA": "Germany fought with the Central Powers during World War I",
+        "entityB": "Italy joined the Allies.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Germany was punished through the Treaty of Versailles and lost its monarchy",
+        "entityB": "Italy was on the winning side but was angry that it did not receive all the territory it had been promised.",
+        "importance": "high"
+      }
+    ]
+  },
+  "united-states|japan|1750-1900": {
+    "entities": [
+      "United States 1776-1900",
+      "Japan 1853-1900"
+    ],
+    "period": "1750-1900",
+    "similarities": [
+      {
+        "claim": "Both experienced major political transformations that produced new constitutional systems.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both industrialized rapidly during the nineteenth century.",
+        "importance": "medium"
+      },
+      {
+        "claim": "Both built modern militaries and expanded their territorial influence.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both used transportation, education, and industrial development to strengthen national unity.",
+        "importance": "medium"
+      },
+      {
+        "claim": "Both became imperial powers by the end of the nineteenth century.",
+        "importance": "high"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "The United States gained independence from Britain,",
+        "entityB": "Japan remained sovereign but isolationist until the United States forced it to open to foreign trade.",
+        "importance": "high"
+      },
+      {
+        "entityA": "The United States became a federal republic",
+        "entityB": "Japan became a constitutional monarchy under the restored emperor.",
+        "importance": "high"
+      },
+      {
+        "entityA": "The United States industrialized especially rapidly after the Civil War",
+        "entityB": "Japan began rapid modernization after the 1868 Meiji Restoration.",
+        "importance": "high"
+      },
+      {
+        "entityA": "American industrialization relied heavily on private businesses, resources, and immigrant labor",
+        "entityB": "Japan initially used government-sponsored enterprises that were later sold to private zaibatsu.",
+        "importance": "high"
+      },
+      {
+        "entityA": "The United States expanded westward across North America, displacing Indigenous peoples",
+        "entityB": "Japan expanded its influence into East Asia.",
+        "importance": "medium"
+      },
+      {
+        "entityA": "the United States abolished slavery after the Civil War.",
+        "entityB": "Japan abolished feudalism and the samurai class during the Meiji reforms",
+        "importance": "high"
+      },
+      {
+        "entityA": "The United States initiated Japan’s opening when Commodore Matthew Perry arrived with warships in 1853.",
+        "entityB": "Japan did not share this distinguishing feature to the same extent.",
+        "importance": "medium"
+      }
+    ]
+  },
+  "united-states|japan|1900-present": {
+    "entities": [
+      "United States 1900-Present",
+      "Japan 1900-Present"
+    ],
+    "period": "1900-present",
+    "similarities": [
+      {
+        "claim": "Both were major industrial and military powers by the early twentieth century.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both fought with the Allies during World War I.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both competed for political and economic influence in the Pacific.",
+        "importance": "high"
+      },
+      {
+        "claim": "After World War II, both developed capitalist economies and became close allies.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both became leading centers of technological development and global trade",
+        "importance": "high"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "the United States increasingly opposed Japanese expansion.",
+        "entityB": "Japan pursued aggressive imperial expansion into Manchuria and China during the 1930s",
+        "importance": "high"
+      },
+      {
+        "entityA": "bringing the United States into World War II.",
+        "entityB": "Japan attacked Pearl Harbor in 1941",
+        "importance": "high"
+      },
+      {
+        "entityA": "The United States dropped atomic bombs on Hiroshima",
+        "entityB": "Nagasaki, contributing to Japan’s unconditional surrender.",
+        "importance": "medium"
+      },
+      {
+        "entityA": "The United States emerged from World War II as a military superpower",
+        "entityB": "Japan was occupied, demilitarized, and rebuilt primarily as an economic power.",
+        "importance": "high"
+      },
+      {
+        "entityA": "The United States has a presidential federal republic",
+        "entityB": "Japan has a parliamentary constitutional monarchy.",
+        "importance": "high"
+      },
+      {
+        "entityA": "The United States maintains a large global military presence",
+        "entityB": "postwar Japan has placed greater constitutional restrictions on its use of military force.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Relations were strained by Japanese immigration to the United States, resulting in the Gentlemen’s Agreement of 1907 and later immigration restrictions.",
+        "entityB": "Japan did not share this distinguishing feature to the same extent.",
+        "importance": "medium"
+      }
+    ]
+  },
+  "qing-dynasty|ottoman-empire|1750-1900": {
+    "entities": [
+      "Qing Dynasty",
+      "Ottoman Empire"
+    ],
+    "period": "1750-1900",
+    "similarities": [
+      {
+        "claim": "Both were large, multiethnic land-based empires governed by ruling groups that represented only part of their populations.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both experienced corruption, declining central authority, and difficulties governing large territories.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both faced internal rebellions and nationalist movements.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both were weakened by European military and economic interference.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both attempted defensive modernization during the nineteenth century.",
+        "importance": "medium"
+      },
+      {
+        "claim": "In both empires, conservative leaders resisted or reversed reforms.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both failed to industrialize as successfully as Western Europe and Japan.",
+        "importance": "medium"
+      },
+      {
+        "claim": "Both dynasties collapsed in the early twentieth century and were eventually replaced by republics.",
+        "importance": "high"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "The Qing were Manchu rulers governing a predominantly Han Chinese population",
+        "entityB": "the Ottoman state was governed by a Turkish Muslim dynasty ruling numerous religious and ethnic groups.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Qing government relied on Confucian bureaucracy and civil service examinations",
+        "entityB": "Ottoman government relied on Islamic and secular law, provincial officials, tax farming, and institutions such as the Janissaries.",
+        "importance": "high"
+      },
+      {
+        "entityA": "The Qing faced the Opium Wars and unequal treaties that opened Chinese ports and granted Europeans extraterritorial rights",
+        "entityB": "the Ottomans faced territorial losses, European intervention, and nationalist revolts, especially in the Balkans.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Qing modernization centered on the Self-Strengthening Movement and Hundred Days of Reform",
+        "entityB": "Ottoman modernization centered on Mahmud II’s reforms and the Tanzimat reforms.",
+        "importance": "medium"
+      },
+      {
+        "entityA": "Qing reformers attempted to introduce a constitutional monarchy, Western industry, and new medical and commercial systems",
+        "entityB": "Ottoman reforms secularized schools, codified laws, modernized the military, and expanded banking.",
+        "importance": "high"
+      },
+      {
+        "entityA": "The Boxer Rebellion targeted foreigners and Christians in China",
+        "entityB": "Ottoman nationalism and the Young Turk movement attempted to create a more unified state, often by suppressing ethnic differences.",
+        "importance": "high"
+      },
+      {
+        "entityA": "The Qing collapsed in 1911 and became the Republic of China",
+        "entityB": "the Ottoman Empire survived until its defeat in World War I and was formally replaced by the Republic of Turkey.",
+        "importance": "high"
+      },
+      {
+        "entityA": "China’s economy was heavily affected by tea, silver, and British opium imports",
+        "entityB": "the Ottoman economy suffered from tax farming, silver inflation, European competition, and growing financial dependence.",
+        "importance": "high"
+      }
+    ]
+  },
+  "qing-dynasty|ottoman-empire|1900-present": {
+    "entities": [
+      "Qing Dynasty",
+      "Ottoman Empire"
+    ],
+    "period": "1900-present",
+    "similarities": [
+      {
+        "claim": "Both were large, multiethnic land-based empires governed by ruling groups that represented only part of their populations.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both experienced corruption, declining central authority, and difficulties governing large territories.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both faced internal rebellions and nationalist movements.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both were weakened by European military and economic interference.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both attempted defensive modernization during the nineteenth century.",
+        "importance": "medium"
+      },
+      {
+        "claim": "In both empires, conservative leaders resisted or reversed reforms.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both failed to industrialize as successfully as Western Europe and Japan.",
+        "importance": "medium"
+      },
+      {
+        "claim": "Both dynasties collapsed in the early twentieth century and were eventually replaced by republics.",
+        "importance": "high"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "The Qing were Manchu rulers governing a predominantly Han Chinese population",
+        "entityB": "the Ottoman state was governed by a Turkish Muslim dynasty ruling numerous religious and ethnic groups.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Qing government relied on Confucian bureaucracy and civil service examinations",
+        "entityB": "Ottoman government relied on Islamic and secular law, provincial officials, tax farming, and institutions such as the Janissaries.",
+        "importance": "high"
+      },
+      {
+        "entityA": "The Qing faced the Opium Wars and unequal treaties that opened Chinese ports and granted Europeans extraterritorial rights",
+        "entityB": "the Ottomans faced territorial losses, European intervention, and nationalist revolts, especially in the Balkans.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Qing modernization centered on the Self-Strengthening Movement and Hundred Days of Reform",
+        "entityB": "Ottoman modernization centered on Mahmud II’s reforms and the Tanzimat reforms.",
+        "importance": "medium"
+      },
+      {
+        "entityA": "Qing reformers attempted to introduce a constitutional monarchy, Western industry, and new medical and commercial systems",
+        "entityB": "Ottoman reforms secularized schools, codified laws, modernized the military, and expanded banking.",
+        "importance": "high"
+      },
+      {
+        "entityA": "The Boxer Rebellion targeted foreigners and Christians in China",
+        "entityB": "Ottoman nationalism and the Young Turk movement attempted to create a more unified state, often by suppressing ethnic differences.",
+        "importance": "high"
+      },
+      {
+        "entityA": "The Qing collapsed in 1911 and became the Republic of China",
+        "entityB": "the Ottoman Empire survived until its defeat in World War I and was formally replaced by the Republic of Turkey.",
+        "importance": "high"
+      },
+      {
+        "entityA": "China’s economy was heavily affected by tea, silver, and British opium imports",
+        "entityB": "the Ottoman economy suffered from tax farming, silver inflation, European competition, and growing financial dependence.",
+        "importance": "high"
+      }
+    ]
+  },
+  "united-states|soviet-union|1900-present": {
+    "entities": [
+      "United States 1900-Present",
+      "USSR"
+    ],
+    "period": "1900-present",
+    "similarities": [
+      {
+        "claim": "Both emerged from World War II as global superpowers.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both were permanent members of the United Nations Security Council.",
+        "importance": "medium"
+      },
+      {
+        "claim": "Both developed nuclear weapons and intercontinental ballistic missiles.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both competed in the arms race and space race.",
+        "importance": "medium"
+      },
+      {
+        "claim": "Both used propaganda to promote their political and economic systems.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both created military and economic alliances.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both avoided directly fighting each other, instead supporting opposing sides in proxy wars such as Korea, Vietnam, and Afghanistan.",
+        "importance": "medium"
+      },
+      {
+        "claim": "Both relied on nuclear deterrence and mutually assured destruction to avoid direct war.",
+        "importance": "high"
+      },
+      {
+        "claim": "Periods of intense rivalry alternated with détente, when the two governments negotiated arms limits and reduced tensions.",
+        "importance": "high"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "The United States supported capitalism, private property, and multiparty democracy",
+        "entityB": "the USSR supported communism, government ownership, and one-party rule.",
+        "importance": "high"
+      },
+      {
+        "entityA": "The United States promoted containment to prevent communism from spreading",
+        "entityB": "the USSR supported communist governments and revolutionary movements.",
+        "importance": "high"
+      },
+      {
+        "entityA": "The United States created NATO and the Marshall Plan",
+        "entityB": "the USSR created the Warsaw Pact and COMECON.",
+        "importance": "medium"
+      },
+      {
+        "entityA": "The United States supported South Korea and South Vietnam",
+        "entityB": "the USSR supported North Korea and communist North Vietnam.",
+        "importance": "medium"
+      },
+      {
+        "entityA": "The United States emerged from World War II with little physical damage",
+        "entityB": "the USSR lost millions of people and experienced widespread destruction.",
+        "importance": "high"
+      },
+      {
+        "entityA": "the United States generally exercised influence through alliances, military bases, and economic aid.",
+        "entityB": "The USSR established satellite governments in Eastern Europe",
+        "importance": "high"
+      },
+      {
+        "entityA": "The Soviet command economy emphasized heavy industry and collectivized agriculture,",
+        "entityB": "the American economy emphasized private enterprise and consumer production.",
+        "importance": "medium"
+      },
+      {
+        "entityA": "the United States remained a unified global power.",
+        "entityB": "The Soviet Union collapsed in 1991,",
+        "importance": "medium"
+      }
+    ]
+  },
+  "communist-china-prc|soviet-union|1900-present": {
+    "entities": [
+      "China",
+      "USSR"
+    ],
+    "period": "1900-present",
+    "similarities": [
+      {
+        "claim": "Both became communist states through revolutions led by communist parties.",
+        "importance": "medium"
+      },
+      {
+        "claim": "Both established authoritarian, one-party governments.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both censored the press and restricted political opposition.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both attempted rapid industrialization through government economic planning.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both collectivized agriculture and reduced private landownership.",
+        "importance": "medium"
+      },
+      {
+        "claim": "Both prioritized heavy industry over consumer goods.",
+        "importance": "medium"
+      },
+      {
+        "claim": "Both experienced catastrophic famines partly caused by government agricultural policies.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both eventually introduced limited market reforms when strict communist policies damaged their economies.",
+        "importance": "high"
+      },
+      {
+        "claim": "China and the USSR were initially communist allies, but ideological and geopolitical disagreements produced the Sino-Soviet Split during the Cold War.",
+        "importance": "high"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "The Bolsheviks took power in Russia in 1917",
+        "entityB": "the Chinese Communist Party defeated the Nationalists in 1949.",
+        "importance": "medium"
+      },
+      {
+        "entityA": "The Russian Revolution was led by Lenin and later dominated by Stalin",
+        "entityB": "the Chinese Revolution was led by Mao Zedong.",
+        "importance": "medium"
+      },
+      {
+        "entityA": "Mao based the Chinese communist movement heavily on peasant support",
+        "entityB": "Russian communism originally emphasized an urban working-class revolution.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Stalin industrialized through Five-Year Plans and collectivized farms",
+        "entityB": "Mao launched the Great Leap Forward using rural communes and backyard steel production.",
+        "importance": "medium"
+      },
+      {
+        "entityA": "Stalin’s collectivization contributed to famine in Ukraine",
+        "entityB": "Mao’s Great Leap Forward caused a much broader Chinese famine in which millions died.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Stalin removed opponents through executions and gulags",
+        "entityB": "Mao mobilized young Red Guards during the Cultural Revolution to attack supposed enemies of communism.",
+        "importance": "medium"
+      },
+      {
+        "entityA": "China did not establish an equivalent Eastern European-style bloc.",
+        "entityB": "The USSR controlled satellite states in Eastern Europe",
+        "importance": "medium"
+      },
+      {
+        "entityA": "China’s Communist Party remained in power.",
+        "entityB": "The USSR collapsed in 1991,",
+        "importance": "medium"
+      },
+      {
+        "entityA": "Deng Xiaoping introduced substantial private ownership, foreign investment, leased farms, and special economic zones",
+        "entityB": "maintaining strict political control.",
+        "importance": "high"
+      },
+      {
+        "entityA": "China increasingly followed its own Maoist path and competed with the USSR for influence.",
+        "entityB": "The USSR emphasized leadership of the international communist movement,",
+        "importance": "medium"
+      }
+    ]
+  },
+  "vietnam|algeria|1900-present": {
+    "entities": [
+      "Vietnam",
+      "Algeria"
+    ],
+    "period": "1900-present",
+    "similarities": [
+      {
+        "claim": "Both were colonies of France.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both developed strong nationalist independence movements after World War II.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both gained independence through violent wars rather than peaceful negotiations.",
+        "importance": "medium"
+      },
+      {
+        "claim": "Both used guerrilla warfare against French forces.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both received foreign assistance for their independence movements.",
+        "importance": "medium"
+      },
+      {
+        "claim": "Both nationalist movements adopted socialist ideas.",
+        "importance": "medium"
+      },
+      {
+        "claim": "Both established authoritarian governments after independence.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both experienced continued violence and political instability after colonial rule ended.",
+        "importance": "high"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "Vietnam was part of French Indochina in Southeast Asia",
+        "entityB": "Algeria was a French settler colony in North Africa.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Vietnam was occupied by Japan during World War II",
+        "entityB": "Algeria remained under French control.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Vietnamese independence was led by Ho Chi Minh and the communist Viet Minh",
+        "entityB": "Algerian independence was led by the National Liberation Front, or FLN.",
+        "importance": "medium"
+      },
+      {
+        "entityA": "Vietnam fought the First Indochina War from 1946 to 1954",
+        "entityB": "Algeria fought its independence war from 1954 to 1962.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Vietnam defeated France decisively at Dien Bien Phu",
+        "entityB": "Algeria gained independence after prolonged warfare and Charles de Gaulle’s decision to permit Algerian self-rule.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Vietnam was divided into communist North Vietnam and anti-communist South Vietnam after independence",
+        "entityB": "Algeria remained a single country.",
+        "importance": "medium"
+      },
+      {
+        "entityA": "Vietnam became a major Cold War conflict involving extensive American intervention",
+        "entityB": "Algeria’s war primarily involved France, the FLN, and regional Arab support.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Vietnam did not have a comparable European settler population.",
+        "entityB": "Algeria contained a large French settler population that left after independence, damaging its economy",
+        "importance": "high"
+      },
+      {
+        "entityA": "Vietnam was eventually reunified under communism",
+        "entityB": "Algeria later experienced a civil war between the government and Islamist opposition.",
+        "importance": "high"
+      }
+    ]
+  },
+  "ghana|vietnam|1900-present": {
+    "entities": [
+      "Ghana",
+      "Vietnam"
+    ],
+    "period": "1900-present",
+    "similarities": [
+      {
+        "claim": "Both were colonies that gained independence during the post–World War II decolonization period.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both independence movements were led by influential nationalist leaders.",
+        "importance": "medium"
+      },
+      {
+        "claim": "Kwame Nkrumah and Ho Chi Minh both linked independence to broader political ideologies.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both countries attempted to reduce the influence of their former colonial powers.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both experienced authoritarian government after independence.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both were affected by the political pressures of the Cold War.",
+        "importance": "high"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "Ghana was a British colony",
+        "entityB": "Vietnam was a French colony that was also occupied by Japan.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Ghana negotiated its independence peacefully in 1957",
+        "entityB": "Vietnam fought France in the First Indochina War.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Ghanaian independence was led by Kwame Nkrumah",
+        "entityB": "Vietnamese independence was led by Ho Chi Minh.",
+        "importance": "medium"
+      },
+      {
+        "entityA": "Nkrumah promoted Pan-Africanism and African political unity",
+        "entityB": "Ho Chi Minh used communism as a vehicle for Vietnamese nationalism.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Ghana remained territorially united",
+        "entityB": "Vietnam was divided into communist North Vietnam and anti-communist South Vietnam.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Ghana did not become a major Cold War battlefield",
+        "entityB": "Vietnam became the site of an extensive proxy war involving the United States, USSR, and China.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Nkrumah was removed in a military coup in 1966",
+        "entityB": "Ho Chi Minh’s communist movement eventually defeated South Vietnam and reunified the country.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Ghana’s post-independence problems centered on debt, corruption, and military intervention",
+        "entityB": "Vietnam’s centered on prolonged warfare, land redistribution, and national reunification.",
+        "importance": "high"
+      }
+    ]
+  },
+  "india|ghana|1900-present": {
+    "entities": [
+      "India",
+      "Ghana"
+    ],
+    "period": "1900-present",
+    "similarities": [
+      {
+        "claim": "Both were colonies of Britain.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both developed organized nationalist movements.",
+        "importance": "medium"
+      },
+      {
+        "claim": "Both negotiated independence rather than defeating Britain in a prolonged colonial war.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both gained independence shortly after World War II.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both had charismatic nationalist leaders: Gandhi and Nehru in India, and Nkrumah in Ghana.",
+        "importance": "medium"
+      },
+      {
+        "claim": "Both supported greater cooperation among formerly colonized countries.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both attempted economic and social reforms after independence.",
+        "importance": "medium"
+      },
+      {
+        "claim": "Both faced challenges caused by colonial economic structures.",
+        "importance": "high"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "India became independent in 1947",
+        "entityB": "Ghana became independent in 1957.",
+        "importance": "medium"
+      },
+      {
+        "entityA": "India’s movement used mass civil disobedience and nonviolent resistance",
+        "entityB": "Ghana’s independence resulted more directly from political negotiation with Britain.",
+        "importance": "high"
+      },
+      {
+        "entityA": "India was partitioned into India and Pakistan, producing widespread religious violence and migration",
+        "entityB": "Ghana was not partitioned.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Indian nationalism had to manage major Hindu-Muslim divisions",
+        "entityB": "Ghanaian nationalism emphasized Pan-African identity and resistance to colonial rule.",
+        "importance": "high"
+      },
+      {
+        "entityA": "India established a lasting multiparty parliamentary democracy",
+        "entityB": "Nkrumah increasingly restricted opposition and became a dictator.",
+        "importance": "high"
+      },
+      {
+        "entityA": "India maintained civilian rule.",
+        "entityB": "Ghana experienced a military coup that removed Nkrumah in 1966",
+        "importance": "high"
+      },
+      {
+        "entityA": "India became a leader of the Non-Aligned Movement",
+        "entityB": "Nkrumah focused especially on Pan-Africanism and helped establish the Organization of African Unity.",
+        "importance": "medium"
+      },
+      {
+        "entityA": "India’s post-independence land reforms had mixed success",
+        "entityB": "Ghana’s government was particularly criticized for debt and corruption.",
+        "importance": "high"
+      }
+    ]
+  },
+  "ghana|algeria|1900-present": {
+    "entities": [
+      "Ghana",
+      "Algeria"
+    ],
+    "period": "1900-present",
+    "similarities": [
+      {
+        "claim": "Both were African colonies that gained independence after World War II.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both independence movements were based on nationalism and opposition to European rule.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both established governments led by the main nationalist independence movement.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both adopted some socialist policies after independence.",
+        "importance": "medium"
+      },
+      {
+        "claim": "Both developed authoritarian political systems.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both experienced coups, instability, or violence after independence.",
+        "importance": "medium"
+      },
+      {
+        "claim": "Both remained economically affected by their former colonial relationships.",
+        "importance": "high"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "Ghana was controlled by Britain",
+        "entityB": "Algeria was controlled by France.",
+        "importance": "medium"
+      },
+      {
+        "entityA": "Ghana negotiated independence peacefully in 1957",
+        "entityB": "Algeria gained independence in 1962 after an eight-year war.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Ghanaian independence was led by Kwame Nkrumah",
+        "entityB": "Algerian independence was led by the FLN.",
+        "importance": "medium"
+      },
+      {
+        "entityA": "Nkrumah promoted Pan-Africanism",
+        "entityB": "the FLN received support from Egypt and other Arab countries.",
+        "importance": "medium"
+      },
+      {
+        "entityA": "Ghana did not have a large European settler population",
+        "entityB": "Algeria contained a substantial French population that strongly resisted independence.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Ghana’s independence struggle involved political organization and negotiation",
+        "entityB": "Algeria’s involved guerrilla warfare and hundreds of thousands of deaths.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Ghana’s government was overthrown in a military coup in 1966",
+        "entityB": "Algeria’s FLN remained dominant and established a socialist authoritarian state.",
+        "importance": "high"
+      },
+      {
+        "entityA": "Ghana did not experience a directly comparable conflict.",
+        "entityB": "Algeria later experienced a major civil war after the military cancelled an election won by an Islamist party",
+        "importance": "high"
+      },
+      {
+        "entityA": "Ghana’s major economic problems included government debt and corruption",
+        "entityB": "Algeria suffered when departing French settlers took skills and investment with them.",
+        "importance": "high"
+      }
+    ]
+  },
+  "israel|india|1900-present": {
+    "entities": [
+      "Palestine/Israel",
+      "India"
+    ],
+    "period": "1900-present",
+    "similarities": [
+      {
+        "claim": "Both emerged from territories previously controlled by Britain shortly after World War II.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both were shaped by competing nationalist movements seeking separate states.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both underwent partition largely because different religious and national communities feared being ruled by another group.",
+        "importance": "high"
+      },
+      {
+        "claim": "Both partitions produced widespread violence and large-scale population displacement.",
+        "importance": "medium"
+      },
+      {
+        "claim": "Both immediately faced conflict with neighboring states created or affected by the partition.",
+        "importance": "medium"
+      },
+      {
+        "claim": "Both continued to experience territorial disputes after independence: India over Kashmir and Israel over Palestinian territories and neighboring Arab lands.",
+        "importance": "high"
+      },
+      {
+        "claim": "World War II accelerated both developments: Indian demands for independence grew after millions of Indians served Britain, while the Holocaust increased international support for establishing a Jewish homeland.",
+        "importance": "high"
+      }
+    ],
+    "differences": [
+      {
+        "entityA": "Israel was created from part of the British Mandate of Palestine under a United Nations partition plan.",
+        "entityB": "India was an established British colony that gained independence,",
+        "importance": "high"
+      },
+      {
+        "entityA": "Palestine was proposed to be divided into Jewish and Arab states, but the proposed Arab Palestinian state was not successfully established in 1948.",
+        "entityB": "British India was divided into the independent states of Hindu-majority India and Muslim-majority Pakistan",
+        "importance": "high"
+      },
+      {
+        "entityA": "Israel’s creation followed Zionist migration, international diplomacy, the UN partition decision, and warfare.",
+        "entityB": "India’s independence movement relied heavily on mass organization, boycotts, and nonviolent civil disobedience led by figures such as Gandhi and Nehru",
+        "importance": "high"
+      },
+      {
+        "entityA": "Israel declared independence and immediately fought neighboring Arab states.",
+        "entityB": "India became independent through negotiations with Britain, although partition caused severe communal violence",
+        "importance": "medium"
+      },
+      {
+        "entityA": "Israel became a Jewish-majority state.",
+        "entityB": "India became a secular, Hindu-majority democratic republic",
+        "importance": "high"
+      },
+      {
+        "entityA": "the Arab-Israeli War caused many Palestinians to flee or be displaced into refugee camps.",
+        "entityB": "The partition of India caused Hindus and Sikhs to migrate toward India and Muslims toward Pakistan",
+        "importance": "high"
+      },
+      {
+        "entityA": "Pakistan later divided when East Pakistan became Bangladesh in 1971",
+        "entityB": "Bangladesh was not part of the original 1947 partition as a separate country.",
+        "importance": "medium"
+      },
+      {
+        "entityA": "the Israeli-Palestinian conflict involved competing Jewish and Palestinian Arab claims to the same territory, rather than simply Judaism versus Islam.",
+        "entityB": "India’s central conflict was primarily between advocates of a united India and those demanding a separate Muslim state",
+        "importance": "high"
+      }
+    ]
+  }
+}

@@ -13,7 +13,9 @@ const TimeSliderContext = createContext<TimeSliderProps | undefined>(undefined);
 export const useTimeSliderContext = () => {
   const context = useContext(TimeSliderContext);
   if (!context) {
-    throw new Error("useTimeSliderContext must be used within a TimeSliderProvider");
+    throw new Error(
+      "useTimeSliderContext must be used within a TimeSliderProvider"
+    );
   }
   return context;
 };
@@ -22,7 +24,9 @@ interface TimeSliderProviderProps {
   children: React.ReactNode;
 }
 
-export const TimeSliderProvider: React.FC<TimeSliderProviderProps> = ({ children }) => {
+export const TimeSliderProvider: React.FC<TimeSliderProviderProps> = ({
+  children,
+}) => {
   const [selectedTime, setSelectedTime] = useState<number>(1200);
 
   return (
@@ -52,12 +56,22 @@ export const TimeSlider = () => {
 
         {/* Marks */}
         {timePeriods.map((mark) => {
-          const left = ((mark - timePeriods[0]) /
-            (timePeriods[timePeriods.length - 1] - timePeriods[0])) * 100;
+          const left =
+            ((mark - timePeriods[0]) /
+              (timePeriods[timePeriods.length - 1] - timePeriods[0])) *
+            100;
           return (
-            <div key={mark} className="absolute -top-1" style={{ left: `${left}%` }} role="presentation">
+            <div
+              key={mark}
+              className="absolute -top-1"
+              style={{ left: `${left}%` }}
+              role="presentation"
+            >
               <div className="w-[2px] h-4 bg-gray-600" aria-hidden="true"></div>
-              <div className="text-xs text-gray-200 text-center mt-1 -translate-x-1/2" aria-hidden="true">
+              <div
+                className="text-xs text-gray-200 text-center mt-1 -translate-x-1/2"
+                aria-hidden="true"
+              >
                 {mark}
               </div>
             </div>

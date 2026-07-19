@@ -28,8 +28,11 @@ import { AutoscalingPopup, CountryInfoLayout } from "../components/Popup";
 import {
   GeographicPageProvider,
   useGeographicPageContext,
+  type TrackedComparison,
+  type ValidComparison,
 } from "../providers/GeographicSelectionProvider";
-import { trackEvent } from "../util/analytics"
+import { trackEvent } from "../util/analytics";
+import { API_BASE_URL } from "../config/api";
 
 const timeMaps: Record<
   number,
@@ -119,36 +122,35 @@ export const InnerGeographicSelection: React.FC<{
   return (
     <div className="flex flex-col items-center justify-start w-full h-full">
       <div className="w-full h-full overflow-y-auto">
-          <div className="relative w-full h-full">
-            <MapHandler MapComponent={MapComponent} />
+        <div className="relative w-full h-full">
+          <MapHandler MapComponent={MapComponent} />
 
-            <div className="absolute top-0 left-0 w-full pointer-events-none z-10">
-              <div className="flex items-start p-2">
-                <div className="pointer-events-auto">
-                  <Quiz />
-                </div>
-                <div className="flex-1 flex justify-center pointer-events-auto">
-                  <CrossCountryPopup />
-                </div>
+          <div className="absolute top-0 left-0 w-full pointer-events-none z-10">
+            <div className="flex items-start p-2">
+              <div className="pointer-events-auto">
+                <Quiz />
+              </div>
+              <div className="flex-1 flex justify-center pointer-events-auto">
+                <CrossCountryPopup />
               </div>
             </div>
-
-            {selectedCountry &&
-              (() => {
-                const { timePeriod, ...notes } =
-                  countryNotes[selectedCountry] ||
-                  generalNotes[selectedCountry];
-                return (
-                  <AutoscalingPopup onClose={() => setSelectedCountry(null)}>
-                    <CountryInfoLayout
-                      countryName={selectedCountry}
-                      notes={notes}
-                      extra={[timePeriod ? "Time Period: " + timePeriod : ""]}
-                    />
-                  </AutoscalingPopup>
-                );
-              })()}
           </div>
+
+          {selectedCountry &&
+            (() => {
+              const { timePeriod, ...notes } =
+                countryNotes[selectedCountry] || generalNotes[selectedCountry];
+              return (
+                <AutoscalingPopup onClose={() => setSelectedCountry(null)}>
+                  <CountryInfoLayout
+                    countryName={selectedCountry}
+                    notes={notes}
+                    extra={[timePeriod ? "Time Period: " + timePeriod : ""]}
+                  />
+                </AutoscalingPopup>
+              );
+            })()}
+        </div>
       </div>
     </div>
   );
@@ -211,10 +213,11 @@ const CrossCountryPopup: React.FC = () => {
                 return (
                   <button
                     key={concept}
-                    onClick={() => {setSelectedCountry(concept);
+                    onClick={() => {
+                      setSelectedCountry(concept);
                       trackEvent("crosscountry_popup_opened", {
                         concept,
-                        selectedWHAPTime: selectedWHAPTime.join("-")
+                        selectedWHAPTime: selectedWHAPTime.join("-"),
                       });
                     }}
                     className={`px-4 py-2 bg-gradient-to-r from-indigo-500 to-blue-600 text-white rounded-full text-sm font-medium hover:from-indigo-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg
@@ -248,21 +251,8 @@ const MapHandler: React.FC<{
   const mapRef = useRef<HTMLDivElement>(null);
   const [canScrollRight, setCanScrollRight] = useState<boolean>(false);
   const [canScrollLeft, setCanScrollLeft] = useState<boolean>(false);
-  const { hoveredConcept, setPresentNations, setSelectedCountry } =
-    useGeographicPageContext();
+  const { hoveredConcept, setSelectedCountry } = useGeographicPageContext();
   const { selectedTime } = useTimeSliderContext();
-  
-
-  useEffect(() => {
-    const svgEl = mapRef.current;
-    if (!svgEl) return;
-    const found = Array.from(
-      svgEl.querySelectorAll<SVGElement>("[data-country]")
-    )
-      .map((el) => el.getAttribute("data-country"))
-      .filter((v): v is string => !!v);
-    setPresentNations(found);
-  }, [MapComponent, setPresentNations]);
 
   const scrollMap = (direction: "left" | "right") => {
     if (mapRef.current) {
@@ -326,7 +316,7 @@ const MapHandler: React.FC<{
       setSelectedCountry(countryName);
       trackEvent("country_popup_opened", {
         country: countryName,
-        timePeriod: selectedTime
+        timePeriod: selectedTime,
       });
     } else {
       alert(`No notes available for: ${countryName}`);
@@ -405,49 +395,96 @@ const MapHandler: React.FC<{
 
 const Quiz: React.FC = () => {
   const [quizOpen, setQuizOpen] = useState<boolean>(false);
-  const [chosenCountries, setChosenCountries] = useState<[string, string]>([
-    "",
-    "",
+  const [comparison, setComparison] = useState<ValidComparison>();
+  const {
+    validComparisons,
+    setValidComparisons,
+    trackedComparisons,
+    setTrackedComparisons,
+  } = useGeographicPageContext();
+  const { selectedTime } = useTimeSliderContext();
+
+  useEffect(() => {
+    const validComparisons: TrackedComparison[] = trackedComparisons.filter(
+      (comparison: TrackedComparison) => {
+        return (
+          !comparison.used &&
+          comparison.comparison.timePeriod[0] <= selectedTime &&
+          comparison.comparison.timePeriod[1] > selectedTime
+        );
+      }
+    );
+    setValidComparisons(
+      validComparisons.length === 0 ? undefined : validComparisons
+    );
+  }, [
+    selectedTime,
+    trackedComparisons,
+    setValidComparisons,
+    trackedComparisons,
   ]);
-  const { presentNations } = useGeographicPageContext();
-  const maxTries = 20;
 
   const pickCountries = () => {
-    if (!quizOpen) return;
-    let numTries = 0;
-    let country1: string;
-    let notes1: { [section: string]: string[] };
-
-    do {
-      country1 =
-        presentNations[Math.floor(Math.random() * presentNations.length)];
-      notes1 = countryNotes[country1];
-    } while (!notes1);
-
-    const notes1Keys = Object.keys(notes1);
-
-    let country2: string;
-    let notes2: { [section: string]: string[] };
-
-    do {
-      numTries++;
-      if (numTries >= maxTries) {
-        setQuizOpen(false);
-        alert("Could not find any partner for " + country1);
-        return;
-      }
-      country2 =
-        presentNations[Math.floor(Math.random() * presentNations.length)];
-      notes2 = countryNotes[country2];
-    } while (
-      country1 === country2 ||
-      !notes2 ||
-      !Object.keys(notes2).some((category: string) => {
-        return notes1Keys.some((cat: string) => cat === category);
-      })
+    if (!quizOpen || !validComparisons) return;
+    setComparison(
+      validComparisons[Math.floor(Math.random() * validComparisons.length)]
+        .comparison
     );
-    setChosenCountries([country1, country2]);
+    setFeedback(undefined);
+    setStudentAnswer("");
   };
+
+  const [studentAnswer, setStudentAnswer] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [feedback, setFeedback] = useState<{
+    score?: number;
+    strengths?: string;
+    areasToImprove: string;
+  }>();
+
+  const handleSubmit = async () => {
+    if (!studentAnswer || !comparison) return;
+    console.log("submit");
+    setIsSubmitting(true);
+    try {
+      const res = await fetch(
+        `${API_BASE_URL}/api/grade-compare`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            countryA: comparison.country1,
+            countryB: comparison.country2,
+            timePeriod: comparison.timePeriod,
+            studentAnswer: studentAnswer,
+          }),
+        }
+      );
+
+      const graded = await res.json();
+      if (!res.ok) {
+        throw new Error(graded.error ?? "Unable to grade answer");
+      }
+      setFeedback(graded);
+
+      if (graded.score && graded.score > 3) {
+        setTrackedComparisons((prev) =>
+          prev.map((tc) =>
+            tc.comparison.id === comparison.id
+              ? { ...tc, used: true }
+              : tc
+          )
+        );
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Error grading answer");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const [notesOpen, setNotesOpen] = useState<boolean>(false);
 
   useEffect(() => {
     pickCountries();
@@ -455,7 +492,7 @@ const Quiz: React.FC = () => {
 
   return (
     <>
-      {!quizOpen && (
+      {!quizOpen && validComparisons && (
         <button
           className="h-8 bg-gradient-to-r from-yellow-500 to-red-600 cursor-pointer text-white font-medium shadow-md hover:shadow-lg transition-shadow"
           onClick={() => setQuizOpen(true)}
@@ -463,26 +500,79 @@ const Quiz: React.FC = () => {
           Quiz!
         </button>
       )}
-      {quizOpen && (
+      {quizOpen && comparison && (
         <AutoscalingPopup onClose={() => setQuizOpen(false)} opaqueness={0.75}>
-          <div className="flex flex-row justify-between">
+          <div className="flex items-center justify-between">
             <h1 className="text-black">Find similarities & differences</h1>
-            <button onClick={() => pickCountries()}>Go Again</button>
+            <button
+              onClick={() => pickCountries()}
+              className="!bg-white !text-black"
+            >
+              Go Again
+            </button>
           </div>
+          <div className="w-full grid grid-cols-2 gap-4 mb-4 text-center">
+            <h2 className="font-bold text-2xl text-black">
+              {comparison.country1}
+            </h2>
+            <h2 className="font-bold text-2xl text-black">
+              {comparison.country2}
+            </h2>
+          </div>
+          <div className="mb-4">
+            <textarea
+              value={studentAnswer}
+              onChange={(e) => setStudentAnswer(e.target.value)}
+              placeholder="Your answer"
+              className="w-full bg-white rounded p-2 !text-black h-40 resize-none"
+            ></textarea>
+          </div>
+          <button
+            onClick={handleSubmit}
+            className="w-full !bg-white !text-black"
+          >
+            {isSubmitting ? "Grading..." : "Submit for Grading"}
+          </button>
+          <button
+            onClick={() => setNotesOpen(true)}
+            className="mt-4 w-full !text-xs !bg-white !text-black"
+          >
+            Need a Hint?
+          </button>
+          {feedback && (
+            <div className="mt-4 p-2 border rounded bg-gray-100 !text-black">
+              <p className="font-semibold">Score:</p>
+              <p>{feedback.score ?? "N/A"}/5</p>
+              <p className="font-semibold">Strengths:</p>
+              <p>{feedback.strengths}</p>
+              <p className="font-semibold">Areas to improve:</p>
+              <p>{feedback.areasToImprove}</p>
+            </div>
+          )}
+        </AutoscalingPopup>
+      )}
+      {notesOpen && comparison && (
+        <AutoscalingPopup onClose={() => setNotesOpen(false)}>
           <div className="w-full flex flex-row gap-4">
             <div className="w-1/2">
               <CountryInfoLayout
-                countryName={chosenCountries[0]}
-                notes={countryNotes[chosenCountries[0]]}
+                countryName={comparison.country1}
+                notes={countryNotes[comparison.country1]}
               />
             </div>
             <div className="w-1/2">
               <CountryInfoLayout
-                countryName={chosenCountries[1]}
-                notes={countryNotes[chosenCountries[1]]}
+                countryName={comparison.country2}
+                notes={countryNotes[comparison.country2]}
               />
             </div>
           </div>
+          <button
+            onClick={() => setNotesOpen(false)}
+            className="mt-4 w-full !bg-white !text-black"
+          >
+            Return to Quiz
+          </button>
         </AutoscalingPopup>
       )}
     </>
