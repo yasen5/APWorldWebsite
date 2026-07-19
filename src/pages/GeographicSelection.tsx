@@ -435,7 +435,7 @@ const Quiz: React.FC = () => {
   };
 
   const [studentAnswer, setStudentAnswer] = useState("");
-  const [isSumbitting, setIsSubmitting] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [feedback, setFeedback] = useState<{
     score?: number;
     strengths?: string;
@@ -531,7 +531,7 @@ const Quiz: React.FC = () => {
             onClick={handleSubmit}
             className="w-full !bg-white !text-black"
           >
-            {isSumbitting ? "Grading..." : "Submit for Grading"}
+            {isSubmitting ? "Grading..." : "Submit for Grading"}
           </button>
           <button
             onClick={() => setNotesOpen(true)}
