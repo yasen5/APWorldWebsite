@@ -1,6 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { API_BASE_URL } from "../config/api";
-import quizComparisons from "../generated/quizComparisons.json";
+import comparisonData from "../../data/whap-comparisons.json";
+import type { ComparisonDatabase } from "../types/comparisons";
 
 export interface ValidComparison {
   id: string;
@@ -33,6 +34,18 @@ const GeographicPageContext = createContext<GeographicPageProps | undefined>(
   undefined
 );
 
+const bundledComparisons = Object.entries(
+  comparisonData as unknown as ComparisonDatabase
+).map(([id, comparison]): ValidComparison => {
+  const [start, end] = comparison.period.split("-");
+  return {
+    id,
+    timePeriod: [Number(start), end === "present" ? 2025 : Number(end)],
+    country1: comparison.entities[0],
+    country2: comparison.entities[1],
+  };
+});
+
 export const GeographicPageProvider: React.FC<{
   children: React.ReactNode;
 }> = ({ children }) => {
@@ -42,8 +55,8 @@ export const GeographicPageProvider: React.FC<{
   const [trackedComparisons, setTrackedComparisons] = useState<
     TrackedComparison[]
   >(() =>
-    quizComparisons.map((comparison) => ({
-      comparison: comparison as ValidComparison,
+    bundledComparisons.map((comparison) => ({
+      comparison,
       used: false,
     }))
   );

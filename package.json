@@ -4,10 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "generate:quiz-catalog": "node scripts/generateQuizCatalog.js",
-    "predev": "npm run generate:quiz-catalog",
     "dev": "vite",
-    "prebuild": "npm run generate:quiz-catalog",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "test:server": "node --test server/**/*.test.js",

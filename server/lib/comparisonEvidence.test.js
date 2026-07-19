@@ -3,6 +3,7 @@ import test from "node:test";
 
 import {
   findComparisonEvidence,
+  getComparison,
   getQuizComparisons,
 } from "./comparisonEvidence.js";
 
@@ -25,7 +26,23 @@ test("matches aliases and either entity order", () => {
     [1200, 1450]
   );
 
-  assert.match(evidence?.comparisonId ?? "", /mali-empire--great-zimbabwe/);
+  assert.match(evidence?.comparisonId ?? "", /mali-empire\|great-zimbabwe/);
+});
+
+test("reversed lookup also reverses the two sides of each difference", () => {
+  const forward = getComparison(
+    "Golden Horde",
+    "Yuan Dynasty"
+  );
+  const reversed = getComparison(
+    "Yuan Dynasty",
+    "Golden Horde"
+  );
+
+  assert.deepEqual(reversed?.entities, ["Yuan Dynasty", "Golden Horde"]);
+  assert.equal(reversed?.differences[0].entityA, forward?.differences[0].entityB);
+  assert.equal(reversed?.differences[0].entityB, forward?.differences[0].entityA);
+  assert.deepEqual(reversed?.similarities, forward?.similarities);
 });
 
 test("maps territory labels to colonial empires", () => {
@@ -35,7 +52,7 @@ test("maps territory labels to colonial empires", () => {
     [1750, 1900]
   );
 
-  assert.match(evidence?.comparisonId ?? "", /british-empire--spanish-empire/);
+  assert.match(evidence?.comparisonId ?? "", /british-empire\|spanish-empire/);
 });
 
 test("maps the modern quiz period to 1900-present", () => {
